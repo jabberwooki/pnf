@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Bootstrap feature.
+ */
+
+include_once 'kbootstrap.features.inc';

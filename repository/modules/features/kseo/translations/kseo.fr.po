@@ -1,0 +1,31 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from file: kseo.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2015-02-23 19:06+0100\n"
+"PO-Revision-Date: 2015-02-23 19:06+0100\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+#: kseo.info:0
+msgid "SEO"
+msgstr ""
+
+#: kseo.info:0
+msgid "Provides various modules and configuration for search engine optimization."
+msgstr "Fournit les différents modules d'optimisation pour les moteurs de recherche, ainsi que leur configuration."
+
+#: kseo.info:0
+msgid "App"
+msgstr ""
+

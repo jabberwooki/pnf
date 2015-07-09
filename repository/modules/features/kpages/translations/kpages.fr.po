@@ -1,0 +1,52 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  kpages.features.field_instance.inc: n/a
+#  kpages.features.inc: n/a
+#  kpages.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2015-02-23 19:05+0100\n"
+"PO-Revision-Date: 2015-02-23 19:05+0100\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+#: kpages.features.field_instance.inc:59
+msgid "Body"
+msgstr "Corps"
+
+#: kpages.features.inc:22
+msgid "Basic page"
+msgstr "Page de base"
+
+#: kpages.features.inc:24
+msgid "Use <em>basic pages</em> for your static content, such as an 'About us' page."
+msgstr ""
+"Utilisez les <em>pages de base</em> pour votre contenu statique, tel "
+"que la page 'Qui sommes-nous'."
+
+#: kpages.features.inc:26
+msgid "Title"
+msgstr "Titre"
+
+#: kpages.info:0
+msgid "Basic pages"
+msgstr "Pages de base"
+
+#: kpages.info:0
+msgid "Basic pages, mostly used for static content."
+msgstr "Pages de base, utilisées principalement pour le contenu statique."
+
+#: kpages.info:0
+msgid "App"
+msgstr ""
+

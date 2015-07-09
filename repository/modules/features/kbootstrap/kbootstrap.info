@@ -1,0 +1,16 @@
+name = Bootstrap
+description = Bootstrap subtheme
+core = 7.x
+package = App
+version = 7.x-1.0
+project = kbootstrap
+dependencies[] = ctools
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = jquery_update_compression_type
+features[variable][] = jquery_update_jquery_admin_version
+features[variable][] = jquery_update_jquery_cdn
+features[variable][] = jquery_update_jquery_version
+features[variable][] = theme_pnf_bootstrap_settings
+project path = profiles/pnf/modules/features

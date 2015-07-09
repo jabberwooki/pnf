@@ -1,0 +1,29 @@
+name = Basic pages
+description = Basic pages, mostly used for static content.
+core = 7.x
+package = App
+version = 7.x-1.0
+project = kpages
+
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = node
+dependencies[] = strongarm
+dependencies[] = text
+
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+
+features[field_base][] = body
+features[field_instance][] = node-page-body
+
+features[node][] = page
+
+features[variable][] = language_content_type_page
+features[variable][] = menu_options_page
+features[variable][] = menu_parent_page
+features[variable][] = node_options_page
+features[variable][] = node_preview_page
+features[variable][] = node_submitted_page
+
+project path = profiles/pnf/modules/features

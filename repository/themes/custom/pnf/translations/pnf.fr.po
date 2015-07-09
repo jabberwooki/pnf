@@ -1,0 +1,93 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  kstarter_bootstrap.info: n/a
+#  kstarter_omega.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2015-02-23 19:08+0100\n"
+"PO-Revision-Date: 2015-02-23 19:08+0100\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+#: kstarter_bootstrap.info:0
+msgid "Kstarter Bootstrap"
+msgstr ""
+
+#: kstarter_bootstrap.info:0
+msgid "A Bootstrap sub-theme."
+msgstr "Un sous-thème Bootstrap"
+
+#: kstarter_bootstrap.info:0 kstarter_omega.info:0
+msgid "Navigation"
+msgstr "Navigation"
+
+#: kstarter_bootstrap.info:0
+msgid "Top Bar"
+msgstr "Barre supérieure"
+
+#: kstarter_bootstrap.info:0 kstarter_omega.info:0
+msgid "Highlighted"
+msgstr "Mis en évidence"
+
+#: kstarter_bootstrap.info:0 kstarter_omega.info:0
+msgid "Help"
+msgstr "Aide"
+
+#: kstarter_bootstrap.info:0 kstarter_omega.info:0
+msgid "Content"
+msgstr "Contenu"
+
+#: kstarter_bootstrap.info:0
+msgid "Primary"
+msgstr "Primaire"
+
+#: kstarter_bootstrap.info:0
+msgid "Secondary"
+msgstr "Secondaire"
+
+#: kstarter_bootstrap.info:0 kstarter_omega.info:0
+msgid "Footer"
+msgstr "Pied de page"
+
+#: kstarter_bootstrap.info:0
+msgid "Page top"
+msgstr "Haut de page"
+
+#: kstarter_bootstrap.info:0
+msgid "Page bottom"
+msgstr "Bas de page"
+
+#: kstarter_omega.info:0
+msgid "Starter Theme"
+msgstr ""
+
+#: kstarter_omega.info:0
+msgid "Please provide a description for your theme."
+msgstr "Veuillez fournir une description pour votre thème."
+
+#: kstarter_omega.info:0
+msgid "Branding"
+msgstr "Marque"
+
+#: kstarter_omega.info:0
+msgid "Header"
+msgstr "Entête"
+
+#: kstarter_omega.info:0
+msgid "First Sidebar"
+msgstr "Première barre latérale"
+
+#: kstarter_omega.info:0
+msgid "Second Sidebar"
+msgstr "Seconde barre latérale"
+

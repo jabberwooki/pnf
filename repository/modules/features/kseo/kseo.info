@@ -1,0 +1,16 @@
+name = SEO
+description = Provides various modules and configuration for search engine optimization.
+core = 7.x
+package = App
+version = 7.x-1.0
+
+;=== Contrib dependencies =====================================================
+dependencies[] = globalredirect
+dependencies[] = metatag
+dependencies[] = page_title
+dependencies[] = pathauto
+dependencies[] = redirect
+dependencies[] = transliteration
+dependencies[] = xmlsitemap
+
+features[features_api][] = api:2

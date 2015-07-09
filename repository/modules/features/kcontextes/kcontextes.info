@@ -1,0 +1,14 @@
+name = Contextes
+description = Core contextes
+core = 7.x
+package = App
+version = 7.x-1.0
+project = kcontextes
+dependencies[] = context
+dependencies[] = ctools
+features[context][] = all
+features[context][] = front
+features[context][] = not-front
+features[ctools][] = context:context:3
+features[features_api][] = api:2
+project path = profiles/pnf/modules/features

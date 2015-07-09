@@ -1,0 +1,27 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from file: kstarter.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2015-02-23 19:17+0100\n"
+"PO-Revision-Date: 2015-02-23 19:17+0100\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+#: kstarter.info:0
+msgid "Korora Starter"
+msgstr ""
+
+#: kstarter.info:0
+msgid "Install profile for a quick gettind started D7 project."
+msgstr "Profil d'installation pour démarrage rapide d'un projet D7."
+

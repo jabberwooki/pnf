@@ -1,0 +1,49 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  kcontextes.context.inc: n/a
+#  kcontextes.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2015-02-23 18:59+0100\n"
+"PO-Revision-Date: 2015-02-23 18:59+0100\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+#: kcontextes.context.inc:31
+msgid "All pages"
+msgstr "Toutes les pages"
+
+#: kcontextes.context.inc:32;53;76
+msgid "Core"
+msgstr ""
+
+#: kcontextes.context.inc:54
+msgid "Front page only"
+msgstr "Page d'accueil seulement"
+
+#: kcontextes.context.inc:75
+msgid "All pages but front"
+msgstr "Toutes les pages sauf la page d'accueil"
+
+#: kcontextes.info:0
+msgid "Contextes"
+msgstr ""
+
+#: kcontextes.info:0
+msgid "Core contextes"
+msgstr "Contextes de base"
+
+#: kcontextes.info:0
+msgid "App"
+msgstr ""
+
