@@ -1,0 +1,154 @@
+name = Parcs Nationaux de France
+description = Profil d'installation des sites mutualisés PNF.
+version = 1.0
+core = 7.x
+
+;=== Settings (see profile's hook_install_tasks) ==============================
+; Timezone and Language
+;-----------------------
+settings[default_timezone] = "Europe/Paris"
+settings[default_country] = "FR"
+settings[default_language] = "fr"
+settings[first_day] = 1
+settings[import_translations] = 0
+
+; Default theme
+;---------------
+settings[default_theme] = "pnf"
+
+; Admin theme
+;-------------
+settings[admin_theme] = adminimal
+dependencies[] = adminimal_admin_menu
+;settings[admin_theme] = rubik
+
+; Site
+settings[site_mail] = "christophe.espiau@gmail.com"
+settings[site_name] = "PNF"
+settings[site_slogan] = ""
+
+; Admin account name
+settings[user1_name] = "superadmin"
+
+;=== Core =====================================================================
+dependencies[] = block
+dependencies[] = image
+dependencies[] = list
+dependencies[] = locale
+dependencies[] = menu
+dependencies[] = path
+;dependencies[] = rdf
+dependencies[] = search
+dependencies[] = taxonomy
+
+;=== Contrib ==================================================================
+dependencies[] = admin_menu_toolbar
+dependencies[] = better_formats
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = ds
+dependencies[] = entity
+dependencies[] = features
+dependencies[] = fe_block
+dependencies[] = field_group
+dependencies[] = files_undo_remove
+dependencies[] = imce
+dependencies[] = imce_mkdir
+dependencies[] = jquery_update
+dependencies[] = l10n_update
+dependencies[] = libraries
+dependencies[] = link
+dependencies[] = linkit
+dependencies[] = options_element
+dependencies[] = role_export
+dependencies[] = strongarm
+dependencies[] = taxonomy_access_fix
+dependencies[] = token
+dependencies[] = user_settings_access
+dependencies[] = uuid
+dependencies[] = uuid_features
+dependencies[] = views
+
+;--- Optional -----------------------------------------------------------------
+; (Activate corresponding projects in file drupal-org.make)
+dependencies[] = addressfield
+dependencies[] = bean
+dependencies[] = block_class
+dependencies[] = boxes
+dependencies[] = custom_search
+dependencies[] = date_popup
+dependencies[] = date_views
+;dependencies[] = draggableviews
+dependencies[] = email
+;dependencies[] = email_registration
+;dependencies[] = entityform
+dependencies[] = entityreference
+;dependencies[] = field_collection
+;dependencies[] = field_formatter_class
+;dependencies[] = field_formatter_settings
+dependencies[] = filefield_sources
+;dependencies[] = migrate_extras
+;dependencies[] = password_policy
+dependencies[] = phone
+dependencies[] = print
+;dependencies[] = registration
+;dependencies[] = rules
+;dependencies[] = views_autocomplete_filters
+;dependencies[] = views_bulk_operations
+;dependencies[] = views_isotope
+;dependencies[] = views_slideshow
+;dependencies[] = views_ui_basic
+
+;=== Mapping ==================================================================
+;dependencies[] = geocoder
+;dependencies[] = geofield
+;dependencies[] = leaflet
+
+;dependencies[] = gmap
+;dependencies[] = addressfield_autocomplete
+;dependencies[] = geocomplete
+
+;=== Netlinking ===============================================================
+;dependencies[] = sharethis
+;dependencies[] = addthis
+;dependencies[] = addtoany
+
+;=== Newsletter ===============================================================
+;dependencies[] = mailchimp
+
+;=== Scald and media related modules ==========================================
+dependencies[] = scald
+dependencies[] = scald_file
+dependencies[] = scald_dailymotion
+dependencies[] = scald_vimeo
+dependencies[] = scald_soundcloud
+dependencies[] = scald_gallery
+dependencies[] = filefield_sources_scald
+
+;=== Kstarter features ========================================================
+; (Activate corresponding inclusions in file drupal-org.make)
+dependencies[] = kcore
+dependencies[] = kseo
+dependencies[] = kpages
+dependencies[] = kedition
+dependencies[] = kcontextes
+
+;--- Optional -----------------------------------------------------------------
+; (Activate corresponding inclusions in file drupal-org.make)
+;Google analytics
+dependencies[] = kwstatsgoogle
+;Piwik
+;dependencies[] = kwstatspiwik    
+;dependencies[] = kagenda
+;dependencies[] = knews
+
+;--- Themes -------------------------------------------------------------------
+; (Activate corresponding inclusions in file drupal-org.make)
+dependencies[] = kbootstrap
+;dependencies[] = kfoundation
+;dependencies[] = komega
+
+
+
+
+

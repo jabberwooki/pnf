@@ -1,0 +1,20 @@
+<?php
+/**
+ * @file
+ * Code for the Core feature.
+ */
+
+include_once 'kcore.features.inc';
+
+/**
+ * Implements hook_menu_alter().
+ * Thanks to pfournier, creator of module Empty Front Page (https://www.drupal.org/project/empty_front_page)
+ */
+function kcore_menu_alter(&$items) {
+	$items['node']['page callback'] = 'empty_front_page_callback';
+}
+
+function empty_front_page_callback() {
+	drupal_set_title('');
+	return array();
+}

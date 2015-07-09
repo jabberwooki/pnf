@@ -1,0 +1,31 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from file: kdevel.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2015-02-23 19:03+0100\n"
+"PO-Revision-Date: 2015-02-23 19:03+0100\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+#: kdevel.info:0
+msgid "Development"
+msgstr "Développement"
+
+#: kdevel.info:0
+msgid "Provides modules easing development works. To be activated on dev instances only."
+msgstr "Fournit les modules facilitant le travail de développement. N'activer que sur les instances de développement."
+
+#: kdevel.info:0
+msgid "App"
+msgstr ""
+
