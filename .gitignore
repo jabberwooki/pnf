@@ -2,13 +2,11 @@
 builds/*
 !builds/README.txt
 
-
 # Ignore configuration files that may contain sensitive information.
 shared/*/settings.php
 
 # Ignore paths that contain public and private generated content.
 shared/*/files/*
-!shared/*/settings.php
 !shared/*/files/.htaccess
 shared/private/*
 !shared/private/*/.htaccess
