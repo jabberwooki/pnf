@@ -41,6 +41,132 @@ function kcore_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date_l';
+  $strongarm->value = 'd F Y';
+  $export['date_format_date_l'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date_m';
+  $strongarm->value = 'd M Y';
+  $export['date_format_date_m'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date_s';
+  $strongarm->value = 'd/m/Y';
+  $export['date_format_date_s'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date_time_l';
+  $strongarm->value = 'd F Y - H\\hi';
+  $export['date_format_date_time_l'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date_time_m';
+  $strongarm->value = 'd M Y - H\\hi';
+  $export['date_format_date_time_m'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date_time_s';
+  $strongarm->value = 'd/m/Y - H\\hi';
+  $export['date_format_date_time_s'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date_time_xl';
+  $strongarm->value = 'D d M Y - H\\hi';
+  $export['date_format_date_time_xl'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date_time_xs';
+  $strongarm->value = 'd/m/y - H\\hi';
+  $export['date_format_date_time_xs'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date_time_xxl';
+  $strongarm->value = 'D d F Y - H\\hi';
+  $export['date_format_date_time_xxl'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date_time_xxs';
+  $strongarm->value = 'd.m.Y - H\\hi';
+  $export['date_format_date_time_xxs'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date_time_xxxl';
+  $strongarm->value = 'l d F Y - H\\hi';
+  $export['date_format_date_time_xxxl'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date_time_xxxs';
+  $strongarm->value = 'd.m.y - H\\hi';
+  $export['date_format_date_time_xxxs'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date_xl';
+  $strongarm->value = 'D d M Y';
+  $export['date_format_date_xl'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date_xs';
+  $strongarm->value = 'd/m/y';
+  $export['date_format_date_xs'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date_xxl';
+  $strongarm->value = 'D d F Y';
+  $export['date_format_date_xxl'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date_xxs';
+  $strongarm->value = 'd.m.Y';
+  $export['date_format_date_xxs'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date_xxxl';
+  $strongarm->value = 'l d F Y';
+  $export['date_format_date_xxxl'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date_xxxs';
+  $strongarm->value = 'd.m.y';
+  $export['date_format_date_xxxs'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'date_format_long';
   $strongarm->value = 'l d F Y - H\\hi';
   $export['date_format_long'] = $strongarm;
