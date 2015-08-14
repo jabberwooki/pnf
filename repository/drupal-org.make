@@ -3,104 +3,104 @@ core = 7.x
 
 ;=== Contrib modules ==========================================================
 projects[admin_menu][subdir] = contrib
-;projects[admin_menu][version] = ""
+projects[admin_menu][version] = "3.0-rc5"
 
 projects[better_formats][subdir] = contrib
-;projects[better_formats][version] = ""
+projects[better_formats][version] = "1.0-beta1"
 
 projects[ctools][subdir] = contrib
-;projects[ctools][version] = ""
+projects[ctools][version] = "1.7"
 
 projects[ds][subdir] = contrib
-;projects[ds][version] = ""
+projects[ds][version] = "2.10"
 
 projects[entity][subdir] = contrib
-;projects[entity][version] = ""
+projects[entity][version] = "1.6"
 
 projects[features][subdir] = contrib
-;projects[features][version] = ""
+projects[features][version] = "2.6"
 
 projects[features_extra][subdir] = contrib
-;projects[features_extra][version] = ""
+projects[features_extra][version] = "1.0"
 
 projects[field_group][subdir] = contrib
-;projects[field_group][version] = ""
+projects[field_group][version] = "1.4"
 
 projects[files_undo_remove][subdir] = contrib
-;projects[files_undo_remove][version] = ""
+projects[files_undo_remove][version] = "1.3"
 
 projects[imce][subdir] = contrib
-;projects[imce][version] = ""
+projects[imce][version] = "1.9"
 
 projects[imce_mkdir][subdir] = contrib
-;projects[imce_mkdir][version] = ""
+projects[imce_mkdir][version] = "1.0"
 
 projects[jquery_update][subdir] = contrib
-;projects[jquery_update][version] = ""
+projects[jquery_update][version] = "3.0-alpha2"
 
 projects[l10n_update][subdir] = contrib
-;projects[l10n_update][version] = ""
+projects[l10n_update][version] = "2.0"
 
 projects[libraries][subdir] = contrib
-;projects[libraries][version] = ""
+projects[libraries][version] = "2.2"
 
 projects[link][subdir] = contrib
-;projects[link][version] = ""
+projects[link][version] = "1.3"
 
 projects[linkit][subdir] = contrib
-;projects[linkit][version] = ""
+projects[linkit][version] = "3.3"
 
 projects[options_element][subdir] = contrib
-;projects[options_element][version] = ""
+projects[options_element][version] = "1.12"
 
 projects[role_export][subdir] = contrib
-;projects[role_export][version] = ""
+projects[role_export][version] = "1.0"
 
 projects[strongarm][subdir] = contrib
-;projects[strongarm][version] = ""
+projects[strongarm][version] = "2.0"
 
 projects[taxonomy_access_fix][subdir] = contrib
-;projects[taxonomy_access_fix][version] = ""
+projects[taxonomy_access_fix][version] = "2.2"
 
 projects[token][subdir] = contrib
-;projects[token][version] = ""
+projects[token][version] = "1.6"
 
 projects[user_settings_access][subdir] = contrib
-;projects[user_settings_access][version] = ""
+projects[user_settings_access][version] = "1.0"
 
 projects[uuid][subdir] = contrib
-;projects[uuid][version] = ""
+projects[uuid][version] = "1.0-alpha6"
 
 projects[uuid_features][subdir] = contrib
-;projects[uuid_features][version] = ""
+projects[uuid_features][version] = "1.0-alpha4"
 
 projects[views][subdir] = contrib
-;projects[views][version] = ""
+projects[views][version] = "3.11"
 
 ;=== Modules - optional =======================================================
 projects[addressfield][subdir] = contrib
-;projects[addressfield][version] = ""
+projects[addressfield][version] = "1.1"
 
 projects[bean][subdir] = contrib
-;projects[bean][version] = ""
+projects[bean][version] = "1.9"
 
 projects[block_class][subdir] = contrib
-;projects[block_class][version] = ""
+projects[block_class][version] = "2.1"
 
 projects[boxes][subdir] = contrib
-;projects[boxes][version] = ""
+projects[boxes][version] = "1.2"
 
 projects[custom_search][subdir] = contrib
-;projects[custom_search][version] = ""
+projects[custom_search][version] = "1.18"
 
 projects[date][subdir] = contrib
-;projects[date][version] = ""
+projects[date][version] = "2.8"
 
 ;projects[draggableviews][subdir] = contrib
 ;projects[draggableviews][version] = ""
 
 projects[email][subdir] = contrib
-;projects[email][version] = ""
+projects[email][version] = "1.3"
 
 ;projects[email_registration][subdir] = contrib
 ;projects[email_registration][version] = ""
@@ -109,7 +109,7 @@ projects[email][subdir] = contrib
 ;projects[entityform][version] = ""
 
 projects[entityreference][subdir] = contrib
-;projects[entityreference][version] = ""
+projects[entityreference][version] = "1.1"
 
 ;projects[field_collection][subdir] = contrib
 ;projects[field_collection][version] = ""
@@ -121,10 +121,10 @@ projects[entityreference][subdir] = contrib
 ;projects[field_formatter_settings][version] = ""
 
 projects[filefield_sources][subdir] = contrib
-;projects[filefield_sources][version] = ""
+projects[filefield_sources][version] = "1.9"
 
 projects[menu_attributes][subdir] = contrib
-;projects[menu_attributes][version] = ""
+projects[menu_attributes][version] = "1.0-rc3"
 
 ;projects[menu_trail_by_path][subdir] = contrib
 ;projects[menu_trail_by_path][version] = ""
@@ -139,10 +139,10 @@ projects[menu_attributes][subdir] = contrib
 ;projects[password_policy][version] = ""
 
 projects[phone][subdir] = contrib
-;projects[phone][version] = ""
+projects[phone][version] = "1.0-beta1"
 
 projects[print][subdir] = contrib
-;projects[print][version] = ""
+projects[print][version] = "2.0"
 
 ;projects[registration][subdir] = contrib
 ;projects[registration][version] = ""
@@ -210,25 +210,25 @@ projects[print][subdir] = contrib
 
 ;=== Scald and media related modules ==========================================
 projects[scald][subdir] = contrib
-;projects[scald][version] = ""
+projects[scald][version] = "1.4"
 
 projects[scald_file][subdir] = contrib
-;projects[scald_file][version] = ""
+projects[scald_file][version] = "1.1"
 
 projects[scald_dailymotion][subdir] = contrib
-;projects[scald_dailymotion][version] = ""
+projects[scald_dailymotion][version] = "1.4"
 
 projects[scald_vimeo][subdir] = contrib
-;projects[scald_vimeo][version] = ""
+projects[scald_vimeo][version] = "1.4"
 
 projects[scald_soundcloud][subdir] = contrib
-;projects[scald_soundcloud][version] = ""
+projects[scald_soundcloud][version] = "1.2"
 
 projects[scald_gallery][subdir] = contrib
-;projects[scald_gallery][version] = ""
+projects[scald_gallery][version] = "2.5"
 
 projects[filefield_sources_scald][subdir] = contrib
-;projects[filefield_sources_scald][version] = ""
+projects[filefield_sources_scald][version] = "1.1"
 
 ;=== Kstarter features modules ================================================
 includes[seo] = makefiles/seo.make

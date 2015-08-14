@@ -3,28 +3,28 @@ core = "7.x"
 
 ;=== Must have modules ==============================================
 projects[devel][subdir] = contrib
-;projects[devel][version] = ""
+projects[devel][version] = "1.5"
 
 projects[diff][subdir] = contrib
-;projects[diff][version] = ""
+projects[diff][version] = "3.2"
 
 projects[features_diff][subdir] = contrib
-;projects[features_diff][version] = ""
+projects[features_diff][version] = "1.0-beta2"
 
 projects[filter_perms][subdir] = contrib
-;projects[filter_perms][version] = ""
+projects[filter_perms][version] = "1.0"
 
 projects[module_filter][subdir] = contrib
-;projects[module_filter][version] = ""
+projects[module_filter][version] = "2.0"
 
 projects[coffee][subdir] = contrib
-;projects[coffee][version] = ""
+projects[coffee][version] = "2.2"
 
 projects[potx][subdir] = contrib
-;projects[potx][version] = ""
+projects[potx][version] = "3.x-dev"
 
 projects[masquerade][subdir] = contrib
-;projects[masquerade][version] = ""
+projects[masquerade][version] = "1.0-rc7"
 
 ;=== Goodies ========================================================
 ;projects[node_export][subdir] = contrib
