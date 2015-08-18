@@ -23,7 +23,18 @@ function kcontextes_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array();
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'menu-menu-tools' => array(
+          'module' => 'menu',
+          'delta' => 'menu-tools',
+          'region' => 'sidebar_second',
+          'weight' => '-14',
+        ),
+      ),
+    ),
+  );
   $context->condition_mode = 0;
 
   // Translatables
