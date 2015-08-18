@@ -147,8 +147,14 @@ dependencies[] = kwstatsgoogle
 ;--- Themes -------------------------------------------------------------------
 ; (Activate corresponding inclusions in file drupal-org.make)
 dependencies[] = kbootstrap
+dependencies[] = bootstrap_fieldgroup
+dependencies[] = ds_bootstrap_layouts
+dependencies[] = views_bootstrap
 ;dependencies[] = kfoundation
 ;dependencies[] = komega
+
+;--- PNF features -------------------------------------------------------------------
+dependencies[] = pnf_news
 
 
 
