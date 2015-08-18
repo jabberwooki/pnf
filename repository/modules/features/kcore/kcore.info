@@ -46,6 +46,7 @@ features[fe_date_date_format_types][] = date_xxxs
 features[features_api][] = api:2
 features[menu_custom][] = main-menu
 features[menu_custom][] = menu-footer-menu
+features[menu_custom][] = menu-tools
 features[user_role][] = administrateur
 features[user_role][] = rédacteur
 features[user_role][] = webmaster
