@@ -166,14 +166,14 @@ projects[print][version] = "2.0"
 ;projects[views_ui_basic][version] = ""
 
 ;=== Mapping modules ==========================================================
-;projects[geophp][subdir] = contrib
-;projects[geophp][version] = ""
+projects[geophp][subdir] = contrib
+projects[geophp][version] = "1.7"
 
 ;projects[geocoder][subdir] = contrib
 ;projects[geocoder][version] = ""
 
-;projects[geofield][subdir] = contrib
-;projects[geofield][version] = ""
+projects[geofield][subdir] = contrib
+projects[geofield][version] = "2.3"
 
 ;projects[leaflet][subdir] = contrib
 ;projects[leaflet][version] = ""

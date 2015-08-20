@@ -103,7 +103,7 @@ dependencies[] = print
 
 ;=== Mapping ==================================================================
 ;dependencies[] = geocoder
-;dependencies[] = geofield
+dependencies[] = geofield_map
 ;dependencies[] = leaflet
 
 ;dependencies[] = gmap
@@ -155,6 +155,7 @@ dependencies[] = views_bootstrap
 
 ;--- PNF features -------------------------------------------------------------------
 dependencies[] = pnf_news
+dependencies[] = pnf_agenda
 
 
 
