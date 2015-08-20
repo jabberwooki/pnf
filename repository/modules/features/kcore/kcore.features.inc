@@ -8,6 +8,9 @@
  * Implements hook_ctools_plugin_api().
  */
 function kcore_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "ds" && $api == "ds") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -22,6 +25,7 @@ function kcore_fe_date_custom_date_formats() {
   $custom_date_formats['D d F Y - H\\hi'] = 'D d F Y - H\\hi';
   $custom_date_formats['D d M Y'] = 'D d M Y';
   $custom_date_formats['D d M Y - H\\hi'] = 'D d M Y - H\\hi';
+  $custom_date_formats['d F'] = 'd F';
   $custom_date_formats['d F Y'] = 'd F Y';
   $custom_date_formats['d F Y - H\\hi'] = 'd F Y - H\\hi';
   $custom_date_formats['d M Y'] = 'd M Y';
@@ -44,6 +48,8 @@ function kcore_fe_date_custom_date_formats() {
  */
 function kcore_date_format_types() {
   $format_types = array();
+  // Exported date format type: date_day_month
+  $format_types['date_day_month'] = 'Date JM (jour mois)';
   // Exported date format type: date_l
   $format_types['date_l'] = 'Date L';
   // Exported date format type: date_m
