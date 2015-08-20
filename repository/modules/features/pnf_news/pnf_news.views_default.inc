@@ -606,7 +606,7 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['filters']['promote']['value'] = '1';
 
   /* Display: Bloc accueil dossiers */
-  $handler = $view->new_display('block', 'Bloc accueil dossiers', 'block_3');
+  $handler = $view->new_display('block', 'Bloc accueil dossiers', 'block_news_files_home');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Dossiers';
   $handler->display->display_options['defaults']['use_more'] = FALSE;

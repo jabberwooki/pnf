@@ -38,9 +38,9 @@ function pnf_news_context_default_contexts() {
           'region' => 'content',
           'weight' => '-9',
         ),
-        'views-news-block_3' => array(
+        'views-news-block_news_files_home' => array(
           'module' => 'views',
-          'delta' => 'news-block_3',
+          'delta' => 'news-block_news_files_home',
           'region' => 'content',
           'weight' => '-8',
         ),

@@ -44,7 +44,7 @@ function pnf_news_strongarm() {
         'custom_settings' => FALSE,
       ),
       'documents' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'teaser_home_flashnews' => array(
         'custom_settings' => TRUE,
