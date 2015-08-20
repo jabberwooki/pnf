@@ -42,6 +42,7 @@ function pnf_news_default_fe_block_settings() {
   $export['views-news-block_news_files_home'] = array(
     'cache' => -1,
     'css_class' => '',
+    'custom' => 0,
     'delta' => 'news-block_news_files_home',
     'module' => 'views',
     'node_types' => array(),
@@ -61,11 +62,14 @@ function pnf_news_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
+    'title' => '',
+    'visibility' => 0,
   );
 
   $export['views-news-block_news_flashnews_home'] = array(
     'cache' => -1,
     'css_class' => '',
+    'custom' => 0,
     'delta' => 'news-block_news_flashnews_home',
     'module' => 'views',
     'node_types' => array(),
@@ -85,11 +89,14 @@ function pnf_news_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
+    'title' => '',
+    'visibility' => 0,
   );
 
   $export['views-news-block_news_news_home'] = array(
     'cache' => -1,
     'css_class' => '',
+    'custom' => 0,
     'delta' => 'news-block_news_news_home',
     'module' => 'views',
     'node_types' => array(),
@@ -109,6 +116,8 @@ function pnf_news_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
+    'title' => '',
+    'visibility' => 0,
   );
 
   return $export;
