@@ -120,6 +120,8 @@ dependencies[] = geofield_map
 
 ;=== Scald and media related modules ==========================================
 dependencies[] = scald
+dependencies[] = atom_reference
+dependencies[] = mee
 dependencies[] = scald_file
 dependencies[] = scald_dailymotion
 dependencies[] = scald_vimeo
