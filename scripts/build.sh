@@ -29,6 +29,9 @@ done
 PROFILENAME=`$BASENAME $($LS repository/*.profile) | $SED -e 's/\.profile//'`
 $LN -s ../../../repository $BUILDDIR/profiles/$PROFILENAME
 
+# Add the less.php symlink
+$LN -s ../../../repository/libraries/less.php $BUILDDIR/sites/all/libraries/less.php
+
 # Change www symlink
 if [ -h www ]
 then
