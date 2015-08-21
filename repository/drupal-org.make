@@ -123,6 +123,9 @@ projects[entityreference][version] = "1.1"
 projects[filefield_sources][subdir] = contrib
 projects[filefield_sources][version] = "1.9"
 
+projects[less][subdir] = contrib
+;projects[less][version] = ""
+
 projects[menu_attributes][subdir] = contrib
 projects[menu_attributes][version] = "1.0-rc3"
 
