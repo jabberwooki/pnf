@@ -1,0 +1,28 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"X-Generator: Poedit 1.8.4\n"
+
+#: pnf_contracts.module:17
+msgid "Contract notice button"
+msgstr "Bouton dossier de consultation"
+
+#: pnf_contracts.module:24
+msgid "Contract link button"
+msgstr "Bouton consultation de l'avis"
+
+#: pnf_contracts.module:41
+msgid "Contract notice"
+msgstr "Consultation de l’avis - PDF"
+
+#: pnf_contracts.module:54
+msgid "Contract link"
+msgstr "Dossier de consultation"

@@ -5,3 +5,32 @@
  */
 
 include_once 'kbootstrap.features.inc';
+
+/**
+ * Implements hook_ds_fields_info().
+ */
+function kbootstrap_ds_fields_info($entity_type) {
+	$fields = array();
+
+	$fields['node']['btn_readmore'] = array(
+		'title' => t('Read more button'),
+		'field_type' => DS_FIELD_TYPE_FUNCTION,
+		'function' => 'kbootstrap_btn_readmore',
+	);
+
+	if (isset($fields[$entity_type])) {
+		return array($entity_type => $fields[$entity_type]);
+	}
+	return;
+}
+
+/**
+ * Render the field btn_readmore
+ */
+function kbootstrap_btn_readmore($field) {
+	$label = t("Read more");
+	$nid =  $field['entity']->nid;
+	$url = drupal_get_path_alias('node/' . $nid);
+	$output = '<a class = "btn btn-sm btn-primary" href="'. $url .'" target="_blank">'. $label .'</a>';
+	return $output;
+}

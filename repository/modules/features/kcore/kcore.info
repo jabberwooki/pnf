@@ -4,6 +4,7 @@ core = 7.x
 package = App
 version = 7.x-1.0
 project = kcore
+dependencies[] = better_exposed_filters
 dependencies[] = ds
 dependencies[] = fe_date
 dependencies[] = less
