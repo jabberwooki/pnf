@@ -7,6 +7,7 @@ project = kcontextes
 dependencies[] = context
 dependencies[] = ctools
 dependencies[] = menu
+dependencies[] = views
 features[context][] = all
 features[context][] = front
 features[context][] = not-front

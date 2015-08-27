@@ -56,7 +56,18 @@ function kcontextes_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array();
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-slideshow-block_slideshow_home' => array(
+          'module' => 'views',
+          'delta' => 'slideshow-block_slideshow_home',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
   $context->condition_mode = 0;
 
   // Translatables
