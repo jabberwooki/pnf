@@ -15,7 +15,7 @@ function pnf_contracts_context_default_contexts() {
   $context->api_version = 3;
   $context->name = 'contracts-list';
   $context->description = '';
-  $context->tag = 'Marcgés publics';
+  $context->tag = 'Marchés publics';
   $context->conditions = array(
     'path' => array(
       'values' => array(
@@ -39,7 +39,7 @@ function pnf_contracts_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Marcgés publics');
+  t('Marchés publics');
   $export['contracts-list'] = $context;
 
   return $export;
