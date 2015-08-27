@@ -196,7 +196,7 @@ function kcore_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'file_public_path';
-  $strongarm->value = 'sites/default/files';
+  $strongarm->value = 'sites/parcsnationaux.fr/files';
   $export['file_public_path'] = $strongarm;
 
   $strongarm = new stdClass();
