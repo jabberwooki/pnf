@@ -1,0 +1,59 @@
+<?php
+/**
+ * @file
+ * Code for the Marchés publics feature.
+ */
+
+include_once 'pnf_contracts.features.inc';
+
+
+/**
+ * Implements hook_ds_fields_info().
+ */
+function pnf_contracts_ds_fields_info($entity_type) {
+	$fields = array();
+
+	$fields['node']['btn_contract_notice'] = array(
+		'title' => t('Contract notice button'),
+		'field_type' => DS_FIELD_TYPE_FUNCTION,
+		'ui_limit' => array('contract|*'),
+		'function' => 'pnf_contracts_btn_contract_notice',
+	);
+
+	$fields['node']['btn_contract_link'] = array(
+		'title' => t('Contract link button'),
+		'field_type' => DS_FIELD_TYPE_FUNCTION,
+		'ui_limit' => array('contract|*'),
+		'function' => 'pnf_contracts_btn_contract_link',
+	);
+
+	if (isset($fields[$entity_type])) {
+		return array($entity_type => $fields[$entity_type]);
+	}
+	return;
+}
+
+/**
+ * Render the field btn_contract_notice
+ */
+function pnf_contracts_btn_contract_notice($field) {
+	if (!empty($field['entity']->field_contract_notice)) {
+		$label = t("Contract notice");
+		$uri =  $field['entity']->field_contract_notice['und'][0]['uri'];
+		$url = file_create_url($uri);
+		$output = '<a class = "btn btn-sm btn-primary" href="'. $url .'" target="_blank">'. $label .'</a>';
+		return $output;
+	}
+}
+
+/**
+ * Render the field btn_contract_notice
+ */
+function pnf_contracts_btn_contract_link($field) {
+	if (!empty($field['entity']->field_contract_link)) {
+		$label = t("Contract link");
+		$url =  $field['entity']->field_contract_link['und'][0]['url'];
+		$output = '<a class = "btn btn-sm btn-primary" href="'. $url .'" target="_blank">'. $label .'</a>';
+		return $output;
+	}
+}
