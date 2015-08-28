@@ -11,6 +11,9 @@ projects[better_formats][version] = "1.0-beta1"
 projects[better_exposed_filters][subdir] = contrib
 projects[better_exposed_filters][version] = "3.2"
 
+projects[colorbox][subdir] = contrib
+projects[colorbox][version] = "2.9"
+
 projects[ctools][subdir] = contrib
 projects[ctools][version] = "1.7"
 
@@ -55,6 +58,9 @@ projects[linkit][version] = "3.3"
 
 projects[options_element][subdir] = contrib
 projects[options_element][version] = "1.12"
+
+projects[pdf_reader][subdir] = contrib
+projects[pdf_reader][version] = "2.x-dev"
 
 projects[role_export][subdir] = contrib
 projects[role_export][version] = "1.0"
