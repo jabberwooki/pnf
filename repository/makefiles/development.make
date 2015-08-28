@@ -42,3 +42,5 @@ projects[devel_themer][version] = "1.x-dev"
 ;projects[replicate_ui][subdir] = contrib
 ;projects[replicate_ui][version] = ""
 
+projects[simplehtmldom][subdir] = contrib
+projects[simplehtmldom][version] = "1.12"
