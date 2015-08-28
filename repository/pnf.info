@@ -158,8 +158,8 @@ dependencies[] = views_bootstrap
 ;--- PNF features -------------------------------------------------------------------
 dependencies[] = pnf_news
 dependencies[] = pnf_agenda
-
-
+dependencies[] = pnf_contracts
+dependencies[] = pnf_documents
 
 
 

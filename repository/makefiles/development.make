@@ -30,9 +30,17 @@ projects[masquerade][version] = "1.0-rc7"
 ;projects[node_export][subdir] = contrib
 ;projects[node_export][version] = ""
 
+projects[node_clone][subdir] = contrib
+projects[node_clone][version] = "1.0-rc2"
+
+projects[devel_themer][subdir] = contrib
+projects[devel_themer][version] = "1.x-dev"
+
 ;projects[replicate][subdir] = contrib
 ;projects[replicate][version] = ""
 
 ;projects[replicate_ui][subdir] = contrib
 ;projects[replicate_ui][version] = ""
 
+projects[simplehtmldom][subdir] = contrib
+projects[simplehtmldom][version] = "1.12"
