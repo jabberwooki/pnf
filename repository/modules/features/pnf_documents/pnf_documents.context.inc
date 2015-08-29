@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * documents.context.inc
+ * pnf_documents.context.inc
  */
 
 /**
  * Implements hook_context_default_contexts().
  */
-function documents_context_default_contexts() {
+function pnf_documents_context_default_contexts() {
   $export = array();
 
   $context = new stdClass();

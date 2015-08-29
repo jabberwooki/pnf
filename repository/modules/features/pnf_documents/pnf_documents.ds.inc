@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * documents.ds.inc
+ * pnf_documents.ds.inc
  */
 
 /**
  * Implements hook_ds_field_settings_info().
  */
-function documents_ds_field_settings_info() {
+function pnf_documents_ds_field_settings_info() {
   $export = array();
 
   $ds_fieldsetting = new stdClass();
@@ -36,7 +36,7 @@ function documents_ds_field_settings_info() {
 /**
  * Implements hook_ds_layout_settings_info().
  */
-function documents_ds_layout_settings_info() {
+function pnf_documents_ds_layout_settings_info() {
   $export = array();
 
   $ds_layout = new stdClass();

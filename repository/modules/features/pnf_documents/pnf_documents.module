@@ -4,4 +4,4 @@
  * Code for the Documents feature.
  */
 
-include_once 'documents.features.inc';
+include_once 'pnf_documents.features.inc';

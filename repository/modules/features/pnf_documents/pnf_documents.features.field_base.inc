@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * documents.features.field_base.inc
+ * pnf_documents.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function documents_field_default_field_bases() {
+function pnf_documents_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'field_document_category'

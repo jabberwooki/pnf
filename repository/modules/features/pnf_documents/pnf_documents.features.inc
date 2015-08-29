@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * documents.features.inc
+ * pnf_documents.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function documents_ctools_plugin_api($module = NULL, $api = NULL) {
+function pnf_documents_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "context" && $api == "context") {
     return array("version" => "3");
   }
@@ -22,14 +22,14 @@ function documents_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_views_api().
  */
-function documents_views_api($module = NULL, $api = NULL) {
+function pnf_documents_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
 /**
  * Implements hook_node_info().
  */
-function documents_node_info() {
+function pnf_documents_node_info() {
   $items = array(
     'document' => array(
       'name' => t('Document'),

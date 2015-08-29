@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * documents.features.taxonomy.inc
+ * pnf_documents.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function documents_taxonomy_default_vocabularies() {
+function pnf_documents_taxonomy_default_vocabularies() {
   return array(
     'document_categories' => array(
       'name' => 'Catégories de document',

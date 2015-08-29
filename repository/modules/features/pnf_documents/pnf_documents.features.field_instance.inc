@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * documents.features.field_instance.inc
+ * pnf_documents.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function documents_field_default_field_instances() {
+function pnf_documents_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'node-document-field_document_category'
