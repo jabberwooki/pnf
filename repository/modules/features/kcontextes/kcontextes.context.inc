@@ -32,6 +32,12 @@ function kcontextes_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-14',
         ),
+        'menu-menu-multimedia-footer' => array(
+          'module' => 'menu',
+          'delta' => 'menu-multimedia-footer',
+          'region' => 'footer',
+          'weight' => '-10',
+        ),
       ),
     ),
   );
