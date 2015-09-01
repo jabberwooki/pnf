@@ -122,6 +122,12 @@ dependencies[] = geofield_map
 dependencies[] = scald
 dependencies[] = atom_reference
 dependencies[] = mee
+dependencies[] = dnd
+dependencies[] = scald_dnd_library
+dependencies[] = scald_audio
+dependencies[] = scald_image
+dependencies[] = scald_video
+
 dependencies[] = scald_file
 dependencies[] = scald_dailymotion
 dependencies[] = scald_vimeo
@@ -160,6 +166,7 @@ dependencies[] = pnf_news
 dependencies[] = pnf_agenda
 dependencies[] = pnf_contracts
 dependencies[] = pnf_documents
+dependencies[] = pnf_multimedia
 
 
 
