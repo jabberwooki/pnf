@@ -9,6 +9,7 @@ dependencies[] = globalredirect
 dependencies[] = metatag
 dependencies[] = page_title
 dependencies[] = pathauto
+dependencies[] = pathauto_entity
 dependencies[] = redirect
 dependencies[] = transliteration
 dependencies[] = xmlsitemap

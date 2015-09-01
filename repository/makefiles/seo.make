@@ -14,6 +14,9 @@ projects[page_title][version] = "2.7"
 projects[pathauto][subdir] = contrib
 projects[pathauto][version] = "1.2"
 
+projects[pathauto_entity][subdir] = contrib
+projects[pathauto_entity][version] = "1.0"
+
 projects[redirect][subdir] = contrib
 projects[redirect][version] = "1.0-rc2"
 

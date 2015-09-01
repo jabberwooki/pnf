@@ -121,6 +121,9 @@ projects[email][version] = "1.3"
 projects[entityreference][subdir] = contrib
 projects[entityreference][version] = "1.1"
 
+projects[entity_token][subdir] = contrib
+projects[entity_token][version] = "1.6"
+
 ;projects[field_collection][subdir] = contrib
 ;projects[field_collection][version] = ""
 

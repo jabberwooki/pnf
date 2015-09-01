@@ -12,3 +12,10 @@
 function kcore_update_7001() {
   module_enable(array('i18n_node','i18n_taxonomy','i18n_menu','i18n_block','i18n_path','i18n_variable'));
 }
+
+/**
+ * Activate entity_token module.
+ */
+function kcore_update_7002() {
+  module_enable(array('entity_token'));
+}

@@ -85,6 +85,7 @@ dependencies[] = email
 ;dependencies[] = email_registration
 ;dependencies[] = entityform
 dependencies[] = entityreference
+dependencies[] = entity_token
 ;dependencies[] = field_collection
 ;dependencies[] = field_formatter_class
 ;dependencies[] = field_formatter_settings
