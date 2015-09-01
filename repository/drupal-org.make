@@ -133,6 +133,9 @@ projects[entityreference][version] = "1.1"
 projects[filefield_sources][subdir] = contrib
 projects[filefield_sources][version] = "1.9"
 
+projects[i18n][subdir] = contrib
+projects[i18n][version] = "1.13"
+
 projects[less][subdir] = contrib
 ;projects[less][version] = ""
 
@@ -162,6 +165,9 @@ projects[print][version] = "2.0"
 
 ;projects[rules][subdir] = contrib
 ;projects[rules][version] = ""
+
+projects[variable][subdir] = contrib
+projects[variable][version] = "2.5"
 
 ;projects[views_autocomplete_filters][subdir] = contrib
 ;projects[views_autocomplete_filters][version] = ""
