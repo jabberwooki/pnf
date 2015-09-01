@@ -137,7 +137,7 @@ projects[i18n][subdir] = contrib
 projects[i18n][version] = "1.13"
 
 projects[less][subdir] = contrib
-;projects[less][version] = ""
+projects[less][version] = "4.0"
 
 projects[menu_attributes][subdir] = contrib
 projects[menu_attributes][version] = "1.0-rc3"
