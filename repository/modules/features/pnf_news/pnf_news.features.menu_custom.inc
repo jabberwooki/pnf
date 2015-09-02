@@ -15,6 +15,8 @@ function pnf_news_menu_default_menu_custom() {
     'menu_name' => 'menu-news',
     'title' => 'Actualités',
     'description' => '',
+    'language' => 'und',
+    'i18n_mode' => 0,
   );
   // Translatables
   // Included for use with string extractors like potx.

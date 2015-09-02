@@ -16,6 +16,8 @@ function pnf_news_uuid_features_default_terms() {
     'format' => 'full_html',
     'weight' => 0,
     'uuid' => '3fb5ce07-2b29-4fdd-b54a-7b4aee5c6d3d',
+    'language' => 'und',
+    'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'public',
   );
   $terms[] = array(
@@ -24,6 +26,8 @@ function pnf_news_uuid_features_default_terms() {
     'format' => 'full_html',
     'weight' => 0,
     'uuid' => '7ef5329c-63f5-44af-9955-ba7032058809',
+    'language' => 'und',
+    'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'public',
   );
   $terms[] = array(
@@ -32,6 +36,8 @@ function pnf_news_uuid_features_default_terms() {
     'format' => 'full_html',
     'weight' => 0,
     'uuid' => 'a11bc3af-0f5a-4cdd-ad9a-7a3304eb8970',
+    'language' => 'und',
+    'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'news_types',
   );
   $terms[] = array(
@@ -40,6 +46,8 @@ function pnf_news_uuid_features_default_terms() {
     'format' => 'full_html',
     'weight' => 0,
     'uuid' => 'ada69fa2-d961-472c-82fa-f044f0a166bb',
+    'language' => 'und',
+    'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'news_types',
   );
   $terms[] = array(
@@ -48,6 +56,8 @@ function pnf_news_uuid_features_default_terms() {
     'format' => 'full_html',
     'weight' => 0,
     'uuid' => 'dbf7ebef-3b25-4f1c-a8db-5c031de33c79',
+    'language' => 'und',
+    'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'news_types',
   );
   $terms[] = array(
@@ -56,6 +66,8 @@ function pnf_news_uuid_features_default_terms() {
     'format' => 'full_html',
     'weight' => 0,
     'uuid' => 'dc16e89a-80bd-4fbb-bb49-3163b7cf1535',
+    'language' => 'und',
+    'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'public',
   );
   $terms[] = array(
@@ -64,6 +76,8 @@ function pnf_news_uuid_features_default_terms() {
     'format' => 'full_html',
     'weight' => 0,
     'uuid' => 'ef16beb7-1370-433e-b4c0-4219a3184953',
+    'language' => 'und',
+    'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'public',
   );
   return $terms;

@@ -16,6 +16,8 @@ function pnf_news_taxonomy_default_vocabularies() {
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 0,
     ),
     'news_tags' => array(
       'name' => 'Mots-clés actualités',
@@ -24,6 +26,8 @@ function pnf_news_taxonomy_default_vocabularies() {
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 0,
     ),
     'news_types' => array(
       'name' => 'Types d\'actualité',
@@ -32,6 +36,8 @@ function pnf_news_taxonomy_default_vocabularies() {
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 0,
     ),
     'public' => array(
       'name' => 'Public',
@@ -40,6 +46,8 @@ function pnf_news_taxonomy_default_vocabularies() {
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 0,
     ),
     'sectors' => array(
       'name' => 'Secteurs',
@@ -48,6 +56,8 @@ function pnf_news_taxonomy_default_vocabularies() {
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 0,
     ),
   );
 }
