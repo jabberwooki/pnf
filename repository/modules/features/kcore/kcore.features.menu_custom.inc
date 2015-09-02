@@ -26,6 +26,14 @@ function kcore_menu_default_menu_custom() {
     'language' => 'und',
     'i18n_mode' => 0,
   );
+  // Exported menu: menu-menu-park.
+  $menus['menu-menu-park'] = array(
+    'menu_name' => 'menu-menu-park',
+    'title' => 'Menu du parc',
+    'description' => 'Le menu du parc national.',
+    'language' => 'und',
+    'i18n_mode' => 0,
+  );
   // Exported menu: menu-tools.
   $menus['menu-tools'] = array(
     'menu_name' => 'menu-tools',
@@ -38,7 +46,9 @@ function kcore_menu_default_menu_custom() {
   // Included for use with string extractors like potx.
   t('Barre d\'outils latérale');
   t('Footer menu');
+  t('Le menu du parc national.');
   t('Main menu');
+  t('Menu du parc');
   t('The <em>Main</em> menu is used on many sites to show the major sections of the site, often in a top navigation bar.');
 
 
