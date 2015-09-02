@@ -18,3 +18,56 @@ function empty_front_page_callback() {
 	drupal_set_title('');
 	return array();
 }
+
+function kcore_block_view_alter(&$data, $block) {
+  if ($block->delta == 'menu-menu-park' || $block->delta == 'pnf_park_menu_clone') {
+	// Changes park's menu block name, based on http host.
+	$park_names = array(
+	  'calanques-parcnational' => 'Le Parc national des Calanques',
+	  'cevennes-parcnational' => 'Le Parc national des Cévennes',
+	  'ecrins-parcnational' => 'Le Parc national des Ecrins',
+	  'guadeloupe-parcnational' => 'Le Parc national de la Guadeloupe',
+	  'mercantour' => 'Le Parc national du Mercantour',
+	  'parc-amazonien-guyane' => 'Le Parc amazonien de Guyane',
+	  'parc-pyrenees' => 'Le Parc national des Pyrénées',
+	  'parcsnationaux' => 'Les Parcs nationaux de France',
+	  'portcrosparcnational' => 'Le Parc national de Port-Cros',
+	  'reunion-parcnational' => 'Le Parc national de La Réunion',
+	  'vanoise-parcnational' => 'Le Parc national de la Vanoise',
+	);
+
+	$host_parts = explode('.', $_SERVER['HTTP_HOST']);
+	$block->title = $park_names[$host_parts[1]];
+  }
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function kcore_block_info() {
+  $blocks = array();
+  // Cloning of "Menu du parc" block.
+  $blocks['pnf_park_menu_clone'] = array(
+	'info' => t('PNF : Clone du bloc de menu "Menu du parc"'),
+	'cache' => DRUPAL_NO_CACHE,
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function kcore_block_view($delta = '') {
+  switch ($delta) {
+	case 'pnf_park_menu_clone':
+	  $block['subject'] = '';
+
+	  // Retrieve "Menu du parc" block content
+	  $park_menu_block = module_invoke('menu', 'block_view', 'menu-menu-park');
+	  $block['content'] = render($park_menu_block['content']);
+	  return $block;
+	  break;
+  }
+}
+
