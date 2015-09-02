@@ -2,8 +2,22 @@
 
 // Extend the Bootstrap .btn class to render file field and document preview.
 
-.file, .field-name-field-document-preview .field-item {
+.file, .field-name-field-document-preview .field-item{
 	.btn();
 	.btn-sm();
-	.btn-default();
+	.btn-primary();
+}
+
+#block-menu-menu-tools{
+	display: inline-block;
+    position: fixed;
+    right: 0;
+    top: 200px;
+    margin-top: -100px;
+    z-index: 5000;
+    color: #000;
+    text-align: right;
+    	li{
+    		background-color: #000;
+    	}
 }

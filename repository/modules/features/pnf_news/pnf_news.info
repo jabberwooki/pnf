@@ -11,7 +11,6 @@ dependencies[] = image
 dependencies[] = kcore
 dependencies[] = kpages
 dependencies[] = menu
-dependencies[] = node
 dependencies[] = page_title
 dependencies[] = taxonomy
 dependencies[] = text

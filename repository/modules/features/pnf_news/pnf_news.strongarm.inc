@@ -82,7 +82,7 @@ function pnf_news_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '9',
+            'weight' => '10',
             'visible' => FALSE,
           ),
           'documents' => array(

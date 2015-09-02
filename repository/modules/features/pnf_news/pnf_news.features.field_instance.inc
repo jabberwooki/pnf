@@ -143,7 +143,7 @@ function pnf_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'teaser_home_flashnews' => array(
         'label' => 'hidden',
@@ -215,7 +215,7 @@ function pnf_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'teaser_home_flashnews' => array(
         'label' => 'above',
@@ -396,7 +396,7 @@ function pnf_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'teaser_home_flashnews' => array(
         'label' => 'above',
@@ -451,7 +451,7 @@ function pnf_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 17,
       ),
       'teaser_home_flashnews' => array(
         'label' => 'above',
@@ -508,7 +508,7 @@ function pnf_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'teaser_home_flashnews' => array(
         'label' => 'above',
@@ -561,7 +561,7 @@ function pnf_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'teaser_home_flashnews' => array(
         'label' => 'above',
@@ -627,7 +627,7 @@ function pnf_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 19,
       ),
       'teaser_home_flashnews' => array(
         'label' => 'above',
@@ -685,7 +685,7 @@ function pnf_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'teaser_home_flashnews' => array(
         'label' => 'above',
@@ -749,7 +749,7 @@ function pnf_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 18,
       ),
       'teaser_home_flashnews' => array(
         'label' => 'above',

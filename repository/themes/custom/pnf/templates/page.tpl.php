@@ -122,7 +122,6 @@
   </div>
 </header>
 
-<div class="main-container container">
 
   <header role="banner" id="page-header">
     <?php if (!empty($site_slogan)): ?>
@@ -131,6 +130,9 @@
 
     <?php print render($page['header']); ?>
   </header> <!-- /#page-header -->
+<div class="main-container container">
+
+
 
   <div class="row">
 

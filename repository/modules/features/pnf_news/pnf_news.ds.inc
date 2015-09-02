@@ -52,20 +52,15 @@ function pnf_news_ds_field_settings_info() {
         'class' => '',
       ),
     ),
-    'node_link' => array(
-      'weight' => '4',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'link text' => '+ d\'infos',
-        'wrapper' => '',
-        'class' => '',
-      ),
-    ),
     'post_date' => array(
       'weight' => '1',
       'label' => 'hidden',
       'format' => 'ds_post_date_date_xxs',
+    ),
+    'btn_readmore' => array(
+      'weight' => '8',
+      'label' => 'hidden',
+      'format' => 'default',
     ),
   );
   $export['node|news|teaser'] = $ds_fieldsetting;
@@ -170,7 +165,7 @@ function pnf_news_ds_layout_settings_info() {
         1 => 'post_date',
         2 => 'title',
         3 => 'body',
-        4 => 'node_link',
+        4 => 'btn_readmore',
       ),
     ),
     'fields' => array(
@@ -178,7 +173,7 @@ function pnf_news_ds_layout_settings_info() {
       'post_date' => 'central',
       'title' => 'central',
       'body' => 'central',
-      'node_link' => 'central',
+      'btn_readmore' => 'central',
     ),
     'classes' => array(),
     'wrappers' => array(

@@ -29,6 +29,8 @@ function pnf_news_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
     'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
   );
   // Exported menu link: menu-news_brves:breves
   $menu_links['menu-news_brves:breves'] = array(
@@ -49,6 +51,8 @@ function pnf_news_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 2,
     'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
   );
   // Exported menu link: menu-news_dossiers:dossiers
   $menu_links['menu-news_dossiers:dossiers'] = array(
@@ -69,6 +73,8 @@ function pnf_news_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 2,
     'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
   );
   // Exported menu link: menu-tools_actualits:actualites
   $menu_links['menu-tools_actualits:actualites'] = array(
@@ -89,6 +95,8 @@ function pnf_news_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
     'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
   );
 
   // Translatables
