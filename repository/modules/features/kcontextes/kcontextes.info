@@ -6,6 +6,7 @@ version = 7.x-1.0
 project = kcontextes
 dependencies[] = context
 dependencies[] = ctools
+dependencies[] = kcore
 dependencies[] = menu
 dependencies[] = views
 features[context][] = all

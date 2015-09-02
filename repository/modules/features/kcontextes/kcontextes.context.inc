@@ -26,6 +26,12 @@ function kcontextes_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'menu-menu-menu-park' => array(
+          'module' => 'menu',
+          'delta' => 'menu-menu-park',
+          'region' => 'top_menu',
+          'weight' => '-10',
+        ),
         'menu-menu-tools' => array(
           'module' => 'menu',
           'delta' => 'menu-tools',
@@ -35,6 +41,12 @@ function kcontextes_context_default_contexts() {
         'menu-menu-multimedia-footer' => array(
           'module' => 'menu',
           'delta' => 'menu-multimedia-footer',
+          'region' => 'pre_footer',
+          'weight' => '-9',
+        ),
+        'kcore-pnf_park_menu_clone' => array(
+          'module' => 'kcore',
+          'delta' => 'pnf_park_menu_clone',
           'region' => 'footer',
           'weight' => '-10',
         ),
