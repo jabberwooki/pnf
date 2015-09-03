@@ -14,7 +14,7 @@ function kpages_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_page';
-  $strongarm->value = '0';
+  $strongarm->value = '1';
   $export['language_content_type_page'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -22,7 +22,10 @@ function kpages_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_page';
   $strongarm->value = array(
-    0 => 'main-menu',
+    0 => 'menu-footer-menu',
+    1 => 'menu-menu-park',
+    2 => 'main-menu',
+    3 => 'menu-menu-themes',
   );
   $export['menu_options_page'] = $strongarm;
 

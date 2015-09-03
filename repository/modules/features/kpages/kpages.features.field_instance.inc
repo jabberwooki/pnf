@@ -39,7 +39,10 @@ function kpages_field_default_field_instances() {
     'label' => 'Body',
     'required' => FALSE,
     'settings' => array(
+      'context' => '',
       'display_summary' => TRUE,
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
