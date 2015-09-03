@@ -34,6 +34,14 @@ function kcore_menu_default_menu_custom() {
     'language' => 'und',
     'i18n_mode' => 0,
   );
+  // Exported menu: menu-menu-themes.
+  $menus['menu-menu-themes'] = array(
+    'menu_name' => 'menu-menu-themes',
+    'title' => 'Menu thématique',
+    'description' => '',
+    'language' => 'und',
+    'i18n_mode' => 0,
+  );
   // Exported menu: menu-tools.
   $menus['menu-tools'] = array(
     'menu_name' => 'menu-tools',
@@ -49,6 +57,7 @@ function kcore_menu_default_menu_custom() {
   t('Le menu du parc national.');
   t('Main menu');
   t('Menu du parc');
+  t('Menu thématique');
   t('The <em>Main</em> menu is used on many sites to show the major sections of the site, often in a top navigation bar.');
 
 
