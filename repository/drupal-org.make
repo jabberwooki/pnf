@@ -166,6 +166,9 @@ projects[print][version] = "2.0"
 ;projects[rules][subdir] = contrib
 ;projects[rules][version] = ""
 
+projects[tb_megamenu][subdir] = contrib
+projects[tb_megamenu][version] = "1.0-rc2"
+
 projects[variable][subdir] = contrib
 projects[variable][version] = "2.5"
 
