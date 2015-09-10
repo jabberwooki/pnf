@@ -32,6 +32,12 @@ function kcontextes_context_default_contexts() {
           'region' => 'top_menu',
           'weight' => '-10',
         ),
+        'tb_megamenu-menu-menu-themes' => array(
+          'module' => 'tb_megamenu',
+          'delta' => 'menu-menu-themes',
+          'region' => 'navigation',
+          'weight' => '-10',
+        ),
         'menu-menu-tools' => array(
           'module' => 'menu',
           'delta' => 'menu-tools',
@@ -49,6 +55,12 @@ function kcontextes_context_default_contexts() {
           'delta' => 'pnf_park_menu_clone',
           'region' => 'footer',
           'weight' => '-10',
+        ),
+        'menu-menu-footer-menu' => array(
+          'module' => 'menu',
+          'delta' => 'menu-footer-menu',
+          'region' => 'footer',
+          'weight' => '10',
         ),
       ),
     ),
