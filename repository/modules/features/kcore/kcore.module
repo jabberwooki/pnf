@@ -37,7 +37,29 @@ function kcore_block_view_alter(&$data, $block) {
 	);
 
 	$host_parts = explode('.', $_SERVER['HTTP_HOST']);
-	$block->title = $park_names[$host_parts[1]];
+	$current_park_name = $park_names[$host_parts[1]];
+
+	if ($block->delta == 'menu-menu-park') { // <ul> standard drupal menu changed into ctools jump menu
+	  $select = array();
+	  foreach (element_children($data['content']) as $key) {
+		$select[$data['content'][$key]['#href']] = $data['content'][$key]['#title'];
+	  }
+	  $options = array('choose' => $park_names[$host_parts[1]]);
+
+	  ctools_include('jump-menu');
+	  $form = ctools_jump_menu(array(), $form_state, $select, $options);
+
+	  $form_options = $form['jump']['#options'];
+	  array_shift($form_options);
+	  $data['content'] = $form;
+
+	  // Park menu block title set to park name
+	  $data['subject'] = '';
+	  //$block->title = '';
+	}
+	else { // Clone block title set to park name
+	  $data['subject'] = $current_park_name;
+	}
   }
 }
 
@@ -65,7 +87,7 @@ function kcore_block_view($delta = '') {
 
 	  // Retrieve "Menu du parc" block content
 	  $park_menu_block = module_invoke('menu', 'block_view', 'menu-menu-park');
-	  $block['content'] = render($park_menu_block['content']);
+	  $block['content'] = $park_menu_block['content'];
 	  return $block;
 	  break;
   }
