@@ -7,7 +7,6 @@ project = kdevel
 dependencies[] = coffee
 dependencies[] = context_ui
 dependencies[] = devel
-dependencies[] = devel_themer
 dependencies[] = diff
 dependencies[] = ds_ui
 dependencies[] = features_diff
