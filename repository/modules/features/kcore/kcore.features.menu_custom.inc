@@ -42,6 +42,14 @@ function kcore_menu_default_menu_custom() {
     'language' => 'und',
     'i18n_mode' => 0,
   );
+  // Exported menu: menu-national-parks.
+  $menus['menu-national-parks'] = array(
+    'menu_name' => 'menu-national-parks',
+    'title' => 'Les parcs nationaux en France',
+    'description' => '',
+    'language' => 'und',
+    'i18n_mode' => 0,
+  );
   // Exported menu: menu-tools.
   $menus['menu-tools'] = array(
     'menu_name' => 'menu-tools',
@@ -55,6 +63,7 @@ function kcore_menu_default_menu_custom() {
   t('Barre d\'outils latérale');
   t('Footer menu');
   t('Le menu du parc national.');
+  t('Les parcs nationaux en France');
   t('Main menu');
   t('Menu du parc');
   t('Menu thématique');

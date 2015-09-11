@@ -20,8 +20,8 @@ function empty_front_page_callback() {
 }
 
 function kcore_block_view_alter(&$data, $block) {
-  if ($block->delta == 'menu-menu-park' || $block->delta == 'pnf_park_menu_clone') {
-	// Changes park's menu block name, based on http host.
+  if ($block->delta == 'menu-menu-park' || $block->delta == 'menu-national-parks' || $block->delta == 'pnf_park_menu_clone') {
+	// Changes menu block name, based on http host.
 	$park_names = array(
 	  'calanques-parcnational' => 'Le Parc national des Calanques',
 	  'cevennes-parcnational' => 'Le Parc national des Cévennes',
@@ -30,7 +30,7 @@ function kcore_block_view_alter(&$data, $block) {
 	  'mercantour' => 'Le Parc national du Mercantour',
 	  'parc-amazonien-guyane' => 'Le Parc amazonien de Guyane',
 	  'parc-pyrenees' => 'Le Parc national des Pyrénées',
-	  'parcsnationaux' => 'Les Parcs nationaux de France',
+	  'parcsnationaux' => 'Le portail des Parcs',
 	  'portcrosparcnational' => 'Le Parc national de Port-Cros',
 	  'reunion-parcnational' => 'Le Parc national de La Réunion',
 	  'vanoise-parcnational' => 'Le Parc national de la Vanoise',
@@ -39,27 +39,40 @@ function kcore_block_view_alter(&$data, $block) {
 	$host_parts = explode('.', $_SERVER['HTTP_HOST']);
 	$current_park_name = $park_names[$host_parts[1]];
 
-	if ($block->delta == 'menu-menu-park') { // <ul> standard drupal menu changed into ctools jump menu
-	  $select = array();
-	  foreach (element_children($data['content']) as $key) {
-		$select[$data['content'][$key]['#href']] = $data['content'][$key]['#title'];
-	  }
-	  $options = array('choose' => $park_names[$host_parts[1]]);
+	switch($block->delta) {
+	  case 'menu-menu-park':
+		$select = array();
+		foreach (element_children($data['content']) as $key) {
+		  $select[$data['content'][$key]['#href']] = $data['content'][$key]['#title'];
+		}
+		$options = array('choose' => $current_park_name);
+		ctools_include('jump-menu');
+		$form = ctools_jump_menu(array(), $form_state, $select, $options);
+		$data['content'] = $form;
+		$data['subject'] = '';
+		break;
 
-	  ctools_include('jump-menu');
-	  $form = ctools_jump_menu(array(), $form_state, $select, $options);
+	  case 'menu-national-parks':
+		$select = array();
+		foreach (element_children($data['content']) as $key) {
+		  $url_parts = explode('.', $data['content'][$key]['#href']);
+		  if ($url_parts[1] != $host_parts[1]) {
+			$select[$data['content'][$key]['#href']] = $data['content'][$key]['#title'];
+		  }
+		}
+		$options = array('choose' => $data['subject']);
+		ctools_include('jump-menu');
+		$form = ctools_jump_menu(array(), $form_state, $select, $options);
+		$data['content'] = $form;
+		$data['subject'] = '';
+		break;
 
-	  $form_options = $form['jump']['#options'];
-	  array_shift($form_options);
-	  $data['content'] = $form;
-
-	  // Park menu block title set to park name
-	  $data['subject'] = '';
-	  //$block->title = '';
+	  case 'pnf_park_menu_clone':
+		$data['subject'] = $current_park_name;
+		break;
 	}
-	else { // Clone block title set to park name
-	  $data['subject'] = $current_park_name;
-	}
+
+
   }
 }
 

@@ -32,6 +32,12 @@ function kcontextes_context_default_contexts() {
           'region' => 'top_menu',
           'weight' => '-10',
         ),
+        'menu-menu-national-parks' => array(
+          'module' => 'menu',
+          'delta' => 'menu-national-parks',
+          'region' => 'top_menu',
+          'weight' => '-9',
+        ),
         'tb_megamenu-menu-menu-themes' => array(
           'module' => 'tb_megamenu',
           'delta' => 'menu-menu-themes',
