@@ -26,3 +26,10 @@ function kcore_update_7002() {
 function kcore_update_7003() {
   module_enable(array('tb_megamenu'));
 }
+
+/**
+ * Activate custom_search_blocks module.
+ */
+function kcore_update_7004() {
+  module_enable(array('custom_search_blocks'));
+}
