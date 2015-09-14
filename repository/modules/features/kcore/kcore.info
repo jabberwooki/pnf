@@ -28,6 +28,7 @@ features[fe_block_settings][] = kcore-pnf_park_menu_clone
 features[fe_block_settings][] = menu-menu-footer-menu
 features[fe_block_settings][] = menu-menu-menu-park
 features[fe_block_settings][] = menu-menu-menu-themes
+features[fe_block_settings][] = menu-menu-multimedia-footer
 features[fe_block_settings][] = menu-menu-national-parks
 features[fe_block_settings][] = menu-menu-tools
 features[fe_block_settings][] = tb_megamenu-menu-menu-themes
