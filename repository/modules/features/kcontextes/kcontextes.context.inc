@@ -38,6 +38,12 @@ function kcontextes_context_default_contexts() {
           'region' => 'top_menu',
           'weight' => '-9',
         ),
+        'custom_search_blocks-1' => array(
+          'module' => 'custom_search_blocks',
+          'delta' => '1',
+          'region' => 'top_menu',
+          'weight' => '-8',
+        ),
         'tb_megamenu-menu-menu-themes' => array(
           'module' => 'tb_megamenu',
           'delta' => 'menu-menu-themes',
