@@ -12,6 +12,35 @@ function kcore_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
+  $export['custom_search_blocks-1'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 1,
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'custom_search_blocks',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'pnf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'pnf',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 0,
+  );
+
   $export['kcore-pnf_park_menu_clone'] = array(
     'cache' => -1,
     'css_class' => '',
