@@ -70,6 +70,35 @@ function kcore_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['lang_dropdown-language'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'language',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'lang_dropdown',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'pnf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'pnf',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 0,
+  );
+
   $export['menu-menu-footer-menu'] = array(
     'cache' => -1,
     'css_class' => '',

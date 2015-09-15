@@ -40,3 +40,10 @@ function kcore_update_7004() {
 function kcore_update_7005() {
   module_enable(array('on_the_web'));
 }
+
+/**
+ * Activate lang_dropdown module.
+ */
+function kcore_update_7006() {
+  module_enable(array('lang_dropdown'));
+}
