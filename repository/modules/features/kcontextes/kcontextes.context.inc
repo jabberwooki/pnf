@@ -50,6 +50,12 @@ function kcontextes_context_default_contexts() {
           'region' => 'top_menu',
           'weight' => '-7',
         ),
+        'lang_dropdown-language' => array(
+          'module' => 'lang_dropdown',
+          'delta' => 'language',
+          'region' => 'top_menu',
+          'weight' => '-6',
+        ),
         'tb_megamenu-menu-menu-themes' => array(
           'module' => 'tb_megamenu',
           'delta' => 'menu-menu-themes',
