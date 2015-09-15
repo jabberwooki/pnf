@@ -44,6 +44,12 @@ function kcontextes_context_default_contexts() {
           'region' => 'top_menu',
           'weight' => '-8',
         ),
+        'kcore-pnf_on_the_web_clone' => array(
+          'module' => 'kcore',
+          'delta' => 'pnf_on_the_web_clone',
+          'region' => 'top_menu',
+          'weight' => '-7',
+        ),
         'tb_megamenu-menu-menu-themes' => array(
           'module' => 'tb_megamenu',
           'delta' => 'menu-menu-themes',
@@ -67,6 +73,12 @@ function kcontextes_context_default_contexts() {
           'delta' => 'pnf_park_menu_clone',
           'region' => 'footer',
           'weight' => '-10',
+        ),
+        'on_the_web-0' => array(
+          'module' => 'on_the_web',
+          'delta' => '0',
+          'region' => 'footer',
+          'weight' => '-7',
         ),
         'menu-menu-footer-menu' => array(
           'module' => 'menu',

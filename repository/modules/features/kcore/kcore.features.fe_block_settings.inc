@@ -244,6 +244,35 @@ function kcore_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['on_the_web-0'] = array(
+    'cache' => 1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 0,
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'on_the_web',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'pnf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'pnf',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Suivez-nous',
+    'visibility' => 0,
+  );
+
   $export['tb_megamenu-menu-menu-themes'] = array(
     'cache' => -1,
     'css_class' => 'col-md-9 col-md-offset-3',

@@ -87,6 +87,12 @@ function kcore_block_info() {
 	'cache' => DRUPAL_NO_CACHE,
   );
 
+  // Cloning of "Suivez-nous" block.
+  $blocks['pnf_on_the_web_clone'] = array(
+	'info' => t('PNF : Clone du bloc "Suivez-nous"'),
+	'cache' => DRUPAL_NO_CACHE,
+  );
+
   return $blocks;
 }
 
@@ -101,6 +107,15 @@ function kcore_block_view($delta = '') {
 	  // Retrieve "Menu du parc" block content
 	  $park_menu_block = module_invoke('menu', 'block_view', 'menu-menu-park');
 	  $block['content'] = $park_menu_block['content'];
+	  return $block;
+	  break;
+
+	case 'pnf_on_the_web_clone':
+	  $block['subject'] = '';
+
+	  // Retrieve "Menu du parc" block content
+	  $on_the_web_block = module_invoke('on_the_web', 'block_view', '0');
+	  $block['content'] = $on_the_web_block['content'];
 	  return $block;
 	  break;
   }
