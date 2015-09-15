@@ -205,3 +205,10 @@ function _pnf_get_settings() {
   }
   return $settings;
 }
+
+/**
+ * Activate pnf_slideshow feature.
+ */
+function pnf_update_7001() {
+  module_enable(array('pnf_slideshow'));
+}
