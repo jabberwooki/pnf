@@ -80,6 +80,7 @@ features[fe_date_date_format_types][] = date_xxxs
 features[features_api][] = api:2
 features[menu_custom][] = main-menu
 features[menu_custom][] = menu-footer-menu
+features[menu_custom][] = menu-join-national-park
 features[menu_custom][] = menu-menu-park
 features[menu_custom][] = menu-menu-themes
 features[menu_custom][] = menu-national-parks
