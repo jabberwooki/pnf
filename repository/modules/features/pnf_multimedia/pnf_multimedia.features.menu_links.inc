@@ -17,10 +17,17 @@ function pnf_multimedia_menu_default_menu_links() {
     'router_path' => 'documents',
     'link_title' => 'Documents',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'identifier' => 'menu-multimedia-footer_documents:documents',
+      'attributes' => array(
+        'class' => array(
+          0 => 'documents-link',
+        ),
+      ),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -39,10 +46,17 @@ function pnf_multimedia_menu_default_menu_links() {
     'router_path' => 'espace-presse',
     'link_title' => 'Espace Presse',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'identifier' => 'menu-multimedia-footer_espace-presse:espace-presse',
+      'attributes' => array(
+        'class' => array(
+          0 => 'press-links',
+        ),
+      ),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -61,10 +75,17 @@ function pnf_multimedia_menu_default_menu_links() {
     'router_path' => 'galeries-photo',
     'link_title' => 'Photos',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'identifier' => 'menu-multimedia-footer_photos:galeries-photo',
+      'attributes' => array(
+        'class' => array(
+          0 => 'photos-link',
+        ),
+      ),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -83,10 +104,17 @@ function pnf_multimedia_menu_default_menu_links() {
     'router_path' => 'videos',
     'link_title' => 'Vidéos',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'identifier' => 'menu-multimedia-footer_vidos:videos',
+      'attributes' => array(
+        'class' => array(
+          0 => 'videos-link',
+        ),
+      ),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
     ),
     'module' => 'menu',
     'hidden' => 0,
