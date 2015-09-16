@@ -62,12 +62,6 @@ function kcontextes_context_default_contexts() {
           'region' => 'navigation',
           'weight' => '-10',
         ),
-        'menu-menu-tools' => array(
-          'module' => 'menu',
-          'delta' => 'menu-tools',
-          'region' => 'sidebar_second',
-          'weight' => '-14',
-        ),
         'menu-menu-multimedia-footer' => array(
           'module' => 'menu',
           'delta' => 'menu-multimedia-footer',
@@ -97,6 +91,12 @@ function kcontextes_context_default_contexts() {
           'delta' => 'menu-footer-menu',
           'region' => 'footer',
           'weight' => '10',
+        ),
+        'menu-menu-tools' => array(
+          'module' => 'menu',
+          'delta' => 'menu-tools',
+          'region' => 'toolbar',
+          'weight' => '-10',
         ),
       ),
     ),
