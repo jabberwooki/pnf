@@ -139,6 +139,9 @@ projects[i18n][version] = "1.13"
 projects[less][subdir] = contrib
 projects[less][version] = "4.0"
 
+projects[lang_dropdown][subdir] = contrib
+projects[lang_dropdown][version] = "2.5"
+
 projects[menu_attributes][subdir] = contrib
 projects[menu_attributes][version] = "1.0-rc3"
 

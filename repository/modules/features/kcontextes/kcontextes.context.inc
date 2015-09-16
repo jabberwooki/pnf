@@ -50,17 +50,17 @@ function kcontextes_context_default_contexts() {
           'region' => 'top_menu',
           'weight' => '-7',
         ),
+        'lang_dropdown-language' => array(
+          'module' => 'lang_dropdown',
+          'delta' => 'language',
+          'region' => 'top_menu',
+          'weight' => '-6',
+        ),
         'tb_megamenu-menu-menu-themes' => array(
           'module' => 'tb_megamenu',
           'delta' => 'menu-menu-themes',
           'region' => 'navigation',
           'weight' => '-10',
-        ),
-        'menu-menu-tools' => array(
-          'module' => 'menu',
-          'delta' => 'menu-tools',
-          'region' => 'sidebar_second',
-          'weight' => '-14',
         ),
         'menu-menu-multimedia-footer' => array(
           'module' => 'menu',
@@ -74,6 +74,12 @@ function kcontextes_context_default_contexts() {
           'region' => 'footer',
           'weight' => '-10',
         ),
+        'menu-menu-join-national-park' => array(
+          'module' => 'menu',
+          'delta' => 'menu-join-national-park',
+          'region' => 'footer',
+          'weight' => '-8',
+        ),
         'on_the_web-0' => array(
           'module' => 'on_the_web',
           'delta' => '0',
@@ -85,6 +91,12 @@ function kcontextes_context_default_contexts() {
           'delta' => 'menu-footer-menu',
           'region' => 'footer',
           'weight' => '10',
+        ),
+        'menu-menu-tools' => array(
+          'module' => 'menu',
+          'delta' => 'menu-tools',
+          'region' => 'toolbar',
+          'weight' => '-10',
         ),
       ),
     ),
