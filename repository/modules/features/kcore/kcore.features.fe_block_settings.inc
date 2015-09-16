@@ -131,8 +131,10 @@ function kcore_default_fe_block_settings() {
   $export['menu-menu-join-national-park'] = array(
     'cache' => -1,
     'css_class' => '',
+    'custom' => 0,
     'delta' => 'menu-join-national-park',
     'i18n_block_language' => array(),
+    'i18n_mode' => 0,
     'module' => 'menu',
     'node_types' => array(),
     'pages' => '',
@@ -151,6 +153,8 @@ function kcore_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
+    'title' => '',
+    'visibility' => 0,
   );
 
   $export['menu-menu-menu-park'] = array(
