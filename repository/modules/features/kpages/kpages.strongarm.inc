@@ -26,6 +26,7 @@ function kpages_strongarm() {
     1 => 'menu-menu-park',
     2 => 'main-menu',
     3 => 'menu-menu-themes',
+    4 => 'menu-join-national-park',
   );
   $export['menu_options_page'] = $strongarm;
 

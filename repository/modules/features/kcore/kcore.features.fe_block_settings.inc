@@ -128,6 +128,31 @@ function kcore_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['menu-menu-join-national-park'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'delta' => 'menu-join-national-park',
+    'i18n_block_language' => array(),
+    'module' => 'menu',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'pnf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'pnf',
+        'weight' => 0,
+      ),
+    ),
+  );
+
   $export['menu-menu-menu-park'] = array(
     'cache' => -1,
     'css_class' => '',

@@ -80,6 +80,12 @@ function kcontextes_context_default_contexts() {
           'region' => 'footer',
           'weight' => '-10',
         ),
+        'menu-menu-join-national-park' => array(
+          'module' => 'menu',
+          'delta' => 'menu-join-national-park',
+          'region' => 'footer',
+          'weight' => '-8',
+        ),
         'on_the_web-0' => array(
           'module' => 'on_the_web',
           'delta' => '0',
