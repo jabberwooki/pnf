@@ -76,9 +76,13 @@
 
 <!-- custom region top_menu -->
 <div class = "pnf_topmenu">
-  <?php if (!empty($page['top_menu'])): ?>
-    <?php print render($page['top_menu']); ?>
-  <?php endif; ?>
+  <div class="container">
+    <div class="col-md-7 col-md-offset-5">
+      <?php if (!empty($page['top_menu'])): ?>
+        <?php print render($page['top_menu']); ?>
+      <?php endif; ?>
+      </div>
+    </div>
 </div>
 <!-- end of custom region top_menu -->
 
@@ -130,6 +134,7 @@
 
     <?php print render($page['header']); ?>
   </header> <!-- /#page-header -->
+  
 <div class="main-container container">
 
 
