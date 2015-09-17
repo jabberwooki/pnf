@@ -17,9 +17,7 @@ function kcore_menu_default_menu_links() {
     'router_path' => 'marches-publics',
     'link_title' => 'Marchés publics',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-menu-park_marchs-publics:marches-publics',
     ),
     'module' => 'menu',
@@ -39,9 +37,7 @@ function kcore_menu_default_menu_links() {
     'router_path' => '',
     'link_title' => 'Parc amazonien de Guyane',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-national-parks_parc-amazonien-de-guyane:http://www.parc-amazonien-guyane.fr/',
     ),
     'module' => 'menu',
@@ -61,9 +57,7 @@ function kcore_menu_default_menu_links() {
     'router_path' => '',
     'link_title' => 'Parc national de la Guadeloupe',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-national-parks_parc-national-de-la-guadeloupe:http://www.guadeloupe-parcnational.fr',
     ),
     'module' => 'menu',
@@ -83,9 +77,7 @@ function kcore_menu_default_menu_links() {
     'router_path' => '',
     'link_title' => 'Parc national de La Réunion',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-national-parks_parc-national-de-la-runion:http://www.reunion-parcnational.fr',
     ),
     'module' => 'menu',
@@ -105,9 +97,7 @@ function kcore_menu_default_menu_links() {
     'router_path' => '',
     'link_title' => 'Parc national de la Vanoise',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-national-parks_parc-national-de-la-vanoise:http://www.vanoise-parcnational.fr/',
     ),
     'module' => 'menu',
@@ -127,9 +117,7 @@ function kcore_menu_default_menu_links() {
     'router_path' => '',
     'link_title' => 'Parc national de Port-Cros',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-national-parks_parc-national-de-port-cros:http://www.portcrosparcnational.fr',
     ),
     'module' => 'menu',
@@ -149,9 +137,7 @@ function kcore_menu_default_menu_links() {
     'router_path' => '',
     'link_title' => 'Parc national des Calanques',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-national-parks_parc-national-des-calanques:http://www.calanques-parcnational.fr',
     ),
     'module' => 'menu',
@@ -171,9 +157,7 @@ function kcore_menu_default_menu_links() {
     'router_path' => '',
     'link_title' => 'Parc national des Cévennes',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-national-parks_parc-national-des-cvennes:http://www.cevennes-parcnational.fr',
     ),
     'module' => 'menu',
@@ -193,9 +177,7 @@ function kcore_menu_default_menu_links() {
     'router_path' => '',
     'link_title' => 'Parc national des Ecrins',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-national-parks_parc-national-des-ecrins:http://www.ecrins-parcnational.fr',
     ),
     'module' => 'menu',
@@ -215,9 +197,7 @@ function kcore_menu_default_menu_links() {
     'router_path' => '',
     'link_title' => 'Parc national des Pyrénées',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-national-parks_parc-national-des-pyrnes:http://www.parc-pyrenees.com',
     ),
     'module' => 'menu',
@@ -237,9 +217,7 @@ function kcore_menu_default_menu_links() {
     'router_path' => '',
     'link_title' => 'Parc national du Mercantour',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-national-parks_parc-national-du-mercantour:http://www.mercantour.eu',
     ),
     'module' => 'menu',
@@ -259,9 +237,7 @@ function kcore_menu_default_menu_links() {
     'router_path' => '',
     'link_title' => 'Parcs nationaux de France',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-national-parks_parcs-nationaux-de-france:http://www.parcsnationaux.fr/',
     ),
     'module' => 'menu',
