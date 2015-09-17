@@ -115,8 +115,8 @@ projects[email][version] = "1.3"
 ;projects[email_registration][subdir] = contrib
 ;projects[email_registration][version] = ""
 
-;projects[entityform][subdir] = contrib
-;projects[entityform][version] = ""
+projects[entityform][subdir] = contrib
+projects[entityform][version] = "2.0-rc1"
 
 projects[entityreference][subdir] = contrib
 projects[entityreference][version] = "1.1"

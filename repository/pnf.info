@@ -169,6 +169,7 @@ dependencies[] = pnf_contracts
 dependencies[] = pnf_documents
 dependencies[] = pnf_multimedia
 dependencies[] = pnf_slideshow
+dependencies[] = pnf_contact
 
 
 

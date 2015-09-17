@@ -47,3 +47,10 @@ function kcore_update_7005() {
 function kcore_update_7006() {
   module_enable(array('lang_dropdown'));
 }
+
+/**
+ * Activate bean_admin_ui, entityform modules.
+ */
+function kcore_update_7007() {
+  module_enable(array('bean_admin_ui','entityform'));
+}
