@@ -67,8 +67,8 @@ function pnf_agenda_context_default_contexts() {
         'views-events-block_events_home' => array(
           'module' => 'views',
           'delta' => 'events-block_events_home',
-          'region' => 'content',
-          'weight' => '-7',
+          'region' => 'pre_content_right',
+          'weight' => '0',
         ),
       ),
     ),

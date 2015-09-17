@@ -137,7 +137,22 @@
   
 <div class="main-container container">
 
-
+<!-- pre-content -->     
+  <?php if(drupal_is_front_page()): ?>
+      <div class="row">
+        <div class="col-sm-9">
+          <?php if (!empty($page['pre_content_left'])): ?>
+           <?php print render($page['pre_content_left']); ?>
+          <?php endif; ?>
+        </div>
+        <div class="col-sm-3">
+          <?php if (!empty($page['pre_content_right'])): ?>
+           <?php print render($page['pre_content_right']); ?>
+          <?php endif; ?>
+        </div>
+      </div>
+  <?php endif; ?>
+<!-- end of pre-content -->  
 
   <div class="row">
 

@@ -29,6 +29,8 @@ function pnf_agenda_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 1,
     'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
   );
   // Exported menu link: menu-tools_agenda:agenda
   $menu_links['menu-tools_agenda:agenda'] = array(
@@ -49,6 +51,8 @@ function pnf_agenda_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 1,
     'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
   );
 
   // Translatables
