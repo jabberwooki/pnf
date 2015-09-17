@@ -23,6 +23,13 @@ function pnf_contact_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function pnf_contact_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_default_entityform_type().
  */
 function pnf_contact_default_entityform_type() {

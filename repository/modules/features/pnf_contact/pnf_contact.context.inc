@@ -26,9 +26,9 @@ function pnf_contact_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'bean-bloc-contact-accueil' => array(
-          'module' => 'bean',
-          'delta' => 'bloc-contact-accueil',
+        'views-contact-contact_front' => array(
+          'module' => 'views',
+          'delta' => 'contact-contact_front',
           'region' => 'footer',
           'weight' => '-9',
         ),
