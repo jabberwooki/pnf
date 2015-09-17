@@ -518,6 +518,49 @@ function kcore_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'entityform_type_defaults';
+  $strongarm->value = array(
+    'data' => array(
+      'form_status' => 'ENTITYFORM_OPEN',
+      'roles' => array(
+        1 => '1',
+        2 => '2',
+        4 => 0,
+        5 => 0,
+        3 => 0,
+      ),
+      'resubmit_action' => 'new',
+      'submission_page_title' => 'Merci',
+      'submission_text' => array(
+        'value' => '<p>Votre demande a bien été enregistrée.<br />
+Nous nous efforçons d\'y répondre dans les plus brefs délais.</p>
+',
+        'format' => 'plain_text',
+      ),
+      'submissions_view' => 'entityforms',
+      'user_submissions_view' => 'user_entityforms',
+      'draft_redirect_path' => '',
+      'draft_button_text' => 'Save Draft',
+      'draft_save_text' => array(
+        'value' => '',
+        'format' => 'full_html',
+      ),
+      'submit_button_text' => 'Soumettre',
+      'submit_confirm_msg' => 'Your submission has been saved.',
+      'your_submissions' => 'Your Submissions: [entityform_type:label]',
+      'disallow_resubmit_msg' => 'You already submitted this form',
+      'delete_confirm_msg' => 'Are you sure you want to delete this Submission for [entityform_type:label]?',
+      'page_title_view' => 'Form Submission: [entityform_type:label]',
+      'draftable' => 0,
+      'preview_page' => 0,
+      'submission_show_submitted' => 0,
+    ),
+  );
+  $export['entityform_type_defaults'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'file_public_path';
   $strongarm->value = 'sites/parcsnationaux.fr/files';
   $export['file_public_path'] = $strongarm;
