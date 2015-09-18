@@ -24,6 +24,7 @@ dependencies[] = i18n_variable
 dependencies[] = kcore
 dependencies[] = lang_dropdown
 dependencies[] = less
+dependencies[] = menu_attributes
 dependencies[] = on_the_web
 dependencies[] = role_export
 dependencies[] = search
