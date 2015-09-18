@@ -219,3 +219,10 @@ function pnf_update_7001() {
 function pnf_update_7002() {
   module_enable(array('pnf_contact'));
 }
+
+/**
+ * Activate context_domain custom module and pnx_settings custom module.
+ */
+function pnf_update_7003() {
+  module_enable(array('context_domain','pnx_settings'));
+}

@@ -100,6 +100,9 @@ projects[block_class][version] = "2.1"
 projects[boxes][subdir] = contrib
 projects[boxes][version] = "1.2"
 
+projects[context_domain][subdir] = contrib
+projects[context_domain][version] = "1.0"
+
 projects[custom_search][subdir] = contrib
 projects[custom_search][version] = "1.18"
 

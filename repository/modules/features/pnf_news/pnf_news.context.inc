@@ -13,50 +13,6 @@ function pnf_news_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'news-front';
-  $context->description = '';
-  $context->tag = 'News';
-  $context->conditions = array(
-    'path' => array(
-      'values' => array(
-        '<front>' => '<front>',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views-news-block_news_news_home' => array(
-          'module' => 'views',
-          'delta' => 'news-block_news_news_home',
-          'region' => 'pre_content_left',
-          'weight' => '0',
-        ),
-        'views-news-block_news_flashnews_home' => array(
-          'module' => 'views',
-          'delta' => 'news-block_news_flashnews_home',
-          'region' => 'pre_content_left',
-          'weight' => '1',
-        ),
-        'views-news-block_news_files_home' => array(
-          'module' => 'views',
-          'delta' => 'news-block_news_files_home',
-          'region' => 'content',
-          'weight' => '0',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('News');
-  $export['news-front'] = $context;
-
-  $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
   $context->name = 'news-list';
   $context->description = '';
   $context->tag = 'News';

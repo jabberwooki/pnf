@@ -1,0 +1,65 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: chris
+ * Date: 18/09/15
+ * Time: 09:00
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * @see system_install()
+ */
+function pnx_settings_install() {
+  // Activate various modules and/or features depending on the current site's domain name.
+  $host_parts = explode('.', $_SERVER['HTTP_HOST']);
+  switch ($host_parts[1]) {
+    case 'calanques-parcnational':
+      //module_enable(array(''));
+      break;
+
+    case 'cevennes-parcnational':
+      module_enable(array('pnf_agenda'));
+      break;
+
+    case 'ecrins-parcnational':
+      //module_enable(array(''));
+      break;
+
+    case 'guadeloupe-parcnational':
+      //module_enable(array(''));
+      break;
+
+    case 'mercantour':
+      //module_enable(array(''));
+      break;
+
+    case 'parc-amazonien-guyane':
+      //module_enable(array(''));
+      break;
+
+    case 'parc-pyrenees':
+      //module_enable(array(''));
+      break;
+
+    case 'parcsnationaux':
+      module_enable(array('pnf_agenda'));
+      break;
+
+    case 'portcrosparcnational':
+      //module_enable(array(''));
+      break;
+
+    case 'reunion-parcnational':
+      //module_enable(array(''));
+      break;
+
+    case 'vanoise-parcnational':
+      //module_enable(array(''));
+      break;
+  }
+
+  // Activate pnf_front_blocks
+  module_enable(array('pnf_front_blocks'));
+}

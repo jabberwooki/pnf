@@ -51,38 +51,6 @@ function pnf_agenda_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'events-front';
-  $context->description = '';
-  $context->tag = 'Agenda';
-  $context->conditions = array(
-    'path' => array(
-      'values' => array(
-        '<front>' => '<front>',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views-events-block_events_home' => array(
-          'module' => 'views',
-          'delta' => 'events-block_events_home',
-          'region' => 'pre_content_right',
-          'weight' => '0',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('Agenda');
-  $export['events-front'] = $context;
-
-  $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
   $context->name = 'events-list';
   $context->description = '';
   $context->tag = 'Agenda';

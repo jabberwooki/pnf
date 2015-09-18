@@ -76,6 +76,7 @@ dependencies[] = addressfield
 dependencies[] = bean
 dependencies[] = block_class
 dependencies[] = boxes
+dependencies[] = context_domain
 dependencies[] = custom_search
 dependencies[] = date
 dependencies[] = date_popup
@@ -162,14 +163,19 @@ dependencies[] = views_bootstrap
 ;dependencies[] = kfoundation
 ;dependencies[] = komega
 
-;--- PNF features -------------------------------------------------------------------
+;--- PNF features -------------------------------------------------------------
 dependencies[] = pnf_news
-dependencies[] = pnf_agenda
+;--- pnf_agenda has not be activated by default, some sites don't need it.
 dependencies[] = pnf_contracts
+;dependencies[] = pnf_raa
+;dependencies[] = pnf_jobs
 dependencies[] = pnf_documents
 dependencies[] = pnf_multimedia
 dependencies[] = pnf_slideshow
 dependencies[] = pnf_contact
+
+;--- PNF custom modules -------------------------------------------------------
+dependencies[] = pnx_settings
 
 
 

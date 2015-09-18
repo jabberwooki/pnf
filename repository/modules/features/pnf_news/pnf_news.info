@@ -18,7 +18,6 @@ dependencies[] = text
 dependencies[] = uuid_features
 dependencies[] = views
 dependencies[] = views_bootstrap
-features[context][] = news-front
 features[context][] = news-list
 features[context][] = news-page
 features[ctools][] = context:context:3
