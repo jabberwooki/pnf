@@ -339,6 +339,13 @@ function pnf_agenda_views_default_views() {
   $handler->display->display_options['row_options']['grouping_fieldset']['group_field'] = 'field_data_field_event_dates|field_event_dates_value';
   $handler->display->display_options['row_options']['default_fieldset']['view_mode'] = 'teaser_home';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<a href="/agenda">tous les événements</a>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -382,6 +389,7 @@ function pnf_agenda_views_default_views() {
     t('Bloc documents utiles'),
     t('Documents utiles'),
     t('Bloc accueil'),
+    t('<a href="/agenda">tous les événements</a>'),
   );
   $export['events'] = $view;
 
