@@ -52,6 +52,9 @@ function pnf_news_strongarm() {
       'teaser_home' => array(
         'custom_settings' => FALSE,
       ),
+      'teaser_list_flashnews' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -90,6 +93,10 @@ function pnf_news_strongarm() {
             'visible' => FALSE,
           ),
           'teaser_home_flashnews' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
+          'teaser_list_flashnews' => array(
             'weight' => '10',
             'visible' => FALSE,
           ),
