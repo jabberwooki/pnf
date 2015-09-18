@@ -83,10 +83,17 @@ function pnf_news_menu_default_menu_links() {
     'router_path' => 'actualites',
     'link_title' => 'Actualités',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'identifier' => 'menu-tools_actualits:actualites',
+      'attributes' => array(
+        'class' => array(
+          0 => 'tool-news',
+        ),
+      ),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
     ),
     'module' => 'menu',
     'hidden' => 0,
