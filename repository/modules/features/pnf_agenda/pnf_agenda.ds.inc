@@ -33,11 +33,11 @@ function pnf_agenda_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'teaser_home';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '0',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
-        'link' => '0',
+        'link' => '1',
         'wrapper' => 'h3',
         'class' => '',
       ),
@@ -200,19 +200,19 @@ function pnf_agenda_ds_layout_settings_info() {
   $ds_layout->layout = 'bootstrap_3_9';
   $ds_layout->settings = array(
     'regions' => array(
-      'right' => array(
-        0 => 'title',
-        1 => 'field_event_categorie',
-        3 => 'field_event_location',
-      ),
       'left' => array(
-        2 => 'field_event_dates',
+        0 => 'field_event_dates',
+      ),
+      'right' => array(
+        1 => 'title',
+        2 => 'field_event_categorie',
+        3 => 'field_event_location',
       ),
     ),
     'fields' => array(
+      'field_event_dates' => 'left',
       'title' => 'right',
       'field_event_categorie' => 'right',
-      'field_event_dates' => 'left',
       'field_event_location' => 'right',
     ),
     'classes' => array(),

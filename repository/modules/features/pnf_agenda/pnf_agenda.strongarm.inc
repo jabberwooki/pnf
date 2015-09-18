@@ -83,7 +83,7 @@ function pnf_agenda_strongarm() {
             'visible' => FALSE,
           ),
           'teaser_home' => array(
-            'weight' => '0',
+            'weight' => '11',
             'visible' => FALSE,
           ),
         ),

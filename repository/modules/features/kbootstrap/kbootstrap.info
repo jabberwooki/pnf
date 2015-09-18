@@ -5,6 +5,7 @@ package = App
 version = 7.x-1.0
 project = kbootstrap
 dependencies[] = ctools
+dependencies[] = ds_bootstrap_layouts
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
