@@ -88,3 +88,72 @@ function kcore_date_format_types() {
   $format_types['date_xxxs'] = 'Date XXXS';
   return $format_types;
 }
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function kcore_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: 196x138.
+  $styles['196x138'] = array(
+    'label' => '196x138',
+    'effects' => array(
+      2 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 196,
+          'height' => 138,
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
+  // Exported image style: 250x175.
+  $styles['250x175'] = array(
+    'label' => '250x175',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 250,
+          'height' => 175,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: 264x164.
+  $styles['264x164'] = array(
+    'label' => '264x164',
+    'effects' => array(
+      3 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 264,
+          'height' => 164,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: 855x415.
+  $styles['855x415'] = array(
+    'label' => '855x415',
+    'effects' => array(
+      5 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 855,
+          'height' => 415,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
