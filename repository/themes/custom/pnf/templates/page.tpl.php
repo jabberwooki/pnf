@@ -98,6 +98,13 @@
       <?php if (!empty($site_name)): ?>
       <a class="name" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
       <?php endif; ?>
+      
+        <?php if (!empty($page['navigation'])): ?>
+          <nav role="navigation">
+            <?php print render($page['navigation']); ?>
+          </nav>
+        <?php endif; ?>
+
     </div>
   </div>
 </header>
