@@ -39,10 +39,17 @@ function pnf_agenda_menu_default_menu_links() {
     'router_path' => 'agenda',
     'link_title' => 'Agenda',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
       'identifier' => 'menu-tools_agenda:agenda',
+      'attributes' => array(
+        'class' => array(
+          0 => 'tool-events',
+        ),
+      ),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
     ),
     'module' => 'menu',
     'hidden' => 0,

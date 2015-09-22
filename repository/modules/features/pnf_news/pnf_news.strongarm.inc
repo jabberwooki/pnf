@@ -50,9 +50,12 @@ function pnf_news_strongarm() {
         'custom_settings' => TRUE,
       ),
       'teaser_home' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'teaser_list_flashnews' => array(
+        'custom_settings' => TRUE,
+      ),
+      'teaser_home_files' => array(
         'custom_settings' => TRUE,
       ),
     ),
@@ -97,6 +100,14 @@ function pnf_news_strongarm() {
             'visible' => FALSE,
           ),
           'teaser_list_flashnews' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'teaser_home_files' => array(
+            'weight' => '9',
+            'visible' => FALSE,
+          ),
+          'teaser_home' => array(
             'weight' => '10',
             'visible' => FALSE,
           ),
