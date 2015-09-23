@@ -469,7 +469,7 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'large',
+          'image_style' => '855x415',
         ),
         'type' => 'image',
         'weight' => 3,
@@ -479,7 +479,7 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => 'medium',
+          'image_style' => '250x175',
         ),
         'type' => 'image',
         'weight' => 0,

@@ -17,9 +17,7 @@ function pnf_news_menu_default_menu_links() {
     'router_path' => 'actualites',
     'link_title' => 'Actualités',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-news_actualits:actualites',
     ),
     'module' => 'menu',
@@ -39,9 +37,7 @@ function pnf_news_menu_default_menu_links() {
     'router_path' => 'breves',
     'link_title' => 'Brèves',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-news_brves:breves',
     ),
     'module' => 'menu',
@@ -61,9 +57,7 @@ function pnf_news_menu_default_menu_links() {
     'router_path' => 'dossiers',
     'link_title' => 'Dossiers',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-news_dossiers:dossiers',
     ),
     'module' => 'menu',
