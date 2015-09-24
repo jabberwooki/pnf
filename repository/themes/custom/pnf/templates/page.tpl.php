@@ -185,7 +185,31 @@
 
 <footer class="footer fluid-container">
   <div class="container">
-    <?php print render($page['footer']); ?>
+
+   <!-- region footer --> 
+    <?php if (!empty($page['footer'])): ?>
+      <div class="col-md-3">
+        <?php print render($page['footer']); ?>
+      </div>
+    <?php endif; ?>
+    <!-- end of region footer -->
+
+   <!-- region footer second --> 
+    <?php if (!empty($page['footer_second'])): ?>
+      <div class="col-md-6">
+        <?php print render($page['footer_second']); ?>
+      </div>
+    <?php endif; ?>
+    <!-- end of region footer second--> 
+
+   <!-- region footer third--> 
+    <?php if (!empty($page['footer_third'])): ?>
+      <div class="col-md-3">
+        <?php print render($page['footer_third']); ?>
+      </div>
+    <?php endif; ?>
+    <!-- end of region footer third -->         
+      
   </div>
 </footer>
 
