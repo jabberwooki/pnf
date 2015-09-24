@@ -86,15 +86,14 @@
 </div>
 <!-- end of custom region top_menu -->
 
-<header id="navbar" role="banner">
-  <div class="container">
-    <div>
+<header class="container-fluid header" style="padding:0;">
       <?php if ($logo): ?>
       <a class="logo" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
       <?php endif; ?>
 
+  <div class="container">
       <?php if (!empty($site_name)): ?>
       <a class="name" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
       <?php endif; ?>
@@ -104,9 +103,8 @@
             <?php print render($page['navigation']); ?>
           </nav>
         <?php endif; ?>
-
     </div>
-  </div>
+
 </header>
 
   <header role="banner" id="page-header">
@@ -185,8 +183,34 @@
 </div>
 <!-- end of custom region pre_footer -->
 
-<footer class="footer container">
-  <?php print render($page['footer']); ?>
+<footer class="footer fluid-container">
+  <div class="container">
+
+   <!-- region footer --> 
+    <?php if (!empty($page['footer'])): ?>
+      <div class="col-md-3">
+        <?php print render($page['footer']); ?>
+      </div>
+    <?php endif; ?>
+    <!-- end of region footer -->
+
+   <!-- region footer second --> 
+    <?php if (!empty($page['footer_second'])): ?>
+      <div class="col-md-6">
+        <?php print render($page['footer_second']); ?>
+      </div>
+    <?php endif; ?>
+    <!-- end of region footer second--> 
+
+   <!-- region footer third--> 
+    <?php if (!empty($page['footer_third'])): ?>
+      <div class="col-md-3">
+        <?php print render($page['footer_third']); ?>
+      </div>
+    <?php endif; ?>
+    <!-- end of region footer third -->         
+      
+  </div>
 </footer>
 
 <!-- custom region toolbar -->

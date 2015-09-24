@@ -17,9 +17,7 @@ function pnf_agenda_menu_default_menu_links() {
     'router_path' => 'agenda',
     'link_title' => 'Agenda',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-news_agenda:agenda',
     ),
     'module' => 'menu',

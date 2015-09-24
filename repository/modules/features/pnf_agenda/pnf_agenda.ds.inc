@@ -21,6 +21,11 @@ function pnf_agenda_ds_field_settings_info() {
       'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h3',
+        'class' => '',
+      ),
     ),
   );
   $export['node|event|teaser'] = $ds_fieldsetting;

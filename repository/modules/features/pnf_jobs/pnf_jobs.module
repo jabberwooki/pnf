@@ -1,0 +1,40 @@
+<?php
+/**
+ * @file
+ * Drupal needs this blank file.
+ */
+
+include_once 'pnf_jobs.features.inc';
+
+
+/**
+ * Implements hook_ds_fields_info().
+ */
+function pnf_jobs_ds_fields_info($entity_type) {
+	$fields = array();
+
+	$fields['node']['btn_job_notice'] = array(
+		'title' => t('Job notice button'),
+		'field_type' => DS_FIELD_TYPE_FUNCTION,
+		'ui_limit' => array('job|*'),
+		'function' => 'pnf_jobs_btn_job_notice',
+	);
+
+	if (isset($fields[$entity_type])) {
+		return array($entity_type => $fields[$entity_type]);
+	}
+	return;
+}
+
+/**
+ * Render the field btn_job_notice
+ */
+function pnf_jobs_btn_job_notice($field) {
+	if (!empty($field['entity']->field_job_notice)) {
+		$label = t("Job notice - PDF");
+		$uri =  $field['entity']->field_job_notice['und'][0]['uri'];
+		$url = file_create_url($uri);
+		$output = '<a class = "btn btn-sm btn-primary" href="'. $url .'" target="_blank">'. $label .'</a>';
+		return $output;
+	}
+}

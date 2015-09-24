@@ -10,6 +10,11 @@ function pnf_preprocess_image(&$vars) {
         $vars['attributes']['class'][] = 'img-responsive'; // http://getbootstrap.com/css/#overview-responsive-images
 }
 
+function pnf_preprocess_page(&$variables) {
+  drupal_add_js(drupal_get_path('theme', 'pnf') . '/js/jquery.matchHeight-min.js', 'file');
+  drupal_add_js(drupal_get_path('theme', 'pnf') . '/js/pnf.js', 'file');
+}
+
 /**
  * Loads compiled stylesheet depending on site URL.
  */
