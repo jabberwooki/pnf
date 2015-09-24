@@ -1,4 +1,4 @@
-<div id="views-bootstrap-carousel-<?php print $id ?>" class="col-md-4 <?php print $classes ?>" <?php print $attributes ?>>
+<div id="views-bootstrap-carousel-<?php print $id ?>" class="<?php print $classes ?>" <?php print $attributes ?>>
   <!-- The array containing rows is splitted into X, X being the number of books we want per slide -->
   <?php $slides = array_chunk($rows, 1, true); ?>
   

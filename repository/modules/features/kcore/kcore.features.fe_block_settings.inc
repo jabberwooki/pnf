@@ -43,7 +43,7 @@ function kcore_default_fe_block_settings() {
 
   $export['kcore-pnf_park_menu_clone'] = array(
     'cache' => -1,
-    'css_class' => '',
+    'css_class' => 'col-md-3',
     'custom' => 0,
     'delta' => 'pnf_park_menu_clone',
     'i18n_block_language' => array(),
@@ -101,7 +101,7 @@ function kcore_default_fe_block_settings() {
 
   $export['menu-menu-footer-menu'] = array(
     'cache' => -1,
-    'css_class' => '',
+    'css_class' => 'col-md-12',
     'custom' => 0,
     'delta' => 'menu-footer-menu',
     'i18n_block_language' => array(),
@@ -130,7 +130,7 @@ function kcore_default_fe_block_settings() {
 
   $export['menu-menu-join-national-park'] = array(
     'cache' => -1,
-    'css_class' => '',
+    'css_class' => 'col-md-3',
     'custom' => 0,
     'delta' => 'menu-join-national-park',
     'i18n_block_language' => array(),
@@ -304,7 +304,7 @@ function kcore_default_fe_block_settings() {
 
   $export['on_the_web-0'] = array(
     'cache' => 1,
-    'css_class' => '',
+    'css_class' => 'col-md-3 col-md-offset-9',
     'custom' => 0,
     'delta' => 0,
     'i18n_block_language' => array(),

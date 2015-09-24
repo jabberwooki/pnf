@@ -173,6 +173,7 @@ dependencies[] = pnf_documents
 dependencies[] = pnf_multimedia
 dependencies[] = pnf_slideshow
 dependencies[] = pnf_contact
+dependencies[] = pnf_promotions
 
 ;--- PNF custom modules -------------------------------------------------------
 dependencies[] = pnx_settings

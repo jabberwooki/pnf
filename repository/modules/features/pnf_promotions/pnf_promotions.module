@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Promotions feature.
+ */
+
+include_once 'pnf_promotions.features.inc';

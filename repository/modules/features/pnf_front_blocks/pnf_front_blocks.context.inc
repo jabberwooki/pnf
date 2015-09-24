@@ -107,6 +107,12 @@ function pnf_front_blocks_context_default_contexts() {
           'region' => 'content',
           'weight' => '0',
         ),
+        'views-promotions-3_promos' => array(
+          'module' => 'views',
+          'delta' => 'promotions-3_promos',
+          'region' => 'content',
+          'weight' => '1',
+        ),
       ),
     ),
   );
