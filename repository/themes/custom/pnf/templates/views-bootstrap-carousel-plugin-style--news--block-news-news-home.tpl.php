@@ -14,7 +14,7 @@
   <!-- Carousel items - Here, a carousel item (slide) contains several view items (row)-->
   <div class="carousel-inner">
   <?php foreach ($slides as $key => $slide): ?>
-    <div class="item <?php if ($key === 0) print 'active' ?>">
+    <div class="item no-gutter <?php if ($key === 0) print 'active' ?>">
           <?php foreach ($slide as $key => $item): ?>
             <div class="col-md-3">
               <?php print $item ?>
