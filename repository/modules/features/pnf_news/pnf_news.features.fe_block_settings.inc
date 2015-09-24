@@ -43,7 +43,7 @@ function pnf_news_default_fe_block_settings() {
 
   $export['views-news-block_news_files_home'] = array(
     'cache' => -1,
-    'css_class' => '',
+    'css_class' => 'col-md-3',
     'custom' => 0,
     'delta' => 'news-block_news_files_home',
     'i18n_block_language' => array(),
