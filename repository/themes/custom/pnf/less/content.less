@@ -81,16 +81,68 @@ a{
 
 /*Block news*/
 #block-views-news-block-news-news-home{
+    .view-header p{
+        text-align: right;
+        margin-right: 20px;
+        margin-top: -20px;
+    }
     .view-mode-teaser_home{
         border-bottom: 1px solid #ed8b00;
         background: #fff;
         margin-right: 15px;
         padding: 7px;
+        margin-bottom: 25px;
+    }
+    .field-name-post-date{
+        font-size: @font-size-small;
+        color: #666;
+        padding-top:5px;
+    }
+    h3{
+        margin-top: 5px;
+    }
+    .field-name-body{
+        padding-bottom: 25px;
+        p{
+            font-size: @font-size-small;
+        }
+    }
+    .field-name-btn-readmore{
+        position: absolute;
+        bottom: -5%;
+        right: 30%;
+    }
+    .carousel-control {
+        position: absolute;
+        top: -25px;
+        left: 150px;
+        bottom: 0;
+        width: 15%;
+        opacity: 1;
+        font-size: 20px;
+        color: #333;
+        text-align: center;
+        text-shadow: none;
+    }
+    .carousel-control.left,  .carousel-control.right {
+          width: 20px;
+          height: 20px;
+      }
+    .carousel-control .icon-prev,
+    .carousel-control .icon-next{
+        top: 0;
+    }
+    .carousel-control .icon-next {
+    margin-right: -30px;
     }
 }
 
 /*Block views events*/
 #block-views-events-block-events-home {
+    .view-header p{
+        text-align: right;
+        margin-top: -20px;
+    }
     .view-content{
         background: #fff;
         padding: 10px;
@@ -100,4 +152,40 @@ a{
 /*Blocks flashnews*/
 #block-views-news-block-news-flashnews-home{
 	background: #fff;
+
+    /*h2.block-title{
+        float: left;
+    }
+    .carousel-inner{
+        float: left;
+        width: auto;
+        .field-name-field-displayed-pub-date{
+            float: left;
+        }
+    }*/
+}
+
+/*Blocks dossiers*/
+#block-views-news-block-news-files-home{
+    h2.block-title{
+        margin-top: 0;
+    }
+    .view-header p{
+        text-align: right;
+        margin-top: -20px;
+    }
+    .view-content{
+        background: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .field-name-title{
+        height:67px;
+    }
+    h3{
+        margin-top: 10px;
+    }
+    .field-name-btn-readmore{
+        text-align: center;
+    }
 }
