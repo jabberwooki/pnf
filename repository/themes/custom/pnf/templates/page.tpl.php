@@ -177,9 +177,11 @@
 
 <!-- custom region pre_footer -->
 <div class = "pnf_pre_footer">
-  <?php if (!empty($page['pre_footer'])): ?>
-    <?php print render($page['pre_footer']); ?>
-  <?php endif; ?>
+  <div class="container">
+    <?php if (!empty($page['pre_footer'])): ?>
+      <?php print render($page['pre_footer']); ?>
+    <?php endif; ?>
+  </div>
 </div>
 <!-- end of custom region pre_footer -->
 
@@ -208,8 +210,16 @@
         <?php print render($page['footer_third']); ?>
       </div>
     <?php endif; ?>
-    <!-- end of region footer third -->         
-      
+    <!-- end of region footer third -->
+
+    <!-- region post_footer-->
+    <?php if (!empty($page['post_footer'])): ?>
+      <div class="col-md-12">
+        <?php print render($page['post_footer']); ?>
+      </div>
+    <?php endif; ?>
+    <!-- end of region post_footer -->
+
   </div>
 </footer>
 
