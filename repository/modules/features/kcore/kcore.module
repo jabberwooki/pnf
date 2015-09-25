@@ -38,6 +38,7 @@ function kcore_block_view_alter(&$data, $block) {
 
 	$host_parts = explode('.', $_SERVER['HTTP_HOST']);
 
+	// Config for staging site >> http://pnXX.pnfdev.xyz/
 	if ($host_parts[2] == 'xyz' ) {
 		$park_names = array(
 		  'pnca' => 'Le Parc national des Calanques',
