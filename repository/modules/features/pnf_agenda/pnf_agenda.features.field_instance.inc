@@ -324,15 +324,9 @@ function pnf_agenda_field_default_field_instances() {
       ),
       'teaser_home' => array(
         'label' => 'hidden',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'date_day_month',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
+        'module' => 'pnf_contact',
+        'settings' => array(),
+        'type' => 'pnf_agenda_date',
         'weight' => 0,
       ),
     ),
