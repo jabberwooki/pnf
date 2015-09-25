@@ -204,28 +204,27 @@ function pnf_agenda_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'event';
   $ds_layout->view_mode = 'teaser_home';
-  $ds_layout->layout = 'bootstrap_3_9';
+  $ds_layout->layout = 'bootstrap_12';
   $ds_layout->settings = array(
     'regions' => array(
-      'left' => array(
+      'central' => array(
         0 => 'field_event_dates',
-      ),
-      'right' => array(
         1 => 'title',
         2 => 'field_event_categorie',
         3 => 'field_event_location',
+        4 => 'group_event_resume',
       ),
     ),
     'fields' => array(
-      'field_event_dates' => 'left',
-      'title' => 'right',
-      'field_event_categorie' => 'right',
-      'field_event_location' => 'right',
+      'field_event_dates' => 'central',
+      'title' => 'central',
+      'field_event_categorie' => 'central',
+      'field_event_location' => 'central',
+      'group_event_resume' => 'central',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'left' => 'div',
-      'right' => 'div',
+      'central' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

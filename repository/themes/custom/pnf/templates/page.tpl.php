@@ -178,10 +178,10 @@
 <!-- custom region pre_footer -->
 <div class = "pnf_pre_footer">
   <div class="container">
-    <?php if (!empty($page['pre_footer'])): ?>
-      <?php print render($page['pre_footer']); ?>
-    <?php endif; ?>
-  </div>
+      <?php if (!empty($page['pre_footer'])): ?>
+        <?php print render($page['pre_footer']); ?>
+      <?php endif; ?>
+    </div>
 </div>
 <!-- end of custom region pre_footer -->
 
