@@ -11,13 +11,65 @@ include_once 'pnf_contact.features.inc';
  */
 function pnf_contact_field_formatter_info() {
   $formatters = array(
-	'pnf_agenda_date' => array(
-	  'label' => t('Date agenda PNF'),
-	  'field types' => array('date', 'datestamp', 'datetime'),
-	  'description' => t('Displays event dates as needed for PNF agenda.'),
+	'pnf_text' => array(
+	  'label' => t('HTML Wrapper'),
+	  'field types' => array('text'),
+	  'description' => t('Add a wrapping html tag.'),
+      'settings'  => array(
+        'html_tag' => 'h2',
+        'html_class' => '',
+      ),
 	),
   );
   return $formatters;
+}
+
+/**
+ * Implements hook_field_formatter_settings_form().
+ */
+function pnf_contact_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
+  // Two lines from core, easier to deal with it like this
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+
+  $form = '';
+  // Switch for the different formatters
+  switch ($display['type']) {
+    case 'pnf_text':
+      $form['html_tag'] = array(
+        '#type' => 'textfield',
+        '#title' => 'Html tag',
+        '#description' => 'Ex.: h2, h3, p',
+        '#default_value' => $settings['html_tag'],
+      );
+      $form['html_class'] = array(
+        '#type' => 'textfield',
+        '#title' => 'Html class',
+        '#description' => t('Enter class names, separated by spaces'),
+        '#default_value' => $settings['html_class'],
+      );
+      break;
+  }
+  return $form;
+}
+
+function pnf_contact_field_formatter_settings_summary($field, $instance, $view_mode) {
+  // Easy access to needed arrays
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+
+  $summary = '';
+  // Switch for the different formatters
+  switch ($display['type']) {
+    case 'pnf_text':
+      $summary = '<b>' . t('HTML wrapper: ') . '</b>' . $settings['html_tag'];
+      $summary .= '<br/>';
+      $summary .= '<b>' . t('HTML class: ') . '</b>' . $settings['html_class'];
+      break;
+  }
+
+  // And return the summary in plain (X)HTML
+  return $summary;
 }
 
 /**
@@ -27,49 +79,20 @@ function pnf_contact_field_formatter_view($entity_type, $entity, $field, $instan
   $element = array();
 
   switch ($display['type']) {
-    case 'pnf_agenda_date':
-    foreach ($items as $delta => $item) {
-      // Single date
-      if ($item['value'] == $item['value2']) {
-        $adverb = t('on');
-        $iso_date = $item['value'];
+    case 'pnf_text':
+      $settings = $display['settings'];
+      $tag = $settings['html_tag'];
+      $class = '';
+      if ($settings['html_class'] <> '') {
+        $class = 'class="' . $settings['html_class'] . '"';
       }
-      else {
-        $now = date('Y-m-d');
-        $iso_date = $item['value'];
-        $date = substr($iso_date, 0, 10);
-
-        // Two dates in the future
-        if ($date > $now) {
-          $adverb = t('from');
-        }
-        // Two dates, start date past.
-        else {
-          $adverb = t('to');
-          $iso_date = $item['value2'];
-
-        }
+      foreach ($items as $delta => $item) {
+        $markup = '<' . $tag . ' ' . $class . '>' . $item['value'] . '</' . $tag . '>';
+        $element[$delta] = array('#markup' => $markup);
       }
-      $element[$delta] = array('#markup' => pnf_contact_date_markup($adverb, $iso_date));
-    }
-    break;
+      break;
   }
 
   return $element;
 }
 
-/**
- * @param string $adverb Adverb to place in front of agenda date
- * @param string $iso_date Mysql ISO date, as retrieved from database
- * @return string $markup HTML code to display
- */
-function pnf_contact_date_markup($adverb, $iso_date) {
-  $day = format_date(strtotime($iso_date),'custom','d');
-  $month = format_date(strtotime($iso_date),'custom','M');
-
-  $markup =  '<div class="date_agenda_adverb">' . $adverb . '</div>'
-    . '<div class="date_agenda_day">' . $day . '</div>'
-    . '<div class="date_agenda_month">' . $month . '</div>';
-
-  return $markup;
-}

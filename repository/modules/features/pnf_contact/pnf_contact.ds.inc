@@ -16,11 +16,11 @@ function pnf_contact_ds_layout_settings_info() {
   $ds_layout->entity_type = 'bean';
   $ds_layout->bundle = 'contact';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_2col';
+  $ds_layout->layout = 'bootstrap_6_6';
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
-        0 => 'title',
+        0 => 'field_contact_title',
         1 => 'field_contact_text',
         2 => 'field_contact_page_link',
       ),
@@ -29,7 +29,7 @@ function pnf_contact_ds_layout_settings_info() {
       ),
     ),
     'fields' => array(
-      'title' => 'left',
+      'field_contact_title' => 'left',
       'field_contact_text' => 'left',
       'field_contact_page_link' => 'left',
       'field_contact_image' => 'right',
@@ -44,7 +44,6 @@ function pnf_contact_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
-    'layout_disable_css' => 0,
   );
   $export['bean|contact|default'] = $ds_layout;
 
