@@ -21,7 +21,7 @@ function pnf_preprocess_page(&$variables) {
 
 $parts = array_reverse(explode('.', $_SERVER['SERVER_NAME']));
 
-if ($parts[2] != 'xyz') {
+if ($parts[0] != 'xyz') {
 	switch($parts[1]) {
 		case 'calanques-parcnational':
 			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnca_style.css.less');
@@ -58,7 +58,7 @@ if ($parts[2] != 'xyz') {
 		break;	
 	}
 } else {
-	switch($parts[0]) {
+	switch($parts[2]) {
 		case 'pnca':
 			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnca_style.css.less');
 		break;
