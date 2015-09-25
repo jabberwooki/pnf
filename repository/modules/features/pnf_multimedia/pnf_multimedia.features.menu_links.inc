@@ -25,7 +25,7 @@ function pnf_multimedia_menu_default_menu_links() {
       ),
       'item_attributes' => array(
         'id' => '',
-        'class' => '',
+        'class' => 'col-md-4',
         'style' => '',
       ),
     ),
@@ -54,7 +54,7 @@ function pnf_multimedia_menu_default_menu_links() {
       ),
       'item_attributes' => array(
         'id' => '',
-        'class' => '',
+        'class' => 'col-md-4',
         'style' => '',
       ),
     ),
@@ -83,7 +83,7 @@ function pnf_multimedia_menu_default_menu_links() {
       ),
       'item_attributes' => array(
         'id' => '',
-        'class' => '',
+        'class' => 'col-md-4',
         'style' => '',
       ),
     ),
@@ -112,7 +112,7 @@ function pnf_multimedia_menu_default_menu_links() {
       ),
       'item_attributes' => array(
         'id' => '',
-        'class' => '',
+        'class' => 'col-md-4',
         'style' => '',
       ),
     ),
@@ -133,9 +133,7 @@ function pnf_multimedia_menu_default_menu_links() {
     'router_path' => 'galeries-photo',
     'link_title' => 'Images',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-multimedia_images:galeries-photo',
     ),
     'module' => 'menu',
@@ -155,9 +153,7 @@ function pnf_multimedia_menu_default_menu_links() {
     'router_path' => 'documents',
     'link_title' => 'Publications et documents',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-multimedia_publications-et-documents:documents',
     ),
     'module' => 'menu',
@@ -177,9 +173,7 @@ function pnf_multimedia_menu_default_menu_links() {
     'router_path' => 'sons',
     'link_title' => 'Sons',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-multimedia_sons:sons',
     ),
     'module' => 'menu',
@@ -199,9 +193,7 @@ function pnf_multimedia_menu_default_menu_links() {
     'router_path' => 'videos',
     'link_title' => 'Vidéos',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-multimedia_vidos:videos',
     ),
     'module' => 'menu',
@@ -221,9 +213,7 @@ function pnf_multimedia_menu_default_menu_links() {
     'router_path' => 'documents',
     'link_title' => 'Médiathèque',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-tools_mdiathque:documents',
     ),
     'module' => 'menu',

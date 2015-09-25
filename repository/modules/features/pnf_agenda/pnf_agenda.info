@@ -3,6 +3,7 @@ core = 7.x
 package = App
 version = 7.x-1.0
 dependencies[] = geofield
+dependencies[] = pnf_contact
 dependencies[] = pnf_news
 features[context][] = event-page
 features[context][] = events-list

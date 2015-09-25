@@ -217,7 +217,7 @@ function kcore_default_fe_block_settings() {
 
   $export['menu-menu-multimedia-footer'] = array(
     'cache' => -1,
-    'css_class' => '',
+    'css_class' => 'col-md-8',
     'custom' => 0,
     'delta' => 'menu-multimedia-footer',
     'i18n_block_language' => array(),
