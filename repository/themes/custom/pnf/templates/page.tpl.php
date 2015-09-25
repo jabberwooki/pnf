@@ -210,8 +210,16 @@
         <?php print render($page['footer_third']); ?>
       </div>
     <?php endif; ?>
-    <!-- end of region footer third -->         
-      
+    <!-- end of region footer third -->
+
+    <!-- region post_footer-->
+    <?php if (!empty($page['post_footer'])): ?>
+      <div class="col-md-12">
+        <?php print render($page['post_footer']); ?>
+      </div>
+    <?php endif; ?>
+    <!-- end of region post_footer -->
+
   </div>
 </footer>
 
