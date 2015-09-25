@@ -43,10 +43,50 @@ nav .tb-megamenu {
 		font-size: @font-size-large;
 		border-right:none;
 		}
+		.nav li.dropdown.open > .dropdown-toggle{
+			background: @brand-primary;
+			color: #fff;
+		}
+		.nav li.dropdown.open > .dropdown-toggle .mega-caption{
+			color: #fff;
+		}
 		.mega-caption{
 			text-transform: none;
 			font-style: italic;
 			font-weight: 400;
+		}
+		.nav .dropdown-menu{
+			background: #e7e7e7;
+			border-bottom: none;
+			ul li{
+				border: none;
+			}
+			a.mega-group-title{
+				color: #8e9fbc;
+				text-transform: uppercase;
+				border-bottom: 1px solid #cbd0d9;
+				font-size: @font-size-large;
+				font-weight: 600;
+				padding-left: 10px;
+			}
+			ul li.mega-group .open a.mega-group-title:focus,
+			ul li.mega-group .open  a.mega-group-title:hover,
+			ul li a:hover{
+				background: #c7cdd7;
+				border: none;
+				color: #3a353c;
+			}
+			ul ul li a{
+				color: #3a353c;
+				text-transform: none;
+				border: none;
+				font-size: @font-size-base;
+				font-weight: normal;
+				padding-left: 10px;
+			}
+			ul ul li a:hover{
+				border:none;
+			}
 		}
 }
 
