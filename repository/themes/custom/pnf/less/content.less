@@ -80,12 +80,13 @@ a{
 }
 
 /*Block news*/
-#block-views-news-block-news-news-home{
+.view-news {
     .view-header p{
         text-align: right;
         margin-right: 20px;
         margin-top: -20px;
     }
+    .view-mode-teaser,
     .view-mode-teaser_home{
         border-bottom: 1px solid #ed8b00;
         background: #fff;
@@ -99,7 +100,16 @@ a{
         padding-top:5px;
     }
     h3{
-        margin-top: 5px;
+    font-size: @font-size-base;
+    font-weight: 600;
+    margin-top: 5px;
+        a{
+            color: darken(@brand-primary, 12%);
+        }
+        a:hover{
+            color: @brand-primary;
+            text-decoration: none;
+        }
     }
     .field-name-body{
         padding-bottom: 25px;
