@@ -17,6 +17,8 @@ function pnf_contracts_default_fe_block_settings() {
     'css_class' => '',
     'custom' => 0,
     'delta' => '-exp-contracts-page_contracts',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
     'module' => 'views',
     'node_types' => array(),
     'pages' => '',
