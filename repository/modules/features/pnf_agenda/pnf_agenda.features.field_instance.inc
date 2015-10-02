@@ -324,7 +324,7 @@ function pnf_agenda_field_default_field_instances() {
       ),
       'teaser_home' => array(
         'label' => 'hidden',
-        'module' => 'pnf_contact',
+        'module' => 'pnf_agenda',
         'settings' => array(),
         'type' => 'pnf_agenda_date',
         'weight' => 0,
