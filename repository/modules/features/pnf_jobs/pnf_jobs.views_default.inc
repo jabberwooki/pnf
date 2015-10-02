@@ -23,6 +23,7 @@ function pnf_jobs_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Offres d\'emplois';
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -45,7 +46,7 @@ function pnf_jobs_views_default_views() {
       'filter_rewrite_values' => NULL,
     ),
     'field_job_type_tid' => array(
-      'bef_format' => 'bef',
+      'bef_format' => 'default',
       'more_options' => array(
         'bef_select_all_none' => FALSE,
         'bef_collapsible' => 0,
@@ -137,29 +138,30 @@ function pnf_jobs_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'job' => 'job',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Content: Type (field_job_type) */
   $handler->display->display_options['filters']['field_job_type_tid']['id'] = 'field_job_type_tid';
   $handler->display->display_options['filters']['field_job_type_tid']['table'] = 'field_data_field_job_type';
   $handler->display->display_options['filters']['field_job_type_tid']['field'] = 'field_job_type_tid';
   $handler->display->display_options['filters']['field_job_type_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_job_type_tid']['expose']['operator_id'] = 'field_job_type_tid_op';
-  $handler->display->display_options['filters']['field_job_type_tid']['expose']['label'] = 'Type';
+  $handler->display->display_options['filters']['field_job_type_tid']['expose']['label'] = 'Type d\'offre';
   $handler->display->display_options['filters']['field_job_type_tid']['expose']['operator'] = 'field_job_type_tid_op';
   $handler->display->display_options['filters']['field_job_type_tid']['expose']['identifier'] = 'field_job_type_tid';
+  $handler->display->display_options['filters']['field_job_type_tid']['expose']['remember'] = TRUE;
   $handler->display->display_options['filters']['field_job_type_tid']['expose']['remember_roles'] = array(
     2 => '2',
-    1 => 0,
-    217795369 => 0,
-    231346920 => 0,
-    193262079 => 0,
+    1 => '1',
+    4 => 0,
+    5 => 0,
+    3 => 0,
   );
   $handler->display->display_options['filters']['field_job_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_job_type_tid']['vocabulary'] = 'job_types';
 
-  /* Display: Page offres */
-  $handler = $view->new_display('page', 'Page offres', 'page_jobs');
-  $handler->display->display_options['exposed_block'] = TRUE;
-  $handler->display->display_options['path'] = 'offres-emplois';
+  /* Display: Page emplois */
+  $handler = $view->new_display('page', 'Page emplois', 'page_jobs');
+  $handler->display->display_options['path'] = 'offres-emploi';
   $translatables['jobs'] = array(
     t('Master'),
     t('Offres d\'emplois'),
@@ -178,8 +180,8 @@ function pnf_jobs_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
-    t('Type'),
-    t('Page offres'),
+    t('Type d\'offre'),
+    t('Page emplois'),
   );
   $export['jobs'] = $view;
 
