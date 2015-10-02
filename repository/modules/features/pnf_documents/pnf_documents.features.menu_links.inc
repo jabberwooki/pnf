@@ -17,9 +17,7 @@ function pnf_documents_menu_default_menu_links() {
     'router_path' => 'journal-du-parc',
     'link_title' => 'Journal du Parc',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'menu-tools_journal-du-parc:journal-du-parc',
     ),
     'module' => 'menu',

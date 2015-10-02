@@ -45,7 +45,7 @@ function pnf_documents_views_default_views() {
       'filter_rewrite_values' => NULL,
     ),
     'field_document_category_tid' => array(
-      'bef_format' => 'bef',
+      'bef_format' => 'default',
       'more_options' => array(
         'bef_select_all_none' => FALSE,
         'bef_collapsible' => 0,
@@ -176,7 +176,6 @@ function pnf_documents_views_default_views() {
 
   /* Display: Page Documents */
   $handler = $view->new_display('page', 'Page Documents', 'page_documents');
-  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['path'] = 'documents';
 
   /* Display: Espace Presse */

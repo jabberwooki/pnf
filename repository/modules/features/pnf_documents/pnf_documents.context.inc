@@ -23,18 +23,7 @@ function pnf_documents_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views--exp-documents-page_documents' => array(
-          'module' => 'views',
-          'delta' => '-exp-documents-page_documents',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
+  $context->reactions = array();
   $context->condition_mode = 0;
 
   // Translatables
