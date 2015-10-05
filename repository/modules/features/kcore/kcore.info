@@ -198,7 +198,6 @@ features[variable][] = date_format_medium
 features[variable][] = date_format_short
 features[variable][] = ds_extras_hide_page_title
 features[variable][] = entityform_type_defaults
-features[variable][] = file_public_path
 features[variable][] = lang_dropdown_language
 features[variable][] = language_negotiation_language
 features[variable][] = language_negotiation_language_url
