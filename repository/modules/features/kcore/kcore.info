@@ -208,6 +208,7 @@ features[variable][] = node_admin_theme
 features[variable][] = pathauto_transliterate
 features[variable][] = site_default_country
 features[variable][] = user_admin_role
+features[variable][] = uuid_features_entity_taxonomy_term
 features_exclude[dependencies][ctools] = ctools
 features_exclude[dependencies][features] = features
 features_exclude[dependencies][menu] = menu
