@@ -1,44 +1,44 @@
 <?php
 /**
  * @file
- * pnf_documents.features.uuid_term.inc
+ * pnf_jobs.features.uuid_term.inc
  */
 
 /**
  * Implements hook_uuid_features_default_terms().
  */
-function pnf_documents_uuid_features_default_terms() {
+function pnf_jobs_uuid_features_default_terms() {
   $terms = array();
 
   $terms[] = array(
-    'name' => 'Dossier de presse',
+    'name' => 'Stages',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
-    'uuid' => '80b8cbe2-5a72-4d15-807b-3957158dd4cb',
+    'uuid' => '10cefd12-d3b9-40ec-8f72-a307bc542291',
     'language' => 'und',
     'i18n_tsid' => 0,
-    'vocabulary_machine_name' => 'document_categories',
+    'vocabulary_machine_name' => 'job_types',
   );
   $terms[] = array(
-    'name' => 'Journal du parc',
+    'name' => 'Service civique',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
-    'uuid' => '8375bea1-2b5c-411d-9179-1242c90a16aa',
+    'uuid' => '6e6ec346-0414-4f86-868c-f8151f3644c3',
     'language' => 'und',
     'i18n_tsid' => 0,
-    'vocabulary_machine_name' => 'document_categories',
+    'vocabulary_machine_name' => 'job_types',
   );
   $terms[] = array(
-    'name' => 'Communiqué de presse',
+    'name' => 'Emplois',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
-    'uuid' => '8abe9b99-fc3e-4df1-a402-543ce16b3601',
+    'uuid' => 'e2a28688-49e5-4d6a-9f18-e283c535ef4e',
     'language' => 'und',
     'i18n_tsid' => 0,
-    'vocabulary_machine_name' => 'document_categories',
+    'vocabulary_machine_name' => 'job_types',
   );
   return $terms;
 }

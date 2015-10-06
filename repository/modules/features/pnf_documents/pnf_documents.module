@@ -5,3 +5,33 @@
  */
 
 include_once 'pnf_documents.features.inc';
+
+/**
+ * Implements hook_form_alter().
+ */
+function pnf_documents_form_alter(&$form, &$form_state, $form_id) {
+  // If "Documents" exposed filter, we must remove 'Communiqué de presse' and 'Dossier de presse' options.
+  if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-documents-page-documents') {
+    $options = $form['field_document_category_tid']['#options'];
+    foreach ($options  as $key => $option) {
+      $haystack = array('Communiqué de presse','Dossier de presse');
+      if (in_array($option, $haystack)) {
+        unset($options[$key]);
+      }
+    }
+    $form['field_document_category_tid']['#options'] = $options;
+  }
+
+  // Il "Espace Presse" exposed filter, we must keep only 'All', 'Communiqué de presse' and 'Dossier de presse' options.
+  if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-documents-page-press') {
+    $options = $form['field_document_category_tid']['#options'];
+    $press_options = array_slice($options,0,1,TRUE);
+    foreach ($options  as $key => $option) {
+      $haystack = array('Communiqué de presse','Dossier de presse');
+      if (in_array($option, $haystack)) {
+        $press_options[$key] = $option;
+      }
+    }
+    $form['field_document_category_tid']['#options'] = $press_options;
+  }
+}

@@ -5,3 +5,71 @@
  */
 
 include_once 'pnf_agenda.features.inc';
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function pnf_agenda_field_formatter_info() {
+  $formatters = array(
+    'pnf_agenda_date' => array(
+      'label' => t('Date agenda PNF'),
+      'field types' => array('date', 'datestamp', 'datetime'),
+      'description' => t('Displays event dates as needed for PNF agenda.'),
+    ),
+  );
+  return $formatters;
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function pnf_agenda_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+
+  switch ($display['type']) {
+    case 'pnf_agenda_date':
+      foreach ($items as $delta => $item) {
+        // Single date
+        if ($item['value'] == $item['value2']) {
+          $adverb = t('on');
+          $iso_date = $item['value'];
+        }
+        else {
+          $now = date('Y-m-d');
+          $iso_date = $item['value'];
+          $date = substr($iso_date, 0, 10);
+
+          // Two dates in the future
+          if ($date > $now) {
+            $adverb = t('from');
+          }
+          // Two dates, start date past.
+          else {
+            $adverb = t('to');
+            $iso_date = $item['value2'];
+
+          }
+        }
+        $element[$delta] = array('#markup' => pnf_agenda_date_markup($adverb, $iso_date));
+      }
+      break;
+  }
+
+  return $element;
+}
+
+/**
+ * @param string $adverb Adverb to place in front of agenda date
+ * @param string $iso_date Mysql ISO date, as retrieved from database
+ * @return string $markup HTML code to display
+ */
+function pnf_agenda_date_markup($adverb, $iso_date) {
+  $day = format_date(strtotime($iso_date),'custom','d');
+  $month = format_date(strtotime($iso_date),'custom','M');
+
+  $markup =  '<div class="date_agenda_adverb">' . $adverb . '</div>'
+    . '<div class="date_agenda_day">' . $day . '</div>'
+    . '<div class="date_agenda_month">' . $month . '</div>';
+
+  return $markup;
+}

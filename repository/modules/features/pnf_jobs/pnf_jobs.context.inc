@@ -19,22 +19,11 @@ function pnf_jobs_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'offres-emplois' => 'offres-emplois',
+        'offres-emploi' => 'offres-emploi',
       ),
     ),
   );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views--exp-jobs-page_jobs' => array(
-          'module' => 'views',
-          'delta' => '-exp-jobs-page_jobs',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
+  $context->reactions = array();
   $context->condition_mode = 0;
 
   // Translatables

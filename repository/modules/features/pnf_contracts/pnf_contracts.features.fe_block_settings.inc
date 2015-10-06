@@ -12,12 +12,14 @@ function pnf_contracts_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
-  $export['views--exp-contracts-page_contracts'] = array(
+  $export['menu-menu-menu-public-contracts'] = array(
     'cache' => -1,
     'css_class' => '',
     'custom' => 0,
-    'delta' => '-exp-contracts-page_contracts',
-    'module' => 'views',
+    'delta' => 'menu-menu-public-contracts',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'menu',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),

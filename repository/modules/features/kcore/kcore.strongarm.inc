@@ -568,13 +568,6 @@ Nous nous efforçons d\'y répondre dans les plus brefs délais.</p>
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'file_public_path';
-  $strongarm->value = 'sites/parcsnationaux.fr/files';
-  $export['file_public_path'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'language_negotiation_language';
   $strongarm->value = array(
     'locale-url' => array(
@@ -691,6 +684,27 @@ Nous nous efforçons d\'y répondre dans les plus brefs délais.</p>
   $strongarm->name = 'user_admin_role';
   $strongarm->value = '3';
   $export['user_admin_role'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_entity_taxonomy_term';
+  $strongarm->value = array(
+    'news_types' => 'news_types',
+    'contract_categories' => 'contract_categories',
+    'procurement_types' => 'procurement_types',
+    'document_categories' => 'document_categories',
+    'job_types' => 'job_types',
+    'scald_authors' => 0,
+    'scald_tags' => 0,
+    'news_categories' => 0,
+    'news_tags' => 0,
+    'public' => 0,
+    'sectors' => 0,
+    'event_categories' => 0,
+    'media_categories' => 0,
+  );
+  $export['uuid_features_entity_taxonomy_term'] = $strongarm;
 
   return $export;
 }

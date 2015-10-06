@@ -660,7 +660,7 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Lien Tous les dossiers';
-  $handler->display->display_options['header']['area']['content'] = '<a href="/dossiers">tous les dosssiers</a>';
+  $handler->display->display_options['header']['area']['content'] = '<a href="/dossiers">tous les dossiers</a>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Content: Taxonomy terms on node */
@@ -740,7 +740,7 @@ function pnf_news_views_default_views() {
     t('Bloc accueil brèves'),
     t('Bloc accueil dossiers'),
     t('Lien Tous les dossiers'),
-    t('<a href="/dossiers">tous les dosssiers</a>'),
+    t('<a href="/dossiers">tous les dossiers</a>'),
   );
   $export['news'] = $view;
 

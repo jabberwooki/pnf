@@ -13,22 +13,58 @@ function pnf_contracts_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'contracts-list';
+  $context->name = 'contract-page';
   $context->description = '';
   $context->tag = 'Marchés publics';
   $context->conditions = array(
-    'path' => array(
+    'node' => array(
       'values' => array(
-        'marches-publics' => 'marches-publics',
+        'contract' => 'contract',
+      ),
+      'options' => array(
+        'node_form' => '1',
       ),
     ),
   );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views--exp-contracts-page_contracts' => array(
-          'module' => 'views',
-          'delta' => '-exp-contracts-page_contracts',
+        'menu-menu-menu-public-contracts' => array(
+          'module' => 'menu',
+          'delta' => 'menu-menu-public-contracts',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Marchés publics');
+  $export['contract-page'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'contracts-list';
+  $context->description = '';
+  $context->tag = 'Marchés publics';
+  $context->conditions = array(
+    'views' => array(
+      'values' => array(
+        'contracts:awarded_contracts' => 'contracts:awarded_contracts',
+        'contracts:current_contracts' => 'contracts:current_contracts',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'menu-menu-menu-public-contracts' => array(
+          'module' => 'menu',
+          'delta' => 'menu-menu-public-contracts',
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),

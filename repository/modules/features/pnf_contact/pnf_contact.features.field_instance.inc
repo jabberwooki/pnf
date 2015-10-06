@@ -24,7 +24,7 @@ function pnf_contact_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 2,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'bean',
@@ -93,7 +93,7 @@ function pnf_contact_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'bean',
@@ -149,7 +149,7 @@ function pnf_contact_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'bean',
@@ -211,15 +211,18 @@ function pnf_contact_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
+        'module' => 'pnf_contact',
+        'settings' => array(
+          'html_class' => '',
+          'html_tag' => 'h2',
+        ),
+        'type' => 'pnf_text',
         'weight' => 0,
       ),
     ),
     'entity_type' => 'bean',
     'field_name' => 'field_contact_title',
-    'label' => 'Intitulé du bloc',
+    'label' => 'Intitulé du texte',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -530,7 +533,7 @@ function pnf_contact_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Email');
   t('Image');
-  t('Intitulé du bloc');
+  t('Intitulé du texte');
   t('Lien page contact');
   t('Message');
   t('Nom');
