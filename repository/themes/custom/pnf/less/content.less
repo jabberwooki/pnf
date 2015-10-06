@@ -84,7 +84,8 @@ a{
     .view-header p{
         text-align: right;
         margin-right: 20px;
-        margin-top: -20px;
+        margin-top: -30px;
+        margin-bottom: 10px;
     }
     .view-mode-teaser,
     .view-mode-teaser_home{
@@ -122,6 +123,11 @@ a{
         bottom: -5%;
         right: 30%;
     }
+    .view-mode-teaser_home_files .field-name-btn-readmore{
+        position: relative;
+        bottom: 0;
+        right: 0;
+    }
     .carousel-control {
         position: absolute;
         top: -25px;
@@ -145,13 +151,14 @@ a{
     .carousel-control .icon-next {
     margin-right: -30px;
     }
-}
+}    
 
 /*Block views events*/
 .view-events {
     .view-header p{
         text-align: right;
-        margin-top: -20px;
+        margin-top: -30px;
+        margin-bottom: 10px;
     }
     .view-content{
         background: #fff;
@@ -209,17 +216,31 @@ a{
 /*Blocks flashnews*/
 #block-views-news-block-news-flashnews-home{
 	background: #fff;
+    margin-bottom: 20px;
 
-    /*h2.block-title{
+    h2.block-title{
+        float: left;
+        margin: 10px 15px 10px 15px;
+    }
+    .view-news{
         float: left;
     }
-    .carousel-inner{
-        float: left;
-        width: auto;
-        .field-name-field-displayed-pub-date{
+    .field-name-title,
+    .field-name-field-displayed-pub-date{
             float: left;
-        }
-    }*/
+            margin-right: 15px;
+            line-height: 40px;
+    }
+    .carousel-inner {
+        width: auto;
+        float: left;
+    }
+    .carousel-control{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+    }
 }
 
 /*Blocks dossiers*/
@@ -229,7 +250,8 @@ a{
     }
     .view-header p{
         text-align: right;
-        margin-top: -20px;
+        margin-top: -30px;
+        margin-bottom: 10px;
     }
     .view-content{
         background: #fff;
@@ -244,5 +266,17 @@ a{
     }
     .field-name-btn-readmore{
         text-align: center;
+    }
+    .carousel-control{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+            .icon-next{
+                right: 8%;
+            }
+            .icon-prev{
+                left: 3%;    
+            }
     }
 }
