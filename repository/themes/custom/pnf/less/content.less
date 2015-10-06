@@ -79,7 +79,7 @@ a{
     }
 }
 
-/*Block news*/
+/*Block news & liste news*/
 .view-news {
     .view-header p{
         text-align: right;
@@ -148,7 +148,7 @@ a{
 }
 
 /*Block views events*/
-#block-views-events-block-events-home {
+.view-events {
     .view-header p{
         text-align: right;
         margin-top: -20px;
@@ -158,7 +158,16 @@ a{
         padding: 10px;
     }
     h3{
-        margin:0 0 5px 0;
+    font-size: @font-size-base;
+    font-weight: 600;
+    margin-top: 5px;
+        a{
+            color: darken(@brand-primary, 12%);
+        }
+        a:hover{
+            color: @brand-primary;
+            text-decoration: none;
+        }
     }
     .views-row{
         margin: 10px 0;
