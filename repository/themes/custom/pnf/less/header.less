@@ -26,13 +26,47 @@ header .name{
 
 /*Header*/
 .header{
-	margin-top: -65px;
+	margin-top: -70px;
 	background: #fff;
+}
+.pnf_topmenu {
+	padding-top: 5px;
+}
+
+/*Search block*/
+
+
+input[type="search"].sb-search-input {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
+}
+
+
+/*Menu select*/
+#block-menu-menu-national-parks,
+#block-menu-menu-menu-park {
+	margin-right: 15px;
+		select{
+			background-color: @brand-primary;
+		    border: none;
+		    color: #fff;
+		    font-size: @font-size-small;
+		    padding: 5px;
+		    	cursor: pointer;
+		}
+}
+
+#block-menu-menu-national-parks{
+	select{
+		background-color: #fff;
+		border: 1px solid #666;
+		color: #666;
+	}
 }
 
 /*Menu thematique*/
 nav{
-	margin-top: -75px;
+	margin-top: -92px;
 }
 nav .tb-megamenu {
     background-color: transparent;
@@ -49,11 +83,15 @@ nav .tb-megamenu {
 		}
 		.nav li.dropdown.open > .dropdown-toggle .mega-caption{
 			color: #fff;
+			border-left: 1px solid #fff;
+			padding-left: 10px;
 		}
 		.mega-caption{
 			text-transform: none;
 			font-style: italic;
 			font-weight: 400;
+			border-left: 1px solid @brand-primary;
+			padding-left: 10px;
 		}
 		.nav .dropdown-menu{
 			background: #e7e7e7;
@@ -100,16 +138,48 @@ nav .tb-megamenu {
     background-color: #000;
 	background-color: rgba(0,0,0,.5);
 	color:#fff;
+	padding: 15px;
+
+		a{
+			color: #fff;
+		}
+		
+		#front-slideshow-controls{
+		    right: 40px;
+		    position: absolute;
+		    top: 20px;
+		}
+
+		.carousel-control {
+	        position: absolute;
+	        top: 5%;
+	        left: 0;
+	        bottom: 0;
+	        width: 15%;
+	        opacity: 1;
+	        font-size: 20px;
+	        color: #fff;
+	        text-align: center;
+	        text-shadow: none;
+	    }
+	    .carousel-control.left,  .carousel-control.right {
+	          width: 20px;
+	          height: 20px;
+	      }
+	    .carousel-control .icon-prev,
+	    .carousel-control .icon-next{
+	        top: 0;
+	    }
+	    .carousel-control .icon-next {
+	    margin-right: -30px;
+	    }
 }
+
 
 .region-top-menu {
 
 	.block{
 		float: left;
-	}
-
-	.form-type-textfield{
-		display: none;
 	}
 
 }
