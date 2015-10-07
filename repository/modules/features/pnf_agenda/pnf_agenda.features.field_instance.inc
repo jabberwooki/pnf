@@ -35,7 +35,7 @@ function pnf_agenda_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 14,
       ),
       'teaser_home' => array(
         'label' => 'hidden',
@@ -122,7 +122,7 @@ function pnf_agenda_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 18,
       ),
       'teaser_home' => array(
         'label' => 'above',
@@ -172,7 +172,7 @@ function pnf_agenda_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 17,
       ),
       'teaser_home' => array(
         'label' => 'above',
@@ -251,7 +251,7 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser_home' => array(
         'label' => 'hidden',
@@ -311,16 +311,10 @@ function pnf_agenda_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
-        'weight' => 0,
+        'module' => 'pnf_agenda',
+        'settings' => array(),
+        'type' => 'pnf_agenda_date',
+        'weight' => 3,
       ),
       'teaser_home' => array(
         'label' => 'hidden',
@@ -383,7 +377,7 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 16,
       ),
       'teaser_home' => array(
         'label' => 'hidden',
@@ -563,7 +557,7 @@ function pnf_agenda_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
       'teaser_home' => array(
         'label' => 'above',
@@ -624,7 +618,7 @@ function pnf_agenda_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 19,
       ),
       'teaser_home' => array(
         'label' => 'above',
@@ -680,7 +674,7 @@ function pnf_agenda_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 20,
       ),
       'teaser_home' => array(
         'label' => 'above',
@@ -739,7 +733,7 @@ function pnf_agenda_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 24,
       ),
       'teaser_home' => array(
         'label' => 'above',
