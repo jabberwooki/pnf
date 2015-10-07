@@ -144,8 +144,8 @@ function pnf_social_media_strongarm() {
     'event' => 'event',
     'contract' => 'contract',
     'job' => 'job',
-    'page' => 'page',
     'slide' => 0,
+    'page' => 0,
     'promotion' => 0,
   );
   $export['service_links_node_types'] = $strongarm;

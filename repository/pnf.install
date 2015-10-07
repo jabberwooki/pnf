@@ -240,3 +240,10 @@ function pnf_update_7004() {
 function pnf_update_7005() {
   module_enable(array('pnf_landing_pages'));
 }
+
+/**
+ * Activate pnf_social_media feature.
+ */
+function pnf_update_7006() {
+  module_enable(array('pnf_social_media'));
+}

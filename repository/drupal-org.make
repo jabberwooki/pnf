@@ -238,6 +238,9 @@ projects[geofield][version] = "2.3"
 projects[on_the_web][subdir] = contrib
 projects[on_the_web][version] = "1.5"
 
+projects[service_links][subdir] = contrib
+projects[service_links][version] = "2.3"
+
 ;=== Newsletter ===============================================================
 ;projects[mailchimp][subdir] = contrib
 ;projects[mailchimp][version] = ""
