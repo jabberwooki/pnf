@@ -148,6 +148,9 @@ projects[lang_dropdown][version] = "2.5"
 projects[menu_attributes][subdir] = contrib
 projects[menu_attributes][version] = "1.0-rc3"
 
+projects[menu_fields][subdir] = contrib
+projects[menu_fields][version] = "1.x-dev"
+
 ;projects[menu_trail_by_path][subdir] = contrib
 ;projects[menu_trail_by_path][version] = ""
 
