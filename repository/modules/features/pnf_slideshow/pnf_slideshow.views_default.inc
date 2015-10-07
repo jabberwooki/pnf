@@ -54,6 +54,7 @@ function pnf_slideshow_views_default_views() {
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Descriptif */
   $handler->display->display_options['fields']['body']['id'] = 'body';
@@ -74,7 +75,7 @@ function pnf_slideshow_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div id="slide-infos-wrapper">
-  <div id="slide-infos-title">[title]</div>
+  <div id="slide-infos-title"><h2>[title]</2></div>
   <div id="front-slideshow-controls">
     <a class="carousel-control left" href="#views-bootstrap-carousel-1" data-slide="prev">
       <span class="icon-prev"></span>
@@ -120,7 +121,7 @@ function pnf_slideshow_views_default_views() {
     t('Desc'),
     t('Photo'),
     t('<div id="slide-infos-wrapper">
-  <div id="slide-infos-title">[title]</div>
+  <div id="slide-infos-title"><h2>[title]</2></div>
   <div id="front-slideshow-controls">
     <a class="carousel-control left" href="#views-bootstrap-carousel-1" data-slide="prev">
       <span class="icon-prev"></span>
