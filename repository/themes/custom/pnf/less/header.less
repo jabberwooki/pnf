@@ -116,10 +116,16 @@ nav .tb-megamenu {
 		font-size: @font-size-large;
 		border-right:none;
 		}
+		.tb-megamenu .nav > .active > a, .tb-megamenu .nav > .active > a:hover, .tb-megamenu .nav > .active > a:focus{
+			background-color: transparent;
+			color: #000;
+		}
+		.nav > li > a:hover,
 		.nav li.dropdown.open > .dropdown-toggle{
 			background: @brand-primary;
 			color: #fff;
 		}
+		.nav > li > a:hover .mega-caption,
 		.nav li.dropdown.open > .dropdown-toggle .mega-caption{
 			color: #fff;
 			border-left: 1px solid #fff;
@@ -138,13 +144,15 @@ nav .tb-megamenu {
 			ul li{
 				border: none;
 			}
-			a.mega-group-title{
+			a.mega-group-title,
+			a.mega-group-title:hover{
 				color: #8e9fbc;
 				text-transform: uppercase;
 				border-bottom: 1px solid #cbd0d9;
 				font-size: @font-size-large;
 				font-weight: 600;
 				padding-left: 10px;
+				line-height: 30px;
 			}
 			ul li.mega-group .open a.mega-group-title:focus,
 			ul li.mega-group .open  a.mega-group-title:hover,
@@ -178,11 +186,18 @@ nav .tb-megamenu {
 	background-color: rgba(0,0,0,.5);
 	color:#fff;
 	padding: 15px;
-
+		h2{
+			margin-top: 0;
+		}
 		a{
 			color: #fff;
 		}
-		
+		a:hover{
+			text-decoration: none;
+		}
+		#slide-infos-credit{
+			font-size: 10px;
+		}
 		#front-slideshow-controls{
 		    right: 40px;
 		    position: absolute;
