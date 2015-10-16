@@ -51,9 +51,48 @@
 	}
 }
 
+/*Social Media*/
 
 span.on-the-web{
 	float: left;
+}
+
+#block-on-the-web-0 {
+	h2{
+		margin-bottom: 0;
+	}
+	a img{
+		display: none;
+	}
+	a:hover{
+		text-decoration: none;
+	}
+	a:after{
+		font-family: 'Fontawesome';
+	 	font-size: @font-size-h3;
+	 	margin-right: 10px;
+	}
+	.otw-facebook{
+		a:after{
+	 		content: '\f082';
+	 		color: #3b5998;
+	 	}
+	}
+	.otw-twitter{
+		a:after{
+	 		content: '\f081';
+	 		color: #00aced;
+	 	}
+	}
+	.otw-youtube {
+		a:after{
+		 	content: '\f16a';
+		 	color: #e52d27;
+		}
+	}
+	a:hover:after{
+		color: #716f73;
+	}
 }
 
 .block:first-child h2.block-title{

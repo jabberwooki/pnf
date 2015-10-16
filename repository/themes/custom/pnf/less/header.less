@@ -34,8 +34,6 @@ header .name{
 }
 
 /*Search block*/
-
-
 input[type="search"].sb-search-input {
 	-webkit-appearance: none;
 	-webkit-border-radius: 0px;
@@ -62,6 +60,47 @@ input[type="search"].sb-search-input {
 		border: 1px solid #666;
 		color: #666;
 	}
+}
+
+/*Social Media*/
+#block-kcore-pnf-on-the-web-clone {
+	a img{
+		display: none;
+	}
+	a:hover{
+		text-decoration: none;
+	}
+	a:after{
+		font-family: 'Fontawesome';
+	 	color: #716f73;
+	 	font-size: @font-size-h4;
+	 	margin-right: 10px;
+	}
+	.otw-facebook{
+		a:after{
+	 		content: '\f09a';
+	 	}
+	 	a:hover:after{
+			color: #3b5998;
+		}
+	}
+	.otw-twitter{
+		a:after{
+	 		content: '\f099';
+	 	}
+	 	a:hover:after{
+			color: #00aced;
+		}
+	}
+	.otw-youtube {
+		a:after{
+		 	content: '\f16a';
+		}
+		a:hover:after{
+			color: #e52d27;
+		}
+	}
+
 }
 
 /*Menu thematique*/
