@@ -35,7 +35,7 @@ function pnf_agenda_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 19,
       ),
       'teaser_home' => array(
         'label' => 'hidden',
@@ -122,7 +122,7 @@ function pnf_agenda_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 21,
       ),
       'teaser_home' => array(
         'label' => 'above',
@@ -172,7 +172,7 @@ function pnf_agenda_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 20,
       ),
       'teaser_home' => array(
         'label' => 'above',
@@ -314,7 +314,7 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'pnf_agenda',
         'settings' => array(),
         'type' => 'pnf_agenda_date',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'teaser_home' => array(
         'label' => 'hidden',
@@ -377,7 +377,7 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 16,
+        'weight' => 4,
       ),
       'teaser_home' => array(
         'label' => 'hidden',
@@ -557,7 +557,7 @@ function pnf_agenda_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 18,
       ),
       'teaser_home' => array(
         'label' => 'above',
@@ -618,7 +618,7 @@ function pnf_agenda_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 22,
       ),
       'teaser_home' => array(
         'label' => 'above',
@@ -674,7 +674,7 @@ function pnf_agenda_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 23,
       ),
       'teaser_home' => array(
         'label' => 'above',
@@ -733,7 +733,7 @@ function pnf_agenda_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 25,
       ),
       'teaser_home' => array(
         'label' => 'above',

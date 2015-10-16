@@ -18,7 +18,7 @@ function pnf_agenda_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '2',
+      'weight' => '3',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -165,17 +165,19 @@ function pnf_agenda_ds_layout_settings_info() {
       'central' => array(
         0 => 'field_key_image',
         1 => 'field_event_categorie',
-        2 => 'title',
-        3 => 'field_event_dates',
+        2 => 'group_event_resume',
+        3 => 'title',
         4 => 'field_event_location',
+        5 => 'field_event_dates',
       ),
     ),
     'fields' => array(
       'field_key_image' => 'central',
       'field_event_categorie' => 'central',
+      'group_event_resume' => 'central',
       'title' => 'central',
-      'field_event_dates' => 'central',
       'field_event_location' => 'central',
+      'field_event_dates' => 'central',
     ),
     'classes' => array(),
     'wrappers' => array(
