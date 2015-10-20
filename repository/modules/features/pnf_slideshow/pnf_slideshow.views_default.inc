@@ -69,10 +69,11 @@ function pnf_slideshow_views_default_views() {
   $handler->display->display_options['fields']['field_credit']['field'] = 'field_credit';
   $handler->display->display_options['fields']['field_credit']['label'] = 'Photo';
   $handler->display->display_options['fields']['field_credit']['exclude'] = TRUE;
-  /* Field: Global: Custom text */
+  /* Field: Global : Enveloppe Titre-Descriptif-Crédit */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Global : Enveloppe Titre-Descriptif-Crédit';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div id="slide-infos-wrapper">
   <div id="slide-infos-title"><h2>[title]</2></div>
@@ -88,6 +89,15 @@ function pnf_slideshow_views_default_views() {
   <div id="slide-infos-credit">Photo : [field_credit]</div>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: Global : Div logos blancs */
+  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_1']['ui_name'] = 'Global : Div logos blancs';
+  $handler->display->display_options['fields']['nothing_1']['label'] = '';
+  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing_1']['element_wrapper_class'] = 'views-field white-logos';
+  $handler->display->display_options['fields']['nothing_1']['element_default_classes'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
