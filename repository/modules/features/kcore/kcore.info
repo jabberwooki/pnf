@@ -96,6 +96,7 @@ features[menu_custom][] = menu-menu-themes
 features[menu_custom][] = menu-national-parks
 features[menu_custom][] = menu-tools
 features[menu_links][] = menu-menu-park_marchs-publics:marches-publics
+features[menu_links][] = menu-menu-park_recrutement:offres-demploi
 features[menu_links][] = menu-national-parks_parc-amazonien-de-guyane:http://www.parc-amazonien-guyane.fr/
 features[menu_links][] = menu-national-parks_parc-national-de-la-guadeloupe:http://www.guadeloupe-parcnational.fr
 features[menu_links][] = menu-national-parks_parc-national-de-la-runion:http://www.reunion-parcnational.fr

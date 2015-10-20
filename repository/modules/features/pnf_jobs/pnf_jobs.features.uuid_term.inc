@@ -21,7 +21,7 @@ function pnf_jobs_uuid_features_default_terms() {
     'vocabulary_machine_name' => 'job_types',
   );
   $terms[] = array(
-    'name' => 'Service civique',
+    'name' => 'Services civiques',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
@@ -31,7 +31,7 @@ function pnf_jobs_uuid_features_default_terms() {
     'vocabulary_machine_name' => 'job_types',
   );
   $terms[] = array(
-    'name' => 'Emplois',
+    'name' => 'Offres d\'emploi',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,

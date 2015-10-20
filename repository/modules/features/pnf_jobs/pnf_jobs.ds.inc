@@ -53,7 +53,7 @@ function pnf_jobs_ds_field_settings_info() {
       'format' => 'default',
     ),
     'btn_readmore' => array(
-      'weight' => '3',
+      'weight' => '6',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -117,36 +117,33 @@ function pnf_jobs_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'job';
   $ds_layout->view_mode = 'teaser';
-  $ds_layout->layout = 'bootstrap_7_5';
+  $ds_layout->layout = 'bootstrap_12';
   $ds_layout->settings = array(
     'regions' => array(
-      'left' => array(
+      'central' => array(
         0 => 'title',
         1 => 'field_job_location',
         2 => 'field_job_resume',
-        3 => 'btn_readmore',
-      ),
-      'right' => array(
-        4 => 'field_job_pub_date',
+        3 => 'field_job_pub_date',
+        4 => 'field_job_deadline_date',
         5 => 'field_job_projected_date',
-        6 => 'field_job_deadline_date',
+        6 => 'btn_readmore',
         7 => 'btn_job_notice',
       ),
     ),
     'fields' => array(
-      'title' => 'left',
-      'field_job_location' => 'left',
-      'field_job_resume' => 'left',
-      'btn_readmore' => 'left',
-      'field_job_pub_date' => 'right',
-      'field_job_projected_date' => 'right',
-      'field_job_deadline_date' => 'right',
-      'btn_job_notice' => 'right',
+      'title' => 'central',
+      'field_job_location' => 'central',
+      'field_job_resume' => 'central',
+      'field_job_pub_date' => 'central',
+      'field_job_deadline_date' => 'central',
+      'field_job_projected_date' => 'central',
+      'btn_readmore' => 'central',
+      'btn_job_notice' => 'central',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'left' => 'div',
-      'right' => 'div',
+      'central' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
