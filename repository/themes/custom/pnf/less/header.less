@@ -34,8 +34,6 @@ header .name{
 }
 
 /*Search block*/
-
-
 input[type="search"].sb-search-input {
 	-webkit-appearance: none;
 	-webkit-border-radius: 0px;
@@ -64,6 +62,47 @@ input[type="search"].sb-search-input {
 	}
 }
 
+/*Social Media*/
+#block-kcore-pnf-on-the-web-clone {
+	a img{
+		display: none;
+	}
+	a:hover{
+		text-decoration: none;
+	}
+	a:after{
+		font-family: 'Fontawesome';
+	 	color: #716f73;
+	 	font-size: @font-size-h4;
+	 	margin-right: 10px;
+	}
+	.otw-facebook{
+		a:after{
+	 		content: '\f09a';
+	 	}
+	 	a:hover:after{
+			color: #3b5998;
+		}
+	}
+	.otw-twitter{
+		a:after{
+	 		content: '\f099';
+	 	}
+	 	a:hover:after{
+			color: #00aced;
+		}
+	}
+	.otw-youtube {
+		a:after{
+		 	content: '\f16a';
+		}
+		a:hover:after{
+			color: #e52d27;
+		}
+	}
+
+}
+
 /*Menu thematique*/
 nav{
 	margin-top: -92px;
@@ -77,10 +116,16 @@ nav .tb-megamenu {
 		font-size: @font-size-large;
 		border-right:none;
 		}
+		.tb-megamenu .nav > .active > a, .tb-megamenu .nav > .active > a:hover, .tb-megamenu .nav > .active > a:focus{
+			background-color: transparent;
+			color: #000;
+		}
+		.nav > li > a:hover,
 		.nav li.dropdown.open > .dropdown-toggle{
 			background: @brand-primary;
 			color: #fff;
 		}
+		.nav > li > a:hover .mega-caption,
 		.nav li.dropdown.open > .dropdown-toggle .mega-caption{
 			color: #fff;
 			border-left: 1px solid #fff;
@@ -99,13 +144,15 @@ nav .tb-megamenu {
 			ul li{
 				border: none;
 			}
-			a.mega-group-title{
+			a.mega-group-title,
+			a.mega-group-title:hover{
 				color: #8e9fbc;
 				text-transform: uppercase;
 				border-bottom: 1px solid #cbd0d9;
 				font-size: @font-size-large;
 				font-weight: 600;
 				padding-left: 10px;
+				line-height: 30px;
 			}
 			ul li.mega-group .open a.mega-group-title:focus,
 			ul li.mega-group .open  a.mega-group-title:hover,
@@ -139,11 +186,18 @@ nav .tb-megamenu {
 	background-color: rgba(0,0,0,.5);
 	color:#fff;
 	padding: 15px;
-
+		h2{
+			margin-top: 0;
+		}
 		a{
 			color: #fff;
 		}
-		
+		a:hover{
+			text-decoration: none;
+		}
+		#slide-infos-credit{
+			font-size: 10px;
+		}
 		#front-slideshow-controls{
 		    right: 40px;
 		    position: absolute;

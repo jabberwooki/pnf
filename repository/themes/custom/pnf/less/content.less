@@ -213,6 +213,23 @@ a{
     }
 }
 
+/*List Events*/
+.page-agenda .field-name-field-event-dates{
+    float: right;
+    border-right: none;
+    border-left: 1px solid @gray-light;
+}
+.page-agenda .view-events .view-content{
+    background: transparent;
+}
+.page-agenda .view-events .view-mode-teaser{
+    border-bottom: 1px solid #ed8b00;
+    background: #fff;
+    margin-right: 15px;
+    padding: 7px;
+    margin-bottom: 25px;
+}
+
 /*Blocks flashnews*/
 #block-views-news-block-news-flashnews-home{
 	background: #fff;
@@ -224,15 +241,19 @@ a{
     }
     .view-news{
         float: left;
+        width: 680px;
     }
-    .field-name-title,
+    .field-name-title h3,
     .field-name-field-displayed-pub-date{
             float: left;
             margin-right: 15px;
-            line-height: 40px;
+            line-height: 45px;
+    }
+    .field-name-title h3{
+        margin:0;
+        color: @brand-primary;
     }
     .carousel-inner {
-        width: auto;
         float: left;
     }
     .carousel-control{
@@ -278,5 +299,69 @@ a{
             .icon-prev{
                 left: 3%;    
             }
+    }
+}
+
+
+/*Menu tools*/
+#block-menu-menu-tools {
+    a:hover{
+        background: none;
+    }
+    a{
+        color: #fff;
+    }
+    ul.menu.nav li a{
+        color: #fff;
+    }
+    a.tool-news:after{
+        font-family: 'Fontawesome';
+        content: '\f0e6';
+        font-size: @font-size-h3;
+    }
+    .tool-events:after{
+        font-family: 'Fontawesome';
+        content: '\f073';
+        font-size: @font-size-h3;
+    }
+    .tool-newspaper:after{
+        font-family: 'Fontawesome';
+        content: '\f1ea';
+        font-size: @font-size-h3;
+    }
+    .tool-multimedia:after{
+        font-family: 'Fontawesome';
+        content: '\f03e';
+        font-size: @font-size-h3;
+    }
+    .tool-eshop:after{
+        font-family: 'Fontawesome';
+        content: '\f07a';
+        font-size: @font-size-h3;
+    }
+    .tool-like:after{
+        font-family: 'Fontawesome';
+        content: '\f08a';
+        font-size: @font-size-h3;
+    }
+    .tool-destination:after{
+        font-family: 'Fontawesome';
+        content: '\f278';
+        font-size: @font-size-h3;
+    }
+
+}
+
+/*Menu sidebar second*/
+.region-sidebar-second .block-menu{
+    ul li a{
+        background: #cfd5de;
+        color: #333;
+    }
+    ul li.open a,
+    ul li a.active{
+        background: #8e9fbc;
+        color: #FFF;
+        font-weight: 600;
     }
 }
