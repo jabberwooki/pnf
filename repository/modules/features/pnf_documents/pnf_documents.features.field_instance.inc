@@ -29,9 +29,7 @@ function pnf_documents_field_default_field_instances() {
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 0,
       ),
@@ -73,7 +71,6 @@ function pnf_documents_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => 'thumbnail',
         ),
@@ -148,9 +145,7 @@ function pnf_documents_field_default_field_instances() {
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'file',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'file_default',
         'weight' => 4,
       ),
@@ -221,7 +216,6 @@ function pnf_documents_field_default_field_instances() {
           'colorbox' => 1,
           'colorbox_link_text' => 'Feuilleter le document',
           'download' => 0,
-          'field_formatter_class' => '',
           'pdf_height' => 780,
           'pdf_width' => 600,
           'renderer' => 'direct',
@@ -293,9 +287,7 @@ function pnf_documents_field_default_field_instances() {
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 3,
       ),
