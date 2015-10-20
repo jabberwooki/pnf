@@ -87,23 +87,25 @@
 <!-- end of custom region top_menu -->
 
 <header class="container-fluid header" style="padding:0;">
-      <?php if ($logo): ?>
+  <?php if ($logo): ?>
+    <h1>
       <a class="logo" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
-      <?php endif; ?>
+    </h1>
+  <?php endif; ?>
 
   <div class="container">
-      <?php if (!empty($site_name)): ?>
-      <a class="name" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+    <?php if (!empty($site_name)): ?>
+    <a class="name" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+    <?php endif; ?>
+
+      <?php if (!empty($page['navigation'])): ?>
+        <nav role="navigation">
+          <?php print render($page['navigation']); ?>
+        </nav>
       <?php endif; ?>
-      
-        <?php if (!empty($page['navigation'])): ?>
-          <nav role="navigation">
-            <?php print render($page['navigation']); ?>
-          </nav>
-        <?php endif; ?>
-    </div>
+  </div>
 
 </header>
 
@@ -119,18 +121,18 @@
 
 <!-- pre-content -->     
   <?php if(drupal_is_front_page()): ?>
-      <div class="row">
-        <div class="col-sm-9">
-          <?php if (!empty($page['pre_content_left'])): ?>
-           <?php print render($page['pre_content_left']); ?>
-          <?php endif; ?>
-        </div>
-        <div class="col-sm-3">
-          <?php if (!empty($page['pre_content_right'])): ?>
-           <?php print render($page['pre_content_right']); ?>
-          <?php endif; ?>
-        </div>
+    <div class="row">
+      <div class="col-sm-9">
+        <?php if (!empty($page['pre_content_left'])): ?>
+         <?php print render($page['pre_content_left']); ?>
+        <?php endif; ?>
       </div>
+      <div class="col-sm-3">
+        <?php if (!empty($page['pre_content_right'])): ?>
+         <?php print render($page['pre_content_right']); ?>
+        <?php endif; ?>
+      </div>
+    </div>
   <?php endif; ?>
 <!-- end of pre-content -->  
 
@@ -150,7 +152,7 @@
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if (!empty($title)): ?>
-        <h1 class="page-header"><?php print $title; ?></h1>
+        <h2 class="page-header"><?php print $title; ?></h2>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
@@ -178,10 +180,10 @@
 <!-- custom region pre_footer -->
 <div class = "pnf_pre_footer">
   <div class="container">
-      <?php if (!empty($page['pre_footer'])): ?>
-        <?php print render($page['pre_footer']); ?>
-      <?php endif; ?>
-    </div>
+    <?php if (!empty($page['pre_footer'])): ?>
+      <?php print render($page['pre_footer']); ?>
+    <?php endif; ?>
+  </div>
 </div>
 <!-- end of custom region pre_footer -->
 
