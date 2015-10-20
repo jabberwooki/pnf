@@ -27,6 +27,7 @@ features[field_base][] = field_coordinates
 features[field_base][] = field_event_categorie
 features[field_base][] = field_event_dates
 features[field_base][] = field_event_location
+features[field_group][] = group_event_resume|node|event|teaser
 features[field_group][] = group_event_resume|node|event|teaser_home
 features[field_instance][] = node-event-body
 features[field_instance][] = node-event-field_coordinates
