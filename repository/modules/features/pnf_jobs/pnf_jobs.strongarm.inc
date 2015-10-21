@@ -77,7 +77,7 @@ function pnf_jobs_strongarm() {
       'display' => array(
         'language' => array(
           'teaser' => array(
-            'weight' => '17',
+            'weight' => '22',
             'visible' => FALSE,
           ),
           'default' => array(

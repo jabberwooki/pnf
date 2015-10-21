@@ -41,7 +41,7 @@ function pnf_contracts_btn_contract_notice($field) {
 		$label = t("Contract notice");
 		$uri =  $field['entity']->field_contract_notice['und'][0]['uri'];
 		$url = file_create_url($uri);
-		$output = '<a class = "btn btn-sm btn-primary" href="'. $url .'" target="_blank">'. $label .'</a>';
+		$output = '<a class = "btn btn-sm btn-secondary" href="'. $url .'" target="_blank">'. $label .'</a>';
 		return $output;
 	}
 }
@@ -53,7 +53,7 @@ function pnf_contracts_btn_contract_link($field) {
 	if (!empty($field['entity']->field_contract_link)) {
 		$label = t("Contract link");
 		$url =  $field['entity']->field_contract_link['und'][0]['url'];
-		$output = '<a class = "btn btn-sm btn-primary" href="'. $url .'" target="_blank">'. $label .'</a>';
+		$output = '<a class = "btn btn-sm btn-secondary" href="'. $url .'" target="_blank">'. $label .'</a>';
 		return $output;
 	}
 }

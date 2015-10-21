@@ -28,7 +28,7 @@ function pnf_jobs_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 20,
       ),
     ),
     'entity_type' => 'node',
@@ -113,7 +113,7 @@ function pnf_jobs_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 6,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -167,7 +167,7 @@ function pnf_jobs_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_job_location',
-    'label' => 'Basé à',
+    'label' => 'Poste basé à',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -231,7 +231,7 @@ function pnf_jobs_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 19,
       ),
     ),
     'entity_type' => 'node',
@@ -368,7 +368,7 @@ function pnf_jobs_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 4,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -487,7 +487,7 @@ function pnf_jobs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 21,
       ),
     ),
     'entity_type' => 'node',
@@ -508,11 +508,11 @@ function pnf_jobs_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Basé à');
   t('Date limite de candidature');
   t('Descriptif détaillé');
   t('Description courte du poste');
   t('Fiche de poste');
+  t('Poste basé à');
   t('Publié le');
   t('Type');
   t('À pourvoir à compter du');

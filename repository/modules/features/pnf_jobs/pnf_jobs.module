@@ -34,7 +34,7 @@ function pnf_jobs_btn_job_notice($field) {
 		$label = t("Job notice - PDF");
 		$uri =  $field['entity']->field_job_notice['und'][0]['uri'];
 		$url = file_create_url($uri);
-		$output = '<a class = "btn btn-sm btn-primary" href="'. $url .'" target="_blank">'. $label .'</a>';
+		$output = '<a class = "btn btn-sm btn-secondary" href="'. $url .'" target="_blank">'. $label .'</a>';
 		return $output;
 	}
 }

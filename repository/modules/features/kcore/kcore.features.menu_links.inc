@@ -30,6 +30,31 @@ function kcore_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
+  // Exported menu link: menu-menu-park_recrutement:offres-demploi
+  $menu_links['menu-menu-park_recrutement:offres-demploi'] = array(
+    'menu_name' => 'menu-menu-park',
+    'link_path' => 'offres-demploi',
+    'router_path' => 'offres-demploi',
+    'link_title' => 'Recrutement',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-menu-park_recrutement:offres-demploi',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 20,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+  );
   // Exported menu link: menu-national-parks_parc-amazonien-de-guyane:http://www.parc-amazonien-guyane.fr/
   $menu_links['menu-national-parks_parc-amazonien-de-guyane:http://www.parc-amazonien-guyane.fr/'] = array(
     'menu_name' => 'menu-national-parks',
@@ -265,6 +290,7 @@ function kcore_menu_default_menu_links() {
   t('Parc national des Pyrénées');
   t('Parc national du Mercantour');
   t('Parcs nationaux de France');
+  t('Recrutement');
 
   return $menu_links;
 }

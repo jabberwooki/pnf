@@ -21,6 +21,11 @@ function pnf_documents_ds_field_settings_info() {
       'weight' => '2',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h3',
+        'class' => '',
+      ),
     ),
     'post_date' => array(
       'weight' => '6',

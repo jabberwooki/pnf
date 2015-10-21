@@ -174,18 +174,12 @@ function pnf_multimedia_views_default_views() {
   );
   $handler->display->display_options['fields']['gallery_items']['delta_limit'] = '1';
   $handler->display->display_options['fields']['gallery_items']['delta_offset'] = '0';
-  /* Field: Atoms: Catégorie */
-  $handler->display->display_options['fields']['field_media_category']['id'] = 'field_media_category';
-  $handler->display->display_options['fields']['field_media_category']['table'] = 'field_data_field_media_category';
-  $handler->display->display_options['fields']['field_media_category']['field'] = 'field_media_category';
-  $handler->display->display_options['fields']['field_media_category']['label'] = '';
-  $handler->display->display_options['fields']['field_media_category']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_media_category']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Atom: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -231,18 +225,12 @@ function pnf_multimedia_views_default_views() {
     'image_style' => 'medium',
     'image_link' => 'content',
   );
-  /* Field: Atoms: Catégorie */
-  $handler->display->display_options['fields']['field_media_category']['id'] = 'field_media_category';
-  $handler->display->display_options['fields']['field_media_category']['table'] = 'field_data_field_media_category';
-  $handler->display->display_options['fields']['field_media_category']['field'] = 'field_media_category';
-  $handler->display->display_options['fields']['field_media_category']['label'] = '';
-  $handler->display->display_options['fields']['field_media_category']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_media_category']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Atom: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['path'] = 'videos';
 
@@ -259,18 +247,12 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['representation']['label'] = '';
   $handler->display->display_options['fields']['representation']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['representation']['context'] = 'list';
-  /* Field: Atoms: Catégorie */
-  $handler->display->display_options['fields']['field_media_category']['id'] = 'field_media_category';
-  $handler->display->display_options['fields']['field_media_category']['table'] = 'field_data_field_media_category';
-  $handler->display->display_options['fields']['field_media_category']['field'] = 'field_media_category';
-  $handler->display->display_options['fields']['field_media_category']['label'] = '';
-  $handler->display->display_options['fields']['field_media_category']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_media_category']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Atom: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;

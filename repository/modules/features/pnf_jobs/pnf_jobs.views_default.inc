@@ -112,6 +112,26 @@ function pnf_jobs_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'views_bootstrap_grid_plugin_style';
   $handler->display->display_options['style_options']['columns'] = '1';
   $handler->display->display_options['row_plugin'] = 'node';
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['label'] = 'terme';
+  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
+    'job_types' => 'job_types',
+    'scald_authors' => 0,
+    'scald_tags' => 0,
+    'news_categories' => 0,
+    'event_categories' => 0,
+    'document_categories' => 0,
+    'contract_categories' => 0,
+    'media_categories' => 0,
+    'news_tags' => 0,
+    'public' => 0,
+    'sectors' => 0,
+    'news_types' => 0,
+    'procurement_types' => 0,
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -139,29 +159,74 @@ function pnf_jobs_views_default_views() {
     'job' => 'job',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Type (field_job_type) */
-  $handler->display->display_options['filters']['field_job_type_tid']['id'] = 'field_job_type_tid';
-  $handler->display->display_options['filters']['field_job_type_tid']['table'] = 'field_data_field_job_type';
-  $handler->display->display_options['filters']['field_job_type_tid']['field'] = 'field_job_type_tid';
-  $handler->display->display_options['filters']['field_job_type_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_job_type_tid']['expose']['operator_id'] = 'field_job_type_tid_op';
-  $handler->display->display_options['filters']['field_job_type_tid']['expose']['label'] = 'Type d\'offre';
-  $handler->display->display_options['filters']['field_job_type_tid']['expose']['operator'] = 'field_job_type_tid_op';
-  $handler->display->display_options['filters']['field_job_type_tid']['expose']['identifier'] = 'field_job_type_tid';
-  $handler->display->display_options['filters']['field_job_type_tid']['expose']['remember'] = TRUE;
-  $handler->display->display_options['filters']['field_job_type_tid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => '1',
-    4 => 0,
-    5 => 0,
-    3 => 0,
-  );
-  $handler->display->display_options['filters']['field_job_type_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_job_type_tid']['vocabulary'] = 'job_types';
+  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
+  $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
+  $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
+  $handler->display->display_options['filters']['uuid']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['filters']['uuid']['value'] = 'e2a28688-49e5-4d6a-9f18-e283c535ef4e';
 
-  /* Display: Page emplois */
-  $handler = $view->new_display('page', 'Page emplois', 'page_jobs');
-  $handler->display->display_options['path'] = 'offres-emploi';
+  /* Display: Offres d'emploi */
+  $handler = $view->new_display('page', 'Offres d\'emploi', 'page_jobs');
+  $handler->display->display_options['path'] = 'offres-demploi';
+
+  /* Display: Stages */
+  $handler = $view->new_display('page', 'Stages', 'page_trainings');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Stages';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'job' => 'job',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
+  $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
+  $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
+  $handler->display->display_options['filters']['uuid']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['filters']['uuid']['value'] = '10cefd12-d3b9-40ec-8f72-a307bc542291';
+  $handler->display->display_options['path'] = 'stages';
+
+  /* Display: Services Civiques */
+  $handler = $view->new_display('page', 'Services Civiques', 'page_civil_services');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Services civiques';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'job' => 'job',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
+  $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
+  $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
+  $handler->display->display_options['filters']['uuid']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['filters']['uuid']['value'] = '6e6ec346-0414-4f86-868c-f8151f3644c3';
+  $handler->display->display_options['path'] = 'services-civiques';
   $translatables['jobs'] = array(
     t('Master'),
     t('Offres d\'emplois'),
@@ -180,8 +245,11 @@ function pnf_jobs_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
-    t('Type d\'offre'),
-    t('Page emplois'),
+    t('terme'),
+    t('Offres d\'emploi'),
+    t('Stages'),
+    t('Services Civiques'),
+    t('Services civiques'),
   );
   $export['jobs'] = $view;
 

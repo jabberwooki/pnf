@@ -17,13 +17,26 @@ function pnf_jobs_context_default_contexts() {
   $context->description = '';
   $context->tag = 'Offres d\'emplois';
   $context->conditions = array(
-    'path' => array(
+    'views' => array(
       'values' => array(
-        'offres-emploi' => 'offres-emploi',
+        'jobs:page_civil_services' => 'jobs:page_civil_services',
+        'jobs:page_jobs' => 'jobs:page_jobs',
+        'jobs:page_trainings' => 'jobs:page_trainings',
       ),
     ),
   );
-  $context->reactions = array();
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'menu-menu-menu-jobs' => array(
+          'module' => 'menu',
+          'delta' => 'menu-menu-jobs',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
   $context->condition_mode = 0;
 
   // Translatables
