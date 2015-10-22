@@ -1,6 +1,7 @@
 name = Documents
 core = 7.x
 package = App
+version = 7.x-1.0
 dependencies[] = colorbox
 dependencies[] = download_file
 dependencies[] = field_collection
@@ -32,7 +33,6 @@ features[field_instance][] = node-document-field_document_cover
 features[field_instance][] = node-document-field_document_links
 features[field_instance][] = node-document-field_document_resume
 features[field_instance][] = node-document-field_pub_dates
-features[menu_links][] = menu-tools_journal-du-parc:journal-du-parc
 features[node][] = document
 features[taxonomy][] = document_categories
 features[uuid_term][] = 80b8cbe2-5a72-4d15-807b-3957158dd4cb
