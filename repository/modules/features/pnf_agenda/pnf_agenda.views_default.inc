@@ -183,6 +183,11 @@ function pnf_agenda_views_default_views() {
   $handler->display->display_options['row_options']['grouping_fieldset']['group_field'] = 'node|created';
   $handler->display->display_options['row_options']['default_fieldset']['view_mode'] = 'teaser';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Dates -  start date (field_event_dates) */
+  $handler->display->display_options['sorts']['field_event_dates_value']['id'] = 'field_event_dates_value';
+  $handler->display->display_options['sorts']['field_event_dates_value']['table'] = 'field_data_field_event_dates';
+  $handler->display->display_options['sorts']['field_event_dates_value']['field'] = 'field_event_dates_value';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -200,25 +205,6 @@ function pnf_agenda_views_default_views() {
     'event' => 'event',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Dates -  start date (field_event_dates) */
-  $handler->display->display_options['filters']['field_event_dates_value']['id'] = 'field_event_dates_value';
-  $handler->display->display_options['filters']['field_event_dates_value']['table'] = 'field_data_field_event_dates';
-  $handler->display->display_options['filters']['field_event_dates_value']['field'] = 'field_event_dates_value';
-  $handler->display->display_options['filters']['field_event_dates_value']['operator'] = '<=';
-  $handler->display->display_options['filters']['field_event_dates_value']['group'] = 1;
-  $handler->display->display_options['filters']['field_event_dates_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_event_dates_value']['expose']['operator_id'] = 'field_event_dates_value_op';
-  $handler->display->display_options['filters']['field_event_dates_value']['expose']['label'] = 'Du';
-  $handler->display->display_options['filters']['field_event_dates_value']['expose']['operator'] = 'field_event_dates_value_op';
-  $handler->display->display_options['filters']['field_event_dates_value']['expose']['identifier'] = 'field_event_dates_value';
-  $handler->display->display_options['filters']['field_event_dates_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    4 => 0,
-    5 => 0,
-    3 => 0,
-  );
-  $handler->display->display_options['filters']['field_event_dates_value']['form_type'] = 'date_popup';
   /* Filter criterion: Content: Dates - end date (field_event_dates:value2) */
   $handler->display->display_options['filters']['field_event_dates_value2']['id'] = 'field_event_dates_value2';
   $handler->display->display_options['filters']['field_event_dates_value2']['table'] = 'field_data_field_event_dates';
@@ -227,7 +213,7 @@ function pnf_agenda_views_default_views() {
   $handler->display->display_options['filters']['field_event_dates_value2']['group'] = 1;
   $handler->display->display_options['filters']['field_event_dates_value2']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_event_dates_value2']['expose']['operator_id'] = 'field_event_dates_value2_op';
-  $handler->display->display_options['filters']['field_event_dates_value2']['expose']['label'] = 'Au';
+  $handler->display->display_options['filters']['field_event_dates_value2']['expose']['label'] = 'Du';
   $handler->display->display_options['filters']['field_event_dates_value2']['expose']['operator'] = 'field_event_dates_value2_op';
   $handler->display->display_options['filters']['field_event_dates_value2']['expose']['identifier'] = 'field_event_dates_value2';
   $handler->display->display_options['filters']['field_event_dates_value2']['expose']['remember_roles'] = array(
@@ -238,6 +224,35 @@ function pnf_agenda_views_default_views() {
     3 => 0,
   );
   $handler->display->display_options['filters']['field_event_dates_value2']['form_type'] = 'date_popup';
+  /* Filter criterion: Content: Dates -  start date (field_event_dates) */
+  $handler->display->display_options['filters']['field_event_dates_value']['id'] = 'field_event_dates_value';
+  $handler->display->display_options['filters']['field_event_dates_value']['table'] = 'field_data_field_event_dates';
+  $handler->display->display_options['filters']['field_event_dates_value']['field'] = 'field_event_dates_value';
+  $handler->display->display_options['filters']['field_event_dates_value']['operator'] = '<=';
+  $handler->display->display_options['filters']['field_event_dates_value']['group'] = 1;
+  $handler->display->display_options['filters']['field_event_dates_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_event_dates_value']['expose']['operator_id'] = 'field_event_dates_value_op';
+  $handler->display->display_options['filters']['field_event_dates_value']['expose']['label'] = 'Au';
+  $handler->display->display_options['filters']['field_event_dates_value']['expose']['operator'] = 'field_event_dates_value_op';
+  $handler->display->display_options['filters']['field_event_dates_value']['expose']['identifier'] = 'field_event_dates_value';
+  $handler->display->display_options['filters']['field_event_dates_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    4 => 0,
+    5 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_event_dates_value']['form_type'] = 'date_popup';
+  /* Filter criterion: Date: Date (node) */
+  $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['table'] = 'node';
+  $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
+  $handler->display->display_options['filters']['date_filter']['group'] = 1;
+  $handler->display->display_options['filters']['date_filter']['default_date'] = 'now';
+  $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
+    'field_data_field_event_dates.field_event_dates_value2' => 'field_data_field_event_dates.field_event_dates_value2',
+  );
   /* Filter criterion: Content: Catégorie (field_event_categorie) */
   $handler->display->display_options['filters']['field_event_categorie_tid']['id'] = 'field_event_categorie_tid';
   $handler->display->display_options['filters']['field_event_categorie_tid']['table'] = 'field_data_field_event_categorie';
