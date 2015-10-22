@@ -1,0 +1,14 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: chris
+ * Date: 22/10/15
+ * Time: 10:11
+ */
+
+/**
+ * Activate several i18n modules.
+ */
+function pnf_documents_update_7001() {
+  module_enable(array('field_collection'));
+}

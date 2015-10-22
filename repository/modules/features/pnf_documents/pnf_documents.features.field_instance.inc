@@ -10,6 +10,202 @@
 function pnf_documents_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance:
+  // 'field_collection_item-field_document_links-field_document_download'
+  $field_instances['field_collection_item-field_document_links-field_document_download'] = array(
+    'bundle' => 'field_document_links',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'download_file',
+        'settings' => array(),
+        'type' => 'direct_download_accessible',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'download_file',
+        'settings' => array(),
+        'type' => 'direct_download_accessible_icon',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_document_download',
+    'label' => 'Document téléchargeable',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 1,
+      'file_directory' => 'documents/downloads',
+      'file_extensions' => 'pdf',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'scald' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_document_links-field_document_flip'
+  $field_instances['field_collection_item-field_document_links-field_document_flip'] = array(
+    'bundle' => 'field_document_links',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Url du document sur le site distant de feuilletage (Issuu, Calameo...).',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 2,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_document_flip',
+    'label' => 'Feuilletage distant',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'linkit' => array(
+        'button_text' => 'Rechercher',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'rel_remove' => 'default',
+      'title' => 'value',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => 'Feuilleter le document',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-document-field_displayed_pub_date'
+  $field_instances['node-document-field_displayed_pub_date'] = array(
+    'bundle' => 'document',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 8,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'date_xxs',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_displayed_pub_date',
+    'label' => 'Date de publication affichée',
+    'required' => 1,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'Y-m-d H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'node-document-field_document_category'
   $field_instances['node-document-field_document_category'] = array(
     'bundle' => 'document',
@@ -20,9 +216,14 @@ function pnf_documents_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 0,
       ),
@@ -31,7 +232,7 @@ function pnf_documents_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -46,7 +247,7 @@ function pnf_documents_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 0,
+      'weight' => 2,
     ),
   );
 
@@ -60,7 +261,16 @@ function pnf_documents_field_default_field_instances() {
         'label' => 'above',
         'module' => 'image',
         'settings' => array(
-          'field_formatter_class' => '',
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 2,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
           'image_link' => '',
           'image_style' => '',
         ),
@@ -75,7 +285,7 @@ function pnf_documents_field_default_field_instances() {
           'image_style' => 'thumbnail',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
@@ -123,148 +333,70 @@ function pnf_documents_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 2,
+      'weight' => 5,
     ),
   );
 
-  // Exported field_instance: 'node-document-field_document_download'
-  $field_instances['node-document-field_document_download'] = array(
+  // Exported field_instance: 'node-document-field_document_links'
+  $field_instances['node-document-field_document_links'] = array(
     'bundle' => 'document',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'file',
+        'module' => 'field_collection',
         'settings' => array(
-          'field_formatter_class' => '',
+          'add' => 'Ajouter',
+          'delete' => 'Supprimer',
+          'description' => TRUE,
+          'edit' => 'Modifier',
+          'view_mode' => 'full',
         ),
-        'type' => 'file_default',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
+        'type' => 'field_collection_view',
         'weight' => 4,
       ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_document_download',
-    'label' => 'Document téléchargeable',
-    'required' => 0,
-    'settings' => array(
-      'description_field' => 1,
-      'file_directory' => 'documents/downloads',
-      'file_extensions' => 'pdf',
-      'max_filesize' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'file',
-      'settings' => array(
-        'filefield_sources' => array(
-          'filefield_sources' => array(
-            'attach' => 0,
-            'clipboard' => 0,
-            'imce' => 0,
-            'reference' => 0,
-            'remote' => 0,
-            'scald' => 0,
-            'upload' => 'upload',
-          ),
-          'source_attach' => array(
-            'absolute' => 0,
-            'attach_mode' => 'move',
-            'path' => 'file_attach',
-          ),
-          'source_imce' => array(
-            'imce_mode' => 0,
-          ),
-          'source_reference' => array(
-            'autocomplete' => 0,
-          ),
-        ),
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'file_generic',
-      'weight' => 4,
-    ),
-  );
-
-  // Exported field_instance: 'node-document-field_document_preview'
-  $field_instances['node-document-field_document_preview'] = array(
-    'bundle' => 'document',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
+      'full' => array(
         'label' => 'above',
-        'module' => 'file',
+        'module' => 'field_collection',
         'settings' => array(
-          'field_formatter_class' => '',
+          'add' => 'Ajouter',
+          'delete' => 'Supprimer',
+          'description' => TRUE,
+          'edit' => 'Modifier',
+          'view_mode' => 'full',
         ),
-        'type' => 'file_default',
-        'weight' => 4,
+        'type' => 'field_collection_view',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'pdf_reader',
+        'module' => 'field_collection',
         'settings' => array(
-          'colorbox' => 1,
-          'colorbox_link_text' => 'Feuilleter le document',
-          'download' => 0,
-          'pdf_height' => 780,
-          'pdf_width' => 600,
-          'renderer' => 'direct',
+          'add' => '',
+          'delete' => '',
+          'description' => 1,
+          'edit' => '',
+          'view_mode' => 'full',
         ),
-        'type' => 'pdf_reader_file',
+        'type' => 'field_collection_view',
         'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_document_preview',
-    'label' => 'Feuilletage',
+    'field_name' => 'field_document_links',
+    'label' => 'Documents',
     'required' => 0,
     'settings' => array(
-      'description_field' => 1,
-      'file_directory' => 'documents/previews',
-      'file_extensions' => 'pdf',
-      'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'file',
-      'settings' => array(
-        'filefield_sources' => array(
-          'filefield_sources' => array(
-            'attach' => 0,
-            'clipboard' => 0,
-            'imce' => 0,
-            'reference' => 0,
-            'remote' => 0,
-            'scald' => 0,
-            'upload' => 'upload',
-          ),
-          'source_attach' => array(
-            'absolute' => 0,
-            'attach_mode' => 'move',
-            'path' => 'file_attach',
-          ),
-          'source_imce' => array(
-            'imce_mode' => 0,
-          ),
-          'source_reference' => array(
-            'autocomplete' => 0,
-          ),
-        ),
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'file_generic',
-      'weight' => 5,
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 7,
     ),
   );
 
@@ -278,9 +410,14 @@ function pnf_documents_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 2,
       ),
@@ -289,7 +426,7 @@ function pnf_documents_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -341,7 +478,7 @@ function pnf_documents_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 6,
     ),
   );
 
@@ -355,7 +492,19 @@ function pnf_documents_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
-          'field_formatter_class' => '',
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 7,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
           'format_type' => 'long',
           'fromto' => 'both',
           'multiple_from' => '',
@@ -369,7 +518,7 @@ function pnf_documents_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 20,
       ),
     ),
     'entity_type' => 'node',
@@ -395,18 +544,21 @@ function pnf_documents_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 6,
+      'weight' => 3,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Catégorie');
+  t('Date de publication affichée');
   t('Dates début/fin publication');
   t('Document téléchargeable');
-  t('Feuilletage');
+  t('Documents');
+  t('Feuilletage distant');
   t('Image phare');
   t('Résumé');
+  t('Url du document sur le site distant de feuilletage (Issuu, Calameo...).');
 
   return $field_instances;
 }

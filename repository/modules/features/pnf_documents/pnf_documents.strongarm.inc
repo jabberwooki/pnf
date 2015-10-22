@@ -20,7 +20,7 @@ function pnf_documents_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -49,27 +49,44 @@ function pnf_documents_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'teaser_home_files' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser_list_flashnews' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '9',
+          'weight' => '10',
         ),
         'title' => array(
-          'weight' => '1',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'redirect' => array(
-          'weight' => '7',
+          'weight' => '8',
+        ),
+        'language' => array(
+          'weight' => '1',
         ),
       ),
       'display' => array(
         'language' => array(
           'teaser' => array(
-            'weight' => '0',
+            'weight' => '19',
             'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '0',
+            'visible' => TRUE,
           ),
         ),
       ),
