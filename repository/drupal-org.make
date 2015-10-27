@@ -109,6 +109,9 @@ projects[custom_search][version] = "1.18"
 projects[date][subdir] = contrib
 projects[date][version] = "2.8"
 
+projects[download_file][subdir] = contrib
+projects[download_file][version] = "1.1"
+
 ;projects[draggableviews][subdir] = contrib
 ;projects[draggableviews][version] = ""
 
