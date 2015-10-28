@@ -213,21 +213,76 @@ a{
     }
 }
 
-/*List Events*/
-.page-agenda .field-name-field-event-dates{
-    float: right;
-    border-right: none;
-    border-left: 1px solid @gray-light;
+/*List News / Dossiers / Flashnews*/
+.page-breves .view-mode-teaser_list_flashnews,
+.page-dossiers .view-mode-teaser:hover,
+.page-actualites .view-mode-teaser:hover{
+    -moz-box-shadow: 0px 0px 10px 0px #999999;
+    -webkit-box-shadow: 0px 0px 10px 0px #999999;
+    -o-box-shadow: 0px 0px 10px 0px #999999;
+    box-shadow: 0px 0px 10px 0px #999999;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999, Direction=NaN, Strength=10);
 }
-.page-agenda .view-events .view-content{
-    background: transparent;
-}
-.page-agenda .view-events .view-mode-teaser{
-    border-bottom: 1px solid #ed8b00;
+
+/*List Flashnews*/
+.page-breves .view-mode-teaser_list_flashnews{
     background: #fff;
-    margin-right: 15px;
-    padding: 7px;
-    margin-bottom: 25px;
+    margin-top: 15px;
+    padding: 10px;
+        h3{
+            color: @brand-primary;
+        }
+}
+
+/*List Events*/
+.page-agenda{
+
+    .field-name-field-event-dates{
+        float: right;
+        border-right: none;
+        border-left: 1px solid @gray-light;
+    }
+    .view-events .view-content{
+        background: transparent;
+    }
+    .view-events .view-mode-teaser{
+        border-bottom: 1px solid #ed8b00;
+        background: #fff;
+        margin-right: 15px;
+        padding: 7px;
+        margin-bottom: 25px;
+    }
+    .view-events .view-mode-teaser:hover{
+        -moz-box-shadow: 0px 0px 10px 0px #999999;
+        -webkit-box-shadow: 0px 0px 10px 0px #999999;
+        -o-box-shadow: 0px 0px 10px 0px #999999;
+        box-shadow: 0px 0px 10px 0px #999999;
+        filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999, Direction=NaN, Strength=10);
+    }
+    .field-name-field-event-dates{
+        float: right;
+        padding-left: 5px;
+        margin-top: 10px;
+    }
+    .group-event-resume{
+        float: left;
+        width: 75%;
+        margin-top: 5px;
+    }
+    .field-name-field-event-location{
+        font-style: italic;
+        font-size: @font-size-small;
+        color: #a0a0a0;
+    }
+    .field-name-field-event-categorie {
+        position: absolute;
+        top: 0;
+        color: #fff;
+        background: @brand-secondary;
+        font-size: 11px;
+        padding: 2px 4px;
+    }
+
 }
 
 /*Blocks flashnews*/

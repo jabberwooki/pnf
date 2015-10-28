@@ -5,6 +5,8 @@
 	$('.view-news .view-mode-teaser_home .field-name-body p, .view-news .view-mode-teaser .field-name-body p').matchHeight('options');
 	$('.view-news .view-mode-teaser_home .field-name-title h3, .view-news .view-mode-teaser .field-name-title h3').matchHeight('options');
 
+  $('.page-agenda .view-mode-teaser').matchHeight('options');
+  $('.page-agenda .view-mode-teaser h3 a').matchHeight('options');
 
     positionMegaMenuDropDown();
 
