@@ -88,7 +88,7 @@ function pnf_news_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '10',
+            'weight' => '16',
             'visible' => FALSE,
           ),
           'documents' => array(
@@ -108,7 +108,7 @@ function pnf_news_strongarm() {
             'visible' => FALSE,
           ),
           'teaser_home' => array(
-            'weight' => '10',
+            'weight' => '16',
             'visible' => FALSE,
           ),
         ),

@@ -43,7 +43,7 @@ function pnf_news_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '2',
+      'weight' => '3',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -52,13 +52,8 @@ function pnf_news_ds_field_settings_info() {
         'class' => '',
       ),
     ),
-    'post_date' => array(
-      'weight' => '1',
-      'label' => 'hidden',
-      'format' => 'ds_post_date_date_xxs',
-    ),
     'btn_readmore' => array(
-      'weight' => '8',
+      'weight' => '5',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -73,7 +68,7 @@ function pnf_news_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'teaser_home';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '2',
+      'weight' => '3',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -82,13 +77,8 @@ function pnf_news_ds_field_settings_info() {
         'class' => '',
       ),
     ),
-    'post_date' => array(
-      'weight' => '1',
-      'label' => 'hidden',
-      'format' => 'ds_post_date_date_xxxs',
-    ),
     'btn_readmore' => array(
-      'weight' => '4',
+      'weight' => '5',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -260,7 +250,7 @@ function pnf_news_ds_layout_settings_info() {
     'regions' => array(
       'central' => array(
         0 => 'field_key_image',
-        1 => 'post_date',
+        1 => 'field_displayed_pub_date',
         2 => 'title',
         3 => 'body',
         4 => 'btn_readmore',
@@ -268,7 +258,7 @@ function pnf_news_ds_layout_settings_info() {
     ),
     'fields' => array(
       'field_key_image' => 'central',
-      'post_date' => 'central',
+      'field_displayed_pub_date' => 'central',
       'title' => 'central',
       'body' => 'central',
       'btn_readmore' => 'central',
@@ -296,7 +286,7 @@ function pnf_news_ds_layout_settings_info() {
     'regions' => array(
       'central' => array(
         0 => 'field_key_image',
-        1 => 'post_date',
+        1 => 'field_displayed_pub_date',
         2 => 'title',
         3 => 'body',
         4 => 'btn_readmore',
@@ -304,7 +294,7 @@ function pnf_news_ds_layout_settings_info() {
     ),
     'fields' => array(
       'field_key_image' => 'central',
-      'post_date' => 'central',
+      'field_displayed_pub_date' => 'central',
       'title' => 'central',
       'body' => 'central',
       'btn_readmore' => 'central',
