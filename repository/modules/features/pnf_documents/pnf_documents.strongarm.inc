@@ -85,8 +85,8 @@ function pnf_documents_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '0',
-            'visible' => TRUE,
+            'weight' => '5',
+            'visible' => FALSE,
           ),
         ),
       ),
