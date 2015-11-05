@@ -484,10 +484,11 @@ function pnf_agenda_field_default_field_instances() {
     'label' => 'Image phare',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
+      'image_field_caption' => 1,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
