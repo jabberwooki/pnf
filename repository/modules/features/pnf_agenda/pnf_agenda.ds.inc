@@ -27,6 +27,11 @@ function pnf_agenda_ds_field_settings_info() {
         'class' => '',
       ),
     ),
+    'btn_readmore' => array(
+      'weight' => '4',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
   );
   $export['node|event|teaser'] = $ds_fieldsetting;
 
@@ -166,18 +171,20 @@ function pnf_agenda_ds_layout_settings_info() {
         0 => 'field_key_image',
         1 => 'field_event_categorie',
         2 => 'group_event_resume',
-        3 => 'title',
-        4 => 'field_event_location',
-        5 => 'field_event_dates',
+        3 => 'field_event_dates',
+        4 => 'title',
+        5 => 'btn_readmore',
+        6 => 'field_event_location',
       ),
     ),
     'fields' => array(
       'field_key_image' => 'central',
       'field_event_categorie' => 'central',
       'group_event_resume' => 'central',
-      'title' => 'central',
-      'field_event_location' => 'central',
       'field_event_dates' => 'central',
+      'title' => 'central',
+      'btn_readmore' => 'central',
+      'field_event_location' => 'central',
     ),
     'classes' => array(),
     'wrappers' => array(
