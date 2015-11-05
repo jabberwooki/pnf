@@ -62,29 +62,29 @@ function kcore_block_view_alter(&$data, $block) {
 
 	switch($block->delta) {
 	  case 'menu-menu-park':
-		$select = array();
-		foreach (element_children($data['content']) as $key) {
-		  $select[$data['content'][$key]['#href']] = $data['content'][$key]['#title'];
-		}
-		$options = array('choose' => $current_park_name);
-		ctools_include('jump-menu');
-		$form = ctools_jump_menu(array(), $form_state, $select, $options);
-		$data['content'] = $form;
+//		$select = array();
+//		foreach (element_children($data['content']) as $key) {
+//		  $select[$data['content'][$key]['#href']] = $data['content'][$key]['#title'];
+//		}
+//		$options = array('choose' => $current_park_name);
+//		ctools_include('jump-menu');
+//		$form = ctools_jump_menu(array(), $form_state, $select, $options);
+//		$data['content'] = $form;
 		$data['subject'] = '';
 		break;
 
 	  case 'menu-national-parks':
-		$select = array();
-		foreach (element_children($data['content']) as $key) {
-		  $url_parts = explode('.', $data['content'][$key]['#href']);
-		  if ($url_parts[1] != $host_parts[1]) {
-			$select[$data['content'][$key]['#href']] = $data['content'][$key]['#title'];
-		  }
-		}
-		$options = array('choose' => $data['subject']);
-		ctools_include('jump-menu');
-		$form = ctools_jump_menu(array(), $form_state, $select, $options);
-		$data['content'] = $form;
+//		$select = array();
+//		foreach (element_children($data['content']) as $key) {
+//		  $url_parts = explode('.', $data['content'][$key]['#href']);
+//		  if ($url_parts[1] != $host_parts[1]) {
+//			$select[$data['content'][$key]['#href']] = $data['content'][$key]['#title'];
+//		  }
+//		}
+//		$options = array('choose' => $data['subject']);
+//		ctools_include('jump-menu');
+//		$form = ctools_jump_menu(array(), $form_state, $select, $options);
+//		$data['content'] = $form;
 		$data['subject'] = '';
 		break;
 
@@ -125,9 +125,30 @@ function kcore_block_view($delta = '') {
 	case 'pnf_park_menu_clone':
 	  $block['subject'] = '';
 
+	  // For this block, the aim is to catch all child items
+	  // of the unique first level item of menu 'Menu du Parc',
+	  // then put them at first level,
+	  // and finally, get rid of the original first level item.
+
 	  // Retrieve "Menu du parc" block content
 	  $park_menu_block = module_invoke('menu', 'block_view', 'menu-menu-park');
-	  $block['content'] = $park_menu_block['content'];
+	  $content = $park_menu_block['content'];
+	  // Store key of the unique first level item.
+	  $parent_key = key($content);
+	  // Retrieve child items of first level item
+	  $below = $content[$parent_key]['#below'];
+	  $child_items = array();
+	  foreach ($below as $key=> $value) {
+		if (is_int($key)) {
+		  $child_items[$key] = $below[$key];
+		}
+	  }
+	  // Insert child item at the first level
+	  $content = $child_items + $content;
+	  // Remove original first level item
+	  unset($content[$parent_key]);
+
+	  $block['content'] = $content;
 	  return $block;
 	  break;
 
