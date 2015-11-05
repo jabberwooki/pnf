@@ -136,6 +136,9 @@ projects[field_collection][version] = "1.0-beta9"
 ;projects[field_formatter_settings][subdir] = contrib
 ;projects[field_formatter_settings][version] = ""
 
+projects[image_field_caption][subdir] = contrib
+projects[image_field_caption][version] = "2.1"
+
 projects[filefield_sources][subdir] = contrib
 projects[filefield_sources][version] = "1.9"
 
