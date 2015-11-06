@@ -163,3 +163,12 @@ function kcore_block_view($delta = '') {
   }
 }
 
+/**
+ * Implements hook_views_pre_render().
+ */
+function kcore_views_pre_render(&$view) {
+  if($view->current_display == 'french_parks_node') {
+	$title = $view->result[0]->_field_data['nid']['entity']->title;
+	$view->build_info['title'] = $title;
+  }
+}

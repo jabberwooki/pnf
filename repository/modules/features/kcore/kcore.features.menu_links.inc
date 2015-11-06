@@ -10,6 +10,32 @@
 function kcore_menu_default_menu_links() {
   $menu_links = array();
 
+  // Exported menu link: menu-national-parks_les-parcs-nationaux-en-france:les-parcs-nationaux-en-france
+  $menu_links['menu-national-parks_les-parcs-nationaux-en-france:les-parcs-nationaux-en-france'] = array(
+    'menu_name' => 'menu-national-parks',
+    'link_path' => 'les-parcs-nationaux-en-france',
+    'router_path' => 'les-parcs-nationaux-en-france',
+    'link_title' => 'Les parcs nationaux en France',
+    'options' => array(
+      'node_type' => 'page',
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-national-parks_les-parcs-nationaux-en-france:les-parcs-nationaux-en-france',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 1,
+    'expanded' => 1,
+    'weight' => 0,
+    'customized' => 1,
+    'language' => 'fr',
+    'menu_links_customized' => 1,
+  );
   // Exported menu link: menu-national-parks_parc-amazonien-de-guyane:http://www.parc-amazonien-guyane.fr/
   $menu_links['menu-national-parks_parc-amazonien-de-guyane:http://www.parc-amazonien-guyane.fr/'] = array(
     'menu_name' => 'menu-national-parks',
@@ -25,10 +51,11 @@ function kcore_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 7,
+    'weight' => -43,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-national-parks_les-parcs-nationaux-en-france:les-parcs-nationaux-en-france',
   );
   // Exported menu link: menu-national-parks_parc-national-de-la-guadeloupe:http://www.guadeloupe-parcnational.fr
   $menu_links['menu-national-parks_parc-national-de-la-guadeloupe:http://www.guadeloupe-parcnational.fr'] = array(
@@ -45,10 +72,11 @@ function kcore_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 6,
+    'weight' => -44,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-national-parks_les-parcs-nationaux-en-france:les-parcs-nationaux-en-france',
   );
   // Exported menu link: menu-national-parks_parc-national-de-la-runion:http://www.reunion-parcnational.fr
   $menu_links['menu-national-parks_parc-national-de-la-runion:http://www.reunion-parcnational.fr'] = array(
@@ -65,10 +93,11 @@ function kcore_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 8,
+    'weight' => -42,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-national-parks_les-parcs-nationaux-en-france:les-parcs-nationaux-en-france',
   );
   // Exported menu link: menu-national-parks_parc-national-de-la-vanoise:http://www.vanoise-parcnational.fr/
   $menu_links['menu-national-parks_parc-national-de-la-vanoise:http://www.vanoise-parcnational.fr/'] = array(
@@ -85,10 +114,11 @@ function kcore_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 1,
+    'weight' => -49,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-national-parks_les-parcs-nationaux-en-france:les-parcs-nationaux-en-france',
   );
   // Exported menu link: menu-national-parks_parc-national-de-port-cros:http://www.portcrosparcnational.fr
   $menu_links['menu-national-parks_parc-national-de-port-cros:http://www.portcrosparcnational.fr'] = array(
@@ -105,10 +135,11 @@ function kcore_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 2,
+    'weight' => -48,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-national-parks_les-parcs-nationaux-en-france:les-parcs-nationaux-en-france',
   );
   // Exported menu link: menu-national-parks_parc-national-des-calanques:http://www.calanques-parcnational.fr
   $menu_links['menu-national-parks_parc-national-des-calanques:http://www.calanques-parcnational.fr'] = array(
@@ -125,10 +156,11 @@ function kcore_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 9,
+    'weight' => -41,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-national-parks_les-parcs-nationaux-en-france:les-parcs-nationaux-en-france',
   );
   // Exported menu link: menu-national-parks_parc-national-des-cvennes:http://www.cevennes-parcnational.fr
   $menu_links['menu-national-parks_parc-national-des-cvennes:http://www.cevennes-parcnational.fr'] = array(
@@ -145,10 +177,11 @@ function kcore_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -50,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-national-parks_les-parcs-nationaux-en-france:les-parcs-nationaux-en-france',
   );
   // Exported menu link: menu-national-parks_parc-national-des-ecrins:http://www.ecrins-parcnational.fr
   $menu_links['menu-national-parks_parc-national-des-ecrins:http://www.ecrins-parcnational.fr'] = array(
@@ -165,10 +198,11 @@ function kcore_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 4,
+    'weight' => -46,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-national-parks_les-parcs-nationaux-en-france:les-parcs-nationaux-en-france',
   );
   // Exported menu link: menu-national-parks_parc-national-des-pyrnes:http://www.parc-pyrenees.com
   $menu_links['menu-national-parks_parc-national-des-pyrnes:http://www.parc-pyrenees.com'] = array(
@@ -185,10 +219,11 @@ function kcore_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 3,
+    'weight' => -47,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-national-parks_les-parcs-nationaux-en-france:les-parcs-nationaux-en-france',
   );
   // Exported menu link: menu-national-parks_parc-national-du-mercantour:http://www.mercantour.eu
   $menu_links['menu-national-parks_parc-national-du-mercantour:http://www.mercantour.eu'] = array(
@@ -205,10 +240,11 @@ function kcore_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 5,
+    'weight' => -45,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-national-parks_les-parcs-nationaux-en-france:les-parcs-nationaux-en-france',
   );
   // Exported menu link: menu-national-parks_parcs-nationaux-de-france:http://www.parcsnationaux.fr/
   $menu_links['menu-national-parks_parcs-nationaux-de-france:http://www.parcsnationaux.fr/'] = array(
@@ -225,14 +261,16 @@ function kcore_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 10,
+    'weight' => -40,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
+    'parent_identifier' => 'menu-national-parks_les-parcs-nationaux-en-france:les-parcs-nationaux-en-france',
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Les parcs nationaux en France');
   t('Parc amazonien de Guyane');
   t('Parc national de La Réunion');
   t('Parc national de Port-Cros');
