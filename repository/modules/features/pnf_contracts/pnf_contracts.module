@@ -85,8 +85,8 @@ function pnf_contracts_node_view_alter(&$build) {
 	$last_key = key($contracts_breadcrumb);
 
 	if ($build['field_contract_status']['#items'][0]['value'] == 1) {
-	  $before = array('</a>');
-	  $after = array(' en cours</a>');
+	  $before = array('marches-publics', '</a>');
+	  $after = array('marches-publics-en-cours',' en cours</a>');
 	}
 	else {
 	  $before = array('marches-publics', '</a>');
