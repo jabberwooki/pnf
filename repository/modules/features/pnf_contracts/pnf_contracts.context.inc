@@ -26,18 +26,7 @@ function pnf_contracts_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'menu-menu-menu-public-contracts' => array(
-          'module' => 'menu',
-          'delta' => 'menu-menu-public-contracts',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
+  $context->reactions = array();
   $context->condition_mode = 0;
 
   // Translatables
