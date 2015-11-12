@@ -23,7 +23,6 @@ dependencies[] = i18n_taxonomy
 dependencies[] = i18n_variable
 dependencies[] = image
 dependencies[] = image_field_caption
-dependencies[] = kcore
 dependencies[] = kpages
 dependencies[] = lang_dropdown
 dependencies[] = less

@@ -172,3 +172,26 @@ function kcore_views_pre_render(&$view) {
 	$view->build_info['title'] = $title;
   }
 }
+
+/**
+ * HELPER FUNCTIONS
+ */
+
+function pnf_park_breadcrumb() {
+  $breadcrumb = drupal_get_breadcrumb();
+  $park_menu = menu_tree('menu-menu-park');
+  $single_parent = array_shift($park_menu);
+  $single_parent_alias = drupal_get_path_alias($single_parent['#href']);
+
+  $new_breadcrumb = array();
+  global $language;
+  $lang = $language->language;
+
+  foreach ($breadcrumb as $key=>$value) {
+	$new_breadcrumb[] = $value;
+	if ($key == 0) {
+	  $new_breadcrumb[] = '<a href="/' . $lang . '/' . $single_parent_alias . '">' . $single_parent['#title'] . '</a>';
+	}
+  }
+  return $new_breadcrumb;
+}
