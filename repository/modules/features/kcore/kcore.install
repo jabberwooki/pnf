@@ -61,3 +61,10 @@ function kcore_update_7007() {
 function kcore_update_7008() {
   module_enable(array('image_field_caption'));
 }
+
+/**
+ * Activate custom_breadcrumbs and custom_breadcrumbs_features modules.
+ */
+function kcore_update_7009() {
+  module_enable(array('custom_breadcrumbs','custom_breadcrumbs_features'));
+}
