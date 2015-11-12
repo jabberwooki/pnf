@@ -238,7 +238,7 @@ function pnf_contracts_views_default_views() {
 
   /* Display: Marchés en cours */
   $handler = $view->new_display('page', 'Marchés en cours', 'current_contracts');
-  $handler->display->display_options['path'] = 'marches-publics';
+  $handler->display->display_options['path'] = 'marches-publics-en-cours';
 
   /* Display: Marchés attribués */
   $handler = $view->new_display('page', 'Marchés attribués', 'awarded_contracts');

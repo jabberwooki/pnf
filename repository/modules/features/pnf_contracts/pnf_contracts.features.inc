@@ -27,6 +27,26 @@ function pnf_contracts_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_custom_breadcrumb_features_default_settings().
+ */
+function pnf_contracts_custom_breadcrumb_features_default_settings() {
+  $custom_breadcrumbs = array();
+
+  // Exported custom breadcrumb: public_contracts.
+  $custom_breadcrumbs['public_contracts'] = array(
+    'name' => 'Marchés publics',
+    'titles' => 'Marchés publics',
+    'paths' => 'marches-publics',
+    'visibility_php' => '',
+    'node_type' => 'contract',
+    'language' => 'fr',
+    'machine_name' => 'public_contracts',
+  );
+
+  return $custom_breadcrumbs;
+}
+
+/**
  * Implements hook_node_info().
  */
 function pnf_contracts_node_info() {
