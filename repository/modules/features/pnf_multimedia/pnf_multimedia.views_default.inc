@@ -240,13 +240,17 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['title'] = 'Sons';
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Atom: Representation */
-  $handler->display->display_options['fields']['representation']['id'] = 'representation';
-  $handler->display->display_options['fields']['representation']['table'] = 'scald_atoms';
-  $handler->display->display_options['fields']['representation']['field'] = 'representation';
-  $handler->display->display_options['fields']['representation']['label'] = '';
-  $handler->display->display_options['fields']['representation']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['representation']['context'] = 'list';
+  /* Field: Atoms: Thumbnail */
+  $handler->display->display_options['fields']['scald_thumbnail']['id'] = 'scald_thumbnail';
+  $handler->display->display_options['fields']['scald_thumbnail']['table'] = 'field_data_scald_thumbnail';
+  $handler->display->display_options['fields']['scald_thumbnail']['field'] = 'scald_thumbnail';
+  $handler->display->display_options['fields']['scald_thumbnail']['label'] = '';
+  $handler->display->display_options['fields']['scald_thumbnail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['scald_thumbnail']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['scald_thumbnail']['settings'] = array(
+    'image_style' => 'medium',
+    'image_link' => 'content',
+  );
   /* Field: Atom: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'scald_atoms';
