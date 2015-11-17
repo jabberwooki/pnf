@@ -18,12 +18,12 @@ function pnf_contracts_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'btn_contract_notice' => array(
-      'weight' => '8',
+      'weight' => '2',
       'label' => 'hidden',
       'format' => 'default',
     ),
     'btn_contract_link' => array(
-      'weight' => '9',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -43,17 +43,8 @@ function pnf_contracts_ds_field_settings_info() {
       'format' => 'default',
       'formatter_settings' => array(
         'link' => '1',
-        'wrapper' => 'h2',
+        'wrapper' => 'h3',
         'class' => '',
-      ),
-    ),
-    'btn_readmore' => array(
-      'weight' => '8',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'ft' => array(),
-        'field_formatter_class' => 'pull-left',
       ),
     ),
     'btn_contract_notice' => array(
@@ -74,6 +65,15 @@ function pnf_contracts_ds_field_settings_info() {
         'field_formatter_class' => 'pull-right',
       ),
     ),
+    'btn_readmore' => array(
+      'weight' => '8',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(),
+        'field_formatter_class' => 'pull-left',
+      ),
+    ),
   );
   $export['node|contract|teaser'] = $ds_fieldsetting;
 
@@ -92,43 +92,46 @@ function pnf_contracts_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'contract';
   $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'bootstrap_12';
+  $ds_layout->layout = 'bootstrap_9_3';
   $ds_layout->settings = array(
     'regions' => array(
-      'central' => array(
-        0 => 'field_contract_status',
-        1 => 'field_contract_object',
-        2 => 'field_contract_pub_date',
-        3 => 'field_contract_deadline_date',
-        4 => 'field_contract_projected_date',
-        5 => 'field_contract_category',
-        6 => 'field_procurement_type',
-        7 => 'btn_contract_notice',
-        8 => 'btn_contract_link',
-        9 => 'body',
+      'left' => array(
+        0 => 'field_contract_object',
+        1 => 'btn_contract_link',
+        2 => 'btn_contract_notice',
+        3 => 'body',
+      ),
+      'right' => array(
+        4 => 'field_procurement_type',
+        5 => 'field_contract_pub_date',
+        6 => 'field_contract_deadline_date',
+        7 => 'field_contract_projected_date',
+        8 => 'field_contract_status',
       ),
     ),
     'fields' => array(
-      'field_contract_status' => 'central',
-      'field_contract_object' => 'central',
-      'field_contract_pub_date' => 'central',
-      'field_contract_deadline_date' => 'central',
-      'field_contract_projected_date' => 'central',
-      'field_contract_category' => 'central',
-      'field_procurement_type' => 'central',
-      'btn_contract_notice' => 'central',
-      'btn_contract_link' => 'central',
-      'body' => 'central',
+      'field_contract_object' => 'left',
+      'btn_contract_link' => 'left',
+      'btn_contract_notice' => 'left',
+      'body' => 'left',
+      'field_procurement_type' => 'right',
+      'field_contract_pub_date' => 'right',
+      'field_contract_deadline_date' => 'right',
+      'field_contract_projected_date' => 'right',
+      'field_contract_status' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'central' => 'div',
+      'left' => 'div',
+      'right' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'hide_page_title' => '0',
+    'page_option_title' => '',
   );
   $export['node|contract|full'] = $ds_layout;
 
