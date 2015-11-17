@@ -132,7 +132,7 @@ function kcore_block_view($delta = '') {
 
 	  // Retrieve "Menu du parc" block content
 	  $park_menu_block = module_invoke('menu', 'block_view', 'menu-menu-park');
-	  $content = $park_menu_block['content'];dpm($content);
+	  $content = $park_menu_block['content'];
 
 	  if (!empty($content)) {
 		// Store key of the unique first level item.
