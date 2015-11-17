@@ -100,7 +100,7 @@ function pnf_news_strongarm() {
             'visible' => FALSE,
           ),
           'teaser_list_flashnews' => array(
-            'weight' => '10',
+            'weight' => '15',
             'visible' => FALSE,
           ),
           'teaser_home_files' => array(

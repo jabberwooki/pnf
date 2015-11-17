@@ -138,7 +138,7 @@ function pnf_news_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'teaser_list_flashnews';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '0',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -383,15 +383,15 @@ function pnf_news_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'central' => array(
-        0 => 'title',
-        1 => 'body',
-        2 => 'field_displayed_pub_date',
+        0 => 'field_displayed_pub_date',
+        1 => 'title',
+        2 => 'body',
       ),
     ),
     'fields' => array(
+      'field_displayed_pub_date' => 'central',
       'title' => 'central',
       'body' => 'central',
-      'field_displayed_pub_date' => 'central',
     ),
     'classes' => array(),
     'wrappers' => array(
