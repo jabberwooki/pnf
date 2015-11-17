@@ -105,7 +105,7 @@ projects[context_domain][version] = "1.0"
 
 projects[custom_breadcrumbs][subdir] = contrib
 projects[custom_breadcrumbs][version] = "2.0-beta1"
-projects[pdf_reader][patch][] = "https://www.drupal.org/files/issues/custom_breadcrumbs-strict-warning-1338126-6.patch"
+projects[custom_breadcrumbs][patch][] = "https://www.drupal.org/files/issues/custom_breadcrumbs-strict-warning-1338126-6.patch"
 
 projects[custom_breadcrumbs_features][subdir] = contrib
 projects[custom_breadcrumbs_features][version] = "2.0-rc1"
