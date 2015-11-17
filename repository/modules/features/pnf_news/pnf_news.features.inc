@@ -78,6 +78,45 @@ else {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function pnf_news_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: 196x196.
+  $styles['196x196'] = array(
+    'label' => '196x196',
+    'effects' => array(
+      3 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 196,
+          'height' => 196,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: 250x250.
+  $styles['250x250'] = array(
+    'label' => '250x250',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 250,
+          'height' => 250,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function pnf_news_node_info() {
