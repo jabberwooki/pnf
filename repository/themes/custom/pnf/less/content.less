@@ -213,10 +213,12 @@ a{
     }
 }
 
-/*News / Dossiers / Flashnews HOVER*/
+/*News / Dossiers / Flashnews / Offre d'emploi / Marché public HOVER*/
 .page-breves .view-mode-teaser_list_flashnews,
 .page-dossiers .view-mode-teaser:hover,
-.page-actualites .view-mode-teaser:hover{
+.page-actualites .view-mode-teaser:hover,
+.view-jobs .view-mode-teaser:hover,
+.view-contracts .view-mode-teaser:hover{
     -moz-box-shadow: 0px 0px 10px 0px #999999;
     -webkit-box-shadow: 0px 0px 10px 0px #999999;
     -o-box-shadow: 0px 0px 10px 0px #999999;
@@ -355,6 +357,39 @@ a{
                 left: 3%;    
             }
     }
+}
+
+/*List Jobs - Marches publics*/
+.view-contracts .view-mode-teaser,
+.view-jobs .view-mode-teaser{
+    background: #fff;
+    padding: 0 10px 10px 10px;
+    margin: 0 0 20px 0;
+
+        h3{
+        margin-top: 10px;
+        font-size: @font-size-large;
+        }
+        .field-name-field-contract-projected-date,
+        .field-name-field-job-projected-date{
+            margin-bottom: 15px;
+        }
+        .field-name-btn-contract-notice,
+        .field-name-btn-readmore{
+            float: left;
+            margin-right: 20px;
+        }
+        .field-name-field-job-location{
+            margin-bottom: 12px;
+            .field-label, .field-item{
+                font-weight: 400;
+                font-size: @font-size-small;
+            }
+        }
+        .field-name-field-contract-object,
+        .field-name-field-job-resume{
+            margin-bottom: 15px;
+        }
 }
 
 
