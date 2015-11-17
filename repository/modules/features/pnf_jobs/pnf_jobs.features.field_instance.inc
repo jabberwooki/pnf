@@ -24,6 +24,13 @@ function pnf_jobs_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 8,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -102,6 +109,19 @@ function pnf_jobs_field_default_field_instances() {
         'type' => 'date_default',
         'weight' => 2,
       ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'short',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 5,
+      ),
       'teaser' => array(
         'label' => 'inline',
         'module' => 'date',
@@ -156,6 +176,13 @@ function pnf_jobs_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 5,
+      ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'inline',
@@ -227,6 +254,12 @@ function pnf_jobs_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 7,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'teaser' => array(
         'label' => 'inline',
         'settings' => array(),
@@ -297,6 +330,19 @@ function pnf_jobs_field_default_field_instances() {
         'type' => 'date_default',
         'weight' => 3,
       ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'short',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 6,
+      ),
       'teaser' => array(
         'label' => 'inline',
         'module' => 'date',
@@ -357,6 +403,19 @@ function pnf_jobs_field_default_field_instances() {
         'type' => 'date_default',
         'weight' => 1,
       ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'short',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 4,
+      ),
       'teaser' => array(
         'label' => 'inline',
         'module' => 'date',
@@ -410,6 +469,13 @@ function pnf_jobs_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 16,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -482,6 +548,12 @@ function pnf_jobs_field_default_field_instances() {
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 4,
+      ),
+      'full' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',

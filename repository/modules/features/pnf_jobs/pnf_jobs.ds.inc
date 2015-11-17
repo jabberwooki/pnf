@@ -32,6 +32,21 @@ function pnf_jobs_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|job|full';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'job';
+  $ds_fieldsetting->view_mode = 'full';
+  $ds_fieldsetting->settings = array(
+    'btn_job_notice' => array(
+      'weight' => '2',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+  );
+  $export['node|job|full'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|job|teaser';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'job';
@@ -110,6 +125,51 @@ function pnf_jobs_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|job|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|job|full';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'job';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'bootstrap_9_3';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'field_job_location',
+        1 => 'field_job_resume',
+        2 => 'btn_job_notice',
+        3 => 'body',
+      ),
+      'right' => array(
+        4 => 'field_job_pub_date',
+        5 => 'field_job_deadline_date',
+        6 => 'field_job_projected_date',
+      ),
+    ),
+    'fields' => array(
+      'field_job_location' => 'left',
+      'field_job_resume' => 'left',
+      'btn_job_notice' => 'left',
+      'body' => 'left',
+      'field_job_pub_date' => 'right',
+      'field_job_deadline_date' => 'right',
+      'field_job_projected_date' => 'right',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'left' => 'div',
+      'right' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'hide_page_title' => '0',
+    'page_option_title' => '',
+  );
+  $export['node|job|full'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
