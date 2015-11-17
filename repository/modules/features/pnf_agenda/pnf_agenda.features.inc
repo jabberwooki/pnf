@@ -30,6 +30,26 @@ function pnf_agenda_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_custom_breadcrumb_features_default_settings().
+ */
+function pnf_agenda_custom_breadcrumb_features_default_settings() {
+  $custom_breadcrumbs = array();
+
+  // Exported custom breadcrumb: agenda.
+  $custom_breadcrumbs['agenda'] = array(
+    'name' => 'Agenda',
+    'titles' => 'Agenda',
+    'paths' => 'agenda',
+    'visibility_php' => '',
+    'node_type' => 'event',
+    'language' => '',
+    'machine_name' => 'agenda',
+  );
+
+  return $custom_breadcrumbs;
+}
+
+/**
  * Implements hook_node_info().
  */
 function pnf_agenda_node_info() {

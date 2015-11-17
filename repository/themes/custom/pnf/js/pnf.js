@@ -20,5 +20,13 @@
     	$('.mega-dropdown-menu').css({ "margin-left": - offset.left});
     }
 
+    // Remove data-toggle attribute from first level item link to make it clickable
+    // in current park and all parks menus.
+    // (JQuery adaptation of a solution proposed by gaslamp in the following post :
+    // https://www.gaslampmedia.com/clickable-parent-menu-items-with-roots-theme-and-twitter-bootstrap/)
+    $('#block-menu-menu-menu-park ul li.first a').removeAttr( "data-toggle" );
+    $('#block-menu-menu-national-parks ul li.first a').removeAttr( "data-toggle" );
+
+
  });
 })(jQuery);

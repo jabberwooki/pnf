@@ -13,6 +13,7 @@ features[ctools][] = ds:ds:1
 features[ctools][] = field_group:field_group:1
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
+features[custom_breadcrumb][] = agenda
 features[ds_field_settings][] = node|event|teaser
 features[ds_field_settings][] = node|event|teaser_home
 features[ds_layout_settings][] = node|event|default

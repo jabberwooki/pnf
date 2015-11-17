@@ -103,6 +103,13 @@ projects[boxes][version] = "1.2"
 projects[context_domain][subdir] = contrib
 projects[context_domain][version] = "1.0"
 
+projects[custom_breadcrumbs][subdir] = contrib
+projects[custom_breadcrumbs][version] = "2.0-beta1"
+projects[pdf_reader][patch][] = "https://www.drupal.org/files/issues/custom_breadcrumbs-strict-warning-1338126-6.patch"
+
+projects[custom_breadcrumbs_features][subdir] = contrib
+projects[custom_breadcrumbs_features][version] = "2.0-rc1"
+
 projects[custom_search][subdir] = contrib
 projects[custom_search][version] = "1.18"
 
@@ -135,6 +142,9 @@ projects[field_collection][version] = "1.0-beta9"
 
 ;projects[field_formatter_settings][subdir] = contrib
 ;projects[field_formatter_settings][version] = ""
+
+projects[image_field_caption][subdir] = contrib
+projects[image_field_caption][version] = "2.1"
 
 projects[filefield_sources][subdir] = contrib
 projects[filefield_sources][version] = "1.9"

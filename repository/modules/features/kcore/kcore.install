@@ -54,3 +54,17 @@ function kcore_update_7006() {
 function kcore_update_7007() {
   module_enable(array('bean_admin_ui','entityform'));
 }
+
+/**
+ * Activate image_field_caption module.
+ */
+function kcore_update_7008() {
+  module_enable(array('image_field_caption'));
+}
+
+/**
+ * Activate custom_breadcrumbs and custom_breadcrumbs_features modules.
+ */
+function kcore_update_7009() {
+  module_enable(array('custom_breadcrumbs','custom_breadcrumbs_features'));
+}

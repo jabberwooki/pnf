@@ -38,3 +38,35 @@ function pnf_jobs_btn_job_notice($field) {
 		return $output;
 	}
 }
+
+/**
+ * Implements hook_pathauto_alias_alter().
+ */
+function pnf_jobs_pathauto_alias_alter(&$alias, array &$context) {
+  if ($context['type'] == 'job') {
+	$park_menu = menu_tree('menu-menu-park');
+	$single_parent = array_shift($park_menu);
+	$single_parent_alias = drupal_get_path_alias($single_parent['#href']);
+	$alias = $single_parent_alias . '/' . $alias;
+  }
+}
+
+/**
+ * Implements hook_node_view_alter().
+ */
+function pnf_jobs_node_view_alter(&$build) {
+//  dpm($build);
+  if ($build['#bundle'] == 'job' && $build['#view_mode'] == 'full') {
+	$job_breadcrumb = pnf_park_breadcrumb();
+	drupal_set_breadcrumb($job_breadcrumb);
+  }
+}
+
+/**
+ * Implements hook_views_pre_view().
+ */
+function pnf_jobs_views_pre_view(&$view, &$display_id, &$args) {
+  if ($view->name == 'jobs' && $view->current_display != 'page_jobs') {
+	drupal_set_breadcrumb(pnf_park_breadcrumb());
+  }
+}

@@ -23,10 +23,11 @@ function kpages_strongarm() {
   $strongarm->name = 'menu_options_page';
   $strongarm->value = array(
     0 => 'menu-footer-menu',
-    1 => 'menu-menu-park',
-    2 => 'main-menu',
-    3 => 'menu-menu-themes',
-    4 => 'menu-join-national-park',
+    1 => 'menu-national-parks',
+    2 => 'menu-menu-park',
+    3 => 'main-menu',
+    4 => 'menu-menu-themes',
+    5 => 'menu-join-national-park',
   );
   $export['menu_options_page'] = $strongarm;
 
