@@ -132,21 +132,24 @@ function kcore_block_view($delta = '') {
 
 	  // Retrieve "Menu du parc" block content
 	  $park_menu_block = module_invoke('menu', 'block_view', 'menu-menu-park');
-	  $content = $park_menu_block['content'];
-	  // Store key of the unique first level item.
-	  $parent_key = key($content);
-	  // Retrieve child items of first level item
-	  $below = $content[$parent_key]['#below'];
-	  $child_items = array();
-	  foreach ($below as $key=> $value) {
-		if (is_int($key)) {
-		  $child_items[$key] = $below[$key];
+	  $content = $park_menu_block['content'];dpm($content);
+
+	  if (!empty($content)) {
+		// Store key of the unique first level item.
+		$parent_key = key($content);
+		// Retrieve child items of first level item
+		$below = $content[$parent_key]['#below'];
+		$child_items = array();
+		foreach ($below as $key => $value) {
+		  if (is_int($key)) {
+			$child_items[$key] = $below[$key];
+		  }
 		}
+		// Insert child item at the first level
+		$content = $child_items + $content;
+		// Remove original first level item
+		unset($content[$parent_key]);
 	  }
-	  // Insert child item at the first level
-	  $content = $child_items + $content;
-	  // Remove original first level item
-	  unset($content[$parent_key]);
 
 	  $block['content'] = $content;
 	  return $block;
