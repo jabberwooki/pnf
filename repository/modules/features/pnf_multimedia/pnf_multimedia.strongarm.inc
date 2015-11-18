@@ -40,6 +40,9 @@ function pnf_multimedia_strongarm() {
         'redirect' => array(
           'weight' => '5',
         ),
+        'path' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(
         'atom' => array(
@@ -90,6 +93,9 @@ function pnf_multimedia_strongarm() {
         ),
         'redirect' => array(
           'weight' => '6',
+        ),
+        'path' => array(
+          'weight' => '30',
         ),
       ),
       'display' => array(
@@ -196,6 +202,9 @@ function pnf_multimedia_strongarm() {
         ),
         'redirect' => array(
           'weight' => '5',
+        ),
+        'path' => array(
+          'weight' => '30',
         ),
       ),
       'display' => array(
