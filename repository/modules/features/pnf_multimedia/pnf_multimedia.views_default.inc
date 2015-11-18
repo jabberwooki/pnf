@@ -44,7 +44,7 @@ function pnf_multimedia_views_default_views() {
       'filter_rewrite_values' => NULL,
     ),
     'field_media_category_tid' => array(
-      'bef_format' => 'bef',
+      'bef_format' => 'default',
       'more_options' => array(
         'bef_select_all_none' => FALSE,
         'bef_collapsible' => 0,
@@ -129,6 +129,16 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Atoms: Description */
+  $handler->display->display_options['fields']['field_atom_description']['id'] = 'field_atom_description';
+  $handler->display->display_options['fields']['field_atom_description']['table'] = 'field_data_field_atom_description';
+  $handler->display->display_options['fields']['field_atom_description']['field'] = 'field_atom_description';
+  $handler->display->display_options['fields']['field_atom_description']['label'] = '';
+  $handler->display->display_options['fields']['field_atom_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_atom_description']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_atom_description']['settings'] = array(
+    'trim_length' => '120',
+  );
   /* Filter criterion: Atom: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'scald_atoms';
@@ -159,8 +169,14 @@ function pnf_multimedia_views_default_views() {
   $handler = $view->new_display('page_with_page_title', 'Galeries', 'page_photos');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Galeries photo';
-  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Atom: Scald ID */
+  $handler->display->display_options['fields']['sid']['id'] = 'sid';
+  $handler->display->display_options['fields']['sid']['table'] = 'scald_atoms';
+  $handler->display->display_options['fields']['sid']['field'] = 'sid';
+  $handler->display->display_options['fields']['sid']['label'] = '';
+  $handler->display->display_options['fields']['sid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['sid']['element_label_colon'] = FALSE;
   /* Field: Atoms: Gallery items */
   $handler->display->display_options['fields']['gallery_items']['id'] = 'gallery_items';
   $handler->display->display_options['fields']['gallery_items']['table'] = 'field_data_gallery_items';
@@ -174,11 +190,25 @@ function pnf_multimedia_views_default_views() {
   );
   $handler->display->display_options['fields']['gallery_items']['delta_limit'] = '1';
   $handler->display->display_options['fields']['gallery_items']['delta_offset'] = '0';
+  /* Field: Atoms: Description */
+  $handler->display->display_options['fields']['field_atom_description']['id'] = 'field_atom_description';
+  $handler->display->display_options['fields']['field_atom_description']['table'] = 'field_data_field_atom_description';
+  $handler->display->display_options['fields']['field_atom_description']['field'] = 'field_atom_description';
+  $handler->display->display_options['fields']['field_atom_description']['label'] = '';
+  $handler->display->display_options['fields']['field_atom_description']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_atom_description']['alter']['path'] = 'atom/[sid]';
+  $handler->display->display_options['fields']['field_atom_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_atom_description']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_atom_description']['settings'] = array(
+    'trim_length' => '120',
+  );
   /* Field: Atom: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['path'] = 'atom/[sid]';
   $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
@@ -212,8 +242,14 @@ function pnf_multimedia_views_default_views() {
 
   /* Display: Vidéos */
   $handler = $view->new_display('page_with_page_title', 'Vidéos', 'page_videos');
-  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Atom: Scald ID */
+  $handler->display->display_options['fields']['sid']['id'] = 'sid';
+  $handler->display->display_options['fields']['sid']['table'] = 'scald_atoms';
+  $handler->display->display_options['fields']['sid']['field'] = 'sid';
+  $handler->display->display_options['fields']['sid']['label'] = '';
+  $handler->display->display_options['fields']['sid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['sid']['element_label_colon'] = FALSE;
   /* Field: Atoms: Thumbnail */
   $handler->display->display_options['fields']['scald_thumbnail']['id'] = 'scald_thumbnail';
   $handler->display->display_options['fields']['scald_thumbnail']['table'] = 'field_data_scald_thumbnail';
@@ -222,14 +258,28 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['scald_thumbnail']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['scald_thumbnail']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['scald_thumbnail']['settings'] = array(
-    'image_style' => 'medium',
+    'image_style' => '250x250',
     'image_link' => 'content',
+  );
+  /* Field: Atoms: Description */
+  $handler->display->display_options['fields']['field_atom_description']['id'] = 'field_atom_description';
+  $handler->display->display_options['fields']['field_atom_description']['table'] = 'field_data_field_atom_description';
+  $handler->display->display_options['fields']['field_atom_description']['field'] = 'field_atom_description';
+  $handler->display->display_options['fields']['field_atom_description']['label'] = '';
+  $handler->display->display_options['fields']['field_atom_description']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_atom_description']['alter']['path'] = 'atom/[sid]';
+  $handler->display->display_options['fields']['field_atom_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_atom_description']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_atom_description']['settings'] = array(
+    'trim_length' => '120',
   );
   /* Field: Atom: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['path'] = 'atom/[sid]';
   $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['path'] = 'videos';
@@ -238,8 +288,14 @@ function pnf_multimedia_views_default_views() {
   $handler = $view->new_display('page_with_page_title', 'Sons', 'page_sounds');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Sons';
-  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Atom: Scald ID */
+  $handler->display->display_options['fields']['sid']['id'] = 'sid';
+  $handler->display->display_options['fields']['sid']['table'] = 'scald_atoms';
+  $handler->display->display_options['fields']['sid']['field'] = 'sid';
+  $handler->display->display_options['fields']['sid']['label'] = '';
+  $handler->display->display_options['fields']['sid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['sid']['element_label_colon'] = FALSE;
   /* Field: Atoms: Thumbnail */
   $handler->display->display_options['fields']['scald_thumbnail']['id'] = 'scald_thumbnail';
   $handler->display->display_options['fields']['scald_thumbnail']['table'] = 'field_data_scald_thumbnail';
@@ -251,11 +307,25 @@ function pnf_multimedia_views_default_views() {
     'image_style' => 'medium',
     'image_link' => 'content',
   );
+  /* Field: Atoms: Description */
+  $handler->display->display_options['fields']['field_atom_description']['id'] = 'field_atom_description';
+  $handler->display->display_options['fields']['field_atom_description']['table'] = 'field_data_field_atom_description';
+  $handler->display->display_options['fields']['field_atom_description']['field'] = 'field_atom_description';
+  $handler->display->display_options['fields']['field_atom_description']['label'] = '';
+  $handler->display->display_options['fields']['field_atom_description']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_atom_description']['alter']['path'] = 'atom/[sid]';
+  $handler->display->display_options['fields']['field_atom_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_atom_description']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_atom_description']['settings'] = array(
+    'trim_length' => '120',
+  );
   /* Field: Atom: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['path'] = 'atom/[sid]';
   $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
