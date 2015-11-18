@@ -177,19 +177,17 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['sid']['label'] = '';
   $handler->display->display_options['fields']['sid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['sid']['element_label_colon'] = FALSE;
-  /* Field: Atoms: Gallery items */
-  $handler->display->display_options['fields']['gallery_items']['id'] = 'gallery_items';
-  $handler->display->display_options['fields']['gallery_items']['table'] = 'field_data_gallery_items';
-  $handler->display->display_options['fields']['gallery_items']['field'] = 'gallery_items';
-  $handler->display->display_options['fields']['gallery_items']['label'] = '';
-  $handler->display->display_options['fields']['gallery_items']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['gallery_items']['click_sort_column'] = 'sid';
-  $handler->display->display_options['fields']['gallery_items']['type'] = 'list';
-  $handler->display->display_options['fields']['gallery_items']['settings'] = array(
-    'link' => '1',
+  /* Field: Atoms: Thumbnail */
+  $handler->display->display_options['fields']['scald_thumbnail']['id'] = 'scald_thumbnail';
+  $handler->display->display_options['fields']['scald_thumbnail']['table'] = 'field_data_scald_thumbnail';
+  $handler->display->display_options['fields']['scald_thumbnail']['field'] = 'scald_thumbnail';
+  $handler->display->display_options['fields']['scald_thumbnail']['label'] = '';
+  $handler->display->display_options['fields']['scald_thumbnail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['scald_thumbnail']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['scald_thumbnail']['settings'] = array(
+    'image_style' => '250x250',
+    'image_link' => 'content',
   );
-  $handler->display->display_options['fields']['gallery_items']['delta_limit'] = '1';
-  $handler->display->display_options['fields']['gallery_items']['delta_offset'] = '0';
   /* Field: Atoms: Description */
   $handler->display->display_options['fields']['field_atom_description']['id'] = 'field_atom_description';
   $handler->display->display_options['fields']['field_atom_description']['table'] = 'field_data_field_atom_description';
