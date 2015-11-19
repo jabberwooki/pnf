@@ -120,10 +120,10 @@ function pnf_agenda_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'event';
   $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'bootstrap_12';
+  $ds_layout->layout = 'bootstrap_9_3';
   $ds_layout->settings = array(
     'regions' => array(
-      'central' => array(
+      'left' => array(
         0 => 'field_event_categorie',
         1 => 'field_sectors',
         2 => 'field_public',
@@ -133,20 +133,27 @@ function pnf_agenda_ds_layout_settings_info() {
         6 => 'body',
         7 => 'field_scald_gallery',
       ),
+      'right' => array(
+        8 => 'field_coordinates',
+        9 => 'field_downloadable_docs',
+      ),
     ),
     'fields' => array(
-      'field_event_categorie' => 'central',
-      'field_sectors' => 'central',
-      'field_public' => 'central',
-      'field_key_image' => 'central',
-      'field_event_dates' => 'central',
-      'field_event_location' => 'central',
-      'body' => 'central',
-      'field_scald_gallery' => 'central',
+      'field_event_categorie' => 'left',
+      'field_sectors' => 'left',
+      'field_public' => 'left',
+      'field_key_image' => 'left',
+      'field_event_dates' => 'left',
+      'field_event_location' => 'left',
+      'body' => 'left',
+      'field_scald_gallery' => 'left',
+      'field_coordinates' => 'right',
+      'field_downloadable_docs' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'central' => 'div',
+      'left' => 'div',
+      'right' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

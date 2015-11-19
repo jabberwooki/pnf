@@ -75,7 +75,7 @@ function pnf_agenda_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '18',
+            'weight' => '24',
             'visible' => FALSE,
           ),
           'teaser' => array(

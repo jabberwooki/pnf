@@ -23,24 +23,7 @@ function pnf_agenda_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views-events-block_event_map' => array(
-          'module' => 'views',
-          'delta' => 'events-block_event_map',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
-        ),
-        'views-events-block_event_docs' => array(
-          'module' => 'views',
-          'delta' => 'events-block_event_docs',
-          'region' => 'sidebar_second',
-          'weight' => '-9',
-        ),
-      ),
-    ),
-  );
+  $context->reactions = array();
   $context->condition_mode = 0;
 
   // Translatables

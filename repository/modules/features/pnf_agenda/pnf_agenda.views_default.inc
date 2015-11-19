@@ -407,13 +407,13 @@ function pnf_agenda_views_default_views() {
   $handler->display->display_options['row_options']['separator'] = ' | ';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Documents téléchargeables (field_downloadable_docs:fid) */
+  /* Relationship: Content: Documents utiles (field_downloadable_docs:fid) */
   $handler->display->display_options['relationships']['field_downloadable_docs_fid']['id'] = 'field_downloadable_docs_fid';
   $handler->display->display_options['relationships']['field_downloadable_docs_fid']['table'] = 'field_data_field_downloadable_docs';
   $handler->display->display_options['relationships']['field_downloadable_docs_fid']['field'] = 'field_downloadable_docs_fid';
   $handler->display->display_options['relationships']['field_downloadable_docs_fid']['label'] = 'Documents utiles';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Documents téléchargeables */
+  /* Field: Content: Documents utiles */
   $handler->display->display_options['fields']['field_downloadable_docs']['id'] = 'field_downloadable_docs';
   $handler->display->display_options['fields']['field_downloadable_docs']['table'] = 'field_data_field_downloadable_docs';
   $handler->display->display_options['fields']['field_downloadable_docs']['field'] = 'field_downloadable_docs';
@@ -502,6 +502,91 @@ function pnf_agenda_views_default_views() {
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
+
+  /* Display: Flux */
+  $handler = $view->new_display('feed', 'Flux', 'feed_1');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => '',
+        'language' => '',
+        'category' => '',
+        'image' => '',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'title',
+        'link' => 'view_node',
+        'description' => '',
+        'author' => '',
+        'category' => 'field_event_categorie',
+        'comments' => '',
+        'enclosure' => '',
+        'guid' => '',
+        'pubDate' => 'field_event_dates',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['feed_settings'] = array(
+    'absolute_paths' => 1,
+    'feed_in_links' => 0,
+  );
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  /* Field: Content: Catégorie */
+  $handler->display->display_options['fields']['field_event_categorie']['id'] = 'field_event_categorie';
+  $handler->display->display_options['fields']['field_event_categorie']['table'] = 'field_data_field_event_categorie';
+  $handler->display->display_options['fields']['field_event_categorie']['field'] = 'field_event_categorie';
+  $handler->display->display_options['fields']['field_event_categorie']['label'] = '';
+  $handler->display->display_options['fields']['field_event_categorie']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_categorie']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Lieu */
+  $handler->display->display_options['fields']['field_event_location']['id'] = 'field_event_location';
+  $handler->display->display_options['fields']['field_event_location']['table'] = 'field_data_field_event_location';
+  $handler->display->display_options['fields']['field_event_location']['field'] = 'field_event_location';
+  $handler->display->display_options['fields']['field_event_location']['label'] = '';
+  $handler->display->display_options['fields']['field_event_location']['element_label_colon'] = FALSE;
+  /* Field: Content: Dates */
+  $handler->display->display_options['fields']['field_event_dates']['id'] = 'field_event_dates';
+  $handler->display->display_options['fields']['field_event_dates']['table'] = 'field_data_field_event_dates';
+  $handler->display->display_options['fields']['field_event_dates']['field'] = 'field_event_dates';
+  $handler->display->display_options['fields']['field_event_dates']['label'] = '';
+  $handler->display->display_options['fields']['field_event_dates']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_dates']['type'] = 'pnf_agenda_date';
+  $handler->display->display_options['fields']['field_event_dates']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  $handler->display->display_options['path'] = 'rss/agenda';
   $translatables['events'] = array(
     t('Master'),
     t('Agenda'),
@@ -527,6 +612,7 @@ function pnf_agenda_views_default_views() {
     t('Documents utiles'),
     t('Bloc accueil'),
     t('<a href="/agenda">tous les événements</a>'),
+    t('Flux'),
   );
   $export['events'] = $view;
 

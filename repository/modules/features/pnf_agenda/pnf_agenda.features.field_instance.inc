@@ -113,10 +113,36 @@ function pnf_agenda_field_default_field_instances() {
         'weight' => 6,
       ),
       'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 15,
+        'label' => 'hidden',
+        'module' => 'geofield_map',
+        'settings' => array(
+          'geofield_map_baselayers_hybrid' => 0,
+          'geofield_map_baselayers_map' => 1,
+          'geofield_map_baselayers_physical' => 0,
+          'geofield_map_baselayers_satellite' => 1,
+          'geofield_map_center' => array(
+            'geocode' => 'Find my location',
+            'lat' => '',
+            'lon' => '',
+          ),
+          'geofield_map_controltype' => 'small',
+          'geofield_map_draggable' => 0,
+          'geofield_map_height' => '260px',
+          'geofield_map_maptype' => 'map',
+          'geofield_map_max_zoom' => 0,
+          'geofield_map_min_zoom' => 0,
+          'geofield_map_mtc' => 'menu',
+          'geofield_map_overview' => 0,
+          'geofield_map_overview_opened' => 0,
+          'geofield_map_pancontrol' => 1,
+          'geofield_map_scale' => 0,
+          'geofield_map_scrollwheel' => 0,
+          'geofield_map_streetview_show' => 1,
+          'geofield_map_width' => '100%',
+          'geofield_map_zoom' => 13,
+        ),
+        'type' => 'geofield_map_map',
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -164,9 +190,10 @@ function pnf_agenda_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
+        'module' => 'download_file',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 16,
+        'type' => 'direct_download',
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -183,7 +210,7 @@ function pnf_agenda_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_downloadable_docs',
-    'label' => 'Documents téléchargeables',
+    'label' => 'Documents utiles',
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
@@ -552,7 +579,7 @@ function pnf_agenda_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -766,7 +793,7 @@ function pnf_agenda_field_default_field_instances() {
   t('Dates');
   t('Dates début/fin publication');
   t('Descriptif');
-  t('Documents téléchargeables');
+  t('Documents utiles');
   t('Galerie photo');
   t('Image phare');
   t('Lieu');
