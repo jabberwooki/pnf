@@ -59,18 +59,7 @@ function pnf_news_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views-news-block_news_docs' => array(
-          'module' => 'views',
-          'delta' => 'news-block_news_docs',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
+  $context->reactions = array();
   $context->condition_mode = 0;
 
   // Translatables

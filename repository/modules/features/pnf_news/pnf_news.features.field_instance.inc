@@ -269,8 +269,9 @@ function pnf_news_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
+        'module' => 'download_file',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'direct_download',
         'weight' => 11,
       ),
       'teaser' => array(
@@ -306,7 +307,7 @@ function pnf_news_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_downloadable_docs',
-    'label' => 'Documents téléchargeables',
+    'label' => 'Documents utiles',
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
@@ -1013,7 +1014,7 @@ function pnf_news_field_default_field_instances() {
   t('Date de publication affichée');
   t('Dates début/fin publication');
   t('Descriptif');
-  t('Documents téléchargeables');
+  t('Documents utiles');
   t('Galerie photo');
   t('Image phare');
   t('La date qui sera affichée sur le site.');

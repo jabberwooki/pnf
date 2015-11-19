@@ -201,10 +201,10 @@ function pnf_news_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'news';
   $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'bootstrap_12';
+  $ds_layout->layout = 'bootstrap_9_3';
   $ds_layout->settings = array(
     'regions' => array(
-      'central' => array(
+      'left' => array(
         0 => 'field_displayed_pub_date',
         1 => 'field_news_category',
         2 => 'field_sectors',
@@ -214,20 +214,25 @@ function pnf_news_ds_layout_settings_info() {
         6 => 'field_scald_gallery',
         7 => 'field_news_tags',
       ),
+      'right' => array(
+        8 => 'field_downloadable_docs',
+      ),
     ),
     'fields' => array(
-      'field_displayed_pub_date' => 'central',
-      'field_news_category' => 'central',
-      'field_sectors' => 'central',
-      'field_public' => 'central',
-      'field_key_image' => 'central',
-      'body' => 'central',
-      'field_scald_gallery' => 'central',
-      'field_news_tags' => 'central',
+      'field_displayed_pub_date' => 'left',
+      'field_news_category' => 'left',
+      'field_sectors' => 'left',
+      'field_public' => 'left',
+      'field_key_image' => 'left',
+      'body' => 'left',
+      'field_scald_gallery' => 'left',
+      'field_news_tags' => 'left',
+      'field_downloadable_docs' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'central' => 'div',
+      'left' => 'div',
+      'right' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
