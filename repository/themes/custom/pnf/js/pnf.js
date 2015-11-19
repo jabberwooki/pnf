@@ -6,7 +6,7 @@
 	$('.view-news .view-mode-teaser_home .field-name-title h3, .view-news .view-mode-teaser .field-name-title h3').matchHeight('options');
 
   $('.page-agenda .view-mode-teaser').matchHeight('options');
-  $('.page-agenda .view-mode-teaser h3 a').matchHeight('options');
+  $('.page-agenda .view-mode-teaser h3').matchHeight('options');
 
     positionMegaMenuDropDown();
 
@@ -26,7 +26,6 @@
     // https://www.gaslampmedia.com/clickable-parent-menu-items-with-roots-theme-and-twitter-bootstrap/)
     $('#block-menu-menu-menu-park ul li.first a').removeAttr( "data-toggle" );
     $('#block-menu-menu-national-parks ul li.first a').removeAttr( "data-toggle" );
-
 
  });
 })(jQuery);

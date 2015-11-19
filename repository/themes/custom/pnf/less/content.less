@@ -257,6 +257,7 @@ a{
         margin-right: 15px;
         padding: 7px;
         margin-bottom: 25px;
+            min-height: 280px;
     }
     .view-events .view-mode-teaser:hover{
         -moz-box-shadow: 0px 0px 10px 0px #999999;
@@ -287,6 +288,11 @@ a{
         background: @brand-secondary;
         font-size: 11px;
         padding: 2px 4px;
+    }
+        .field-name-btn-readmore{
+        position: absolute;
+        bottom: -15%;
+        right: 30%;
     }
 
 }
@@ -383,17 +389,22 @@ a{
             float: left;
             margin-right: 20px;
         }
-        .field-name-field-job-location{
-            margin-bottom: 12px;
-            .field-label, .field-item{
-                font-weight: 400;
-                font-size: @font-size-small;
-            }
-        }
         .field-name-field-contract-object,
         .field-name-field-job-resume{
             margin-bottom: 15px;
         }
+}
+
+.field-name-field-job-location{
+    margin-bottom: 12px;
+        .field-label, .field-item{
+            font-weight: 400;
+            font-size: @font-size-small;
+        }
+    }
+.field-name-btn-job-notice,
+.field-name-field-job-resume{
+    margin-bottom: 15px;
 }
 
 /*List Documents*/
