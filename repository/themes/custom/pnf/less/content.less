@@ -23,10 +23,10 @@ a{
     top: 200px;
     margin-top: -100px;
     z-index: 5000;
-    color: #000;
+    color: @gray-base;
     text-align: right;
     	li{
-    		background-color: #000;
+    		background-color: @gray-base;
     	}
 }
 
@@ -89,7 +89,7 @@ a{
     }
     .view-mode-teaser,
     .view-mode-teaser_home{
-        border-bottom: 1px solid #ed8b00;
+        border-bottom: 1px solid @brand-primary;
         background: #fff;
         margin-right: 15px;
         padding: 7px;
@@ -136,7 +136,7 @@ a{
         width: 15%;
         opacity: 1;
         font-size: 20px;
-        color: #333;
+        color: @gray-dark;
         text-align: center;
         text-shadow: none;
     }
@@ -213,10 +213,13 @@ a{
     }
 }
 
-/*List News / Dossiers / Flashnews*/
+/*News / Dossiers / Flashnews / Offre d'emploi / Marché public HOVER*/
 .page-breves .view-mode-teaser_list_flashnews,
 .page-dossiers .view-mode-teaser:hover,
-.page-actualites .view-mode-teaser:hover{
+.page-actualites .view-mode-teaser:hover,
+.view-jobs .view-mode-teaser:hover,
+.view-contracts .view-mode-teaser:hover,
+.view-documents .view-mode-teaser:hover{
     -moz-box-shadow: 0px 0px 10px 0px #999999;
     -webkit-box-shadow: 0px 0px 10px 0px #999999;
     -o-box-shadow: 0px 0px 10px 0px #999999;
@@ -232,6 +235,9 @@ a{
         h3{
             color: @brand-primary;
         }
+        .field-name-body{
+        padding-bottom: 10px;
+        }
 }
 
 /*List Events*/
@@ -246,11 +252,12 @@ a{
         background: transparent;
     }
     .view-events .view-mode-teaser{
-        border-bottom: 1px solid #ed8b00;
+        border-bottom: 1px solid @brand-primary;
         background: #fff;
         margin-right: 15px;
         padding: 7px;
         margin-bottom: 25px;
+            min-height: 280px;
     }
     .view-events .view-mode-teaser:hover{
         -moz-box-shadow: 0px 0px 10px 0px #999999;
@@ -281,6 +288,11 @@ a{
         background: @brand-secondary;
         font-size: 11px;
         padding: 2px 4px;
+    }
+        .field-name-btn-readmore{
+        position: absolute;
+        bottom: -15%;
+        right: 30%;
     }
 
 }
@@ -357,6 +369,68 @@ a{
     }
 }
 
+/*List Jobs - Marches publics*/
+.view-contracts .view-mode-teaser,
+.view-jobs .view-mode-teaser{
+    background: #fff;
+    padding: 0 10px 10px 10px;
+    margin: 0 0 20px 0;
+
+        h3{
+        margin-top: 10px;
+        font-size: @font-size-large;
+        }
+        .field-name-field-contract-projected-date,
+        .field-name-field-job-projected-date{
+            margin-bottom: 15px;
+        }
+        .field-name-btn-contract-notice,
+        .field-name-btn-readmore{
+            float: left;
+            margin-right: 20px;
+        }
+        .field-name-field-contract-object,
+        .field-name-field-job-resume{
+            margin-bottom: 15px;
+        }
+}
+
+.field-name-field-job-location{
+    margin-bottom: 12px;
+        .field-label, .field-item{
+            font-weight: 400;
+            font-size: @font-size-small;
+        }
+    }
+.field-name-btn-job-notice,
+.field-name-field-job-resume{
+    margin-bottom: 15px;
+}
+
+/*List Documents*/
+.view-documents .view-mode-teaser{
+    background: #fff;
+    padding: 15px;
+    margin: 0 0 20px 0;
+        h3{
+            color: @brand-primary;
+            font-size: @font-size-large;
+            margin:10px 0 5px 0;
+        }
+        .field-name-field-document-category .field-item {
+            background: lighten(@brand-secondary, 20%);
+            font-size: @font-size-small;
+            padding: 5px 7px;
+            display: inline;
+        }
+        .field-name-field-displayed-pub-date{
+            margin-top: 5px;
+                span{
+                    font-size: @font-size-small;
+                }
+        }
+}
+
 
 /*Menu tools*/
 #block-menu-menu-tools {
@@ -410,12 +484,12 @@ a{
 /*Menu sidebar second*/
 .region-sidebar-second .block-menu{
     ul li a{
-        background: #cfd5de;
-        color: #333;
+        background: lighten(@brand-secondary, 20%);
+        color: @gray-dark;
     }
     ul li.open a,
     ul li a.active{
-        background: #8e9fbc;
+        background: @brand-secondary;
         color: #FFF;
         font-weight: 600;
     }
