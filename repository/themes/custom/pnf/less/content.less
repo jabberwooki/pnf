@@ -23,10 +23,10 @@ a{
     top: 200px;
     margin-top: -100px;
     z-index: 5000;
-    color: #000;
+    color: @gray-base;
     text-align: right;
     	li{
-    		background-color: #000;
+    		background-color: @gray-base;
     	}
 }
 
@@ -89,7 +89,7 @@ a{
     }
     .view-mode-teaser,
     .view-mode-teaser_home{
-        border-bottom: 1px solid #ed8b00;
+        border-bottom: 1px solid @brand-primary;
         background: #fff;
         margin-right: 15px;
         padding: 7px;
@@ -136,7 +136,7 @@ a{
         width: 15%;
         opacity: 1;
         font-size: 20px;
-        color: #333;
+        color: @gray-dark;
         text-align: center;
         text-shadow: none;
     }
@@ -218,7 +218,8 @@ a{
 .page-dossiers .view-mode-teaser:hover,
 .page-actualites .view-mode-teaser:hover,
 .view-jobs .view-mode-teaser:hover,
-.view-contracts .view-mode-teaser:hover{
+.view-contracts .view-mode-teaser:hover,
+.view-documents .view-mode-teaser:hover{
     -moz-box-shadow: 0px 0px 10px 0px #999999;
     -webkit-box-shadow: 0px 0px 10px 0px #999999;
     -o-box-shadow: 0px 0px 10px 0px #999999;
@@ -251,7 +252,7 @@ a{
         background: transparent;
     }
     .view-events .view-mode-teaser{
-        border-bottom: 1px solid #ed8b00;
+        border-bottom: 1px solid @brand-primary;
         background: #fff;
         margin-right: 15px;
         padding: 7px;
@@ -395,6 +396,30 @@ a{
         }
 }
 
+/*List Documents*/
+.view-documents .view-mode-teaser{
+    background: #fff;
+    padding: 15px;
+    margin: 0 0 20px 0;
+        h3{
+            color: @brand-primary;
+            font-size: @font-size-large;
+            margin:10px 0 5px 0;
+        }
+        .field-name-field-document-category .field-item {
+            background: lighten(@brand-secondary, 20%);
+            font-size: @font-size-small;
+            padding: 5px 7px;
+            display: inline;
+        }
+        .field-name-field-displayed-pub-date{
+            margin-top: 5px;
+                span{
+                    font-size: @font-size-small;
+                }
+        }
+}
+
 
 /*Menu tools*/
 #block-menu-menu-tools {
@@ -448,12 +473,12 @@ a{
 /*Menu sidebar second*/
 .region-sidebar-second .block-menu{
     ul li a{
-        background: #cfd5de;
-        color: #333;
+        background: lighten(@brand-secondary, 20%);
+        color: @gray-dark;
     }
     ul li.open a,
     ul li a.active{
-        background: #8e9fbc;
+        background: @brand-secondary;
         color: #FFF;
         font-weight: 600;
     }
