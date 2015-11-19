@@ -219,6 +219,9 @@ projects[geophp][version] = "1.7"
 projects[geofield][subdir] = contrib
 projects[geofield][version] = "2.3"
 
+projects[geofield_map][subdir] = contrib
+projects[geofield_map][version] = "2.3"
+
 ;projects[leaflet][subdir] = contrib
 ;projects[leaflet][version] = ""
 

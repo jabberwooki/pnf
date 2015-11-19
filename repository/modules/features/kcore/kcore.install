@@ -68,3 +68,10 @@ function kcore_update_7008() {
 function kcore_update_7009() {
   module_enable(array('custom_breadcrumbs','custom_breadcrumbs_features'));
 }
+
+/**
+ * Activate geofield_map module.
+ */
+function kcore_update_7010() {
+  module_enable(array('geofield_map'));
+}
