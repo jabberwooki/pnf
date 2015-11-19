@@ -40,6 +40,7 @@ features[taxonomy][] = document_categories
 features[uuid_term][] = 80b8cbe2-5a72-4d15-807b-3957158dd4cb
 features[uuid_term][] = 8375bea1-2b5c-411d-9179-1242c90a16aa
 features[uuid_term][] = 8abe9b99-fc3e-4df1-a402-543ce16b3601
+features[variable][] = field_bundle_settings_field_collection_item__field_document_links
 features[variable][] = field_bundle_settings_node__document
 features[variable][] = language_content_type_document
 features[variable][] = menu_options_document
