@@ -431,6 +431,79 @@ a{
         }
 }
 
+/*Node marches publics*/
+.node-type-contract {
+    .field-name-field-contract-object{
+        margin-bottom: 20px;
+    }
+    .field-name-btn-contract-link {
+        float: left;
+        margin-right: 20px;
+    }
+    .field-name-btn-contract-link,
+    .field-name-btn-contract-notice{
+        margin-bottom: 20px;
+    }
+
+}
+
+/*Node evenements*/
+.node-type-event{
+    .field-name-field-event-categorie{
+        text-transform: uppercase;
+        color: @gray-light;
+        float: left;
+    }
+    .field-name-field-public{
+        float: right;
+        color: @gray;
+        font-style:italic;
+        font-size: @font-size-small;
+            .field-label{
+                font-weight: normal;
+            }
+    }
+    .field-name-field-event-dates{
+        .field-label{
+            color: #999;
+            font-size: @font-size-h2;
+            font-weight: 600;
+            border-right: 1px solid #999;
+            margin-right: 20px;
+            padding-right: 10px;
+        }
+        .field-items{
+            color: #999;
+        }
+    }
+}
+
+/*Content type*/
+.pnf-content-left .content-wrapper,
+.pnf-content-right .content-wrapper{
+    background: #fff;
+    padding: 15px;
+        .field{
+            margin-bottom: 15px;
+        }
+        .field-name-field-downloadable-docs{
+            a:before{
+                font-family: 'Fontawesome';
+                content: '\f016';
+                font-size: @font-size-base;
+                padding-right: 10px;
+            }
+            .field-label{
+                font-size: @font-size-h4;
+                font-weight: 600;
+                color: @gray;
+            }
+            .field-label,
+            .download-file{
+                margin-bottom: 10px;
+            }
+        }
+}
 
 /*Menu tools*/
 #block-menu-menu-tools {

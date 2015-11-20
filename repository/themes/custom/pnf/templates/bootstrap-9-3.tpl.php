@@ -12,10 +12,14 @@
   <?php endif; ?>
   <div class="row">
     <<?php print $left_wrapper; ?> class="col-sm-9 pnf-content-left <?php print $left_classes; ?>">
-      <?php print $left; ?>
+    <div class="content-wrapper">
+      <?php print $left;?>
+    </div>
     </<?php print $left_wrapper; ?>>
     <<?php print $right_wrapper; ?> class="col-sm-3 pnf-content-right <?php print $right_classes; ?>">
+    <div class="content-wrapper">
       <?php print $right; ?>
+      </div>
     </<?php print $right_wrapper; ?>>
   </div>
 </<?php print $layout_wrapper ?>>
