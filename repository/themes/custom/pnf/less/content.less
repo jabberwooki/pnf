@@ -257,7 +257,7 @@ a{
         margin-right: 15px;
         padding: 7px;
         margin-bottom: 25px;
-            min-height: 280px;
+            min-height: 275px;
     }
     .view-events .view-mode-teaser:hover{
         -moz-box-shadow: 0px 0px 10px 0px #999999;
@@ -280,6 +280,7 @@ a{
         font-style: italic;
         font-size: @font-size-small;
         color: #a0a0a0;
+        height: 45px;
     }
     .field-name-field-event-categorie {
         position: absolute;
@@ -393,6 +394,16 @@ a{
         .field-name-field-job-resume{
             margin-bottom: 15px;
         }
+        .field-label{
+            font-weight: 600;
+            color: @gray;
+        }
+        .field-name-field-contract-category,
+        .field-name-field-procurement-type,
+        .field-name-field-contract-pub-date,
+        .field-name-field-contract-deadline-date{
+            margin-bottom: 5px;
+        }
 }
 
 .field-name-field-job-location{
@@ -429,7 +440,57 @@ a{
                     font-size: @font-size-small;
                 }
         }
+        .download-file{
+            padding: 0;
+            img{
+                display: none;
+            }
+            li{
+                list-style: none;
+            }
+            a:before{
+                font-family: 'Fontawesome';
+                content: '\f019';
+                font-size: @font-size-h4;
+                color: #fff;
+                background: @brand-primary;
+                padding: 5px;
+                margin-right: 10px;
+            }
+            a{
+                text-decoration: none;
+                border: 1px solid @brand-primary;
+                padding: 5px 5px 4px 0;
+            }
+            .detail{
+                font-size: 10px;
+            }
+        }
+        .field-name-local-flipthrough,
+        .field-name-field-document-flip {
+            a{
+                background: @brand-primary;
+                padding: 5px 10px;
+                border-radius: 3px;
+                color: #fff;
+                text-decoration: none;
+            }
+            a:hover{
+                background: darken(@brand-primary, 10%);
+            }
+            a:before{
+                font-family: 'Fontawesome';
+                content: '\f02d';
+                font-size: @font-size-h4;
+                color: #fff;
+                padding: 5px 5px 5px 0;
+            }
+        }
+        .field-name-local-flipthrough{
+            display: inline-block;;
+        }
 }
+
 
 /*Node marches publics*/
 .node-type-contract {
@@ -444,8 +505,17 @@ a{
     .field-name-btn-contract-notice{
         margin-bottom: 20px;
     }
-
+    .field-label{
+        font-weight: 600;
+        color: @gray;
+    }
 }
+
+/*Node emploi*/
+.node-type-job .pnf-content-right .field-label{
+        font-weight: 600;
+        color: @gray;
+    }
 
 /*Node evenements*/
 .node-type-event{
@@ -463,6 +533,7 @@ a{
                 font-weight: normal;
             }
     }
+    .field-name-field-event-location,
     .field-name-field-event-dates{
         .field-label{
             color: #999;
@@ -476,6 +547,22 @@ a{
             color: #999;
         }
     }
+    .field-name-field-event-dates{
+        float: left;
+    }
+    .field-name-field-event-location{
+        float: right;
+    }
+    .field-name-body{
+        clear: left;
+    }
+}
+
+/*Page d'aterrissage*/
+.node-type-page .content{
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
 }
 
 /*Content type*/
