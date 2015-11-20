@@ -28,11 +28,13 @@
       }
     ?>
     <div class="col col-md-<?php print 12/$col_number; ?>">
-      <div class="cmi-field cmi-field-item-image">
-        <?php print l($image, $item->link_path, array('html' => TRUE)); ?>
-      </div>
-      <div class="cmi-field cmi-field-menu-item-title">
-      <?php print l($item->link_title, $item->link_path); ?>
+      <div class="cmi-wrapper">
+        <div class="cmi-field cmi-field-item-image">
+          <?php print l($image, $item->link_path, array('html' => TRUE)); ?>
+        </div>
+        <div class="cmi-field cmi-field-menu-item-title">
+        <?php print l($item->link_title, $item->link_path); ?>
+        </div>
       </div>
     </div>
     <?php endforeach ?>
