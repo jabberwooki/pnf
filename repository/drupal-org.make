@@ -148,6 +148,7 @@ projects[field_slideshow][version] = "1.82"
 
 projects[image_field_caption][subdir] = contrib
 projects[image_field_caption][version] = "2.1"
+projects[image_field_caption][patch][] = "https://www.drupal.org/files/issues/image_field_caption-set_default_input_format-2026301-20.patch"
 
 projects[filefield_sources][subdir] = contrib
 projects[filefield_sources][version] = "1.9"
