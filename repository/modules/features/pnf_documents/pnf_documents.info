@@ -3,7 +3,6 @@ core = 7.x
 package = App
 version = 7.x-1.0
 dependencies[] = colorbox
-dependencies[] = download_file
 dependencies[] = field_collection
 dependencies[] = link
 dependencies[] = pdf_reader

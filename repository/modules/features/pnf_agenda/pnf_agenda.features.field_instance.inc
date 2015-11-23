@@ -516,6 +516,12 @@ function pnf_agenda_field_default_field_instances() {
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'image_field_caption' => 1,
+      'image_field_caption_wrapper' => array(
+        'image_field_caption_default' => array(
+          'format' => 'plain_text',
+          'value' => ' © ',
+        ),
+      ),
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
