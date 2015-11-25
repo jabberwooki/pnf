@@ -26,6 +26,7 @@ features[context][] = news-list
 features[context][] = news-page
 features[ctools][] = context:context:3
 features[ctools][] = ds:ds:1
+features[ctools][] = field_group:field_group:1
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[custom_breadcrumb][] = news_files
