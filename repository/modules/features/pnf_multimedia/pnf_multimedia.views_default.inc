@@ -182,6 +182,7 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['scald_thumbnail']['table'] = 'field_data_scald_thumbnail';
   $handler->display->display_options['fields']['scald_thumbnail']['field'] = 'scald_thumbnail';
   $handler->display->display_options['fields']['scald_thumbnail']['label'] = '';
+  $handler->display->display_options['fields']['scald_thumbnail']['exclude'] = TRUE;
   $handler->display->display_options['fields']['scald_thumbnail']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['scald_thumbnail']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['scald_thumbnail']['settings'] = array(
@@ -193,7 +194,7 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['field_atom_description']['table'] = 'field_data_field_atom_description';
   $handler->display->display_options['fields']['field_atom_description']['field'] = 'field_atom_description';
   $handler->display->display_options['fields']['field_atom_description']['label'] = '';
-  $handler->display->display_options['fields']['field_atom_description']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_atom_description']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_atom_description']['alter']['path'] = 'atom/[sid]';
   $handler->display->display_options['fields']['field_atom_description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_atom_description']['type'] = 'text_trimmed';
@@ -205,10 +206,28 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['path'] = 'atom/[sid]';
   $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="multimedia-teaser">
+<div class="group-resume">
+[scald_thumbnail]
+<p>
+[field_atom_description]
+</br>
+<i class="fa fa-plus-circle"></i>
+</p>
+</div>
+<h3>[title]</h3>
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Atom: Type */
@@ -253,6 +272,7 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['scald_thumbnail']['table'] = 'field_data_scald_thumbnail';
   $handler->display->display_options['fields']['scald_thumbnail']['field'] = 'scald_thumbnail';
   $handler->display->display_options['fields']['scald_thumbnail']['label'] = '';
+  $handler->display->display_options['fields']['scald_thumbnail']['exclude'] = TRUE;
   $handler->display->display_options['fields']['scald_thumbnail']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['scald_thumbnail']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['scald_thumbnail']['settings'] = array(
@@ -264,7 +284,7 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['field_atom_description']['table'] = 'field_data_field_atom_description';
   $handler->display->display_options['fields']['field_atom_description']['field'] = 'field_atom_description';
   $handler->display->display_options['fields']['field_atom_description']['label'] = '';
-  $handler->display->display_options['fields']['field_atom_description']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_atom_description']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_atom_description']['alter']['path'] = 'atom/[sid]';
   $handler->display->display_options['fields']['field_atom_description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_atom_description']['type'] = 'text_trimmed';
@@ -276,10 +296,28 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['path'] = 'atom/[sid]';
   $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="multimedia-teaser">
+<div class="group-resume">
+[scald_thumbnail]
+<p>
+[field_atom_description]
+</br>
+<i class="fa fa-play-circle"></i>
+</p>
+</div>
+<h3>[title]</h3>
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['path'] = 'videos';
 
   /* Display: Sons */
@@ -299,10 +337,11 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['scald_thumbnail']['table'] = 'field_data_scald_thumbnail';
   $handler->display->display_options['fields']['scald_thumbnail']['field'] = 'scald_thumbnail';
   $handler->display->display_options['fields']['scald_thumbnail']['label'] = '';
+  $handler->display->display_options['fields']['scald_thumbnail']['exclude'] = TRUE;
   $handler->display->display_options['fields']['scald_thumbnail']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['scald_thumbnail']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['scald_thumbnail']['settings'] = array(
-    'image_style' => 'medium',
+    'image_style' => '250x250',
     'image_link' => 'content',
   );
   /* Field: Atoms: Description */
@@ -310,7 +349,7 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['field_atom_description']['table'] = 'field_data_field_atom_description';
   $handler->display->display_options['fields']['field_atom_description']['field'] = 'field_atom_description';
   $handler->display->display_options['fields']['field_atom_description']['label'] = '';
-  $handler->display->display_options['fields']['field_atom_description']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_atom_description']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_atom_description']['alter']['path'] = 'atom/[sid]';
   $handler->display->display_options['fields']['field_atom_description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_atom_description']['type'] = 'text_trimmed';
@@ -322,10 +361,28 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['path'] = 'atom/[sid]';
   $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="multimedia-teaser">
+<div class="group-resume">
+[scald_thumbnail]
+<p>
+[field_atom_description]
+</br>
+<i class="fa fa-headphones"></i>
+</p>
+</div>
+<h3>[title]</h3>
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Atom: Type */
@@ -375,7 +432,40 @@ function pnf_multimedia_views_default_views() {
     t('Catégorie'),
     t('Galeries'),
     t('Galeries photo'),
+    t('<div class="multimedia-teaser">
+<div class="group-resume">
+[scald_thumbnail]
+<p>
+[field_atom_description]
+</br>
+<i class="fa fa-plus-circle"></i>
+</p>
+</div>
+<h3>[title]</h3>
+</div>'),
+    t('<div class="multimedia-teaser">
+<div class="group-resume">
+[scald_thumbnail]
+<p>
+[field_atom_description]
+</br>
+<i class="fa fa-play-circle"></i>
+</p>
+</div>
+<h3>[title]</h3>
+</div>'),
     t('Sons'),
+    t('<div class="multimedia-teaser">
+<div class="group-resume">
+[scald_thumbnail]
+<p>
+[field_atom_description]
+</br>
+<i class="fa fa-headphones"></i>
+</p>
+</div>
+<h3>[title]</h3>
+</div>'),
   );
   $export['multimedia'] = $view;
 
