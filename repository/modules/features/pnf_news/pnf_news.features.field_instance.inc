@@ -46,7 +46,7 @@ function pnf_news_field_default_field_instances() {
           'trim_length' => 120,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser_home' => array(
         'label' => 'hidden',
@@ -55,7 +55,7 @@ function pnf_news_field_default_field_instances() {
           'trim_length' => 120,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 1,
+        'weight' => 4,
       ),
       'teaser_home_files' => array(
         'label' => 'hidden',
@@ -173,7 +173,7 @@ function pnf_news_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser_home' => array(
         'label' => 'hidden',
@@ -186,7 +186,7 @@ function pnf_news_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser_home_files' => array(
         'label' => 'hidden',
@@ -278,13 +278,13 @@ function pnf_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 20,
       ),
       'teaser_home' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 20,
       ),
       'teaser_home_files' => array(
         'label' => 'above',
@@ -389,7 +389,7 @@ function pnf_news_field_default_field_instances() {
           'image_style' => '250x250',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser_home' => array(
         'label' => 'hidden',
@@ -399,7 +399,7 @@ function pnf_news_field_default_field_instances() {
           'image_style' => '196x196',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 3,
       ),
       'teaser_home_files' => array(
         'label' => 'hidden',
@@ -510,13 +510,13 @@ function pnf_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 18,
       ),
       'teaser_home' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 18,
       ),
       'teaser_home_files' => array(
         'label' => 'above',
@@ -583,13 +583,13 @@ function pnf_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 23,
       ),
       'teaser_home' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 23,
       ),
       'teaser_home_files' => array(
         'label' => 'above',
@@ -658,13 +658,13 @@ function pnf_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 19,
       ),
       'teaser_home' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 19,
       ),
       'teaser_home_files' => array(
         'label' => 'above',
@@ -729,13 +729,13 @@ function pnf_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 22,
       ),
       'teaser_home' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 22,
       ),
       'teaser_home_files' => array(
         'label' => 'above',
@@ -813,13 +813,13 @@ function pnf_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 25,
       ),
       'teaser_home' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 25,
       ),
       'teaser_home_files' => array(
         'label' => 'above',
@@ -889,13 +889,13 @@ function pnf_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 21,
       ),
       'teaser_home' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 21,
       ),
       'teaser_home_files' => array(
         'label' => 'above',
@@ -971,13 +971,13 @@ function pnf_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 24,
       ),
       'teaser_home' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 24,
       ),
       'teaser_home_files' => array(
         'label' => 'above',

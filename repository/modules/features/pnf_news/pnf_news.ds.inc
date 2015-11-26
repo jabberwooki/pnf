@@ -43,7 +43,7 @@ function pnf_news_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '3',
+      'weight' => '4',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -53,7 +53,7 @@ function pnf_news_ds_field_settings_info() {
       ),
     ),
     'btn_readmore' => array(
-      'weight' => '4',
+      'weight' => '5',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -68,7 +68,7 @@ function pnf_news_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'teaser_home';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '3',
+      'weight' => '4',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -78,7 +78,7 @@ function pnf_news_ds_field_settings_info() {
       ),
     ),
     'btn_readmore' => array(
-      'weight' => '4',
+      'weight' => '5',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -254,14 +254,16 @@ function pnf_news_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'central' => array(
-        0 => 'field_key_image',
-        1 => 'body',
-        2 => 'field_displayed_pub_date',
-        3 => 'title',
-        4 => 'btn_readmore',
+        0 => 'group_resume',
+        1 => 'field_key_image',
+        2 => 'body',
+        3 => 'field_displayed_pub_date',
+        4 => 'title',
+        5 => 'btn_readmore',
       ),
     ),
     'fields' => array(
+      'group_resume' => 'central',
       'field_key_image' => 'central',
       'body' => 'central',
       'field_displayed_pub_date' => 'central',
@@ -290,18 +292,20 @@ function pnf_news_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'central' => array(
-        0 => 'field_key_image',
-        1 => 'body',
+        0 => 'group_resume',
+        1 => 'field_key_image',
         2 => 'field_displayed_pub_date',
         3 => 'title',
-        4 => 'btn_readmore',
+        4 => 'body',
+        5 => 'btn_readmore',
       ),
     ),
     'fields' => array(
+      'group_resume' => 'central',
       'field_key_image' => 'central',
-      'body' => 'central',
       'field_displayed_pub_date' => 'central',
       'title' => 'central',
+      'body' => 'central',
       'btn_readmore' => 'central',
     ),
     'classes' => array(),

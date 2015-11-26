@@ -33,7 +33,7 @@
           <?php print l($image, $item->link_path, array('html' => TRUE)); ?>
         </div>
         <div class="cmi-field cmi-field-menu-item-title">
-        <?php print l($item->link_title, $item->link_path); ?>
+        <h3><?php print l($item->link_title, $item->link_path); ?></h3>
         </div>
       </div>
     </div>

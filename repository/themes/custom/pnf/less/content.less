@@ -104,6 +104,7 @@ a{
     font-size: @font-size-base;
     font-weight: 600;
     margin-top: 5px;
+    margin-bottom: 25px;
         a{
             color: darken(@brand-primary, 12%);
         }
@@ -113,7 +114,7 @@ a{
         }
     }
     .field-name-body{
-        padding-bottom: 25px;
+        //padding-bottom: 25px;
         p{
             font-size: @font-size-small;
         }
@@ -257,7 +258,7 @@ a{
         margin-right: 15px;
         padding: 7px;
         margin-bottom: 25px;
-            min-height: 280px;
+            min-height: 275px;
     }
     .view-events .view-mode-teaser:hover{
         -moz-box-shadow: 0px 0px 10px 0px #999999;
@@ -280,6 +281,7 @@ a{
         font-style: italic;
         font-size: @font-size-small;
         color: #a0a0a0;
+        height: 45px;
     }
     .field-name-field-event-categorie {
         position: absolute;
@@ -393,6 +395,16 @@ a{
         .field-name-field-job-resume{
             margin-bottom: 15px;
         }
+        .field-label{
+            font-weight: 600;
+            color: @gray;
+        }
+        .field-name-field-contract-category,
+        .field-name-field-procurement-type,
+        .field-name-field-contract-pub-date,
+        .field-name-field-contract-deadline-date{
+            margin-bottom: 5px;
+        }
 }
 
 .field-name-field-job-location{
@@ -429,8 +441,179 @@ a{
                     font-size: @font-size-small;
                 }
         }
+        .download-file{
+            padding: 0;
+            img{
+                display: none;
+            }
+            li{
+                list-style: none;
+            }
+            a:before{
+                font-family: 'Fontawesome';
+                content: '\f019';
+                font-size: @font-size-h4;
+                color: #fff;
+                background: @brand-primary;
+                padding: 5px;
+                margin-right: 10px;
+            }
+            a{
+                text-decoration: none;
+                border: 1px solid @brand-primary;
+                padding: 5px 5px 4px 0;
+            }
+            .detail{
+                font-size: 10px;
+            }
+        }
+        .field-name-local-flipthrough,
+        .field-name-field-document-flip {
+            a{
+                background: @brand-primary;
+                padding: 5px 10px;
+                border-radius: 3px;
+                color: #fff;
+                text-decoration: none;
+            }
+            a:hover{
+                background: darken(@brand-primary, 10%);
+            }
+            a:before{
+                font-family: 'Fontawesome';
+                content: '\f02d';
+                font-size: @font-size-h4;
+                color: #fff;
+                padding: 5px 5px 5px 0;
+            }
+        }
+        .field-name-local-flipthrough{
+            display: inline-block;;
+        }
 }
 
+
+/*Node marches publics*/
+.node-type-contract {
+    .field-name-field-contract-object{
+        margin-bottom: 20px;
+    }
+    .field-name-btn-contract-link {
+        float: left;
+        margin-right: 20px;
+    }
+    .field-name-btn-contract-link,
+    .field-name-btn-contract-notice{
+        margin-bottom: 20px;
+    }
+    .field-label{
+        font-weight: 600;
+        color: @gray;
+    }
+}
+
+/*Node emploi*/
+.node-type-job .pnf-content-right .field-label{
+        font-weight: 600;
+        color: @gray;
+    }
+
+/*Node evenements*/
+.node-type-event{
+    .field-name-field-event-categorie{
+        text-transform: uppercase;
+        color: @gray-light;
+        float: left;
+    }
+    .field-name-field-public{
+        float: right;
+        color: @gray;
+        font-style:italic;
+        font-size: @font-size-small;
+            .field-label{
+                font-weight: normal;
+            }
+    }
+    .field-name-field-event-location,
+    .field-name-field-event-dates{
+        .field-label{
+            color: #999;
+            font-size: @font-size-h2;
+            font-weight: 600;
+            border-right: 1px solid #999;
+            margin-right: 20px;
+            padding-right: 10px;
+        }
+        .field-items{
+            color: #999;
+        }
+    }
+    .field-name-field-event-dates{
+        float: left;
+    }
+    .field-name-field-event-location{
+        float: right;
+    }
+    .field-name-body{
+        clear: left;
+    }
+}
+
+/*Page d'aterrissage*/
+.node-type-page .content{
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+#block-child-menu-items-child-menu-items{
+    .cmi-wrapper{
+        background: #fff;
+        padding: 10px;
+        margin-bottom: 20px;
+        min-height: 270px;
+    }
+    h3{
+        font-size: @font-size-h4;
+        a{
+            text-decoration: none;
+        }
+    }
+    .cmi-wrapper:hover{
+                -moz-box-shadow: 0px 0px 10px 0px #999999;
+        -webkit-box-shadow: 0px 0px 10px 0px #999999;
+        -o-box-shadow: 0px 0px 10px 0px #999999;
+        box-shadow: 0px 0px 10px 0px #999999;
+        filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999, Direction=NaN, Strength=10);
+    }
+
+}
+
+/*Content type*/
+.pnf-content-left .content-wrapper,
+.pnf-content-right .content-wrapper{
+    background: #fff;
+    padding: 15px;
+        .field{
+            margin-bottom: 15px;
+        }
+        .field-name-field-downloadable-docs{
+            a:before{
+                font-family: 'Fontawesome';
+                content: '\f016';
+                font-size: @font-size-base;
+                padding-right: 10px;
+            }
+            .field-label{
+                font-size: @font-size-h4;
+                font-weight: 600;
+                color: @gray;
+            }
+            .field-label,
+            .download-file{
+                margin-bottom: 10px;
+            }
+        }
+}
 
 /*Menu tools*/
 #block-menu-menu-tools {
@@ -493,4 +676,19 @@ a{
         color: #FFF;
         font-weight: 600;
     }
+}
+
+/*Resumes image overlay*/
+.group-resume {
+    cursor: pointer;
+
+        p {
+           // display: none;
+            position: absolute;
+            top: 0;
+            margin-right: 15px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px; 
+            color: #fff   
+        }
 }
