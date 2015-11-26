@@ -38,25 +38,28 @@ function kcore_block_view_alter(&$data, $block) {
 
 	$host_parts = explode('.', $_SERVER['HTTP_HOST']);
 
-	// Config for staging site >> http://pnXX.pnfdev.xyz/
-	if ($host_parts[2] == 'xyz' ) {
-		$park_names = array(
-		  'pnca' => 'Le Parc national des Calanques',
-		  'pnce' => 'Le Parc national des Cévennes',
-		  'pnec' => 'Le Parc national des Ecrins',
-		  'pngu' => 'Le Parc national de la Guadeloupe',
-		  'pnme' => 'Le Parc national du Mercantour',
-		  'pnag' => 'Le Parc amazonien de Guyane',
-		  'pnpy' => 'Le Parc national des Pyrénées',
-		  'pnf' => 'Parcs nationaux de France',
-		  'pnpc' => 'Le Parc national de Port-Cros',
-		  'pnre' => 'Le Parc national de La Réunion',
-		  'pnva' => 'Le Parc national de la Vanoise',
+	// Config for staging sites
+	// AR >> http://pnXX.pnfdev.xyz/
+	// Korora >> http://pnXX.korora.fr/
+	if ($host_parts[2] == 'xyz' || $host_parts[1] == 'korora') {
+	  $park_names = array(
+		'pnca' => 'Le Parc national des Calanques',
+		'pnce' => 'Le Parc national des Cévennes',
+		'pnec' => 'Le Parc national des Ecrins',
+		'pngu' => 'Le Parc national de la Guadeloupe',
+		'pnme' => 'Le Parc national du Mercantour',
+		'pnag' => 'Le Parc amazonien de Guyane',
+		'pnpy' => 'Le Parc national des Pyrénées',
+		'pnf' => 'Parcs nationaux de France',
+		'pnpc' => 'Le Parc national de Port-Cros',
+		'pnre' => 'Le Parc national de La Réunion',
+		'pnva' => 'Le Parc national de la Vanoise',
 		);
-		
-		$current_park_name = $park_names[$host_parts[0]];
 
-	} else {
+	  $current_park_name = $park_names[$host_parts[0]];
+
+	}
+	else {
 		$current_park_name = $park_names[$host_parts[1]];
 	}
 
