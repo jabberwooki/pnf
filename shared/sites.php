@@ -20,7 +20,7 @@ $sites = array(
   'www.reunion-parcnational.dev' => 'reunion-parcnational.fr',
   'www.vanoise-parcnational.dev' => 'vanoise-parcnational.fr',
 
- // Staging sites
+ // Staging sites AR
   'pnca.pnfdev.xyz' => 'calanques-parcnational.fr',
   'pnce.pnfdev.xyz' => 'cevennes-parcnational.fr',
   'pnec.pnfdev.xyz' => 'ecrins-parcnational.fr',
@@ -32,6 +32,19 @@ $sites = array(
   'pnpc.pnfdev.xyz' => 'portcrosparcnational.fr',
   'pnre.pnfdev.xyz' => 'reunion-parcnational.fr',
   'pnva.pnfdev.xyz' => 'vanoise-parcnational.fr',
+
+  // Staging sites Korora
+  'pnca.korora.fr' => 'calanques-parcnational.fr',
+  'pnce.korora.fr' => 'cevennes-parcnational.fr',
+  'pnec.korora.fr' => 'ecrins-parcnational.fr',
+  'pngd.korora.fr' => 'guadeloupe-parcnational.fr',
+  'pnme.korora.fr' => 'mercantour.eu',
+  'pnag.korora.fr' => 'parc-amazonien-guyane.fr',
+  'pnpy.korora.fr' => 'parc-pyrenees.com',
+  'pnf.korora.fr' => 'parcsnationaux.fr',
+  'pnpc.korora.fr' => 'portcrosparcnational.fr',
+  'pnre.korora.fr' => 'reunion-parcnational.fr',
+  'pnva.korora.fr' => 'vanoise-parcnational.fr',
 
  // Live sites
   'www.calanques-parcnational.fr' => 'calanques-parcnational.fr',
