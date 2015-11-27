@@ -27,6 +27,24 @@
     $('.view-multimedia .multimedia-teaser').matchHeight('options');
     $('.view-multimedia .multimedia-teaser h3').matchHeight('options');
 
+    /* Toolbar Menu */
+    $('#block-menu-menu-tools .tool a').css('right', - $(this).width());
+
+    $('#block-menu-menu-tools .tool').mouseenter(function() {
+      $('a', this).animate({right: '0px'}, 50);
+    });
+
+    $('#block-menu-menu-tools .tool').mouseleave(function() {
+      $('a', this).animate({right: - $(this).width()}, 100);
+    });
+
+      /* Resumes p link to node */
+    $('#block-menu-menu-tools li').click(function(event) {
+      var link = $('a',this).attr('href');
+      console.log(link);
+      window.location = link;
+    });
+
     /* Resumes image overlay */
     setParagraphSize();
 
