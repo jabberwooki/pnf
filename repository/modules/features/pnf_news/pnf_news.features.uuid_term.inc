@@ -11,6 +11,26 @@ function pnf_news_uuid_features_default_terms() {
   $terms = array();
 
   $terms[] = array(
+    'name' => 'Scolaires',
+    'description' => '',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => '3fb5ce07-2b29-4fdd-b54a-7b4aee5c6d3d',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'public',
+  );
+  $terms[] = array(
+    'name' => 'Scientifiques',
+    'description' => '',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => '7ef5329c-63f5-44af-9955-ba7032058809',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'public',
+  );
+  $terms[] = array(
     'name' => 'Brèves',
     'description' => '',
     'format' => 'full_html',
@@ -39,6 +59,26 @@ function pnf_news_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'news_types',
+  );
+  $terms[] = array(
+    'name' => 'Institutionnels',
+    'description' => '',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => 'dc16e89a-80bd-4fbb-bb49-3163b7cf1535',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'public',
+  );
+  $terms[] = array(
+    'name' => 'Grand public',
+    'description' => '',
+    'format' => 'full_html',
+    'weight' => 0,
+    'uuid' => 'ef16beb7-1370-433e-b4c0-4219a3184953',
+    'language' => 'und',
+    'i18n_tsid' => 0,
+    'vocabulary_machine_name' => 'public',
   );
   return $terms;
 }

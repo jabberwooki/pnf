@@ -143,8 +143,12 @@ projects[field_collection][version] = "1.0-beta9"
 ;projects[field_formatter_settings][subdir] = contrib
 ;projects[field_formatter_settings][version] = ""
 
+projects[field_slideshow][subdir] = contrib
+projects[field_slideshow][version] = "1.82"
+
 projects[image_field_caption][subdir] = contrib
 projects[image_field_caption][version] = "2.1"
+projects[image_field_caption][patch][] = "https://www.drupal.org/files/issues/image_field_caption-set_default_input_format-2026301-20.patch"
 
 projects[filefield_sources][subdir] = contrib
 projects[filefield_sources][version] = "1.9"
@@ -218,9 +222,6 @@ projects[geophp][version] = "1.7"
 
 projects[geofield][subdir] = contrib
 projects[geofield][version] = "2.3"
-
-projects[geofield_map][subdir] = contrib
-projects[geofield_map][version] = "2.3"
 
 ;projects[leaflet][subdir] = contrib
 ;projects[leaflet][version] = ""
