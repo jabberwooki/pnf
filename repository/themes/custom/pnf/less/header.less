@@ -44,9 +44,39 @@ input[type="search"].sb-search-input {
 	-webkit-appearance: none;
 	-webkit-border-radius: 0px;
 }
-.search-form input{
-	display: none;
+
+#block-custom-search-blocks-1  .search-form:before {
+    font-family: 'Fontawesome';
+    content: "\f002";
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    border: 1px solid #000;
 }
+
+#block-custom-search-blocks-1 .search-form  {
+	div {
+		display: inline-block;
+		margin-right: 10px;
+	}
+    .form-group {
+        margin-bottom: 0;
+    }
+
+	.btn.form-submit {
+		display: none;
+	}
+
+	input.form-control {
+		border-radius: 0;
+		height: 28px;
+    	border: 1px solid #000;
+	}
+}
+
+
 
 /*Menu select*/
 #block-menu-menu-national-parks,

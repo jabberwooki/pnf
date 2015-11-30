@@ -5,6 +5,17 @@
     $('#block-menu-menu-menu-park, #block-menu-menu-national-parks').addClass('dropdown');
     $('#block-menu-menu-menu-park ul li ul, #block-menu-menu-national-parks ul li ul').addClass('dropdown-menu');
 
+    /* Search Form */
+    $('#block-custom-search-blocks-1 .search-form input.form-control').hide();
+
+    $('#block-custom-search-blocks-1 .search-form').mouseenter(function() {
+      $('input.form-control', this).show('fast');
+    });
+
+    $('#block-custom-search-blocks-1 .search-form').mouseleave(function() {
+      $('input.form-control', this).hide('slow');
+    });
+
     // Position the mega menu
     positionMegaMenuDropDown();
     $( window ).resize( positionMegaMenuDropDown );
@@ -20,7 +31,7 @@
     $('.view-news .view-mode-teaser_home, .view-news .view-mode-teaser').matchHeight('options');
     //$('.view-news .view-mode-teaser_home .field-name-body p, .view-news .view-mode-teaser .field-name-body p').matchHeight('options');
     $('.view-news .view-mode-teaser_home .field-name-title h3, .view-news .view-mode-teaser .field-name-title h3').matchHeight('options');
-    
+
     $('.page-agenda .view-mode-teaser').matchHeight('options');
     $('.page-agenda .view-mode-teaser h3').matchHeight('options');
 
@@ -38,7 +49,7 @@
       $('a', this).animate({right: - $(this).width()}, 100);
     });
 
-      /* Resumes p link to node */
+    /* Toolbar icons link to conyent */
     $('#block-menu-menu-tools li').click(function(event) {
       var link = $('a',this).attr('href');
       console.log(link);
@@ -51,7 +62,7 @@
     $( window ).resize( setParagraphSize );
 
     $('.group-resume p').hide();
-    
+
     $('.group-resume').mouseenter(function() {
       $('p', this).slideDown('fast');
     });
