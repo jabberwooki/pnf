@@ -4,4 +4,4 @@
  * Code for the RAA feature.
  */
 
-include_once 'raa.features.inc';
+include_once 'pnf_raa.features.inc';

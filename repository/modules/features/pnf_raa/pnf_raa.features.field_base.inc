@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * raa.features.field_base.inc
+ * pnf_raa.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function raa_field_default_field_bases() {
+function pnf_raa_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'field_raa_category'

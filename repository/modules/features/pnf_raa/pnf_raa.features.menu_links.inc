@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * raa.features.menu_links.inc
+ * pnf_raa.features.menu_links.inc
  */
 
 /**
  * Implements hook_menu_default_menu_links().
  */
-function raa_menu_default_menu_links() {
+function pnf_raa_menu_default_menu_links() {
   $menu_links = array();
 
   // Exported menu link: menu-menu-park_recueil-des-actes-administratifs:raa

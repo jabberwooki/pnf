@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * raa.views_default.inc
+ * pnf_raa.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function raa_views_default_views() {
+function pnf_raa_views_default_views() {
   $export = array();
 
   $view = new view();

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * raa.features.uuid_term.inc
+ * pnf_raa.features.uuid_term.inc
  */
 
 /**
  * Implements hook_uuid_features_default_terms().
  */
-function raa_uuid_features_default_terms() {
+function pnf_raa_uuid_features_default_terms() {
   $terms = array();
 
   $terms[] = array(

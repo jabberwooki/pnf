@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * raa.ds.inc
+ * pnf_raa.ds.inc
  */
 
 /**
  * Implements hook_ds_layout_settings_info().
  */
-function raa_ds_layout_settings_info() {
+function pnf_raa_ds_layout_settings_info() {
   $export = array();
 
   $ds_layout = new stdClass();

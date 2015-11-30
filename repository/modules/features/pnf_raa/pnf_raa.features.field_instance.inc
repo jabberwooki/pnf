@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * raa.features.field_instance.inc
+ * pnf_raa.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function raa_field_default_field_instances() {
+function pnf_raa_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:

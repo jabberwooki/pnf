@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * raa.features.inc
+ * pnf_raa.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function raa_ctools_plugin_api($module = NULL, $api = NULL) {
+function pnf_raa_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "ds" && $api == "ds") {
     return array("version" => "1");
   }
@@ -19,14 +19,14 @@ function raa_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_views_api().
  */
-function raa_views_api($module = NULL, $api = NULL) {
+function pnf_raa_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
 /**
  * Implements hook_node_info().
  */
-function raa_node_info() {
+function pnf_raa_node_info() {
   $items = array(
     'raa' => array(
       'name' => t('RAA'),

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * raa.strongarm.inc
+ * pnf_raa.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function raa_strongarm() {
+function pnf_raa_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
