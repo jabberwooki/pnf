@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RAA feature.
+ */
+
+include_once 'raa.features.inc';
