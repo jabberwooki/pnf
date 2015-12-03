@@ -53,13 +53,13 @@ input[type="search"].sb-search-input {
     padding-right: 5px;
     padding-top: 3px;
     padding-bottom: 5px;
-    border: 1px solid #000;
+    border: 1px solid #ccc;
 }
 
 #block-custom-search-blocks-1 .search-form  {
 	div {
 		display: inline-block;
-		margin-right: 10px;
+		margin-right: 5px;
 	}
     .form-group {
         margin-bottom: 0;
@@ -72,30 +72,68 @@ input[type="search"].sb-search-input {
 	input.form-control {
 		border-radius: 0;
 		height: 28px;
-    	border: 1px solid #000;
+    	border: 1px solid #ccc;
+    	position: absolute;
+    	top: -1px;
+    	width: 150px;
 	}
+}
+
+/*Langues*/
+#block-lang-dropdown-language .form-control{
+	padding: 3px;
+	border-radius:0;
+	text-transform: uppercase;
+	height: auto;
 }
 
 
 
 /*Menu select*/
+
 #block-menu-menu-national-parks,
-#block-menu-menu-menu-park {
+#block-menu-menu-menu-park{
 	margin-right: 15px;
-		select{
-			background-color: @brand-primary;
-		    border: none;
-		    color: #fff;
-		    font-size: @font-size-small;
-		    padding: 5px;
-		    	cursor: pointer;
-		}
+	ul li.first.last.expanded{
+		background-color: @brand-primary;
+		border: 1px solid @brand-primary;
+		font-size: @font-size-small;
+		padding: 2px 7px;
+	}
+	ul li.expanded a{
+		color: #fff;
+		padding: 2px 7px;
+	}
+	ul li:first-child a:after{
+		font-family: 'Fontawesome';
+		content: "\f107";
+		padding-left: 10px;
+	}
+	ul li ul.dropdown-menu{
+	    width: 100%;
+	    border: 1px solid #ccc;
+	    margin: 0;
+	    padding: 0;
+	}
+	ul li ul.dropdown-menu li a{
+		color: @gray-base;
+		font-size: @font-size-small;
+		background: #f4f4f4;
+		border-top: 1px solid #ccc;
+		padding: 5px 7px;
+	}
+	ul li ul.dropdown-menu li a.active,
+	ul li ul.dropdown-menu li a:hover{
+		background-color: @brand-secondary;
+	}
 }
 
 #block-menu-menu-national-parks{
-	select{
+	ul li.first.last.expanded{
 		background-color: #fff;
-		border: 1px solid #666;
+		border: 1px solid #ccc;
+	}
+	ul li.expanded a{
 		color: #666;
 	}
 }
