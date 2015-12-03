@@ -26,7 +26,6 @@ features[field_instance][] = field_collection_item-field_raa_files-field_raa_fil
 features[field_instance][] = node-raa-field_pub_dates
 features[field_instance][] = node-raa-field_raa_category
 features[field_instance][] = node-raa-field_raa_files
-features[menu_links][] = menu-menu-park_recueil-des-actes-administratifs:raa
 features[node][] = raa
 features[taxonomy][] = raa_categories
 features[uuid_term][] = 04f29764-1010-4bc8-80c3-cee67975fd64
