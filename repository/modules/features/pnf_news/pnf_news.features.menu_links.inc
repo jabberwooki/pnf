@@ -85,7 +85,7 @@ function pnf_news_menu_default_menu_links() {
       ),
       'item_attributes' => array(
         'id' => '',
-        'class' => '',
+        'class' => 'tool tool-news',
         'style' => '',
       ),
     ),

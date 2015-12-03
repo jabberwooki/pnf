@@ -221,7 +221,7 @@ function pnf_multimedia_menu_default_menu_links() {
       ),
       'item_attributes' => array(
         'id' => '',
-        'class' => '',
+        'class' => 'tool tool-multimedia',
         'style' => '',
       ),
     ),
