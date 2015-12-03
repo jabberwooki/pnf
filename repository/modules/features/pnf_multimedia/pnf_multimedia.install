@@ -1,0 +1,14 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: chris
+ * Date: 03/12/15
+ * Time: 12:12
+ */
+
+/**
+ * Activate scald_youtube module.
+ */
+function pnf_multimedia_update_7001() {
+
+}

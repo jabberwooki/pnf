@@ -275,6 +275,9 @@ projects[scald_dailymotion][version] = "1.4"
 projects[scald_vimeo][subdir] = contrib
 projects[scald_vimeo][version] = "1.4"
 
+projects[scald_youtube][subdir] = contrib
+projects[scald_youtube][version] = "1.5"
+
 projects[scald_soundcloud][subdir] = contrib
 projects[scald_soundcloud][version] = "1.2"
 
