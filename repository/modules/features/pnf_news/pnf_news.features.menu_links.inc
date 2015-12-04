@@ -78,11 +78,7 @@ function pnf_news_menu_default_menu_links() {
     'link_title' => 'Actualités',
     'options' => array(
       'identifier' => 'menu-tools_actualits:actualites',
-      'attributes' => array(
-        'class' => array(
-          0 => 'tool-news',
-        ),
-      ),
+      'attributes' => array(),
       'item_attributes' => array(
         'id' => '',
         'class' => 'tool tool-news',
