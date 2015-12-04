@@ -214,11 +214,7 @@ function pnf_multimedia_menu_default_menu_links() {
     'link_title' => 'Médiathèque',
     'options' => array(
       'identifier' => 'menu-tools_mdiathque:documents',
-      'attributes' => array(
-        'class' => array(
-          0 => 'tool-multimedia',
-        ),
-      ),
+      'attributes' => array(),
       'item_attributes' => array(
         'id' => '',
         'class' => 'tool tool-multimedia',
