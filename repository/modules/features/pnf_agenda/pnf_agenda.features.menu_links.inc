@@ -38,14 +38,10 @@ function pnf_agenda_menu_default_menu_links() {
     'link_title' => 'Agenda',
     'options' => array(
       'identifier' => 'menu-tools_agenda:agenda',
-      'attributes' => array(
-        'class' => array(
-          0 => 'tool-events',
-        ),
-      ),
+      'attributes' => array(),
       'item_attributes' => array(
         'id' => '',
-        'class' => '',
+        'class' => 'tool tool-events',
         'style' => '',
       ),
     ),
