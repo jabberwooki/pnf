@@ -176,6 +176,7 @@ dependencies[] = pnf_contact
 dependencies[] = pnf_promotions
 dependencies[] = pnf_landing_pages
 dependencies[] = pnf_social_media
+dependencies[] = pnf_advanced_pages
 
 ;--- PNF custom modules -------------------------------------------------------
 dependencies[] = pnx_settings

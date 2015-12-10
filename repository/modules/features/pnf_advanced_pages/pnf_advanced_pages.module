@@ -1,0 +1,60 @@
+<?php
+/**
+ * @file
+ * Code for the Pages avancées feature.
+ */
+
+include_once 'pnf_advanced_pages.features.inc';
+
+/**
+ * Implements hook_init().;
+ */
+function pnf_advanced_pages_init() {
+  $obj = menu_get_object();
+  if (!empty($obj) && $obj->type == 'advanced_page') {
+    if (arg(2) == 'edit') {
+      $available_colors = array(
+        'color1' => variable_get('bg_color_1', 'eeeeee'),
+        'color2' => variable_get('bg_color_2', 'cccccc'),
+        'color3' => variable_get('bg_color_3', 'aaaaaa'),
+      );
+      drupal_add_js(array('pnf_advanced_pages_edit' => $available_colors), 'setting');
+    }
+    drupal_add_js(drupal_get_path('module','pnf_advanced_pages') . '/js/pnf_advanced_pages.js');
+    drupal_add_css(drupal_get_path('module','pnf_advanced_pages') . '/css/pnf_advanced_pages.css');
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function pnf_advanced_pages_menu() {
+  $items = array();
+  $items['admin/config/pnf_adv_pages'] = array(
+    'title' => t('Advanced pages settings'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('pnf_adv_pages_settings_form'),
+    'access arguments' => array('administer pnf settings'),
+    'file' => 'pnf_advanced_pages.admin.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function pnf_advanced_pages_entity_view_alter(&$build, $type) {
+  if ($build['#entity_type'] == 'paragraphs_item' && $build['#view_mode'] == 'full') {
+    $params = array('view_mode' => 'full');
+    switch ($build['#bundle']) {
+      case 'colored_bg_text':
+        $params['bg_color'] = $build['#entity']->field_bg_color['und'][0]['value'];
+        break;
+      case 'images_group':
+        $params['images_group_item_class'] = 'col-md-4';
+    }
+    drupal_add_js(array('pnf_advanced_pages_view' => $params), 'setting');
+  }
+}

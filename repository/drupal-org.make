@@ -177,6 +177,9 @@ projects[menu_fields][version] = "1.x-dev"
 ;projects[migrate_extras][subdir] = contrib
 ;projects[migrate_extras][version] = ""
 
+projects[paragraphs][subdir] = contrib
+projects[paragraphs][version] = "1.0-rc4"
+
 ;projects[password_policy][subdir] = contrib
 ;projects[password_policy][version] = ""
 
