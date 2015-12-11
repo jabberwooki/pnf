@@ -45,8 +45,34 @@ $sites = array(
   'pnpc.korora.fr' => 'portcrosparcnational.fr',
   'pnre.korora.fr' => 'reunion-parcnational.fr',
   'pnva.korora.fr' => 'vanoise-parcnational.fr',
+  
+  // Preprod sites
+  'preprod-pncal.parcnational.fr' => 'calanques-parcnational.fr',
+  'preprod-pnc.parcnational.fr' => 'cevennes-parcnational.fr',
+  'preprod-pne.parcnational.fr' => 'ecrins-parcnational.fr',
+  'preprod-png.parcnational.fr' => 'guadeloupe-parcnational.fr',
+  'preprod-pnm.parcnational.fr' => 'mercantour.eu',
+  'preprod-pnag.parcnational.fr' => 'parc-amazonien-guyane.fr',
+  'preprod-pnp.parcnational.fr' => 'parc-pyrenees.com',
+  'preprod-pnf.parcsnationaux.fr' => 'parcsnationaux.fr',
+  'preprod-pnpc.parcnational.fr' => 'portcrosparcnational.fr',
+  'preprod-pnrun.parcnational.fr' => 'reunion-parcnational.fr',
+  'preprod-pnv.parcnational.fr' => 'vanoise-parcnational.fr',
+  
+  // Prod test sites
+  'prod-pncal.parcnational.fr' => 'calanques-parcnational.fr',
+  'prod-pnc.parcnational.fr' => 'cevennes-parcnational.fr',
+  'prod-pne.parcnational.fr' => 'ecrins-parcnational.fr',
+  'prod-png.parcnational.fr' => 'guadeloupe-parcnational.fr',
+  'prod-pnm.parcnational.fr' => 'mercantour.eu',
+  'prod-pnag.parcnational.fr' => 'parc-amazonien-guyane.fr',
+  'prod-pnp.parcnational.fr' => 'parc-pyrenees.com',
+  'prod-pnf.parcsnationaux.fr' => 'parcsnationaux.fr',
+  'prod-pnpc.parcnational.fr' => 'portcrosparcnational.fr',
+  'prod-pnrun.parcnational.fr' => 'reunion-parcnational.fr',
+  'prod-pnv.parcnational.fr' => 'vanoise-parcnational.fr',
 
- // Live sites
+  // Live sites
   'www.calanques-parcnational.fr' => 'calanques-parcnational.fr',
   'www.cevennes-parcnational.fr' => 'cevennes-parcnational.fr',
   'www.ecrins-parcnational.fr' => 'ecrins-parcnational.fr',
