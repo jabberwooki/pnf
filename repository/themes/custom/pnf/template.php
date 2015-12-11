@@ -59,38 +59,115 @@ if ($parts[0] != 'xyz') {
 	}
 } else {
 	switch($parts[2]) {
-		case 'pnca':
-			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnca_style.css.less');
+	  // Calanque
+	  case 'pnca':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnca_style.css.less');
 		break;
-		case 'pnce':
-			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnce_style.css.less');
+	  case 'preprod-pncal':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnca_style.css.less');
 		break;
-		case 'pnec':
-			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnec_style.css.less');
+	  case 'prod-pncal':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnca_style.css.less');
 		break;
-		case 'pngd':
-			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pngd_style.css.less');
+	  // Cévennes
+	  case 'pnce':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnce_style.css.less');
 		break;
-		case 'pnme':
-			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnme_style.css.less');
+	  case 'preprod-pnc':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnce_style.css.less');
 		break;
-		case 'pnag':
-			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnag_style.css.less');
+	  case 'prod-pnc':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnce_style.css.less');
 		break;
-		case 'pnpy':
-			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnpy_style.css.less');
+	  // Ecrins
+	  case 'pnec':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnec_style.css.less');
 		break;
-		case 'pnf':
-			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnf_style.css.less');
-		break;	
-		case 'pnpc':
-			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnpc_style.css.less');
+	  case 'preprod-pne':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnec_style.css.less');
 		break;
-		case 'pnre':
-			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnre_style.css.less');
+	  case 'prod-pne':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnec_style.css.less');
 		break;
-		case 'pnva':
-			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnva_style.css.less');
-		break;	
+	  // Guadeloupe
+	  case 'pngd':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pngd_style.css.less');
+		break;
+	  case 'preprod-png':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pngd_style.css.less');
+		break;
+	  case 'prod-png':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pngd_style.css.less');
+		break;
+	  // Mercantour
+	  case 'pnme':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnme_style.css.less');
+		break;
+	  case 'preprod-pnm':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnme_style.css.less');
+		break;
+	  case 'prod-pnm':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnme_style.css.less');
+		break;
+	  // Amazonien de Guyane
+	  case 'pnag':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnag_style.css.less');
+		break;
+	  case 'preprod-pag':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnag_style.css.less');
+		break;
+	  case 'prod-pag':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnag_style.css.less');
+		break;
+	  // Pyrénées
+	  case 'pnpy':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnpy_style.css.less');
+		break;
+	  case 'preprod-pnp':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnpy_style.css.less');
+		break;
+	  case 'prod-pnp':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnpy_style.css.less');
+		break;
+	  // Parcs nationaux de France
+	  case 'pnf':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnf_style.css.less');
+		break;
+	  case 'preprod-pnf':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnf_style.css.less');
+		break;
+	  case 'prod-pnf':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnf_style.css.less');
+		break;
+	  // Port-Cros
+	  case 'pnpc':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnpc_style.css.less');
+		break;
+	  case 'preprod-pnpc':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnpc_style.css.less');
+		break;
+	  case 'prod-pnpc':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnpc_style.css.less');
+		break;
+	  // Réunion
+	  case 'pnre':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnre_style.css.less');
+		break;
+	  case 'preprod-pnrun':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnre_style.css.less');
+		break;
+	  case 'prod-pnrun':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnre_style.css.less');
+		break;
+	  // Vanoise
+	  case 'pnva':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnva_style.css.less');
+		break;
+	  case 'preprod-pnv':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnva_style.css.less');
+		break;
+	  case 'prod-pnv':
+		drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnva_style.css.less');
+		break;
 	}
 }
