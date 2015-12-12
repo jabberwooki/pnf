@@ -10,19 +10,8 @@ include_once 'pnf_advanced_pages.features.inc';
  * Implements hook_init().;
  */
 function pnf_advanced_pages_init() {
-  $obj = menu_get_object();
-  if (!empty($obj) && $obj->type == 'advanced_page') {
-    if (arg(2) == 'edit') {
-      $available_colors = array(
-        'color1' => variable_get('bg_color_1', 'eeeeee'),
-        'color2' => variable_get('bg_color_2', 'cccccc'),
-        'color3' => variable_get('bg_color_3', 'aaaaaa'),
-      );
-      drupal_add_js(array('pnf_advanced_pages_edit' => $available_colors), 'setting');
-    }
-    drupal_add_js(drupal_get_path('module','pnf_advanced_pages') . '/js/pnf_advanced_pages.js');
-    drupal_add_css(drupal_get_path('module','pnf_advanced_pages') . '/css/pnf_advanced_pages.css');
-  }
+  drupal_add_js(drupal_get_path('module','pnf_advanced_pages') . '/js/pnf_advanced_pages.js');
+  drupal_add_css(drupal_get_path('module','pnf_advanced_pages') . '/css/pnf_advanced_pages.css');
 }
 
 /**
@@ -50,11 +39,35 @@ function pnf_advanced_pages_entity_view_alter(&$build, $type) {
     $params = array('view_mode' => 'full');
     switch ($build['#bundle']) {
       case 'colored_bg_text':
-        $params['bg_color'] = $build['#entity']->field_bg_color['und'][0]['value'];
+        $param = 'bg_color_' . $build['#entity']->field_bg_color['und'][0]['value'];
+        $params['bg_color'] = variable_get($param, 'FFFFFF');
         break;
       case 'images_group':
-        $params['images_group_item_class'] = 'col-md-4';
+        $params['images_group_item'] = 1;
     }
     drupal_add_js(array('pnf_advanced_pages_view' => $params), 'setting');
+  }
+}
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+function pnf_advanced_pages_field_widget_text_textfield_form_alter(&$element, &$form_state, $context) {
+  // Add clickable colors below field_bg_color for bundle colored_bg_text.
+  if ($element['#field_name'] == 'field_bg_color') {
+    $color1 = variable_get('bg_color_1', 'EEEEEE');
+    $color2 = variable_get('bg_color_2', 'CCCCCC');
+    $color3 = variable_get('bg_color_3', 'AAAAAA');
+    $available_colors =
+      '<div id="available_colors">' .
+      '<p id="available_colors_text">Couleurs disponibles (cliquer sur une couleur pour la sélectionner) : </p>' .
+      '<p>' .
+      '<span class="pnf-bg-color" style="background-color: #' . $color1 . '">' . '1' . '</span>' .
+      '<span class="pnf-bg-color" style="background-color: #' . $color2 . '">' . '2' . '</span>' .
+      '<span class="pnf-bg-color" style="background-color: #' . $color3 . '">' . '3' . '</span>' .
+      '</p>' .
+      '</div>';
+    $element['#suffix'] = $available_colors;
+    $element['value']['#size'] = 2;
   }
 }
