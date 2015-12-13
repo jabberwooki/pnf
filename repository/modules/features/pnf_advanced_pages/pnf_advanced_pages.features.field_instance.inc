@@ -35,7 +35,7 @@ function pnf_advanced_pages_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'paragraphs_view',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -108,14 +108,9 @@ function pnf_advanced_pages_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
-        'settings' => array(
-          'field_formatter_class' => '',
-          'link' => 0,
-          'override' => 0,
-        ),
-        'type' => 'title',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
