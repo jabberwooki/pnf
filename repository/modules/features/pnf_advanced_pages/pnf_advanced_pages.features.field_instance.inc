@@ -1457,7 +1457,7 @@ function pnf_advanced_pages_field_default_field_instances() {
         'weight' => 1,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'pnf_contact',
         'settings' => array(
           'field_formatter_class' => '',
