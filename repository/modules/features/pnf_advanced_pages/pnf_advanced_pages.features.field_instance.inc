@@ -390,7 +390,7 @@ function pnf_advanced_pages_field_default_field_instances() {
     'bundle' => 'colored_bg_text',
     'default_value' => array(
       0 => array(
-        'value' => 'FFFFFF',
+        'value' => 0,
       ),
     ),
     'deleted' => 0,
