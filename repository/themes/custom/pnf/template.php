@@ -5,6 +5,10 @@
  * template.php
  */
 
+
+
+
+
 /*respônsive image*/
 function pnf_preprocess_image(&$vars) {
         $vars['attributes']['class'][] = 'img-responsive'; // http://getbootstrap.com/css/#overview-responsive-images
