@@ -23,6 +23,10 @@ a {
 /*Ckeditor*/
 .node-page,
 .node-advanced-page {
+    a
+    {
+        color: #b86125;
+    }
     .intro{
         font-size: 16px;
         font-style: italic;
@@ -72,6 +76,44 @@ a {
     blockquote p {
       display: inline;
     }
+}
+
+/*paragraph*/
+.entity-paragraphs-item{
+    margin-top: 30px;
+}
+.paragraphs-item-colored-bg-text{
+        .field-type-text-long{
+            padding: 20px;
+        }
+}
+.paragraphs-item-available-docs{
+    background: #f4f4f4;
+        .group-available-docs{
+            padding: 20px;
+        }
+        h3{
+            font-weight: 600;
+            font-size: 20px;
+            margin: 0;
+        }
+        ul.download-file{
+            padding: 0;
+        }
+        ul.download-file li{
+            list-style: none;
+            font-weight: 600;
+            padding: 15px 0;
+        }
+        ul.download-file li img{
+            display: none;
+        }
+        ul.download-file li a:before{
+            font-family: 'Fontawesome';
+            padding-right: 10px;
+            font-weight: normal;
+            content:'\f016';
+        }
 }
 
 //*FRONT*//
