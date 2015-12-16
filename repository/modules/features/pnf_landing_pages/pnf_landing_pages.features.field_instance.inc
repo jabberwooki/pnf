@@ -27,6 +27,7 @@ function pnf_landing_pages_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => 'landing_page_275x150',
         ),
@@ -43,6 +44,13 @@ function pnf_landing_pages_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
+      'image_field_caption' => 0,
+      'image_field_caption_wrapper' => array(
+        'image_field_caption_default' => array(
+          'format' => 'plain_text',
+          'value' => '',
+        ),
+      ),
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
