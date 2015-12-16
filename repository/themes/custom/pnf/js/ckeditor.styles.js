@@ -16,8 +16,6 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Titre 3'  		, element : 'h3' },
             { name : 'Titre 4'		    , element : 'h4' },
             { name : 'Titre 5'		    , element : 'h5' },
-            { name : 'Preformatted Text', element : 'pre' },
-            { name : 'Address'			, element : 'address' },
             
 
             { name : 'Titre 3 - bleu'		, element : 'h3', styles : { 'color' : '#8e9fbc' } },
