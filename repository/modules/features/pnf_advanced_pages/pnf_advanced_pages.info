@@ -13,6 +13,7 @@ dependencies[] = field_slideshow
 dependencies[] = file
 dependencies[] = image
 dependencies[] = list
+dependencies[] = node
 dependencies[] = options
 dependencies[] = paragraphs
 dependencies[] = pnf_contact
