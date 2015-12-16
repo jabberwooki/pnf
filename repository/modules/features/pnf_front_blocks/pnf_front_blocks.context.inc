@@ -72,6 +72,9 @@ function pnf_front_blocks_context_default_contexts() {
     'domain' => array(
       'values' => array(
         '*.cevennes-parcnational.*' => '*.cevennes-parcnational.*',
+        'pnce.pnfdev.xyz' => 'pnce.pnfdev.xyz',
+        'preprod-pnc.*' => 'preprod-pnc.*',
+        'prod-pnc.*' => 'prod-pnc.*',
       ),
     ),
     'path' => array(
