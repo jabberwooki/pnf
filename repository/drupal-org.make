@@ -137,8 +137,8 @@ projects[entityreference][version] = "1.1"
 projects[field_collection][subdir] = contrib
 projects[field_collection][version] = "1.0-beta9"
 
-;projects[field_formatter_class][subdir] = contrib
-;projects[field_formatter_class][version] = ""
+projects[field_formatter_class][subdir] = contrib
+projects[field_formatter_class][version] = ""
 
 ;projects[field_formatter_settings][subdir] = contrib
 ;projects[field_formatter_settings][version] = ""

@@ -38,10 +38,10 @@ function kcore_block_view_alter(&$data, $block) {
 
 	$host_parts = explode('.', $_SERVER['HTTP_HOST']);
 
-	// Config for staging sites
+	// Config for staging sites.
 	// AR >> http://pnXX.pnfdev.xyz/
 	// Korora >> http://pnXX.korora.fr/
-	// OVA >> http://preprod-xxxx.parcnational.fr/
+	// OVEA >> http://preprod-xxxx.parcnational.fr/
 	if ($host_parts[2] == 'xyz' || $host_parts[1] == 'korora') {
 	  $park_names = array(
 		'pnca' => 'Le Parc national des Calanques',
@@ -77,6 +77,27 @@ function kcore_block_view_alter(&$data, $block) {
 
 	  $current_park_name = $park_names[$host_parts[0]];
 	}
+	// Config for production sites
+	// OVEA >> http://prod-xxxx.parcnational.fr/
+	elseif (substr($_SERVER['HTTP_HOST'],0,5) == 'prod-') {
+	  $park_names = array(
+		'prod-pncal' => 'Le Parc national des Calanques',
+		'prod-pnc' => 'Le Parc national des Cévennes',
+		'prod-pne' => 'Le Parc national des Ecrins',
+		'prod-png' => 'Le Parc national de la Guadeloupe',
+		'prod-pnm' => 'Le Parc national du Mercantour',
+		'prod-pag' => 'Le Parc amazonien de Guyane',
+		'prod-pnp' => 'Le Parc national des Pyrénées',
+		'prod-pnf' => 'Parcs nationaux de France',
+		'prod-pnpc' => 'Le Parc national de Port-Cros',
+		'prod-pnrun' => 'Le Parc national de La Réunion',
+		'prod-pnv' => 'Le Parc national de la Vanoise',
+	  );
+
+	  $current_park_name = $park_names[$host_parts[0]];
+	}
+	// Config for dev sites : http://www.<parc-name>.dev
+	// And real live sites : http://www.<parc-name>.fr
 	else {
 	  $current_park_name = $park_names[$host_parts[1]];
 	}

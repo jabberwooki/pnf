@@ -75,3 +75,10 @@ function kcore_update_7009() {
 function kcore_update_7010() {
   module_enable(array('geofield_map'));
 }
+
+/**
+ * Activate field_formatter_class module.
+ */
+function kcore_update_7011() {
+  module_enable(array('field_formatter_class'));
+}
