@@ -13,15 +13,20 @@ if(typeof(CKEDITOR) !== 'undefined') {
            
             { name : 'Paragraphe'		, element : 'p' },
             { name : 'Intro'            , element : 'div', attributes : { 'class' : 'intro'}, styles : { 'color' : '#ed8b00','font-style' : 'italic' } },
+            { name : 'Bouton'           , element : 'div', attributes : { 'class' : 'boutonok'}, styles : { 'color' : '#fff'} },
             { name : 'Titre 3'  		, element : 'h3' },
             { name : 'Titre 4'		    , element : 'h4' },
             { name : 'Titre 5'		    , element : 'h5' },
+
+            { name : 'Paragraphe bleu foncé'   , element : 'p', styles : { 'color' : '#8e9fbc' } }, 
+            { name : 'Paragraphe bleu clair'   , element : 'p', styles : { 'color' : '#d5dae3' } }, 
+            { name : 'Paragraphe orange'       , element : 'p', styles : { 'color' : '#ed8b00' } }, 
+            { name : 'Paragraphe marron'       , element : 'p', styles : { 'color' : '#b86125' } }, 
             
 
-            { name : 'Titre 3 - bleu'		, element : 'h3', styles : { 'color' : '#8e9fbc' } },
-            { name : 'Titre 3 - vert'       , element : 'h3', styles : { 'color' : '#c4d600' } },
-            { name : 'Titre 3 - marron'     , element : 'h3', styles : { 'color' : '#b86125' } },
-
+            { name : 'Titre 3 - bleu'		    , element : 'h3', styles : { 'color' : '#8e9fbc' } },
+            { name : 'Titre 3 - vert'           , element : 'h3', styles : { 'color' : '#c4d600' } },
+            { name : 'Titre 3 - marron'         , element : 'h3', styles : { 'color' : '#b86125' } },
 
 
             /* Object Styles */

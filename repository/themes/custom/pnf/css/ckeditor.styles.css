@@ -97,6 +97,7 @@ color: #fff000;
 h3{
 	font-size: 26px;
 	color:#333;
+	margin-top: 0;
 }
 
 h4{
@@ -112,6 +113,22 @@ h5{
 .intro{
 	font-size: 16px;
 	font-style: italic;
+	margin-bottom: 20px;
+}
+.boutonok{
+	padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    color: #ffffff;
+    background-color: #ed8b00;
+    border-color: #e88800;
+    font-weight: 700;
+    display: block;
+    float: left;
+}
+.boutonok a{
+	color: #fff;
 }
 
 hr
