@@ -6,7 +6,6 @@ dependencies[] = field_group
 dependencies[] = geofield_map
 dependencies[] = pnf_contact
 dependencies[] = pnf_news
-dependencies[] = views_rss
 features[context][] = event-page
 features[context][] = events-list
 features[ctools][] = context:context:3
