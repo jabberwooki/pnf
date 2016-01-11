@@ -10,6 +10,7 @@ projects[metatag][version] = "1.7"
 
 projects[page_title][subdir] = contrib
 projects[page_title][version] = "2.7"
+projects[page_title][patch][] = "https://www.drupal.org/files/issues/cannot-redeclare-node_page_title_alter-2516726-6.patch"
 
 projects[pathauto][subdir] = contrib
 projects[pathauto][version] = "1.3"
