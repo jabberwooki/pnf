@@ -39,7 +39,7 @@ function pnf_documents_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
     'document_edit' => array(
-      'weight' => '15',
+      'weight' => '7',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -167,9 +167,10 @@ function pnf_documents_ds_layout_settings_info() {
         1 => 'field_document_category',
         2 => 'field_displayed_pub_date',
         3 => 'title',
-        4 => 'field_document_resume',
-        5 => 'field_document_links',
-        6 => 'document_edit',
+        4 => 'field_subtitle',
+        5 => 'field_document_resume',
+        6 => 'field_document_links',
+        7 => 'document_edit',
       ),
     ),
     'fields' => array(
@@ -177,6 +178,7 @@ function pnf_documents_ds_layout_settings_info() {
       'field_document_category' => 'right',
       'field_displayed_pub_date' => 'right',
       'title' => 'right',
+      'field_subtitle' => 'right',
       'field_document_resume' => 'right',
       'field_document_links' => 'right',
       'document_edit' => 'right',

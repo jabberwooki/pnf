@@ -10,7 +10,7 @@
 function pnf_documents_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_document_category'
+  // Exported field_base: 'field_document_category'.
   $field_bases['field_document_category'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -37,7 +37,7 @@ function pnf_documents_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_document_cover'
+  // Exported field_base: 'field_document_cover'.
   $field_bases['field_document_cover'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -59,7 +59,7 @@ function pnf_documents_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_document_download'
+  // Exported field_base: 'field_document_download'.
   $field_bases['field_document_download'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -82,7 +82,7 @@ function pnf_documents_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_document_flip'
+  // Exported field_base: 'field_document_flip'.
   $field_bases['field_document_flip'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -111,7 +111,7 @@ function pnf_documents_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_document_links'
+  // Exported field_base: 'field_document_links'.
   $field_bases['field_document_links'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -133,7 +133,7 @@ function pnf_documents_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_document_resume'
+  // Exported field_base: 'field_document_resume'.
   $field_bases['field_document_resume'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -150,6 +150,27 @@ function pnf_documents_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_subtitle'.
+  $field_bases['field_subtitle'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_subtitle',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
   );
 
   return $field_bases;

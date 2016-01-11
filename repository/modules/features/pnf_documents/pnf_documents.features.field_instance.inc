@@ -11,7 +11,7 @@ function pnf_documents_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'field_collection_item-field_document_links-field_document_download'
+  // 'field_collection_item-field_document_links-field_document_download'.
   $field_instances['field_collection_item-field_document_links-field_document_download'] = array(
     'bundle' => 'field_document_links',
     'deleted' => 0,
@@ -20,14 +20,18 @@ function pnf_documents_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'download_file',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'direct_download_accessible',
         'weight' => 0,
       ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'download_file',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'direct_download_accessible_icon',
         'weight' => 0,
       ),
@@ -77,7 +81,7 @@ function pnf_documents_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_document_links-field_document_flip'
+  // 'field_collection_item-field_document_links-field_document_flip'.
   $field_instances['field_collection_item-field_document_links-field_document_flip'] = array(
     'bundle' => 'field_document_links',
     'default_value' => NULL,
@@ -87,14 +91,18 @@ function pnf_documents_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'link_default',
         'weight' => 2,
       ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'link_default',
         'weight' => 3,
       ),
@@ -140,7 +148,7 @@ function pnf_documents_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-document-field_displayed_pub_date'
+  // Exported field_instance: 'node-document-field_displayed_pub_date'.
   $field_instances['node-document-field_displayed_pub_date'] = array(
     'bundle' => 'document',
     'deleted' => 0,
@@ -150,11 +158,13 @@ function pnf_documents_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'long',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 8,
@@ -163,24 +173,28 @@ function pnf_documents_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'date_xxs',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'date_xxs',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 2,
@@ -209,11 +223,11 @@ function pnf_documents_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
-  // Exported field_instance: 'node-document-field_document_category'
+  // Exported field_instance: 'node-document-field_document_category'.
   $field_instances['node-document-field_document_category'] = array(
     'bundle' => 'document',
     'default_value' => NULL,
@@ -223,21 +237,27 @@ function pnf_documents_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 0,
       ),
       'full' => array(
         'label' => 'inline',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
       ),
@@ -254,11 +274,11 @@ function pnf_documents_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
-  // Exported field_instance: 'node-document-field_document_cover'
+  // Exported field_instance: 'node-document-field_document_cover'.
   $field_instances['node-document-field_document_cover'] = array(
     'bundle' => 'document',
     'deleted' => 0,
@@ -268,6 +288,7 @@ function pnf_documents_field_default_field_instances() {
         'label' => 'above',
         'module' => 'image',
         'settings' => array(
+          'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => '',
         ),
@@ -278,16 +299,18 @@ function pnf_documents_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => 'large',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => 'thumbnail',
         ),
@@ -347,11 +370,11 @@ function pnf_documents_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
-  // Exported field_instance: 'node-document-field_document_links'
+  // Exported field_instance: 'node-document-field_document_links'.
   $field_instances['node-document-field_document_links'] = array(
     'bundle' => 'document',
     'default_value' => NULL,
@@ -366,6 +389,7 @@ function pnf_documents_field_default_field_instances() {
           'delete' => 'Supprimer',
           'description' => TRUE,
           'edit' => 'Modifier',
+          'field_formatter_class' => '',
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
@@ -379,10 +403,11 @@ function pnf_documents_field_default_field_instances() {
           'delete' => 'Supprimer',
           'description' => TRUE,
           'edit' => 'Modifier',
+          'field_formatter_class' => '',
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -392,10 +417,11 @@ function pnf_documents_field_default_field_instances() {
           'delete' => '',
           'description' => 1,
           'edit' => '',
+          'field_formatter_class' => '',
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
-        'weight' => 5,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -410,11 +436,11 @@ function pnf_documents_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
-  // Exported field_instance: 'node-document-field_document_resume'
+  // Exported field_instance: 'node-document-field_document_resume'.
   $field_instances['node-document-field_document_resume'] = array(
     'bundle' => 'document',
     'default_value' => NULL,
@@ -424,23 +450,29 @@ function pnf_documents_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 3,
       ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -492,11 +524,11 @@ function pnf_documents_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
-  // Exported field_instance: 'node-document-field_pub_dates'
+  // Exported field_instance: 'node-document-field_pub_dates'.
   $field_instances['node-document-field_pub_dates'] = array(
     'bundle' => 'document',
     'deleted' => 0,
@@ -506,11 +538,13 @@ function pnf_documents_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'long',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 7,
@@ -519,13 +553,13 @@ function pnf_documents_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 21,
       ),
     ),
     'entity_type' => 'node',
@@ -551,7 +585,92 @@ function pnf_documents_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 3,
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-document-field_subtitle'.
+  $field_instances['node-document-field_subtitle'] = array(
+    'bundle' => 'document',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
+        'type' => 'text_default',
+        'weight' => 9,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_subtitle',
+    'label' => 'Sous-titre',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => -9,
+            ),
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'linkit' => array(
+        'button_text' => 'Rechercher',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
     ),
   );
 
@@ -565,6 +684,7 @@ function pnf_documents_field_default_field_instances() {
   t('Feuilletage distant');
   t('Image phare');
   t('Résumé');
+  t('Sous-titre');
   t('Url du document sur le site distant de feuilletage (Issuu, Calameo...).');
 
   return $field_instances;

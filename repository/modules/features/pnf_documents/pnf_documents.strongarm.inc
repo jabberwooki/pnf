@@ -85,25 +85,25 @@ function pnf_documents_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '11',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '9',
+          'weight' => '10',
         ),
         'redirect' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'language' => array(
-          'weight' => '1',
+          'weight' => '2',
         ),
       ),
       'display' => array(
         'language' => array(
           'teaser' => array(
-            'weight' => '19',
+            'weight' => '20',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -111,7 +111,7 @@ function pnf_documents_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '5',
+            'weight' => '6',
             'visible' => FALSE,
           ),
         ),
@@ -163,6 +163,41 @@ function pnf_documents_strongarm() {
   $strongarm->name = 'node_submitted_document';
   $strongarm->value = 0;
   $export['node_submitted_document'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_document_en_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_document_en_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_document_fr_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_document_fr_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_document_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_document_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_document_und_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_document_und_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_document_categories_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_document_categories_pattern'] = $strongarm;
 
   return $export;
 }
