@@ -3,7 +3,7 @@ core = "7.x"
 
 ;=== Modules ==================================================================
 projects[ckeditor][subdir] = contrib
-projects[ckeditor][version] = "1.16"
+projects[ckeditor][version] = "1.17"
 
 ;=== Libraries ================================================================
 libraries[ckeditor][download][type] = "file"

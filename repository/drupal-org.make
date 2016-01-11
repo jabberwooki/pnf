@@ -12,25 +12,25 @@ projects[better_exposed_filters][subdir] = contrib
 projects[better_exposed_filters][version] = "3.2"
 
 projects[colorbox][subdir] = contrib
-projects[colorbox][version] = "2.9"
+projects[colorbox][version] = "2.10"
 
 projects[ctools][subdir] = contrib
-projects[ctools][version] = "1.7"
+projects[ctools][version] = "1.9"
 
 projects[ds][subdir] = contrib
-projects[ds][version] = "2.10"
+projects[ds][version] = "2.11"
 
 projects[entity][subdir] = contrib
 projects[entity][version] = "1.6"
 
 projects[features][subdir] = contrib
-projects[features][version] = "2.6"
+projects[features][version] = "2.7"
 
 projects[features_extra][subdir] = contrib
 projects[features_extra][version] = "1.0"
 
 projects[field_group][subdir] = contrib
-projects[field_group][version] = "1.4"
+projects[field_group][version] = "1.5"
 
 projects[files_undo_remove][subdir] = contrib
 projects[files_undo_remove][version] = "1.3"
@@ -42,7 +42,7 @@ projects[imce_mkdir][subdir] = contrib
 projects[imce_mkdir][version] = "1.0"
 
 projects[jquery_update][subdir] = contrib
-projects[jquery_update][version] = "3.0-alpha2"
+projects[jquery_update][version] = "3.0-alpha3"
 
 projects[l10n_update][subdir] = contrib
 projects[l10n_update][version] = "2.0"
@@ -54,7 +54,7 @@ projects[link][subdir] = contrib
 projects[link][version] = "1.3"
 
 projects[linkit][subdir] = contrib
-projects[linkit][version] = "3.3"
+projects[linkit][version] = "3.5"
 
 projects[options_element][subdir] = contrib
 projects[options_element][version] = "1.12"
@@ -70,7 +70,7 @@ projects[strongarm][subdir] = contrib
 projects[strongarm][version] = "2.0"
 
 projects[taxonomy_access_fix][subdir] = contrib
-projects[taxonomy_access_fix][version] = "2.2"
+projects[taxonomy_access_fix][version] = "2.3"
 
 projects[token][subdir] = contrib
 projects[token][version] = "1.6"
@@ -79,23 +79,23 @@ projects[user_settings_access][subdir] = contrib
 projects[user_settings_access][version] = "1.0"
 
 projects[uuid][subdir] = contrib
-projects[uuid][version] = "1.0-alpha6"
+projects[uuid][version] = "1.0-beta1"
 
 projects[uuid_features][subdir] = contrib
 projects[uuid_features][version] = "1.0-alpha4"
 
 projects[views][subdir] = contrib
-projects[views][version] = "3.11"
+projects[views][version] = "3.13"
 
 ;=== Modules - optional =======================================================
 projects[addressfield][subdir] = contrib
-projects[addressfield][version] = "1.1"
+projects[addressfield][version] = "1.2"
 
 projects[bean][subdir] = contrib
 projects[bean][version] = "1.9"
 
 projects[block_class][subdir] = contrib
-projects[block_class][version] = "2.1"
+projects[block_class][version] = "2.3"
 
 projects[boxes][subdir] = contrib
 projects[boxes][version] = "1.2"
@@ -111,10 +111,10 @@ projects[custom_breadcrumbs_features][subdir] = contrib
 projects[custom_breadcrumbs_features][version] = "2.0-rc1"
 
 projects[custom_search][subdir] = contrib
-projects[custom_search][version] = "1.18"
+projects[custom_search][version] = "1.20"
 
 projects[date][subdir] = contrib
-projects[date][version] = "2.8"
+projects[date][version] = "2.9"
 
 projects[download_file][subdir] = contrib
 projects[download_file][version] = "1.1"
@@ -135,13 +135,13 @@ projects[entityreference][subdir] = contrib
 projects[entityreference][version] = "1.1"
 
 projects[field_collection][subdir] = contrib
-projects[field_collection][version] = "1.0-beta9"
+projects[field_collection][version] = "1.0-beta10"
 
 projects[field_formatter_class][subdir] = contrib
-projects[field_formatter_class][version] = ""
+projects[field_formatter_class][version] = "1.1"
 
-;projects[field_formatter_settings][subdir] = contrib
-;projects[field_formatter_settings][version] = ""
+projects[field_formatter_settings][subdir] = contrib
+projects[field_formatter_settings][version] = "1.1"
 
 projects[field_slideshow][subdir] = contrib
 projects[field_slideshow][version] = "1.82"
@@ -151,7 +151,7 @@ projects[image_field_caption][version] = "2.1"
 projects[image_field_caption][patch][] = "https://www.drupal.org/files/issues/image_field_caption-set_default_input_format-2026301-20.patch"
 
 projects[filefield_sources][subdir] = contrib
-projects[filefield_sources][version] = "1.9"
+projects[filefield_sources][version] = "1.10"
 
 projects[i18n][subdir] = contrib
 projects[i18n][version] = "1.13"
@@ -267,10 +267,10 @@ projects[service_links][version] = "2.3"
 
 ;=== Scald and media related modules ==========================================
 projects[scald][subdir] = contrib
-projects[scald][version] = "1.4"
+projects[scald][version] = "1.6"
 
 projects[scald_file][subdir] = contrib
-projects[scald_file][version] = "1.1"
+projects[scald_file][version] = "1.2"
 
 projects[scald_dailymotion][subdir] = contrib
 projects[scald_dailymotion][version] = "1.4"
