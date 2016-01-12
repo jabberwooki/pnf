@@ -167,8 +167,8 @@ dependencies[] = views_bootstrap
 dependencies[] = pnf_news
 ;--- pnf_agenda has not be activated by default, some sites don't need it.
 dependencies[] = pnf_contracts
-;dependencies[] = pnf_raa
-;dependencies[] = pnf_jobs
+dependencies[] = pnf_raa
+dependencies[] = pnf_jobs
 dependencies[] = pnf_documents
 dependencies[] = pnf_multimedia
 dependencies[] = pnf_slideshow
