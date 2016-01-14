@@ -10,7 +10,7 @@
 function pnf_news_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_displayed_pub_date'
+  // Exported field_base: 'field_displayed_pub_date'.
   $field_bases['field_displayed_pub_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -39,7 +39,7 @@ function pnf_news_field_default_field_bases() {
     'type' => 'date',
   );
 
-  // Exported field_base: 'field_downloadable_docs'
+  // Exported field_base: 'field_downloadable_docs'.
   $field_bases['field_downloadable_docs'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -62,7 +62,7 @@ function pnf_news_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_key_image'
+  // Exported field_base: 'field_key_image'.
   $field_bases['field_key_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -84,7 +84,7 @@ function pnf_news_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_news_category'
+  // Exported field_base: 'field_news_category'.
   $field_bases['field_news_category'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -111,7 +111,7 @@ function pnf_news_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_news_tags'
+  // Exported field_base: 'field_news_tags'.
   $field_bases['field_news_tags'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -138,7 +138,7 @@ function pnf_news_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_news_type'
+  // Exported field_base: 'field_news_type'.
   $field_bases['field_news_type'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -165,7 +165,7 @@ function pnf_news_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_pub_dates'
+  // Exported field_base: 'field_pub_dates'.
   $field_bases['field_pub_dates'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -194,7 +194,7 @@ function pnf_news_field_default_field_bases() {
     'type' => 'date',
   );
 
-  // Exported field_base: 'field_public'
+  // Exported field_base: 'field_public'.
   $field_bases['field_public'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -221,7 +221,7 @@ function pnf_news_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_scald_gallery'
+  // Exported field_base: 'field_scald_gallery'.
   $field_bases['field_scald_gallery'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -240,7 +240,7 @@ function pnf_news_field_default_field_bases() {
     'type' => 'atom_reference',
   );
 
-  // Exported field_base: 'field_sectors'
+  // Exported field_base: 'field_sectors'.
   $field_bases['field_sectors'] = array(
     'active' => 1,
     'cardinality' => -1,

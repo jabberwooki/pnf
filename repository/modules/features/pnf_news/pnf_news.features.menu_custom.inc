@@ -22,6 +22,5 @@ function pnf_news_menu_default_menu_custom() {
   // Included for use with string extractors like potx.
   t('Actualités');
 
-
   return $menus;
 }

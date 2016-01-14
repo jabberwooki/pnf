@@ -10,7 +10,7 @@
 function pnf_news_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-news_actualits:actualites
+  // Exported menu link: menu-news_actualits:actualites.
   $menu_links['menu-news_actualits:actualites'] = array(
     'menu_name' => 'menu-news',
     'link_path' => 'actualites',
@@ -30,7 +30,7 @@ function pnf_news_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-news_brves:breves
+  // Exported menu link: menu-news_brves:breves.
   $menu_links['menu-news_brves:breves'] = array(
     'menu_name' => 'menu-news',
     'link_path' => 'breves',
@@ -50,7 +50,7 @@ function pnf_news_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-news_dossiers:dossiers
+  // Exported menu link: menu-news_dossiers:dossiers.
   $menu_links['menu-news_dossiers:dossiers'] = array(
     'menu_name' => 'menu-news',
     'link_path' => 'dossiers',
@@ -70,7 +70,7 @@ function pnf_news_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-tools_actualits:actualites
+  // Exported menu link: menu-tools_actualits:actualites.
   $menu_links['menu-tools_actualits:actualites'] = array(
     'menu_name' => 'menu-tools',
     'link_path' => 'actualites',
