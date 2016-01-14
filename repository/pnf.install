@@ -248,10 +248,16 @@ function pnf_update_7006() {
   module_enable(array('pnf_social_media'));
 }
 
-
 /**
  * Activate pnf_advanced_pages feature.
  */
 function pnf_update_7007() {
   module_enable(array('pnf_advanced_pages'));
+}
+
+/**
+ * Activate pnf_jobs and pnf_raa features.
+ */
+function pnf_update_7008() {
+  module_enable(array('pnf_jobs', 'pnf_raa'));
 }
