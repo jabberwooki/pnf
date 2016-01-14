@@ -10,7 +10,7 @@
 function pnf_promotions_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-promotion-field_promo_image'
+  // Exported field_instance: 'node-promotion-field_promo_image'.
   $field_instances['node-promotion-field_promo_image'] = array(
     'bundle' => 'promotion',
     'deleted' => 0,
@@ -20,6 +20,7 @@ function pnf_promotions_field_default_field_instances() {
         'label' => 'above',
         'module' => 'image',
         'settings' => array(
+          'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => '',
         ),
@@ -89,7 +90,7 @@ function pnf_promotions_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-promotion-field_promo_url'
+  // Exported field_instance: 'node-promotion-field_promo_url'.
   $field_instances['node-promotion-field_promo_url'] = array(
     'bundle' => 'promotion',
     'default_value' => NULL,
@@ -99,7 +100,9 @@ function pnf_promotions_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'link_default',
         'weight' => 2,
       ),

@@ -83,5 +83,33 @@ function pnf_promotions_strongarm() {
   $strongarm->value = 0;
   $export['node_submitted_promotion'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_promotion_en_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_promotion_en_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_promotion_fr_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_promotion_fr_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_promotion_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_promotion_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_promotion_und_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_promotion_und_pattern'] = $strongarm;
+
   return $export;
 }
