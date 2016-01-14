@@ -10,7 +10,7 @@
 function pnf_agenda_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_coordinates'
+  // Exported field_base: 'field_coordinates'.
   $field_bases['field_coordinates'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -60,7 +60,7 @@ function pnf_agenda_field_default_field_bases() {
     'type' => 'geofield',
   );
 
-  // Exported field_base: 'field_event_categorie'
+  // Exported field_base: 'field_event_categorie'.
   $field_bases['field_event_categorie'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -87,7 +87,7 @@ function pnf_agenda_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_event_dates'
+  // Exported field_base: 'field_event_dates'.
   $field_bases['field_event_dates'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -116,7 +116,7 @@ function pnf_agenda_field_default_field_bases() {
     'type' => 'date',
   );
 
-  // Exported field_base: 'field_event_location'
+  // Exported field_base: 'field_event_location'.
   $field_bases['field_event_location'] = array(
     'active' => 1,
     'cardinality' => 1,

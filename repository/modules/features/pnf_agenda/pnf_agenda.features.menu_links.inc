@@ -10,7 +10,7 @@
 function pnf_agenda_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-news_agenda:agenda
+  // Exported menu link: menu-news_agenda:agenda.
   $menu_links['menu-news_agenda:agenda'] = array(
     'menu_name' => 'menu-news',
     'link_path' => 'agenda',
@@ -30,7 +30,7 @@ function pnf_agenda_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-tools_agenda:agenda
+  // Exported menu link: menu-tools_agenda:agenda.
   $menu_links['menu-tools_agenda:agenda'] = array(
     'menu_name' => 'menu-tools',
     'link_path' => 'agenda',

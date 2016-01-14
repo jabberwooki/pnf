@@ -10,7 +10,7 @@
 function pnf_agenda_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-event-body'
+  // Exported field_instance: 'node-event-body'.
   $field_instances['node-event-body'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -100,7 +100,7 @@ function pnf_agenda_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_coordinates'
+  // Exported field_instance: 'node-event-field_coordinates'.
   $field_instances['node-event-field_coordinates'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -181,7 +181,7 @@ function pnf_agenda_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_downloadable_docs'
+  // Exported field_instance: 'node-event-field_downloadable_docs'.
   $field_instances['node-event-field_downloadable_docs'] = array(
     'bundle' => 'event',
     'deleted' => 0,
@@ -262,7 +262,7 @@ function pnf_agenda_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_categorie'
+  // Exported field_instance: 'node-event-field_event_categorie'.
   $field_instances['node-event-field_event_categorie'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -322,7 +322,7 @@ function pnf_agenda_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_dates'
+  // Exported field_instance: 'node-event-field_event_dates'.
   $field_instances['node-event-field_event_dates'] = array(
     'bundle' => 'event',
     'deleted' => 0,
@@ -338,6 +338,7 @@ function pnf_agenda_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 4,
@@ -352,6 +353,7 @@ function pnf_agenda_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 4,
@@ -402,7 +404,7 @@ function pnf_agenda_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_location'
+  // Exported field_instance: 'node-event-field_event_location'.
   $field_instances['node-event-field_event_location'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -495,7 +497,7 @@ function pnf_agenda_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_key_image'
+  // Exported field_instance: 'node-event-field_key_image'.
   $field_instances['node-event-field_key_image'] = array(
     'bundle' => 'event',
     'deleted' => 0,
@@ -597,7 +599,7 @@ function pnf_agenda_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_pub_dates'
+  // Exported field_instance: 'node-event-field_pub_dates'.
   $field_instances['node-event-field_pub_dates'] = array(
     'bundle' => 'event',
     'deleted' => 0,
@@ -613,6 +615,7 @@ function pnf_agenda_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 10,
@@ -663,7 +666,7 @@ function pnf_agenda_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_public'
+  // Exported field_instance: 'node-event-field_public'.
   $field_instances['node-event-field_public'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -717,7 +720,7 @@ function pnf_agenda_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_scald_gallery'
+  // Exported field_instance: 'node-event-field_scald_gallery'.
   $field_instances['node-event-field_scald_gallery'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -784,7 +787,7 @@ function pnf_agenda_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_sectors'
+  // Exported field_instance: 'node-event-field_sectors'.
   $field_instances['node-event-field_sectors'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
