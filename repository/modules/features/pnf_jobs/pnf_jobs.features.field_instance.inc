@@ -10,7 +10,7 @@
 function pnf_jobs_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-job-body'
+  // Exported field_instance: 'node-job-body'.
   $field_instances['node-job-body'] = array(
     'bundle' => 'job',
     'default_value' => NULL,
@@ -20,14 +20,18 @@ function pnf_jobs_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 8,
       ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 3,
       ),
@@ -90,7 +94,7 @@ function pnf_jobs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-job-field_job_deadline_date'
+  // Exported field_instance: 'node-job-field_job_deadline_date'.
   $field_instances['node-job-field_job_deadline_date'] = array(
     'bundle' => 'job',
     'deleted' => 0,
@@ -100,11 +104,13 @@ function pnf_jobs_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'long',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 2,
@@ -113,11 +119,13 @@ function pnf_jobs_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'short',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 5,
@@ -126,11 +134,13 @@ function pnf_jobs_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'date_xs',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 4,
@@ -163,7 +173,7 @@ function pnf_jobs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-job-field_job_location'
+  // Exported field_instance: 'node-job-field_job_location'.
   $field_instances['node-job-field_job_location'] = array(
     'bundle' => 'job',
     'default_value' => NULL,
@@ -173,21 +183,27 @@ function pnf_jobs_field_default_field_instances() {
       'default' => array(
         'label' => 'inline',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 5,
       ),
       'full' => array(
         'label' => 'inline',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'inline',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_plain',
         'weight' => 1,
       ),
@@ -242,7 +258,7 @@ function pnf_jobs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-job-field_job_notice'
+  // Exported field_instance: 'node-job-field_job_notice'.
   $field_instances['node-job-field_job_notice'] = array(
     'bundle' => 'job',
     'deleted' => 0,
@@ -311,7 +327,7 @@ function pnf_jobs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-job-field_job_projected_date'
+  // Exported field_instance: 'node-job-field_job_projected_date'.
   $field_instances['node-job-field_job_projected_date'] = array(
     'bundle' => 'job',
     'deleted' => 0,
@@ -321,11 +337,13 @@ function pnf_jobs_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'long',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 3,
@@ -334,11 +352,13 @@ function pnf_jobs_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'short',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 6,
@@ -347,11 +367,13 @@ function pnf_jobs_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'date_xs',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 5,
@@ -384,7 +406,7 @@ function pnf_jobs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-job-field_job_pub_date'
+  // Exported field_instance: 'node-job-field_job_pub_date'.
   $field_instances['node-job-field_job_pub_date'] = array(
     'bundle' => 'job',
     'deleted' => 0,
@@ -394,11 +416,13 @@ function pnf_jobs_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'long',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 1,
@@ -407,11 +431,13 @@ function pnf_jobs_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'short',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 4,
@@ -420,11 +446,13 @@ function pnf_jobs_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'date_xs',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 3,
@@ -457,7 +485,7 @@ function pnf_jobs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-job-field_job_resume'
+  // Exported field_instance: 'node-job-field_job_resume'.
   $field_instances['node-job-field_job_resume'] = array(
     'bundle' => 'job',
     'default_value' => NULL,
@@ -473,14 +501,18 @@ function pnf_jobs_field_default_field_instances() {
       'full' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 2,
       ),
@@ -535,7 +567,7 @@ function pnf_jobs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-job-field_job_type'
+  // Exported field_instance: 'node-job-field_job_type'.
   $field_instances['node-job-field_job_type'] = array(
     'bundle' => 'job',
     'default_value' => NULL,
@@ -545,7 +577,9 @@ function pnf_jobs_field_default_field_instances() {
       'default' => array(
         'label' => 'inline',
         'module' => 'i18n_taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 4,
       ),

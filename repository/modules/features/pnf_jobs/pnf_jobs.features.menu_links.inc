@@ -10,7 +10,7 @@
 function pnf_jobs_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-menu-jobs_offres-demploi:offres-demploi
+  // Exported menu link: menu-menu-jobs_offres-demploi:offres-demploi.
   $menu_links['menu-menu-jobs_offres-demploi:offres-demploi'] = array(
     'menu_name' => 'menu-menu-jobs',
     'link_path' => 'offres-demploi',
@@ -36,7 +36,7 @@ function pnf_jobs_menu_default_menu_links() {
     'language' => 'fr',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-menu-jobs_services-civiques:services-civiques
+  // Exported menu link: menu-menu-jobs_services-civiques:services-civiques.
   $menu_links['menu-menu-jobs_services-civiques:services-civiques'] = array(
     'menu_name' => 'menu-menu-jobs',
     'link_path' => 'services-civiques',
@@ -62,7 +62,7 @@ function pnf_jobs_menu_default_menu_links() {
     'language' => 'fr',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-menu-jobs_stages:stages
+  // Exported menu link: menu-menu-jobs_stages:stages.
   $menu_links['menu-menu-jobs_stages:stages'] = array(
     'menu_name' => 'menu-menu-jobs',
     'link_path' => 'stages',

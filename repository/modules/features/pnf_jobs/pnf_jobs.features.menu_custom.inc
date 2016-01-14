@@ -22,6 +22,5 @@ function pnf_jobs_menu_default_menu_custom() {
   // Included for use with string extractors like potx.
   t('Menu emplois');
 
-
   return $menus;
 }

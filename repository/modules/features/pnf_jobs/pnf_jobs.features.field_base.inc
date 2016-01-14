@@ -10,7 +10,7 @@
 function pnf_jobs_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_job_deadline_date'
+  // Exported field_base: 'field_job_deadline_date'.
   $field_bases['field_job_deadline_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -39,7 +39,7 @@ function pnf_jobs_field_default_field_bases() {
     'type' => 'date',
   );
 
-  // Exported field_base: 'field_job_location'
+  // Exported field_base: 'field_job_location'.
   $field_bases['field_job_location'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -60,7 +60,7 @@ function pnf_jobs_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_job_notice'
+  // Exported field_base: 'field_job_notice'.
   $field_bases['field_job_notice'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -83,7 +83,7 @@ function pnf_jobs_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_job_projected_date'
+  // Exported field_base: 'field_job_projected_date'.
   $field_bases['field_job_projected_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -112,7 +112,7 @@ function pnf_jobs_field_default_field_bases() {
     'type' => 'date',
   );
 
-  // Exported field_base: 'field_job_pub_date'
+  // Exported field_base: 'field_job_pub_date'.
   $field_bases['field_job_pub_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -141,7 +141,7 @@ function pnf_jobs_field_default_field_bases() {
     'type' => 'date',
   );
 
-  // Exported field_base: 'field_job_resume'
+  // Exported field_base: 'field_job_resume'.
   $field_bases['field_job_resume'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -160,7 +160,7 @@ function pnf_jobs_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_job_type'
+  // Exported field_base: 'field_job_type'.
   $field_bases['field_job_type'] = array(
     'active' => 1,
     'cardinality' => 1,
