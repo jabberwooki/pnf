@@ -17,6 +17,13 @@ function pnf_contracts_user_default_permissions() {
     'module' => 'taxonomy_access_fix',
   );
 
+  // Exported permission: 'add terms in procurement_types'.
+  $permissions['add terms in procurement_types'] = array(
+    'name' => 'add terms in procurement_types',
+    'roles' => array(),
+    'module' => 'taxonomy_access_fix',
+  );
+
   // Exported permission: 'create contract content'.
   $permissions['create contract content'] = array(
     'name' => 'create contract content',
@@ -45,6 +52,13 @@ function pnf_contracts_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'delete terms in procurement_types'.
+  $permissions['delete terms in procurement_types'] = array(
+    'name' => 'delete terms in procurement_types',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit any contract content'.
   $permissions['edit any contract content'] = array(
     'name' => 'edit any contract content',
@@ -62,6 +76,13 @@ function pnf_contracts_user_default_permissions() {
   // Exported permission: 'edit terms in contract_categories'.
   $permissions['edit terms in contract_categories'] = array(
     'name' => 'edit terms in contract_categories',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in procurement_types'.
+  $permissions['edit terms in procurement_types'] = array(
+    'name' => 'edit terms in procurement_types',
     'roles' => array(),
     'module' => 'taxonomy',
   );
