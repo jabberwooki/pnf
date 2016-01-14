@@ -10,7 +10,7 @@
 function pnf_slideshow_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_credit'
+  // Exported field_base: 'field_credit'.
   $field_bases['field_credit'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -31,7 +31,7 @@ function pnf_slideshow_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_slide_image'
+  // Exported field_base: 'field_slide_image'.
   $field_bases['field_slide_image'] = array(
     'active' => 1,
     'cardinality' => 1,

@@ -10,7 +10,7 @@
 function pnf_slideshow_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-slide-body'
+  // Exported field_instance: 'node-slide-body'.
   $field_instances['node-slide-body'] = array(
     'bundle' => 'slide',
     'default_value' => NULL,
@@ -20,14 +20,18 @@ function pnf_slideshow_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 1,
       ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 1,
       ),
@@ -35,6 +39,7 @@ function pnf_slideshow_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
+          'field_formatter_class' => '',
           'trim_length' => 600,
         ),
         'type' => 'text_summary_or_trimmed',
@@ -92,7 +97,7 @@ function pnf_slideshow_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-slide-field_credit'
+  // Exported field_instance: 'node-slide-field_credit'.
   $field_instances['node-slide-field_credit'] = array(
     'bundle' => 'slide',
     'default_value' => NULL,
@@ -102,14 +107,18 @@ function pnf_slideshow_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 2,
       ),
       'full' => array(
         'label' => 'inline',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 2,
       ),
@@ -170,7 +179,7 @@ function pnf_slideshow_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-slide-field_slide_image'
+  // Exported field_instance: 'node-slide-field_slide_image'.
   $field_instances['node-slide-field_slide_image'] = array(
     'bundle' => 'slide',
     'deleted' => 0,
@@ -180,6 +189,7 @@ function pnf_slideshow_field_default_field_instances() {
         'label' => 'above',
         'module' => 'image',
         'settings' => array(
+          'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => '',
         ),
@@ -190,6 +200,7 @@ function pnf_slideshow_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => 'width_840',
         ),
@@ -200,6 +211,7 @@ function pnf_slideshow_field_default_field_instances() {
         'label' => 'above',
         'module' => 'image',
         'settings' => array(
+          'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => '',
         ),
