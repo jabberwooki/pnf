@@ -27,7 +27,10 @@ function pnf_contact_user_default_permissions() {
   // Exported permission: 'edit any contact bean'.
   $permissions['edit any contact bean'] = array(
     'name' => 'edit any contact bean',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'bean',
   );
 

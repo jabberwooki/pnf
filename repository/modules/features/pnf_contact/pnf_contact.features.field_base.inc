@@ -10,7 +10,7 @@
 function pnf_contact_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_contact_image'
+  // Exported field_base: 'field_contact_image'.
   $field_bases['field_contact_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -32,7 +32,7 @@ function pnf_contact_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_contact_page_link'
+  // Exported field_base: 'field_contact_page_link'.
   $field_bases['field_contact_page_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -61,7 +61,7 @@ function pnf_contact_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_contact_text'
+  // Exported field_base: 'field_contact_text'.
   $field_bases['field_contact_text'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -80,7 +80,7 @@ function pnf_contact_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_contact_title'
+  // Exported field_base: 'field_contact_title'.
   $field_bases['field_contact_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -101,7 +101,7 @@ function pnf_contact_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_email'
+  // Exported field_base: 'field_email'.
   $field_bases['field_email'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -116,7 +116,7 @@ function pnf_contact_field_default_field_bases() {
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_firstname'
+  // Exported field_base: 'field_firstname'.
   $field_bases['field_firstname'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -137,7 +137,7 @@ function pnf_contact_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_lastname'
+  // Exported field_base: 'field_lastname'.
   $field_bases['field_lastname'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -158,7 +158,7 @@ function pnf_contact_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_message'
+  // Exported field_base: 'field_message'.
   $field_bases['field_message'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -177,7 +177,7 @@ function pnf_contact_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_subject'
+  // Exported field_base: 'field_subject'.
   $field_bases['field_subject'] = array(
     'active' => 1,
     'cardinality' => 1,

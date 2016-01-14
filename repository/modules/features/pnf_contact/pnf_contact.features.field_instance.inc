@@ -10,7 +10,7 @@
 function pnf_contact_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'bean-contact-field_contact_image'
+  // Exported field_instance: 'bean-contact-field_contact_image'.
   $field_instances['bean-contact-field_contact_image'] = array(
     'bundle' => 'contact',
     'deleted' => 0,
@@ -20,6 +20,7 @@ function pnf_contact_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => '',
         ),
@@ -83,7 +84,7 @@ function pnf_contact_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-contact-field_contact_page_link'
+  // Exported field_instance: 'bean-contact-field_contact_page_link'.
   $field_instances['bean-contact-field_contact_page_link'] = array(
     'bundle' => 'contact',
     'default_value' => array(
@@ -98,7 +99,9 @@ function pnf_contact_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'link_default',
         'weight' => 2,
       ),
@@ -144,7 +147,7 @@ function pnf_contact_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-contact-field_contact_text'
+  // Exported field_instance: 'bean-contact-field_contact_text'.
   $field_instances['bean-contact-field_contact_text'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -154,7 +157,9 @@ function pnf_contact_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 1,
       ),
@@ -209,7 +214,7 @@ function pnf_contact_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-contact-field_contact_title'
+  // Exported field_instance: 'bean-contact-field_contact_title'.
   $field_instances['bean-contact-field_contact_title'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -220,6 +225,7 @@ function pnf_contact_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'pnf_contact',
         'settings' => array(
+          'field_formatter_class' => '',
           'html_class' => '',
           'html_tag' => 'h2',
         ),
@@ -277,7 +283,7 @@ function pnf_contact_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-contact-field_email'
+  // Exported field_instance: 'entityform-contact-field_email'.
   $field_instances['entityform-contact-field_email'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -287,7 +293,9 @@ function pnf_contact_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'email',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'email_default',
         'weight' => 2,
       ),
@@ -310,7 +318,7 @@ function pnf_contact_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-contact-field_firstname'
+  // Exported field_instance: 'entityform-contact-field_firstname'.
   $field_instances['entityform-contact-field_firstname'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -320,7 +328,9 @@ function pnf_contact_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 0,
       ),
@@ -375,7 +385,7 @@ function pnf_contact_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-contact-field_lastname'
+  // Exported field_instance: 'entityform-contact-field_lastname'.
   $field_instances['entityform-contact-field_lastname'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -385,7 +395,9 @@ function pnf_contact_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 1,
       ),
@@ -440,7 +452,7 @@ function pnf_contact_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-contact-field_message'
+  // Exported field_instance: 'entityform-contact-field_message'.
   $field_instances['entityform-contact-field_message'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -450,7 +462,9 @@ function pnf_contact_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 4,
       ),
@@ -505,7 +519,7 @@ function pnf_contact_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-contact-field_subject'
+  // Exported field_instance: 'entityform-contact-field_subject'.
   $field_instances['entityform-contact-field_subject'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -515,7 +529,9 @@ function pnf_contact_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'list',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'list_default',
         'weight' => 3,
       ),
