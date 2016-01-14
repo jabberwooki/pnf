@@ -10,11 +10,143 @@
 function kcore_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'access administration menu'.
+  $permissions['access administration menu'] = array(
+    'name' => 'access administration menu',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'rédacteur' => 'rédacteur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'admin_menu',
+  );
+
+  // Exported permission: 'access administration pages'.
+  $permissions['access administration pages'] = array(
+    'name' => 'access administration pages',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'rédacteur' => 'rédacteur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'system',
+  );
+
   // Exported permission: 'access bean overview'.
   $permissions['access bean overview'] = array(
     'name' => 'access bean overview',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'bean',
+  );
+
+  // Exported permission: 'access coffee'.
+  $permissions['access coffee'] = array(
+    'name' => 'access coffee',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'coffee',
+  );
+
+  // Exported permission: 'access content'.
+  $permissions['access content'] = array(
+    'name' => 'access content',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'access content overview'.
+  $permissions['access content overview'] = array(
+    'name' => 'access content overview',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'access direct download file'.
+  $permissions['access direct download file'] = array(
+    'name' => 'access direct download file',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'download_file',
+  );
+
+  // Exported permission: 'access site in maintenance mode'.
+  $permissions['access site in maintenance mode'] = array(
+    'name' => 'access site in maintenance mode',
+    'roles' => array(),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'access site reports'.
+  $permissions['access site reports'] = array(
+    'name' => 'access site reports',
+    'roles' => array(),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'access user profiles'.
+  $permissions['access user profiles'] = array(
+    'name' => 'access user profiles',
+    'roles' => array(),
+    'module' => 'user',
+  );
+
+  // Exported permission: 'admin_classes'.
+  $permissions['admin_classes'] = array(
+    'name' => 'admin_classes',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'ds_ui',
+  );
+
+  // Exported permission: 'admin_display_suite'.
+  $permissions['admin_display_suite'] = array(
+    'name' => 'admin_display_suite',
+    'roles' => array(),
+    'module' => 'ds',
+  );
+
+  // Exported permission: 'admin_fields'.
+  $permissions['admin_fields'] = array(
+    'name' => 'admin_fields',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'ds_ui',
+  );
+
+  // Exported permission: 'admin_view_modes'.
+  $permissions['admin_view_modes'] = array(
+    'name' => 'admin_view_modes',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'ds_ui',
+  );
+
+  // Exported permission: 'administer account settings'.
+  $permissions['administer account settings'] = array(
+    'name' => 'administer account settings',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'user_settings_access',
+  );
+
+  // Exported permission: 'administer admin role'.
+  $permissions['administer admin role'] = array(
+    'name' => 'administer admin role',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'user_settings_access',
   );
 
   // Exported permission: 'administer bean settings'.
@@ -34,8 +166,81 @@ function kcore_user_default_permissions() {
   // Exported permission: 'administer beans'.
   $permissions['administer beans'] = array(
     'name' => 'administer beans',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'bean',
+  );
+
+  // Exported permission: 'administer block classes'.
+  $permissions['administer block classes'] = array(
+    'name' => 'administer block classes',
+    'roles' => array(),
+    'module' => 'block_class',
+  );
+
+  // Exported permission: 'administer blocks'.
+  $permissions['administer blocks'] = array(
+    'name' => 'administer blocks',
+    'roles' => array(),
+    'module' => 'block',
+  );
+
+  // Exported permission: 'administer boxes'.
+  $permissions['administer boxes'] = array(
+    'name' => 'administer boxes',
+    'roles' => array(),
+    'module' => 'boxes',
+  );
+
+  // Exported permission: 'administer coffee'.
+  $permissions['administer coffee'] = array(
+    'name' => 'administer coffee',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'coffee',
+  );
+
+  // Exported permission: 'administer content translations'.
+  $permissions['administer content translations'] = array(
+    'name' => 'administer content translations',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'i18n_node',
+  );
+
+  // Exported permission: 'administer content types'.
+  $permissions['administer content types'] = array(
+    'name' => 'administer content types',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'administer custom search'.
+  $permissions['administer custom search'] = array(
+    'name' => 'administer custom search',
+    'roles' => array(),
+    'module' => 'custom_search',
+  );
+
+  // Exported permission: 'administer custom search blocks'.
+  $permissions['administer custom search blocks'] = array(
+    'name' => 'administer custom search blocks',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'custom_search_blocks',
+  );
+
+  // Exported permission: 'administer download file'.
+  $permissions['administer download file'] = array(
+    'name' => 'administer download file',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'download_file',
   );
 
   // Exported permission: 'administer entityform types'.
@@ -45,6 +250,252 @@ function kcore_user_default_permissions() {
       'administrateur' => 'administrateur',
     ),
     'module' => 'entityform',
+  );
+
+  // Exported permission: 'administer features'.
+  $permissions['administer features'] = array(
+    'name' => 'administer features',
+    'roles' => array(),
+    'module' => 'features',
+  );
+
+  // Exported permission: 'administer field collections'.
+  $permissions['administer field collections'] = array(
+    'name' => 'administer field collections',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'field_collection',
+  );
+
+  // Exported permission: 'administer fieldgroups'.
+  $permissions['administer fieldgroups'] = array(
+    'name' => 'administer fieldgroups',
+    'roles' => array(),
+    'module' => 'field_group',
+  );
+
+  // Exported permission: 'administer filters'.
+  $permissions['administer filters'] = array(
+    'name' => 'administer filters',
+    'roles' => array(),
+    'module' => 'filter',
+  );
+
+  // Exported permission: 'administer image styles'.
+  $permissions['administer image styles'] = array(
+    'name' => 'administer image styles',
+    'roles' => array(),
+    'module' => 'image',
+  );
+
+  // Exported permission: 'administer imce'.
+  $permissions['administer imce'] = array(
+    'name' => 'administer imce',
+    'roles' => array(),
+    'module' => 'imce',
+  );
+
+  // Exported permission: 'administer languages'.
+  $permissions['administer languages'] = array(
+    'name' => 'administer languages',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'locale',
+  );
+
+  // Exported permission: 'administer less'.
+  $permissions['administer less'] = array(
+    'name' => 'administer less',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'less',
+  );
+
+  // Exported permission: 'administer linkit'.
+  $permissions['administer linkit'] = array(
+    'name' => 'administer linkit',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'linkit',
+  );
+
+  // Exported permission: 'administer menu'.
+  $permissions['administer menu'] = array(
+    'name' => 'administer menu',
+    'roles' => array(),
+    'module' => 'menu',
+  );
+
+  // Exported permission: 'administer menu attributes'.
+  $permissions['administer menu attributes'] = array(
+    'name' => 'administer menu attributes',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'menu_attributes',
+  );
+
+  // Exported permission: 'administer menu fields'.
+  $permissions['administer menu fields'] = array(
+    'name' => 'administer menu fields',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'menu_fields',
+  );
+
+  // Exported permission: 'administer module filter'.
+  $permissions['administer module filter'] = array(
+    'name' => 'administer module filter',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'module_filter',
+  );
+
+  // Exported permission: 'administer modules'.
+  $permissions['administer modules'] = array(
+    'name' => 'administer modules',
+    'roles' => array(),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'administer nodes'.
+  $permissions['administer nodes'] = array(
+    'name' => 'administer nodes',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'administer pdf reader'.
+  $permissions['administer pdf reader'] = array(
+    'name' => 'administer pdf reader',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'pdf_reader',
+  );
+
+  // Exported permission: 'administer permissions'.
+  $permissions['administer permissions'] = array(
+    'name' => 'administer permissions',
+    'roles' => array(),
+    'module' => 'user',
+  );
+
+  // Exported permission: 'administer search'.
+  $permissions['administer search'] = array(
+    'name' => 'administer search',
+    'roles' => array(),
+    'module' => 'search',
+  );
+
+  // Exported permission: 'administer site configuration'.
+  $permissions['administer site configuration'] = array(
+    'name' => 'administer site configuration',
+    'roles' => array(),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'administer software updates'.
+  $permissions['administer software updates'] = array(
+    'name' => 'administer software updates',
+    'roles' => array(),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'administer taxonomy'.
+  $permissions['administer taxonomy'] = array(
+    'name' => 'administer taxonomy',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'administer themes'.
+  $permissions['administer themes'] = array(
+    'name' => 'administer themes',
+    'roles' => array(),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'administer url aliases'.
+  $permissions['administer url aliases'] = array(
+    'name' => 'administer url aliases',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'path',
+  );
+
+  // Exported permission: 'administer users'.
+  $permissions['administer users'] = array(
+    'name' => 'administer users',
+    'roles' => array(),
+    'module' => 'user',
+  );
+
+  // Exported permission: 'administer uuid'.
+  $permissions['administer uuid'] = array(
+    'name' => 'administer uuid',
+    'roles' => array(),
+    'module' => 'uuid',
+  );
+
+  // Exported permission: 'administer views'.
+  $permissions['administer views'] = array(
+    'name' => 'administer views',
+    'roles' => array(),
+    'module' => 'views',
+  );
+
+  // Exported permission: 'administer xmlsitemap'.
+  $permissions['administer xmlsitemap'] = array(
+    'name' => 'administer xmlsitemap',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'xmlsitemap',
+  );
+
+  // Exported permission: 'block IP addresses'.
+  $permissions['block IP addresses'] = array(
+    'name' => 'block IP addresses',
+    'roles' => array(),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'bypass node access'.
+  $permissions['bypass node access'] = array(
+    'name' => 'bypass node access',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'cancel account'.
+  $permissions['cancel account'] = array(
+    'name' => 'cancel account',
+    'roles' => array(),
+    'module' => 'user',
+  );
+
+  // Exported permission: 'change own username'.
+  $permissions['change own username'] = array(
+    'name' => 'change own username',
+    'roles' => array(),
+    'module' => 'user',
+  );
+
+  // Exported permission: 'create url aliases'.
+  $permissions['create url aliases'] = array(
+    'name' => 'create url aliases',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'path',
   );
 
   // Exported permission: 'delete any entityform'.
@@ -67,6 +518,13 @@ function kcore_user_default_permissions() {
     'module' => 'entityform',
   );
 
+  // Exported permission: 'delete revisions'.
+  $permissions['delete revisions'] = array(
+    'name' => 'delete revisions',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit any entityform'.
   $permissions['edit any entityform'] = array(
     'name' => 'edit any entityform',
@@ -83,6 +541,13 @@ function kcore_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'edit boxes'.
+  $permissions['edit boxes'] = array(
+    'name' => 'edit boxes',
+    'roles' => array(),
+    'module' => 'boxes',
+  );
+
   // Exported permission: 'edit own entityform'.
   $permissions['edit own entityform'] = array(
     'name' => 'edit own entityform',
@@ -94,6 +559,43 @@ function kcore_user_default_permissions() {
     'module' => 'entityform',
   );
 
+  // Exported permission: 'flush caches'.
+  $permissions['flush caches'] = array(
+    'name' => 'flush caches',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'admin_menu',
+  );
+
+  // Exported permission: 'generate features'.
+  $permissions['generate features'] = array(
+    'name' => 'generate features',
+    'roles' => array(),
+    'module' => 'features',
+  );
+
+  // Exported permission: 'manage features'.
+  $permissions['manage features'] = array(
+    'name' => 'manage features',
+    'roles' => array(),
+    'module' => 'features',
+  );
+
+  // Exported permission: 'rename features'.
+  $permissions['rename features'] = array(
+    'name' => 'rename features',
+    'roles' => array(),
+    'module' => 'features',
+  );
+
+  // Exported permission: 'revert revisions'.
+  $permissions['revert revisions'] = array(
+    'name' => 'revert revisions',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'search content'.
   $permissions['search content'] = array(
     'name' => 'search content',
@@ -102,6 +604,13 @@ function kcore_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'search',
+  );
+
+  // Exported permission: 'select account cancellation method'.
+  $permissions['select account cancellation method'] = array(
+    'name' => 'select account cancellation method',
+    'roles' => array(),
+    'module' => 'user',
   );
 
   // Exported permission: 'show format selection for bean'.
@@ -116,6 +625,130 @@ function kcore_user_default_permissions() {
     'name' => 'show format selection for entityform',
     'roles' => array(),
     'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for field_collection_item'.
+  $permissions['show format selection for field_collection_item'] = array(
+    'name' => 'show format selection for field_collection_item',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for menu_fields'.
+  $permissions['show format selection for menu_fields'] = array(
+    'name' => 'show format selection for menu_fields',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for node'.
+  $permissions['show format selection for node'] = array(
+    'name' => 'show format selection for node',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for paragraphs_item'.
+  $permissions['show format selection for paragraphs_item'] = array(
+    'name' => 'show format selection for paragraphs_item',
+    'roles' => array(),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for scald_atom'.
+  $permissions['show format selection for scald_atom'] = array(
+    'name' => 'show format selection for scald_atom',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for taxonomy_term'.
+  $permissions['show format selection for taxonomy_term'] = array(
+    'name' => 'show format selection for taxonomy_term',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for user'.
+  $permissions['show format selection for user'] = array(
+    'name' => 'show format selection for user',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format tips'.
+  $permissions['show format tips'] = array(
+    'name' => 'show format tips',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show more format tips link'.
+  $permissions['show more format tips link'] = array(
+    'name' => 'show more format tips link',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'translate admin strings'.
+  $permissions['translate admin strings'] = array(
+    'name' => 'translate admin strings',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'i18n_string',
+  );
+
+  // Exported permission: 'translate content'.
+  $permissions['translate content'] = array(
+    'name' => 'translate content',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'translation',
+  );
+
+  // Exported permission: 'translate interface'.
+  $permissions['translate interface'] = array(
+    'name' => 'translate interface',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'locale',
+  );
+
+  // Exported permission: 'translate user-defined strings'.
+  $permissions['translate user-defined strings'] = array(
+    'name' => 'translate user-defined strings',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'i18n_string',
+  );
+
+  // Exported permission: 'use PHP for service visibility'.
+  $permissions['use PHP for service visibility'] = array(
+    'name' => 'use PHP for service visibility',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'service_links',
   );
 
   // Exported permission: 'use advanced search'.
@@ -149,6 +782,20 @@ function kcore_user_default_permissions() {
     'module' => 'custom_search_blocks',
   );
 
+  // Exported permission: 'use text format filtered_html'.
+  $permissions['use text format filtered_html'] = array(
+    'name' => 'use text format filtered_html',
+    'roles' => array(),
+    'module' => 'filter',
+  );
+
+  // Exported permission: 'use text format full_html'.
+  $permissions['use text format full_html'] = array(
+    'name' => 'use text format full_html',
+    'roles' => array(),
+    'module' => 'filter',
+  );
+
   // Exported permission: 'view any entityform'.
   $permissions['view any entityform'] = array(
     'name' => 'view any entityform',
@@ -161,7 +808,9 @@ function kcore_user_default_permissions() {
   // Exported permission: 'view bean page'.
   $permissions['view bean page'] = array(
     'name' => 'view bean page',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'bean',
   );
 
@@ -181,6 +830,27 @@ function kcore_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'entityform',
+  );
+
+  // Exported permission: 'view own unpublished content'.
+  $permissions['view own unpublished content'] = array(
+    'name' => 'view own unpublished content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'view revisions'.
+  $permissions['view revisions'] = array(
+    'name' => 'view revisions',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'view the administration theme'.
+  $permissions['view the administration theme'] = array(
+    'name' => 'view the administration theme',
+    'roles' => array(),
+    'module' => 'system',
   );
 
   return $permissions;
