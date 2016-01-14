@@ -31,6 +31,5 @@ function pnf_multimedia_menu_default_menu_custom() {
   t('Médiathèque');
   t('Médiathèque Footer');
 
-
   return $menus;
 }

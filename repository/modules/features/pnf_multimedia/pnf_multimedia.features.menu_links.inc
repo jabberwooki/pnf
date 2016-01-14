@@ -10,7 +10,7 @@
 function pnf_multimedia_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-multimedia-footer_documents:documents
+  // Exported menu link: menu-multimedia-footer_documents:documents.
   $menu_links['menu-multimedia-footer_documents:documents'] = array(
     'menu_name' => 'menu-multimedia-footer',
     'link_path' => 'documents',
@@ -39,7 +39,7 @@ function pnf_multimedia_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-multimedia-footer_espace-presse:espace-presse
+  // Exported menu link: menu-multimedia-footer_espace-presse:espace-presse.
   $menu_links['menu-multimedia-footer_espace-presse:espace-presse'] = array(
     'menu_name' => 'menu-multimedia-footer',
     'link_path' => 'espace-presse',
@@ -68,7 +68,7 @@ function pnf_multimedia_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-multimedia-footer_photos:galeries-photo
+  // Exported menu link: menu-multimedia-footer_photos:galeries-photo.
   $menu_links['menu-multimedia-footer_photos:galeries-photo'] = array(
     'menu_name' => 'menu-multimedia-footer',
     'link_path' => 'galeries-photo',
@@ -97,7 +97,7 @@ function pnf_multimedia_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-multimedia-footer_vidos:videos
+  // Exported menu link: menu-multimedia-footer_vidos:videos.
   $menu_links['menu-multimedia-footer_vidos:videos'] = array(
     'menu_name' => 'menu-multimedia-footer',
     'link_path' => 'videos',
@@ -126,7 +126,7 @@ function pnf_multimedia_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-multimedia_images:galeries-photo
+  // Exported menu link: menu-multimedia_images:galeries-photo.
   $menu_links['menu-multimedia_images:galeries-photo'] = array(
     'menu_name' => 'menu-multimedia',
     'link_path' => 'galeries-photo',
@@ -146,7 +146,7 @@ function pnf_multimedia_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-multimedia_publications-et-documents:documents
+  // Exported menu link: menu-multimedia_publications-et-documents:documents.
   $menu_links['menu-multimedia_publications-et-documents:documents'] = array(
     'menu_name' => 'menu-multimedia',
     'link_path' => 'documents',
@@ -166,7 +166,7 @@ function pnf_multimedia_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-multimedia_sons:sons
+  // Exported menu link: menu-multimedia_sons:sons.
   $menu_links['menu-multimedia_sons:sons'] = array(
     'menu_name' => 'menu-multimedia',
     'link_path' => 'sons',
@@ -186,7 +186,7 @@ function pnf_multimedia_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-multimedia_vidos:videos
+  // Exported menu link: menu-multimedia_vidos:videos.
   $menu_links['menu-multimedia_vidos:videos'] = array(
     'menu_name' => 'menu-multimedia',
     'link_path' => 'videos',
@@ -206,7 +206,7 @@ function pnf_multimedia_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-tools_mdiathque:documents
+  // Exported menu link: menu-tools_mdiathque:documents.
   $menu_links['menu-tools_mdiathque:documents'] = array(
     'menu_name' => 'menu-tools',
     'link_path' => 'documents',

@@ -10,7 +10,7 @@
 function pnf_multimedia_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'scald_atom-audio-field_atom_description'
+  // Exported field_instance: 'scald_atom-audio-field_atom_description'.
   $field_instances['scald_atom-audio-field_atom_description'] = array(
     'bundle' => 'audio',
     'default_value' => NULL,
@@ -20,7 +20,9 @@ function pnf_multimedia_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 3,
       ),
@@ -87,7 +89,7 @@ function pnf_multimedia_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'scald_atom-audio-field_media_category'
+  // Exported field_instance: 'scald_atom-audio-field_media_category'.
   $field_instances['scald_atom-audio-field_media_category'] = array(
     'bundle' => 'audio',
     'default_value' => NULL,
@@ -97,14 +99,18 @@ function pnf_multimedia_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 1,
       ),
       'full' => array(
         'label' => 'above',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 1,
       ),
@@ -131,7 +137,7 @@ function pnf_multimedia_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'scald_atom-gallery-field_atom_description'
+  // Exported field_instance: 'scald_atom-gallery-field_atom_description'.
   $field_instances['scald_atom-gallery-field_atom_description'] = array(
     'bundle' => 'gallery',
     'default_value' => NULL,
@@ -141,7 +147,9 @@ function pnf_multimedia_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 4,
       ),
@@ -208,7 +216,7 @@ function pnf_multimedia_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'scald_atom-gallery-field_media_category'
+  // Exported field_instance: 'scald_atom-gallery-field_media_category'.
   $field_instances['scald_atom-gallery-field_media_category'] = array(
     'bundle' => 'gallery',
     'default_value' => NULL,
@@ -218,14 +226,18 @@ function pnf_multimedia_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 1,
       ),
       'full' => array(
         'label' => 'above',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 1,
       ),
@@ -238,7 +250,9 @@ function pnf_multimedia_field_default_field_instances() {
       'title' => array(
         'label' => 'above',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 1,
       ),
@@ -259,7 +273,7 @@ function pnf_multimedia_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'scald_atom-image-field_media_category'
+  // Exported field_instance: 'scald_atom-image-field_media_category'.
   $field_instances['scald_atom-image-field_media_category'] = array(
     'bundle' => 'image',
     'default_value' => NULL,
@@ -269,14 +283,18 @@ function pnf_multimedia_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 1,
       ),
       'full' => array(
         'label' => 'above',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 1,
       ),
@@ -303,7 +321,7 @@ function pnf_multimedia_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'scald_atom-video-field_atom_description'
+  // Exported field_instance: 'scald_atom-video-field_atom_description'.
   $field_instances['scald_atom-video-field_atom_description'] = array(
     'bundle' => 'video',
     'default_value' => NULL,
@@ -313,7 +331,9 @@ function pnf_multimedia_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 3,
       ),
@@ -380,7 +400,7 @@ function pnf_multimedia_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'scald_atom-video-field_media_category'
+  // Exported field_instance: 'scald_atom-video-field_media_category'.
   $field_instances['scald_atom-video-field_media_category'] = array(
     'bundle' => 'video',
     'default_value' => NULL,
@@ -390,14 +410,18 @@ function pnf_multimedia_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 1,
       ),
       'full' => array(
         'label' => 'inline',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 1,
       ),
