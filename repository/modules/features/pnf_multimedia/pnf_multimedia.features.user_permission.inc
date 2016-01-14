@@ -19,6 +19,31 @@ function pnf_multimedia_user_default_permissions() {
     'module' => 'scald_dnd_library',
   );
 
+  // Exported permission: 'add terms in media_categories'.
+  $permissions['add terms in media_categories'] = array(
+    'name' => 'add terms in media_categories',
+    'roles' => array(),
+    'module' => 'taxonomy_access_fix',
+  );
+
+  // Exported permission: 'add terms in scald_authors'.
+  $permissions['add terms in scald_authors'] = array(
+    'name' => 'add terms in scald_authors',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'taxonomy_access_fix',
+  );
+
+  // Exported permission: 'add terms in scald_tags'.
+  $permissions['add terms in scald_tags'] = array(
+    'name' => 'add terms in scald_tags',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'taxonomy_access_fix',
+  );
+
   // Exported permission: 'administer dailymotion imports'.
   $permissions['administer dailymotion imports'] = array(
     'name' => 'administer dailymotion imports',
@@ -26,6 +51,13 @@ function pnf_multimedia_user_default_permissions() {
       'administrateur' => 'administrateur',
     ),
     'module' => 'scald_dailymotion',
+  );
+
+  // Exported permission: 'administer dnd'.
+  $permissions['administer dnd'] = array(
+    'name' => 'administer dnd',
+    'roles' => array(),
+    'module' => 'dnd',
   );
 
   // Exported permission: 'administer scald'.
@@ -105,6 +137,27 @@ function pnf_multimedia_user_default_permissions() {
     'module' => 'scald',
   );
 
+  // Exported permission: 'delete terms in media_categories'.
+  $permissions['delete terms in media_categories'] = array(
+    'name' => 'delete terms in media_categories',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in scald_authors'.
+  $permissions['delete terms in scald_authors'] = array(
+    'name' => 'delete terms in scald_authors',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in scald_tags'.
+  $permissions['delete terms in scald_tags'] = array(
+    'name' => 'delete terms in scald_tags',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit any atom'.
   $permissions['edit any atom'] = array(
     'name' => 'edit any atom',
@@ -117,6 +170,27 @@ function pnf_multimedia_user_default_permissions() {
     'name' => 'edit own atom',
     'roles' => array(),
     'module' => 'scald',
+  );
+
+  // Exported permission: 'edit terms in media_categories'.
+  $permissions['edit terms in media_categories'] = array(
+    'name' => 'edit terms in media_categories',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in scald_authors'.
+  $permissions['edit terms in scald_authors'] = array(
+    'name' => 'edit terms in scald_authors',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in scald_tags'.
+  $permissions['edit terms in scald_tags'] = array(
+    'name' => 'edit terms in scald_tags',
+    'roles' => array(),
+    'module' => 'taxonomy',
   );
 
   // Exported permission: 'fetch any atom'.
