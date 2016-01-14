@@ -10,7 +10,7 @@
 function pnf_contracts_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-menu-public-contracts_attribus:marches-publics-attribues
+  // Exported menu link: menu-menu-public-contracts_attribus:marches-publics-attribues.
   $menu_links['menu-menu-public-contracts_attribus:marches-publics-attribues'] = array(
     'menu_name' => 'menu-menu-public-contracts',
     'link_path' => 'marches-publics-attribues',

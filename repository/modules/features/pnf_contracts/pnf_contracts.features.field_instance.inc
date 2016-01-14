@@ -10,7 +10,7 @@
 function pnf_contracts_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-contract-body'
+  // Exported field_instance: 'node-contract-body'.
   $field_instances['node-contract-body'] = array(
     'bundle' => 'contract',
     'default_value' => NULL,
@@ -20,14 +20,18 @@ function pnf_contracts_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 0,
       ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 3,
       ),
@@ -89,7 +93,7 @@ function pnf_contracts_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-contract-field_contract_category'
+  // Exported field_instance: 'node-contract-field_contract_category'.
   $field_instances['node-contract-field_contract_category'] = array(
     'bundle' => 'contract',
     'default_value' => NULL,
@@ -99,7 +103,9 @@ function pnf_contracts_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 2,
       ),
@@ -112,7 +118,9 @@ function pnf_contracts_field_default_field_instances() {
       'teaser' => array(
         'label' => 'inline',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 3,
       ),
@@ -133,7 +141,7 @@ function pnf_contracts_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-contract-field_contract_deadline_date'
+  // Exported field_instance: 'node-contract-field_contract_deadline_date'.
   $field_instances['node-contract-field_contract_deadline_date'] = array(
     'bundle' => 'contract',
     'deleted' => 0,
@@ -143,11 +151,13 @@ function pnf_contracts_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'long',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 8,
@@ -156,11 +166,13 @@ function pnf_contracts_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'short',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 6,
@@ -169,11 +181,13 @@ function pnf_contracts_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'short',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 6,
@@ -206,7 +220,7 @@ function pnf_contracts_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-contract-field_contract_link'
+  // Exported field_instance: 'node-contract-field_contract_link'.
   $field_instances['node-contract-field_contract_link'] = array(
     'bundle' => 'contract',
     'default_value' => NULL,
@@ -216,7 +230,9 @@ function pnf_contracts_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'link_default',
         'weight' => 6,
       ),
@@ -275,7 +291,7 @@ function pnf_contracts_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-contract-field_contract_notice'
+  // Exported field_instance: 'node-contract-field_contract_notice'.
   $field_instances['node-contract-field_contract_notice'] = array(
     'bundle' => 'contract',
     'deleted' => 0,
@@ -284,7 +300,9 @@ function pnf_contracts_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'file',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'file_default',
         'weight' => 5,
       ),
@@ -346,7 +364,7 @@ function pnf_contracts_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-contract-field_contract_object'
+  // Exported field_instance: 'node-contract-field_contract_object'.
   $field_instances['node-contract-field_contract_object'] = array(
     'bundle' => 'contract',
     'default_value' => NULL,
@@ -356,21 +374,27 @@ function pnf_contracts_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 3,
       ),
       'full' => array(
         'label' => 'inline',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 2,
       ),
@@ -424,7 +448,7 @@ function pnf_contracts_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-contract-field_contract_projected_date'
+  // Exported field_instance: 'node-contract-field_contract_projected_date'.
   $field_instances['node-contract-field_contract_projected_date'] = array(
     'bundle' => 'contract',
     'deleted' => 0,
@@ -434,11 +458,13 @@ function pnf_contracts_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'long',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 9,
@@ -447,11 +473,13 @@ function pnf_contracts_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'short',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 7,
@@ -460,11 +488,13 @@ function pnf_contracts_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'short',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 7,
@@ -497,7 +527,7 @@ function pnf_contracts_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-contract-field_contract_pub_date'
+  // Exported field_instance: 'node-contract-field_contract_pub_date'.
   $field_instances['node-contract-field_contract_pub_date'] = array(
     'bundle' => 'contract',
     'deleted' => 0,
@@ -507,11 +537,13 @@ function pnf_contracts_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'long',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 7,
@@ -520,11 +552,13 @@ function pnf_contracts_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'short',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 5,
@@ -533,11 +567,13 @@ function pnf_contracts_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'short',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 5,
@@ -570,7 +606,7 @@ function pnf_contracts_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-contract-field_contract_status'
+  // Exported field_instance: 'node-contract-field_contract_status'.
   $field_instances['node-contract-field_contract_status'] = array(
     'bundle' => 'contract',
     'default_value' => array(
@@ -584,14 +620,18 @@ function pnf_contracts_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'list',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'list_default',
         'weight' => 4,
       ),
       'full' => array(
         'label' => 'above',
         'module' => 'list',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'list_default',
         'weight' => 8,
       ),
@@ -618,7 +658,7 @@ function pnf_contracts_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-contract-field_procurement_type'
+  // Exported field_instance: 'node-contract-field_procurement_type'.
   $field_instances['node-contract-field_procurement_type'] = array(
     'bundle' => 'contract',
     'default_value' => NULL,
@@ -628,21 +668,27 @@ function pnf_contracts_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 10,
       ),
       'full' => array(
         'label' => 'above',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'inline',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 4,
       ),
@@ -663,7 +709,7 @@ function pnf_contracts_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-contract-field_pub_dates'
+  // Exported field_instance: 'node-contract-field_pub_dates'.
   $field_instances['node-contract-field_pub_dates'] = array(
     'bundle' => 'contract',
     'deleted' => 0,
@@ -673,11 +719,13 @@ function pnf_contracts_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'long',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 1,

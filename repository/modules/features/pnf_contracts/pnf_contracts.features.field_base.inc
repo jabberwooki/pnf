@@ -10,7 +10,7 @@
 function pnf_contracts_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_contract_category'
+  // Exported field_base: 'field_contract_category'.
   $field_bases['field_contract_category'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -37,7 +37,7 @@ function pnf_contracts_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_contract_deadline_date'
+  // Exported field_base: 'field_contract_deadline_date'.
   $field_bases['field_contract_deadline_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -66,7 +66,7 @@ function pnf_contracts_field_default_field_bases() {
     'type' => 'date',
   );
 
-  // Exported field_base: 'field_contract_link'
+  // Exported field_base: 'field_contract_link'.
   $field_bases['field_contract_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -95,7 +95,7 @@ function pnf_contracts_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_contract_notice'
+  // Exported field_base: 'field_contract_notice'.
   $field_bases['field_contract_notice'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -118,7 +118,7 @@ function pnf_contracts_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_contract_object'
+  // Exported field_base: 'field_contract_object'.
   $field_bases['field_contract_object'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -137,7 +137,7 @@ function pnf_contracts_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_contract_projected_date'
+  // Exported field_base: 'field_contract_projected_date'.
   $field_bases['field_contract_projected_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -166,7 +166,7 @@ function pnf_contracts_field_default_field_bases() {
     'type' => 'date',
   );
 
-  // Exported field_base: 'field_contract_pub_date'
+  // Exported field_base: 'field_contract_pub_date'.
   $field_bases['field_contract_pub_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -195,7 +195,7 @@ function pnf_contracts_field_default_field_bases() {
     'type' => 'date',
   );
 
-  // Exported field_base: 'field_contract_status'
+  // Exported field_base: 'field_contract_status'.
   $field_bases['field_contract_status'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -220,7 +220,7 @@ function pnf_contracts_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_procurement_type'
+  // Exported field_base: 'field_procurement_type'.
   $field_bases['field_procurement_type'] = array(
     'active' => 1,
     'cardinality' => 1,
