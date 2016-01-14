@@ -32,6 +32,13 @@ function kcore_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'access all views'.
+  $permissions['access all views'] = array(
+    'name' => 'access all views',
+    'roles' => array(),
+    'module' => 'views',
+  );
+
   // Exported permission: 'access bean overview'.
   $permissions['access bean overview'] = array(
     'name' => 'access bean overview',
@@ -76,6 +83,15 @@ function kcore_user_default_permissions() {
     'module' => 'download_file',
   );
 
+  // Exported permission: 'access print'.
+  $permissions['access print'] = array(
+    'name' => 'access print',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'print',
+  );
+
   // Exported permission: 'access site in maintenance mode'.
   $permissions['access site in maintenance mode'] = array(
     'name' => 'access site in maintenance mode',
@@ -95,6 +111,20 @@ function kcore_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(),
     'module' => 'user',
+  );
+
+  // Exported permission: 'add terms in public'.
+  $permissions['add terms in public'] = array(
+    'name' => 'add terms in public',
+    'roles' => array(),
+    'module' => 'taxonomy_access_fix',
+  );
+
+  // Exported permission: 'add terms in sectors'.
+  $permissions['add terms in sectors'] = array(
+    'name' => 'add terms in sectors',
+    'roles' => array(),
+    'module' => 'taxonomy_access_fix',
   );
 
   // Exported permission: 'admin_classes'.
@@ -138,6 +168,13 @@ function kcore_user_default_permissions() {
       'administrateur' => 'administrateur',
     ),
     'module' => 'user_settings_access',
+  );
+
+  // Exported permission: 'administer actions'.
+  $permissions['administer actions'] = array(
+    'name' => 'administer actions',
+    'roles' => array(),
+    'module' => 'system',
   );
 
   // Exported permission: 'administer admin role'.
@@ -216,6 +253,15 @@ function kcore_user_default_permissions() {
     'name' => 'administer content types',
     'roles' => array(),
     'module' => 'node',
+  );
+
+  // Exported permission: 'administer custom breadcrumbs'.
+  $permissions['administer custom breadcrumbs'] = array(
+    'name' => 'administer custom breadcrumbs',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'custom_breadcrumbs',
   );
 
   // Exported permission: 'administer custom search'.
@@ -396,6 +442,15 @@ function kcore_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'administer print'.
+  $permissions['administer print'] = array(
+    'name' => 'administer print',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'print',
+  );
+
   // Exported permission: 'administer search'.
   $permissions['administer search'] = array(
     'name' => 'administer search',
@@ -422,6 +477,15 @@ function kcore_user_default_permissions() {
     'name' => 'administer taxonomy',
     'roles' => array(),
     'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'administer tb_megamenu'.
+  $permissions['administer tb_megamenu'] = array(
+    'name' => 'administer tb_megamenu',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'tb_megamenu',
   );
 
   // Exported permission: 'administer themes'.
@@ -534,6 +598,27 @@ function kcore_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete terms in public'.
+  $permissions['delete terms in public'] = array(
+    'name' => 'delete terms in public',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in sectors'.
+  $permissions['delete terms in sectors'] = array(
+    'name' => 'delete terms in sectors',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'display drupal links'.
+  $permissions['display drupal links'] = array(
+    'name' => 'display drupal links',
+    'roles' => array(),
+    'module' => 'admin_menu',
+  );
+
   // Exported permission: 'edit any entityform'.
   $permissions['edit any entityform'] = array(
     'name' => 'edit any entityform',
@@ -566,6 +651,20 @@ function kcore_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'entityform',
+  );
+
+  // Exported permission: 'edit terms in public'.
+  $permissions['edit terms in public'] = array(
+    'name' => 'edit terms in public',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in sectors'.
+  $permissions['edit terms in sectors'] = array(
+    'name' => 'edit terms in sectors',
+    'roles' => array(),
+    'module' => 'taxonomy',
   );
 
   // Exported permission: 'flush caches'.
@@ -770,6 +869,13 @@ function kcore_user_default_permissions() {
     'module' => 'search',
   );
 
+  // Exported permission: 'use ctools import'.
+  $permissions['use ctools import'] = array(
+    'name' => 'use ctools import',
+    'roles' => array(),
+    'module' => 'ctools',
+  );
+
   // Exported permission: 'use custom search'.
   $permissions['use custom search'] = array(
     'name' => 'use custom search',
@@ -789,6 +895,15 @@ function kcore_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'custom_search_blocks',
+  );
+
+  // Exported permission: 'use php in custom breadcrumbs'.
+  $permissions['use php in custom breadcrumbs'] = array(
+    'name' => 'use php in custom breadcrumbs',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'custom_breadcrumbs',
   );
 
   // Exported permission: 'use text format filtered_html'.
