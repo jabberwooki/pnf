@@ -16,8 +16,15 @@ a {
     -webkit-transition: all .25s ease-in-out;	
 }
 
-.breadcrumb{
-    margin-top: 10px;
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 0;
+    margin-top: 20px;
+    font-size: @font-size-small;
+    font-weight: 300;
 }
 
 /*Ckeditor*/
@@ -93,6 +100,16 @@ a {
     blockquote p {
       display: inline;
     }
+    hr {
+        border-top: 1px solid #3a353c;
+    }
+    table,tr,td,th,thead,tbody{
+        border-color: #3a353c;
+    }
+    table thead{
+        background-color: #f4f4f4;
+    }    
+
 }
 
 /*paragraph*/
@@ -683,11 +700,18 @@ a {
     margin-bottom: 20px;
 }
 #block-child-menu-items-child-menu-items{
+    margin-top: 30px;
+
     .cmi-wrapper{
         background: #fff;
         padding: 10px;
         margin-bottom: 20px;
         min-height: 270px;
+        -moz-box-shadow: 0px 0px 10px 0px #999999;
+        -webkit-box-shadow: 0px 0px 10px 0px #999999;
+        -o-box-shadow: 0px 0px 10px 0px #999999;
+        box-shadow: 0px 0px 10px 0px #999999;
+        filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999, Direction=NaN, Strength=10);
     }
     h3{
         font-size: @font-size-h4;
@@ -695,12 +719,17 @@ a {
             text-decoration: none;
         }
     }
-    .cmi-wrapper:hover{
-                -moz-box-shadow: 0px 0px 10px 0px #999999;
-        -webkit-box-shadow: 0px 0px 10px 0px #999999;
-        -o-box-shadow: 0px 0px 10px 0px #999999;
-        box-shadow: 0px 0px 10px 0px #999999;
-        filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999, Direction=NaN, Strength=10);
+
+    .cmi-wrapper .cmi-field-item-image {
+    background: #000;
+    }
+    .cmi-wrapper .cmi-field-item-image a img {
+        opacity: 1;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+    .cmi-wrapper .cmi-field-item-image a img:hover {
+        opacity: .5;
     }
 
 }
@@ -735,6 +764,9 @@ a {
 /*List*/
 .view-mode-teaser .image-field-caption{
     display: none;
+}
+.views-exposed-widgets {
+    margin-bottom: 20px;
 }
 
 /*Menu tools*/
@@ -843,4 +875,20 @@ a {
     margin-left: 38%;
     font-size: 48px;
     color: #aaa;
+}
+
+
+/*Nodes*/
+.node-advanced-page .field-name-title h2,
+h2.page-header{
+    font-size: 40px;
+}
+.page-header {
+    padding-bottom: 0;
+    margin: 40px 0 20px;
+    border-bottom: none;
+}
+
+.node-advanced-page .col-lg-8.col-lg-offset-2{
+    background: #fff;
 }
