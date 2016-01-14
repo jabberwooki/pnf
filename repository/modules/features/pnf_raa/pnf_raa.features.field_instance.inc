@@ -11,7 +11,7 @@ function pnf_raa_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'field_collection_item-field_raa_files-field_raa_file'
+  // 'field_collection_item-field_raa_files-field_raa_file'.
   $field_instances['field_collection_item-field_raa_files-field_raa_file'] = array(
     'bundle' => 'field_raa_files',
     'deleted' => 0,
@@ -20,14 +20,18 @@ function pnf_raa_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'download_file',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'direct_download_accessible_icon',
         'weight' => 1,
       ),
       'full' => array(
         'label' => 'above',
         'module' => 'file',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'file_default',
         'weight' => 1,
       ),
@@ -77,7 +81,7 @@ function pnf_raa_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_raa_files-field_raa_file_title'
+  // 'field_collection_item-field_raa_files-field_raa_file_title'.
   $field_instances['field_collection_item-field_raa_files-field_raa_file_title'] = array(
     'bundle' => 'field_raa_files',
     'default_value' => NULL,
@@ -87,14 +91,18 @@ function pnf_raa_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 0,
       ),
       'full' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'text_default',
         'weight' => 0,
       ),
@@ -149,7 +157,7 @@ function pnf_raa_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-raa-field_pub_dates'
+  // Exported field_instance: 'node-raa-field_pub_dates'.
   $field_instances['node-raa-field_pub_dates'] = array(
     'bundle' => 'raa',
     'deleted' => 0,
@@ -159,11 +167,13 @@ function pnf_raa_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
+          'field_formatter_class' => '',
           'format_type' => 'long',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 3,
@@ -202,7 +212,7 @@ function pnf_raa_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-raa-field_raa_category'
+  // Exported field_instance: 'node-raa-field_raa_category'.
   $field_instances['node-raa-field_raa_category'] = array(
     'bundle' => 'raa',
     'default_value' => NULL,
@@ -212,7 +222,9 @@ function pnf_raa_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'i18n_taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 1,
       ),
@@ -239,7 +251,7 @@ function pnf_raa_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-raa-field_raa_files'
+  // Exported field_instance: 'node-raa-field_raa_files'.
   $field_instances['node-raa-field_raa_files'] = array(
     'bundle' => 'raa',
     'default_value' => NULL,
@@ -254,6 +266,7 @@ function pnf_raa_field_default_field_instances() {
           'delete' => 'Supprimer',
           'description' => TRUE,
           'edit' => 'Modifier',
+          'field_formatter_class' => '',
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',

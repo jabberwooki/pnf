@@ -10,7 +10,7 @@
 function pnf_raa_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_raa_category'
+  // Exported field_base: 'field_raa_category'.
   $field_bases['field_raa_category'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -37,7 +37,7 @@ function pnf_raa_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_raa_file'
+  // Exported field_base: 'field_raa_file'.
   $field_bases['field_raa_file'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -60,7 +60,7 @@ function pnf_raa_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_raa_file_title'
+  // Exported field_base: 'field_raa_file_title'.
   $field_bases['field_raa_file_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -81,7 +81,7 @@ function pnf_raa_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_raa_files'
+  // Exported field_base: 'field_raa_files'.
   $field_bases['field_raa_files'] = array(
     'active' => 1,
     'cardinality' => -1,
