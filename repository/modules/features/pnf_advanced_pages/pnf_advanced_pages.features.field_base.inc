@@ -10,7 +10,7 @@
 function pnf_advanced_pages_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_available_doc_file'
+  // Exported field_base: 'field_available_doc_file'.
   $field_bases['field_available_doc_file'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -33,7 +33,7 @@ function pnf_advanced_pages_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_bg_color'
+  // Exported field_base: 'field_bg_color'.
   $field_bases['field_bg_color'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -54,7 +54,7 @@ function pnf_advanced_pages_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_iframe'
+  // Exported field_base: 'field_iframe'.
   $field_bases['field_iframe'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -73,7 +73,7 @@ function pnf_advanced_pages_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_image'
+  // Exported field_base: 'field_image'.
   $field_bases['field_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -95,7 +95,7 @@ function pnf_advanced_pages_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_images'
+  // Exported field_base: 'field_images'.
   $field_bases['field_images'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -117,7 +117,7 @@ function pnf_advanced_pages_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_left_col_text'
+  // Exported field_base: 'field_left_col_text'.
   $field_bases['field_left_col_text'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -136,7 +136,7 @@ function pnf_advanced_pages_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_page_content'
+  // Exported field_base: 'field_page_content'.
   $field_bases['field_page_content'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -151,7 +151,7 @@ function pnf_advanced_pages_field_default_field_bases() {
     'type' => 'paragraphs',
   );
 
-  // Exported field_base: 'field_right_col_text'
+  // Exported field_base: 'field_right_col_text'.
   $field_bases['field_right_col_text'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -170,7 +170,7 @@ function pnf_advanced_pages_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_scald_video'
+  // Exported field_base: 'field_scald_video'.
   $field_bases['field_scald_video'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -189,7 +189,7 @@ function pnf_advanced_pages_field_default_field_bases() {
     'type' => 'atom_reference',
   );
 
-  // Exported field_base: 'field_slide'
+  // Exported field_base: 'field_slide'.
   $field_bases['field_slide'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -211,7 +211,7 @@ function pnf_advanced_pages_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_technical_scald'
+  // Exported field_base: 'field_technical_scald'.
   $field_bases['field_technical_scald'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -230,7 +230,7 @@ function pnf_advanced_pages_field_default_field_bases() {
     'type' => 'atom_reference',
   );
 
-  // Exported field_base: 'field_texte'
+  // Exported field_base: 'field_texte'.
   $field_bases['field_texte'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -249,7 +249,7 @@ function pnf_advanced_pages_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_title'
+  // Exported field_base: 'field_title'.
   $field_bases['field_title'] = array(
     'active' => 1,
     'cardinality' => 1,
