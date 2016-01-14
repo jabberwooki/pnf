@@ -210,6 +210,9 @@ projects[variable][version] = "2.5"
 ;projects[views_isotope][subdir] = contrib
 ;projects[views_isotope][version] = ""
 
+projects[views_rss][subdir] = contrib
+projects[views_rss][version] = "2.0-rc4"
+
 ;projects[views_slideshow][subdir] = contrib
 ;projects[views_slideshow][version] = "7.x-3.1"
 
