@@ -12,7 +12,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
             // "Format" drop-down list in the toolbar, maintaining the same features.
            
             { name : 'Paragraphe'		, element : 'p' },
-            { name : 'Intro'            , element : 'div', attributes : { 'class' : 'intro'}, styles : { 'color' : '#ed8b00','font-style' : 'italic' } },
+            { name : 'Chapeau'          , element : 'div', attributes : { 'class' : 'intro'}, styles : { 'color' : '#ed8b00','font-style' : 'italic' } },
             { name : 'Bouton'           , element : 'div', attributes : { 'class' : 'boutonok'}, styles : { 'color' : '#fff'} },
             { name : 'Titre 3'  		, element : 'h3' },
             { name : 'Titre 4'		    , element : 'h4' },
