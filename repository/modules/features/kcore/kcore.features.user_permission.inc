@@ -78,7 +78,8 @@ function kcore_user_default_permissions() {
   $permissions['access direct download file'] = array(
     'name' => 'access direct download file',
     'roles' => array(
-      'administrateur' => 'administrateur',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'download_file',
   );
