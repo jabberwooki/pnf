@@ -58,7 +58,9 @@ function pnf_multimedia_user_default_permissions() {
   // Exported permission: 'administer dnd'.
   $permissions['administer dnd'] = array(
     'name' => 'administer dnd',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'dnd',
   );
 
