@@ -15,6 +15,8 @@ function pnf_multimedia_user_default_permissions() {
     'name' => 'access scald dnd library',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'rédacteur' => 'rédacteur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'scald_dnd_library',
   );
@@ -70,21 +72,29 @@ function pnf_multimedia_user_default_permissions() {
   // Exported permission: 'administer scald atoms'.
   $permissions['administer scald atoms'] = array(
     'name' => 'administer scald atoms',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'scald',
   );
 
   // Exported permission: 'bypass atom access restrictions'.
   $permissions['bypass atom access restrictions'] = array(
     'name' => 'bypass atom access restrictions',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'scald',
   );
 
   // Exported permission: 'create atom of any type'.
   $permissions['create atom of any type'] = array(
     'name' => 'create atom of any type',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'rédacteur' => 'rédacteur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'scald',
   );
 
@@ -126,14 +136,19 @@ function pnf_multimedia_user_default_permissions() {
   // Exported permission: 'delete any atom'.
   $permissions['delete any atom'] = array(
     'name' => 'delete any atom',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'scald',
   );
 
   // Exported permission: 'delete own atom'.
   $permissions['delete own atom'] = array(
     'name' => 'delete own atom',
-    'roles' => array(),
+    'roles' => array(
+      'rédacteur' => 'rédacteur',
+    ),
     'module' => 'scald',
   );
 
@@ -161,14 +176,19 @@ function pnf_multimedia_user_default_permissions() {
   // Exported permission: 'edit any atom'.
   $permissions['edit any atom'] = array(
     'name' => 'edit any atom',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'scald',
   );
 
   // Exported permission: 'edit own atom'.
   $permissions['edit own atom'] = array(
     'name' => 'edit own atom',
-    'roles' => array(),
+    'roles' => array(
+      'rédacteur' => 'rédacteur',
+    ),
     'module' => 'scald',
   );
 
@@ -196,14 +216,19 @@ function pnf_multimedia_user_default_permissions() {
   // Exported permission: 'fetch any atom'.
   $permissions['fetch any atom'] = array(
     'name' => 'fetch any atom',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'scald',
   );
 
   // Exported permission: 'fetch own atom'.
   $permissions['fetch own atom'] = array(
     'name' => 'fetch own atom',
-    'roles' => array(),
+    'roles' => array(
+      'rédacteur' => 'rédacteur',
+    ),
     'module' => 'scald',
   );
 
@@ -212,6 +237,8 @@ function pnf_multimedia_user_default_permissions() {
     'name' => 'import dailymotion videos',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'rédacteur' => 'rédacteur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'scald_dailymotion',
   );
@@ -219,14 +246,19 @@ function pnf_multimedia_user_default_permissions() {
   // Exported permission: 'restrict atom access'.
   $permissions['restrict atom access'] = array(
     'name' => 'restrict atom access',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'scald',
   );
 
   // Exported permission: 'view any atom'.
   $permissions['view any atom'] = array(
     'name' => 'view any atom',
-    'roles' => array(),
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'scald',
   );
 

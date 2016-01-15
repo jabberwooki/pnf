@@ -19,7 +19,6 @@ dependencies[] = scald_soundcloud
 dependencies[] = scald_video
 dependencies[] = scald_vimeo
 dependencies[] = strongarm
-dependencies[] = taxonomy_access_fix
 dependencies[] = views_bootstrap
 features[context][] = multimedia-list
 features[context][] = multimedia-photos
