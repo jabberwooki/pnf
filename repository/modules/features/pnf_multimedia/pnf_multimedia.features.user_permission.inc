@@ -76,6 +76,7 @@ function pnf_multimedia_user_default_permissions() {
     'name' => 'administer scald atoms',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'scald',
   );
