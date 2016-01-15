@@ -68,6 +68,7 @@ features[field_instance][] = paragraphs_item-video-field_title
 features[image][] = 270x180
 features[image][] = 415x280
 features[image][] = pb_275x180
+features[image][] = slide_750x500
 features[image][] = slide_900x600
 features[node][] = advanced_page
 features[paragraphs][] = 2_cols_text

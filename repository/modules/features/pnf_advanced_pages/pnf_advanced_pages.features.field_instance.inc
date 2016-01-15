@@ -1035,7 +1035,7 @@ function pnf_advanced_pages_field_default_field_instances() {
           'slideshow_controls_position' => 'after',
           'slideshow_field_collection_image' => '',
           'slideshow_fx' => 'fade',
-          'slideshow_image_style' => 'slide_900x600',
+          'slideshow_image_style' => 'slide_750x500',
           'slideshow_link' => '',
           'slideshow_order' => '',
           'slideshow_pager' => 'number',

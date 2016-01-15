@@ -70,6 +70,21 @@ function pnf_advanced_pages_image_default_styles() {
     ),
   );
 
+  // Exported image style: slide_750x500.
+  $styles['slide_750x500'] = array(
+    'label' => 'Diapo (750x500)',
+    'effects' => array(
+      8 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 750,
+          'height' => 500,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: slide_900x600.
   $styles['slide_900x600'] = array(
     'label' => 'slide_900x600',
