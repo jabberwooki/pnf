@@ -27,21 +27,30 @@ function pnf_contracts_user_default_permissions() {
   // Exported permission: 'create contract content'.
   $permissions['create contract content'] = array(
     'name' => 'create contract content',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'rédacteur' => 'rédacteur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete any contract content'.
   $permissions['delete any contract content'] = array(
     'name' => 'delete any contract content',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete own contract content'.
   $permissions['delete own contract content'] = array(
     'name' => 'delete own contract content',
-    'roles' => array(),
+    'roles' => array(
+      'rédacteur' => 'rédacteur',
+    ),
     'module' => 'node',
   );
 
@@ -62,14 +71,19 @@ function pnf_contracts_user_default_permissions() {
   // Exported permission: 'edit any contract content'.
   $permissions['edit any contract content'] = array(
     'name' => 'edit any contract content',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit own contract content'.
   $permissions['edit own contract content'] = array(
     'name' => 'edit own contract content',
-    'roles' => array(),
+    'roles' => array(
+      'rédacteur' => 'rédacteur',
+    ),
     'module' => 'node',
   );
 

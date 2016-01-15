@@ -20,21 +20,30 @@ function pnf_documents_user_default_permissions() {
   // Exported permission: 'create document content'.
   $permissions['create document content'] = array(
     'name' => 'create document content',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'rédacteur' => 'rédacteur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete any document content'.
   $permissions['delete any document content'] = array(
     'name' => 'delete any document content',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete own document content'.
   $permissions['delete own document content'] = array(
     'name' => 'delete own document content',
-    'roles' => array(),
+    'roles' => array(
+      'rédacteur' => 'rédacteur',
+    ),
     'module' => 'node',
   );
 
@@ -48,14 +57,19 @@ function pnf_documents_user_default_permissions() {
   // Exported permission: 'edit any document content'.
   $permissions['edit any document content'] = array(
     'name' => 'edit any document content',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit own document content'.
   $permissions['edit own document content'] = array(
     'name' => 'edit own document content',
-    'roles' => array(),
+    'roles' => array(
+      'rédacteur' => 'rédacteur',
+    ),
     'module' => 'node',
   );
 

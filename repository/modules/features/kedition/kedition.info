@@ -7,7 +7,6 @@ project = kedition
 dependencies[] = ckeditor
 dependencies[] = features
 dependencies[] = filter
-dependencies[] = ckeditor
 dependencies[] = node
 features[ckeditor_profile][] = Advanced
 features[ckeditor_profile][] = CKEditor Global Profile

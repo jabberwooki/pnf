@@ -46,7 +46,7 @@ function pnf_promotions_field_default_field_instances() {
       'image_field_caption' => 0,
       'image_field_caption_wrapper' => array(
         'image_field_caption_default' => array(
-          'format' => 'full_html',
+          'format' => 'plain_text',
           'value' => '',
         ),
       ),
