@@ -100,21 +100,27 @@ function kcore_user_default_permissions() {
   // Exported permission: 'access site in maintenance mode'.
   $permissions['access site in maintenance mode'] = array(
     'name' => 'access site in maintenance mode',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'system',
   );
 
   // Exported permission: 'access site reports'.
   $permissions['access site reports'] = array(
     'name' => 'access site reports',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'system',
   );
 
   // Exported permission: 'access user profiles'.
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'user',
   );
 
@@ -144,7 +150,9 @@ function kcore_user_default_permissions() {
   // Exported permission: 'admin_display_suite'.
   $permissions['admin_display_suite'] = array(
     'name' => 'admin_display_suite',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'ds',
   );
 
@@ -217,21 +225,27 @@ function kcore_user_default_permissions() {
   // Exported permission: 'administer block classes'.
   $permissions['administer block classes'] = array(
     'name' => 'administer block classes',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'block_class',
   );
 
   // Exported permission: 'administer blocks'.
   $permissions['administer blocks'] = array(
     'name' => 'administer blocks',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'block',
   );
 
   // Exported permission: 'administer boxes'.
   $permissions['administer boxes'] = array(
     'name' => 'administer boxes',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'boxes',
   );
 
@@ -274,7 +288,9 @@ function kcore_user_default_permissions() {
   // Exported permission: 'administer custom search'.
   $permissions['administer custom search'] = array(
     'name' => 'administer custom search',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'custom_search',
   );
 
@@ -308,7 +324,9 @@ function kcore_user_default_permissions() {
   // Exported permission: 'administer features'.
   $permissions['administer features'] = array(
     'name' => 'administer features',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'features',
   );
 
@@ -324,28 +342,36 @@ function kcore_user_default_permissions() {
   // Exported permission: 'administer fieldgroups'.
   $permissions['administer fieldgroups'] = array(
     'name' => 'administer fieldgroups',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'field_group',
   );
 
   // Exported permission: 'administer filters'.
   $permissions['administer filters'] = array(
     'name' => 'administer filters',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'filter',
   );
 
   // Exported permission: 'administer image styles'.
   $permissions['administer image styles'] = array(
     'name' => 'administer image styles',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'image',
   );
 
   // Exported permission: 'administer imce'.
   $permissions['administer imce'] = array(
     'name' => 'administer imce',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'imce',
   );
 
@@ -379,7 +405,9 @@ function kcore_user_default_permissions() {
   // Exported permission: 'administer menu'.
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'menu',
   );
 
@@ -413,7 +441,9 @@ function kcore_user_default_permissions() {
   // Exported permission: 'administer modules'.
   $permissions['administer modules'] = array(
     'name' => 'administer modules',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'system',
   );
 
@@ -448,7 +478,9 @@ function kcore_user_default_permissions() {
   // Exported permission: 'administer permissions'.
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'user',
   );
 
@@ -471,7 +503,9 @@ function kcore_user_default_permissions() {
   // Exported permission: 'administer site configuration'.
   $permissions['administer site configuration'] = array(
     'name' => 'administer site configuration',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'system',
   );
 
@@ -501,7 +535,9 @@ function kcore_user_default_permissions() {
   // Exported permission: 'administer themes'.
   $permissions['administer themes'] = array(
     'name' => 'administer themes',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'system',
   );
 
@@ -517,7 +553,9 @@ function kcore_user_default_permissions() {
   // Exported permission: 'administer users'.
   $permissions['administer users'] = array(
     'name' => 'administer users',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'user',
   );
 
@@ -531,7 +569,9 @@ function kcore_user_default_permissions() {
   // Exported permission: 'administer views'.
   $permissions['administer views'] = array(
     'name' => 'administer views',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'views',
   );
 
@@ -547,7 +587,9 @@ function kcore_user_default_permissions() {
   // Exported permission: 'block IP addresses'.
   $permissions['block IP addresses'] = array(
     'name' => 'block IP addresses',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'system',
   );
 
@@ -570,7 +612,11 @@ function kcore_user_default_permissions() {
   // Exported permission: 'change own username'.
   $permissions['change own username'] = array(
     'name' => 'change own username',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'rédacteur' => 'rédacteur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'user',
   );
 
@@ -652,7 +698,10 @@ function kcore_user_default_permissions() {
   // Exported permission: 'edit boxes'.
   $permissions['edit boxes'] = array(
     'name' => 'edit boxes',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'boxes',
   );
 
@@ -693,14 +742,18 @@ function kcore_user_default_permissions() {
   // Exported permission: 'generate features'.
   $permissions['generate features'] = array(
     'name' => 'generate features',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'features',
   );
 
   // Exported permission: 'manage features'.
   $permissions['manage features'] = array(
     'name' => 'manage features',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'features',
   );
 
@@ -733,7 +786,9 @@ function kcore_user_default_permissions() {
   // Exported permission: 'select account cancellation method'.
   $permissions['select account cancellation method'] = array(
     'name' => 'select account cancellation method',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'user',
   );
 
@@ -862,6 +917,7 @@ function kcore_user_default_permissions() {
     'name' => 'translate user-defined strings',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'i18n_string',
   );
@@ -925,14 +981,18 @@ function kcore_user_default_permissions() {
   // Exported permission: 'use text format filtered_html'.
   $permissions['use text format filtered_html'] = array(
     'name' => 'use text format filtered_html',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'filter',
   );
 
   // Exported permission: 'use text format full_html'.
   $permissions['use text format full_html'] = array(
     'name' => 'use text format full_html',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'filter',
   );
 
@@ -993,7 +1053,11 @@ function kcore_user_default_permissions() {
   // Exported permission: 'view the administration theme'.
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'rédacteur' => 'rédacteur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'system',
   );
 
