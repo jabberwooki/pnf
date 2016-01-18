@@ -429,6 +429,64 @@ function kcore_user_default_permissions() {
     'module' => 'menu_fields',
   );
 
+  // Exported permission: 'administer menu-footer-menu menu items'.
+  $permissions['administer menu-footer-menu menu items'] = array(
+    'name' => 'administer menu-footer-menu menu items',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'menu_admin_per_menu',
+  );
+
+  // Exported permission: 'administer menu-join-national-park menu items'.
+  $permissions['administer menu-join-national-park menu items'] = array(
+    'name' => 'administer menu-join-national-park menu items',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'menu_admin_per_menu',
+  );
+
+  // Exported permission: 'administer menu-menu-park menu items'.
+  $permissions['administer menu-menu-park menu items'] = array(
+    'name' => 'administer menu-menu-park menu items',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'menu_admin_per_menu',
+  );
+
+  // Exported permission: 'administer menu-menu-themes menu items'.
+  $permissions['administer menu-menu-themes menu items'] = array(
+    'name' => 'administer menu-menu-themes menu items',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'menu_admin_per_menu',
+  );
+
+  // Exported permission: 'administer menu-national-parks menu items'.
+  $permissions['administer menu-national-parks menu items'] = array(
+    'name' => 'administer menu-national-parks menu items',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'menu_admin_per_menu',
+  );
+
+  // Exported permission: 'administer menu-tools menu items'.
+  $permissions['administer menu-tools menu items'] = array(
+    'name' => 'administer menu-tools menu items',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'menu_admin_per_menu',
+  );
+
   // Exported permission: 'administer module filter'.
   $permissions['administer module filter'] = array(
     'name' => 'administer module filter',
