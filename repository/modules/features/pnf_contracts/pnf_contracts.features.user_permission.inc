@@ -24,6 +24,15 @@ function pnf_contracts_user_default_permissions() {
     'module' => 'taxonomy_access_fix',
   );
 
+  // Exported permission: 'administer menu-menu-public-contracts menu items'.
+  $permissions['administer menu-menu-public-contracts menu items'] = array(
+    'name' => 'administer menu-menu-public-contracts menu items',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'menu_admin_per_menu',
+  );
+
   // Exported permission: 'create contract content'.
   $permissions['create contract content'] = array(
     'name' => 'create contract content',
