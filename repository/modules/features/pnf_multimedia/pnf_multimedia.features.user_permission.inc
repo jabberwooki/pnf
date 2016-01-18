@@ -64,6 +64,24 @@ function pnf_multimedia_user_default_permissions() {
     'module' => 'dnd',
   );
 
+  // Exported permission: 'administer menu-multimedia menu items'.
+  $permissions['administer menu-multimedia menu items'] = array(
+    'name' => 'administer menu-multimedia menu items',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'menu_admin_per_menu',
+  );
+
+  // Exported permission: 'administer menu-multimedia-footer menu items'.
+  $permissions['administer menu-multimedia-footer menu items'] = array(
+    'name' => 'administer menu-multimedia-footer menu items',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'menu_admin_per_menu',
+  );
+
   // Exported permission: 'administer scald'.
   $permissions['administer scald'] = array(
     'name' => 'administer scald',
