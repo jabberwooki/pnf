@@ -91,6 +91,7 @@ dependencies[] = entity_token
 ;dependencies[] = field_formatter_class
 ;dependencies[] = field_formatter_settings
 dependencies[] = filefield_sources
+dependencies[] = menu_admin_per_menu
 ;dependencies[] = migrate_extras
 ;dependencies[] = password_policy
 dependencies[] = phone

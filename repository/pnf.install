@@ -261,3 +261,10 @@ function pnf_update_7007() {
 function pnf_update_7008() {
   module_enable(array('pnf_jobs', 'pnf_raa'));
 }
+
+/**
+ * Activate contrib module menu_admin_per_menu.
+ */
+function pnf_update_7009() {
+  module_enable(array('menu_admin_per_menu'));
+}
