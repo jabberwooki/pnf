@@ -31,6 +31,15 @@ function pnf_news_user_default_permissions() {
     'module' => 'taxonomy_access_fix',
   );
 
+  // Exported permission: 'administer menu-news menu items'.
+  $permissions['administer menu-news menu items'] = array(
+    'name' => 'administer menu-news menu items',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'menu_admin_per_menu',
+  );
+
   // Exported permission: 'create news content'.
   $permissions['create news content'] = array(
     'name' => 'create news content',
