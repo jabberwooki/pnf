@@ -3,14 +3,20 @@ description = Provides various modules and configuration for search engine optim
 core = 7.x
 package = App
 version = 7.x-1.0
-
-;=== Contrib dependencies =====================================================
+dependencies[] = features
 dependencies[] = globalredirect
 dependencies[] = metatag
 dependencies[] = page_title
 dependencies[] = pathauto
+dependencies[] = pathauto_entity
 dependencies[] = redirect
 dependencies[] = transliteration
 dependencies[] = xmlsitemap
-
 features[features_api][] = api:2
+features[user_permission][] = administer meta tags
+features[user_permission][] = administer page titles
+features[user_permission][] = administer pathauto
+features[user_permission][] = administer redirects
+features[user_permission][] = edit meta tags
+features[user_permission][] = notify of path changes
+features[user_permission][] = set page title

@@ -1,0 +1,8 @@
+name = "Child Menu Items"
+description = "Provides a block displaying the list of all child menu items for the current clicked menu item ."
+package = "Menu tools"
+core = "7.x"
+
+dependencies[] = menu_fields
+
+configure = admin/structure/menu_fields

@@ -1,4 +1,4 @@
-name = Parcs Nationaux de France
+name = Parcs nationaux de France
 description = Profil d'installation des sites mutualisés PNF.
 version = 1.0
 core = 7.x
@@ -50,6 +50,7 @@ dependencies[] = ds
 dependencies[] = entity
 dependencies[] = features
 dependencies[] = fe_block
+dependencies[] = fe_date
 dependencies[] = field_group
 dependencies[] = files_undo_remove
 dependencies[] = imce
@@ -75,7 +76,9 @@ dependencies[] = addressfield
 dependencies[] = bean
 dependencies[] = block_class
 dependencies[] = boxes
+dependencies[] = context_domain
 dependencies[] = custom_search
+dependencies[] = date
 dependencies[] = date_popup
 dependencies[] = date_views
 ;dependencies[] = draggableviews
@@ -83,10 +86,12 @@ dependencies[] = email
 ;dependencies[] = email_registration
 ;dependencies[] = entityform
 dependencies[] = entityreference
+dependencies[] = entity_token
 ;dependencies[] = field_collection
 ;dependencies[] = field_formatter_class
 ;dependencies[] = field_formatter_settings
 dependencies[] = filefield_sources
+dependencies[] = menu_admin_per_menu
 ;dependencies[] = migrate_extras
 ;dependencies[] = password_policy
 dependencies[] = phone
@@ -101,7 +106,7 @@ dependencies[] = print
 
 ;=== Mapping ==================================================================
 ;dependencies[] = geocoder
-;dependencies[] = geofield
+dependencies[] = geofield_map
 ;dependencies[] = leaflet
 
 ;dependencies[] = gmap
@@ -118,6 +123,14 @@ dependencies[] = print
 
 ;=== Scald and media related modules ==========================================
 dependencies[] = scald
+dependencies[] = atom_reference
+dependencies[] = mee
+dependencies[] = dnd
+dependencies[] = scald_dnd_library
+dependencies[] = scald_audio
+dependencies[] = scald_image
+dependencies[] = scald_video
+
 dependencies[] = scald_file
 dependencies[] = scald_dailymotion
 dependencies[] = scald_vimeo
@@ -145,10 +158,30 @@ dependencies[] = kwstatsgoogle
 ;--- Themes -------------------------------------------------------------------
 ; (Activate corresponding inclusions in file drupal-org.make)
 dependencies[] = kbootstrap
+dependencies[] = bootstrap_fieldgroup
+dependencies[] = ds_bootstrap_layouts
+dependencies[] = views_bootstrap
 ;dependencies[] = kfoundation
 ;dependencies[] = komega
 
+;--- PNF features -------------------------------------------------------------
+dependencies[] = pnf_news
+;--- pnf_agenda has not be activated by default, some sites don't need it.
+dependencies[] = pnf_contracts
+dependencies[] = pnf_raa
+dependencies[] = pnf_jobs
+dependencies[] = pnf_documents
+dependencies[] = pnf_multimedia
+dependencies[] = pnf_slideshow
+dependencies[] = pnf_contact
+dependencies[] = pnf_promotions
+dependencies[] = pnf_landing_pages
+dependencies[] = pnf_social_media
+dependencies[] = pnf_advanced_pages
 
+;--- PNF custom modules -------------------------------------------------------
+dependencies[] = pnx_settings
+dependencies[] = child_menu_items
 
 
 

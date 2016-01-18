@@ -18,3 +18,225 @@ function empty_front_page_callback() {
 	drupal_set_title('');
 	return array();
 }
+
+function kcore_block_view_alter(&$data, $block) {
+  if ($block->delta == 'menu-menu-park' || $block->delta == 'menu-national-parks' || $block->delta == 'pnf_park_menu_clone') {
+	// Changes menu block name, based on http host.
+	$park_names = array(
+	  'calanques-parcnational' => 'Le Parc national des Calanques',
+	  'cevennes-parcnational' => 'Le Parc national des Cévennes',
+	  'ecrins-parcnational' => 'Le Parc national des Ecrins',
+	  'guadeloupe-parcnational' => 'Le Parc national de la Guadeloupe',
+	  'mercantour' => 'Le Parc national du Mercantour',
+	  'parc-amazonien-guyane' => 'Le Parc amazonien de Guyane',
+	  'parc-pyrenees' => 'Le Parc national des Pyrénées',
+	  'parcsnationaux' => 'Parcs nationaux de France',
+	  'portcrosparcnational' => 'Le Parc national de Port-Cros',
+	  'reunion-parcnational' => 'Le Parc national de La Réunion',
+	  'vanoise-parcnational' => 'Le Parc national de la Vanoise',
+	);
+
+	$host_parts = explode('.', $_SERVER['HTTP_HOST']);
+
+	// Config for staging sites.
+	// AR >> http://pnXX.pnfdev.xyz/
+	// Korora >> http://pnXX.korora.fr/
+	// OVEA >> http://preprod-xxxx.parcnational.fr/
+	if ($host_parts[2] == 'xyz' || $host_parts[1] == 'korora') {
+	  $park_names = array(
+		'pnca' => 'Le Parc national des Calanques',
+		'pnce' => 'Le Parc national des Cévennes',
+		'pnec' => 'Le Parc national des Ecrins',
+		'pngu' => 'Le Parc national de la Guadeloupe',
+		'pnme' => 'Le Parc national du Mercantour',
+		'pnag' => 'Le Parc amazonien de Guyane',
+		'pnpy' => 'Le Parc national des Pyrénées',
+		'pnf' => 'Parcs nationaux de France',
+		'pnpc' => 'Le Parc national de Port-Cros',
+		'pnre' => 'Le Parc national de La Réunion',
+		'pnva' => 'Le Parc national de la Vanoise',
+		);
+
+	  $current_park_name = $park_names[$host_parts[0]];
+
+	}
+	elseif (substr($_SERVER['HTTP_HOST'],0,8) == 'preprod-') {
+	  $park_names = array(
+		'preprod-pncal' => 'Le Parc national des Calanques',
+		'preprod-pnc' => 'Le Parc national des Cévennes',
+		'preprod-pne' => 'Le Parc national des Ecrins',
+		'preprod-png' => 'Le Parc national de la Guadeloupe',
+		'preprod-pnm' => 'Le Parc national du Mercantour',
+		'preprod-pag' => 'Le Parc amazonien de Guyane',
+		'preprod-pnp' => 'Le Parc national des Pyrénées',
+		'preprod-pnf' => 'Parcs nationaux de France',
+		'preprod-pnpc' => 'Le Parc national de Port-Cros',
+		'preprod-pnrun' => 'Le Parc national de La Réunion',
+		'preprod-pnv' => 'Le Parc national de la Vanoise',
+	  );
+
+	  $current_park_name = $park_names[$host_parts[0]];
+	}
+	// Config for production sites
+	// OVEA >> http://prod-xxxx.parcnational.fr/
+	elseif (substr($_SERVER['HTTP_HOST'],0,5) == 'prod-') {
+	  $park_names = array(
+		'prod-pncal' => 'Le Parc national des Calanques',
+		'prod-pnc' => 'Le Parc national des Cévennes',
+		'prod-pne' => 'Le Parc national des Ecrins',
+		'prod-png' => 'Le Parc national de la Guadeloupe',
+		'prod-pnm' => 'Le Parc national du Mercantour',
+		'prod-pag' => 'Le Parc amazonien de Guyane',
+		'prod-pnp' => 'Le Parc national des Pyrénées',
+		'prod-pnf' => 'Parcs nationaux de France',
+		'prod-pnpc' => 'Le Parc national de Port-Cros',
+		'prod-pnrun' => 'Le Parc national de La Réunion',
+		'prod-pnv' => 'Le Parc national de la Vanoise',
+	  );
+
+	  $current_park_name = $park_names[$host_parts[0]];
+	}
+	// Config for dev sites : http://www.<parc-name>.dev
+	// And real live sites : http://www.<parc-name>.fr
+	else {
+	  $current_park_name = $park_names[$host_parts[1]];
+	}
+
+	switch($block->delta) {
+	  case 'menu-menu-park':
+//		$select = array();
+//		foreach (element_children($data['content']) as $key) {
+//		  $select[$data['content'][$key]['#href']] = $data['content'][$key]['#title'];
+//		}
+//		$options = array('choose' => $current_park_name);
+//		ctools_include('jump-menu');
+//		$form = ctools_jump_menu(array(), $form_state, $select, $options);
+//		$data['content'] = $form;
+		$data['subject'] = '';
+		break;
+
+	  case 'menu-national-parks':
+//		$select = array();
+//		foreach (element_children($data['content']) as $key) {
+//		  $url_parts = explode('.', $data['content'][$key]['#href']);
+//		  if ($url_parts[1] != $host_parts[1]) {
+//			$select[$data['content'][$key]['#href']] = $data['content'][$key]['#title'];
+//		  }
+//		}
+//		$options = array('choose' => $data['subject']);
+//		ctools_include('jump-menu');
+//		$form = ctools_jump_menu(array(), $form_state, $select, $options);
+//		$data['content'] = $form;
+		$data['subject'] = '';
+		break;
+
+	  case 'pnf_park_menu_clone':
+		$data['subject'] = $current_park_name;
+		break;
+	}
+
+
+  }
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function kcore_block_info() {
+  $blocks = array();
+  // Cloning of "Menu du parc" block.
+  $blocks['pnf_park_menu_clone'] = array(
+	'info' => t('PNF : Clone du bloc de menu "Menu du parc"'),
+	'cache' => DRUPAL_NO_CACHE,
+  );
+
+  // Cloning of "Suivez-nous" block.
+  $blocks['pnf_on_the_web_clone'] = array(
+	'info' => t('PNF : Clone du bloc "Suivez-nous"'),
+	'cache' => DRUPAL_NO_CACHE,
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function kcore_block_view($delta = '') {
+  switch ($delta) {
+	case 'pnf_park_menu_clone':
+	  $block['subject'] = '';
+
+	  // For this block, the aim is to catch all child items
+	  // of the unique first level item of menu 'Menu du Parc',
+	  // then put them at first level,
+	  // and finally, get rid of the original first level item.
+
+	  // Retrieve "Menu du parc" block content
+	  $park_menu_block = module_invoke('menu', 'block_view', 'menu-menu-park');
+	  $content = $park_menu_block['content'];
+
+	  if (!empty($content)) {
+		// Store key of the unique first level item.
+		$parent_key = key($content);
+		// Retrieve child items of first level item
+		$below = $content[$parent_key]['#below'];
+		$child_items = array();
+		foreach ($below as $key => $value) {
+		  if (is_int($key)) {
+			$child_items[$key] = $below[$key];
+		  }
+		}
+		// Insert child item at the first level
+		$content = $child_items + $content;
+		// Remove original first level item
+		unset($content[$parent_key]);
+	  }
+
+	  $block['content'] = $content;
+	  return $block;
+	  break;
+
+	case 'pnf_on_the_web_clone':
+	  $block['subject'] = '';
+
+	  // Retrieve "Menu du parc" block content
+	  $on_the_web_block = module_invoke('on_the_web', 'block_view', '0');
+	  $block['content'] = $on_the_web_block['content'];
+	  return $block;
+	  break;
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function kcore_views_pre_render(&$view) {
+  if($view->current_display == 'french_parks_node') {
+	$title = $view->result[0]->_field_data['nid']['entity']->title;
+	$view->build_info['title'] = $title;
+  }
+}
+
+/**
+ * HELPER FUNCTIONS
+ */
+
+function pnf_park_breadcrumb() {
+  $breadcrumb = drupal_get_breadcrumb();
+  $park_menu = menu_tree('menu-menu-park');
+  $single_parent = array_shift($park_menu);
+  $single_parent_alias = drupal_get_path_alias($single_parent['#href']);
+
+  $new_breadcrumb = array();
+  global $language;
+  $lang = $language->language;
+
+  foreach ($breadcrumb as $key=>$value) {
+	$new_breadcrumb[] = $value;
+	if ($key == 0) {
+	  $new_breadcrumb[] = '<a href="/' . $lang . '/' . $single_parent_alias . '">' . $single_parent['#title'] . '</a>';
+	}
+  }
+  return $new_breadcrumb;
+}

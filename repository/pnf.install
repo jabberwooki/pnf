@@ -120,12 +120,12 @@ function _pnf_install_locale(&$install_state) {
   variable_set('language_default', (object) $langs[$settings['default_language']]);
 
   // Disable all other languages.
-  db_update('languages')
-    ->fields(array(
-      'enabled' => '0',
-    ))
-    ->condition('language', $settings['default_language'], '<>')
-    ->execute();
+//  db_update('languages')
+//    ->fields(array(
+//      'enabled' => '0',
+//    ))
+//    ->condition('language', $settings['default_language'], '<>')
+//    ->execute();
 
   // Reset languages static cache to avoid issues with l10n_update.
   drupal_static_reset('language_list');
@@ -204,4 +204,67 @@ function _pnf_get_settings() {
     $settings = $data['settings'];
   }
   return $settings;
+}
+
+/**
+ * Activate pnf_slideshow feature.
+ */
+function pnf_update_7001() {
+  module_enable(array('pnf_slideshow'));
+}
+
+/**
+ * Activate pnf_contact feature.
+ */
+function pnf_update_7002() {
+  module_enable(array('pnf_contact'));
+}
+
+/**
+ * Activate context_domain custom module and pnx_settings custom module.
+ */
+function pnf_update_7003() {
+  module_enable(array('context_domain','pnx_settings'));
+}
+
+/**
+ * Activate pnf_promotions feature.
+ */
+function pnf_update_7004() {
+  module_enable(array('pnf_promotions'));
+}
+
+/**
+ * Activate pnf_landing_pages feature.
+ */
+function pnf_update_7005() {
+  module_enable(array('pnf_landing_pages'));
+}
+
+/**
+ * Activate pnf_social_media feature.
+ */
+function pnf_update_7006() {
+  module_enable(array('pnf_social_media'));
+}
+
+/**
+ * Activate pnf_advanced_pages feature.
+ */
+function pnf_update_7007() {
+  module_enable(array('pnf_advanced_pages'));
+}
+
+/**
+ * Activate pnf_jobs and pnf_raa features.
+ */
+function pnf_update_7008() {
+  module_enable(array('pnf_jobs', 'pnf_raa'));
+}
+
+/**
+ * Activate contrib module menu_admin_per_menu.
+ */
+function pnf_update_7009() {
+  module_enable(array('menu_admin_per_menu'));
 }

@@ -1,0 +1,98 @@
+<?php
+/**
+ * @file
+ * Code for the Contact feature.
+ */
+
+include_once 'pnf_contact.features.inc';
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function pnf_contact_field_formatter_info() {
+  $formatters = array(
+	'pnf_text' => array(
+	  'label' => t('HTML Wrapper'),
+	  'field types' => array('text'),
+	  'description' => t('Add a wrapping html tag.'),
+      'settings'  => array(
+        'html_tag' => 'h2',
+        'html_class' => '',
+      ),
+	),
+  );
+  return $formatters;
+}
+
+/**
+ * Implements hook_field_formatter_settings_form().
+ */
+function pnf_contact_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
+  // Two lines from core, easier to deal with it like this
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+
+  $form = '';
+  // Switch for the different formatters
+  switch ($display['type']) {
+    case 'pnf_text':
+      $form['html_tag'] = array(
+        '#type' => 'textfield',
+        '#title' => 'Html tag',
+        '#description' => 'Ex.: h2, h3, p',
+        '#default_value' => $settings['html_tag'],
+      );
+      $form['html_class'] = array(
+        '#type' => 'textfield',
+        '#title' => 'Html class',
+        '#description' => t('Enter class names, separated by spaces'),
+        '#default_value' => $settings['html_class'],
+      );
+      break;
+  }
+  return $form;
+}
+
+function pnf_contact_field_formatter_settings_summary($field, $instance, $view_mode) {
+  // Easy access to needed arrays
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+
+  $summary = '';
+  // Switch for the different formatters
+  switch ($display['type']) {
+    case 'pnf_text':
+      $summary = '<b>' . t('HTML wrapper: ') . '</b>' . $settings['html_tag'];
+      $summary .= '<br/>';
+      $summary .= '<b>' . t('HTML class: ') . '</b>' . $settings['html_class'];
+      break;
+  }
+
+  // And return the summary in plain (X)HTML
+  return $summary;
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function pnf_contact_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+
+  switch ($display['type']) {
+    case 'pnf_text':
+      $settings = $display['settings'];
+      $tag = $settings['html_tag'];
+      $class = '';
+      if ($settings['html_class'] <> '') {
+        $class = 'class="' . $settings['html_class'] . '"';
+      }
+      foreach ($items as $delta => $item) {
+        $markup = '<' . $tag . ' ' . $class . '>' . $item['value'] . '</' . $tag . '>';
+        $element[$delta] = array('#markup' => $markup);
+      }
+      break;
+  }
+
+  return $element;
+}
+

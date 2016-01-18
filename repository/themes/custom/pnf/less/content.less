@@ -1,1 +1,894 @@
 // Insert your styling here.
+
+// Extend the Bootstrap .btn class to render file field and document preview.
+
+.file, .field-name-field-document-preview .field-item{
+	.btn();
+	.btn-sm();
+	.btn-primary();
+}
+
+/*Transition link effect*/
+
+a {
+	transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;	
+}
+
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 0;
+    margin-top: 20px;
+    font-size: @font-size-small;
+    font-weight: 300;
+}
+
+/*Ckeditor*/
+.node-page,
+.node-advanced-page {
+    a
+    {
+        color: #b86125;
+    }
+    .intro{
+        font-size: 16px;
+        font-style: italic;
+        margin-bottom: 20px;
+    }
+    .boutonok{
+        padding: 5px 10px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 3px;
+        color: #ffffff;
+        background-color: #ed8b00;
+        border-color: #e88800;
+        font-weight: 700;
+        display: block;
+        float: left;
+    }
+    .boutonok a{
+        color: #fff;
+    }
+    h3{
+        font-size: 26px;
+        color: #333;
+        margin-top: 0;
+    }
+    h4{
+        font-size:20px;
+        color:#333;
+        font-weight: 600;
+    }
+    h5{
+        font-size:16px;
+        color:#758298;
+        font-weight: 600;
+    }
+    blockquote{
+        font-style: italic;
+        font-family: Garamond, Times, "Times New Roman", serif;
+        font-size: 18px;
+        padding: 2px 0;
+        text-align: center;
+        color: #333;
+        margin: 1.5em 10px;
+        padding: 0.5em 10px;
+        quotes: "\201C""\201D""\2018""\2019";
+        border: none;
+    }
+    blockquote:before {
+      color: #8e9fbc;
+      content: open-quote;
+      font-size: 8em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em;
+    }
+    blockquote:after {
+      color: #8e9fbc;
+      content: close-quote;
+      font-size: 8em;
+      line-height: 0.1em;
+      margin-left: 0.25em;
+      vertical-align: -0.6em;
+    }
+    blockquote p {
+      display: inline;
+    }
+    hr {
+        border-top: 1px solid #3a353c;
+    }
+    table,tr,td,th,thead,tbody{
+        border-color: #3a353c;
+    }
+    table thead{
+        background-color: #f4f4f4;
+    }    
+
+}
+
+/*paragraph*/
+.entity-paragraphs-item{
+    margin-top: 30px;
+}
+.paragraphs-item-colored-bg-text{
+        .pnf_colored_bg{
+            padding: 20px;
+        }
+}
+.paragraphs-item-available-docs{
+    background: #f4f4f4;
+        .group-available-docs{
+            padding: 20px;
+        }
+        h3{
+            font-weight: 600;
+            font-size: 20px;
+            margin: 0;
+        }
+        ul.download-file{
+            padding: 0;
+        }
+        ul.download-file li{
+            list-style: none;
+            font-weight: 600;
+            padding: 15px 0;
+        }
+        ul.download-file li img{
+            display: none;
+        }
+        ul.download-file li a:before{
+            font-family: 'Fontawesome';
+            padding-right: 10px;
+            font-weight: normal;
+            content:'\f016';
+        }
+}
+
+//*FRONT*//
+
+/*Blocks titles*/
+.region-pre-content-left,
+.region-pre-content-right,
+#block-views-news-block-news-files-home{
+    h2.block-title{
+        font-size: @font-size-h3;
+        text-transform: uppercase;
+        color: #3a353c;
+        font-weight: 600;
+    }
+    h2.block-title:after{
+        font-family: 'Fontawesome';
+        padding-left: 10px;
+        font-weight: normal;
+    }
+}
+#block-views-news-block-news-news-home h2.block-title:after{
+    content: "\f0e6";
+}
+#block-views-events-block-events-home h2.block-title:after{
+    content: "\f073";
+}
+#block-views-news-block-news-flashnews-home h2.block-title:after{
+    content: "\f11d";
+}
+#block-views-news-block-news-files-home h2.block-title:after{
+    content: "\f114";
+}
+
+/*Blocks node titles teaser*/
+.front .block {
+    h3{
+    font-size: @font-size-base;
+    font-weight: 600;
+        a{
+            color: darken(@brand-primary, 12%);
+        }
+        a:hover{
+            color: @brand-primary;
+            text-decoration: none;
+        }
+    }
+    .view-header a{
+        font-size: 10px;
+    }
+}
+
+/*Block news & liste news*/
+.view-news {
+    .view-header p{
+        text-align: right;
+        margin-right: 20px;
+        margin-top: -30px;
+        margin-bottom: 10px;
+    }
+    .view-mode-teaser,
+    .view-mode-teaser_home{
+        border-bottom: 1px solid @brand-primary;
+        background: #fff;
+        margin-right: 15px;
+        padding: 8px;
+        margin-bottom: 25px;
+    }
+    .field-name-post-date{
+        font-size: @font-size-small;
+        color: #666;
+        padding-top:5px;
+    }
+    h3{
+    font-size: @font-size-base;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 25px;
+        a{
+            color: darken(@brand-primary, 12%);
+        }
+        a:hover{
+            color: @brand-primary;
+            text-decoration: none;
+        }
+    }
+    .field-name-body{
+        //padding-bottom: 25px;
+        p{
+            font-size: @font-size-small;
+        }
+    }
+    .field-name-btn-readmore{
+        position: absolute;
+        bottom: -5%;
+        right: 30%;
+    }
+    .view-mode-teaser_home_files .field-name-btn-readmore{
+        position: relative;
+        bottom: 0;
+        right: 0;
+    }
+    .carousel-control {
+        position: absolute;
+        top: -25px;
+        left: 150px;
+        bottom: 0;
+        width: 15%;
+        opacity: 1;
+        font-size: 20px;
+        color: @gray-dark;
+        text-align: center;
+        text-shadow: none;
+    }
+    .carousel-control.left,  .carousel-control.right {
+          width: 20px;
+          height: 20px;
+      }
+    .carousel-control .icon-prev,
+    .carousel-control .icon-next{
+        top: 0;
+    }
+    .carousel-control .icon-next {
+    margin-right: -30px;
+    }
+}    
+
+/*Block views events*/
+.view-events {
+    .view-header p{
+        text-align: right;
+        margin-top: -30px;
+        margin-bottom: 10px;
+    }
+    .view-content{
+        background: #fff;
+        padding: 10px;
+    }
+    h3{
+    font-size: @font-size-base;
+    font-weight: 600;
+    margin-top: 5px;
+        a{
+            color: darken(@brand-primary, 12%);
+        }
+        a:hover{
+            color: @brand-primary;
+            text-decoration: none;
+        }
+    }
+    .views-row{
+        margin: 10px 0;
+        .field-name-field-event-dates{
+            float: left;
+            width: 20%;
+            margin-right: 10px;
+        }
+        .group-event-resume{
+            float: right;
+            width: 75%;
+        }
+        .field-name-field-event-location,
+        .field-name-field-event-categorie{
+            font-size: 0.857em;
+        }
+        .field-name-field-event-location{
+            color: #a0a0a0;
+            font-style:italic;
+        }
+    }
+    .field-name-field-event-dates{
+        text-align: center;
+        border-right: 1px solid @gray-light;
+        .date_agenda_adverb{
+            font-size: 0.63em;
+            color: #aaa6ac;
+        }
+        .date_agenda_day{
+         font-size: 1.714em;
+         line-height: 1em;   
+        }
+        .date_agenda_month{
+            text-transform: uppercase;
+        }
+    }
+}
+
+/*News / Dossiers / Flashnews / Offre d'emploi / Marché public HOVER*/
+.page-breves .view-mode-teaser_list_flashnews,
+.page-dossiers .view-mode-teaser:hover,
+.page-actualites .view-mode-teaser:hover,
+.view-jobs .view-mode-teaser:hover,
+.view-contracts .view-mode-teaser:hover,
+.view-documents .view-mode-teaser:hover{
+    -moz-box-shadow: 0px 0px 10px 0px #999999;
+    -webkit-box-shadow: 0px 0px 10px 0px #999999;
+    -o-box-shadow: 0px 0px 10px 0px #999999;
+    box-shadow: 0px 0px 10px 0px #999999;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999, Direction=NaN, Strength=10);
+}
+
+/*List Flashnews*/
+.page-breves .view-mode-teaser_list_flashnews{
+    background: #fff;
+    margin-top: 15px;
+    padding: 10px;
+        h3{
+            color: @brand-primary;
+        }
+        .field-name-body{
+        padding-bottom: 10px;
+        }
+}
+
+/*List Events*/
+.page-agenda {
+
+    .field-name-field-event-dates{
+        float: right;
+        border-right: none;
+        border-left: 1px solid @gray-light;
+    }
+    .view-events .view-content{
+        background: transparent;
+    }
+    .view-events .view-mode-teaser{
+        border-bottom: 1px solid @brand-primary;
+        background: #fff;
+        margin-right: 15px;
+        padding: 8px;
+        margin-bottom: 25px;
+            min-height: 275px;
+    }
+    .view-events .view-mode-teaser:hover{
+        -moz-box-shadow: 0px 0px 10px 0px #999999;
+        -webkit-box-shadow: 0px 0px 10px 0px #999999;
+        -o-box-shadow: 0px 0px 10px 0px #999999;
+        box-shadow: 0px 0px 10px 0px #999999;
+        filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999, Direction=NaN, Strength=10);
+    }
+    .field-name-field-event-dates{
+        float: right;
+        padding-left: 5px;
+        margin-top: 10px;
+    }
+    .group-event-resume{
+        float: left;
+        width: 75%;
+        margin-top: 5px;
+    }
+    .field-name-field-event-location{
+        font-style: italic;
+        font-size: @font-size-small;
+        color: #a0a0a0;
+        height: 45px;
+    }
+    .field-name-field-event-categorie {
+        position: absolute;
+        top: 0;
+        color: #fff;
+        background: @brand-secondary;
+        font-size: 11px;
+        padding: 2px 4px;
+    }
+        .field-name-btn-readmore{
+        position: absolute;
+        bottom: -10%;
+        right: 30%;
+    }
+
+}
+
+/*List Multimedia */
+    .multimedia-teaser {
+        background: #fff;
+        margin-right: 15px;
+        padding: 8px;
+        margin-bottom: 25px;
+            h3{
+                font-size: 18px;
+                    a{
+                        text-decoration: none;
+                    }
+            }
+    }
+
+/*Blocks flashnews*/
+#block-views-news-block-news-flashnews-home{
+	background: #fff;
+    margin-bottom: 20px;
+
+    h2.block-title{
+        float: left;
+        margin: 10px 15px 10px 15px;
+    }
+    .view-news{
+        float: left;
+        width: 680px;
+    }
+    .field-name-title h3,
+    .field-name-field-displayed-pub-date{
+            float: left;
+            margin-right: 15px;
+            line-height: 45px;
+    }
+    .field-name-title h3{
+        margin:0;
+        color: @brand-primary;
+    }
+    .carousel-inner {
+        float: left;
+    }
+    .carousel-control{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+    }
+}
+
+/*Blocks dossiers*/
+#block-views-news-block-news-files-home{
+    h2.block-title{
+        margin-top: 0;
+    }
+    .view-header p{
+        text-align: right;
+        margin-top: -30px;
+        margin-bottom: 10px;
+    }
+    .view-content{
+        background: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .field-name-title{
+        height:67px;
+    }
+    h3{
+        margin-top: 10px;
+    }
+    .field-name-btn-readmore{
+        text-align: center;
+    }
+    .carousel-control{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+            .icon-next{
+                right: 8%;
+            }
+            .icon-prev{
+                left: 3%;    
+            }
+    }
+}
+
+/*List Jobs - Marches publics*/
+.view-contracts .view-mode-teaser,
+.view-jobs .view-mode-teaser{
+    background: #fff;
+    padding: 0 10px 10px 10px;
+    margin: 0 0 20px 0;
+
+        h3{
+        margin-top: 10px;
+        font-size: @font-size-large;
+        }
+        .field-name-field-contract-projected-date,
+        .field-name-field-job-projected-date{
+            margin-bottom: 15px;
+        }
+        .field-name-btn-contract-notice,
+        .field-name-btn-readmore{
+            float: left;
+            margin-right: 20px;
+        }
+        .field-name-field-contract-object,
+        .field-name-field-job-resume{
+            margin-bottom: 15px;
+        }
+        .field-label{
+            font-weight: 600;
+            color: @gray;
+        }
+        .field-name-field-contract-category,
+        .field-name-field-procurement-type,
+        .field-name-field-contract-pub-date,
+        .field-name-field-contract-deadline-date{
+            margin-bottom: 5px;
+        }
+}
+
+.field-name-field-job-location{
+    margin-bottom: 12px;
+        .field-label, .field-item{
+            font-weight: 400;
+            font-size: @font-size-small;
+        }
+    }
+.field-name-btn-job-notice,
+.field-name-field-job-resume{
+    margin-bottom: 15px;
+}
+
+/*List Documents*/
+.view-documents .view-mode-teaser{
+    background: #fff;
+    padding: 15px;
+    margin: 0 0 20px 0;
+        h3{
+            color: @brand-primary;
+            font-size: @font-size-large;
+            margin:10px 0 5px 0;
+        }
+        .field-name-field-document-category .field-item {
+            background: lighten(@brand-secondary, 20%);
+            font-size: @font-size-small;
+            padding: 5px 7px;
+            display: inline;
+        }
+        .field-name-field-displayed-pub-date{
+            margin-top: 5px;
+                span{
+                    font-size: @font-size-small;
+                }
+        }
+        .download-file{
+            padding: 0;
+            img{
+                display: none;
+            }
+            li{
+                list-style: none;
+            }
+            a:before{
+                font-family: 'Fontawesome';
+                content: '\f019';
+                font-size: @font-size-h4;
+                color: #fff;
+                background: @brand-primary;
+                padding: 5px;
+                margin-right: 10px;
+            }
+            a{
+                text-decoration: none;
+                border: 1px solid @brand-primary;
+                padding: 5px 5px 4px 0;
+            }
+            .detail{
+                font-size: 10px;
+            }
+        }
+        .field-name-local-flipthrough,
+        .field-name-field-document-flip {
+            a{
+                background: @brand-primary;
+                padding: 5px 10px;
+                border-radius: 3px;
+                color: #fff;
+                text-decoration: none;
+            }
+            a:hover{
+                background: darken(@brand-primary, 10%);
+            }
+            a:before{
+                font-family: 'Fontawesome';
+                content: '\f02d';
+                font-size: @font-size-h4;
+                color: #fff;
+                padding: 5px 5px 5px 0;
+            }
+        }
+        .field-name-local-flipthrough{
+            display: inline-block;;
+        }
+}
+
+
+/*Node marches publics*/
+.node-type-contract {
+    .field-name-field-contract-object{
+        margin-bottom: 20px;
+    }
+    .field-name-btn-contract-link {
+        float: left;
+        margin-right: 20px;
+    }
+    .field-name-btn-contract-link,
+    .field-name-btn-contract-notice{
+        margin-bottom: 20px;
+    }
+    .field-label{
+        font-weight: 600;
+        color: @gray;
+    }
+}
+
+/*Node emploi*/
+.node-type-job .pnf-content-right .field-label{
+        font-weight: 600;
+        color: @gray;
+    }
+
+/*Node evenements*/
+.node-type-event{
+    .field-name-field-event-categorie{
+        text-transform: uppercase;
+        color: @gray-light;
+        float: left;
+    }
+    .field-name-field-public{
+        float: right;
+        color: @gray;
+        font-style:italic;
+        font-size: @font-size-small;
+            .field-label{
+                font-weight: normal;
+            }
+    }
+    .field-name-field-event-location,
+    .field-name-field-event-dates{
+        .field-label{
+            color: #999;
+            font-size: @font-size-h2;
+            font-weight: 600;
+            border-right: 1px solid #999;
+            margin-right: 20px;
+            padding-right: 10px;
+        }
+        .field-items{
+            color: #999;
+        }
+    }
+    .field-name-field-event-dates{
+        float: left;
+    }
+    .field-name-field-event-location{
+        float: right;
+    }
+    .field-name-body{
+        clear: left;
+    }
+}
+
+/*Page d'aterrissage*/
+.node-type-page .content{
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+#block-child-menu-items-child-menu-items{
+    margin-top: 30px;
+
+    .cmi-wrapper{
+        background: #fff;
+        padding: 10px;
+        margin-bottom: 20px;
+        min-height: 270px;
+        -moz-box-shadow: 0px 0px 10px 0px #999999;
+        -webkit-box-shadow: 0px 0px 10px 0px #999999;
+        -o-box-shadow: 0px 0px 10px 0px #999999;
+        box-shadow: 0px 0px 10px 0px #999999;
+        filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999, Direction=NaN, Strength=10);
+    }
+    h3{
+        font-size: @font-size-h4;
+        a{
+            text-decoration: none;
+        }
+    }
+
+    .cmi-wrapper .cmi-field-item-image {
+    background: #000;
+    }
+    .cmi-wrapper .cmi-field-item-image a img {
+        opacity: 1;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+    .cmi-wrapper .cmi-field-item-image a img:hover {
+        opacity: .5;
+    }
+
+}
+
+/*Content type*/
+.pnf-content-left .content-wrapper,
+.pnf-content-right .content-wrapper{
+    background: #fff;
+    padding: 15px;
+        .field{
+            margin-bottom: 15px;
+        }
+        .field-name-field-downloadable-docs{
+            a:before{
+                font-family: 'Fontawesome';
+                content: '\f016';
+                font-size: @font-size-base;
+                padding-right: 10px;
+            }
+            .field-label{
+                font-size: @font-size-h4;
+                font-weight: 600;
+                color: @gray;
+            }
+            .field-label,
+            .download-file{
+                margin-bottom: 10px;
+            }
+        }
+}
+
+/*List*/
+.view-mode-teaser .image-field-caption{
+    display: none;
+}
+.views-exposed-widgets {
+    margin-bottom: 20px;
+}
+
+/*Menu tools*/
+#block-menu-menu-tools {
+
+    //display: inline-block;
+    position: fixed;
+    right: 0;
+    top: 200px;
+    margin-top: -100px;
+    z-index: 5000;
+    color: @gray-base;
+    text-align: right;
+
+        .tool {
+            margin-bottom: 2px;
+            cursor: pointer;
+        }
+
+        li a {
+            display: inline-block;
+            right: -150px;
+            line-height: 47px;
+            height: 44px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 0 10px 0 15px;
+            margin-right: 2px;
+        }
+
+        .tool:after {
+            height: 44px;
+            width: 44px;
+            line-height: 40px;            
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding-right: 9px;
+            font-family: 'Fontawesome';
+            font-size: @font-size-h3;
+        }
+
+        .tool-news:after{
+            content: '\f0e6';
+        }
+        .tool-events:after{
+            content: '\f073';
+        }
+        .tool-newspaper:after{
+            content: '\f1ea';
+        }
+        .tool-multimedia:after{
+            content: '\f03e';
+        }
+        .tool-eshop:after{
+            content: '\f07a';
+        }
+        .tool-like:after{
+            content: '\f08a';
+        }
+        .tool-destination:after{
+            content: '\f278';
+        }
+}
+
+/*Menu sidebar second*/
+.region-sidebar-second .block-menu{
+    ul li a{
+        background: lighten(@brand-secondary, 20%);
+        color: @gray-dark;
+    }
+    ul li.open a,
+    ul li a.active{
+        background: @brand-secondary;
+        color: #FFF;
+        font-weight: 600;
+    }
+}
+
+/*Resumes image overlay*/
+.group-resume {
+    cursor: pointer;
+        p {
+           // display: none;
+            position: absolute;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px; 
+            color: #fff   
+        }
+}
+
+.view-news .group-resume p {
+    //margin-right: 15px;
+    top: 0;
+}
+
+.view-multimedia .group-resume p {
+    //margin-right: 15px;
+    top: 8px;
+}
+
+.view-multimedia .group-resume .fa {
+    position: absolute;
+    top: 160px;
+    margin-left: 38%;
+    font-size: 48px;
+    color: #aaa;
+}
+
+
+/*Nodes*/
+.node-advanced-page .field-name-title h2,
+h2.page-header{
+    font-size: 40px;
+}
+.page-header {
+    padding-bottom: 0;
+    margin: 40px 0 20px;
+    border-bottom: none;
+}
+
+.node-advanced-page .col-lg-8.col-lg-offset-2{
+    background: #fff;
+}

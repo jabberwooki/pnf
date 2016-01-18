@@ -1,0 +1,84 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: chris
+ * Date: 01/09/15
+ * Time: 09:23
+ */
+
+/**
+ * Activate several i18n modules.
+ */
+function kcore_update_7001() {
+  module_enable(array('i18n_node','i18n_taxonomy','i18n_menu','i18n_block','i18n_path','i18n_variable'));
+}
+
+/**
+ * Activate entity_token module.
+ */
+function kcore_update_7002() {
+  module_enable(array('entity_token'));
+}
+
+/**
+ * Activate tb_megamenu module.
+ */
+function kcore_update_7003() {
+  module_enable(array('tb_megamenu'));
+}
+
+/**
+ * Activate custom_search_blocks module.
+ */
+function kcore_update_7004() {
+  module_enable(array('custom_search_blocks'));
+}
+
+/**
+ * Activate on_the_web module.
+ */
+function kcore_update_7005() {
+  module_enable(array('on_the_web'));
+}
+
+/**
+ * Activate lang_dropdown module.
+ */
+function kcore_update_7006() {
+  module_enable(array('lang_dropdown'));
+}
+
+/**
+ * Activate bean_admin_ui, entityform modules.
+ */
+function kcore_update_7007() {
+  module_enable(array('bean_admin_ui','entityform'));
+}
+
+/**
+ * Activate image_field_caption module.
+ */
+function kcore_update_7008() {
+  module_enable(array('image_field_caption'));
+}
+
+/**
+ * Activate custom_breadcrumbs and custom_breadcrumbs_features modules.
+ */
+function kcore_update_7009() {
+  module_enable(array('custom_breadcrumbs','custom_breadcrumbs_features'));
+}
+
+/**
+ * Activate geofield_map module.
+ */
+function kcore_update_7010() {
+  module_enable(array('geofield_map'));
+}
+
+/**
+ * Activate field_formatter_class module.
+ */
+function kcore_update_7011() {
+  module_enable(array('field_formatter_class'));
+}

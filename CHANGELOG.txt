@@ -1,3 +1,7 @@
+PNF 0.1.0 - 2016-01-18
+****************
+First production release.
+
 PNF - 2015-07-09
 ****************
 Very first release containing the initial PNF install profile.
