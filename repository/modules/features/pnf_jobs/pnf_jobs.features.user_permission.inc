@@ -17,6 +17,15 @@ function pnf_jobs_user_default_permissions() {
     'module' => 'taxonomy_access_fix',
   );
 
+  // Exported permission: 'administer menu-menu-jobs menu items'.
+  $permissions['administer menu-menu-jobs menu items'] = array(
+    'name' => 'administer menu-menu-jobs menu items',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'menu_admin_per_menu',
+  );
+
   // Exported permission: 'create job content'.
   $permissions['create job content'] = array(
     'name' => 'create job content',
