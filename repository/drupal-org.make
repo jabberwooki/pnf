@@ -163,7 +163,7 @@ projects[lang_dropdown][subdir] = contrib
 projects[lang_dropdown][version] = "2.5"
 
 projects[menu_admin_per_menu][subdir] = contrib
-projects[menu_admin_per_menu][version] = "1.0-rc3"
+projects[menu_admin_per_menu][version] = "1.1"
 
 projects[menu_attributes][subdir] = contrib
 projects[menu_attributes][version] = "1.0-rc3"
