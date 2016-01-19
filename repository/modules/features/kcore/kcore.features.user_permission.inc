@@ -613,6 +613,7 @@ function kcore_user_default_permissions() {
     'name' => 'administer users',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'user',
   );
