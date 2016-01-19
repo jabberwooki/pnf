@@ -112,6 +112,18 @@ a {
 
 }
 
+.image-field-caption{
+    background-color: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.7);
+    border-left: none;
+    margin-top: -34px;
+    color: #fff;
+    z-index: 100;
+    position: relative;
+    font-size: 10px;
+}
+
 /*paragraph*/
 .entity-paragraphs-item{
     margin-top: 30px;
@@ -211,9 +223,14 @@ a {
     .view-mode-teaser_home{
         border-bottom: 1px solid @brand-primary;
         background: #fff;
-        margin-right: 15px;
+        margin-right: 10px;
         padding: 8px;
         margin-bottom: 25px;
+        border-bottom: 1px solid #ed8b00;;
+        margin-left: 5px;
+            .image-field-caption{
+                display: none;
+            }
     }
     .field-name-post-date{
         font-size: @font-size-small;
@@ -248,6 +265,9 @@ a {
         position: relative;
         bottom: 0;
         right: 0;
+    }
+    .view-mode-teaser_home_files .image-field-caption{
+        display: none;
     }
     .carousel-control {
         position: absolute;
@@ -338,6 +358,7 @@ a {
 .page-breves .view-mode-teaser_list_flashnews,
 .page-dossiers .view-mode-teaser:hover,
 .page-actualites .view-mode-teaser:hover,
+.view-news .view-mode-teaser_home:hover,
 .view-jobs .view-mode-teaser:hover,
 .view-contracts .view-mode-teaser:hover,
 .view-documents .view-mode-teaser:hover{
@@ -456,7 +477,7 @@ a {
         margin:0;
         color: @brand-primary;
     }
-    .carousel-inner {
+    /*.carousel-inner {
         float: left;
     }
     .carousel-control{
@@ -464,7 +485,7 @@ a {
         top: 50%;
         left: 0;
         width: 100%;
-    }
+    }*/
 }
 
 /*Blocks dossiers*/
@@ -775,7 +796,7 @@ a {
     //display: inline-block;
     position: fixed;
     right: 0;
-    top: 200px;
+    top: 300px;
     margin-top: -100px;
     z-index: 5000;
     color: @gray-base;
