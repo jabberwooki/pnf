@@ -42,7 +42,7 @@ projects[imce_mkdir][subdir] = contrib
 projects[imce_mkdir][version] = "1.0"
 
 projects[jquery_update][subdir] = contrib
-projects[jquery_update][version] = "3.0-alpha3"
+projects[jquery_update][version] = "3.0-alpha2"
 
 projects[l10n_update][subdir] = contrib
 projects[l10n_update][version] = "2.0"
