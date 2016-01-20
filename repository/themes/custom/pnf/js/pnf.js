@@ -97,7 +97,10 @@
     }
 
   /*RAA accordion*/
-   // $( ".view-raa .view-content" ).accordion();
+   $( ".view-raa .view-content" ).accordion({
+      collapsible: true,
+      heightStyle: "content"
+    });
 
  }); // End of document ready
 
