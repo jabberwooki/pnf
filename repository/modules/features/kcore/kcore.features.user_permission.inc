@@ -816,6 +816,17 @@ function kcore_user_default_permissions() {
     'module' => 'features',
   );
 
+  // Exported permission: 'preview focal point'.
+  $permissions['preview focal point'] = array(
+    'name' => 'preview focal point',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'rédacteur' => 'rédacteur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'focal_point',
+  );
+
   // Exported permission: 'rename features'.
   $permissions['rename features'] = array(
     'name' => 'rename features',
