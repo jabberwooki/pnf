@@ -20,18 +20,14 @@ function pnf_raa_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'download_file',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'direct_download_accessible_icon',
         'weight' => 1,
       ),
       'full' => array(
         'label' => 'above',
         'module' => 'file',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'file_default',
         'weight' => 1,
       ),
@@ -91,18 +87,14 @@ function pnf_raa_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 0,
       ),
       'full' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 0,
       ),
@@ -167,7 +159,6 @@ function pnf_raa_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
-          'field_formatter_class' => '',
           'format_type' => 'long',
           'fromto' => 'both',
           'multiple_from' => '',
@@ -222,9 +213,7 @@ function pnf_raa_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'i18n_taxonomy',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 1,
       ),
@@ -266,7 +255,6 @@ function pnf_raa_field_default_field_instances() {
           'delete' => 'Supprimer',
           'description' => TRUE,
           'edit' => 'Modifier',
-          'field_formatter_class' => '',
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',

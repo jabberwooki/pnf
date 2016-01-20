@@ -96,6 +96,9 @@
       $('.mega-dropdown-menu').css({ "margin-left": - offset.left});
     }
 
+  /*RAA accordion*/
+   // $( ".view-raa .view-content" ).accordion();
+
  }); // End of document ready
 
 })(jQuery); // EOF
