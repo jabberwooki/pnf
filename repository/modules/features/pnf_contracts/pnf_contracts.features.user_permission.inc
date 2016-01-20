@@ -13,14 +13,19 @@ function pnf_contracts_user_default_permissions() {
   // Exported permission: 'add terms in contract_categories'.
   $permissions['add terms in contract_categories'] = array(
     'name' => 'add terms in contract_categories',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'taxonomy_access_fix',
   );
 
   // Exported permission: 'add terms in procurement_types'.
   $permissions['add terms in procurement_types'] = array(
     'name' => 'add terms in procurement_types',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'taxonomy_access_fix',
   );
 
@@ -66,14 +71,18 @@ function pnf_contracts_user_default_permissions() {
   // Exported permission: 'delete terms in contract_categories'.
   $permissions['delete terms in contract_categories'] = array(
     'name' => 'delete terms in contract_categories',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: 'delete terms in procurement_types'.
   $permissions['delete terms in procurement_types'] = array(
     'name' => 'delete terms in procurement_types',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -99,14 +108,18 @@ function pnf_contracts_user_default_permissions() {
   // Exported permission: 'edit terms in contract_categories'.
   $permissions['edit terms in contract_categories'] = array(
     'name' => 'edit terms in contract_categories',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: 'edit terms in procurement_types'.
   $permissions['edit terms in procurement_types'] = array(
     'name' => 'edit terms in procurement_types',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'taxonomy',
   );
 

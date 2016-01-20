@@ -24,7 +24,9 @@ function pnf_multimedia_user_default_permissions() {
   // Exported permission: 'add terms in media_categories'.
   $permissions['add terms in media_categories'] = array(
     'name' => 'add terms in media_categories',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'taxonomy_access_fix',
   );
 
@@ -33,6 +35,8 @@ function pnf_multimedia_user_default_permissions() {
     'name' => 'add terms in scald_authors',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'rédacteur' => 'rédacteur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'taxonomy_access_fix',
   );
@@ -42,6 +46,8 @@ function pnf_multimedia_user_default_permissions() {
     'name' => 'add terms in scald_tags',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'rédacteur' => 'rédacteur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'taxonomy_access_fix',
   );
@@ -176,21 +182,30 @@ function pnf_multimedia_user_default_permissions() {
   // Exported permission: 'delete terms in media_categories'.
   $permissions['delete terms in media_categories'] = array(
     'name' => 'delete terms in media_categories',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: 'delete terms in scald_authors'.
   $permissions['delete terms in scald_authors'] = array(
     'name' => 'delete terms in scald_authors',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: 'delete terms in scald_tags'.
   $permissions['delete terms in scald_tags'] = array(
     'name' => 'delete terms in scald_tags',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -216,21 +231,30 @@ function pnf_multimedia_user_default_permissions() {
   // Exported permission: 'edit terms in media_categories'.
   $permissions['edit terms in media_categories'] = array(
     'name' => 'edit terms in media_categories',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: 'edit terms in scald_authors'.
   $permissions['edit terms in scald_authors'] = array(
     'name' => 'edit terms in scald_authors',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: 'edit terms in scald_tags'.
   $permissions['edit terms in scald_tags'] = array(
     'name' => 'edit terms in scald_tags',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'taxonomy',
   );
 

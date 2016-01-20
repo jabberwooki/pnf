@@ -13,7 +13,9 @@ function pnf_jobs_user_default_permissions() {
   // Exported permission: 'add terms in job_types'.
   $permissions['add terms in job_types'] = array(
     'name' => 'add terms in job_types',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'taxonomy_access_fix',
   );
 
@@ -59,7 +61,9 @@ function pnf_jobs_user_default_permissions() {
   // Exported permission: 'delete terms in job_types'.
   $permissions['delete terms in job_types'] = array(
     'name' => 'delete terms in job_types',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -85,7 +89,9 @@ function pnf_jobs_user_default_permissions() {
   // Exported permission: 'edit terms in job_types'.
   $permissions['edit terms in job_types'] = array(
     'name' => 'edit terms in job_types',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'taxonomy',
   );
 

@@ -8,7 +8,6 @@ dependencies[] = link
 dependencies[] = pdf_reader
 dependencies[] = pnf_news
 dependencies[] = strongarm
-dependencies[] = taxonomy_access_fix
 features[context][] = documents-list
 features[ctools][] = context:context:3
 features[ctools][] = ds:ds:1

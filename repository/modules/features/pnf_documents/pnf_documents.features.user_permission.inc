@@ -13,7 +13,9 @@ function pnf_documents_user_default_permissions() {
   // Exported permission: 'add terms in document_categories'.
   $permissions['add terms in document_categories'] = array(
     'name' => 'add terms in document_categories',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'taxonomy_access_fix',
   );
 
@@ -50,7 +52,10 @@ function pnf_documents_user_default_permissions() {
   // Exported permission: 'delete terms in document_categories'.
   $permissions['delete terms in document_categories'] = array(
     'name' => 'delete terms in document_categories',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -76,7 +81,10 @@ function pnf_documents_user_default_permissions() {
   // Exported permission: 'edit terms in document_categories'.
   $permissions['edit terms in document_categories'] = array(
     'name' => 'edit terms in document_categories',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'taxonomy',
   );
 
