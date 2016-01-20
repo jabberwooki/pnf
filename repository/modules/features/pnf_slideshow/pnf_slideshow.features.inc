@@ -24,6 +24,50 @@ function pnf_slideshow_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function pnf_slideshow_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: focal_2200x800.
+  $styles['focal_2200x800'] = array(
+    'label' => 'focal_2200x800',
+    'effects' => array(
+      10 => array(
+        'name' => 'focal_point_scale_and_crop',
+        'data' => array(
+          'width' => 2200,
+          'height' => 800,
+          'focal_point_advanced' => array(
+            'shift_x' => '',
+            'shift_y' => '',
+          ),
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: slide_preview_300.
+  $styles['slide_preview_300'] = array(
+    'label' => 'Prévisualisation diapo (300px de large)',
+    'effects' => array(
+      11 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 300,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function pnf_slideshow_node_info() {

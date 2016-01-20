@@ -43,8 +43,9 @@ function pnf_slideshow_views_default_views() {
   $handler->display->display_options['fields']['field_slide_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_slide_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_slide_image']['settings'] = array(
-    'image_style' => '',
+    'image_style' => 'focal_2200x800',
     'image_link' => '',
+    'field_formatter_class' => '',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
