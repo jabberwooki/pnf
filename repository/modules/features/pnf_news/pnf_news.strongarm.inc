@@ -62,16 +62,16 @@ function pnf_news_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '15',
+          'weight' => '16',
         ),
         'title' => array(
           'weight' => '5',
         ),
         'path' => array(
-          'weight' => '13',
+          'weight' => '14',
         ),
         'redirect' => array(
-          'weight' => '14',
+          'weight' => '15',
         ),
         'language' => array(
           'weight' => '0',
@@ -84,7 +84,7 @@ function pnf_news_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '8',
+            'weight' => '23',
             'visible' => FALSE,
           ),
           'teaser' => array(

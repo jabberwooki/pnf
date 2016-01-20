@@ -42,7 +42,7 @@ projects[imce_mkdir][subdir] = contrib
 projects[imce_mkdir][version] = "1.0"
 
 projects[jquery_update][subdir] = contrib
-projects[jquery_update][version] = "3.0-alpha3"
+projects[jquery_update][version] = "3.0-alpha2"
 
 projects[l10n_update][subdir] = contrib
 projects[l10n_update][version] = "2.0"
@@ -145,6 +145,9 @@ projects[field_formatter_settings][version] = "1.1"
 
 projects[field_slideshow][subdir] = contrib
 projects[field_slideshow][version] = "1.82"
+
+projects[focal_point][subdir] = contrib
+projects[focal_point][version] = "1.0-beta5"
 
 projects[image_field_caption][subdir] = contrib
 projects[image_field_caption][version] = "2.1"

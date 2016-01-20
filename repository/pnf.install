@@ -268,3 +268,10 @@ function pnf_update_7008() {
 function pnf_update_7009() {
   module_enable(array('menu_admin_per_menu'));
 }
+
+/**
+ * Activate focal_point contrib module.
+ */
+function pnf_update_7010() {
+  module_enable(array('focal_point'));
+}

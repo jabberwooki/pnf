@@ -13,7 +13,9 @@ function pnf_raa_user_default_permissions() {
   // Exported permission: 'add terms in raa_categories'.
   $permissions['add terms in raa_categories'] = array(
     'name' => 'add terms in raa_categories',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'taxonomy_access_fix',
   );
 
@@ -50,7 +52,9 @@ function pnf_raa_user_default_permissions() {
   // Exported permission: 'delete terms in raa_categories'.
   $permissions['delete terms in raa_categories'] = array(
     'name' => 'delete terms in raa_categories',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -76,7 +80,9 @@ function pnf_raa_user_default_permissions() {
   // Exported permission: 'edit terms in raa_categories'.
   $permissions['edit terms in raa_categories'] = array(
     'name' => 'edit terms in raa_categories',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'taxonomy',
   );
 

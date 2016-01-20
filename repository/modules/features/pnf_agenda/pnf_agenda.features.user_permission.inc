@@ -13,7 +13,10 @@ function pnf_agenda_user_default_permissions() {
   // Exported permission: 'add terms in event_categories'.
   $permissions['add terms in event_categories'] = array(
     'name' => 'add terms in event_categories',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'taxonomy_access_fix',
   );
 
@@ -50,7 +53,9 @@ function pnf_agenda_user_default_permissions() {
   // Exported permission: 'delete terms in event_categories'.
   $permissions['delete terms in event_categories'] = array(
     'name' => 'delete terms in event_categories',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -76,7 +81,10 @@ function pnf_agenda_user_default_permissions() {
   // Exported permission: 'edit terms in event_categories'.
   $permissions['edit terms in event_categories'] = array(
     'name' => 'edit terms in event_categories',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'taxonomy',
   );
 

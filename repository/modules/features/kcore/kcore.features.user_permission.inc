@@ -127,14 +127,20 @@ function kcore_user_default_permissions() {
   // Exported permission: 'add terms in public'.
   $permissions['add terms in public'] = array(
     'name' => 'add terms in public',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'taxonomy_access_fix',
   );
 
   // Exported permission: 'add terms in sectors'.
   $permissions['add terms in sectors'] = array(
     'name' => 'add terms in sectors',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'taxonomy_access_fix',
   );
 
@@ -577,7 +583,9 @@ function kcore_user_default_permissions() {
   // Exported permission: 'administer taxonomy'.
   $permissions['administer taxonomy'] = array(
     'name' => 'administer taxonomy',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -613,6 +621,7 @@ function kcore_user_default_permissions() {
     'name' => 'administer users',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'user',
   );
@@ -719,14 +728,20 @@ function kcore_user_default_permissions() {
   // Exported permission: 'delete terms in public'.
   $permissions['delete terms in public'] = array(
     'name' => 'delete terms in public',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: 'delete terms in sectors'.
   $permissions['delete terms in sectors'] = array(
     'name' => 'delete terms in sectors',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -777,14 +792,20 @@ function kcore_user_default_permissions() {
   // Exported permission: 'edit terms in public'.
   $permissions['edit terms in public'] = array(
     'name' => 'edit terms in public',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: 'edit terms in sectors'.
   $permissions['edit terms in sectors'] = array(
     'name' => 'edit terms in sectors',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -813,6 +834,17 @@ function kcore_user_default_permissions() {
       'administrateur' => 'administrateur',
     ),
     'module' => 'features',
+  );
+
+  // Exported permission: 'preview focal point'.
+  $permissions['preview focal point'] = array(
+    'name' => 'preview focal point',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'rédacteur' => 'rédacteur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'focal_point',
   );
 
   // Exported permission: 'rename features'.

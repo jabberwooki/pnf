@@ -30,10 +30,10 @@ function pnf_slideshow_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'views_bootstrap_carousel_plugin_style';
-  $handler->display->display_options['style_options']['interval'] = 'false';
+  $handler->display->display_options['style_options']['interval'] = '5000';
   $handler->display->display_options['style_options']['navigation'] = 0;
   $handler->display->display_options['style_options']['indicators'] = 0;
-  $handler->display->display_options['style_options']['pause'] = 0;
+  $handler->display->display_options['style_options']['pause'] = 1;
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_slide_image']['id'] = 'field_slide_image';
@@ -43,8 +43,9 @@ function pnf_slideshow_views_default_views() {
   $handler->display->display_options['fields']['field_slide_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_slide_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_slide_image']['settings'] = array(
-    'image_style' => '',
+    'image_style' => 'focal_2200x800',
     'image_link' => '',
+    'field_formatter_class' => '',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';

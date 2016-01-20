@@ -168,6 +168,8 @@ function pnf_jobs_views_default_views() {
 
   /* Display: Offres d'emploi */
   $handler = $view->new_display('page', 'Offres d\'emploi', 'page_jobs');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Offres d\'emploi';
   $handler->display->display_options['path'] = 'offres-demploi';
 
   /* Display: Stages */

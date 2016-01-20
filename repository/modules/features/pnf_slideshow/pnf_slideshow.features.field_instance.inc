@@ -202,7 +202,7 @@ function pnf_slideshow_field_default_field_instances() {
         'settings' => array(
           'field_formatter_class' => '',
           'image_link' => '',
-          'image_style' => 'width_840',
+          'image_style' => 'slide_900x600',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -265,9 +265,10 @@ function pnf_slideshow_field_default_field_instances() {
           ),
           'source_reference' => array(
             'autocomplete' => 0,
+            'search_all_fields' => 0,
           ),
         ),
-        'preview_image_style' => 'thumbnail',
+        'preview_image_style' => 'slide_preview_300',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
