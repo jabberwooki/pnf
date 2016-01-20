@@ -146,6 +146,9 @@ projects[field_formatter_settings][version] = "1.1"
 projects[field_slideshow][subdir] = contrib
 projects[field_slideshow][version] = "1.82"
 
+projects[focal_point][subdir] = contrib
+projects[focal_point][version] = "1.0-beta5"
+
 projects[image_field_caption][subdir] = contrib
 projects[image_field_caption][version] = "2.1"
 projects[image_field_caption][patch][] = "https://www.drupal.org/files/issues/image_field_caption-set_default_input_format-2026301-20.patch"
