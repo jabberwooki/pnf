@@ -168,7 +168,7 @@ function pnf_multimedia_views_default_views() {
   /* Display: Galeries */
   $handler = $view->new_display('page_with_page_title', 'Galeries', 'page_photos');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Galeries photo';
+  $handler->display->display_options['title'] = 'Galeries d\'images';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Atom: Scald ID */
   $handler->display->display_options['fields']['sid']['id'] = 'sid';
@@ -431,7 +431,7 @@ function pnf_multimedia_views_default_views() {
     t('last »'),
     t('Catégorie'),
     t('Galeries'),
-    t('Galeries photo'),
+    t('Galeries d\'images'),
     t('<div class="multimedia-teaser">
 <div class="group-resume">
 [scald_thumbnail]

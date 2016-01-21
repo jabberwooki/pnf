@@ -32,11 +32,11 @@ function pnf_documents_views_api($module = NULL, $api = NULL) {
 function pnf_documents_node_info() {
   $items = array(
     'document' => array(
-      'name' => t('Document'),
+      'name' => t('Médiathèque : Publications et documents'),
       'base' => 'node_content',
       'description' => t('Un document.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titre'),
       'help' => '',
     ),
   );

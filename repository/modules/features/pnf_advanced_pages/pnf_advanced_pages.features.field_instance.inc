@@ -983,6 +983,7 @@ function pnf_advanced_pages_field_default_field_instances() {
           ),
           'source_reference' => array(
             'autocomplete' => 0,
+            'search_all_fields' => 0,
           ),
         ),
         'preview_image_style' => 'thumbnail',

@@ -126,15 +126,20 @@ function pnf_multimedia_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-multimedia_images:galeries-photo.
-  $menu_links['menu-multimedia_images:galeries-photo'] = array(
+  // Exported menu link: menu-multimedia_galeries-dimages:galeries-photo.
+  $menu_links['menu-multimedia_galeries-dimages:galeries-photo'] = array(
     'menu_name' => 'menu-multimedia',
     'link_path' => 'galeries-photo',
     'router_path' => 'galeries-photo',
-    'link_title' => 'Images',
+    'link_title' => 'Galeries d\'images',
     'options' => array(
+      'identifier' => 'menu-multimedia_galeries-dimages:galeries-photo',
       'attributes' => array(),
-      'identifier' => 'menu-multimedia_images:galeries-photo',
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -236,7 +241,7 @@ function pnf_multimedia_menu_default_menu_links() {
   // Included for use with string extractors like potx.
   t('Documents');
   t('Espace Presse');
-  t('Images');
+  t('Galeries d\'images');
   t('Médiathèque');
   t('Photos');
   t('Publications et documents');
