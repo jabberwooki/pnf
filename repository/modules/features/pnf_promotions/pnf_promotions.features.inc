@@ -26,7 +26,7 @@ function pnf_promotions_views_api($module = NULL, $api = NULL) {
 function pnf_promotions_node_info() {
   $items = array(
     'promotion' => array(
-      'name' => t('Promotion'),
+      'name' => t('Bloc promotion accueil'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

@@ -55,7 +55,7 @@ function pnf_agenda_custom_breadcrumb_features_default_settings() {
 function pnf_agenda_node_info() {
   $items = array(
     'event' => array(
-      'name' => t('Evénement'),
+      'name' => t('Agenda'),
       'base' => 'node_content',
       'description' => t('Un événement de l\'agenda.'),
       'has_title' => '1',
