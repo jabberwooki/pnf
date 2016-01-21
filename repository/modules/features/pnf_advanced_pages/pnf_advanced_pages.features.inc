@@ -132,7 +132,7 @@ function pnf_advanced_pages_paragraphs_info() {
       'locked' => '1',
     ),
     'available_docs' => array(
-      'name' => 'Documents utiles',
+      'name' => 'Documents téléchargeables',
       'bundle' => 'available_docs',
       'locked' => '1',
     ),
@@ -152,12 +152,12 @@ function pnf_advanced_pages_paragraphs_info() {
       'locked' => '1',
     ),
     'images_group' => array(
-      'name' => 'Images 3 colonnes',
+      'name' => 'Galerie images (3 colonnes)',
       'bundle' => 'images_group',
       'locked' => '1',
     ),
     'slideshow' => array(
-      'name' => 'Diaporama',
+      'name' => 'Grande image/Diaporama',
       'bundle' => 'slideshow',
       'locked' => '1',
     ),
