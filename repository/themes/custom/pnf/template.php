@@ -15,6 +15,7 @@ function pnf_preprocess_image(&$vars) {
 }
 
 function pnf_preprocess_page(&$variables) {
+  drupal_add_js(drupal_get_path('theme', 'pnf') . '/js/jquery-ui-1.11.4.custom/jquery-ui.min.js', 'file');
   drupal_add_js(drupal_get_path('theme', 'pnf') . '/js/jquery.matchHeight-min.js', 'file');
   drupal_add_js(drupal_get_path('theme', 'pnf') . '/js/pnf.js', array('type' => 'file','scope' => 'footer', 'weight' => -50));
 }

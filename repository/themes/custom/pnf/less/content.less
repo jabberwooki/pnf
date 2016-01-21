@@ -161,6 +161,39 @@ a {
             content:'\f016';
         }
 }
+.paragraphs-item-slideshow{
+    .field-slideshow-pager{
+      text-align: center;
+    }
+
+    .field-slideshow-pager a{
+      display:inline-block;
+      width:10px;
+      height:10px;
+      text-indent:-10000px;
+      background: #FFF;
+      border: 2px solid @brand-secondary;
+      border-radius: 10px;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      margin-right: 5px;
+    }
+
+    .field-slideshow-pager a.activeSlide{
+      background: @brand-secondary;
+    }
+
+    .field-slideshow-controls a.prev{
+
+    }
+    .field-slideshow-controls a.prev:before{
+
+    }
+    .field-slideshow-controls a.next{
+        
+    }
+}
+
 
 //*FRONT*//
 
@@ -723,6 +756,13 @@ a {
     }
     .field-name-field-event-dates{
         float: left;
+    }
+    span.date-display-start {
+        float: left;
+    }
+    span.date-display-end {
+        float: left;
+        clear: left;
     }
     .field-name-field-event-location{
         float: right;
