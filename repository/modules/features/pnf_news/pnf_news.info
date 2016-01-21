@@ -50,6 +50,7 @@ features[ds_layout_settings][] = node|news|teaser_list_flashnews
 features[ds_view_modes][] = teaser_home_files
 features[ds_view_modes][] = teaser_home_flashnews
 features[ds_view_modes][] = teaser_list_flashnews
+features[fe_block_settings][] = menu-menu-news
 features[fe_block_settings][] = views-news-block_news_docs
 features[fe_block_settings][] = views-news-block_news_files_home
 features[fe_block_settings][] = views-news-block_news_flashnews_home

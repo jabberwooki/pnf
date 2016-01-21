@@ -578,7 +578,7 @@ function pnf_news_field_default_field_instances() {
   // Exported field_instance: 'node-news-field_news_content'.
   $field_instances['node-news-field_news_content'] = array(
     'bundle' => 'news',
-    'default_value' => array(),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
