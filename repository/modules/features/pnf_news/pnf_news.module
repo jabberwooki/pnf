@@ -25,6 +25,10 @@ function pnf_news_node_view($node, $view_mode, $langcode) {
           . t('On ')
           . $raw_displayed_date
           . $wrapper_parts[1];
+
+        if (empty($node->content['field_downloadable_docs']['#items'])) {
+          unset($node->content['field_downloadable_docs']);
+        }
       }
     }
   }

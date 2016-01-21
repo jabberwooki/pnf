@@ -73,3 +73,11 @@ function pnf_agenda_date_markup($adverb, $iso_date) {
 
   return $markup;
 }
+
+function pnf_agenda_node_view($node, $view_mode, $langcode) {
+  if ($view_mode == 'full') {
+    if (empty($node->content['field_downloadable_docs']['#items'])) {
+      unset($node->content['field_downloadable_docs']);
+    }
+  }
+}
