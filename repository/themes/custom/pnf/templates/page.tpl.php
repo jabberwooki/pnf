@@ -87,15 +87,16 @@
 <!-- end of custom region top_menu -->
 
 <header class="container-fluid header" style="padding:0;">
-  <?php if ($logo): ?>
+ 
+
+  <div class="container">
+   <?php if ($logo): ?>
     <h1>
       <a class="logo" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
     </h1>
   <?php endif; ?>
-
-  <div class="container">
     <?php if (!empty($site_name)): ?>
     <a class="name" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
     <?php endif; ?>
