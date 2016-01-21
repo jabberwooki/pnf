@@ -176,6 +176,8 @@ function pnf_documents_views_default_views() {
 
   /* Display: Page Documents */
   $handler = $view->new_display('page', 'Page Documents', 'page_documents');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Publications et documents';
   $handler->display->display_options['path'] = 'documents';
 
   /* Display: Espace Presse */
@@ -288,6 +290,7 @@ function pnf_documents_views_default_views() {
     t('terme à partir de field_document_category'),
     t('Catégories'),
     t('Page Documents'),
+    t('Publications et documents'),
     t('Espace Presse'),
     t('Journal du parc'),
     t('Journal du Parc'),
