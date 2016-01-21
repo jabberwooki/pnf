@@ -477,15 +477,33 @@ a {
         margin:0;
         color: @brand-primary;
     }
-    /*.carousel-inner {
+    .view-news {
+        .carousel-control {
+            position: relative;
+            top: 15px;
+            left: 45px;
+            bottom: 0;
+            width: auto;
+            opacity: 1;
+            font-size: 20px;
+            color: @gray-dark;
+            text-align: center;
+            text-shadow: none;
+            float: left;
+        }
+        .carousel-control .icon-prev
+        {
+            margin-left:-20px;
+        }
+        .carousel-inner {
         float: left;
+        width: 90%;
+        }
+        .carousel-control .icon-prev,
+        .carousel-control .icon-next{
+        margin-top: -10px;
+        }
     }
-    .carousel-control{
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-    }*/
 }
 
 /*Blocks dossiers*/
