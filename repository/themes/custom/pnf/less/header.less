@@ -227,9 +227,14 @@ nav .tb-megamenu {
 			color: #000;
 			font-size: 14px;
 		}
+		.nav li.dropdown.active > .dropdown-toggle,
+		.nav li.dropdown.open.active > .dropdown-toggle,
 		.nav > li.dropdown.open.active > a:hover {
  			 background: @brand-primary;
  			 color: #fff;
+		}
+		.level-3 .nav-child{
+			display: none;
 		}
 		.nav .dropdown-menu{
 			background: #e7e7e7;
@@ -247,6 +252,8 @@ nav .tb-megamenu {
 				padding-left: 10px;
 				line-height: 30px;
 			}
+			li.level-3.active a,
+			li.level-3.active a.mega-group-title,
 			ul li.mega-group .open a.mega-group-title:focus,
 			ul li.mega-group .open  a.mega-group-title:hover,
 			ul li a:hover{
@@ -254,6 +261,12 @@ nav .tb-megamenu {
 				border: none;
 				color: #3a353c;
 			}
+			li.level-3.active a,
+			li.level-3.open a,
+			li.level-3.mega-group a.mega-group-title,
+			li.level-3.open a.mega-group-title,
+			li.level-3.active a.mega-group-title,
+			li.level-3 a.mega-group-title,
 			ul ul li a{
 				color: #3a353c;
 				text-transform: none;
