@@ -593,7 +593,7 @@ function pnf_news_field_default_field_instances() {
         'weight' => 19,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'paragraphs',
         'settings' => array(
           'field_formatter_class' => '',
@@ -698,11 +698,8 @@ function pnf_news_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
-        'type' => 'taxonomy_term_reference_link',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 8,
       ),
       'teaser' => array(
@@ -930,11 +927,8 @@ function pnf_news_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
-        'type' => 'taxonomy_term_reference_plain',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 3,
       ),
       'teaser' => array(
@@ -1091,11 +1085,8 @@ function pnf_news_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
-        'type' => 'taxonomy_term_reference_plain',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 2,
       ),
       'teaser' => array(
