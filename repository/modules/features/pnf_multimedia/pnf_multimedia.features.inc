@@ -67,3 +67,82 @@ function pnf_multimedia_custom_breadcrumbs_paths_features_default_settings() {
 
   return $custom_breadcrumbs;
 }
+
+/**
+ * Implements hook_scald_default_context_types().
+ */
+function pnf_multimedia_scald_default_context_types() {
+  $contexts = array();
+  $contexts['full-audio'] = array(
+    'player' => array(
+      'audio' => array(
+        '*' => 'default',
+      ),
+    ),
+    'transcoder' => array(
+      'audio' => array(
+        '*' => 'passthrough',
+      ),
+    ),
+  );
+  $contexts['full-file'] = array(
+    'player' => array(
+      'file' => array(
+        '*' => 'default',
+      ),
+    ),
+    'transcoder' => array(
+      'file' => array(
+        '*' => 'passthrough',
+      ),
+    ),
+  );
+  $contexts['full-gallery'] = array(
+    'player' => array(
+      'gallery' => array(
+        '*' => 'galleria',
+        'settings' => array(
+          'width' => '100%',
+          'height' => '500px',
+          'fullscreen_link' => 1,
+          'thumb_style' => 'thumbnail',
+          'normal_style' => 'large',
+          'big_style' => 'original',
+          'theme' => 'folio',
+          'options' => '',
+        ),
+      ),
+    ),
+    'transcoder' => array(
+      'gallery' => array(
+        '*' => 'passthrough',
+      ),
+    ),
+  );
+  $contexts['full-image'] = array(
+    'player' => array(
+      'image' => array(
+        '*' => 'default',
+      ),
+    ),
+    'transcoder' => array(
+      'image' => array(
+        '*' => 'passthrough',
+      ),
+    ),
+  );
+  $contexts['full-video'] = array(
+    'player' => array(
+      'video' => array(
+        '*' => 'default',
+        'settings' => array(),
+      ),
+    ),
+    'transcoder' => array(
+      'video' => array(
+        '*' => 'passthrough',
+      ),
+    ),
+  );
+  return $contexts;
+}
