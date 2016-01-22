@@ -104,6 +104,7 @@ features[variable][] = pathauto_scald_atom_image_pattern
 features[variable][] = pathauto_scald_atom_video_pattern
 features[variable][] = pathauto_taxonomy_term_media_categories_pattern
 features[variable][] = scald_custom_contexts
+features[variable][] = scald_switch_feature_export
 features[views_view][] = multimedia
 features_exclude[dependencies][ctools] = ctools
 features_exclude[dependencies][features] = features

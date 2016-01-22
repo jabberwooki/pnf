@@ -303,5 +303,12 @@ function pnf_multimedia_strongarm() {
   );
   $export['scald_custom_contexts'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scald_switch_feature_export';
+  $strongarm->value = TRUE;
+  $export['scald_switch_feature_export'] = $strongarm;
+
   return $export;
 }
