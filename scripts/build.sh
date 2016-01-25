@@ -19,6 +19,20 @@ $DRUSH make repository/drupal-org-core.make $BUILDDIR
 # Build contrib
 $DRUSH make repository/drupal-org.make --no-core $BUILDDIR
 
+# Apache authentication config added to .htaccess if trigger file 'shared/apache_authentication' exists.
+file="shared/apache_authentication"
+if [ -f "$file" ]
+then
+	echo "AuthType Basic" >> $BUILDDIR/.htaccess
+	echo "AuthName \"Sites PNX - Acces restreint\"" >> $BUILDDIR/.htaccess
+	echo "AuthBasicProvider file" >> $BUILDDIR/.htaccess
+	echo "AuthUserFile \"/var/virtual_www/pnf/mutweb/pnx-passwords\"" >> $BUILDDIR/.htaccess
+	echo "Require valid-user" >> $BUILDDIR/.htaccess
+	echo "Apache authentication settings added to .htaccess file."
+else
+	echo "Trigger file $file not found. File .htaccess unaltered."
+fi
+
 # Add shared symlinks
 for f in `$FIND shared -mindepth 1 -maxdepth 1 ! -name 'README.txt' ! -name 'private' ! -name 'template'`
 do

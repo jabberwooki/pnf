@@ -10,6 +10,7 @@ shared/*/files/*
 !shared/*/files/.htaccess
 shared/private/*
 !shared/private/*/.htaccess
+shared/apache_authentication
 
 # Ignore www symblink.
 www
