@@ -35,7 +35,7 @@ function pnf_multimedia_custom_breadcrumbs_paths_features_default_settings() {
   // Exported custom breadcrumb: multimedia_galleries.
   $custom_breadcrumbs['multimedia_galleries'] = array(
     'name' => 'Mediathèque - Galeries photo',
-    'titles' => 'Images',
+    'titles' => 'Galeries d\'images',
     'paths' => 'galeries-photo',
     'visibility_php' => '',
     'specific_path' => 'galeries-photo/*',
