@@ -36,10 +36,37 @@ function pnf_contracts_menu_default_menu_links() {
     'language' => 'fr',
     'menu_links_customized' => 1,
   );
+  // Exported menu link: menu-menu-public-contracts_en-cours:marches-publics-en-cours.
+  $menu_links['menu-menu-public-contracts_en-cours:marches-publics-en-cours'] = array(
+    'menu_name' => 'menu-menu-public-contracts',
+    'link_path' => 'marches-publics-en-cours',
+    'router_path' => 'marches-publics-en-cours',
+    'link_title' => 'En cours',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-menu-public-contracts_en-cours:marches-publics-en-cours',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+  );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Attribués');
+  t('En cours');
 
   return $menu_links;
 }
