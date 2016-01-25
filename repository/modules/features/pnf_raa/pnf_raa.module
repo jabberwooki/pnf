@@ -34,6 +34,13 @@ function pnf_raa_block_view($delta = '') {
 
 function pnf_raa_get_nav_links() {
   $raa_nav_dates = pnf_raa_get_nav_dates();
+  $latest_year =  substr($raa_nav_dates[0],0,4);
+  if (null === arg(1)) {
+    $selected_year = $latest_year;
+  }
+  else {
+    $selected_year = arg(1);
+  }
 
   // Build the distinct nav links.
   $previous_year = '0000';
@@ -41,9 +48,14 @@ function pnf_raa_get_nav_links() {
   foreach ($raa_nav_dates as $date) {
     $year = substr($date,0,4);
     if ($year <> $previous_year) {
-      //$raa_nav_links[] = '/raa/' . $year;
-      $output .= '<li class="leaf">' ."\n";
-      $output .= '<a href="/raa/' . $year . '">' . $year . "</a>\n";
+      if ($year == $selected_year) {
+        $output .= '<li class="leaf active-trail">' ."\n";
+        $output .= '<a class="active-trail active" href="/raa/' . $year . '">' . $year . "</a>\n";
+      }
+      else {
+        $output .= '<li class="leaf">' ."\n";
+        $output .= '<a href="/raa/' . $year . '">' . $year . "</a>\n";
+      }
       $output .= "</li>\n";
       $previous_year = $year;
     }
@@ -67,7 +79,7 @@ function pnf_raa_get_nav_dates() {
   $query->condition('n.status', 1);
   $query->condition('pub_date.bundle','raa');
   $result = $query->execute()->fetchCol();
-  arsort($result);
+  rsort($result);
 
   return $result;
 }
