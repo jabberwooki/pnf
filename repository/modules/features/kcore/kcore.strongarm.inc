@@ -27,6 +27,13 @@ function kcore_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'custom_breadcrumbs_paths_allow_wildcards';
+  $strongarm->value = 1;
+  $export['custom_breadcrumbs_paths_allow_wildcards'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'custom_search_blocks_1_any_force';
   $strongarm->value = 0;
   $export['custom_search_blocks_1_any_force'] = $strongarm;
