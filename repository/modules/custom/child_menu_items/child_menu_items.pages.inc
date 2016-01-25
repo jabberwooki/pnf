@@ -23,6 +23,7 @@ function child_menu_items_preprocess_cmi_list(&$variables){
 
   $query->condition('ml1.menu_name', 'menu-menu-themes');
   $query->condition('ml2.link_path', $variables['menu_item_link_path']);
+  $query->orderBy('ml1.weight');
 
   $result = $query->execute()->fetchAll();
 
