@@ -21,6 +21,12 @@ function pnf_advanced_pages_ds_field_settings_info() {
       'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h2',
+        'class' => 'col-lg-8 col-lg-offset-2',
+        'field_formatter_class' => '',
+      ),
     ),
   );
   $export['node|advanced_page|full'] = $ds_fieldsetting;

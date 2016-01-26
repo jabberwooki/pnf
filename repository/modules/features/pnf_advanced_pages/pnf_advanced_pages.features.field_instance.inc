@@ -31,7 +31,7 @@ function pnf_advanced_pages_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'paragraphs',
         'settings' => array(
-          'field_formatter_class' => '',
+          'field_formatter_class' => 'col-lg-8 col-lg-offset-2',
           'view_mode' => 'full',
         ),
         'type' => 'paragraphs_view',
