@@ -178,6 +178,7 @@ blockquote.image-field-caption:before{
 .paragraphs-item-slideshow{
     .field-slideshow-pager{
       text-align: center;
+      margin-top: 10px;
     }
 
     .field-slideshow-pager a{
@@ -198,13 +199,24 @@ blockquote.image-field-caption:before{
     }
 
     .field-slideshow-controls a.prev{
-
-    }
-    .field-slideshow-controls a.prev:before{
-
+        background-image: url('../images/suiv.png');
+        text-indent: -9999px;
+        position: absolute;
+        height: 41px;
+        width: 41px;
+        top: 300px;
+        z-index: 100;
+        right: 30px;
     }
     .field-slideshow-controls a.next{
-        
+        background-image: url('../images/prec.png');
+        text-indent: -9999px;
+        position: absolute;
+        height: 41px;
+        width: 41px;
+        top: 300px;
+        z-index: 100;
+        left: 30px;
     }
 }
 .paragraphs-item-images-group{
