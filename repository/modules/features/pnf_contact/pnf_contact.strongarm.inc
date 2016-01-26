@@ -15,7 +15,32 @@ function pnf_contact_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_entityform__contact';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'full' => array(
+        'custom_settings' => TRUE,
+      ),
+      'email' => array(
+        'custom_settings' => FALSE,
+      ),
+      'confirmation' => array(
+        'custom_settings' => FALSE,
+      ),
+      'download' => array(
+        'custom_settings' => FALSE,
+      ),
+      'table' => array(
+        'custom_settings' => FALSE,
+      ),
+      'review' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'redirect' => array(
