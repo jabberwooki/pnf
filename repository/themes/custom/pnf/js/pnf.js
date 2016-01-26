@@ -49,10 +49,9 @@
       $('a', this).animate({right: - $(this).width()}, 100);
     });
 
-    /* Toolbar icons link to conyent */
+    /* Toolbar icons link to content */
     $('#block-menu-menu-tools li').click(function(event) {
       var link = $('a',this).attr('href');
-      console.log(link);
       window.location = link;
     });
 
