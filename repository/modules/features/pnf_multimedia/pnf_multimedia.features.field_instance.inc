@@ -27,10 +27,13 @@ function pnf_multimedia_field_default_field_instances() {
         'weight' => 3,
       ),
       'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_formatter_class' => '',
+        ),
+        'type' => 'text_plain',
+        'weight' => 2,
       ),
       'list' => array(
         'label' => 'above',
@@ -106,12 +109,12 @@ function pnf_multimedia_field_default_field_instances() {
         'weight' => 1,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
         ),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
       ),
       'list' => array(

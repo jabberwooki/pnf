@@ -52,6 +52,23 @@ function pnf_advanced_pages_entity_view_alter(&$build, $type) {
 
       case 'images_group':
         $params['images_group_item'] = 1;
+        break;
+
+      case 'slideshow':
+        foreach ($build['field_slide'][0]['#items'] as $key=>$item) {
+          $item['caption'] = $item['image_field_caption']['value'];
+          $build['field_slide'][0]['#items'][$key]['caption'] =
+            $build['field_slide'][0]['#items'][$key]['image_field_caption']['value'];
+        }
+        break;
+
+      case 'image_text_50_50':
+        $params['image_text_50_50_item'] = 1;
+        break;
+
+      case 'text_image_50_50':
+        $params['text_image_50_50_item'] = 1;
+        break;
     }
     drupal_add_js(array('pnf_advanced_pages_view' => $params), 'setting');
   }
@@ -86,8 +103,13 @@ function pnf_advanced_pages_field_widget_text_textfield_form_alter(&$element, &$
 function pnf_advanced_pages_entity_view($entity, $type, $view_mode, $langcode) {
   if ($type == 'paragraphs_item') {
     if (($entity->bundle == 'image_text_50_50' || $entity->bundle == 'text_image_50_50') && $view_mode == 'full') {
-      $entity->content['field_image'][0]['#item']['alt'] =
-        $entity->content['field_image'][0]['#item']['image_field_caption']['value'];
+      foreach ($entity->content['field_image'] as $key=>$value) {
+        if (is_integer($key)) {
+          $entity->content['field_image'][$key]['#item']['alt'] =
+            $entity->content['field_image'][$key]['#item']['image_field_caption']['value'];
+        }
+      }
+
     }
   }
 }

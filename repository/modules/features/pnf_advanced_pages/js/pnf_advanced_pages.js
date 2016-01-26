@@ -27,6 +27,24 @@
             $(this).addClass('col-md-4');
           });
         }
+        // alt attribute value of image added as caption (new div) below <a><img/></a>
+        if (settings.pnf_advanced_pages_view.text_image_50_50_item) {
+          $('div.paragraphs-item-text-image-50-50 div.field-items').find('img').each(function() {
+            if (!$(this).parent().parent().find('div.field-image-caption').length) {
+              caption = '<div class="field-image-caption">' + $(this).attr('alt') + '</div>';
+              $(this).parent().after(caption);
+            }
+          });
+        }
+        // alt attribute value of image added as caption (new div) below <a><img/></a>
+        if (settings.pnf_advanced_pages_view.image_text_50_50_item) {
+          $('div.paragraphs-item-image-text-50-50 div.field-items').find('img').each(function() {
+            if (!$(this).parent().parent().find('div.field-image-caption').length) {
+              caption = '<div class="field-image-caption">' + $(this).attr('alt') + '</div>';
+              $(this).parent().after(caption);
+            }
+          });
+        }
       }
     }
   };

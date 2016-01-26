@@ -31,6 +31,6 @@ function kbootstrap_btn_readmore($field) {
 	$label = t("Read more");
 	$nid =  $field['entity']->nid;
 	$url = drupal_get_path_alias('node/' . $nid);
-	$output = '<a class = "btn btn-sm btn-primary" href="'. $url .'" target="_blank">'. $label .'</a>';
+	$output = '<a class = "btn btn-sm btn-primary" href="' . $url . '">' . $label . '</a>';
 	return $output;
 }
