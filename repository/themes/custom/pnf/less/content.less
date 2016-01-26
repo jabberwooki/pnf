@@ -176,9 +176,24 @@ blockquote.image-field-caption:before{
         }
 }
 .paragraphs-item-slideshow{
+    .field-slideshow-caption{
+        margin-top: -50px;
+        background-color: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.7);
+        color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        font-size: 10px;
+        font-style: normal;
+        position: relative;
+        z-index: 100;
+        padding: 10px;
+    }
     .field-slideshow-pager{
-      text-align: center;
-      margin-top: 10px;
+        text-align: center;
+        position: absolute;
+        right: 20px;
+        margin-top: -20px;
+        z-index: 150;
     }
 
     .field-slideshow-pager a{
@@ -186,8 +201,8 @@ blockquote.image-field-caption:before{
       width:10px;
       height:10px;
       text-indent:-10000px;
-      background: #FFF;
-      border: 2px solid @brand-secondary;
+      background: #555;
+      border: none;
       border-radius: 10px;
       -moz-border-radius: 10px;
       -webkit-border-radius: 10px;
@@ -195,7 +210,7 @@ blockquote.image-field-caption:before{
     }
 
     .field-slideshow-pager a.activeSlide{
-      background: @brand-secondary;
+      background: #d6d6d4;
     }
 
     .field-slideshow-controls a.prev{
