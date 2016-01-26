@@ -77,6 +77,7 @@ function pnf_multimedia_scald_default_context_types() {
     'player' => array(
       'audio' => array(
         '*' => 'default',
+        'settings' => array(),
       ),
     ),
     'transcoder' => array(
