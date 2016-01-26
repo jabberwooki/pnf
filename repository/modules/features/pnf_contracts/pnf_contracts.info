@@ -55,6 +55,7 @@ features[field_instance][] = node-contract-field_procurement_type
 features[field_instance][] = node-contract-field_pub_dates
 features[menu_custom][] = menu-menu-public-contracts
 features[menu_links][] = menu-menu-public-contracts_attribus:marches-publics-attribues
+features[menu_links][] = menu-menu-public-contracts_en-cours:marches-publics-en-cours
 features[node][] = contract
 features[taxonomy][] = contract_categories
 features[taxonomy][] = procurement_types

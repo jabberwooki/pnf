@@ -278,6 +278,7 @@ features[user_role][] = webmaster
 features[uuid_node][] = 63926957-1118-4a4e-a72a-ba949a5f9e0f
 features[variable][] = clean_url
 features[variable][] = cron_safe_threshold
+features[variable][] = custom_breadcrumbs_paths_allow_wildcards
 features[variable][] = custom_search_blocks_1_any_force
 features[variable][] = custom_search_blocks_1_any_restricts
 features[variable][] = custom_search_blocks_1_criteria_negative_display

@@ -40,6 +40,22 @@ function pnf_advanced_pages_image_default_styles() {
     ),
   );
 
+  // Exported image style: 360w.
+  $styles['360w'] = array(
+    'label' => 'Largeur 360',
+    'effects' => array(
+      12 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 360,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: 415x280.
   $styles['415x280'] = array(
     'label' => '415x280',

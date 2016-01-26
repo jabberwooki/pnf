@@ -35,7 +35,7 @@ function pnf_advanced_pages_menu() {
  * Implements hook_entity_view_alter().
  */
 function pnf_advanced_pages_entity_view_alter(&$build, $type) {
-  if ($type == 'paragraphs_item' && $build['#view_mode'] == 'full') {$build['#bundle'];
+  if ($type == 'paragraphs_item' && $build['#view_mode'] == 'full') {
     $params = array('view_mode' => 'full');
     switch ($build['#bundle']) {
       case 'colored_bg_text':
@@ -80,4 +80,14 @@ function pnf_advanced_pages_field_widget_text_textfield_form_alter(&$element, &$
   }
 }
 
-
+/**
+ * Implements hook_entity_view().
+ */
+function pnf_advanced_pages_entity_view($entity, $type, $view_mode, $langcode) {
+  if ($type == 'paragraphs_item') {
+    if (($entity->bundle == 'image_text_50_50' || $entity->bundle == 'text_image_50_50') && $view_mode == 'full') {
+      $entity->content['field_image'][0]['#item']['alt'] =
+        $entity->content['field_image'][0]['#item']['image_field_caption']['value'];
+    }
+  }
+}
