@@ -62,7 +62,7 @@ function pnf_contact_default_entityform_type() {
       "resubmit_action" : "new",
       "redirect_path" : "",
       "instruction_pre" : {
-        "value" : "\\u003Cp\\u003E\\u003Cbr \\/\\u003E\\r\\n\\u0026nbsp;\\u003C\\/p\\u003E\\r\\n",
+        "value" : "\\u003Cp\\u003ECe formulaire vous permet de contacter le service d\\u0027accueil du Parc national qui, en fonction du sujet, transmettra votre message aux personnes concern\\u00e9es.\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003EVous pouvez \\u00e9galement contacter l\\u0027\\u00e9quipe d\\u0027animation du site internet du Parc national pour r\\u00e9agir \\u00e0 un article, apporter des informations compl\\u00e9ementaires ou encore signaler des difficult\\u00e9es techniques ou de navigation.\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003ELes offres d\\u0027emploi et de stages ouvertes par le Par national sont consultables dans la rubrique \\u003Ca href=\\u0022offres-demploi\\u0022\\u003EOffres d\\u0027emploi\\u003C\\/a\\u003E.\\u003Cbr \\/\\u003E\\r\\n\\u0026nbsp;\\u003C\\/p\\u003E\\r\\n",
         "format" : "full_html"
       }
     },
