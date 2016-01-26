@@ -242,17 +242,93 @@ blockquote.image-field-caption:before{
 }
 
 /*List RAA*/
-.ui-state-default{
-    border: none;
-    background: @brand-secondary;
-    font-weight: 400;
-    color: #fff;
-    cursor: pointer;
+.page-raa .region-content{
+    background: white;
 }
-.raa_category_group .views-row{
-    background: #f4f4f4;
-    padding: 10px;
-    margin: 10px;
+.view-raa{
+    .views-field-title{
+        width: 80%;
+        float:left;
+    }
+    .views-field-field-displayed-pub-date{
+        float: right;
+        width: 20%;
+        line-height: 40px;
+        text-align: right;
+        font-size: @font-size-small;
+    }
+    .views-field-field-downloadable-docs{
+        clear: left;
+    }
+    h3{
+        font-size: 20px;
+        font-weight: 600;
+        padding: 5px;
+        margin: 10px;
+    }
+    h4{
+        font-size: 20px;
+        font-weight: 600;
+        color: @brand-secondary;
+    }
+    .ui-corner-all,
+    .ui-state-active,
+    .ui-state-hover,
+    .ui-state-focus,
+    .ui-state-default{
+        border: none;
+        background: @brand-secondary;
+        color: #fff;
+        cursor: pointer;
+    }
+    .ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+        right: 1.2em;
+        left: auto;
+        position: absolute;
+        margin-right: 5px;
+    }
+    .ui-accordion .ui-state-default .ui-icon {
+        background-image: url('../images/accordion_close.png');
+    }
+    .ui-accordion .ui-state-active .ui-icon {
+        background-image: url('../images/accordion_open.png');
+    }
+    .ui-accordion .ui-icon {
+        height: 21px;
+        width: 21px;
+    }
+    .raa_category_group .views-row{
+        background: #f4f4f4;
+        padding: 10px;
+        margin: 10px;
+    }
+    ul.download-file{
+        padding: 10px 0 0 30px;
+    }
+    ul.download-file li{
+        list-style: none;
+        font-weight: 600;
+        padding: 0;
+    }
+    ul.download-file li img{
+        display: none;
+    }
+    ul.download-file li a{
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration: none;
+    }
+    ul.download-file li a:before{
+        font-family: 'Fontawesome';
+        padding-right: 10px;
+        font-weight: normal;
+        content:'\f1c1';
+        color: @gray-dark;
+    }
+    ul.download-file li .detail{
+        color: @gray-dark;
+    }
+
 }
 
 
