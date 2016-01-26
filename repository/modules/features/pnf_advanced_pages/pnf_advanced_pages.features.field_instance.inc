@@ -1017,7 +1017,7 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'field_slideshow',
         'settings' => array(
           'field_formatter_class' => '',
-          'slideshow_caption' => '',
+          'slideshow_caption' => 'alt',
           'slideshow_caption_link' => '',
           'slideshow_carousel_circular' => 0,
           'slideshow_carousel_follow' => 0,
