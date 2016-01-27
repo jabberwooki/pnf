@@ -144,7 +144,7 @@ projects[field_formatter_settings][subdir] = contrib
 projects[field_formatter_settings][version] = "1.1"
 
 projects[field_slideshow][subdir] = contrib
-projects[field_slideshow][version] = "1.17"
+projects[field_slideshow][version] = "1.82"
 
 projects[fitvids][subdir] = contrib
 projects[fitvids][version] = "1.82"
