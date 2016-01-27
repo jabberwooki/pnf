@@ -275,3 +275,10 @@ function pnf_update_7009() {
 function pnf_update_7010() {
   module_enable(array('focal_point'));
 }
+
+/**
+ * Activate field_formatter_class module.
+ */
+function pnf_update_7011() {
+  module_enable(array('field_formatter_class', 'honeypot', 'honeypot_entityform'));
+}

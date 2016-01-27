@@ -363,6 +363,15 @@ function kcore_user_default_permissions() {
     'module' => 'filter',
   );
 
+  // Exported permission: 'administer honeypot'.
+  $permissions['administer honeypot'] = array(
+    'name' => 'administer honeypot',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'honeypot',
+  );
+
   // Exported permission: 'administer image styles'.
   $permissions['administer image styles'] = array(
     'name' => 'administer image styles',
@@ -658,6 +667,15 @@ function kcore_user_default_permissions() {
       'administrateur' => 'administrateur',
     ),
     'module' => 'system',
+  );
+
+  // Exported permission: 'bypass honeypot protection'.
+  $permissions['bypass honeypot protection'] = array(
+    'name' => 'bypass honeypot protection',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'honeypot',
   );
 
   // Exported permission: 'bypass node access'.

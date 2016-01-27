@@ -34,9 +34,29 @@ function pnf_contact_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'edit any map_contact bean'.
+  $permissions['edit any map_contact bean'] = array(
+    'name' => 'edit any map_contact bean',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'view any contact bean'.
   $permissions['view any contact bean'] = array(
     'name' => 'view any contact bean',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'view any map_contact bean'.
+  $permissions['view any map_contact bean'] = array(
+    'name' => 'view any map_contact bean',
     'roles' => array(
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
