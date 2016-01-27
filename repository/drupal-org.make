@@ -147,7 +147,7 @@ projects[field_slideshow][subdir] = contrib
 projects[field_slideshow][version] = "1.82"
 
 projects[fitvids][subdir] = contrib
-projects[fitvids][version] = "1.82"
+projects[fitvids][version] = "1.17"
 
 projects[focal_point][subdir] = contrib
 projects[focal_point][version] = "1.0-beta5"
