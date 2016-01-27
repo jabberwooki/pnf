@@ -159,6 +159,12 @@ projects[image_field_caption][patch][] = "https://www.drupal.org/files/issues/im
 projects[filefield_sources][subdir] = contrib
 projects[filefield_sources][version] = "1.10"
 
+projects[honeypot][subdir] = contrib
+projects[honeypot][version] = "1.21"
+
+projects[honeypot_entityform][subdir] = contrib
+projects[honeypot_entityform][version] = "1.0"
+
 projects[i18n][subdir] = contrib
 projects[i18n][version] = "1.13"
 
