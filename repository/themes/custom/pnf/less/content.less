@@ -17,7 +17,7 @@ a {
 }
 
 .breadcrumb {
-    padding: 8px 15px;
+    padding: 8px 15px 8px 0;
     margin-bottom: 20px;
     list-style: none;
     background-color: transparent;
@@ -111,7 +111,18 @@ a {
     }
     table thead{
         background-color: #f4f4f4;
-    }    
+    }   
+    /*Image scald dans ckeditor*/
+    .dnd-atom-wrapper {
+        display: block;
+    } 
+    .dnd-legend-wrapper {
+        display: block;
+        caption-side: bottom;
+    }
+    .dnd-drop-wrapper img.img-responsive{
+        display: inline-block;
+    }
 
 }
 
@@ -234,6 +245,8 @@ blockquote.image-field-caption:before{
         left: 30px;
     }
 }
+.paragraphs-item-image-text-50-50,
+.paragraphs-item-text-image-50-50,
 .paragraphs-item-images-group{
     .field-item a{
         display: block;
@@ -265,6 +278,9 @@ blockquote.image-field-caption:before{
         top: 38%;
         left: 45%;
         opacity: 0.8;
+    }
+    .field-image-caption{
+        font-size: 10px;
     }
 }
 
@@ -1103,9 +1119,11 @@ blockquote.image-field-caption:before{
 }
 
 /*Menu sidebar second*/
+.region-sidebar-second{
+    margin-top: 137px;
+}
 .region-sidebar-second .block-pnf-raa,
 .region-sidebar-second .block-menu{
-        margin-top: 45px;
     ul li a{
         background: lighten(@brand-secondary, 20%);
         color: @gray-dark;
@@ -1157,10 +1175,31 @@ h2.page-header{
 }
 .page-header {
     padding-bottom: 0;
-    margin: 40px 0 20px;
+    margin: 20px 0 20px;
     border-bottom: none;
 }
 .paragraphs-items-field-page-content .field-name-field-page-content{
     background: #fff;
     padding: 10px;
+}
+
+/*Contact*/
+.entitytype-contact-form{
+    background: #fff;
+    padding: 15px;
+}
+#block-bean-bloc-de-la-page-contact{
+    .field-name-field-contact-park-name,
+    .field-name-field-contact-text{
+        background: #fff;
+        padding: 10px;
+    }
+    .field-name-field-contact-text{
+        margin-bottom: 20px;
+    }
+    .field-name-field-contact-park-name{
+        padding-bottom: 0;
+        font-weight: 600;
+        font-size: 16px;
+    }
 }
