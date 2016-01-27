@@ -123,6 +123,10 @@ a {
     .dnd-drop-wrapper img.img-responsive{
         display: inline-block;
     }
+    .field-name-body,
+    .paragraphs-items-field-news-content{
+        clear: left;
+    }
 
 }
 
@@ -1018,31 +1022,33 @@ blockquote.image-field-caption:before{
 }
 
 /*Content type*/
-.pnf-content-left .content-wrapper,
-.pnf-content-right .content-wrapper{
+.pnf-content-left .content-wrapper{
     background: #fff;
     padding: 15px;
-        .field{
-            margin-bottom: 15px;
-        }
-        .field-name-field-downloadable-docs{
-            a:before{
-                font-family: 'Fontawesome';
-                content: '\f016';
-                font-size: @font-size-base;
-                padding-right: 10px;
-            }
-            .field-label{
-                font-size: @font-size-h4;
-                font-weight: 600;
-                color: @gray;
-            }
-            .field-label,
-            .download-file{
-                margin-bottom: 10px;
-            }
-        }
 }
+.field{
+    margin-bottom: 15px;
+    }
+.field-name-field-downloadable-docs{
+    background: #fff;
+    padding: 15px;
+    a:before{
+        font-family: 'Fontawesome';
+        content: '\f016';
+        font-size: @font-size-base;
+        padding-right: 10px;
+    }
+    .field-label{
+        font-size: @font-size-h4;
+        font-weight: 600;
+        color: @gray;
+    }
+    .field-label,
+    .download-file{
+        margin-bottom: 10px;
+    }
+}
+
 
 /*List*/
 .view-mode-teaser .image-field-caption{
