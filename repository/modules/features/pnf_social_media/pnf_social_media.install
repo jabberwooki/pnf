@@ -1,0 +1,15 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: ubuntu
+ * Date: 28/01/16
+ * Time: 08:13
+ */
+
+/**
+ * Activate field_formatter_class, honeypot and honeypot_entityform modules.
+ */
+function pnf_social_media_update_7001() {
+  module_enable(array('addtoany'));
+  module_disable(array('print_services','general_services','service_links_displays','service_links'));
+}

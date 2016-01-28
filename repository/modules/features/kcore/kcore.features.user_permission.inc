@@ -1030,15 +1030,6 @@ function kcore_user_default_permissions() {
     'module' => 'i18n_string',
   );
 
-  // Exported permission: 'use PHP for service visibility'.
-  $permissions['use PHP for service visibility'] = array(
-    'name' => 'use PHP for service visibility',
-    'roles' => array(
-      'administrateur' => 'administrateur',
-    ),
-    'module' => 'service_links',
-  );
-
   // Exported permission: 'use advanced search'.
   $permissions['use advanced search'] = array(
     'name' => 'use advanced search',

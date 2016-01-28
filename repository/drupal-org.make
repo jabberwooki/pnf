@@ -268,16 +268,19 @@ projects[geofield][version] = "2.3"
 ;projects[sharethis][version] = ""
 
 ;projects[addthis][subdir] = contrib
-;projects[addthis][version] = ""
+;projects[addthis][version] = "4.0-alpha6"
 
-;projects[addtoany][subdir] = contrib
-;projects[addtoany][version] = ""
+;projects[addthis_displays][subdir] = contrib
+;projects[addthis_displays][version] = "4.0-alpha6"
+
+projects[addtoany][subdir] = contrib
+projects[addtoany][version] = "4.11"
 
 projects[on_the_web][subdir] = contrib
 projects[on_the_web][version] = "1.5"
 
-projects[service_links][subdir] = contrib
-projects[service_links][version] = "2.3"
+;projects[service_links][subdir] = contrib
+;projects[service_links][version] = "2.3"
 
 ;=== Newsletter ===============================================================
 ;projects[mailchimp][subdir] = contrib

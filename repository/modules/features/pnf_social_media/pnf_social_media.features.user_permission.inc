@@ -10,15 +10,13 @@
 function pnf_social_media_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: 'access service links'.
-  $permissions['access service links'] = array(
-    'name' => 'access service links',
+  // Exported permission: 'administer addtoany'.
+  $permissions['administer addtoany'] = array(
+    'name' => 'administer addtoany',
     'roles' => array(
       'administrateur' => 'administrateur',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
-    'module' => 'service_links',
+    'module' => 'addtoany',
   );
 
   return $permissions;
