@@ -138,13 +138,9 @@ function kcore_block_view_alter(&$data, $block) {
 
   }
 	elseif ($block->delta == 'printfriendly') {
-		dpm($data['content']['#markup']);
-		$markup = $data['content']['#markup'];
 		$search = '/sites/all/modules/contrib/printfriendly/images/pf_button_sq_gry_m.png';
 		$replace = '/profiles/pnf/themes/custom/pnf/images/print.png';
-		$markup = str_replace($search, $replace, $markup);
-		$data['content']['#markup'] = $markup;
-
+		$data['content']['#markup'] = str_replace($search, $replace,$data['content']['#markup']);
 	}
 }
 
