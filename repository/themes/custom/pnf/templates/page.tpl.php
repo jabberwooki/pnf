@@ -135,7 +135,22 @@
       </div>
     </div>
   <?php endif; ?>
-<!-- end of pre-content -->  
+<!-- end of pre-content -->
+
+
+  <div class="row">
+    <div class="col-sm-9">
+      <?php print render($page['content_top_first']); ?>
+      <?php if (!empty($page['content_top_first'])): ?>
+        <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+      <?php endif; ?>
+    </div>
+    <div class="col-sm-3">
+      <?php if (!empty($page['content_top_second'])): ?>
+        <?php print render($page['content_top_second']); ?>
+      <?php endif; ?>
+    </div>
+  </div>
 
   <div class="row">
 
@@ -149,7 +164,7 @@
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
-      <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+      <?php // if (!empty($breadcrumb)): print $breadcrumb; endif;?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if (!empty($title)): ?>

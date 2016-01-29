@@ -169,17 +169,17 @@ function pnf_news_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'central' => array(
-        0 => 'title',
+        0 => 'post_date',
         1 => 'node_link',
-        2 => 'post_date',
+        2 => 'title',
         3 => 'field_key_image',
         4 => 'body',
       ),
     ),
     'fields' => array(
-      'title' => 'central',
-      'node_link' => 'central',
       'post_date' => 'central',
+      'node_link' => 'central',
+      'title' => 'central',
       'field_key_image' => 'central',
       'body' => 'central',
     ),
