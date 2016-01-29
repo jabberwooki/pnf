@@ -77,7 +77,7 @@
 <!-- custom region top_menu -->
 <div class = "pnf_topmenu">
   <div class="container">
-    <div class="col-md-7 col-md-offset-5">
+    <div class="col-md-9 col-md-offset-3 col-lg-7 col-lg-offset-5">
       <?php if (!empty($page['top_menu'])): ?>
         <?php print render($page['top_menu']); ?>
       <?php endif; ?>
@@ -208,7 +208,7 @@
 
    <!-- region footer --> 
     <?php if (!empty($page['footer'])): ?>
-      <div class="col-md-3">
+      <div class="col-sm-3 col-md-3">
         <?php print render($page['footer']); ?>
       </div>
     <?php endif; ?>
@@ -216,7 +216,7 @@
 
    <!-- region footer second --> 
     <?php if (!empty($page['footer_second'])): ?>
-      <div class="col-md-6">
+      <div class="col-sm-6 col-md-6">
         <?php print render($page['footer_second']); ?>
       </div>
     <?php endif; ?>
@@ -224,7 +224,7 @@
 
    <!-- region footer third--> 
     <?php if (!empty($page['footer_third'])): ?>
-      <div class="col-md-3">
+      <div class="col-sm-3 col-md-3">
         <?php print render($page['footer_third']); ?>
       </div>
     <?php endif; ?>

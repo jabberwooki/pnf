@@ -169,3 +169,43 @@ span.on-the-web{
 		display: none;
 	}
 }
+
+
+
+
+
+@media(max-width: @screen-xs-max){
+	.logo img{
+		width: 50%;
+	}
+	nav {
+    	float: right;
+	}
+}
+
+@media(min-width: @screen-sm-min){
+	.logo img{
+		width: 72%;
+	}
+	nav {
+    	float: right;
+	}
+}  /* deprecated: @screen-tablet, or @screen-sm */
+
+@media(min-width: @screen-md-min){
+	.logo img{
+		width: 91%;
+	}
+	nav {
+    	float: none;
+	}
+}  /* deprecated: @screen-desktop, or @screen-md */
+
+@media(min-width: @screen-lg-min){
+	.logo img{
+		width: 100%;
+	}
+	nav {
+    	float: none;
+	}
+}  /* deprecated: @screen-lg-desktop, or @screen-lg */
