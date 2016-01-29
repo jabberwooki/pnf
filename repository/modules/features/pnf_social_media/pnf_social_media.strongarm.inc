@@ -57,14 +57,14 @@ a2a_config.num_services = 4;';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'addtoany_display_in_nodecont';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['addtoany_display_in_nodecont'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'addtoany_display_in_nodelink';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['addtoany_display_in_nodelink'] = $strongarm;
 
   $strongarm = new stdClass();

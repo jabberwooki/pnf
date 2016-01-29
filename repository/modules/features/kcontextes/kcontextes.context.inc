@@ -62,12 +62,6 @@ function kcontextes_context_default_contexts() {
           'region' => 'navigation',
           'weight' => '-10',
         ),
-        'addtoany-addtoany_button' => array(
-          'module' => 'addtoany',
-          'delta' => 'addtoany_button',
-          'region' => 'pre_content_right',
-          'weight' => '-10',
-        ),
         'menu-menu-multimedia-footer' => array(
           'module' => 'menu',
           'delta' => 'menu-multimedia-footer',
@@ -122,6 +116,11 @@ function kcontextes_context_default_contexts() {
   $context->description = 'Front page only';
   $context->tag = 'Core';
   $context->conditions = array(
+    'cmd' => array(
+      'values' => array(
+        3 => 3,
+      ),
+    ),
     'path' => array(
       'values' => array(
         '<front>' => '<front>',
@@ -140,7 +139,7 @@ function kcontextes_context_default_contexts() {
       ),
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
 
   // Translatables
   // Included for use with string extractors like potx.

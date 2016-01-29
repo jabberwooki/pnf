@@ -137,6 +137,11 @@ function kcore_block_view_alter(&$data, $block) {
 
 
   }
+	elseif ($block->delta == 'printfriendly') {
+		$search = '/sites/all/modules/contrib/printfriendly/images/pf_button_sq_gry_m.png';
+		$replace = '/profiles/pnf/themes/custom/pnf/images/print.png';
+		$data['content']['#markup'] = str_replace($search, $replace,$data['content']['#markup']);
+	}
 }
 
 /**

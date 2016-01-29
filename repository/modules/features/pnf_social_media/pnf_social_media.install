@@ -7,7 +7,8 @@
  */
 
 /**
- * Activate field_formatter_class, honeypot and honeypot_entityform modules.
+ * Activate addtoany module.
+ * Disable print_services, general_services, service_links_displays and service_links modules.
  */
 function pnf_social_media_update_7001() {
   module_enable(array('addtoany'));

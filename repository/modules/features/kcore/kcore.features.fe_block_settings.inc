@@ -331,6 +331,35 @@ function kcore_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['printfriendly-printfriendly'] = array(
+    'cache' => 8,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'printfriendly',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'printfriendly',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'pnf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'pnf',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 0,
+  );
+
   $export['tb_megamenu-menu-menu-themes'] = array(
     'cache' => -1,
     'css_class' => 'col-md-9 col-md-offset-3',
@@ -339,6 +368,35 @@ function kcore_default_fe_block_settings() {
     'i18n_block_language' => array(),
     'i18n_mode' => 0,
     'module' => 'tb_megamenu',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'pnf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'pnf',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 0,
+  );
+
+  $export['text_resize-0'] = array(
+    'cache' => 4,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 0,
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'text_resize',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),
