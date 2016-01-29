@@ -365,6 +365,7 @@ features[variable][] = pathauto_node_page_fr_pattern
 features[variable][] = pathauto_node_page_pattern
 features[variable][] = pathauto_node_page_und_pattern
 features[variable][] = pathauto_transliterate
+features[variable][] = printfriendly_image
 features[variable][] = site_default_country
 features[variable][] = user_admin_role
 features[variable][] = uuid_features_entity_taxonomy_term
