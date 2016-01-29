@@ -39,31 +39,12 @@
     $('.view-multimedia .multimedia-teaser h3').matchHeight('options');
 
     /* Toolbar Menu*/
-
-    //$('#block-menu-menu-tools a span').css('right', - $(this).width());
-    /*$('#block-menu-menu-tools .tool').mouseenter(function() {
-      $('a', this).animate({right: '0px'}, 50);
-    });*/
-
-    /*$('#block-menu-menu-tools .tool').mouseleave(function() {
-      $('a', this).animate({right: - $(this).width()}, 100);
-    });*/
-
-    /*Ajouter un span dans le li et i dans le a*/
-    //$("#block-menu-menu-tools ul li").prepend( $("<span></span>")[0] ); 
     $('#block-menu-menu-tools ul li a').wrapInner('<span></span>');
 
     $('#block-menu-menu-tools').find('li span').each(function() {
-      //alert($(this).css('width'));
-      toto = $(this).css('width');
-      $(this).css('width',toto);
+      $(this).css('width', $(this).width() + 44);
     });
 
-    /* Toolbar icons link to content
-    $('#block-menu-menu-tools li').click(function(event) {
-      var link = $('a',this).attr('href');
-      window.location = link;
-    });*/
 
     /* Resumes image overlay */
     setParagraphSize();
