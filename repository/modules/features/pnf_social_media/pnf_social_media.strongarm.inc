@@ -50,7 +50,7 @@ a2a_config.num_services = 4;';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'addtoany_custom_image';
-  $strongarm->value = '/profiles/pnf/themes/custom/pnf/images/share_32x32.png';
+  $strongarm->value = '/profiles/pnf/themes/custom/pnf/images/share.png';
   $export['addtoany_custom_image'] = $strongarm;
 
   $strongarm = new stdClass();

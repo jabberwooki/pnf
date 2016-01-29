@@ -25,7 +25,7 @@ function pnf_multimedia_menu_default_menu_links() {
       ),
       'item_attributes' => array(
         'id' => '',
-        'class' => 'col-md-3',
+        'class' => 'col-xs-6 col-sm-3 col-md-3',
         'style' => '',
       ),
     ),
@@ -54,7 +54,7 @@ function pnf_multimedia_menu_default_menu_links() {
       ),
       'item_attributes' => array(
         'id' => '',
-        'class' => 'col-md-3',
+        'class' => 'col-xs-6 col-sm-3 col-md-3',
         'style' => '',
       ),
     ),
@@ -83,7 +83,7 @@ function pnf_multimedia_menu_default_menu_links() {
       ),
       'item_attributes' => array(
         'id' => '',
-        'class' => 'col-md-3',
+        'class' => 'col-xs-6 col-sm-3 col-md-3',
         'style' => '',
       ),
     ),
@@ -112,7 +112,7 @@ function pnf_multimedia_menu_default_menu_links() {
       ),
       'item_attributes' => array(
         'id' => '',
-        'class' => 'col-md-3',
+        'class' => 'col-xs-6 col-sm-3 col-md-3',
         'style' => '',
       ),
     ),
