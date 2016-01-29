@@ -1072,17 +1072,6 @@ blockquote.image-field-caption:before{
         li{
             margin-bottom: 2px;
         }
-        a {
-           background: #333;
-           color: #fff;
-           display: block;
-           height: 35px;
-           font: 16px "Open Sans", sans-serif;
-           line-height: 35px;
-           position: relative;
-           text-align: center;
-           width: 35px;
-        }
         a.tool{
             height: 44px;
             width: 44px;
@@ -1118,6 +1107,9 @@ blockquote.image-field-caption:before{
         a.tool-map:after{
             content:'\f278';
         }
+        a.tool-doc:after{
+            content:'\f02d';
+        }
         a span {
             text-align: right;
             line-height: 35px;
@@ -1127,6 +1119,7 @@ blockquote.image-field-caption:before{
             /*width:500px;*/
             font-size: 14px;
             background-color: rgba(0, 0, 0, 0.7);
+            font-family: @font-family-sans-serif;
         }
         a:hover span {
             right: 100%;
