@@ -109,6 +109,9 @@ a {
     table,tr,td,th,thead,tbody{
         border-color: #a0a0a0;
     }
+    table{
+        border: #a0a0a0;
+    }
     table thead{
         background-color: #f4f4f4;
     }   
@@ -229,16 +232,6 @@ blockquote.image-field-caption:before{
     }
 
     .field-slideshow-controls a.prev{
-        background-image: url('../images/suiv.png');
-        text-indent: -9999px;
-        position: absolute;
-        height: 41px;
-        width: 41px;
-        top: 300px;
-        z-index: 100;
-        right: 30px;
-    }
-    .field-slideshow-controls a.next{
         background-image: url('../images/prec.png');
         text-indent: -9999px;
         position: absolute;
@@ -248,11 +241,21 @@ blockquote.image-field-caption:before{
         z-index: 100;
         left: 30px;
     }
+    .field-slideshow-controls a.next{
+        background-image: url('../images/suiv.png');
+        text-indent: -9999px;
+        position: absolute;
+        height: 41px;
+        width: 41px;
+        top: 300px;
+        z-index: 100;
+        right: 30px;
+    }
 }
 .paragraphs-item-image-text-50-50,
 .paragraphs-item-text-image-50-50,
 .paragraphs-item-images-group{
-    .field-item a{
+    .field-name-field-image .field-item a{
         display: block;
         margin: 0;
         padding: 0;
@@ -261,18 +264,18 @@ blockquote.image-field-caption:before{
         background-color: black;
     }
 
-    .field-item img {
+    .field-name-field-image .field-item img {
         display: block;
     }
 
-    .field-item:hover a img {
+    .field-name-field-image .field-item:hover a img {
         background-color: black;
     }
 
-    .field-item:hover img {
+    .field-name-field-image .field-item:hover img {
         opacity: 0.5;
     }
-    .field-item a:hover:after{
+    .field-name-field-image .field-item a:hover:after{
         content: '\f055';
         font-family: 'Fontawesome';
         font-size: 34px;
@@ -1026,9 +1029,12 @@ blockquote.image-field-caption:before{
     background: #fff;
     padding: 15px;
 }
-.field{
-    margin-bottom: 15px;
-    }
+.pnf-content-right .content-wrapper,
+.pnf-content-left .content-wrapper{
+    .field{
+        margin-bottom: 15px;
+        }
+}
 .field-name-field-downloadable-docs{
     background: #fff;
     padding: 15px;
@@ -1059,68 +1065,76 @@ blockquote.image-field-caption:before{
 }
 
 /*Menu tools*/
-#block-menu-menu-tools {
-
-    //display: inline-block;
-    position: fixed;
-    right: 0;
-    top: 350px;
-    margin-top: -100px;
-    z-index: 100;
-    color: @gray-base;
-    text-align: right;
-
-        .tool {
+#block-menu-menu-tools  {
+   right: 0;
+   position: fixed;
+   top: 350px;
+        li{
             margin-bottom: 2px;
-            cursor: pointer;
         }
-
-        li a {
-            display: inline-block;
-            right: -150px;
-            line-height: 47px;
-            height: 44px;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            padding: 0 10px 0 15px;
-            margin-right: 2px;
+        a {
+           background: #333;
+           color: #fff;
+           display: block;
+           height: 35px;
+           font: 16px "Open Sans", sans-serif;
+           line-height: 35px;
+           position: relative;
+           text-align: center;
+           width: 35px;
         }
-
-        .tool:after {
+        a.tool{
             height: 44px;
             width: 44px;
-            line-height: 40px;            
+            line-height: 22px;            
             display: inline-block;
             background-color: rgba(0, 0, 0, 0.7);
             color: #fff;
-            padding-right: 9px;
+            padding: 12px;
             font-family: 'Fontawesome';
             font-size: @font-size-h3;
         }
-
-        .tool-news:after{
-            content: '\f0e6';
+        a.tool-news:after{
+             content: '\f0e6';
         }
-        .tool-events:after{
+        a.tool-events:after{
             content: '\f073';
         }
-        .tool-newspaper:after{
+        a.tool-newspaper:after{
             content: '\f1ea';
         }
-        .tool-multimedia:after{
+        a.tool-multimedia:after{
             content: '\f03e';
         }
-        .tool-eshop:after{
+        a.tool-eshop:after{
             content: '\f07a';
         }
-        .tool-like:after{
+        a.tool-like:after{
             content: '\f08a';
         }
-        .tool-destination:after{
+        a.tool-destination:after{
             content: '\f277';
         }
-        .tool-map:after{
+        a.tool-map:after{
             content:'\f278';
+        }
+        a span {
+            text-align: right;
+            line-height: 35px;
+            /*right: -200px;*/
+            position: absolute;
+            text-align:center;
+            /*width:200px;*/
+            font-size: 12px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        a:hover span {
+            right: 100%;
+            margin-top: -12px;
+            height: 44px;
+            padding-top: 6px;
+            text-align: right;
+            padding-right: 10px;
         }
 }
 
@@ -1194,7 +1208,7 @@ h2.page-header{
     background: #fff;
     padding: 15px;
 }
-#block-bean-bloc-de-la-page-contact{
+.bean-map-contact{
     .field-name-field-contact-park-name,
     .field-name-field-contact-text{
         background: #fff;
