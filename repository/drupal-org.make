@@ -103,6 +103,9 @@ projects[boxes][version] = "1.2"
 projects[context_domain][subdir] = contrib
 projects[context_domain][version] = "1.0"
 
+projects[context_mobile_detect][subdir] = contrib
+projects[context_mobile_detect][version] = "1.3"
+
 projects[custom_breadcrumbs][subdir] = contrib
 projects[custom_breadcrumbs][version] = "2.0-beta1"
 projects[custom_breadcrumbs][patch][] = "https://www.drupal.org/files/issues/custom_breadcrumbs-strict-warning-1338126-6.patch"
