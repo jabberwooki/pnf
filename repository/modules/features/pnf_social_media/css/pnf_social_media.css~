@@ -1,0 +1,6 @@
+#block-text-resize-0,
+#block-printfriendly-printfriendly,
+#block-addtoany-addtoany-button {
+    float: right;
+    margin-left: 5px;
+}
