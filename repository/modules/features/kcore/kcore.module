@@ -245,3 +245,11 @@ function pnf_park_breadcrumb() {
   }
   return $new_breadcrumb;
 }
+
+/**
+ * Implements hook_css_alter().
+ */
+function kcore_css_alter(&$css) {
+	$path = drupal_get_path('module', 'text_resize');
+	unset($css[$path . '/text_resize.css']);
+}
