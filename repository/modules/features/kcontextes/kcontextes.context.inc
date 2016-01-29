@@ -62,6 +62,12 @@ function kcontextes_context_default_contexts() {
           'region' => 'navigation',
           'weight' => '-10',
         ),
+        'addtoany-addtoany_button' => array(
+          'module' => 'addtoany',
+          'delta' => 'addtoany_button',
+          'region' => 'pre_content_right',
+          'weight' => '-10',
+        ),
         'menu-menu-multimedia-footer' => array(
           'module' => 'menu',
           'delta' => 'menu-multimedia-footer',
@@ -155,7 +161,30 @@ function kcontextes_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array();
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'text_resize-0' => array(
+          'module' => 'text_resize',
+          'delta' => '0',
+          'region' => 'content_top_second',
+          'weight' => '-39',
+        ),
+        'printfriendly-printfriendly' => array(
+          'module' => 'printfriendly',
+          'delta' => 'printfriendly',
+          'region' => 'content_top_second',
+          'weight' => '-38',
+        ),
+        'addtoany-addtoany_button' => array(
+          'module' => 'addtoany',
+          'delta' => 'addtoany_button',
+          'region' => 'content_top_second',
+          'weight' => '-37',
+        ),
+      ),
+    ),
+  );
   $context->condition_mode = 0;
 
   // Translatables
