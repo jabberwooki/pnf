@@ -12,12 +12,3 @@ include_once 'pnf_social_media.features.inc';
 function pnf_social_media_init() {
   drupal_add_css(drupal_get_path('module','pnf_social_media') . '/css/pnf_social_media.css');
 }
-
-/**
- * Implements hook_block_view_alter().
- */
-function pnf_social_media_block_view_alter(&$data, $block)
-{
-  //dpm($data);
- // dpm($block);
-}
