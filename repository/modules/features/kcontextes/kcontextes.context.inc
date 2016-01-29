@@ -62,12 +62,6 @@ function kcontextes_context_default_contexts() {
           'region' => 'navigation',
           'weight' => '-10',
         ),
-        'addtoany-addtoany_button' => array(
-          'module' => 'addtoany',
-          'delta' => 'addtoany_button',
-          'region' => 'pre_content_right',
-          'weight' => '-10',
-        ),
         'menu-menu-multimedia-footer' => array(
           'module' => 'menu',
           'delta' => 'menu-multimedia-footer',
