@@ -939,6 +939,7 @@ function kcore_user_default_permissions() {
     'name' => 'show format selection for node',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'better_formats',
   );
@@ -946,7 +947,10 @@ function kcore_user_default_permissions() {
   // Exported permission: 'show format selection for paragraphs_item'.
   $permissions['show format selection for paragraphs_item'] = array(
     'name' => 'show format selection for paragraphs_item',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'better_formats',
   );
 
