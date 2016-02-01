@@ -69,6 +69,31 @@ function pnf_multimedia_custom_breadcrumbs_paths_features_default_settings() {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function pnf_multimedia_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: 200w.
+  $styles['200w'] = array(
+    'label' => 'Largeur 200',
+    'effects' => array(
+      13 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 200,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_scald_default_context_types().
  */
 function pnf_multimedia_scald_default_context_types() {
@@ -105,8 +130,8 @@ function pnf_multimedia_scald_default_context_types() {
         'settings' => array(
           'width' => '100%',
           'height' => '500px',
-          'fullscreen_link' => 1,
-          'thumb_style' => 'thumbnail',
+          'fullscreen_link' => 0,
+          'thumb_style' => '200w',
           'normal_style' => 'large',
           'big_style' => 'original',
           'theme' => 'folio',

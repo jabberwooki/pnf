@@ -67,6 +67,7 @@ features[field_instance][] = paragraphs_item-video-field_scald_video
 features[field_instance][] = paragraphs_item-video-field_title
 features[image][] = 270x180
 features[image][] = 360w
+features[image][] = 400w
 features[image][] = 415x280
 features[image][] = pb_275x180
 features[image][] = slide_750x500

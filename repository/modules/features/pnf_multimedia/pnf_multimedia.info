@@ -41,6 +41,7 @@ features[field_instance][] = scald_atom-gallery-field_media_category
 features[field_instance][] = scald_atom-image-field_media_category
 features[field_instance][] = scald_atom-video-field_atom_description
 features[field_instance][] = scald_atom-video-field_media_category
+features[image][] = 200w
 features[menu_custom][] = menu-multimedia
 features[menu_custom][] = menu-multimedia-footer
 features[menu_links][] = menu-multimedia-footer_documents:documents

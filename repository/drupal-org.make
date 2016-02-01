@@ -7,6 +7,8 @@ projects[admin_menu][version] = "3.0-rc5"
 
 projects[better_formats][subdir] = contrib
 projects[better_formats][version] = "1.0-beta1"
+projects[better_formats][patch][] = "https://www.drupal.org/files/issues/better_format-n1717470-11.patch"
+
 
 projects[better_exposed_filters][subdir] = contrib
 projects[better_exposed_filters][version] = "3.2"
