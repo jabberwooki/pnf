@@ -107,4 +107,5 @@ features[variable][] = menu_parent_advanced_page
 features[variable][] = node_options_advanced_page
 features[variable][] = node_preview_advanced_page
 features[variable][] = node_submitted_advanced_page
+features[variable][] = pathauto_node_advanced_page_pattern
 project path = profiles/pnf/modules/features
