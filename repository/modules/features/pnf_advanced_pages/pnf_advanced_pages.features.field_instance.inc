@@ -592,25 +592,25 @@ function pnf_advanced_pages_field_default_field_instances() {
         'allowed_formats' => array(
           'filtered_html' => 0,
           'full_html' => 'full_html',
-          'plain_text' => 0,
+          'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 1,
-        'default_order_toggle' => 0,
+        'default_order_toggle' => 1,
         'default_order_wrapper' => array(
           'formats' => array(
             'filtered_html' => array(
-              'weight' => -9,
+              'weight' => -49,
             ),
             'full_html' => array(
-              'weight' => -10,
+              'weight' => -48,
             ),
             'plain_text' => array(
-              'weight' => 10,
+              'weight' => -50,
             ),
           ),
         ),
       ),
-      'context' => 'debug',
+      'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
       'linkit' => array(
