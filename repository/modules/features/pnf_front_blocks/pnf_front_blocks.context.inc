@@ -173,17 +173,23 @@ function pnf_front_blocks_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-news-block_news_news_home' => array(
-          'module' => 'views',
-          'delta' => 'news-block_news_news_home',
+        'boxes-pnf_intro_home' => array(
+          'module' => 'boxes',
+          'delta' => 'pnf_intro_home',
           'region' => 'pre_content_left',
-          'weight' => '0',
+          'weight' => '-10',
         ),
         'views-news-block_news_flashnews_home' => array(
           'module' => 'views',
           'delta' => 'news-block_news_flashnews_home',
           'region' => 'pre_content_left',
-          'weight' => '1',
+          'weight' => '-8',
+        ),
+        'views-news-block_news_news_home2cols' => array(
+          'module' => 'views',
+          'delta' => 'news-block_news_news_home2cols',
+          'region' => 'pre_content_left',
+          'weight' => '-9',
         ),
         'views-events-block_events_home' => array(
           'module' => 'views',
