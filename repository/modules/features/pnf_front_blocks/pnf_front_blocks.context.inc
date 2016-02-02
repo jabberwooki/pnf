@@ -161,7 +161,7 @@ function pnf_front_blocks_context_default_contexts() {
   $context->conditions = array(
     'domain' => array(
       'values' => array(
-        '*.parcnationaux.*' => '*.parcnationaux.*',
+        '*.parcsnationaux.*' => '*.parcsnationaux.*',
       ),
     ),
     'path' => array(
