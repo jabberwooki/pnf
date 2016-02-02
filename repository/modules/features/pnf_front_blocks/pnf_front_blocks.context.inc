@@ -179,17 +179,17 @@ function pnf_front_blocks_context_default_contexts() {
           'region' => 'pre_content_left',
           'weight' => '-10',
         ),
-        'views-news-block_news_flashnews_home' => array(
-          'module' => 'views',
-          'delta' => 'news-block_news_flashnews_home',
-          'region' => 'pre_content_left',
-          'weight' => '-8',
-        ),
         'views-news-block_news_news_home2cols' => array(
           'module' => 'views',
           'delta' => 'news-block_news_news_home2cols',
           'region' => 'pre_content_left',
           'weight' => '-9',
+        ),
+        'views-news-block_news_flashnews_home' => array(
+          'module' => 'views',
+          'delta' => 'news-block_news_flashnews_home',
+          'region' => 'pre_content_left',
+          'weight' => '-8',
         ),
         'views-events-block_events_home' => array(
           'module' => 'views',
@@ -202,6 +202,12 @@ function pnf_front_blocks_context_default_contexts() {
           'delta' => 'news-block_news_files_home',
           'region' => 'content',
           'weight' => '-10',
+        ),
+        'views-promotions-3_promos' => array(
+          'module' => 'views',
+          'delta' => 'promotions-3_promos',
+          'region' => 'content',
+          'weight' => '-9',
         ),
       ),
     ),
