@@ -85,8 +85,8 @@ function kcore_update_7011() {
 
 
 /**
- * Activate printfriendly, context_domain and context_mobile_detect modules.
+ * Activate printfriendly, context_domain, context_mobile_detect and linked_field modules.
  */
 function kcore_update_7012() {
-  module_enable(array('printfriendly','context_domain','context_mobile_detect'));
+  module_enable(array('printfriendly','context_domain','context_mobile_detect','linked_field'));
 }

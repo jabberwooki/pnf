@@ -179,6 +179,9 @@ projects[less][version] = "4.0"
 projects[lang_dropdown][subdir] = contrib
 projects[lang_dropdown][version] = "2.5"
 
+projects[linked_field][subdir] = contrib
+projects[linked_field][version] = "1.10"
+
 projects[menu_admin_per_menu][subdir] = contrib
 projects[menu_admin_per_menu][version] = "1.1"
 
