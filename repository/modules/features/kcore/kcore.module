@@ -21,121 +21,99 @@ function empty_front_page_callback() {
 
 function kcore_block_view_alter(&$data, $block) {
   if ($block->delta == 'menu-menu-park' || $block->delta == 'menu-national-parks' || $block->delta == 'pnf_park_menu_clone') {
-	// Changes menu block name, based on http host.
-	$park_names = array(
-	  'calanques-parcnational' => 'Le Parc national des Calanques',
-	  'cevennes-parcnational' => 'Le Parc national des Cévennes',
-	  'ecrins-parcnational' => 'Le Parc national des Ecrins',
-	  'guadeloupe-parcnational' => 'Le Parc national de la Guadeloupe',
-	  'mercantour' => 'Le Parc national du Mercantour',
-	  'parc-amazonien-guyane' => 'Le Parc amazonien de Guyane',
-	  'parc-pyrenees' => 'Le Parc national des Pyrénées',
-	  'parcsnationaux' => 'Parcs nationaux de France',
-	  'portcrosparcnational' => 'Le Parc national de Port-Cros',
-	  'reunion-parcnational' => 'Le Parc national de La Réunion',
-	  'vanoise-parcnational' => 'Le Parc national de la Vanoise',
-	);
-
-	$host_parts = explode('.', $_SERVER['HTTP_HOST']);
-
-	// Config for staging sites.
-	// AR >> http://pnXX.pnfdev.xyz/
-	// Korora >> http://pnXX.korora.fr/
-	// OVEA >> http://preprod-xxxx.parcnational.fr/
-	if ($host_parts[2] == 'xyz' || $host_parts[1] == 'korora') {
-	  $park_names = array(
-		'pnca' => 'Le Parc national des Calanques',
-		'pnce' => 'Le Parc national des Cévennes',
-		'pnec' => 'Le Parc national des Ecrins',
-		'pngu' => 'Le Parc national de la Guadeloupe',
-		'pnme' => 'Le Parc national du Mercantour',
-		'pnag' => 'Le Parc amazonien de Guyane',
-		'pnpy' => 'Le Parc national des Pyrénées',
-		'pnf' => 'Parcs nationaux de France',
-		'pnpc' => 'Le Parc national de Port-Cros',
-		'pnre' => 'Le Parc national de La Réunion',
-		'pnva' => 'Le Parc national de la Vanoise',
+		// Changes menu block name, based on http host.
+		$park_names = array(
+			'calanques-parcnational' => 'Le Parc national des Calanques',
+			'cevennes-parcnational' => 'Le Parc national des Cévennes',
+			'ecrins-parcnational' => 'Le Parc national des Ecrins',
+			'guadeloupe-parcnational' => 'Le Parc national de la Guadeloupe',
+			'mercantour' => 'Le Parc national du Mercantour',
+			'parc-amazonien-guyane' => 'Le Parc amazonien de Guyane',
+			'parc-pyrenees' => 'Le Parc national des Pyrénées',
+			'parcsnationaux' => 'Parcs nationaux de France',
+			'portcrosparcnational' => 'Le Parc national de Port-Cros',
+			'reunion-parcnational' => 'Le Parc national de La Réunion',
+			'vanoise-parcnational' => 'Le Parc national de la Vanoise',
 		);
 
-	  $current_park_name = $park_names[$host_parts[0]];
+		$host_parts = explode('.', $_SERVER['HTTP_HOST']);
 
-	}
-	elseif (substr($_SERVER['HTTP_HOST'],0,8) == 'preprod-') {
-	  $park_names = array(
-		'preprod-pncal' => 'Le Parc national des Calanques',
-		'preprod-pnc' => 'Le Parc national des Cévennes',
-		'preprod-pne' => 'Le Parc national des Ecrins',
-		'preprod-png' => 'Le Parc national de la Guadeloupe',
-		'preprod-pnm' => 'Le Parc national du Mercantour',
-		'preprod-pag' => 'Le Parc amazonien de Guyane',
-		'preprod-pnp' => 'Le Parc national des Pyrénées',
-		'preprod-pnf' => 'Parcs nationaux de France',
-		'preprod-pnpc' => 'Le Parc national de Port-Cros',
-		'preprod-pnrun' => 'Le Parc national de La Réunion',
-		'preprod-pnv' => 'Le Parc national de la Vanoise',
-	  );
+		// Config for staging sites.
+		// AR >> http://pnXX.pnfdev.xyz/
+		// Korora >> http://pnXX.korora.fr/
+		// OVEA >> http://preprod-xxxx.parcnational.fr/
+		if ($host_parts[2] == 'xyz' || $host_parts[1] == 'korora') {
+			$park_names = array(
+			'pnca' => 'Le Parc national des Calanques',
+			'pnce' => 'Le Parc national des Cévennes',
+			'pnec' => 'Le Parc national des Ecrins',
+			'pngu' => 'Le Parc national de la Guadeloupe',
+			'pnme' => 'Le Parc national du Mercantour',
+			'pnag' => 'Le Parc amazonien de Guyane',
+			'pnpy' => 'Le Parc national des Pyrénées',
+			'pnf' => 'Parcs nationaux de France',
+			'pnpc' => 'Le Parc national de Port-Cros',
+			'pnre' => 'Le Parc national de La Réunion',
+			'pnva' => 'Le Parc national de la Vanoise',
+			);
 
-	  $current_park_name = $park_names[$host_parts[0]];
-	}
-	// Config for production sites
-	// OVEA >> http://prod-xxxx.parcnational.fr/
-	elseif (substr($_SERVER['HTTP_HOST'],0,5) == 'prod-') {
-	  $park_names = array(
-		'prod-pncal' => 'Le Parc national des Calanques',
-		'prod-pnc' => 'Le Parc national des Cévennes',
-		'prod-pne' => 'Le Parc national des Ecrins',
-		'prod-png' => 'Le Parc national de la Guadeloupe',
-		'prod-pnm' => 'Le Parc national du Mercantour',
-		'prod-pag' => 'Le Parc amazonien de Guyane',
-		'prod-pnp' => 'Le Parc national des Pyrénées',
-		'prod-pnf' => 'Parcs nationaux de France',
-		'prod-pnpc' => 'Le Parc national de Port-Cros',
-		'prod-pnrun' => 'Le Parc national de La Réunion',
-		'prod-pnv' => 'Le Parc national de la Vanoise',
-	  );
+			$current_park_name = $park_names[$host_parts[0]];
+		}
+		elseif (substr($_SERVER['HTTP_HOST'],0,8) == 'preprod-') {
+			$park_names = array(
+			'preprod-pncal' => 'Le Parc national des Calanques',
+			'preprod-pnc' => 'Le Parc national des Cévennes',
+			'preprod-pne' => 'Le Parc national des Ecrins',
+			'preprod-png' => 'Le Parc national de la Guadeloupe',
+			'preprod-pnm' => 'Le Parc national du Mercantour',
+			'preprod-pag' => 'Le Parc amazonien de Guyane',
+			'preprod-pnp' => 'Le Parc national des Pyrénées',
+			'preprod-pnf' => 'Parcs nationaux de France',
+			'preprod-pnpc' => 'Le Parc national de Port-Cros',
+			'preprod-pnrun' => 'Le Parc national de La Réunion',
+			'preprod-pnv' => 'Le Parc national de la Vanoise',
+			);
 
-	  $current_park_name = $park_names[$host_parts[0]];
-	}
-	// Config for dev sites : http://www.<parc-name>.dev
-	// And real live sites : http://www.<parc-name>.fr
-	else {
-	  $current_park_name = $park_names[$host_parts[1]];
-	}
+			$current_park_name = $park_names[$host_parts[0]];
+		}
+		// Config for production sites
+		// OVEA >> http://prod-xxxx.parcnational.fr/
+		elseif (substr($_SERVER['HTTP_HOST'],0,5) == 'prod-') {
+			$park_names = array(
+			'prod-pncal' => 'Le Parc national des Calanques',
+			'prod-pnc' => 'Le Parc national des Cévennes',
+			'prod-pne' => 'Le Parc national des Ecrins',
+			'prod-png' => 'Le Parc national de la Guadeloupe',
+			'prod-pnm' => 'Le Parc national du Mercantour',
+			'prod-pag' => 'Le Parc amazonien de Guyane',
+			'prod-pnp' => 'Le Parc national des Pyrénées',
+			'prod-pnf' => 'Parcs nationaux de France',
+			'prod-pnpc' => 'Le Parc national de Port-Cros',
+			'prod-pnrun' => 'Le Parc national de La Réunion',
+			'prod-pnv' => 'Le Parc national de la Vanoise',
+			);
 
-	switch($block->delta) {
-	  case 'menu-menu-park':
-//		$select = array();
-//		foreach (element_children($data['content']) as $key) {
-//		  $select[$data['content'][$key]['#href']] = $data['content'][$key]['#title'];
-//		}
-//		$options = array('choose' => $current_park_name);
-//		ctools_include('jump-menu');
-//		$form = ctools_jump_menu(array(), $form_state, $select, $options);
-//		$data['content'] = $form;
-		$data['subject'] = '';
-		break;
+			$current_park_name = $park_names[$host_parts[0]];
+		}
+		// Config for dev sites : http://www.<parc-name>.dev
+		// And real live sites : http://www.<parc-name>.fr
+		else {
+			$current_park_name = $park_names[$host_parts[1]];
+		}
 
-	  case 'menu-national-parks':
-//		$select = array();
-//		foreach (element_children($data['content']) as $key) {
-//		  $url_parts = explode('.', $data['content'][$key]['#href']);
-//		  if ($url_parts[1] != $host_parts[1]) {
-//			$select[$data['content'][$key]['#href']] = $data['content'][$key]['#title'];
-//		  }
-//		}
-//		$options = array('choose' => $data['subject']);
-//		ctools_include('jump-menu');
-//		$form = ctools_jump_menu(array(), $form_state, $select, $options);
-//		$data['content'] = $form;
-		$data['subject'] = '';
-		break;
+		switch($block->delta) {
+			case 'menu-menu-park':
+			$data['subject'] = '';
+			break;
 
-	  case 'pnf_park_menu_clone':
-		$data['subject'] = $current_park_name;
-		break;
-	}
+			case 'menu-national-parks':
+			$data['subject'] = '';
+			break;
 
-
+			case 'pnf_park_menu_clone':
+			$data['subject'] = $current_park_name;
+			break;
+		}
   }
 	elseif ($block->delta == 'printfriendly') {
 		$search = '/sites/all/modules/contrib/printfriendly/images/pf_button_sq_gry_m.png';
