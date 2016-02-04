@@ -182,6 +182,9 @@ projects[lang_dropdown][version] = "2.5"
 projects[linked_field][subdir] = contrib
 projects[linked_field][version] = "1.10"
 
+projects[mailsystem][subdir] = contrib
+projects[mailsystem][version] = "2.34"
+
 projects[menu_admin_per_menu][subdir] = contrib
 projects[menu_admin_per_menu][version] = "1.1"
 
@@ -199,6 +202,9 @@ projects[menu_fields][version] = "1.x-dev"
 
 ;projects[migrate_extras][subdir] = contrib
 ;projects[migrate_extras][version] = ""
+
+projects[mimemail][subdir] = contrib
+projects[mimemail][version] = "1.0-beta4"
 
 projects[paragraphs][subdir] = contrib
 projects[paragraphs][version] = "1.0-rc4"
