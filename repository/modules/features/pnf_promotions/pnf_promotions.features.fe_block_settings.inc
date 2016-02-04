@@ -12,11 +12,11 @@ function pnf_promotions_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
-  $export['views-promotions-3_promos'] = array(
+  $export['views-promotions-promos_front'] = array(
     'cache' => -1,
     'css_class' => 'col-md-9',
     'custom' => 0,
-    'delta' => 'promotions-3_promos',
+    'delta' => 'promotions-promos_front',
     'i18n_block_language' => array(),
     'i18n_mode' => 0,
     'module' => 'views',

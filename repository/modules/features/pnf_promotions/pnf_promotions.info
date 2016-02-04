@@ -11,6 +11,7 @@ dependencies[] = views
 dependencies[] = views_bootstrap
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
+features[fe_block_settings][] = views-promotions-promos_front
 features[features_api][] = api:2
 features[field_base][] = field_promo_image
 features[field_base][] = field_promo_url
