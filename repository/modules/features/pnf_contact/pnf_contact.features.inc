@@ -52,7 +52,7 @@ function pnf_contact_default_entityform_type() {
       "submission_page_title" : "",
       "submission_text" : {
         "value" : "\\u003Cp\\u003EVotre demande a bien \\u00e9t\\u00e9 enregistr\\u00e9e.\\u003Cbr \\/\\u003E\\r\\nNous nous effor\\u00e7ons d\\u0027y r\\u00e9pondre dans les plus brefs d\\u00e9lais.\\u003C\\/p\\u003E\\r\\n",
-        "format" : "plain_text"
+        "format" : "full_html"
       },
       "submission_show_submitted" : 0,
       "submissions_view" : "default",
