@@ -1,0 +1,156 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  pnf_contact.context.inc: n/a
+#  pnf_contact.info: n/a
+#  pnf_contact.features.field_instance.inc: n/a
+#  pnf_contact.views_default.inc: n/a
+#  pnf_contact.module: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-02-04 15:51+0100\n"
+"PO-Revision-Date: 2016-02-04 15:51+0100\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+#: pnf_contact.context.inc:42;74 pnf_contact.info:0
+msgid "Contact"
+msgstr "Contact"
+
+#: pnf_contact.features.field_instance.inc:1133
+msgid "Carte"
+msgstr ""
+
+#: pnf_contact.features.field_instance.inc:1134
+msgid "Email"
+msgstr "Courriel"
+
+#: pnf_contact.features.field_instance.inc:1135
+msgid "Image"
+msgstr "Image"
+
+#: pnf_contact.features.field_instance.inc:1136
+msgid "Intitulé du texte"
+msgstr ""
+
+#: pnf_contact.features.field_instance.inc:1137
+msgid "Lien page contact"
+msgstr ""
+
+#: pnf_contact.features.field_instance.inc:1138
+msgid "Lien vers carte du territoire"
+msgstr ""
+
+#: pnf_contact.features.field_instance.inc:1139
+msgid "Message"
+msgstr "Message"
+
+#: pnf_contact.features.field_instance.inc:1140
+msgid "Nom"
+msgstr ""
+
+#: pnf_contact.features.field_instance.inc:1141
+msgid "Nom du Parc"
+msgstr ""
+
+#: pnf_contact.features.field_instance.inc:1142
+msgid "Objet de la demande"
+msgstr ""
+
+#: pnf_contact.features.field_instance.inc:1143
+msgid "Prénom"
+msgstr ""
+
+#: pnf_contact.features.field_instance.inc:1144
+msgid "Texte"
+msgstr ""
+
+#: pnf_contact.views_default.inc:51
+msgid "Master"
+msgstr "Maître"
+
+#: pnf_contact.views_default.inc:52
+msgid "Contactez-nous"
+msgstr ""
+
+#: pnf_contact.views_default.inc:53
+msgid "more"
+msgstr "plus"
+
+#: pnf_contact.views_default.inc:54
+msgid "Apply"
+msgstr "Appliquer"
+
+#: pnf_contact.views_default.inc:55
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#: pnf_contact.views_default.inc:56
+msgid "Sort by"
+msgstr "Trier par"
+
+#: pnf_contact.views_default.inc:57
+msgid "Asc"
+msgstr "Asc"
+
+#: pnf_contact.views_default.inc:58
+msgid "Desc"
+msgstr "Desc"
+
+#: pnf_contact.views_default.inc:59
+msgid "Internal, numeric block ID"
+msgstr ""
+
+#: pnf_contact.views_default.inc:60
+msgid "."
+msgstr "."
+
+#: pnf_contact.views_default.inc:61
+msgid ","
+msgstr ","
+
+#: pnf_contact.views_default.inc:62
+msgid "Bloc contact accueil"
+msgstr ""
+
+#: pnf_contact.module:15
+msgid "HTML Wrapper"
+msgstr "Enveloppe HTML"
+
+#: pnf_contact.module:17
+msgid "Add a wrapping html tag."
+msgstr "Ajoute un balise html enveloppante."
+
+#: pnf_contact.module:48
+msgid "Enter class names, separated by spaces"
+msgstr ""
+
+#: pnf_contact.module:65
+msgid "HTML wrapper: "
+msgstr "Enveloppe HTML : "
+
+#: pnf_contact.module:67
+msgid "HTML class: "
+msgstr "Class HTML : "
+
+#: pnf_contact.module:148
+msgid "Contact request sent successfully to %email."
+msgstr "Demande de contact envoyée avec succès à %email."
+
+#: pnf_contact.module:151
+msgid "Contact request could not be sent to %email."
+msgstr "La demande de contact n'a pas pu être envoyée à %email."
+
+#: pnf_contact.info:0
+msgid "App"
+msgstr ""
+

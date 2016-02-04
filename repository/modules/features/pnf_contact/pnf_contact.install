@@ -1,0 +1,16 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: ubuntu
+ * Date: 04/02/16
+ * Time: 15:38
+ */
+
+/**
+ * Import custom French translations for pnf_contact feature.
+ */
+function pnf_contact_update_7001() {
+  $po_file = DRUPAL_ROOT . '/profiles/pnf/modules/features/pnf_contact/translations/pnf_contact.fr.po';
+  $file = (object) array('filename' => basename($po_file), 'uri' => $po_file);
+  _locale_import_po($file, 'fr', LOCALE_IMPORT_OVERWRITE, 'default');
+}
