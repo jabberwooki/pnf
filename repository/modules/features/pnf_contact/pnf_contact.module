@@ -101,8 +101,6 @@ function pnf_contact_field_formatter_view($entity_type, $entity, $field, $instan
  */
 function pnf_contact_entity_insert($entity, $type) {
   if ($type == 'entityform' && $entity->type == 'contact') {
-    dpm($entity);
-    dpm($type);
     pnf_send_contact_notification($entity);
   }
 }
