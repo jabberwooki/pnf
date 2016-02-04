@@ -22,6 +22,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'paragraphs',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
           'view_mode' => 'full',
         ),
         'type' => 'paragraphs_view',
@@ -32,6 +43,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'paragraphs',
         'settings' => array(
           'field_formatter_class' => 'col-lg-8 col-lg-offset-2',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
           'view_mode' => 'full',
         ),
         'type' => 'paragraphs_view',
@@ -101,6 +123,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'settings' => array(
           'field_formatter_class' => '',
           'link' => 0,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
           'override' => 0,
         ),
         'type' => 'title',
@@ -157,6 +190,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 0,
@@ -166,6 +210,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 0,
@@ -240,6 +295,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 1,
@@ -249,6 +315,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 1,
@@ -322,6 +399,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'file_default',
         'weight' => 0,
@@ -331,6 +419,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'download_file',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'direct_download_accessible_icon',
         'weight' => 0,
@@ -402,6 +501,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 1,
@@ -481,6 +591,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 0,
@@ -490,6 +611,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 0,
@@ -563,6 +695,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 1,
@@ -572,6 +715,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 1,
@@ -645,6 +799,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 0,
@@ -656,6 +821,17 @@ function pnf_advanced_pages_field_default_field_instances() {
           'field_formatter_class' => '',
           'html_class' => '',
           'html_tag' => 'h3',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'pnf_text',
         'weight' => 0,
@@ -730,6 +906,17 @@ function pnf_advanced_pages_field_default_field_instances() {
           'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'image',
         'weight' => 0,
@@ -747,6 +934,17 @@ function pnf_advanced_pages_field_default_field_instances() {
           'colorbox_node_style' => '400w',
           'colorbox_node_style_first' => '',
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'colorbox',
         'weight' => 0,
@@ -827,6 +1025,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 1,
@@ -836,6 +1045,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 1,
@@ -910,6 +1130,17 @@ function pnf_advanced_pages_field_default_field_instances() {
           'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'image',
         'weight' => 0,
@@ -927,6 +1158,17 @@ function pnf_advanced_pages_field_default_field_instances() {
           'colorbox_node_style' => '270x180',
           'colorbox_node_style_first' => '',
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'colorbox',
         'weight' => 0,
@@ -1008,6 +1250,17 @@ function pnf_advanced_pages_field_default_field_instances() {
           'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'image',
         'weight' => 0,
@@ -1017,6 +1270,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'field_slideshow',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
           'slideshow_caption' => 'alt',
           'slideshow_caption_link' => '',
           'slideshow_carousel_circular' => 0,
@@ -1126,6 +1390,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 0,
@@ -1135,6 +1410,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 0,
@@ -1209,6 +1495,17 @@ function pnf_advanced_pages_field_default_field_instances() {
           'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'image',
         'weight' => 1,
@@ -1226,6 +1523,17 @@ function pnf_advanced_pages_field_default_field_instances() {
           'colorbox_node_style' => '400w',
           'colorbox_node_style_first' => '',
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'colorbox',
         'weight' => 1,
@@ -1305,6 +1613,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 0,
@@ -1314,6 +1633,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 0,
@@ -1388,6 +1718,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'settings' => array(
           'field_formatter_class' => '',
           'link' => 0,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
           'override' => 0,
         ),
         'type' => 'full',
@@ -1399,6 +1740,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'settings' => array(
           'field_formatter_class' => '',
           'link' => 0,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
           'override' => 0,
         ),
         'type' => 'full',
@@ -1449,6 +1801,17 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 1,
@@ -1460,6 +1823,17 @@ function pnf_advanced_pages_field_default_field_instances() {
           'field_formatter_class' => '',
           'html_class' => '',
           'html_tag' => 'h3',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'pnf_text',
         'weight' => 0,
