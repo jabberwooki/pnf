@@ -10,5 +10,5 @@
  * Activate scald_youtube and fitvids contrib modules.
  */
 function pnf_multimedia_update_7002() {
-  module_enable('scald_youtube','fitvids');
+  module_enable(array('scald_youtube','fitvids'));
 }
