@@ -125,6 +125,18 @@ function pnf_news_ds_field_settings_info() {
         'link' => '0',
         'wrapper' => 'h3',
         'class' => '',
+        'field_formatter_class' => '',
+        'linked_field' => array(
+          'linked' => 1,
+          'destination' => 'breves',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
       ),
     ),
   );
