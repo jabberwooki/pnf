@@ -45,16 +45,6 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['relationships']['field_news_type_tid']['field'] = 'field_news_type_tid';
   $handler->display->display_options['relationships']['field_news_type_tid']['label'] = 'Type d\'actu';
   $handler->display->display_options['relationships']['field_news_type_tid']['required'] = TRUE;
-  /* Relationship: Content: Public (field_public) */
-  $handler->display->display_options['relationships']['field_public_tid']['id'] = 'field_public_tid';
-  $handler->display->display_options['relationships']['field_public_tid']['table'] = 'field_data_field_public';
-  $handler->display->display_options['relationships']['field_public_tid']['field'] = 'field_public_tid';
-  $handler->display->display_options['relationships']['field_public_tid']['label'] = 'Public';
-  /* Relationship: Content: Secteurs (field_sectors) */
-  $handler->display->display_options['relationships']['field_sectors_tid']['id'] = 'field_sectors_tid';
-  $handler->display->display_options['relationships']['field_sectors_tid']['table'] = 'field_data_field_sectors';
-  $handler->display->display_options['relationships']['field_sectors_tid']['field'] = 'field_sectors_tid';
-  $handler->display->display_options['relationships']['field_sectors_tid']['label'] = 'Secteur';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -62,6 +52,11 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Taxonomy term: Term ID */
+  $handler->display->display_options['fields']['tid']['id'] = 'tid';
+  $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['tid']['field'] = 'tid';
+  $handler->display->display_options['fields']['tid']['relationship'] = 'term_node_tid';
   /* Sort criterion: Content: Date de publication affichée (field_displayed_pub_date) */
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['id'] = 'field_displayed_pub_date_value';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['table'] = 'field_data_field_displayed_pub_date';
@@ -774,6 +769,79 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
+
+  /* Display: Titres d'actu (ER) */
+  $handler = $view->new_display('entityreference', 'Titres d\'actu (ER)', 'news_titles');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'entityreference_style';
+  $handler->display->display_options['style_options']['search_fields'] = array(
+    'title' => 'title',
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entityreference_fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['label'] = 'terme';
+  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
+    'scald_authors' => 0,
+    'scald_tags' => 0,
+    'news_categories' => 0,
+    'event_categories' => 0,
+    'document_categories' => 0,
+    'contract_categories' => 0,
+    'media_categories' => 0,
+    'raa_categories' => 0,
+    'news_tags' => 0,
+    'public' => 0,
+    'sectors' => 0,
+    'news_types' => 0,
+    'job_types' => 0,
+    'procurement_types' => 0,
+  );
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news' => 'news',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
+  $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
+  $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
+  $handler->display->display_options['filters']['uuid']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['filters']['uuid']['value'] = 'dbf7ebef-3b25-4f1c-a8db-5c031de33c79';
   $translatables['news'] = array(
     t('Master'),
     t('Actualités'),
@@ -791,9 +859,12 @@ function pnf_news_views_default_views() {
     t('next ›'),
     t('last »'),
     t('Type d\'actu'),
-    t('Public'),
-    t('Secteur'),
+    t('Term ID'),
+    t('.'),
+    t(','),
     t('Catégorie'),
+    t('Secteur'),
+    t('Public'),
     t('Page Actualités'),
     t('more'),
     t('term'),
@@ -820,6 +891,8 @@ function pnf_news_views_default_views() {
     t('Lien Tous les dossiers'),
     t('<a href="/dossiers">tous les dossiers</a>'),
     t('Bloc accueil actus 2 cols'),
+    t('Titres d\'actu (ER)'),
+    t('terme'),
   );
   $export['news'] = $view;
 
