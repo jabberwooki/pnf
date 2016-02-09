@@ -59,19 +59,29 @@ function pnf_advanced_pages_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '4',
+          'weight' => '6',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '5',
         ),
         'redirect' => array(
-          'weight' => '2',
+          'weight' => '4',
+        ),
+        'language' => array(
+          'weight' => '1',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'language' => array(
+          'full' => array(
+            'weight' => '8',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__advanced_page'] = $strongarm;

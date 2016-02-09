@@ -151,6 +151,40 @@ function pnf_advanced_pages_field_default_field_bases() {
     'type' => 'paragraphs',
   );
 
+  // Exported field_base: 'field_page_linked_content'.
+  $field_bases['field_page_linked_content'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_page_linked_content',
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'handler' => 'views',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'view' => array(
+          'args' => array(),
+          'display_name' => 'news_titles',
+          'view_name' => 'news',
+        ),
+      ),
+      'target_type' => 'node',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
+  );
+
   // Exported field_base: 'field_right_col_text'.
   $field_bases['field_right_col_text'] = array(
     'active' => 1,
