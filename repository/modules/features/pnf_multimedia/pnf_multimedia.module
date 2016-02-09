@@ -14,3 +14,50 @@ function pnf_multimedia_form_scald_atom_add_form_source_alter(&$form, &$form_sta
     unset($form['source']['#options']['scald_video']);
   }
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function pnf_multimedia_form_alter(&$form, &$form_state, $form_id) {
+  if ($form['#id'] == 'views-exposed-form-multimedia-page-videos') {
+    $options = $form['field_media_category_tid']['#options'];
+    $purged_options = pnf_multimedia_purge_category_filter($options, 'video');
+    $form['field_media_category_tid']['#options'] = $purged_options;
+  }
+
+  if ($form['#id'] == 'views-exposed-form-multimedia-page-photos') {
+    $options = $form['field_media_category_tid']['#options'];
+    $purged_options = pnf_multimedia_purge_category_filter($options, 'gallery');
+    $form['field_media_category_tid']['#options'] = $purged_options;
+  }
+
+  if ($form['#id'] == 'views-exposed-form-multimedia-page-sounds') {
+    $options = $form['field_media_category_tid']['#options'];
+    $purged_options = pnf_multimedia_purge_category_filter($options, 'audio');
+    $form['field_media_category_tid']['#options'] = $purged_options;
+  }
+}
+
+/**
+ * Helper functions
+ */
+
+function pnf_multimedia_purge_category_filter($options, $atom_type) {
+  // Seek all tids linked to atoms of $atom_type type.
+  $query = db_select('field_data_field_media_category', 'fmc');
+  $query->addField('fmc','field_media_category_tid');
+  $query->condition('fmc.bundle', $atom_type);
+  $query->distinct();
+  $used_tids = $query->execute()->fetchCol();
+
+  // Remove terms not linked to video atoms from $options array.
+  foreach ($options as $key=>$value) {
+    if (is_integer($key)) {
+      if (!in_array($key, $used_tids)) {
+        unset($options[$key]);
+      }
+    }
+  }
+
+  return $options;
+}
