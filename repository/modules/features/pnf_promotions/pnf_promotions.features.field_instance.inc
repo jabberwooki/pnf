@@ -23,6 +23,17 @@ function pnf_promotions_field_default_field_instances() {
           'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'image',
         'weight' => 3,
@@ -102,6 +113,17 @@ function pnf_promotions_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'link_default',
         'weight' => 2,

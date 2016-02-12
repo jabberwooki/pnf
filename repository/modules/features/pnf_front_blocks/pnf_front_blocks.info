@@ -5,6 +5,7 @@ version = 7.x-1.0
 dependencies[] = boxes
 dependencies[] = context
 dependencies[] = ctools
+dependencies[] = fe_block
 dependencies[] = views
 features[box][] = pnf_intro_home
 features[context][] = pnag_front

@@ -59,19 +59,29 @@ function pnf_advanced_pages_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '4',
+          'weight' => '6',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '5',
         ),
         'redirect' => array(
-          'weight' => '2',
+          'weight' => '4',
+        ),
+        'language' => array(
+          'weight' => '1',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'language' => array(
+          'full' => array(
+            'weight' => '8',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__advanced_page'] = $strongarm;
@@ -354,7 +364,7 @@ function pnf_advanced_pages_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_advanced_page';
-  $strongarm->value = '0';
+  $strongarm->value = '1';
   $export['language_content_type_advanced_page'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -404,9 +414,30 @@ function pnf_advanced_pages_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_advanced_page_en_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_advanced_page_en_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_advanced_page_fr_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_advanced_page_fr_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_advanced_page_pattern';
-  $strongarm->value = '[node:menu-link:parents:join-path]';
+  $strongarm->value = '[node:menu-link:parents:join-path]/[node:title]';
   $export['pathauto_node_advanced_page_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_advanced_page_und_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_advanced_page_und_pattern'] = $strongarm;
 
   return $export;
 }

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * pnf_promotions.features.fe_block_settings.inc
+ * pnf_front_blocks.features.fe_block_settings.inc
  */
 
 /**
  * Implements hook_default_fe_block_settings().
  */
-function pnf_promotions_default_fe_block_settings() {
+function pnf_front_blocks_default_fe_block_settings() {
   $export = array();
 
   $export['version'] = '2.0';

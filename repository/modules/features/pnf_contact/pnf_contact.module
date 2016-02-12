@@ -96,3 +96,71 @@ function pnf_contact_field_formatter_view($entity_type, $entity, $field, $instan
   return $element;
 }
 
+/**
+ * Implements hook_entity_insert().
+ */
+function pnf_contact_entity_insert($entity, $type) {
+  if ($type == 'entityform' && $entity->type == 'contact') {
+    pnf_send_contact_notification($entity);
+  }
+}
+
+/**
+ * Helper functions.
+ */
+
+function pnf_send_contact_notification($entityform) {
+  // Get contact data from submitted entityform
+  $contact = entity_metadata_wrapper('entityform', $entityform);
+  $contact_id = $contact->entityform_id->value();
+  $firstname = $contact->field_firstname->value();
+  $lastname = $contact->field_lastname->value();
+  $email = $contact->field_email->value();
+  $subject = $contact->field_subject->value();
+  $message = $contact->field_message->value();
+
+  // $subject provides only the select list option value, we need the displayed value.
+  $field_subject_infos = field_info_field('field_subject');
+  $subject_values = $field_subject_infos['settings']['allowed_values'];
+  $contact_url = 'http:/' . $_SERVER['HTTP_HOST'] . "/entityform/$contact_id";
+
+  // Build email message
+  $mail_to = variable_get('site_mail');
+  $mail_from = $mail_to;
+  $mail_subject = '[' . variable_get('site_name') . '] Nouvelle demande de contact';
+  $mail_body = "Une demande de contact a été soumise par $firstname $lastname";
+  $mail_body .= "\n\n";
+  $mail_body .= "<b>Type de demande :</b> " . $subject_values[$subject] . "\n";
+  $mail_body .= "<b>Email :</b> " . $email . "\n";
+  $mail_body .= "\n\n";
+  $mail_body .= "<b>Message :</b>\n  " . $message;
+  $mail_body .= "\n\n";
+  $mail_body .= 'Voir la demande de contact sur le site web : ' . l($contact_url, $contact_url);
+
+
+
+  $params = array('subject' => $mail_subject, 'body' => $mail_body);
+  $msg_type = 'status';
+
+  if(drupal_mail('pnf_contact','contact_notification', $mail_to, language_default(), $params, $mail_from)) {
+    $msg = t('Contact request sent successfully to %email.', array('%email' => $mail_to));
+  }
+  else {
+    $msg = t('Contact request could not be sent to %email.', array('%email' => $mail_to));
+    $msg_type = 'warning';
+  }
+  drupal_set_message($msg, $msg_type);
+}
+
+/**
+ * Implements hook_mail().
+ */
+function pnf_contact_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'contact_notification':
+      $message['subject'] = $params['subject'];
+      $message['body'][] = $params['body'];
+      break;
+  }
+}
+

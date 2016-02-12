@@ -419,6 +419,15 @@ function kcore_user_default_permissions() {
     'module' => 'linkit',
   );
 
+  // Exported permission: 'administer mailsystem'.
+  $permissions['administer mailsystem'] = array(
+    'name' => 'administer mailsystem',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'mailsystem',
+  );
+
   // Exported permission: 'administer menu'.
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
@@ -721,6 +730,7 @@ function kcore_user_default_permissions() {
     'name' => 'delete any entityform',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'entityform',
   );
@@ -777,6 +787,7 @@ function kcore_user_default_permissions() {
     'name' => 'edit any entityform',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'entityform',
   );
@@ -796,6 +807,16 @@ function kcore_user_default_permissions() {
       'webmaster' => 'webmaster',
     ),
     'module' => 'boxes',
+  );
+
+  // Exported permission: 'edit mimemail user settings'.
+  $permissions['edit mimemail user settings'] = array(
+    'name' => 'edit mimemail user settings',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'mimemail',
   );
 
   // Exported permission: 'edit own entityform'.
@@ -900,6 +921,15 @@ function kcore_user_default_permissions() {
       'administrateur' => 'administrateur',
     ),
     'module' => 'user',
+  );
+
+  // Exported permission: 'send arbitrary files'.
+  $permissions['send arbitrary files'] = array(
+    'name' => 'send arbitrary files',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'mimemail',
   );
 
   // Exported permission: 'show format selection for bean'.
@@ -1106,6 +1136,7 @@ function kcore_user_default_permissions() {
     'name' => 'view any entityform',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'entityform',
   );

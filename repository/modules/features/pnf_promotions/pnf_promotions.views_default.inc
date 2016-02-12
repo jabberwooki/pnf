@@ -49,11 +49,24 @@ function pnf_promotions_views_default_views() {
   $handler->display->display_options['fields']['field_promo_image']['label'] = '';
   $handler->display->display_options['fields']['field_promo_image']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_promo_image']['alter']['path'] = '[field_promo_url]';
+  $handler->display->display_options['fields']['field_promo_image']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['field_promo_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_promo_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_promo_image']['settings'] = array(
     'image_style' => '',
     'image_link' => '',
+    'field_formatter_class' => '',
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
   );
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
@@ -71,7 +84,7 @@ function pnf_promotions_views_default_views() {
   );
 
   /* Display: Bloc 3 promos */
-  $handler = $view->new_display('block', 'Bloc 3 promos', '3_promos');
+  $handler = $view->new_display('block', 'Bloc 3 promos', 'promos_front');
   $translatables['promotions'] = array(
     t('Master'),
     t('more'),

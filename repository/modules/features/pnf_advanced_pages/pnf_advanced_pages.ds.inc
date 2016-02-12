@@ -24,8 +24,19 @@ function pnf_advanced_pages_ds_field_settings_info() {
       'formatter_settings' => array(
         'link' => '0',
         'wrapper' => 'h2',
-        'class' => 'col-lg-8 col-lg-offset-2',
+        'class' => 'col-lg-8',
         'field_formatter_class' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
       ),
     ),
   );
@@ -52,11 +63,13 @@ function pnf_advanced_pages_ds_layout_settings_info() {
       'central' => array(
         0 => 'title',
         1 => 'field_page_content',
+        2 => 'field_page_linked_content',
       ),
     ),
     'fields' => array(
       'title' => 'central',
       'field_page_content' => 'central',
+      'field_page_linked_content' => 'central',
     ),
     'classes' => array(),
     'wrappers' => array(

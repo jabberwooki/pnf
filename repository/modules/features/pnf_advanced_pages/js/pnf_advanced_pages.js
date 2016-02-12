@@ -46,6 +46,12 @@
           });
         }
       }
+
+      // Advanced page horizontal position, depending on content of non-paragraphs fields (field_page_linked_content, ...).
+      if ($('div.field-name-field-page-linked-content').length == 0) {
+        $('div.node-advanced-page h2').addClass('col-lg-offset-2');
+        $('div.field-name-field-page-content').addClass('col-lg-offset-2');
+      }
     }
   };
 }(jQuery));

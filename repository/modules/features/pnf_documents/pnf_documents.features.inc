@@ -27,6 +27,31 @@ function pnf_documents_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function pnf_documents_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: 160w.
+  $styles['160w'] = array(
+    'label' => 'Largeur 160',
+    'effects' => array(
+      15 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 160,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function pnf_documents_node_info() {
