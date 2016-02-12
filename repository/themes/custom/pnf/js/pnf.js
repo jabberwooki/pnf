@@ -1,9 +1,17 @@
 (function($) {
   $(document).ready(function() {
 
-    // Temporary solution for the dropdowns menus
-    $('#block-menu-menu-menu-park, #block-menu-menu-national-parks').addClass('dropdown');
-    $('#block-menu-menu-menu-park ul li ul, #block-menu-menu-national-parks ul li ul').addClass('dropdown-menu');
+    // Matchmedia
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      /* La largeur minimum de l'affichage est 768 px inclus */
+          // Temporary solution for the dropdowns menus
+          $('#block-menu-menu-menu-park, #block-menu-menu-national-parks').addClass('dropdown');
+          $('#block-menu-menu-menu-park ul li ul, #block-menu-menu-national-parks ul li ul').addClass('dropdown-menu');
+    } else {
+      /* L'affichage est inférieur à 768px de large */
+    }
+
+
 
     /* Search Form */
     $('#block-custom-search-blocks-1 .search-form input.form-control').hide();
