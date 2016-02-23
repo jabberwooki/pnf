@@ -23,7 +23,84 @@ function kcontextes_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array();
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'menu-menu-menu-park' => array(
+          'module' => 'menu',
+          'delta' => 'menu-menu-park',
+          'region' => 'top_menu',
+          'weight' => '-10',
+        ),
+        'menu-menu-national-parks' => array(
+          'module' => 'menu',
+          'delta' => 'menu-national-parks',
+          'region' => 'top_menu',
+          'weight' => '-9',
+        ),
+        'custom_search_blocks-1' => array(
+          'module' => 'custom_search_blocks',
+          'delta' => '1',
+          'region' => 'top_menu',
+          'weight' => '-8',
+        ),
+        'kcore-pnf_on_the_web_clone' => array(
+          'module' => 'kcore',
+          'delta' => 'pnf_on_the_web_clone',
+          'region' => 'top_menu',
+          'weight' => '-7',
+        ),
+        'lang_dropdown-language' => array(
+          'module' => 'lang_dropdown',
+          'delta' => 'language',
+          'region' => 'top_menu',
+          'weight' => '-6',
+        ),
+        'tb_megamenu-menu-menu-themes' => array(
+          'module' => 'tb_megamenu',
+          'delta' => 'menu-menu-themes',
+          'region' => 'navigation',
+          'weight' => '-10',
+        ),
+        'menu-menu-multimedia-footer' => array(
+          'module' => 'menu',
+          'delta' => 'menu-multimedia-footer',
+          'region' => 'pre_footer',
+          'weight' => '-9',
+        ),
+        'kcore-pnf_park_menu_clone' => array(
+          'module' => 'kcore',
+          'delta' => 'pnf_park_menu_clone',
+          'region' => 'footer',
+          'weight' => '0',
+        ),
+        'menu-menu-join-national-park' => array(
+          'module' => 'menu',
+          'delta' => 'menu-join-national-park',
+          'region' => 'footer_third',
+          'weight' => '0',
+        ),
+        'on_the_web-0' => array(
+          'module' => 'on_the_web',
+          'delta' => '0',
+          'region' => 'footer_third',
+          'weight' => '1',
+        ),
+        'menu-menu-footer-menu' => array(
+          'module' => 'menu',
+          'delta' => 'menu-footer-menu',
+          'region' => 'post_footer',
+          'weight' => '0',
+        ),
+        'menu-menu-tools' => array(
+          'module' => 'menu',
+          'delta' => 'menu-tools',
+          'region' => 'toolbar',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
   $context->condition_mode = 0;
 
   // Translatables
@@ -39,14 +116,30 @@ function kcontextes_context_default_contexts() {
   $context->description = 'Front page only';
   $context->tag = 'Core';
   $context->conditions = array(
+    'cmd' => array(
+      'values' => array(
+        3 => 3,
+      ),
+    ),
     'path' => array(
       'values' => array(
         '<front>' => '<front>',
       ),
     ),
   );
-  $context->reactions = array();
-  $context->condition_mode = 0;
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-slideshow-block_slideshow_home' => array(
+          'module' => 'views',
+          'delta' => 'slideshow-block_slideshow_home',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
 
   // Translatables
   // Included for use with string extractors like potx.
@@ -67,7 +160,30 @@ function kcontextes_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array();
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'text_resize-0' => array(
+          'module' => 'text_resize',
+          'delta' => '0',
+          'region' => 'content_top_second',
+          'weight' => '-39',
+        ),
+        'printfriendly-printfriendly' => array(
+          'module' => 'printfriendly',
+          'delta' => 'printfriendly',
+          'region' => 'content_top_second',
+          'weight' => '-38',
+        ),
+        'addtoany-addtoany_button' => array(
+          'module' => 'addtoany',
+          'delta' => 'addtoany_button',
+          'region' => 'content_top_second',
+          'weight' => '-37',
+        ),
+      ),
+    ),
+  );
   $context->condition_mode = 0;
 
   // Translatables

@@ -1,0 +1,35 @@
+<?php
+/**
+ * @file
+ * Code for the Actualités feature.
+ */
+
+include_once 'pnf_news.features.inc';
+
+/**
+ * Implements hook_node_view().
+ */
+function pnf_news_node_view($node, $view_mode, $langcode) {
+  if ($node->type == 'news') {
+    $news_type_object = taxonomy_term_load($node->field_news_type['und'][0]['tid']);
+    // If Dossier, displayed date field is removed.
+    if ($news_type_object->uuid == 'ada69fa2-d961-472c-82fa-f044f0a166bb') {
+      unset($node->content['field_displayed_pub_date']);
+    }
+    else {
+      if ($view_mode == 'full') {
+        $displayed_date = $node->content['field_displayed_pub_date'][0]['#markup'];
+        $raw_displayed_date = strip_tags($displayed_date);
+        $wrapper_parts = explode($raw_displayed_date,$displayed_date);
+        $node->content['field_displayed_pub_date'][0]['#markup'] = $wrapper_parts[0]
+          . t('On ')
+          . $raw_displayed_date
+          . $wrapper_parts[1];
+
+        if (empty($node->content['field_downloadable_docs']['#items'])) {
+          unset($node->content['field_downloadable_docs']);
+        }
+      }
+    }
+  }
+}

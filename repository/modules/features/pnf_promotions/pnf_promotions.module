@@ -1,0 +1,16 @@
+<?php
+/**
+ * @file
+ * Code for the Promotions feature.
+ */
+
+include_once 'pnf_promotions.features.inc';
+
+/**
+ * Implements hook_init().;
+ */
+function pnf_promotions_init() {
+  if (drupal_is_front_page()) {
+    drupal_add_js(drupal_get_path('module', 'pnf_promotions') . '/js/pnf_promotions.js');
+  }
+}

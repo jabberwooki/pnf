@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Blocs accueil feature.
+ */
+
+include_once 'pnf_front_blocks.features.inc';

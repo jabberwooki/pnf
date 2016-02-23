@@ -1,0 +1,113 @@
+<?php
+/**
+ * @file
+ * Code for the Marchés publics feature.
+ */
+
+include_once 'pnf_contracts.features.inc';
+
+
+/**
+ * Implements hook_ds_fields_info().
+ */
+function pnf_contracts_ds_fields_info($entity_type) {
+	$fields = array();
+
+	$fields['node']['btn_contract_notice'] = array(
+		'title' => t('Contract notice button'),
+		'field_type' => DS_FIELD_TYPE_FUNCTION,
+		'ui_limit' => array('contract|*'),
+		'function' => 'pnf_contracts_btn_contract_notice',
+	);
+
+	$fields['node']['btn_contract_link'] = array(
+		'title' => t('Contract link button'),
+		'field_type' => DS_FIELD_TYPE_FUNCTION,
+		'ui_limit' => array('contract|*'),
+		'function' => 'pnf_contracts_btn_contract_link',
+	);
+
+	if (isset($fields[$entity_type])) {
+		return array($entity_type => $fields[$entity_type]);
+	}
+	return;
+}
+
+/**
+ * Render the field btn_contract_notice
+ */
+function pnf_contracts_btn_contract_notice($field) {
+	if (!empty($field['entity']->field_contract_notice)) {
+		$label = t("Contract notice");
+		$uri =  $field['entity']->field_contract_notice['und'][0]['uri'];
+		$url = file_create_url($uri);
+		$output = '<a class = "btn btn-sm btn-secondary" href="'. $url .'" target="_blank">'. $label .'</a>';
+		return $output;
+	}
+}
+
+/**
+ * Render the field btn_contract_notice
+ */
+function pnf_contracts_btn_contract_link($field) {
+	if (!empty($field['entity']->field_contract_link)) {
+		$label = t("Contract link");
+		$url =  $field['entity']->field_contract_link['und'][0]['url'];
+		$output = '<a class = "btn btn-sm btn-secondary" href="'. $url .'" target="_blank">'. $label .'</a>';
+		return $output;
+	}
+}
+
+/**
+ * Implements hook_pathauto_alias_alter().
+ */
+function pnf_contracts_pathauto_alias_alter(&$alias, array &$context) {
+  if ($context['type'] == 'contract') {
+	$park_menu = menu_tree('menu-menu-park');
+	$single_parent = array_shift($park_menu);
+	$single_parent_alias = drupal_get_path_alias($single_parent['#href']);
+	$alias = $single_parent_alias . '/' . $alias;
+
+	global $language;
+	if ($context['data']['node']->field_contract_status['und'][0]['value'] == 2 && $language->language == 'fr') {
+	  $alias = str_replace('marches-publics','marches-publics-attribues', $alias);
+	}
+  }
+}
+
+/**
+ * Implements hook_node_view_alter().
+ */
+function pnf_contracts_node_view_alter(&$build) {
+  if ($build['#bundle'] == 'contract' && $build['#view_mode'] == 'full') {
+	$contracts_breadcrumb = pnf_park_breadcrumb();
+	end($contracts_breadcrumb);
+	$last_key = key($contracts_breadcrumb);
+
+	if ($build['field_contract_status']['#items'][0]['value'] == 1) {
+	  $before = array('marches-publics', '</a>');
+	  $after = array('marches-publics-en-cours',' en cours</a>');
+	}
+	else {
+	  $before = array('marches-publics', '</a>');
+	  $after = array('marches-publics-attribues', ' attribués</a>');
+	}
+	$contracts_breadcrumb[$last_key] = str_replace($before, $after, $contracts_breadcrumb[$last_key]);
+	drupal_set_breadcrumb($contracts_breadcrumb);
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function pnf_contracts_views_pre_render(&$view) {//dpm($view);
+  if ($view->name == 'contracts') {
+	if ($view->current_display == 'current_contracts') {
+	  $view->build_info['title'] = 'Marchés publics en cours';
+	}
+	if ($view->current_display == 'awarded_contracts') {
+	  drupal_set_breadcrumb(pnf_park_breadcrumb());
+	  $view->build_info['title'] = 'Marchés publics attribués';
+	}
+  }
+}

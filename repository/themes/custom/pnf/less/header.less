@@ -1,1 +1,643 @@
 // Insert your styling here.
+
+/*text resize*/
+a#text_resize_increase {
+    background: none;
+    display: block;
+    float: right;
+    width: 28px;
+    height: 27px;
+    margin: 14px 12px 0 0;
+    outline: none;
+    text-indent: 0px; 
+    cursor: pointer;
+    color: #a1a1a1;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+}
+a#text_resize_decrease {
+    background: none;
+    display: block;
+    float: right;
+    width: 23px;
+    height: 21px;
+    margin: 18px 0 0 0;
+    outline: none;
+    text-indent: 0px;
+    cursor: pointer;
+    color: #a1a1a1;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+}
+#block-printfriendly-printfriendly{
+	margin-top: 17px;
+}
+#block-addtoany-addtoany-button{
+    margin-top: 5px;
+}
+#block-text-resize-0, #block-printfriendly-printfriendly, #block-addtoany-addtoany-button {
+    float: right;
+    margin-left: 15px;
+    padding-top: 15px;
+}
+
+/*Cache phrase help sur filtre exposé*/
+.help-block{
+	display: none;
+}
+
+/*Utilitise class*/
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+/*Site name*/
+header .name{
+	text-indent: -9999px;
+	position: absolute;
+}
+
+/*FONTAWESOME*/
+@font-face {
+  font-family: 'Fontawesome';
+  src: url('../fonts/font-awesome-4.4.0/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'),
+			url('../fonts/font-awesome-4.4.0/fontawesome-webfont.woff2?v=4.4.0') format('woff2'),
+			url('../fonts/font-awesome-4.4.0/fontawesome-webfont.woff?v=4.4.0') format('woff'),
+			url('../fonts/font-awesome-4.4.0/fontawesome-webfont.ttf?v=4.4.0') format('truetype'),
+			url('../fonts/font-awesome-4.4.0/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Header*/
+.header{
+	margin-top: 0px;
+	background: #fff;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+	position: relative;
+	//z-index: 1000;
+	h1{
+		margin: 0;
+		position: absolute;
+		left: 0;
+		top:0;
+		margin-top: -34px;
+		z-index: 1200;
+	}
+	.container{
+		position:initial !important;
+	}
+}
+
+.pnf_topmenu {
+	padding-top: 5px;
+	position: relative;
+	z-index: 1100;
+	background: #fff;
+}
+#block-menu-menu-menu-park .navbar-default .navbar-toggle{
+	background-color: @brand-primary;
+	color: #fff;
+	border-color: @brand-primary;
+}
+#block-menu-menu-national-parks .navbar-default .navbar-toggle{
+	background-color: #fff;
+	color: @brand-primary;
+	border-color: #ccc;
+}
+
+
+.pnf_toolbar,
+.pnf_topmenu{
+	.block-menu .navbar-default{
+		margin: 0;
+		background: transparent;
+		border: none;
+	}
+	.block-menu .navbar-toggle{
+		float: left;
+	}
+	.block-menu .navbar{
+		min-height: auto;
+	}
+	.block-menu .navbar-collapse{
+		padding-left: 0;
+	}
+	.block-menu button{
+		font-size: 20px;
+	}
+}
+
+/*MENU TOOLS*/
+#block-menu-menu-tools {
+    right: 0;
+    position: absolute;
+    top: 65px;
+    z-index: 10000;
+}
+#block-menu-menu-tools .navbar-default .navbar-toggle{
+	background-color: rgba(0, 0, 0, 0.7);
+	color: white;
+	border-color: rgba(0, 0, 0, 0.7);
+}
+.pnf_toolbar .block-menu .navbar-collapse{
+	padding-right: 0;
+}
+.pnf_toolbar .block-menu .navbar-toggle{
+	float: right;
+}
+.pnf_toolbar .block-menu .navbar-collapse.collapse.in {
+    background-color: rgba(0, 0, 0, 0.7);
+    border:none;
+}
+.pnf_toolbar .block-menu .navbar-collapse.collapse.in a span{
+	color: white;
+}
+
+
+
+/*Search block*/
+input[type="search"].sb-search-input {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
+}
+
+#block-custom-search-blocks-1  .search-form:before {
+    font-family: 'Fontawesome';
+    content: "\f002";
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    border: 1px solid #ccc;
+}
+
+#block-custom-search-blocks-1 .search-form  {
+	div {
+		display: inline-block;
+		margin-right: 5px;
+	}
+    .form-group {
+        margin-bottom: 0;
+    }
+
+	.btn.form-submit {
+		display: none;
+	}
+
+	input.form-control {
+		border-radius: 0;
+		height: 28px;
+    	border: 1px solid #ccc;
+    	position: absolute;
+    	top: -1px;
+    	width: 150px;
+	}
+}
+
+/*Langues*/
+#block-lang-dropdown-language .form-control{
+	padding: 3px;
+	border-radius:0;
+	text-transform: uppercase;
+	height: auto;
+	display: none;
+}
+
+/*Menu select*/
+#block-menu-menu-national-parks,
+#block-menu-menu-menu-park{
+	ul li.first.last.expanded{
+		background-color: @brand-primary;
+		border: 1px solid @brand-primary;
+		font-size: @font-size-small;
+		padding: 2px 7px;
+	}
+	ul li.expanded a{
+		color: #fff;
+		padding: 2px 7px;
+	}
+	ul li:first-child a:after{
+		font-family: 'Fontawesome';
+		content: "\f107";
+		padding-left: 10px;
+	}
+	ul.dropdown-menu li a:after{
+		content: " ";
+	}
+	ul li ul.dropdown-menu{
+	    width: 100%;
+	    border: 1px solid #ccc;
+	    margin: 0;
+	    padding: 0;
+	}
+	ul li ul.dropdown-menu li a{
+		color: @gray-base;
+		font-size: @font-size-small;
+		background: #f4f4f4;
+		border-top: 1px solid #ccc;
+		padding: 7px 7px;
+	}
+	ul li ul.dropdown-menu li a.active,
+	ul li ul.dropdown-menu li a:hover{
+		background-color: #c7cdd7;
+	}
+}
+
+#block-menu-menu-national-parks{
+	ul li.first.last.expanded{
+		background-color: #fff;
+		border: 1px solid #ccc;
+	}
+	ul li.expanded a{
+		color: #666;
+	}
+}
+
+/*Social Media*/
+#block-kcore-pnf-on-the-web-clone {
+	display: none;
+	a img{
+		display: none;
+	}
+	a:hover{
+		text-decoration: none;
+	}
+	a:after{
+		font-family: 'Fontawesome';
+	 	color: #716f73;
+	 	font-size: @font-size-h4;
+	 	margin-right: 10px;
+	}
+	.otw-facebook{
+		a:after{
+	 		content: '\f09a';
+	 	}
+	 	a:hover:after{
+			color: #3b5998;
+		}
+	}
+	.otw-twitter{
+		a:after{
+	 		content: '\f099';
+	 	}
+	 	a:hover:after{
+			color: #00aced;
+		}
+	}
+	.otw-youtube {
+		a:after{
+		 	content: '\f16a';
+		}
+		a:hover:after{
+			color: #e52d27;
+		}
+	}
+
+}
+
+/*Menu thematique*/
+nav{
+	margin-top: 40px;
+	position: initial !important;
+}
+nav .tb-megamenu .btn-navbar{
+	float: right;
+	margin-right: 50px;
+}
+nav .tb-megamenu .btn{
+		font-size: 20px;
+}
+nav .tb-megamenu .btn,
+nav .tb-megamenu .btn-navbar:hover,
+nav .tb-megamenu .btn-navbar:focus,
+nav .tb-megamenu .btn-navbar:active,
+nav .tb-megamenu .btn-navbar.active,
+nav .tb-megamenu .btn-navbar.disabled,
+nav .tb-megamenu .btn-navbar[disabled]{
+    background-color: @brand-primary;
+    background-image: none;
+    border-color: @brand-primary;
+}
+nav .tb-megamenu {
+    background-color: transparent;
+	    .nav > li > a{
+		color: #000;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: @font-size-large;
+		border-right:none;
+		}
+		.tb-megamenu .nav > .active > a, .tb-megamenu .nav > .active > a:hover, .tb-megamenu .nav > .active > a:focus{
+			background-color: transparent;
+			color: #000;
+		}
+		.nav li.dropdown.active > .dropdown-toggle,
+		.nav > li > a:hover,
+		.nav li.dropdown.open > .dropdown-toggle{
+			background: @brand-primary;
+			color: #fff;
+		}
+		.nav li.dropdown.active > .dropdown-toggle .mega-caption,
+		.nav > li > a:hover .mega-caption,
+		.nav li.dropdown.open > .dropdown-toggle .mega-caption{
+			color: #fff;
+			border-left: 1px solid #fff;
+			padding-left: 10px;
+		}
+		.mega-caption{
+			text-transform: none;
+			font-family: @font-family-serif;
+			font-weight: 400;
+			font-style: italic;
+			border-left: 1px solid @brand-primary;
+			padding-left: 10px;
+			color: #000;
+			font-size: 14px;
+		}
+		.nav li.dropdown.active > .dropdown-toggle,
+		.nav li.dropdown.open.active > .dropdown-toggle,
+		.nav > li.dropdown.open.active > a:hover {
+ 			 background: @brand-primary;
+ 			 color: #fff;
+		}
+		.level-3 .nav-child{
+			display: none;
+		}
+		.nav .dropdown-menu{
+			background: #e7e7e7;
+			border-bottom: none;
+			ul li{
+				border: none;
+			}
+			a.mega-group-title,
+			a.mega-group-title:hover{
+				color: #8e9fbc;
+				text-transform: uppercase;
+				border-bottom: 1px solid #cbd0d9;
+				font-size: @font-size-large;
+				font-weight: 600;
+				padding-left: 10px;
+				line-height: 30px;
+			}
+			li.level-3.active a,
+			li.level-3.active a.mega-group-title,
+			ul li.mega-group .open a.mega-group-title:focus,
+			ul li.mega-group .open  a.mega-group-title:hover,
+			ul li a:hover{
+				background: #c7cdd7;
+				border: none;
+				color: #3a353c;
+			}
+			li.level-3.active a,
+			li.level-3.open a,
+			li.level-3.mega-group a.mega-group-title,
+			li.level-3.open a.mega-group-title,
+			li.level-3.active a.mega-group-title,
+			li.level-3 a.mega-group-title,
+			ul ul li a{
+				color: #3a353c;
+				text-transform: none;
+				border: none;
+				font-size: @font-size-base;
+				font-weight: normal;
+				padding-left: 10px;
+			}
+			ul ul li a:hover{
+				border:none;
+			}
+		}
+}
+
+
+/*Slideshow*/
+.white-logos{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 1;
+}
+#slide-infos-wrapper{
+	width: 550px;
+    height: 170px;
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    background-color: #000;
+	background-color: rgba(0,0,0,.5);
+	color:#fff;
+	padding: 15px;
+		h2{
+			margin-top: 0;
+		}
+		a{
+			color: #fff;
+		}
+		a:hover{
+			text-decoration: none;
+		}
+		#slide-infos-credit{
+			font-size: 10px;
+		}
+		#front-slideshow-controls{
+		    right: 40px;
+		    position: absolute;
+		    top: 20px;
+		}
+
+		.carousel-control {
+	        position: absolute;
+	        top: 5%;
+	        left: 0;
+	        bottom: 0;
+	        width: 15%;
+	        opacity: 1;
+	        font-size: 20px;
+	        color: #fff;
+	        text-align: center;
+	        text-shadow: none;
+	    }
+	    .carousel-control.left,  .carousel-control.right {
+	          width: 20px;
+	          height: 20px;
+	      }
+	    .carousel-control .icon-prev,
+	    .carousel-control .icon-next{
+	        top: 0;
+	    }
+	    .carousel-control .icon-next {
+	    margin-right: -30px;
+	    }
+}
+
+.region-top-menu {
+
+	.block{
+		float: left;
+	}
+
+}
+
+/*
+inspired from http://codepen.io/Rowno/pen/Afykb 
+*/
+#block-views-slideshow-block-slideshow-home .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+#block-views-slideshow-block-slideshow-home .carousel-inner .active {
+  opacity: 1;
+}
+
+#block-views-slideshow-block-slideshow-home .carousel-inner .active.left,
+#block-views-slideshow-block-slideshow-home .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+#block-views-slideshow-block-slideshow-home .carousel-inner .next.left,
+#block-views-slideshow-block-slideshow-home .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+#block-views-slideshow-block-slideshow-home .carousel-control {
+  z-index: 2;
+}
+
+/*
+WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+now override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    #block-views-slideshow-block-slideshow-home .carousel-inner > .item.next,
+    #block-views-slideshow-block-slideshow-home .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    #block-views-slideshow-block-slideshow-home .carousel-inner > .item.prev,
+    #block-views-slideshow-block-slideshow-home .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    #block-views-slideshow-block-slideshow-home .carousel-inner > .item.next.left,
+    #block-views-slideshow-block-slideshow-home .carousel-inner > .item.prev.right,
+    #block-views-slideshow-block-slideshow-home .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+@media(max-width: @screen-xs-max){
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+	#block-kcore-pnf-on-the-web-clone{
+		display: none;
+	}
+	#block-menu-menu-tools {
+	    width: auto;
+	}
+		/*Menu tools*/
+	#block-menu-menu-tools{
+	   right: 0;
+	   position: fixed;
+	   top: 350px;
+	        li{
+	            margin-bottom: 2px;
+	        }
+	        a.tool{
+	            height: 44px;
+	            width: 44px;
+	            line-height: 22px;            
+	            display: inline-block;
+	            background-color: rgba(0, 0, 0, 0.7);
+	            color: #fff;
+	            padding: 12px;
+	            font-family: 'Fontawesome';
+	            font-size: @font-size-h3;
+	        }
+	        a.tool-news:after{
+	             content: '\f0e6';
+	        }
+	        a.tool-events:after{
+	            content: '\f073';
+	        }
+	        a.tool-newspaper:after{
+	            content: '\f1ea';
+	        }
+	        a.tool-multimedia:after{
+	            content: '\f03e';
+	        }
+	        a.tool-eshop:after{
+	            content: '\f07a';
+	        }
+	        a.tool-like:after{
+	            content: '\f08a';
+	        }
+	        a.tool-destination:after{
+	            content: '\f277';
+	        }
+	        a.tool-map:after{
+	            content:'\f278';
+	        }
+	        a.tool-doc:after{
+	            content:'\f02d';
+	        }
+	        a span {
+	            text-align: right;
+	            line-height: 35px;
+	            right: -800px;
+	            position: absolute;
+	            text-align:center;
+	            /*width:500px;*/
+	            font-size: 14px;
+	            background-color: rgba(0, 0, 0, 0.7);
+	            font-family: @font-family-sans-serif;
+	            -webkit-transition: all 0.3s ease-in-out;
+	            -moz-transition: all 0.3s ease-in-out;
+	            -o-transition: all 0.3s ease-in-out;
+	            -ms-transition: all 0.3s ease-in-out;
+	            transition: all 0.3s ease-in-out; 
+	        }
+	        a:hover span {
+	            right: 100%;
+	            margin-top: -12px;
+	            height: 44px;
+	            padding-top: 6px;
+	            -webkit-transition:all .6s ease-in-out;
+	            -moz-transition:all .6s ease-in-out; 
+	            -o-transition:all .6s ease-in-out; 
+	            -ms-transition:all .6s ease-in-out;
+	             transition:all .6s ease-in-out; 
+	        }
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+	#block-kcore-pnf-on-the-web-clone{
+		display: block;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+
+}

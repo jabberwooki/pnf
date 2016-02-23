@@ -1,0 +1,115 @@
+<?php
+/**
+ * @file
+ * Code for the Pages avancées feature.
+ */
+
+include_once 'pnf_advanced_pages.features.inc';
+
+/**
+ * Implements hook_init().;
+ */
+function pnf_advanced_pages_init() {
+  drupal_add_js(drupal_get_path('module','pnf_advanced_pages') . '/js/pnf_advanced_pages.js');
+  drupal_add_css(drupal_get_path('module','pnf_advanced_pages') . '/css/pnf_advanced_pages.css');
+}
+
+/**
+ * Implements hook_menu().
+ */
+function pnf_advanced_pages_menu() {
+  $items = array();
+  $items['admin/config/pnf_adv_pages'] = array(
+    'title' => t('Advanced pages settings'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('pnf_adv_pages_settings_form'),
+    'access arguments' => array('administer pnf settings'),
+    'file' => 'pnf_advanced_pages.admin.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function pnf_advanced_pages_entity_view_alter(&$build, $type) {
+  if ($type == 'paragraphs_item' && $build['#view_mode'] == 'full') {
+    $params = array('view_mode' => 'full');
+    switch ($build['#bundle']) {
+      case 'colored_bg_text':
+        if (isset($build['field_texte'])) {
+          $param = 'bg_color_' . $build['#entity']->field_bg_color['und'][0]['value'];
+          $color = variable_get($param, 'FFFFFF');
+          $field_texte =
+            '<div class="pnf_colored_bg" style="background-color: #' . $color . '">'
+            . $build['field_texte'][0]['#markup']
+            . '</div>';
+          $build['field_texte'][0]['#markup'] = $field_texte;
+        }
+        break;
+
+      case 'images_group':
+        $params['images_group_item'] = 1;
+        break;
+
+      case 'slideshow':
+        foreach ($build['field_slide'][0]['#items'] as $key=>$item) {
+          $item['caption'] = $item['image_field_caption']['value'];
+          $build['field_slide'][0]['#items'][$key]['caption'] =
+            $build['field_slide'][0]['#items'][$key]['image_field_caption']['value'];
+        }
+        break;
+
+      case 'image_text_50_50':
+        $params['image_text_50_50_item'] = 1;
+        break;
+
+      case 'text_image_50_50':
+        $params['text_image_50_50_item'] = 1;
+        break;
+    }
+    drupal_add_js(array('pnf_advanced_pages_view' => $params), 'setting');
+  }
+}
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+function pnf_advanced_pages_field_widget_text_textfield_form_alter(&$element, &$form_state, $context) {
+  // Add clickable colors below field_bg_color for bundle colored_bg_text.
+  if ($element['#field_name'] == 'field_bg_color') {
+    $color1 = variable_get('bg_color_1', 'EEEEEE');
+    $color2 = variable_get('bg_color_2', 'CCCCCC');
+    $color3 = variable_get('bg_color_3', 'AAAAAA');
+    $available_colors =
+      '<div id="available_colors">' .
+      '<p id="available_colors_text">Couleurs disponibles (cliquer sur une couleur pour la sélectionner) : </p>' .
+      '<p>' .
+      '<span class="pnf-bg-color" style="background-color: #' . $color1 . '">' . '1' . '</span>' .
+      '<span class="pnf-bg-color" style="background-color: #' . $color2 . '">' . '2' . '</span>' .
+      '<span class="pnf-bg-color" style="background-color: #' . $color3 . '">' . '3' . '</span>' .
+      '</p>' .
+      '</div>';
+    $element['#suffix'] = $available_colors;
+    $element['value']['#size'] = 2;
+  }
+}
+
+/**
+ * Implements hook_entity_view().
+ */
+function pnf_advanced_pages_entity_view($entity, $type, $view_mode, $langcode) {
+  if ($type == 'paragraphs_item') {
+    if (($entity->bundle == 'image_text_50_50' || $entity->bundle == 'text_image_50_50') && $view_mode == 'full') {
+      foreach ($entity->content['field_image'] as $key=>$value) {
+        if (is_integer($key)) {
+          $entity->content['field_image'][$key]['#item']['alt'] =
+            $entity->content['field_image'][$key]['#item']['image_field_caption']['value'];
+        }
+      }
+
+    }
+  }
+}

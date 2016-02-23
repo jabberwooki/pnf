@@ -3,28 +3,50 @@ description = Thème des Parcs Nationaux de France, basé sur Bootstrap.
 core = 7.x
 base theme = bootstrap
 
-
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Regions
 ;;;;;;;;;;;;;;;;;;;;;
 
+regions[top_menu]       = 'Top Menu'
 regions[navigation]     = 'Navigation'
-regions[header]         = 'Top Bar'
+regions[header]         = 'Header'
 regions[highlighted]    = 'Highlighted'
 regions[help]           = 'Help'
+regions[pre_content_left] = 'Pre Content Left'
+regions[pre_content_right] = 'Pre Content Right'
+regions[content_top_first] = 'Content Top First'
+regions[content_top_second] = 'Content Top Second'
 regions[content]        = 'Content'
 regions[sidebar_first]  = 'Primary'
 regions[sidebar_second] = 'Secondary'
-regions[footer]         = 'Footer'
+regions[pre_footer]     = 'Pre Footer'
+regions[footer]         = 'Footer First'
+regions[footer_second]  = 'Footer Second'
+regions[footer_third]   = 'Footer Third'
+regions[post_footer]   = 'Post Footer'
 regions[page_top]       = 'Page top'
 regions[page_bottom]    = 'Page bottom'
+regions[toolbar]        = 'Toolbar'
 
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Features
+;;;;;;;;;;;;;;;;;;;;;
+features[] = logo
+features[] = name
+;features[] = slogan
+;features[] = node_user_picture
+;features[] = comment_user_picture
+;features[] = comment_user_verification
+features[] = favicon
+;features[] = main_menu
+;features[] = secondary_menu
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
-stylesheets[all][] = css/style.css
+;stylesheets[all][] = css/style.css
 
 
 ; For information on choosing the desired method, please read the Drupal
@@ -43,14 +65,14 @@ stylesheets[all][] = css/style.css
 ; scripts[] = 'bootstrap/js/alert.js'
 ; scripts[] = 'bootstrap/js/button.js'
 scripts[] = 'bootstrap/js/carousel.js'
-; scripts[] = 'bootstrap/js/collapse.js'
+scripts[] = 'bootstrap/js/collapse.js'
 scripts[] = 'bootstrap/js/dropdown.js'
 ; scripts[] = 'bootstrap/js/modal.js'
 ; scripts[] = 'bootstrap/js/tooltip.js'
 ; scripts[] = 'bootstrap/js/popover.js'
 ; scripts[] = 'bootstrap/js/scrollspy.js'
 ; scripts[] = 'bootstrap/js/tab.js'
-; scripts[] = 'bootstrap/js/transition.js'
+scripts[] = 'bootstrap/js/transition.js'
 ;
 ; ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
 settings[bootstrap_cdn] = ''

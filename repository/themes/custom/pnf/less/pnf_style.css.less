@@ -1,0 +1,27 @@
+// Bootstrap library.
+@import 'bootstrap.less';
+
+// Base-theme overrides.
+@import 'overrides.less';
+
+// Theme specific.
+@import 'header.less';
+@import 'content.less';
+@import 'footer.less';
+
+// CUSTOM VARIABLES
+@brand-primary: #992067; /*#001489 couleur pnf à remettre après*/
+@brand-secondary: #cec2b4;
+@navbar-default-bg: @brand-primary;
+
+body{
+	background: url('../images/logo_bg_body.png') no-repeat bottom 30% right #f4f4f4;
+}
+.white-logos{
+	background: url('../images/carte_spirale.png') no-repeat;
+	width: 769px;
+    height: 496px;
+    bottom: 0;
+    right: 0;
+   	left: initial;
+}

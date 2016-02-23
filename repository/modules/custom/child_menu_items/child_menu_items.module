@@ -1,0 +1,81 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: chris
+ * Date: 05/10/15
+ * Time: 18:01
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function child_menu_items_menu() {
+  $items = array();
+
+  $items['admin/config/user-interface/child-menu-items'] = array(
+    'title' => t('Child Menu Items'),
+    'description' => 'Child Menu Items settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('child_menu_items_settings_form'),
+    'access arguments' => array('administer Child Menu Items'),
+    'file' => 'child_menu_items.admin.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function child_menu_items_block_info() {
+	$blocks = array();
+	$blocks['child_menu_items'] = array(
+			'info' => t('Child menu items list'),
+			'cache' => DRUPAL_NO_CACHE,
+	);
+
+	return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function child_menu_items_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    // We build the block containing the list of child menu item of the active trail.
+    case 'child_menu_items':
+      $block['subject'] = '';
+      $block['content'] = '';
+
+      $active_trail = menu_get_active_trail();
+      // Trail must be different from front page and expose the menu it belongs to (admin menu trails don't).
+      if (isset($active_trail[1]) && isset($active_trail[1]['menu_name'])) {
+        $enabled_menus = menu_fields_enabled_menus();
+        // Active trail must belong to a Menu Field enabled menu.
+        if (in_array($active_trail[1]['menu_name'], $enabled_menus)) {
+          $variables['menu_item_link_path'] = $active_trail[count($active_trail) - 1]['link_path'];
+          $block['content'] = theme('cmi_list', $variables);
+        }
+      }
+      break;
+  }
+
+  return $block;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function child_menu_items_theme($existing, $type, $theme, $path) {
+  return array(
+    'cmi_list' => array(
+      'variables' => array('child_items' => NULL),
+      'file' => 'child_menu_items.pages.inc',
+      'template' => 'child_menu_items',
+    ),
+  );
+}
+

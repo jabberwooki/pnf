@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Pages d'atterrissage feature.
+ */
+
+include_once 'pnf_landing_pages.features.inc';

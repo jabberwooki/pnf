@@ -1,0 +1,85 @@
+<?php
+/**
+ * @file
+ * Code for the RAA feature.
+ */
+
+include_once 'pnf_raa.features.inc';
+
+/**
+ * Implements hook_block_info().
+ */
+function pnf_raa_block_info() {
+  $blocks = array();
+  $blocks['menu_raa'] = array(
+    'info' => t('PNF : Menu RAA'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function pnf_raa_block_view($delta = '') {
+  $block = array();
+
+  switch($delta) {
+    case 'menu_raa' :
+      $block['content'] = pnf_raa_get_nav_links();
+  }
+
+  return $block;
+}
+
+function pnf_raa_get_nav_links() {
+  $raa_nav_dates = pnf_raa_get_nav_dates();
+  $latest_year =  substr($raa_nav_dates[0],0,4);
+  if (null === arg(1)) {
+    $selected_year = $latest_year;
+  }
+  else {
+    $selected_year = arg(1);
+  }
+
+  // Build the distinct nav links.
+  $previous_year = '0000';
+  $output = '<ul class="menu nav">' ."\n";
+  foreach ($raa_nav_dates as $date) {
+    $year = substr($date,0,4);
+    if ($year <> $previous_year) {
+      if ($year == $selected_year) {
+        $output .= '<li class="leaf active-trail">' ."\n";
+        $output .= '<a class="active-trail active" href="/raa/' . $year . '">' . $year . "</a>\n";
+      }
+      else {
+        $output .= '<li class="leaf">' ."\n";
+        $output .= '<a href="/raa/' . $year . '">' . $year . "</a>\n";
+      }
+      $output .= "</li>\n";
+      $previous_year = $year;
+    }
+  }
+  $output .= '</ul>';
+
+  return $output;
+}
+
+function pnf_raa_get_latest_nav_year() {
+  $raa_nav_dates = pnf_raa_get_nav_dates();
+  $latest_date = array_shift($raa_nav_dates);
+
+  return substr($latest_date,0,4);
+}
+function pnf_raa_get_nav_dates() {
+  // Fetch all raa displayed publication dates.
+  $query = db_select('node', 'n');
+  $query->join('field_data_field_displayed_pub_date','pub_date', 'n.nid=pub_date.entity_id');
+  $query->addField('pub_date','field_displayed_pub_date_value');
+  $query->condition('n.status', 1);
+  $query->condition('pub_date.bundle','raa');
+  $result = $query->execute()->fetchCol();
+  rsort($result);
+
+  return $result;
+}

@@ -1,0 +1,4 @@
+name = PNF specific settings
+description = Paramétrages spécifiques à chacun des Parcs nationaux de France.
+version = 1.0
+core = 7.x
