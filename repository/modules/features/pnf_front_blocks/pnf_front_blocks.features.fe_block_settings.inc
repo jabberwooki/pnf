@@ -12,14 +12,14 @@ function pnf_front_blocks_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
-  $export['views-promotions-promos_front'] = array(
-    'cache' => -1,
-    'css_class' => 'col-md-9',
+  $export['boxes-pnf_intro_home'] = array(
+    'cache' => -2,
+    'css_class' => 'col-md-6',
     'custom' => 0,
-    'delta' => 'promotions-promos_front',
+    'delta' => 'pnf_intro_home',
     'i18n_block_language' => array(),
     'i18n_mode' => 0,
-    'module' => 'views',
+    'module' => 'boxes',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),
