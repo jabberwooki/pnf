@@ -1066,82 +1066,6 @@ blockquote.image-field-caption:before{
     margin-bottom: 20px;
 }
 
-/*Menu tools*/
-#block-menu-menu-tools  {
-   right: 0;
-   position: fixed;
-   top: 350px;
-        li{
-            margin-bottom: 2px;
-        }
-        a.tool{
-            height: 44px;
-            width: 44px;
-            line-height: 22px;            
-            display: inline-block;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            padding: 12px;
-            font-family: 'Fontawesome';
-            font-size: @font-size-h3;
-        }
-        a.tool-news:after{
-             content: '\f0e6';
-        }
-        a.tool-events:after{
-            content: '\f073';
-        }
-        a.tool-newspaper:after{
-            content: '\f1ea';
-        }
-        a.tool-multimedia:after{
-            content: '\f03e';
-        }
-        a.tool-eshop:after{
-            content: '\f07a';
-        }
-        a.tool-like:after{
-            content: '\f08a';
-        }
-        a.tool-destination:after{
-            content: '\f277';
-        }
-        a.tool-map:after{
-            content:'\f278';
-        }
-        a.tool-doc:after{
-            content:'\f02d';
-        }
-        a span {
-            text-align: right;
-            line-height: 35px;
-            right: -800px;
-            position: absolute;
-            text-align:center;
-            /*width:500px;*/
-            font-size: 14px;
-            background-color: rgba(0, 0, 0, 0.7);
-            font-family: @font-family-sans-serif;
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            -ms-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out; 
-        }
-        a:hover span {
-            right: 100%;
-            margin-top: -12px;
-            height: 44px;
-            padding-top: 6px;
-            -webkit-transition:all .6s ease-in-out;
-            -moz-transition:all .6s ease-in-out; 
-            -o-transition:all .6s ease-in-out; 
-            -ms-transition:all .6s ease-in-out;
-             transition:all .6s ease-in-out; 
-        }
-}
-
-
 /*Menu sidebar second*/
 .region-sidebar-second{
     margin-top: 137px;
@@ -1225,5 +1149,58 @@ h2.page-header{
         padding-bottom: 0;
         font-weight: 600;
         font-size: 16px;
+    }
+}
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+@media(max-width: @screen-xs-max){
+    #block-views-news-block-news-flashnews-home .view-news .carousel-inner {
+        float: left;
+        width: 50%;
+    }
+    #block-views-news-block-news-flashnews-home .view-news .carousel-control {
+        position: relative;
+        top: -25px;
+        left: -45px;
+    }
+    #block-views-news-block-news-flashnews-home .node-news.node-promoted{
+        padding: 0 15px;
+    }
+    #block-views-news-block-news-flashnews-home .field-name-title h3, #block-views-news-block-news-flashnews-home .field-name-field-displayed-pub-date {
+        float: left;
+        margin-right: 15px;
+        line-height: normal;
+    }
+    #block-views-news-block-news-flashnews-home .field-name-title h3{
+        padding-bottom: 15px;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+    .view-events .views-row .group-event-resume {
+        float: right;
+        width: 70%;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+    #block-kcore-pnf-on-the-web-clone{
+        display: block;
+    }
+    .view-events .views-row .group-event-resume {
+        float: right;
+        width: 72%;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+    .view-events .views-row .group-event-resume {
+        float: right;
+        width: 75%;
     }
 }

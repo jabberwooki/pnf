@@ -16,7 +16,7 @@
   <?php foreach ($slides as $key => $slide): ?>
     <div class="item no-gutter <?php if ($key === 0) print 'active' ?>">
           <?php foreach ($slide as $key => $item): ?>
-            <div class="col-md-3">
+            <div class="col-sm-3 col-md-3">
               <?php print $item ?>
             </div>
           <?php endforeach ?>

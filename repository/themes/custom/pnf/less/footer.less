@@ -181,6 +181,14 @@ span.on-the-web{
 	nav {
     	float: none;
 	}
+	#block-bean-bloc-contact-accueil{
+		border:none;
+		margin-top: 20px;
+		padding-left: 0;
+		.field-name-field-contact-image{
+			display: none;
+		}
+	}
 }
 
 @media(min-width: @screen-sm-min){
@@ -198,6 +206,15 @@ span.on-the-web{
 	}
 	nav {
     	float: none;
+	}
+	#block-bean-bloc-contact-accueil{
+	border-right: 1px solid @brand-primary;
+	border-left: 1px solid @brand-primary;
+	margin-top: 20px;
+	padding-left: 15px;
+	.field-name-field-contact-image{
+			display: block;
+		}
 	}
 }  /* deprecated: @screen-desktop, or @screen-md */
 
