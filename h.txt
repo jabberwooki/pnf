@@ -1,3 +1,5 @@
+BIENVENUE DANS LE MONDE MERVEILLEUX DE DRUPAL, DRUSH ET GIT !
+
     1  export PATH="$HOME/.composer/vendor/bin:$PATH"
     2  cat .bashrc 
     3  nano .bashrc 
