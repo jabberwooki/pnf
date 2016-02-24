@@ -1,0 +1,462 @@
+    1  export PATH="$HOME/.composer/vendor/bin:$PATH"
+    2  cat .bashrc 
+    3  nano .bashrc 
+    4  source .bashrc 
+    5  echo $PATH
+    6  composer global require drush/drush:dev-master
+    7  drush --version
+    8  cd /var/www/pnf
+    9  ll
+   10  nano ~/.bashrc 
+   11  source ~/.bashrc 
+   12  ll
+   13  rm www 
+   14  ll
+   15  ./scripts/build.sh 
+   16  gunzip
+   17  gunzip --help
+   18  ll www/sites/all/modules/contrib/
+   19  ll www/sites/all/modules/contrib/ckeditor/
+   20  ll /tmp/
+   21  su
+   22  clear
+   23  ./scripts/build.sh 
+   24  nano ~/.bashrc 
+   25  ll /tmp/
+   26  su
+   27  touch /tmp/test
+   28  ll /tmp/
+   29  rm /tmp/test 
+   30  ll www/sites/all/libraries/
+   31  ll www/sites/all/libraries/ckeditor/
+   32  ll www/sites/all/libraries/colorbox/
+   33  cd /tmp/
+   34  cd /var/www/pnf/www/
+   35  cd ..
+   36  ./scripts/build.sh 
+   37  cd /tmp/
+   38  wget --help
+   39  wget https://github.com/jackmoore/colorbox/archive/1.x.zip
+   40  ll 
+   41  unzip
+   42  su root
+   43  ll
+   44  unzip 1.x.zip 
+   45  ll
+   46  rm 1.x.zip 
+   47  rm -fr colorbox-1.x/
+   48  ll vmware-root/
+   49  cd /var/www/pnf
+   50  ./scripts/build.sh 
+   51  ll www/sites/all/libraries/colorbox/
+   52  cd www
+   53  drush help sql-create
+   54  drush sql-create -db-su=root --db-su-pw=2015_WebMutu --db-url="mysql://pnf:pnf@localhost/pnf"
+   55  drush
+   56  drush help sql-create
+   57  mysql -u root -p
+   58  drush sql-create --db-su=root --db-su-pw=2015_WebMutu --db-url="mysql://pnf:pnf@localhost/pnf"
+   59  mysql -u root -p
+   60  drush sql-create --db-su=root --db-su-pw=2015_WebMutu --db-url="mysql://pnf:pnf@localhost/pnce"
+   61  mysql -u root -p
+   62  clear
+   63  drush help si
+   64  cd ..
+   65  ll shared/
+   66  ll www/sites/
+   67  ll www/sites/cevennes-parcnational.fr/
+   68  drush si pnf --account-name=superadmin --account-pass=admin
+   69  cd www
+   70  cd sites/cevennes-parcnational.fr
+   71  ll
+   72  cd
+   73  su
+   74  history
+   75  cat /etc/apache2/envvars 
+   76  drush
+   77  clear
+   78  drush
+   79  drush help dl
+   80  drush si pnf --db-url="mysql://pnf:pnf@localhost/pnc"
+   81  drush si pnf --db-url='mysql://pnf:pnf@localhost/pnc'
+   82  mysql -u pnf -ppnf
+   83  drush sql-create --db-su=root --db-su-pw=2015_WebMutu --db-url="pnf:pnf@localhost/pnc"
+   84  cd /var/www
+   85  ll
+   86  drush dl drupal --select
+   87  drush help dl
+   88  drush dl drupal
+   89  cd
+   90  pwd
+   91  drush dl drupal
+   92  ll
+   93  ll drupal-7.41/
+   94  du -h drupal-7.41
+   95  cd /var/www/
+   96  ll
+   97  mysql -u pnf -ppnf
+   98  cd pnf/www/sites/cevennes-parcnational.fr
+   99  history 
+  100  81!
+  101  drush si pnf --db-url='mysql://pnf:pnf@localhost/pnc'
+  102  history | grep apache2
+  103  history | grep httpd.c
+  104  exit
+  105  pwd
+  106  cd /var/www/pnfl
+  107  cd /var/www/pnf
+  108  ll
+  109  nano repository/modules/features/kcore/kcore.module 
+  110  vim repository/modules/features/kcore/kcore.module
+  111  vi repository/modules/features/kcore/kcore.module
+  112  nl repository/modules/features/kcore/kcore.module
+  113  nano -c repository/modules/features/kcore/kcore.module 
+  114  clear
+  115  ll
+  116  cd ..
+  117  ll
+  118  git clone cd pnf
+  119  cd pnf
+  120  ll
+  121  git st
+  122  git log
+  123  ll /etc/apache2/sites-available/
+  124  cd ..
+  125  ll
+  126  cd ..
+  127  dir
+  128  cd shared/
+  129  dir
+  130  ll
+  131  cd cevennes-parcnational.fr/
+  132  ll
+  133  exit
+  134  git pull
+  135  git st
+  136  git config -l
+  137  git config core.filemode false
+  138  git config --global core.filemode false
+  139  git config -l
+  140  git st
+  141  git diff
+  142  git br
+  143  clear
+  144  git log
+  145  clear
+  146  git st
+  147  git diff
+  148  clear
+  149  git st
+  150  git co -- repository/drupal-org.make
+  151  git st
+  152  ll
+  153  cd www/
+  154  ll
+  155  cd ..
+  156  ll
+  157  git pull
+  158  drush arb
+  159  cd www
+  160  drush arb
+  161  cd sites/cevennes-parcnational.fr
+  162  drush fl
+  163  drush fra -y
+  164  cd ../../..
+  165  ll
+  166  ./scripts/build.sh 
+  167  cd www
+  168  drush fra -y
+  169  cd sites/cevennes-parcnational.fr
+  170  drush fra -y
+  171  drush updb
+  172  locate hosts.allow
+  173  cat /etc/hosts.allow 
+  174  iptables -L -n -v
+  175  su
+  176  exit
+  177  clear
+  178  cd..
+  179  cd ..
+  180  git st
+  181  git config-l
+  182  git config l
+  183  git config -l
+  184  git br
+  185  git config -l
+  186  git pull
+  187  cd ..
+  188  ll
+  189  ll pnf/
+  190  ll pnf/repository/libraries/
+  191  su
+  192  pwd
+  193  cd
+  194  ll
+  195  exit
+  196  drush
+  197  drush sql-create --db-su=root --db-su-pw=2015_WebMutu --db-url="mysql://drupal:drupal@localhost/drupal"
+  198  mysql -u drupal -p
+  199  ll profiles/
+  200  drush si standard --db-url="mysql://drupal:drupal@localhost/drupal"
+  201  drush en admin_menu -y
+  202  drush dis toolbar -y
+  203  drush dl adminimal
+  204  drush dl adminimal_theme
+  205  drush en adminimal_theme
+  206  drush en adminimal_admin_menu -y
+  207  drush cc all
+  208  drush pml|grep admin
+  209  cat /etc/apache2/sites-available/drupal 
+  210  exit
+  211  drush uli
+  212  pwgen
+  213  drush help uli
+  214  drush
+  215  drush help upwd
+  216  drush upwd admin --password=kqZqHwqA5_4P
+  217  drush uli
+  218  drush upwd admin --password=admin
+  219  drush uli
+  220  ll
+  221  ll includes/
+  222  ll
+  223  chown -R cbouniol:cbouniol .
+  224  chmod -R 770 .
+  225  ll
+  226  exit
+  227  cd ..
+  228  cd var
+  229  cd www
+  230  cd pnf
+  231  ll
+  232  cd www
+  233  ll
+  234  cd
+  235  pwd
+  236  cd ..
+  237  cd var/www/pnf
+  238  cd ..
+  239  drush dl drupal
+  240  exit
+  241  cd ..
+  242  cd var
+  243  cd www/pnf
+  244  cd ..
+  245  cd pnf/www
+  246  ll
+  247  cd sites
+  248  cd cevennes-parcnational.fr
+  249  drush status
+  250  drush uli
+  251  http://cevennes-parcnational.fr/fr/user/reset/1/1448616943/vUaSqeIetoIjvLFnBltY83ADFpo9HPcCY-EMXSogQfg/login
+  252  drush cc all
+  253  drush cc
+  254  drush pml
+  255  drush pml | grep admin
+  256  drush en ad
+  257  drush en 
+  258  drush en adminimal_admin_menu
+  259  drush pml | grep admin
+  260  drush uli
+  261  exit
+  262  history
+  263  ll
+  264  pwd
+  265  cd
+  266  cd /www
+  267  cd /var/www/
+  268  pwd
+  269  ll
+  270  mv pnf pnf.old2
+  271  sudo -i
+  272  exit
+  273  su root
+  274  ll
+  275  dir
+  276  exit
+  277  cd /var/www
+  278  git clone https://github.com/jabberwooki/pnf.git
+  279  su root
+  280  ls
+  281  clear
+  282  git clone https://github.com/jabberwooki/pnf.git
+  283  git status
+  284  cd pnf
+  285  git status
+  286  git branch
+  287  alias
+  288  ll
+  289  git checkout -b develop origin/develop
+  290  git branch
+  291  git checkout master
+  292  git branch
+  293  git checkout develop
+  294  git config l
+  295  git config -l
+  296  git config alias.br branch
+  297  git br
+  298  git config alias.st status
+  299  git st
+  300  git config alias.ci commit
+  301  git st
+  302  git config alias.co checkout
+  303  git co
+  304  git co master
+  305  git br
+  306  git co develop
+  307  git br
+  308  git config user.name webmanagerpnf
+  309  git config user.email contact@parcnational.frmutwebpn
+  310  git config user.email 
+  311  git config l
+  312  git config -l
+  313  git config core.filemode false
+  314  git config --global core.filemode false
+  315  git config -l
+  316  ll
+  317  ./scripts/build.sh
+  318  ll
+  319  ll builds
+  320  ll builds/16-02-22--12-49-20/
+  321  ll www/profiles/
+  322  ll www/sites/
+  323  cd www/sites/cevennes-parcnational.fr
+  324  drush sql-create --db-su=root --db-su-pw=2015_WebMutu --db-url=.mysql://pnc:pnc@localhost/pnc.
+  325  drush
+  326  drush sql-create --db-su=root --db-su-pw=2015_WebMutu --db-url="mysql://pnc:pnc@localhost/pnc"
+  327  drush si pnf --db-url="mysql://pnc:pnc@localhost/pnc"
+  328  ll
+  329  cd ..
+  330  ./scripts/build.sh
+  331  ll www/sites/cevennes-parcnational.fr
+  332  ll www/sites/cevennes-parcnational.fr/
+  333  cd www/sites/cevennes-parcnational.fr
+  334  drush uli
+  335  /user/reset/1/1456150514/AHOrUqyj8slVRD_5ZVm4PBMymHKn2TUWMjQWOGTBYvQ/login
+  336  drush fra -y
+  337  drush cc all
+  338  cd ../../..
+  339  git st
+  340  git config color.ui tru
+  341  git config color.ui true
+  342  git st
+  343  git diff
+  344  git add repository/themes/
+  345  git st
+  346  clear
+  347  git szt
+  348  git st
+  349  git log
+  350  halt
+  351  su root
+  352  git st
+  353  git status
+  354  ll
+  355  cd /var/www
+  356  cd /pnf
+  357  cd pnf
+  358  cd share
+  359  cd shared/
+  360  cp -r template guadeloupe-parcnational.fr
+  361  ll
+  362  cd guadeloupe-parcnational.fr/
+  363  ll
+  364  cd files/
+  365  ll
+  366  cd..
+  367  cd ..
+  368  nano settings.php 
+  369  pwd
+  370  cd ../..
+  371  ./scripts/build.sh
+  372  cd ..
+  373  cd pnf/www/sites/guadeloupe-parcnational.fr
+  374  drush sql-create --db-su=root --db-su-pw=2015-Web-Mutu 
+  375  drush sql-create --db-su=root --db-su-pw=2015-WebMutu --db-url="mysql://png:png@localhost/png"
+  376  drush site-install pnf --db-url=.mysql://png:png@localhost/png"
+  377  drush site-install pnf --db-url="mysql://png:png@localhost/png"
+  378  mysql -
+  379  mysql -u png -p png
+  380  mysql -upng -p
+  381  mysql -uroot -p
+  382  mysql -upnc -p
+  383  drush sql-create --db-su=root --db-su-pw=2015_WebMutu --db-url="mysql://png:png@localhost/png"
+  384  drush help si
+  385  drush site-install pnf --db-url="mysql://png:png@localhost/png" --db-su=root --db-su-pw=2015_WebMutu
+  386  drush uli
+  387  ll /etc/apache2/
+  388  ll /etc/apache2/sites-available/
+  389  cd /etc/apache2/sites-available/
+  390  su root
+  391  cd /var/www/pnf/www/sites/guadeloupe-parcnational.fr
+  392  drush uli
+  393  drush en kdevel -y
+  394  drush fra -y
+  395  cd ..
+  396  cevennes-parcnational.fr
+  397  cd cevennes-parcnational.fr
+  398  drush fra -y
+  399  drush cc all
+  400  cd ../guadeloupe-parcnational.fr/
+  401  drush cc all
+  402  cd /var/www/pnf
+  403  git st
+  404  git reset HEAD
+  405  git st
+  406  clear
+  407  git st
+  408  git diff
+  409  git checkout -- repository/themes/custom/pnf/less/pnce_style.css.less
+  410  git st
+  411  git add .
+  412  git st
+  413  git commit -m "creation du site png"
+  414  git st
+  415  git log
+  416  git commit --amend
+  417  git log
+  418  git push
+  419  git pull
+  420  git push
+  421  git pull origin master
+  422  git pull
+  423  ll
+  424  g
+  425  git st
+  426  git status
+  427  cd /var/www/pnf
+  428  git status
+  429  git st
+  430  git diff
+  431  cd shared
+  432  cp -r template parcnationaux.fr
+  433  ll
+  434  cp -r template parcsnationaux.fr
+  435  ll
+  436  cp -r template parcsnationaux.fr
+  437  ll
+  438  cd guadeloupe-parcnational.fr/
+  439  ll
+  440  cd ..
+  441  cd www/sites/parcsnationaux.fr
+  442  drush sql-create --db-su=root --db-su-pw=2015_WebMutu --db-url="mysql://pnf:pnf@localhost/pnf"
+  443  drush site-install pnf --db-url="mysql://pnf:pnf@localhost/pnf"
+  444  ll
+  445  cd..
+  446  cd ..
+  447  ll
+  448  cd ..
+  449  cd shared
+  450  ll
+  451  cd ..
+  452  cd www/sites/parcsnationaux.fr
+  453  drush uli
+  454  git st
+  455  git diff
+  456  cd ../../..
+  457  git st
+  458  git diff
+  459  git add .
+  460  git commit -m "Creation du site PNF"
+  461  git pull origin/master
+  462  history > h.txt
