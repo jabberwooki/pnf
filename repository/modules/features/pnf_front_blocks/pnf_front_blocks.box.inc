@@ -24,6 +24,8 @@ function pnf_front_blocks_default_box() {
 
 <p><span style="font-family:arial,helvetica,sans-serif; font-size:14px">L\'établissement public Parcs nationaux de France a été créé suite à la loi du 14 avril 2006 relative aux parcs nationaux.</span><br />
 <span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif"><strong>Il a vocation à créer du lien entre les parcs nationaux pour renforcer leur culture commune, en préservant le caractère de chacun</strong>. Il contribue également à l\'amélioration de la qualité de leur gestion, en apportant son concours technique et administratif. Grâce à sa politique de communication, il contribue à leur notoriété aux niveaux national et international.</span></span></p>
+
+<p><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">MODIFICATION TEST - A SUPPRIMER</span></span></p>
 ',
       'format' => 'full_html',
     ),
