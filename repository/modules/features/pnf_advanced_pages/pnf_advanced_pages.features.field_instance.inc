@@ -1231,7 +1231,7 @@ function pnf_advanced_pages_field_default_field_instances() {
           'colorbox_gallery_custom' => '',
           'colorbox_image_style' => '',
           'colorbox_multivalue_index' => NULL,
-          'colorbox_node_style' => '270x180',
+          'colorbox_node_style' => 'focal_270x180',
           'colorbox_node_style_first' => '',
           'field_formatter_class' => '',
           'linked_field' => array(
