@@ -329,6 +329,11 @@ nav .tb-megamenu .btn-navbar[disabled]{
 }
 nav .tb-megamenu {
     background-color: transparent;
+	    .nav > .active > a,
+	    .nav > .active > a:hover,
+	    .nav > .active > a:focus {
+	    background-color: @brand-primary;
+		}
 	    .nav > li > a{
 		color: #000;
 		text-transform: uppercase;
@@ -543,11 +548,21 @@ now override the 3.3 new styles for modern browsers & apply opacity
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 @media(max-width: @screen-xs-max){
-
+	nav{
+		margin-top: 0px;
+		position: initial !important;
+	}
+	#block-menu-menu-tools {
+    	width: 100%;
+	}
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {
+	nav{
+		margin-top: 40px;
+		position: initial !important;
+	}
 	#block-kcore-pnf-on-the-web-clone{
 		display: none;
 	}
@@ -558,7 +573,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 	#block-menu-menu-tools{
 	   right: 0;
 	   position: fixed;
-	   top: 350px;
+	   top: 220px;
 	        li{
 	            margin-bottom: 2px;
 	        }
