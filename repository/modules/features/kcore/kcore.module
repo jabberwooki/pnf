@@ -24,6 +24,7 @@ function empty_front_page_callback() {
  */
 function kcore_init() {
 	drupal_add_js(array('kcore' => array('park_code' => variable_get('park_code','pnx'))), array('type' => 'setting'));
+	drupal_add_js(drupal_get_path('theme','pnf') . '/js/carousel.js');
 }
 
 function kcore_block_view_alter(&$data, $block) {
