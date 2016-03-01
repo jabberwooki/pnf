@@ -85,6 +85,13 @@ function pnf_promotions_views_default_views() {
 
   /* Display: Bloc 3 promos */
   $handler = $view->new_display('block', 'Bloc 3 promos', 'promos_front');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'views_bootstrap_grid_plugin_style';
+  $handler->display->display_options['style_options']['columns'] = '3';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $translatables['promotions'] = array(
     t('Master'),
     t('more'),

@@ -41,6 +41,7 @@ features[field_instance][] = node-event-field_pub_dates
 features[field_instance][] = node-event-field_public
 features[field_instance][] = node-event-field_scald_gallery
 features[field_instance][] = node-event-field_sectors
+features[image][] = focal_820x410
 features[menu_links][] = menu-news_agenda:agenda
 features[menu_links][] = menu-tools_agenda:agenda
 features[node][] = event

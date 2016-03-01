@@ -118,6 +118,7 @@ function pnf_raa_views_default_views() {
   $handler->display->display_options['arguments']['field_displayed_pub_date_value']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_displayed_pub_date_value']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_displayed_pub_date_value']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_displayed_pub_date_value']['year_range'] = '-50:+50';
   $handler->display->display_options['arguments']['field_displayed_pub_date_value']['granularity_reset'] = 0;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';

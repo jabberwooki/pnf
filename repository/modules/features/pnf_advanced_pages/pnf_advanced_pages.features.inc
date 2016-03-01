@@ -87,6 +87,25 @@ function pnf_advanced_pages_image_default_styles() {
     ),
   );
 
+  // Exported image style: focal_270x180.
+  $styles['focal_270x180'] = array(
+    'label' => 'focal_270x180',
+    'effects' => array(
+      16 => array(
+        'name' => 'focal_point_scale_and_crop',
+        'data' => array(
+          'width' => 270,
+          'height' => 180,
+          'focal_point_advanced' => array(
+            'shift_x' => '',
+            'shift_y' => '',
+          ),
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: pb_275x180.
   $styles['pb_275x180'] = array(
     'label' => 'pb_275x180',

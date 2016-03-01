@@ -72,6 +72,7 @@ features[image][] = 270x180
 features[image][] = 360w
 features[image][] = 400w
 features[image][] = 415x280
+features[image][] = focal_270x180
 features[image][] = pb_275x180
 features[image][] = slide_750x500
 features[image][] = slide_900x600
