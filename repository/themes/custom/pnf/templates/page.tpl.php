@@ -77,7 +77,8 @@
 <!-- custom region top_menu -->
 <div class = "pnf_topmenu">
   <div class="container">
-    <div class="col-xs-7 col-xs-offset-5 col-md-9 col-md-offset-3 col-lg-7 col-lg-offset-5">
+<!--    <div class="col-xs-7 col-xs-offset-5 col-md-9 col-md-offset-3 col-lg-7 col-lg-offset-5"> -->
+    <div class="col-md-9 col-md-offset-3 col-lg-7 col-lg-offset-5">
       <?php if (!empty($page['top_menu'])): ?>
         <?php print render($page['top_menu']); ?>
       <?php endif; ?>
