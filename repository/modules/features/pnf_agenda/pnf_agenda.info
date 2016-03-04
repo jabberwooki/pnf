@@ -55,6 +55,7 @@ features[user_permission][] = edit any event content
 features[user_permission][] = edit own event content
 features[user_permission][] = edit terms in event_categories
 features[variable][] = field_bundle_settings_node__event
+features[variable][] = i18n_node_options_event
 features[variable][] = language_content_type_event
 features[variable][] = menu_options_event
 features[variable][] = menu_parent_event

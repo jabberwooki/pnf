@@ -671,7 +671,10 @@ Nous nous efforçons d\'y répondre dans les plus brefs délais.</p>
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_options_page';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'current',
+    1 => 'required',
+  );
   $export['i18n_node_options_page'] = $strongarm;
 
   $strongarm = new stdClass();

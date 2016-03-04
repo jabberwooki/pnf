@@ -71,6 +71,7 @@ features[uuid_term][] = 10cefd12-d3b9-40ec-8f72-a307bc542291
 features[uuid_term][] = 6e6ec346-0414-4f86-868c-f8151f3644c3
 features[uuid_term][] = e2a28688-49e5-4d6a-9f18-e283c535ef4e
 features[variable][] = field_bundle_settings_node__job
+features[variable][] = i18n_node_options_job
 features[variable][] = language_content_type_job
 features[variable][] = menu_options_job
 features[variable][] = menu_parent_job
