@@ -253,6 +253,7 @@ function kcore_user_default_permissions() {
     'name' => 'administer boxes',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'boxes',
   );
@@ -614,6 +615,7 @@ function kcore_user_default_permissions() {
     'name' => 'administer tb_megamenu',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'tb_megamenu',
   );
