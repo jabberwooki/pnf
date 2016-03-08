@@ -215,11 +215,11 @@ projects[paragraphs][version] = "1.0-rc4"
 projects[phone][subdir] = contrib
 projects[phone][version] = "1.0-beta1"
 
-;projects[print][subdir] = contrib
-;projects[print][version] = "2.0"
+projects[print][subdir] = contrib
+projects[print][version] = "2.0"
 
-projects[printfriendly][subdir] = contrib
-projects[printfriendly][version] = "1.2"
+;projects[printfriendly][subdir] = contrib
+;projects[printfriendly][version] = "1.2"
 
 ;projects[registration][subdir] = contrib
 ;projects[registration][version] = ""

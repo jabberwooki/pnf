@@ -11,7 +11,6 @@ dependencies[] = ctools
 dependencies[] = features
 dependencies[] = kcore
 dependencies[] = menu
-dependencies[] = printfriendly
 dependencies[] = text_resize
 dependencies[] = views
 features[context][] = all

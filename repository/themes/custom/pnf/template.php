@@ -7,7 +7,13 @@
 
 /*respônsive image*/
 function pnf_preprocess_image(&$vars) {
-        $vars['attributes']['class'][] = 'img-responsive'; // http://getbootstrap.com/css/#overview-responsive-images
+	if (isset($vars['attributes']['class'])) {
+    $key = sizeof($vars['attributes']['class']);
+    $vars['attributes']['class'][$key] = ' img-responsive';
+	}
+	else {
+		$vars['attributes']['class'] = 'img-responsive'; // http://getbootstrap.com/css/#overview-responsive-images
+	}
 }
 
 function pnf_preprocess_page(&$variables) {
@@ -187,5 +193,59 @@ function pnf_preprocess_html(&$vars) {
 		);
 
 		drupal_add_html_head($google_webmasters_verification, 'google_webmasters_verification');
+	}
+}
+
+function pnf_print_ui_format_link($vars) {
+	$format = $vars['format'];
+
+	foreach (module_implements('print_link') as $module) {
+		$function = $module . '_print_link';
+		if (function_exists($function)) {
+			$link = call_user_func_array($function, array());
+
+			if ($link['format'] == $format) {
+				$link_class = variable_get('print_' . $link['format'] . '_link_class', $link['class']);
+
+				$new_window = FALSE;
+				$func = $module . '_print_new_window_alter';
+				if (function_exists($func)) {
+					$func($new_window, $link['format']);
+				}
+
+				$show_link = variable_get('print_' . $link['format'] . '_show_link', PRINT_UI_SHOW_LINK_DEFAULT);
+				$link_text = filter_xss(variable_get('print_' . $link['format'] . '_link_text', $link['text']));
+
+				if ($show_link >= 2) {
+					$img = drupal_get_path('module', $module) . '/icons/' . $link['icon'];
+
+					// PNF Customisation.
+					if ($module == 'print') {
+						$img = drupal_get_path('theme', 'pnf') . '/images/print.png';
+					}
+					// End of PNF customisation.
+
+					switch ($show_link) {
+						case 2:
+							$text = theme('image', array('path' => $img, 'width' => '20px', 'height' => '20px', 'alt' => $link_text, 'title' => $link_text, 'attributes' => array('class' => array('print-icon'))));
+							break;
+						case 3:
+							$text = theme('image', array('path' => $img, 'width' => '20px', 'height' => '20px', 'alt' => $link_text, 'title' => $link_text, 'attributes' => array('class' => array('print-icon', 'print-icon-margin')))) . $link_text;
+							break;
+					}
+					$html = TRUE;
+				}
+				else {
+					$text = $link_text;
+					$html = FALSE;
+				}
+
+				return array(
+					'text' => $text,
+					'html' => $html,
+					'attributes' => _print_ui_fill_attributes($link['description'], strip_tags($link_class), $new_window),
+				);
+			}
+		}
 	}
 }

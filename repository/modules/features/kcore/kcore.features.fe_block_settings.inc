@@ -331,14 +331,14 @@ function kcore_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['printfriendly-printfriendly'] = array(
-    'cache' => 8,
+  $export['print_ui-print-links'] = array(
+    'cache' => 4,
     'css_class' => '',
     'custom' => 0,
-    'delta' => 'printfriendly',
+    'delta' => 'print-links',
     'i18n_block_language' => array(),
     'i18n_mode' => 0,
-    'module' => 'printfriendly',
+    'module' => 'print_ui',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),
