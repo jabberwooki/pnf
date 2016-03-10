@@ -1,3 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic,600italic,700italic);
+
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+.print-content {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 .print-content .node-event .content {
   background-color: white;
   padding: 15px;
@@ -47,6 +53,25 @@
 }
 .print-content .node-event .content .field-name-field-event-location .field-items {
   color: #999;
+}
+.print-content .node-news .row {
+  background-color: white;
+  padding: 15px;
+}
+.print-content .node-news .row .field-name-field-displayed-pub-date {
+  float: left;
+  width: 50%;
+  margin-bottom: 15px;
+}
+.print-content .node-news .row .field-name-field-news-category {
+  float: right;
+  width: 50%;
+  text-align: right;
+  text-transform: uppercase;
+  color: #777;
+}
+.print-content .node-news .row .field-name-body {
+  clear: both;
 }
 .print-source_url {
   padding: 0 15px;

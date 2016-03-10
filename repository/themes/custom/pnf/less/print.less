@@ -1,4 +1,7 @@
+@import "variables.less";
+
 .print-content {
+  font-family: @font-family-sans-serif;
   .node-event {
     .content {
       background-color: white;
@@ -53,7 +56,32 @@
       }
     }
   }
+
+  .node-news {
+    .row {
+      background-color: white;
+      padding: 15px;
+      .field-name-field-displayed-pub-date {
+        float: left;
+        width: 50%;
+        margin-bottom: 15px;
+
+      }
+      .field-name-field-news-category {
+        float: right;
+        width: 50%;
+        text-align: right;
+        text-transform: uppercase;
+        color: #777;
+      }
+      .field-name-body {
+        clear: both;
+      }
+    }
+  }
 }
+
+
 
 .print-source_url {
   padding: 0 15px;
