@@ -64,6 +64,26 @@ function pnf_news_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
+      'print' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -232,6 +252,32 @@ function pnf_news_field_default_field_instances() {
           'multiple_number' => '',
           'multiple_to' => '',
           'show_remaining_days' => FALSE,
+        ),
+        'type' => 'date_default',
+        'weight' => 0,
+      ),
+      'print' => array(
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'field_formatter_class' => '',
+          'format_type' => 'date_s',
+          'fromto' => 'both',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
         'weight' => 0,
@@ -427,6 +473,12 @@ function pnf_news_field_default_field_instances() {
         'type' => 'direct_download',
         'weight' => 6,
       ),
+      'print' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -541,6 +593,12 @@ function pnf_news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 22,
+      ),
+      'print' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -716,6 +774,26 @@ function pnf_news_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
       ),
+      'print' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 1,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -772,23 +850,8 @@ function pnf_news_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'paragraphs',
-        'settings' => array(
-          'field_formatter_class' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-          'view_mode' => 'full',
-        ),
-        'type' => 'paragraphs_view',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 19,
       ),
       'full' => array(
@@ -811,6 +874,27 @@ function pnf_news_field_default_field_instances() {
         ),
         'type' => 'paragraphs_view',
         'weight' => 3,
+      ),
+      'print' => array(
+        'label' => 'hidden',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -912,6 +996,12 @@ function pnf_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 23,
       ),
+      'print' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -987,6 +1077,12 @@ function pnf_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 25,
       ),
+      'print' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1057,6 +1153,12 @@ function pnf_news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 26,
+      ),
+      'print' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1138,6 +1240,12 @@ function pnf_news_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
+      'print' => array(
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 21,
@@ -1230,6 +1338,28 @@ function pnf_news_field_default_field_instances() {
         'type' => 'title',
         'weight' => 4,
       ),
+      'print' => array(
+        'label' => 'hidden',
+        'module' => 'atom_reference',
+        'settings' => array(
+          'field_formatter_class' => '',
+          'link' => 0,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'override' => 0,
+        ),
+        'type' => 'title',
+        'weight' => 17,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1307,6 +1437,12 @@ function pnf_news_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
+      'print' => array(
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 20,
