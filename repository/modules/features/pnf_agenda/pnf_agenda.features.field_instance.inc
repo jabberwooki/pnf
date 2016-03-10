@@ -1014,9 +1014,9 @@ function pnf_agenda_field_default_field_instances() {
     'required' => 1,
     'settings' => array(
       'default_value' => 'now',
-      'default_value2' => 'same',
+      'default_value2' => 'strtotime',
       'default_value_code' => '',
-      'default_value_code2' => '',
+      'default_value_code2' => '+ 10 years',
       'user_register_form' => FALSE,
     ),
     'widget' => array(

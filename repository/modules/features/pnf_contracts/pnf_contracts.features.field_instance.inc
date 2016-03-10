@@ -1016,9 +1016,9 @@ function pnf_contracts_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'default_value' => 'now',
-      'default_value2' => 'same',
+      'default_value2' => 'strtotime',
       'default_value_code' => '',
-      'default_value_code2' => '',
+      'default_value_code2' => '+ 10 years',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1029,6 +1029,7 @@ function pnf_contracts_field_default_field_instances() {
         'input_format' => 'Y-m-d H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
+        'no_fieldset' => 0,
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
