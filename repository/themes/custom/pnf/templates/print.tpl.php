@@ -82,18 +82,24 @@
       <link rel='shortcut icon' href='<?php print theme_get_setting('favicon') ?>' type='image/x-icon' />
     <?php endif; ?>
     <?php print $css; ?>
-    <link rel="stylesheet" href="/profiles/pnf/themes/custom/pnf/css/print.css" type="text/css" >
+    <link rel="stylesheet" href="/profiles/pnf/themes/custom/pnf/css/print.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/profiles/pnf/themes/custom/pnf/css/print-printer.css" type="text/css" media="print">
   </head>
   <body>
     <div class="main-container container">
       <div class="row">
         <div class="col-md-9">
-          <?php if (!empty($message)): ?>
-            <div class="print-message"><?php print $message; ?></div><p />
-          <?php endif; ?>
-          <?php if ($print_logo): ?>
-            <div class="print-logo"><?php print $print_logo; ?></div>
-          <?php endif; ?>
+          <div class="row">
+            <?php if (!empty($message)): ?>
+              <div class="print-message"><?php print $message; ?></div><p />
+            <?php endif; ?>
+            <?php $print_button_class = ''; ?>
+            <?php if ($print_logo): ?>
+              <div class="print-logo col-md-8"><?php print $print_logo; ?></div>
+              <?php $print_button_class = ' col-md-4'; ?>
+            <?php endif; ?>
+              <div class="print-button<?php print $print_button_class; ?>"><a href="javascript:window.print()"><?php print t('Print'); ?></a></div>
+            </div>
           <!--
           <div class="print-site_name"><?php print theme('print_published'); ?></div>
           <p />

@@ -11,7 +11,6 @@
   border-radius: 3px;
   color: #ffffff;
   background-color: #aaa;
-  border-color: #888;
   font-weight: 700;
 }
 .print-content {
@@ -97,4 +96,7 @@ blockquote.image-field-caption {
   background-color: transparent;
   color: #555;
   border: none;
+}
+.print-button {
+  display: none;
 }
