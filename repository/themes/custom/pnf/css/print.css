@@ -91,6 +91,13 @@
 .print-content .node-contract .field-name-body {
   margin-bottom: 15px;
 }
+.print-content .node-job {
+  background-color: white;
+  padding: 15px;
+}
+.print-content .node-job .field-name-body {
+  margin-top: 15px;
+}
 .print-source_url {
   padding: 0 15px;
   font-style: italic;

@@ -173,6 +173,42 @@ function pnf_jobs_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|job|print';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'job';
+  $ds_layout->view_mode = 'print';
+  $ds_layout->layout = 'bootstrap_12';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'central' => array(
+        0 => 'field_job_location',
+        1 => 'field_job_pub_date',
+        2 => 'field_job_deadline_date',
+        3 => 'field_job_projected_date',
+        4 => 'body',
+      ),
+    ),
+    'fields' => array(
+      'field_job_location' => 'central',
+      'field_job_pub_date' => 'central',
+      'field_job_deadline_date' => 'central',
+      'field_job_projected_date' => 'central',
+      'body' => 'central',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'central' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|job|print'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|job|teaser';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'job';
