@@ -597,7 +597,7 @@ Nous nous efforçons d\'y répondre dans les plus brefs délais.</p>
         'custom_settings' => FALSE,
       ),
       'print' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'token' => array(
         'custom_settings' => FALSE,
@@ -623,6 +623,10 @@ Nous nous efforçons d\'y répondre dans les plus brefs délais.</p>
       'display' => array(
         'language' => array(
           'default' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+          'print' => array(
             'weight' => '1',
             'visible' => FALSE,
           ),
