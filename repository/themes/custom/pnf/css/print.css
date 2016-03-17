@@ -11,7 +11,6 @@
   border-radius: 3px;
   color: #ffffff;
   background-color: #aaa;
-  border-color: #888;
   font-weight: 700;
 }
 .print-content {
@@ -85,6 +84,12 @@
 }
 .print-content .node-news .row .field-name-body {
   clear: both;
+}
+.print-content .node-contract .field-name-field-contract-object {
+  margin-bottom: 15px;
+}
+.print-content .node-contract .field-name-body {
+  margin-bottom: 15px;
 }
 .print-source_url {
   padding: 0 15px;
