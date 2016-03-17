@@ -8,13 +8,13 @@ FIND=`which find`
 
 # Get actual symlinked build
 ACTUALBUILD=""
-if [ -h www ]
+if [ -L www ]
 then
   ACTUALBUILD=`$READLINK www`
 fi
 
 # Loop on all builds and delete them except the actual one
-for b in `$FIND builds -type d`
+for b in `$FIND builds -mindepth 1 -maxdepth 1 -type d`
 do
   if [ $b != $ACTUALBUILD ]
   then
