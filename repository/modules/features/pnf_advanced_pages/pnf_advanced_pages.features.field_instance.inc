@@ -59,6 +59,27 @@ function pnf_advanced_pages_field_default_field_instances() {
         'type' => 'paragraphs_view',
         'weight' => 1,
       ),
+      'print' => array(
+        'label' => 'hidden',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -159,6 +180,12 @@ function pnf_advanced_pages_field_default_field_instances() {
         'type' => 'entityreference_label',
         'weight' => 2,
       ),
+      'print' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -220,6 +247,12 @@ function pnf_advanced_pages_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 12,
+      ),
+      'print' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',

@@ -87,6 +87,34 @@ function pnf_advanced_pages_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|advanced_page|print';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'advanced_page';
+  $ds_layout->view_mode = 'print';
+  $ds_layout->layout = 'bootstrap_12';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'central' => array(
+        0 => 'field_page_content',
+      ),
+    ),
+    'fields' => array(
+      'field_page_content' => 'central',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'central' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|advanced_page|print'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'paragraphs_item|2_cols_text|default';
   $ds_layout->entity_type = 'paragraphs_item';
   $ds_layout->bundle = '2_cols_text';
