@@ -18,6 +18,7 @@ features[ds_field_settings][] = node|event|teaser
 features[ds_field_settings][] = node|event|teaser_home
 features[ds_layout_settings][] = node|event|default
 features[ds_layout_settings][] = node|event|full
+features[ds_layout_settings][] = node|event|print
 features[ds_layout_settings][] = node|event|teaser
 features[ds_layout_settings][] = node|event|teaser_home
 features[fe_block_settings][] = views-events-block_event_docs

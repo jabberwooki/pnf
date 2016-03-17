@@ -167,6 +167,44 @@ function pnf_agenda_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|event|print';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'event';
+  $ds_layout->view_mode = 'print';
+  $ds_layout->layout = 'bootstrap_12';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'central' => array(
+        0 => 'field_event_categorie',
+        1 => 'field_public',
+        2 => 'field_key_image',
+        3 => 'field_event_dates',
+        4 => 'field_event_location',
+        5 => 'body',
+      ),
+    ),
+    'fields' => array(
+      'field_event_categorie' => 'central',
+      'field_public' => 'central',
+      'field_key_image' => 'central',
+      'field_event_dates' => 'central',
+      'field_event_location' => 'central',
+      'body' => 'central',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'central' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|event|print'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|event|teaser';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'event';

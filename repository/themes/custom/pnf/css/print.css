@@ -16,27 +16,27 @@
 .print-content {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.print-content .node-event .content {
+.print-content .node-event .row {
   background-color: white;
   padding: 15px;
 }
-.print-content .node-event .content .field-name-field-event-categorie {
+.print-content .node-event .row .field-name-field-event-categorie {
   float: left;
   text-transform: uppercase;
   color: #a0a0a0;
 }
-.print-content .node-event .content .field-name-field-public {
+.print-content .node-event .row .field-name-field-public {
   float: right;
   color: #a0a0a0;
   font-style: italic;
 }
-.print-content .node-event .content .field-name-field-event-dates {
+.print-content .node-event .row .field-name-field-event-dates {
   width: 50%;
   float: left;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.print-content .node-event .content .field-name-field-event-dates .field-label {
+.print-content .node-event .row .field-name-field-event-dates .field-label {
   float: left;
   font-size: 30px;
   font-weight: 600;
@@ -45,16 +45,16 @@
   margin-right: 20px;
   border-right: 1px solid #999;
 }
-.print-content .node-event .content .field-name-field-event-dates .field-items {
+.print-content .node-event .row .field-name-field-event-dates .field-items {
   color: #999;
 }
-.print-content .node-event .content .field-name-field-event-location {
+.print-content .node-event .row .field-name-field-event-location {
   width: 50%;
   float: right;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.print-content .node-event .content .field-name-field-event-location .field-label {
+.print-content .node-event .row .field-name-field-event-location .field-label {
   float: left;
   font-size: 30px;
   font-weight: 600;
@@ -63,7 +63,7 @@
   margin-right: 20px;
   border-right: 1px solid #999;
 }
-.print-content .node-event .content .field-name-field-event-location .field-items {
+.print-content .node-event .row .field-name-field-event-location .field-items {
   color: #999;
 }
 .print-content .node-news .row {
