@@ -17,7 +17,7 @@ function kedition_ckeditor_profile_defaults() {
     [\'Source\'],
     [\'Cut\',\'Copy\',\'Paste\',\'PasteText\',\'PasteFromWord\',\'-\',\'SpellChecker\',\'Scayt\'],
     [\'Undo\',\'Redo\',\'Find\',\'Replace\',\'-\',\'SelectAll\'],
-    [\'Image\',\'Flash\',\'Table\',\'HorizontalRule\',\'Smiley\',\'SpecialChar\'],
+    [\'Table\',\'HorizontalRule\',\'Smiley\',\'SpecialChar\'],
     [\'Maximize\',\'ShowBlocks\'],
     \'/\',
     [\'Styles\'],
@@ -66,6 +66,12 @@ function kedition_ckeditor_profile_defaults() {
         'theme_config_js' => 'f',
         'js_conf' => '',
         'loadPlugins' => array(
+          'dndck4' => array(
+            'name' => 'dndck4',
+            'desc' => 'Scald Drag and Drop integration - CKEditor 4 widgets',
+            'path' => '%base_path%sites/all/modules/contrib/scald/modules/fields/mee/plugins/dndck4/',
+            'buttons' => array(),
+          ),
           'drupalbreaks' => array(
             'name' => 'drupalbreaks',
             'desc' => 'Plugin for inserting Drupal teaser and page breaks.',
@@ -115,7 +121,7 @@ function kedition_ckeditor_profile_defaults() {
     [\'Source\'],
     [\'Cut\',\'Copy\',\'Paste\',\'PasteText\',\'PasteFromWord\',\'-\',\'SpellChecker\',\'Scayt\'],
     [\'Undo\',\'Redo\',\'Find\',\'Replace\',\'-\',\'SelectAll\'],
-    [\'Image\',\'Flash\',\'Table\',\'HorizontalRule\',\'Smiley\',\'SpecialChar\',\'Iframe\'],
+    [\'Table\',\'HorizontalRule\',\'Smiley\',\'SpecialChar\',\'Iframe\'],
     \'/\',
     [\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'-\',\'Subscript\',\'Superscript\',\'-\',\'RemoveFormat\'],
     [\'NumberedList\',\'BulletedList\',\'-\',\'Outdent\',\'Indent\',\'Blockquote\',\'CreateDiv\'],
@@ -166,6 +172,12 @@ function kedition_ckeditor_profile_defaults() {
         'theme_config_js' => 'f',
         'js_conf' => '',
         'loadPlugins' => array(
+          'dndck4' => array(
+            'name' => 'dndck4',
+            'desc' => 'Scald Drag and Drop integration - CKEditor 4 widgets',
+            'path' => '%base_path%sites/all/modules/contrib/scald/modules/fields/mee/plugins/dndck4/',
+            'buttons' => array(),
+          ),
           'drupalbreaks' => array(
             'name' => 'drupalbreaks',
             'desc' => 'Plugin for inserting Drupal teaser and page breaks.',

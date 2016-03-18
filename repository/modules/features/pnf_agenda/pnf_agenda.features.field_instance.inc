@@ -22,6 +22,17 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 0,
@@ -31,9 +42,40 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 6,
+      ),
+      'print' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -113,6 +155,17 @@ function pnf_agenda_field_default_field_instances() {
         'settings' => array(
           'data' => 'full',
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'geofield_wkt',
         'weight' => 6,
@@ -146,8 +199,25 @@ function pnf_agenda_field_default_field_instances() {
           'geofield_map_streetview_show' => 1,
           'geofield_map_width' => '100%',
           'geofield_map_zoom' => 13,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'geofield_map_map',
+        'weight' => 8,
+      ),
+      'print' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 8,
       ),
       'teaser' => array(
@@ -192,6 +262,17 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'file_default',
         'weight' => 9,
@@ -201,9 +282,26 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'download_file',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'direct_download',
         'weight' => 9,
+      ),
+      'print' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -274,6 +372,17 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 1,
@@ -283,6 +392,37 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 0,
+      ),
+      'print' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 0,
@@ -292,6 +432,17 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
@@ -301,6 +452,17 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 2,
@@ -335,6 +497,17 @@ function pnf_agenda_field_default_field_instances() {
           'field_formatter_class' => '',
           'format_type' => 'long',
           'fromto' => 'both',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
@@ -350,6 +523,17 @@ function pnf_agenda_field_default_field_instances() {
           'field_formatter_class' => '',
           'format_type' => 'long',
           'fromto' => 'both',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
@@ -358,11 +542,48 @@ function pnf_agenda_field_default_field_instances() {
         'type' => 'date_default',
         'weight' => 4,
       ),
+      'print' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'field_formatter_class' => '',
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+        ),
+        'type' => 'date_default',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'pnf_agenda',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'pnf_agenda_date',
         'weight' => 3,
@@ -372,6 +593,17 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'pnf_agenda',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'pnf_agenda_date',
         'weight' => 0,
@@ -416,6 +648,17 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 5,
@@ -425,15 +668,57 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 5,
+      ),
+      'print' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 4,
@@ -443,6 +728,17 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 3,
@@ -510,6 +806,17 @@ function pnf_agenda_field_default_field_instances() {
           'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'image',
         'weight' => 7,
@@ -520,10 +827,43 @@ function pnf_agenda_field_default_field_instances() {
         'settings' => array(
           'field_formatter_class' => '',
           'image_link' => '',
-          'image_style' => '855x415',
+          'image_style' => 'focal_820x410',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'image',
         'weight' => 3,
+      ),
+      'print' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'field_formatter_class' => '',
+          'image_link' => '',
+          'image_style' => 'focal_820x410',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -532,6 +872,17 @@ function pnf_agenda_field_default_field_instances() {
           'field_formatter_class' => '',
           'image_link' => 'content',
           'image_style' => '250x175',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'image',
         'weight' => 0,
@@ -589,6 +940,7 @@ function pnf_agenda_field_default_field_instances() {
           ),
           'source_reference' => array(
             'autocomplete' => 0,
+            'search_all_fields' => 0,
           ),
         ),
         'preview_image_style' => 'thumbnail',
@@ -612,6 +964,17 @@ function pnf_agenda_field_default_field_instances() {
           'field_formatter_class' => '',
           'format_type' => 'long',
           'fromto' => 'both',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
@@ -625,6 +988,12 @@ function pnf_agenda_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 23,
+      ),
+      'print' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -645,9 +1014,9 @@ function pnf_agenda_field_default_field_instances() {
     'required' => 1,
     'settings' => array(
       'default_value' => 'now',
-      'default_value2' => 'same',
+      'default_value2' => 'strtotime',
       'default_value_code' => '',
-      'default_value_code2' => '',
+      'default_value_code2' => '+ 10 years',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -655,9 +1024,10 @@ function pnf_agenda_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'Y-m-d H:i:s',
+        'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
+        'no_fieldset' => 0,
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
@@ -678,6 +1048,17 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 2,
@@ -687,9 +1068,40 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 2,
+      ),
+      'print' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -733,6 +1145,17 @@ function pnf_agenda_field_default_field_instances() {
         'settings' => array(
           'field_formatter_class' => '',
           'link' => 0,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
           'override' => 0,
         ),
         'type' => 'title',
@@ -744,10 +1167,27 @@ function pnf_agenda_field_default_field_instances() {
         'settings' => array(
           'field_formatter_class' => '',
           'link' => 0,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
           'override' => 0,
         ),
         'type' => 'title',
         'weight' => 7,
+      ),
+      'print' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -799,6 +1239,17 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 3,
@@ -808,9 +1259,26 @@ function pnf_agenda_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
+      ),
+      'print' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',

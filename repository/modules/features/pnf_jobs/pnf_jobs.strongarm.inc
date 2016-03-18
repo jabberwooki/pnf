@@ -35,7 +35,7 @@ function pnf_jobs_strongarm() {
         'custom_settings' => FALSE,
       ),
       'print' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'token' => array(
         'custom_settings' => FALSE,
@@ -59,13 +59,13 @@ function pnf_jobs_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
         'metatags' => array(
           'weight' => '12',
         ),
         'title' => array(
-          'weight' => '1',
+          'weight' => '0',
         ),
         'path' => array(
           'weight' => '10',
@@ -88,11 +88,25 @@ function pnf_jobs_strongarm() {
             'weight' => '23',
             'visible' => FALSE,
           ),
+          'print' => array(
+            'weight' => '18',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),
   );
   $export['field_bundle_settings_node__job'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_job';
+  $strongarm->value = array(
+    0 => 'current',
+    1 => 'required',
+  );
+  $export['i18n_node_options_job'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -172,6 +186,27 @@ function pnf_jobs_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_job_types_pattern';
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_job_types_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_html_display_comment_job';
+  $strongarm->value = 0;
+  $export['print_html_display_comment_job'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_html_display_job';
+  $strongarm->value = 1;
+  $export['print_html_display_job'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_html_display_urllist_job';
+  $strongarm->value = 0;
+  $export['print_html_display_urllist_job'] = $strongarm;
 
   return $export;
 }

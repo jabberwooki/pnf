@@ -96,3 +96,14 @@ function kcore_update_7012() {
 function kcore_update_7013() {
   module_enable(array('mailsystem','mimemail','mimemail_compress'));
 }
+
+/**
+ * Disable printfriendly module.
+ */
+function kcore_update_7014() {
+  if (module_exists('printfriendly')) {
+    module_disable(array('printfriendly'));
+    drupal_uninstall_modules(array('printfriendly'));
+  }
+  module_enable(array('print','print_ui'));
+}

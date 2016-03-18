@@ -100,6 +100,43 @@
       heightStyle: "content"
     });
 
+  /* Mobile version : Positionning and behavior of top menus */
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    var deviceWidth = $(window).width();
+    var mostLeftPadding = parseInt($(".pnf_topmenu .container div").css("padding-left"));
+    var secondLeftPadding = parseInt($("#block-menu-menu-menu-park").css("width"));
+    var thirdLeftPadding = parseInt($("#block-menu-menu-tools").css("width"));
+console.log(mostLeftPadding);
+
+    /* Menu du parc */
+    $("#block-menu-menu-menu-park button").click(function() {
+      var offset1 = $("#block-menu-menu-menu-park").offset();
+console.log(offset1);
+      $("#navbar-collapse-park").css("left", -offset1.left + mostLeftPadding);
+      $("#navbar-collapse-park").css("padding", 0);
+      $("#navbar-collapse-park").css("width", deviceWidth);
+    });
+
+    /* Les parcs nationaux */
+    $("#block-menu-menu-national-parks button").click(function() {
+      var offset2 = $("#block-menu-menu-national-parks").offset();
+console.log(offset2.left);
+console.log(secondLeftPadding);
+      $("#navbar-collapse-parks").css("left", -offset2.left + mostLeftPadding + secondLeftPadding +10);
+      $("#navbar-collapse-parks").css("padding", 0);
+      $("#navbar-collapse-parks").css("width", deviceWidth);
+    });
+
+    /* Barre d'outils */
+    $("#block-menu-menu-tools button").click(function() {
+      var offset3 = $("#block-menu-menu-tools").offset();
+      $("#navbar-collapse-tools").css("left", -offset3.left + mostLeftPadding + secondLeftPadding + thirdLeftPadding +18);
+      $("#navbar-collapse-tools").css("padding", 0);
+      $("#navbar-collapse-tools").css("width", deviceWidth);
+    });
+  }
+
+
  }); // End of document ready
 
 })(jQuery); // EOF

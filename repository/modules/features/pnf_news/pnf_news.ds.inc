@@ -181,17 +181,17 @@ function pnf_news_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'central' => array(
-        0 => 'post_date',
+        0 => 'title',
         1 => 'node_link',
-        2 => 'title',
+        2 => 'post_date',
         3 => 'field_key_image',
         4 => 'body',
       ),
     ),
     'fields' => array(
-      'post_date' => 'central',
-      'node_link' => 'central',
       'title' => 'central',
+      'node_link' => 'central',
+      'post_date' => 'central',
       'field_key_image' => 'central',
       'body' => 'central',
     ),
@@ -249,6 +249,42 @@ function pnf_news_ds_layout_settings_info() {
     'page_option_title' => '',
   );
   $export['node|news|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|news|print';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'news';
+  $ds_layout->view_mode = 'print';
+  $ds_layout->layout = 'bootstrap_12';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'central' => array(
+        0 => 'field_displayed_pub_date',
+        1 => 'field_news_category',
+        2 => 'body',
+        3 => 'field_news_content',
+        4 => 'field_scald_gallery',
+      ),
+    ),
+    'fields' => array(
+      'field_displayed_pub_date' => 'central',
+      'field_news_category' => 'central',
+      'body' => 'central',
+      'field_news_content' => 'central',
+      'field_scald_gallery' => 'central',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'central' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|news|print'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;

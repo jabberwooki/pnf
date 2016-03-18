@@ -19,6 +19,13 @@ function empty_front_page_callback() {
 	return array();
 }
 
+/**
+ * Implements hook_init().
+ */
+function kcore_init() {
+	drupal_add_js(array('kcore' => array('park_code' => variable_get('park_code','pnx'))), array('type' => 'setting'));
+}
+
 function kcore_block_view_alter(&$data, $block) {
   if ($block->delta == 'menu-menu-park' || $block->delta == 'menu-national-parks' || $block->delta == 'pnf_park_menu_clone') {
 		// Changes menu block name, based on http host.

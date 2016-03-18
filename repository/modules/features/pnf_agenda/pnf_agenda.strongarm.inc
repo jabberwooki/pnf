@@ -35,7 +35,7 @@ function pnf_agenda_strongarm() {
         'custom_settings' => FALSE,
       ),
       'print' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'token' => array(
         'custom_settings' => FALSE,
@@ -48,6 +48,15 @@ function pnf_agenda_strongarm() {
       ),
       'teaser_home' => array(
         'custom_settings' => TRUE,
+      ),
+      'teaser_home_files' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser_home_flashnews' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser_list_flashnews' => array(
+        'custom_settings' => FALSE,
       ),
     ),
     'extra_fields' => array(
@@ -86,11 +95,25 @@ function pnf_agenda_strongarm() {
             'weight' => '12',
             'visible' => FALSE,
           ),
+          'print' => array(
+            'weight' => '6',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),
   );
   $export['field_bundle_settings_node__event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_event';
+  $strongarm->value = array(
+    0 => 'current',
+    1 => 'required',
+  );
+  $export['i18n_node_options_event'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -172,6 +195,27 @@ function pnf_agenda_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_event_categories_pattern';
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_event_categories_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_html_display_comment_event';
+  $strongarm->value = 0;
+  $export['print_html_display_comment_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_html_display_event';
+  $strongarm->value = 1;
+  $export['print_html_display_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_html_display_urllist_event';
+  $strongarm->value = 0;
+  $export['print_html_display_urllist_event'] = $strongarm;
 
   return $export;
 }

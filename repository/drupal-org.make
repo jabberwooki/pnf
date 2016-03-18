@@ -6,8 +6,8 @@ projects[admin_menu][subdir] = contrib
 projects[admin_menu][version] = "3.0-rc5"
 
 projects[better_formats][subdir] = contrib
-projects[better_formats][version] = "1.0-beta1"
-projects[better_formats][patch][] = "https://www.drupal.org/files/issues/better_format-n1717470-11.patch"
+projects[better_formats][version] = "1.0-beta2"
+;projects[better_formats][patch][] = "https://www.drupal.org/files/issues/better_format-n1717470-11.patch"
 
 
 projects[better_exposed_filters][subdir] = contrib
@@ -20,10 +20,10 @@ projects[ctools][subdir] = contrib
 projects[ctools][version] = "1.9"
 
 projects[ds][subdir] = contrib
-projects[ds][version] = "2.11"
+projects[ds][version] = "2.13"
 
 projects[entity][subdir] = contrib
-projects[entity][version] = "1.6"
+projects[entity][version] = "1.7"
 
 projects[features][subdir] = contrib
 projects[features][version] = "2.7"
@@ -44,7 +44,7 @@ projects[imce_mkdir][subdir] = contrib
 projects[imce_mkdir][version] = "1.0"
 
 projects[jquery_update][subdir] = contrib
-projects[jquery_update][version] = "3.0-alpha2"
+projects[jquery_update][version] = "3.0-alpha3"
 
 projects[l10n_update][subdir] = contrib
 projects[l10n_update][version] = "2.0"
@@ -53,7 +53,7 @@ projects[libraries][subdir] = contrib
 projects[libraries][version] = "2.2"
 
 projects[link][subdir] = contrib
-projects[link][version] = "1.3"
+projects[link][version] = "1.4"
 
 projects[linkit][subdir] = contrib
 projects[linkit][version] = "3.5"
@@ -140,7 +140,7 @@ projects[entityreference][subdir] = contrib
 projects[entityreference][version] = "1.1"
 
 projects[field_collection][subdir] = contrib
-projects[field_collection][version] = "1.0-beta10"
+projects[field_collection][version] = "1.0-beta11"
 
 projects[field_formatter_class][subdir] = contrib
 projects[field_formatter_class][version] = "1.1"
@@ -155,7 +155,7 @@ projects[fitvids][subdir] = contrib
 projects[fitvids][version] = "1.17"
 
 projects[focal_point][subdir] = contrib
-projects[focal_point][version] = "1.0-beta5"
+projects[focal_point][version] = "1.0-beta6"
 
 projects[image_field_caption][subdir] = contrib
 projects[image_field_caption][version] = "2.1"
@@ -165,7 +165,7 @@ projects[filefield_sources][subdir] = contrib
 projects[filefield_sources][version] = "1.10"
 
 projects[honeypot][subdir] = contrib
-projects[honeypot][version] = "1.21"
+projects[honeypot][version] = "1.22"
 
 projects[honeypot_entityform][subdir] = contrib
 projects[honeypot_entityform][version] = "1.0"
@@ -189,7 +189,7 @@ projects[menu_admin_per_menu][subdir] = contrib
 projects[menu_admin_per_menu][version] = "1.1"
 
 projects[menu_attributes][subdir] = contrib
-projects[menu_attributes][version] = "1.0-rc3"
+projects[menu_attributes][version] = "1.0"
 
 projects[menu_fields][subdir] = contrib
 projects[menu_fields][version] = "1.x-dev"
@@ -215,11 +215,11 @@ projects[paragraphs][version] = "1.0-rc4"
 projects[phone][subdir] = contrib
 projects[phone][version] = "1.0-beta1"
 
-;projects[print][subdir] = contrib
-;projects[print][version] = "2.0"
+projects[print][subdir] = contrib
+projects[print][version] = "2.0"
 
-projects[printfriendly][subdir] = contrib
-projects[printfriendly][version] = "1.2"
+;projects[printfriendly][subdir] = contrib
+;projects[printfriendly][version] = "1.2"
 
 ;projects[registration][subdir] = contrib
 ;projects[registration][version] = ""
@@ -295,7 +295,7 @@ projects[geofield][version] = "2.3"
 ;projects[addthis_displays][version] = "4.0-alpha6"
 
 projects[addtoany][subdir] = contrib
-projects[addtoany][version] = "4.11"
+projects[addtoany][version] = "4.12"
 
 projects[on_the_web][subdir] = contrib
 projects[on_the_web][version] = "1.5"
@@ -312,7 +312,7 @@ projects[scald][subdir] = contrib
 projects[scald][version] = "1.6"
 
 projects[scald_file][subdir] = contrib
-projects[scald_file][version] = "1.2"
+projects[scald_file][version] = "1.3"
 
 projects[scald_dailymotion][subdir] = contrib
 projects[scald_dailymotion][version] = "1.4"

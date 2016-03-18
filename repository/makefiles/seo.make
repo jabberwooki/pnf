@@ -6,7 +6,7 @@ projects[globalredirect][subdir] = contrib
 projects[globalredirect][version] = "1.5"
 
 projects[metatag][subdir] = contrib
-projects[metatag][version] = "1.7"
+projects[metatag][version] = "1.13"
 
 projects[page_title][subdir] = contrib
 projects[page_title][version] = "2.7"

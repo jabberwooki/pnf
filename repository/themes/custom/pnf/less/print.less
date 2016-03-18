@@ -1,0 +1,122 @@
+@import "variables.less";
+
+.print-button {
+  text-align: right;
+  a {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    color: #ffffff;
+    background-color: #aaa;
+    font-weight: 700;
+  }
+}
+.print-content {
+  font-family: @font-family-sans-serif;
+  .node-event {
+    .row {
+      background-color: white;
+      padding: 15px;
+      .field-name-field-event-categorie {
+        float: left;
+        text-transform: uppercase;
+        color: #a0a0a0;
+      }
+      .field-name-field-public {
+        float: right;
+        color: #a0a0a0;
+        font-style: italic;
+      }
+      .field-name-field-key-image {
+      }
+      .field-name-field-event-dates {
+        width: 50%;
+        float: left;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .field-label {
+          float: left;
+          font-size: 30px;
+          font-weight: 600;
+          color: #999;
+          margin-right: 10px;
+          margin-right: 20px;
+          border-right: 1px solid #999;
+        }
+        .field-items {
+          color: #999;
+        }
+      }
+      .field-name-field-event-location {
+        width: 50%;
+        float: right;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .field-label {
+          float: left;
+          font-size: 30px;
+          font-weight: 600;
+          color: #999;
+          margin-right: 10px;
+          margin-right: 20px;
+          border-right: 1px solid #999;
+        }
+        .field-items {
+          color: #999;
+        }
+      }
+    }
+  }
+  .node-news {
+    .row {
+      background-color: white;
+      padding: 15px;
+      .field-name-field-displayed-pub-date {
+        float: left;
+        width: 50%;
+        margin-bottom: 15px;
+
+      }
+      .field-name-field-news-category {
+        float: right;
+        width: 50%;
+        text-align: right;
+        text-transform: uppercase;
+        color: #777;
+      }
+      .field-name-body {
+        clear: both;
+      }
+    }
+  }
+  .node-contract {
+    .field-name-field-contract-object {
+      margin-bottom: 15px;
+    }
+    .field-name-body {
+      margin-bottom: 15px;
+    }
+  }
+  .node-job {
+    background-color: white;
+    padding: 15px;
+    .field-name-body {
+      margin-top: 15px;
+    }
+  }
+}
+
+.print-source_url {
+  padding: 0 15px;
+  font-style: italic;
+  color: #999;
+}
+
+blockquote.image-field-caption {
+  margin: 0px;
+  padding: 0;
+  background-color: transparent;
+  color: #555;
+  border: none;
+}

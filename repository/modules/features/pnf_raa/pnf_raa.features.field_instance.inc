@@ -23,6 +23,17 @@ function pnf_raa_field_default_field_instances() {
           'field_formatter_class' => '',
           'format_type' => 'long',
           'fromto' => 'both',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
@@ -77,6 +88,17 @@ function pnf_raa_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'file_default',
         'weight' => 5,
@@ -146,6 +168,17 @@ function pnf_raa_field_default_field_instances() {
           'field_formatter_class' => '',
           'format_type' => 'long',
           'fromto' => 'both',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
@@ -167,9 +200,9 @@ function pnf_raa_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'default_value' => 'now',
-      'default_value2' => 'same',
+      'default_value2' => 'strtotime',
       'default_value_code' => '',
-      'default_value_code2' => '',
+      'default_value_code2' => '+ 10 years',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -177,9 +210,10 @@ function pnf_raa_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'Y-m-d H:i:s',
+        'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
+        'no_fieldset' => 0,
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
@@ -200,6 +234,17 @@ function pnf_raa_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 1,

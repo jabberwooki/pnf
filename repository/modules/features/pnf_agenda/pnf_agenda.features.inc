@@ -50,6 +50,34 @@ function pnf_agenda_custom_breadcrumb_features_default_settings() {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function pnf_agenda_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: focal_820x410.
+  $styles['focal_820x410'] = array(
+    'label' => 'focal_820x410',
+    'effects' => array(
+      17 => array(
+        'name' => 'focal_point_scale_and_crop',
+        'data' => array(
+          'width' => 820,
+          'height' => 410,
+          'focal_point_advanced' => array(
+            'shift_x' => '',
+            'shift_y' => '',
+          ),
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function pnf_agenda_node_info() {

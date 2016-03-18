@@ -88,15 +88,15 @@ function kcore_user_default_permissions() {
     'module' => 'download_file',
   );
 
-  // Exported permission: 'access printfriendly'.
-  $permissions['access printfriendly'] = array(
-    'name' => 'access printfriendly',
+  // Exported permission: 'access print'.
+  $permissions['access print'] = array(
+    'name' => 'access print',
     'roles' => array(
       'administrateur' => 'administrateur',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
-    'module' => 'printfriendly',
+    'module' => 'print',
   );
 
   // Exported permission: 'access site in maintenance mode'.
@@ -253,6 +253,7 @@ function kcore_user_default_permissions() {
     'name' => 'administer boxes',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'boxes',
   );
@@ -568,13 +569,13 @@ function kcore_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: 'administer printfriendly'.
-  $permissions['administer printfriendly'] = array(
-    'name' => 'administer printfriendly',
+  // Exported permission: 'administer print'.
+  $permissions['administer print'] = array(
+    'name' => 'administer print',
     'roles' => array(
       'administrateur' => 'administrateur',
     ),
-    'module' => 'printfriendly',
+    'module' => 'print',
   );
 
   // Exported permission: 'administer search'.
@@ -614,6 +615,7 @@ function kcore_user_default_permissions() {
     'name' => 'administer tb_megamenu',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'tb_megamenu',
   );
@@ -875,6 +877,15 @@ function kcore_user_default_permissions() {
       'administrateur' => 'administrateur',
     ),
     'module' => 'features',
+  );
+
+  // Exported permission: 'node-specific print configuration'.
+  $permissions['node-specific print configuration'] = array(
+    'name' => 'node-specific print configuration',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'print_ui',
   );
 
   // Exported permission: 'preview focal point'.

@@ -1,0 +1,102 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic,600italic,700italic);
+
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+.print-button {
+  text-align: right;
+}
+.print-button a {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #aaa;
+  font-weight: 700;
+}
+.print-content {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.print-content .node-event .content {
+  background-color: white;
+  padding: 15px;
+}
+.print-content .node-event .content .field-name-field-event-categorie {
+  float: left;
+  text-transform: uppercase;
+  color: #a0a0a0;
+}
+.print-content .node-event .content .field-name-field-public {
+  float: right;
+  color: #a0a0a0;
+  font-style: italic;
+}
+.print-content .node-event .content .field-name-field-event-dates {
+  width: 50%;
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.print-content .node-event .content .field-name-field-event-dates .field-label {
+  float: left;
+  font-size: 30px;
+  font-weight: 600;
+  color: #999;
+  margin-right: 10px;
+  margin-right: 20px;
+  border-right: 1px solid #999;
+}
+.print-content .node-event .content .field-name-field-event-dates .field-items {
+  color: #999;
+}
+.print-content .node-event .content .field-name-field-event-location {
+  width: 50%;
+  float: right;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.print-content .node-event .content .field-name-field-event-location .field-label {
+  float: left;
+  font-size: 30px;
+  font-weight: 600;
+  color: #999;
+  margin-right: 10px;
+  margin-right: 20px;
+  border-right: 1px solid #999;
+}
+.print-content .node-event .content .field-name-field-event-location .field-items {
+  color: #999;
+}
+.print-content .node-news .row {
+  background-color: white;
+  padding: 15px;
+}
+.print-content .node-news .row .field-name-field-displayed-pub-date {
+  float: left;
+  width: 50%;
+  margin-bottom: 15px;
+}
+.print-content .node-news .row .field-name-field-news-category {
+  float: right;
+  width: 50%;
+  text-align: right;
+  text-transform: uppercase;
+  color: #777;
+}
+.print-content .node-news .row .field-name-body {
+  clear: both;
+}
+.print-source_url {
+  padding: 0 15px;
+  font-style: italic;
+  color: #999;
+}
+blockquote.image-field-caption {
+  margin: 0px;
+  padding: 0;
+  background-color: transparent;
+  color: #555;
+  border: none;
+}
+.print-button {
+  display: none;
+}

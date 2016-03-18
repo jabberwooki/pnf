@@ -83,3 +83,18 @@ function pnf_raa_get_nav_dates() {
 
   return $result;
 }
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function pnf_raa_views_pre_render(&$view) {
+  if ($view->name == 'raa') {
+    // Breadcrumb fixed.
+    $breadcrumb = drupal_get_breadcrumb();
+    array_pop($breadcrumb);
+    drupal_set_breadcrumb($breadcrumb);
+
+    // RAA year added to view title.
+    $view->build_info['title'] .= ' ' . $view->args[0];
+  }
+}

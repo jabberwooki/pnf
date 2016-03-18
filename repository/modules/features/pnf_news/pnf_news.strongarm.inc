@@ -35,7 +35,7 @@ function pnf_news_strongarm() {
         'custom_settings' => FALSE,
       ),
       'print' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'token' => array(
         'custom_settings' => FALSE,
@@ -111,11 +111,25 @@ function pnf_news_strongarm() {
             'weight' => '17',
             'visible' => FALSE,
           ),
+          'print' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),
   );
   $export['field_bundle_settings_node__news'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_news';
+  $strongarm->value = array(
+    0 => 'current',
+    1 => 'required',
+  );
+  $export['i18n_node_options_news'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -223,6 +237,27 @@ function pnf_news_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_sectors_pattern';
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_sectors_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_html_display_comment_news';
+  $strongarm->value = 0;
+  $export['print_html_display_comment_news'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_html_display_news';
+  $strongarm->value = 1;
+  $export['print_html_display_news'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_html_display_urllist_news';
+  $strongarm->value = 0;
+  $export['print_html_display_urllist_news'] = $strongarm;
 
   return $export;
 }
