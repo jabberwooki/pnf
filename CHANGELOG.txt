@@ -1,4 +1,47 @@
-PNF 1.0 - 2015-02-23
+PNF 1.0.1 - 2016-03-18
+----------------------
+ 01abfee kcore up: exported node 'Les Parcs nationaux en France' updated due to the new Print module settings.
+ edce309 Install profile up: clean.sh script improved.
+ 930432f kpages up: print view mode created.
+ 11a870c pnf_advanced_pages up: print view mode created.
+ 8395c95 pnf_jobs up: print view mode created.
+ ffff030 pnf_agenda up: print view mode updated.
+ 64908c5 pnf_news up: missing node|news|print added.
+ d2a5d95 pnf_contracts up: Erroneous addition of node|news|print view mode cancelled.
+ a85ab08 pnf_contracts up: print ds view mode created.
+ 0500300 Print button added to print version of pages.
+ 2a3437b features agenda, contracts, documents and news up: Publication end date default value set to relative + 10 years.
+ 8116ac2 Custom theme up: print.css edited for news type.
+ 691c247 pnf_news up: print ds view mode createad.
+ 181b38a pnf_agenda up: print ds view mode created.
+ 573a5ed Major change in printing tool: Printfriendly module replaced par Print module.
+ 1b5a29c kedition up: Closes #97: Image and Flash insertion button removed from CKEditor toolbar for both full and advanced profiles.
+ d172dfe kcore up: Closes #170: Bean creation request replaced by admin permissions on boxes and TB mega menu added to webmaster role.
+ 285a110 All content types up: i18n settings altered: French language set as default.
+ 29447e6 pnf_agenda, pnf_contracts, pnf_documents, pnf_jobs, pnf_news and pnf_raa up: All  date fields backoffice formats changed to dd/mm/yyyy French format.
+ 3889ec6 PNF custom theme up: Major changes for top menus on mobiles.
+ 753a3b8 Merge branch 'develop' of https://github.com/jabberwooki/pnf into develop
+ 6bec268 Cancel modifications made in commit 8496c522da899d393ed818a3dcf8117cc41f1c2f about carousel.js. Back to the Bootstrap version.
+ e839f06 modif menu mobile
+ 94a7637 kcore and kcontextes up: Contextes reorganized for Tools menu.
+ 8496c52 PNF custom theme up: Closes #215: Slideshow on windows 9: Default Bootstrap carousel.js library disabled and replaced by Barry vd. Heuvel carousel.js library (see https://gist.github.com/barryvdh/6155151).
+ 532717f Merge branch 'develop' of https://github.com/jabberwooki/pnf into develop
+ 7ccb9c9 kcore and Ckeditor settings up: Closes #107 and #253: Ckeditor settings are made site-specific using a custom php variable ['park_code'] in settings.php.
+ e61b8f4 modifs css divers
+ 0bef331 PNF custom theme up: Close #195: Scald file template customized to remove the PDF icon displayed just before file name.
+ 1da68f0 pnf_advanced_pages up: DnD and MEE checkboxes checked in all text fields used by paragraphs bundles.
+ f21eb4f kedition up: Scald Drand and Drop integration activated in CKeditor's full and advanced profiles.
+ 59acd4e pnf_agenda up: Closes #219: New image style focal_820x410 created and used in agenda items full mode.
+ fdb1126 pnf_advanced_pages up: Closes #226: new image style focal_270x180 added and used in images_group paragraphs bundle (3 images).
+ 1c6390d pnf_raa up: Bugfix: All raa nodes are now visible. Default year range for view argument changed from -3:+3 to -50:+50 and raa view breadcrumb recoded."
+ f7a6646 remodif texte accueil PNF
+ 5a5c9ab Modif texte d'accueil PNF.
+ 739e553 test modif du fichier h.txt
+ fb3b698 test ajout fichier txt
+ 39ac910 Merge branch 'develop' of https://github.com/jabberwooki/pnf into develop
+ df6e45c creation du site png
+
+PNF 1.0 - 2016-02-23
 --------------------
 First production release.
 
