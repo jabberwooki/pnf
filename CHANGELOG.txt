@@ -1,5 +1,11 @@
-PNF 1.0.1 - 2016-03-18
+PNx 1.0.2 - 2016-04-01
 ----------------------
+ Hotfix on PNC
+ 3934962 pnf_front_blocks up : Box 'PNC : bouton Festival Nature' created and added to context pnce_front.
+
+PNx 1.0.1 - 2016-03-18
+----------------------
+ ff0b0fd Major update of Drupal (from 7.41 to 7.43), 12 contrib modules and Adminimal theme.
  01abfee kcore up: exported node 'Les Parcs nationaux en France' updated due to the new Print module settings.
  edce309 Install profile up: clean.sh script improved.
  930432f kpages up: print view mode created.
