@@ -102,7 +102,13 @@ function pnf_front_blocks_context_default_contexts() {
           'module' => 'views',
           'delta' => 'events-block_events_home',
           'region' => 'pre_content_right',
-          'weight' => '0',
+          'weight' => '-10',
+        ),
+        'boxes-button_festival_nature' => array(
+          'module' => 'boxes',
+          'delta' => 'button_festival_nature',
+          'region' => 'pre_content_right',
+          'weight' => '-9',
         ),
         'views-news-block_news_files_home' => array(
           'module' => 'views',
