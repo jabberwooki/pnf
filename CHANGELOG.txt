@@ -1,3 +1,9 @@
+PNx 1.0.3 - 2016-04-01
+----------------------
+New release containing the previous 3934962 commit.
+Performed to fix the useless previous hotfix that did not add the new Box 'PNC : bouton Festival Nature' to master branch
+because the commit was made on branch develep before creating the hotfix. What a stupid boy am I!
+
 PNx 1.0.2 - 2016-04-01
 ----------------------
  Hotfix on PNC
