@@ -13,6 +13,23 @@ function pnf_front_blocks_default_box() {
   $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
+  $box->delta = 'button_festival_nature';
+  $box->plugin_key = 'simple';
+  $box->title = '<none>';
+  $box->description = 'PNC : Bouton Festival Nature';
+  $box->options = array(
+    'body' => array(
+      'value' => '<p><a href="http://destination.cevennes-parcnational.fr/#/?categories=E" target="_blank"><img alt="" src="/profiles/pnf/themes/custom/pnf/images/bouton-festival-nature.gif" style="width: 257px; height: 65px;" /></a></p>
+',
+      'format' => 'full_html',
+    ),
+    'additional_classes' => '',
+  );
+  $export['button_festival_nature'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
   $box->delta = 'pnf_intro_home';
   $box->plugin_key = 'simple';
   $box->title = 'Parcs nationaux de France';
