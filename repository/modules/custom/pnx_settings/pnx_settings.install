@@ -56,7 +56,7 @@ function pnx_settings_install() {
       break;
 
     case 'vanoise-parcnational':
-      //module_enable(array(''));
+      module_enable(array('pnf_agenda'));
       break;
   }
 
