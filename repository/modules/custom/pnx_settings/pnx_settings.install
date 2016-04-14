@@ -52,7 +52,7 @@ function pnx_settings_install() {
       break;
 
     case 'reunion-parcnational':
-      //module_enable(array(''));
+      module_enable(array('pnf_agenda'));
       break;
 
     case 'vanoise-parcnational':
