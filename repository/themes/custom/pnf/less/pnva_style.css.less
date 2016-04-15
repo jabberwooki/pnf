@@ -11,8 +11,20 @@
 
 // CUSTOM VARIABLES
 @brand-primary: #001489;
+@brand-secondary: @brand-primary;
 @navbar-default-bg: @brand-primary;
 
 body{
   background: url('../images/logo_bg_body.png') no-repeat bottom 30% right #f4f4f4;
+}
+
+
+.main-container {
+  a:not(.btn) {
+    //color: #78be20 !important;
+  color: darken(#78be20, 12%) !important;
+  }
+  blockquote:before, blockquote:after {
+    color: #001489;
+  }
 }
