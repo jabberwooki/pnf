@@ -14,11 +14,52 @@
 @brand-secondary: #919388;
 @navbar-default-bg: @brand-primary;
 
+body{
+  background: url('../images/logo_bg_body.png') no-repeat bottom 30% right #f4f4f4;
+}
+
 .main-container {
   a:not(.btn) {
     color: #e04e39 !important;
   }
   blockquote:before, blockquote:after {
     color: #046a38;
+  }
+}
+
+
+/* Top menus */
+#block-menu-menu-national-parks,
+#block-menu-menu-menu-park {
+  ul li ul.dropdown-menu li a:hover{
+    background-color: #cdceca;
+  }
+}
+
+/* TB Megamenu */
+nav .tb-megamenu {
+  .nav .dropdown-menu {
+    a.mega-group-title,
+    a.mega-group-title:hover{
+      color: #e04e39;
+    }
+    ul li a:hover {
+      background: #cdceca;
+    }
+  }
+}
+
+/* Sidebar menu */
+.region-sidebar-second .block-pnf-raa,
+.region-sidebar-second .block-menu {
+  ul li a {
+    background: #cdceca;
+    color: #3a353c !important;
+  }
+  ul li.open a,
+  ul li a.active{
+    background: #919388;
+    color: #FFF !important;
+    font-weight: 600;
   }
 }
