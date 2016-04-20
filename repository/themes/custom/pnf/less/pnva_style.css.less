@@ -18,7 +18,7 @@ body{
   background: url('../images/logo_bg_body.png') no-repeat bottom 30% right #f4f4f4;
 }
 
-
+/* Main site colors */
 .main-container {
   a:not(.btn) {
     //color: #78be20 !important;
@@ -26,5 +26,45 @@ body{
   }
   blockquote:before, blockquote:after {
     color: #001489;
+  }
+}
+
+.pnf_pre_footer {
+  background: #689d26;
+}
+
+/* Top menus */
+#block-menu-menu-national-parks,
+#block-menu-menu-menu-park {
+  ul li ul.dropdown-menu li a:hover{
+    background-color: #c6d4b5;
+  }
+}
+
+/* TB Megamenu */
+nav .tb-megamenu {
+  .nav .dropdown-menu {
+    a.mega-group-title,
+    a.mega-group-title:hover{
+      color: #689d26;
+    }
+    ul li a:hover {
+      background: #c6d4b5;
+    }
+  }
+}
+
+/* Sidebar menu */
+.region-sidebar-second .block-pnf-raa,
+.region-sidebar-second .block-menu {
+  ul li a {
+    background: #c6d4b5;
+    color: #35382f !important;
+  }
+  ul li.open a,
+  ul li a.active{
+    background: #689d26;
+    color: #FFF !important;
+    font-weight: 600;
   }
 }
