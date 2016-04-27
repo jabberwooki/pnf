@@ -22,6 +22,17 @@ function pnf_multimedia_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 3,
@@ -31,6 +42,17 @@ function pnf_multimedia_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_plain',
         'weight' => 2,
@@ -104,6 +126,17 @@ function pnf_multimedia_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 1,
@@ -113,6 +146,17 @@ function pnf_multimedia_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
@@ -152,6 +196,17 @@ function pnf_multimedia_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 4,
@@ -231,6 +286,17 @@ function pnf_multimedia_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 1,
@@ -252,6 +318,17 @@ function pnf_multimedia_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 1,
@@ -285,6 +362,17 @@ function pnf_multimedia_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 1,
@@ -294,6 +382,17 @@ function pnf_multimedia_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 1,
@@ -333,6 +432,17 @@ function pnf_multimedia_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'text_default',
         'weight' => 3,
@@ -412,6 +522,17 @@ function pnf_multimedia_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 1,

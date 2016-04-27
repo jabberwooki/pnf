@@ -98,6 +98,7 @@ features[uuid_term][] = a11bc3af-0f5a-4cdd-ad9a-7a3304eb8970
 features[uuid_term][] = ada69fa2-d961-472c-82fa-f044f0a166bb
 features[uuid_term][] = dbf7ebef-3b25-4f1c-a8db-5c031de33c79
 features[variable][] = field_bundle_settings_node__news
+features[variable][] = i18n_node_extended_news
 features[variable][] = i18n_node_options_news
 features[variable][] = language_content_type_news
 features[variable][] = menu_options_news
