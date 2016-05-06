@@ -387,6 +387,8 @@ function pnf_front_blocks_context_default_contexts() {
     'domain' => array(
       'values' => array(
         '*.parc-pyrenees.*' => '*.parc-pyrenees.*',
+        'preprod-pnp.*' => 'preprod-pnp.*',
+        'prod-pnp.*' => 'prod-pnp.*',
       ),
     ),
     'path' => array(
@@ -395,7 +397,42 @@ function pnf_front_blocks_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array();
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-news-block_news_news_home' => array(
+          'module' => 'views',
+          'delta' => 'news-block_news_news_home',
+          'region' => 'pre_content_left',
+          'weight' => '-10',
+        ),
+        'views-news-block_news_flashnews_home' => array(
+          'module' => 'views',
+          'delta' => 'news-block_news_flashnews_home',
+          'region' => 'pre_content_left',
+          'weight' => '-9',
+        ),
+        'views-events-block_events_home' => array(
+          'module' => 'views',
+          'delta' => 'events-block_events_home',
+          'region' => 'pre_content_right',
+          'weight' => '-10',
+        ),
+        'views-news-block_news_files_home' => array(
+          'module' => 'views',
+          'delta' => 'news-block_news_files_home',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+        'views-promotions-promos_front' => array(
+          'module' => 'views',
+          'delta' => 'promotions-promos_front',
+          'region' => 'content',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
   $context->condition_mode = 1;
 
   // Translatables

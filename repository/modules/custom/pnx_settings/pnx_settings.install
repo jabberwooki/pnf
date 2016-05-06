@@ -40,7 +40,7 @@ function pnx_settings_install() {
       break;
 
     case 'parc-pyrenees':
-      //module_enable(array(''));
+      module_enable(array('pnf_agenda'));
       break;
 
     case 'parcsnationaux':
