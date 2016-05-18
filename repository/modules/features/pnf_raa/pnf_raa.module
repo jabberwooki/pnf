@@ -34,6 +34,9 @@ function pnf_raa_block_view($delta = '') {
 
 function pnf_raa_get_nav_links() {
   $raa_nav_dates = pnf_raa_get_nav_dates();
+  if (empty($raa_nav_dates)) {
+    return '';
+  }
   $latest_year =  substr($raa_nav_dates[0],0,4);
   if (null === arg(1)) {
     $selected_year = $latest_year;
