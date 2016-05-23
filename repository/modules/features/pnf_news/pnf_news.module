@@ -6,6 +6,13 @@
 
 include_once 'pnf_news.features.inc';
 
+function pnf_news_init() {
+  $node = menu_get_object();
+  if (!empty($node) && $node->type == "news") {
+    drupal_add_js(drupal_get_path('module','pnf_news') . '/js/pnf_news.js');
+  }
+}
+
 /**
  * Implements hook_node_view().
  */
