@@ -58,6 +58,9 @@ function pnf_news_strongarm() {
       'teaser_home_files' => array(
         'custom_settings' => TRUE,
       ),
+      'linked_content' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -113,6 +116,10 @@ function pnf_news_strongarm() {
           ),
           'print' => array(
             'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'linked_content' => array(
+            'weight' => '11',
             'visible' => FALSE,
           ),
         ),

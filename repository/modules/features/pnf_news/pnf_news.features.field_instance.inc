@@ -64,6 +64,12 @@ function pnf_news_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
+      'linked_content' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'print' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -255,6 +261,12 @@ function pnf_news_field_default_field_instances() {
         ),
         'type' => 'date_default',
         'weight' => 0,
+      ),
+      'linked_content' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
       ),
       'print' => array(
         'label' => 'hidden',
@@ -473,6 +485,12 @@ function pnf_news_field_default_field_instances() {
         'type' => 'direct_download',
         'weight' => 6,
       ),
+      'linked_content' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'print' => array(
         'label' => 'above',
         'settings' => array(),
@@ -593,6 +611,12 @@ function pnf_news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 22,
+      ),
+      'linked_content' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'print' => array(
         'label' => 'hidden',
@@ -774,6 +798,12 @@ function pnf_news_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
       ),
+      'linked_content' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
       'print' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
@@ -874,6 +904,12 @@ function pnf_news_field_default_field_instances() {
         ),
         'type' => 'paragraphs_view',
         'weight' => 3,
+      ),
+      'linked_content' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
       ),
       'print' => array(
         'label' => 'hidden',
@@ -996,6 +1032,12 @@ function pnf_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 23,
       ),
+      'linked_content' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
       'print' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1077,6 +1119,12 @@ function pnf_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 25,
       ),
+      'linked_content' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
       'print' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1153,6 +1201,12 @@ function pnf_news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 26,
+      ),
+      'linked_content' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'print' => array(
         'label' => 'above',
@@ -1243,6 +1297,12 @@ function pnf_news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 21,
+      ),
+      'linked_content' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
       ),
       'print' => array(
         'label' => 'above',
@@ -1337,6 +1397,12 @@ function pnf_news_field_default_field_instances() {
         ),
         'type' => 'title',
         'weight' => 4,
+      ),
+      'linked_content' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
       ),
       'print' => array(
         'label' => 'hidden',
@@ -1440,6 +1506,12 @@ function pnf_news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 20,
+      ),
+      'linked_content' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
       ),
       'print' => array(
         'label' => 'above',
