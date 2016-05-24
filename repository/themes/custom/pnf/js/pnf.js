@@ -138,7 +138,7 @@
     // <a> tag replaced by <span> tag, disguised in pseudo HTML link.
     // A click on the <span> tag scrolls window to the target position.
     var rank = 1;
-    $(".field-name-field-page-content .pn-anchor").each(function() {
+    $(".pn-anchor").each(function() {
       var targetHref = $(this).attr("href");
       var targetPosition = $(targetHref).offset();
       var linkText = $(this).text();
