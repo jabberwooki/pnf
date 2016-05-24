@@ -146,7 +146,6 @@
       $(this).replaceWith('<span id="altered-link-' + rank + '">' + linkText + '</p>');
       var newThis = $("#altered-link-" + rank);
       newThis.css("color", color);
-      newThis.css("text-decoration", "underline");
       newThis.hover(function () {
         $(this).css('cursor','pointer');
       });
