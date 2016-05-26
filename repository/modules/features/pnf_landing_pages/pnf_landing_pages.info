@@ -21,6 +21,7 @@ features[image][] = landing_page_260x260
 features[image][] = landing_page_275x150
 features[variable][] = cmi_col_number
 features[variable][] = cmi_image_format
+features[variable][] = field_bundle_settings_menu_fields__menu_menu_park
 features[variable][] = field_bundle_settings_menu_fields__menu_menu_themes
 features[variable][] = menu_fields_menus
 project path = profiles/pnf/modules/features
