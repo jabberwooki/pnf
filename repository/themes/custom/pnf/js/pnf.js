@@ -154,5 +154,9 @@
       });
       rank++;
     });
+
+    // Hugly hack to fix Menu du park bad display after Menu Field contrib module activation.
+    $("#block-menu-menu-menu-park ul.menu > li").removeClass("collapsed");
+    $("#block-menu-menu-menu-park ul.menu > li").addClass("expanded");
   }); // End of document ready
 })(jQuery); // EOF

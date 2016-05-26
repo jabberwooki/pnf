@@ -11,7 +11,7 @@ function pnf_landing_pages_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'menu_fields-menu_menu_themes-field_menu_item_image'
+  // 'menu_fields-menu_menu_themes-field_menu_item_image'.
   $field_instances['menu_fields-menu_menu_themes-field_menu_item_image'] = array(
     'bundle' => 'menu_menu_themes',
     'deleted' => 0,
@@ -30,6 +30,17 @@ function pnf_landing_pages_field_default_field_instances() {
           'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => 'landing_page_275x150',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'image',
         'weight' => 0,

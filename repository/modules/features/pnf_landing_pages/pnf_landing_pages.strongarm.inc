@@ -70,7 +70,8 @@ function pnf_landing_pages_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_fields_menus';
   $strongarm->value = array(
-    0 => 'menu-menu-themes',
+    0 => 'menu-menu-park',
+    1 => 'menu-menu-themes',
   );
   $export['menu_fields_menus'] = $strongarm;
 

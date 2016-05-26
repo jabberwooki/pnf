@@ -21,7 +21,7 @@ function child_menu_items_preprocess_cmi_list(&$variables){
   $query->addField('fd', 'field_menu_item_image_title','title');
   $query->addField('fm', 'uri');
 
-  $query->condition('ml1.menu_name', 'menu-menu-themes');
+  $query->condition('ml1.menu_name', $variables['menu_item_menu_name']);
   $query->condition('ml2.link_path', $variables['menu_item_link_path']);
   $query->orderBy('ml1.weight');
 
