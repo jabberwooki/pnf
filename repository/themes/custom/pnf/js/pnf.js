@@ -51,6 +51,15 @@
       $(this).css('width', $(this).width() + 44);
     });
 
+    // Hugly hack to fix <p> positioning within news image overlay in news list and block.
+		if ($(".node-news .group-resume .field-name-body").length) {
+			var text = '';
+			$(".node-news .group-resume .field-name-body .field-item p").each(function() {
+				text += ' ' + $(this).text();
+			});
+			$(".node-news .group-resume .field-name-body .field-item").html("<p>" + text + "</p>");
+		}
+
 
     /* Resumes image overlay */
     setParagraphSize();
