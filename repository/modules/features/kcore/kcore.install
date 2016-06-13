@@ -107,3 +107,10 @@ function kcore_update_7014() {
   }
   module_enable(array('print','print_ui'));
 }
+
+/**
+ * Activate administerusersbyrole and role_delegation modules.
+ */
+function kcore_update_7015() {
+  module_enable(array('administerusersbyrole','role_delegation'));
+}
