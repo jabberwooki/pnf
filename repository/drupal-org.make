@@ -224,6 +224,9 @@ projects[print][version] = "2.0"
 ;projects[registration][subdir] = contrib
 ;projects[registration][version] = ""
 
+projects[roleassign][subdir] = contrib
+projects[roleassign][version] = "1.1"
+
 ;projects[rules][subdir] = contrib
 ;projects[rules][version] = ""
 

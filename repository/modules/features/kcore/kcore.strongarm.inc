@@ -1047,6 +1047,17 @@ Nous nous efforçons d\'y répondre dans les plus brefs délais.</p>
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'roleassign_roles';
+  $strongarm->value = array(
+    4 => '4',
+    5 => '5',
+    3 => 0,
+  );
+  $export['roleassign_roles'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'site_default_country';
   $strongarm->value = 'FR';
   $export['site_default_country'] = $strongarm;

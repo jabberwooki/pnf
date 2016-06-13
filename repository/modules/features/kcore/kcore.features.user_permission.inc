@@ -673,6 +673,16 @@ function kcore_user_default_permissions() {
     'module' => 'xmlsitemap',
   );
 
+  // Exported permission: 'assign roles'.
+  $permissions['assign roles'] = array(
+    'name' => 'assign roles',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'roleassign',
+  );
+
   // Exported permission: 'block IP addresses'.
   $permissions['block IP addresses'] = array(
     'name' => 'block IP addresses',
