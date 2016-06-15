@@ -10,12 +10,8 @@ include_once 'pnf_multimedia.features.inc';
  * Implements hook_form_FORM_ID_alter().
  */
 function pnf_multimedia_form_scald_atom_add_form_source_alter(&$form, &$form_state, $form_id) {
-  if (in_array(arg(2), array('audio','video'))) {
-    drupal_add_js(drupal_get_path('module','pnf_multimedia') . '/js/pnf_multimedia.js');
-
-    if (arg(2) == 'video') {
-      unset($form['source']['#options']['scald_video']);
-    }
+  if (arg(2) == 'video') {
+    unset($form['source']['#options']['scald_video']);
   }
 }
 
