@@ -52,13 +52,15 @@
     });
 
     // Hugly hack to fix <p> positioning within news image overlay in news list and block.
-		if ($(".node-news .group-resume .field-name-body").length) {
-			var text = '';
-			$(".node-news .group-resume .field-name-body .field-item p").each(function() {
-				text += ' ' + $(this).text();
-			});
-			$(".node-news .group-resume .field-name-body .field-item").html("<p>" + text + "</p>");
-		}
+    $(".node-news .group-resume .field-name-body").each(function() {
+      //console.log($(this).html());
+      var text = '';
+      $(this).find('p').each(function() {
+        console.log($(this).text());
+        text += ' ' + $(this).text();
+      });
+      $(this).find('.field-item').html("<p>" + text + "</p>");
+    });
 
 
     /* Resumes image overlay */
