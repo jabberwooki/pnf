@@ -5,3 +5,11 @@
  */
 
 include_once 'pnf_landing_pages.features.inc';
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function pnf_landing_pages_form_menu_edit_item_alter(&$form, &$form_state, $form_id) {
+  $form['menu_fields']['enabled']['#default_value'] = TRUE;
+  $form['menu_fields']['enabled']['#disabled'] = TRUE;
+}
