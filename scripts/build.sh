@@ -34,7 +34,7 @@ else
 fi
 
 # Add shared symlinks
-for f in `$FIND shared -mindepth 1 -maxdepth 1 ! -name 'README.txt' ! -name 'private' ! -name 'template'`
+for f in `$FIND shared -mindepth 1 -maxdepth 1 ! -name 'README.txt' ! -name 'private' ! -name 'template' ! -name 'common-files'`
 do
   $LN -s ../../../$f $BUILDDIR/sites/$($BASENAME $f)
 done
@@ -45,6 +45,9 @@ $LN -s ../../../repository $BUILDDIR/profiles/$PROFILENAME
 
 # Add the less.php symlink
 $LN -s ../../../repository/libraries/less.php $BUILDDIR/sites/all/libraries/less.php
+
+# Add common files directory symlink
+$LN -s ../../../../shared/common-files $BUILDDIR/sites/all/common-files
 
 # Change www symlink
 if [ -h www ]
