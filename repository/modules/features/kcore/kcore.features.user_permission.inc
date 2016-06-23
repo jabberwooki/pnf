@@ -122,8 +122,19 @@ function kcore_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'user',
+  );
+
+  // Exported permission: 'access users overview'.
+  $permissions['access users overview'] = array(
+    'name' => 'access users overview',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'administerusersbyrole',
   );
 
   // Exported permission: 'add terms in public'.
@@ -643,7 +654,6 @@ function kcore_user_default_permissions() {
     'name' => 'administer users',
     'roles' => array(
       'administrateur' => 'administrateur',
-      'webmaster' => 'webmaster',
     ),
     'module' => 'user',
   );
@@ -671,6 +681,40 @@ function kcore_user_default_permissions() {
       'administrateur' => 'administrateur',
     ),
     'module' => 'xmlsitemap',
+  );
+
+  // Exported permission: 'assign administrateur role'.
+  $permissions['assign administrateur role'] = array(
+    'name' => 'assign administrateur role',
+    'roles' => array(),
+    'module' => 'role_delegation',
+  );
+
+  // Exported permission: 'assign all roles'.
+  $permissions['assign all roles'] = array(
+    'name' => 'assign all roles',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'role_delegation',
+  );
+
+  // Exported permission: 'assign rédacteur role'.
+  $permissions['assign rédacteur role'] = array(
+    'name' => 'assign rédacteur role',
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'role_delegation',
+  );
+
+  // Exported permission: 'assign webmaster role'.
+  $permissions['assign webmaster role'] = array(
+    'name' => 'assign webmaster role',
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'role_delegation',
   );
 
   // Exported permission: 'block IP addresses'.
@@ -707,6 +751,45 @@ function kcore_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'cancel users with role 193262079'.
+  $permissions['cancel users with role 193262079'] = array(
+    'name' => 'cancel users with role 193262079',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'administerusersbyrole',
+  );
+
+  // Exported permission: 'cancel users with role 2'.
+  $permissions['cancel users with role 2'] = array(
+    'name' => 'cancel users with role 2',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'administerusersbyrole',
+  );
+
+  // Exported permission: 'cancel users with role 217795369'.
+  $permissions['cancel users with role 217795369'] = array(
+    'name' => 'cancel users with role 217795369',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'administerusersbyrole',
+  );
+
+  // Exported permission: 'cancel users with role 231346920'.
+  $permissions['cancel users with role 231346920'] = array(
+    'name' => 'cancel users with role 231346920',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'administerusersbyrole',
+  );
+
   // Exported permission: 'change own username'.
   $permissions['change own username'] = array(
     'name' => 'change own username',
@@ -725,6 +808,16 @@ function kcore_user_default_permissions() {
       'administrateur' => 'administrateur',
     ),
     'module' => 'path',
+  );
+
+  // Exported permission: 'create users'.
+  $permissions['create users'] = array(
+    'name' => 'create users',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'administerusersbyrole',
   );
 
   // Exported permission: 'delete any entityform'.
@@ -850,6 +943,45 @@ function kcore_user_default_permissions() {
       'webmaster' => 'webmaster',
     ),
     'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit users with role 193262079'.
+  $permissions['edit users with role 193262079'] = array(
+    'name' => 'edit users with role 193262079',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'administerusersbyrole',
+  );
+
+  // Exported permission: 'edit users with role 2'.
+  $permissions['edit users with role 2'] = array(
+    'name' => 'edit users with role 2',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'administerusersbyrole',
+  );
+
+  // Exported permission: 'edit users with role 217795369'.
+  $permissions['edit users with role 217795369'] = array(
+    'name' => 'edit users with role 217795369',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'administerusersbyrole',
+  );
+
+  // Exported permission: 'edit users with role 231346920'.
+  $permissions['edit users with role 231346920'] = array(
+    'name' => 'edit users with role 231346920',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'administerusersbyrole',
   );
 
   // Exported permission: 'flush caches'.

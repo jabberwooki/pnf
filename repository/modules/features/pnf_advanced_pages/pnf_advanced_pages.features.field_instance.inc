@@ -164,7 +164,6 @@ function pnf_advanced_pages_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'field_formatter_class' => 'col-lg-4',
-          'link' => 1,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -176,8 +175,10 @@ function pnf_advanced_pages_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'links' => 1,
+          'view_mode' => 'linked_content',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 2,
       ),
       'print' => array(

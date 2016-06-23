@@ -56,6 +56,7 @@ function child_menu_items_block_view($delta = '') {
         $enabled_menus = menu_fields_enabled_menus();
         // Active trail must belong to a Menu Field enabled menu.
         if (in_array($active_trail[1]['menu_name'], $enabled_menus)) {
+          $variables['menu_item_menu_name'] =$active_trail[count($active_trail) - 1]['menu_name'];
           $variables['menu_item_link_path'] = $active_trail[count($active_trail) - 1]['link_path'];
           $block['content'] = theme('cmi_list', $variables);
         }

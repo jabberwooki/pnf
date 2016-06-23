@@ -104,4 +104,5 @@ features_exclude[dependencies][features] = features
 features_exclude[dependencies][options] = options
 features_exclude[dependencies][strongarm] = strongarm
 features_exclude[dependencies][taxonomy] = taxonomy
+features_exclude[variable][i18n_node_extended_contract] = i18n_node_extended_contract
 project path = profiles/pnf/modules/features

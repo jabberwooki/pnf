@@ -93,6 +93,12 @@ projects[views][version] = "3.13"
 projects[addressfield][subdir] = contrib
 projects[addressfield][version] = "1.2"
 
+projects[chain_menu_access][subdir] = contrib
+projects[chain_menu_access][version] = "2.0"
+
+projects[administerusersbyrole][subdir] = contrib
+projects[administerusersbyrole][version] = "2.0"
+
 projects[bean][subdir] = contrib
 projects[bean][version] = "1.9"
 
@@ -223,6 +229,9 @@ projects[print][version] = "2.0"
 
 ;projects[registration][subdir] = contrib
 ;projects[registration][version] = ""
+
+projects[role_delegation][subdir] = contrib
+projects[role_delegation][version] = "1.1"
 
 ;projects[rules][subdir] = contrib
 ;projects[rules][version] = ""

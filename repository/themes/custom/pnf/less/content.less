@@ -1126,6 +1126,42 @@ blockquote.image-field-caption:before{
 h2.page-header{
     font-size: 40px;
 }
+.node-advanced-page {
+    .field-name-field-page-linked-content {
+        .field-label {
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .field-item {
+            .node-news {
+            		padding: 10px 0;
+                .field-name-title h3 {
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-bottom: 0;
+                }
+                .field-name-post-date {
+                    color: #808080;
+                }
+                .row {
+                	margin-left: 15px;
+            			margin-top: -20px;                	
+                }
+            }
+            .node-news::before {
+            	font-family: 'Fontawesome';
+            	content: "\f0e6";
+            	font-weight: 500;
+    					color: darken(@brand-primary, 6.5%);
+    					font-size: 110%;
+            }
+        }
+    }
+    .field-name-field-page-linked-content > .field-items > .field-item {
+      border-bottom: 1px solid #d1d1d1;
+    }
+}
 .page-header {
     padding-bottom: 0;
     margin: 20px 0 20px;
@@ -1135,6 +1171,7 @@ h2.page-header{
     background: #fff;
     padding: 10px;
 }
+
 
 /*Contact*/
 .entitytype-contact-form{
@@ -1209,3 +1246,12 @@ h2.page-header{
         width: 75%;
     }
 }
+
+/* Exportables pages */
+.view-exportables-pages {
+  .views-row {
+    background-color: white;
+    padding: 15px;
+  }
+}
+

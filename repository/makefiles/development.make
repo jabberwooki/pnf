@@ -31,7 +31,7 @@ projects[masquerade][version] = "1.0-rc7"
 ;projects[node_export][version] = ""
 
 projects[node_clone][subdir] = contrib
-projects[node_clone][version] = "1.0-rc2"
+projects[node_clone][version] = "1.0"
 
 projects[devel_themer][subdir] = contrib
 projects[devel_themer][version] = "1.x-dev"

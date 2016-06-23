@@ -164,3 +164,13 @@ function pnf_contact_mail($key, &$message, $params) {
   }
 }
 
+/**
+ * Implements hook_entity_view_alter().
+ */
+function pnf_contact_entity_view_alter(&$build, $type) {
+  if ($type == 'bean' && $build['#bundle'] == 'contact') {
+    $contact_url = explode('/', $build['field_contact_page_link'][0]['#element']['url']);
+    $build['field_contact_page_link'][0]['#element']['url'] = '/' . $contact_url[2];
+  }
+}
+
