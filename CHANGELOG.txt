@@ -1,3 +1,7 @@
+PNx 1.1.1 - 2016-07-02
+----------------------
+Two new links (Phototheque, Rando) added to PNV tools menu.
+
 PNx 1.1 - 2016-06-23
 --------------------
  * Install profile update: node_clone version changed from 1.0-rc2 to 1.0
