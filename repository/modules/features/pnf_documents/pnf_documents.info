@@ -40,6 +40,7 @@ features[field_instance][] = node-document-field_document_resume
 features[field_instance][] = node-document-field_pub_dates
 features[field_instance][] = node-document-field_subtitle
 features[image][] = 160w
+features[image][] = 500w
 features[node][] = document
 features[taxonomy][] = document_categories
 features[user_permission][] = add terms in document_categories

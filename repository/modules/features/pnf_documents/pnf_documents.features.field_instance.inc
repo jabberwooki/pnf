@@ -445,7 +445,7 @@ function pnf_documents_field_default_field_instances() {
         'settings' => array(
           'field_formatter_class' => '',
           'image_link' => '',
-          'image_style' => '160w',
+          'image_style' => '500w',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
