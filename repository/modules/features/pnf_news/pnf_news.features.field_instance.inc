@@ -652,7 +652,7 @@ function pnf_news_field_default_field_instances() {
         'settings' => array(
           'field_formatter_class' => '',
           'image_link' => 'content',
-          'image_style' => '196x196',
+          'image_style' => '500x500',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',

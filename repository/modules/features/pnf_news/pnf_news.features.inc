@@ -116,6 +116,21 @@ function pnf_news_image_default_styles() {
     ),
   );
 
+  // Exported image style: 500x500.
+  $styles['500x500'] = array(
+    'label' => '500x500',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 500,
+          'height' => 500,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }
 
