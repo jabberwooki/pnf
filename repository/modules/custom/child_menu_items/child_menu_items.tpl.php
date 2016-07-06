@@ -8,7 +8,7 @@
 ?>
 
 <?php foreach($split_items as $row): ?>
-  <div class="row">
+  <div class="row row-centered">
     <?php foreach($row as $item): ?>
     <?php
       $image_variables = array(
@@ -27,7 +27,7 @@
         $image = theme('image', $image_variables);
       }
     ?>
-    <div class="col col-md-<?php print 12/$col_number; ?>">
+    <div class="col col-centered col-md-<?php print 12/$col_number; ?>">
       <div class="cmi-wrapper">
         <div class="cmi-field cmi-field-item-image">
           <?php print l($image, $item->link_path, array('html' => TRUE)); ?>
