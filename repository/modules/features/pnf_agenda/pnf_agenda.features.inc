@@ -55,6 +55,21 @@ function pnf_agenda_custom_breadcrumb_features_default_settings() {
 function pnf_agenda_image_default_styles() {
   $styles = array();
 
+  // Exported image style: 500x350.
+  $styles['500x350'] = array(
+    'label' => '500x350',
+    'effects' => array(
+      3 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 500,
+          'height' => 350,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: focal_820x410.
   $styles['focal_820x410'] = array(
     'label' => 'focal_820x410',
