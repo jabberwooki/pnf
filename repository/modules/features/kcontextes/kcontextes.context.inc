@@ -38,29 +38,35 @@ function kcontextes_context_default_contexts() {
           'region' => 'top_menu',
           'weight' => '-9',
         ),
-        'custom_search_blocks-1' => array(
-          'module' => 'custom_search_blocks',
+        'block-1' => array(
+          'module' => 'block',
           'delta' => '1',
           'region' => 'top_menu',
-          'weight' => '-7',
+          'weight' => '-8',
         ),
         'kcore-pnf_on_the_web_clone' => array(
           'module' => 'kcore',
           'delta' => 'pnf_on_the_web_clone',
           'region' => 'top_menu',
-          'weight' => '-6',
+          'weight' => '-7',
         ),
         'lang_dropdown-language' => array(
           'module' => 'lang_dropdown',
           'delta' => 'language',
           'region' => 'top_menu',
-          'weight' => '-5',
+          'weight' => '-6',
         ),
         'tb_megamenu-menu-menu-themes' => array(
           'module' => 'tb_megamenu',
           'delta' => 'menu-menu-themes',
           'region' => 'navigation',
           'weight' => '-10',
+        ),
+        'custom_search_blocks-1' => array(
+          'module' => 'custom_search_blocks',
+          'delta' => '1',
+          'region' => 'header',
+          'weight' => '-20',
         ),
         'menu-menu-multimedia-footer' => array(
           'module' => 'menu',

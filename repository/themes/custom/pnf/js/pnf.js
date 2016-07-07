@@ -12,14 +12,23 @@
     }
 
     /* Search Form */
-    $('#block-custom-search-blocks-1 .search-form input.form-control').hide();
+    // $('#block-custom-search-blocks-1 .search-form input.form-control').hide();
+    //
+    // $('#block-custom-search-blocks-1 .search-form').mouseenter(function() {
+    //   $('input.form-control', this).show('fast');
+    // });
+    //
+    // $('#block-custom-search-blocks-1 .search-form').mouseleave(function() {
+    //   $('input.form-control', this).hide('slow');
+    // });
+    $("#block-custom-search-blocks-1").hide();
+    $(".search-magnifier p").click(function () {
+      $("#block-custom-search-blocks-1").show('slow');
+      $('#edit-custom-search-blocks-form-1--2').focus();
 
-    $('#block-custom-search-blocks-1 .search-form').mouseenter(function() {
-      $('input.form-control', this).show('fast');
     });
-
-    $('#block-custom-search-blocks-1 .search-form').mouseleave(function() {
-      $('input.form-control', this).hide('slow');
+    $("#block-custom-search-blocks-1").on("mouseleave", function () {
+      $("#block-custom-search-blocks-1").hide('slow');
     });
 
     // Position the mega menu
