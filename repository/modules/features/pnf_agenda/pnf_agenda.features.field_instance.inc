@@ -871,7 +871,7 @@ function pnf_agenda_field_default_field_instances() {
         'settings' => array(
           'field_formatter_class' => '',
           'image_link' => 'content',
-          'image_style' => '250x175',
+          'image_style' => '500x350',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',

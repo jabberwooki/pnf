@@ -48,6 +48,22 @@ function pnf_documents_image_default_styles() {
     ),
   );
 
+  // Exported image style: 500w.
+  $styles['500w'] = array(
+    'label' => 'Largeur 500',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 500,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }
 

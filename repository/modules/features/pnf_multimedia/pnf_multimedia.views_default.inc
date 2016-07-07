@@ -197,8 +197,20 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['scald_thumbnail']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['scald_thumbnail']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['scald_thumbnail']['settings'] = array(
-    'image_style' => '250x250',
+    'image_style' => '500x500',
     'image_link' => 'content',
+    'field_formatter_class' => '',
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
   );
   /* Field: Atoms: Description */
   $handler->display->display_options['fields']['field_atom_description']['id'] = 'field_atom_description';
@@ -287,8 +299,20 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['scald_thumbnail']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['scald_thumbnail']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['scald_thumbnail']['settings'] = array(
-    'image_style' => '250x250',
+    'image_style' => '500x500',
     'image_link' => 'content',
+    'field_formatter_class' => '',
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
   );
   /* Field: Atoms: Description */
   $handler->display->display_options['fields']['field_atom_description']['id'] = 'field_atom_description';
@@ -352,8 +376,20 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['scald_thumbnail']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['scald_thumbnail']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['scald_thumbnail']['settings'] = array(
-    'image_style' => '250x250',
+    'image_style' => '500x500',
     'image_link' => 'content',
+    'field_formatter_class' => '',
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
   );
   /* Field: Atoms: Description */
   $handler->display->display_options['fields']['field_atom_description']['id'] = 'field_atom_description';
