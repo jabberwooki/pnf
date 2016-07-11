@@ -23,12 +23,12 @@
     // });
     $("#block-custom-search-blocks-1").hide();
     $(".search-magnifier p").click(function () {
-      $("#block-custom-search-blocks-1").show('slow');
+      $("#block-custom-search-blocks-1").show();
       $('#edit-custom-search-blocks-form-1--2').focus();
 
     });
     $("#block-custom-search-blocks-1").on("mouseleave", function () {
-      $("#block-custom-search-blocks-1").hide('slow');
+      setTimeout(function () {$("#block-custom-search-blocks-1").hide()}, 700);
     });
 
     // Position the mega menu
