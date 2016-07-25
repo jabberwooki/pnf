@@ -81,3 +81,12 @@ function pnf_agenda_node_view($node, $view_mode, $langcode) {
     }
   }
 }
+
+/**
+ * Implements hook_node_view_alter().
+ */
+function pnf_agenda_node_view_alter(&$build) {
+  if ($build['#bundle'] == 'event' && $build['#view_mode'] == 'full') {
+    $build['field_public']['#title'] = $build['field_public']['#title'] . ' :';
+  }
+}
