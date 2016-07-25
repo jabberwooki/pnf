@@ -81,4 +81,15 @@ function pnf_multimedia_block_view_alter(&$data, $block) {
       }
     }
   }
+  if ($block->bid == 'menu-menu-multimedia') {
+    $park_codes = array('fcb');
+    if (in_array(variable_get('park_code'), $park_codes)) {
+      $mlids = element_children($data['content']);
+      foreach ($mlids as $mlid) {
+        if ($data['content'][$mlid]['#href'] == 'videos' || $data['content'][$mlid]['#href'] == 'sons') {
+          unset($data['content'][$mlid]);
+        }
+      }
+    }
+  }
 }
