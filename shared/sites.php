@@ -19,6 +19,7 @@ $sites = array(
   'www.portcrosparcnational.dev' => 'portcrosparcnational.fr',
   'www.reunion-parcnational.dev' => 'reunion-parcnational.fr',
   'www.vanoise-parcnational.dev' => 'vanoise-parcnational.fr',
+  'www.forets-champagne-bourgogne.dev' => 'forets-champagne-bourgogne.fr',
 
  // Staging sites AR
   'pnca.pnfdev.xyz' => 'calanques-parcnational.fr',
@@ -84,4 +85,5 @@ $sites = array(
   'www.portcrosparcnational.fr' => 'portcrosparcnational.fr',
   'www.reunion-parcnational.fr' => 'reunion-parcnational.fr',
   'www.vanoise-parcnational.fr' => 'vanoise-parcnational.fr',
+  'www.forets-champagne-bourgogne.fr' => 'forets-champagne-bourgogne.fr',
 );

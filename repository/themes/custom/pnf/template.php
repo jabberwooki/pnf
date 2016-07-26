@@ -73,6 +73,9 @@ if ($parts[0] == 'www') {
 		case 'vanoise-parcnational':
 			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnva_style.css.less');
 			break;
+		case 'forets-champagne-bourgogne':
+			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/fcb_style.css.less');
+			break;
 		default :
 			$google_validation_key = 'none';
   }
@@ -175,6 +178,10 @@ else {
 	// Vanoise
 	case 'pnv':
 	  drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnva_style.css.less');
+	  break;
+	// FCB
+	case 'fcb':
+	  drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/fcb_style.css.less');
 	  break;
   }
 }
