@@ -70,3 +70,31 @@ function pnf_jobs_views_pre_view(&$view, &$display_id, &$args) {
 	drupal_set_breadcrumb(pnf_park_breadcrumb());
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function pnf_jobs_form_job_node_form_alter(&$form, &$form_state, $form_id) {
+	if (variable_get('park_code') == 'fcb') {
+		// We must disable the select field field_job_type, set on "Offres d'emploi" value
+		// without removing the other 2 options, otherwise we get a pathauto bug.
+		$form['field_job_type']['#disabled'] = 'disabled';
+	}
+}
+
+/**
+ * Implements hook_block_view_alter().
+ */
+function pnf_jobs_block_view_alter(&$data, $block) {
+	if ($block->bid == 'menu-menu-menu-jobs') {
+		$park_codes = array('fcb');
+		if (in_array(variable_get('park_code'), $park_codes)) {
+			$mlids = element_children($data['content']);
+			foreach ($mlids as $mlid) {
+				if ($data['content'][$mlid]['#href'] != 'offres-demploi') {
+					unset($data['content'][$mlid]);
+				}
+			}
+		}
+	}
+}
