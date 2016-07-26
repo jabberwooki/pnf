@@ -249,6 +249,41 @@ if (typeof(CKEDITOR) !== 'undefined') {
       ]
     );
   }
+  else if (parkCode == 'fcb') {
+    CKEDITOR.addStylesSet('drupal',
+      [
+        /* Block Styles */
+        // These styles are already available in the "Format" drop-down list, so they are
+        // not needed here by default. You may enable them to avoid placing the
+        // "Format" drop-down list in the toolbar, maintaining the same features.
+        {name: 'Paragraphe', element: 'p'},
+        {name : 'Chapeau' , element: 'div', attributes: {'class': 'intro'}, styles: {'color': '#92b134','font-style': 'italic' }},
+        {name: 'Bouton', element: 'div', attributes: {'class': 'boutonok'}, styles: {'color': '#fff'}},
+        {name: 'Titre 3', element: 'h3'},
+        {name: 'Titre 4', element: 'h4'},
+        {name: 'Titre 5', element: 'h5'},
+        {name: 'Paragraphe vert', element: 'p', styles: {'color': '#a1c339'}},
+        {name: 'Paragraphe bleu', element: 'p', styles: {'color': '#298fc2'}},
+        {name: 'Paragraphe rouge', element: 'p', styles: {'color': '#9e2a2b'}},
+        {name: 'Paragraphe orange', element: 'p', styles: {'color': '#f1b434'}},
+        {name: 'Titre 3 - bleu', element: 'h3', styles: {'color': '#298fc2'}},
+        {name: 'Titre 3 - rouge', element: 'h3', styles: {'color': '#9e2a2b'}},
+        {name: 'Titre 3 - orange', element: 'h3', styles: {'color': '#f1b434'}},
+
+        /* Object Styles */
+        {
+          name: 'Image on Left',
+          element: 'img',
+          attributes: {'style': 'padding: 5px; margin-right: 5px', 'border': '2', 'align': 'left'}
+        },
+        {
+          name: 'Image on Right',
+          element: 'img',
+          attributes: {'style': 'padding: 5px; margin-left: 5px', 'border': '2', 'align': 'right'}
+        }
+      ]
+    );
+  }
   else {
     CKEDITOR.addStylesSet('drupal',
       [
