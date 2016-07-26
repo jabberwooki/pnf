@@ -74,3 +74,21 @@ function pnf_news_form_alter(&$form, &$form_state, $form_id) {
     }
   }
 }
+
+/**
+ * Implements hook_block_view_alter().
+ */
+function pnf_news_block_view_alter(&$data, $block) {
+  // For parks determined by $park_codes, the "Brèves" link is removed from menu_menu_news.
+  if ($block->bid == 'menu-menu-news') {
+    $park_codes = array('fcb');
+    if (in_array(variable_get('park_code'), $park_codes)) {
+      $mlids = element_children($data['content']);
+      foreach ($mlids as $mlid) {
+        if ($data['content'][$mlid]['#href'] == 'breves') {
+          unset($data['content'][$mlid]);
+        }
+      }
+    }
+  }
+}
