@@ -46,7 +46,6 @@ function pnf_news_node_view($node, $view_mode, $langcode) {
  */
 function pnf_news_form_news_node_form_alter(&$form, &$form_state, $form_id) {
   if (variable_get('park_code') == 'fcb') {
-    dpm($form);
     // We must hide field_public (not used, but compulsory in FCB site).
     $form['field_public']['#access'] = FALSE;
 
@@ -58,6 +57,20 @@ function pnf_news_form_news_node_form_alter(&$form, &$form_state, $form_id) {
       if ($option == 'Brèves') {
         unset($form['field_news_type']['und']['#options'][$key]);
       }
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function pnf_news_form_alter(&$form, &$form_state, $form_id) {
+  if ($form['#id'] == 'views-exposed-form-news-page-news-news') {
+    if (variable_get('park_code') == 'fcb') {
+      $form['field_sectors_tid']['#access'] = FALSE;
+      $form['#info']['filter-field_sectors_tid']['label'] = FALSE;
+      $form['field_public_tid']['#access'] = FALSE;
+      $form['#info']['filter-field_public_tid']['label'] = FALSE;
     }
   }
 }
