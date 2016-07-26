@@ -59,6 +59,7 @@ $sites = array(
   'preprod-pnpc.parcnational.fr' => 'portcrosparcnational.fr',
   'preprod-pnrun.parcnational.fr' => 'reunion-parcnational.fr',
   'preprod-pnv.parcnational.fr' => 'vanoise-parcnational.fr',
+  'preprod-fcb.parcnational.fr' => 'forets-champagne-bourgogne.fr',
   
   // Prod test sites
   'prod-pncal.parcnational.fr' => 'calanques-parcnational.fr',
@@ -72,6 +73,7 @@ $sites = array(
   'prod-pnpc.parcnational.fr' => 'portcrosparcnational.fr',
   'prod-pnrun.parcnational.fr' => 'reunion-parcnational.fr',
   'prod-pnv.parcnational.fr' => 'vanoise-parcnational.fr',
+  'prod-fcb.parcnational.fr' => 'forets-champagne-bourgogne.fr',
 
   // Live sites
   'www.calanques-parcnational.fr' => 'calanques-parcnational.fr',
