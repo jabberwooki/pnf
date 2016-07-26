@@ -183,6 +183,15 @@ function pnf_agenda_views_default_views() {
   $handler->display->display_options['row_options']['grouping_fieldset']['group_field'] = 'node|created';
   $handler->display->display_options['row_options']['default_fieldset']['view_mode'] = 'teaser';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['label'] = 'Pas d\'évènement';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'Il n\'y a pas d\'événement pour le moment.';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Dates -  start date (field_event_dates) */
   $handler->display->display_options['sorts']['field_event_dates_value']['id'] = 'field_event_dates_value';
@@ -480,6 +489,15 @@ function pnf_agenda_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['content'] = '<a href="/agenda">tous les événements</a>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['label'] = 'Pas d\'évènement';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'Il n\'y a pas d\'événement pour le moment.';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -521,6 +539,8 @@ function pnf_agenda_views_default_views() {
     t('Appliquer'),
     t('Réinitialiser'),
     t('Trier par'),
+    t('Pas d\'évènement'),
+    t('Il n\'y a pas d\'événement pour le moment.'),
     t('Bloc carte'),
     t('Tout'),
     t('Bloc documents utiles'),
