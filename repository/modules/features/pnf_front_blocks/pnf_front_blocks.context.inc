@@ -266,9 +266,9 @@ function pnf_front_blocks_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
-        'views-promotions-3_promos' => array(
+        'views-promotions-promos_front' => array(
           'module' => 'views',
-          'delta' => 'promotions-3_promos',
+          'delta' => 'promotions-promos_front',
           'region' => 'content',
           'weight' => '-9',
         ),
