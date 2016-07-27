@@ -122,6 +122,9 @@ function kcore_block_view_alter(&$data, $block) {
 
 			case 'pnf_park_menu_clone':
 			$data['subject'] = $current_park_name;
+			if (variable_get('park_code') == 'fcb') {
+				$data['subject'] = 'GIP du futur Parc national des forêts de Champagne et Bourgogne';
+			}
 			break;
 		}
   }
