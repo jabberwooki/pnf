@@ -103,6 +103,8 @@ function pnf_front_blocks_context_default_contexts() {
     'domain' => array(
       'values' => array(
         '*.calanques-parcnational.*' => '*.calanques-parcnational.*',
+        'preprod-pncal.*' => 'preprod-pncal.*',
+        'prod-pncal.*' => 'prod-pncal.*',
       ),
     ),
     'path' => array(
