@@ -1,3 +1,40 @@
+PNx 1.2 - 2016-07-29
+--------------------
+ * Custom theme up: PNCAL site colors added.
+ * pnf_front_blocks up: preprod and prod domains added to pnca_front context.
+ * pnf_front_blocks up: Front page blocks settings for PNCAL site.
+ * PNCAL site created.
+ * kcore up: Title of 'Menu du parc' clone (footer) set to 'GIP du ...' in kcore_block_view_alter().
+ * pnf_front_blocks up: PNF site promos block re-placed on frontpage.
+ * pnf_news up: 'Brèves' link removed from menu_menu_news for FCB park.
+ * PNF multisite profile up: preprod and prod domain name for FCB park added to sites.php.
+ * PNF custom theme up: FCB site styles and colors applied.
+ * pnf_jobs up: 'Stages' and 'Service civique' options removed from field_job_type and from menu_menu_jobs for FCB park.
+ * pnf_news up: Fields field_public and field_sectors removed from views exposed filters.
+ * pnf_agenda up: Fields field_public and field_sectors removed from add/edit form and from views exposed filters form.
+ * pnf_agenda up: No result message added to page_events and block_events_home views displays.
+ * pnf_front_blocks up: Agenda block added to FCB front page.
+ * New FCB park site created.
+ * pnf_news up: Brèves type removed, Public and Sectors fields removed from news content type.
+ * pnf_multimedia up: Videos and Sons links removed from menu_multimedia for FCB park.
+ * pnf_front_blocks up: FCB front blocks context created.
+ * pnf_multimedia up: Videos link removed from menu_multimedia_footer for FCB park.
+ * pnf_contact up: Create and Delete perms on map_contact bean types updated.
+ * pnf_agenda up: Adds colon (:) after field field_public label in full view mode.
+ * Custom theme up: Site search form behaviour altered.
+ * Site Search form reconstructed.
+ * Custom grid bootstrap row and column centered
+ * Custom de la grille bootstrap row column centered
+ * Custom module child_menu_items up: Bootstrap classes row-centered and col-centered added.
+ * Modification du style d'image des listes multimedia
+ * Modification style d'image liste document
+ * modif css bouton lire la suite liste agenda
+ * Modification du style d'image pour la liste agenda
+ * Changement de style d'image liste actualités et dossiers
+ * Modif style d'image dossier accueil
+ * repositionnement du bouton lire la suite en responsive
+ * Changement de format d'images pour le bloc actu accueil.
+
 PNx 1.1.1 - 2016-07-02
 ----------------------
 Two new links (Phototheque, Rando) added to PNV tools menu.
