@@ -10,7 +10,8 @@
 @import 'footer.less';
 
 // CUSTOM VARIABLES
-@brand-primary: #007dba;
+@brand-primary: #a1c339;
+@brand-secondary: @brand-primary;
 @navbar-default-bg: @brand-primary;
 
 body{
@@ -20,21 +21,28 @@ body{
 /* Main site colors */
 .main-container {
   a:not(.btn) {
-  color: #840b55 !important;
+    //color: #78be20 !important;
+  color: #9e2a2b !important;
   }
   blockquote:before, blockquote:after {
-    color: #007dba;
+    color: #a1c339;
   }
   .field-name-field-downloadable-docs a {
     color: #a1561c !important;
   }
 }
 
+/*
+.pnf_pre_footer {
+  background: #a1c339;
+}
+*/
+
 /* Top menus */
 #block-menu-menu-national-parks,
 #block-menu-menu-menu-park {
   ul li ul.dropdown-menu li a:hover{
-    background-color: #ddcfd8;
+    background-color: #ded0d0;
   }
 }
 
@@ -43,10 +51,10 @@ nav .tb-megamenu {
   .nav .dropdown-menu {
     a.mega-group-title,
     a.mega-group-title:hover{
-      color: #840b55;
+      color: #9e2a2b;
     }
     ul li a:hover {
-      background: #ddcfd8;
+      background: #ded0d0;
     }
   }
 }
@@ -55,17 +63,32 @@ nav .tb-megamenu {
 .region-sidebar-second .block-pnf-raa,
 .region-sidebar-second .block-menu {
   ul li a {
-    background: #ddcfd8;
+    background: #ded0d0;
     color: #38353e !important;
   }
   ul li.open a,
   ul li a.active{
-    background: #840b55;
+    background: #9e2a2b;
     color: #ffffff !important;
     font-weight: 600;
   }
 }
 
-.pnf_pre_footer {
-  background: #007dba;
+/* Font size pictos */
+a#text_resize_increase,
+a#text_resize_decrease {
+  color: #a1a1a1 !important;
+}
+
+/* White color for buttons text in Documents listing */
+.view-documents {
+  .field-name-field-document-category {
+    color: white;
+  }
+  .field-name-field-document-links {
+    .field-name-local-flipthrough a,
+    .field-name-field-document-flip a {
+      color: #ffffff !important;
+    }
+  }
 }

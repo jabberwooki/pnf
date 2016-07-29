@@ -184,12 +184,15 @@ function kcore_strongarm() {
   $strongarm->name = 'custom_search_blocks_1_node_types';
   $strongarm->value = array(
     'news' => 0,
-    'slide' => 0,
-    'document' => 0,
     'event' => 0,
+    'promotion' => 0,
+    'slide' => 0,
     'contract' => 0,
+    'document' => 0,
+    'job' => 0,
+    'advanced_page' => 0,
     'page' => 0,
-    'testcontent' => 0,
+    'raa' => 0,
   );
   $export['custom_search_blocks_1_node_types'] = $strongarm;
 
@@ -199,12 +202,15 @@ function kcore_strongarm() {
   $strongarm->name = 'custom_search_blocks_1_node_types_excluded';
   $strongarm->value = array(
     'news' => 0,
-    'slide' => 0,
-    'document' => 0,
     'event' => 0,
+    'promotion' => 0,
+    'slide' => 0,
     'contract' => 0,
+    'document' => 0,
+    'job' => 0,
+    'advanced_page' => 0,
     'page' => 0,
-    'testcontent' => 0,
+    'raa' => 0,
   );
   $export['custom_search_blocks_1_node_types_excluded'] = $strongarm;
 
@@ -323,7 +329,7 @@ function kcore_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'custom_search_blocks_1_text';
-  $strongarm->value = '';
+  $strongarm->value = 'Rechercher';
   $export['custom_search_blocks_1_text'] = $strongarm;
 
   $strongarm = new stdClass();

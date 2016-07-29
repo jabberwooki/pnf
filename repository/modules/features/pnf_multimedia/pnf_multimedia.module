@@ -61,3 +61,35 @@ function pnf_multimedia_purge_category_filter($options, $atom_type) {
 
   return $options;
 }
+
+/**
+ * Implements hook_menu_link_alter().
+ */
+/**
+ * Implements hook_block_view_MODULE_DELTA_alter().
+ */
+function pnf_multimedia_block_view_alter(&$data, $block) {
+  // For parks determined by $park_codes, the Videos link is removed from menu-multimedia-footer.
+  if ($block->bid == 'menu-menu-multimedia-footer') {
+    $park_codes = array('fcb');
+    if (in_array(variable_get('park_code'), $park_codes)) {
+      $mlids = element_children($data['content']);
+      foreach ($mlids as $mlid) {
+        if ($data['content'][$mlid]['#href'] == 'videos') {
+          unset($data['content'][$mlid]);
+        }
+      }
+    }
+  }
+  if ($block->bid == 'menu-menu-multimedia') {
+    $park_codes = array('fcb');
+    if (in_array(variable_get('park_code'), $park_codes)) {
+      $mlids = element_children($data['content']);
+      foreach ($mlids as $mlid) {
+        if ($data['content'][$mlid]['#href'] == 'videos' || $data['content'][$mlid]['#href'] == 'sons') {
+          unset($data['content'][$mlid]);
+        }
+      }
+    }
+  }
+}

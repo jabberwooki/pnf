@@ -17,10 +17,28 @@ function pnf_contact_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'create any map_contact bean'.
+  $permissions['create any map_contact bean'] = array(
+    'name' => 'create any map_contact bean',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'delete any contact bean'.
   $permissions['delete any contact bean'] = array(
     'name' => 'delete any contact bean',
     'roles' => array(),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'delete any map_contact bean'.
+  $permissions['delete any map_contact bean'] = array(
+    'name' => 'delete any map_contact bean',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
     'module' => 'bean',
   );
 

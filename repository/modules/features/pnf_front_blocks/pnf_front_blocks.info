@@ -9,6 +9,7 @@ dependencies[] = fe_block
 dependencies[] = views
 features[box][] = button_festival_nature
 features[box][] = pnf_intro_home
+features[context][] = fcb_front
 features[context][] = pnag_front
 features[context][] = pnca_front
 features[context][] = pnce_front

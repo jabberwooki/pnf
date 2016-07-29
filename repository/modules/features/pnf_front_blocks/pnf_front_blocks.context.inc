@@ -13,6 +13,63 @@ function pnf_front_blocks_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'fcb_front';
+  $context->description = '';
+  $context->tag = 'FCB';
+  $context->conditions = array(
+    'domain' => array(
+      'values' => array(
+        '*.forets-champagne-bourgogne.*' => '*.forets-champagne-bourgogne.*',
+        'preprod-fcb.*' => 'preprod-fcb.*',
+        'prod-fcb.*' => 'prod-fcb.*',
+      ),
+    ),
+    'path' => array(
+      'values' => array(
+        '<front>' => '<front>',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-news-block_news_news_home' => array(
+          'module' => 'views',
+          'delta' => 'news-block_news_news_home',
+          'region' => 'pre_content_left',
+          'weight' => '-10',
+        ),
+        'views-events-block_events_home' => array(
+          'module' => 'views',
+          'delta' => 'events-block_events_home',
+          'region' => 'pre_content_right',
+          'weight' => '-10',
+        ),
+        'views-news-block_news_files_home' => array(
+          'module' => 'views',
+          'delta' => 'news-block_news_files_home',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+        'views-promotions-promos_front' => array(
+          'module' => 'views',
+          'delta' => 'promotions-promos_front',
+          'region' => 'content',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('FCB');
+  $export['fcb_front'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'pnag_front';
   $context->description = '';
   $context->tag = 'PNAG';
@@ -46,6 +103,8 @@ function pnf_front_blocks_context_default_contexts() {
     'domain' => array(
       'values' => array(
         '*.calanques-parcnational.*' => '*.calanques-parcnational.*',
+        'preprod-pncal.*' => 'preprod-pncal.*',
+        'prod-pncal.*' => 'prod-pncal.*',
       ),
     ),
     'path' => array(
@@ -54,7 +113,42 @@ function pnf_front_blocks_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array();
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-news-block_news_news_home' => array(
+          'module' => 'views',
+          'delta' => 'news-block_news_news_home',
+          'region' => 'pre_content_left',
+          'weight' => '-10',
+        ),
+        'views-news-block_news_flashnews_home' => array(
+          'module' => 'views',
+          'delta' => 'news-block_news_flashnews_home',
+          'region' => 'pre_content_left',
+          'weight' => '-9',
+        ),
+        'views-events-block_events_home' => array(
+          'module' => 'views',
+          'delta' => 'events-block_events_home',
+          'region' => 'pre_content_right',
+          'weight' => '-10',
+        ),
+        'views-news-block_news_files_home' => array(
+          'module' => 'views',
+          'delta' => 'news-block_news_files_home',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+        'views-promotions-promos_front' => array(
+          'module' => 'views',
+          'delta' => 'promotions-promos_front',
+          'region' => 'content',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
   $context->condition_mode = 1;
 
   // Translatables
@@ -209,9 +303,9 @@ function pnf_front_blocks_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
-        'views-promotions-3_promos' => array(
+        'views-promotions-promos_front' => array(
           'module' => 'views',
-          'delta' => 'promotions-3_promos',
+          'delta' => 'promotions-promos_front',
           'region' => 'content',
           'weight' => '-9',
         ),

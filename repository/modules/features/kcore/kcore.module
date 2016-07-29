@@ -41,6 +41,7 @@ function kcore_block_view_alter(&$data, $block) {
 			'portcrosparcnational' => 'Le Parc national de Port-Cros',
 			'reunion-parcnational' => 'Le Parc national de La Réunion',
 			'vanoise-parcnational' => 'Le Parc national de la Vanoise',
+			'forets-champagne-bourgogne' => 'Le Parc national des forêts de Champagne et Bourgogne',
 		);
 
 		$host_parts = explode('.', $_SERVER['HTTP_HOST']);
@@ -68,17 +69,18 @@ function kcore_block_view_alter(&$data, $block) {
 		}
 		elseif (substr($_SERVER['HTTP_HOST'],0,8) == 'preprod-') {
 			$park_names = array(
-			'preprod-pncal' => 'Le Parc national des Calanques',
-			'preprod-pnc' => 'Le Parc national des Cévennes',
-			'preprod-pne' => 'Le Parc national des Ecrins',
-			'preprod-png' => 'Le Parc national de la Guadeloupe',
-			'preprod-pnm' => 'Le Parc national du Mercantour',
-			'preprod-pag' => 'Le Parc amazonien de Guyane',
-			'preprod-pnp' => 'Le Parc national des Pyrénées',
-			'preprod-pnf' => 'Parcs nationaux de France',
-			'preprod-pnpc' => 'Le Parc national de Port-Cros',
-			'preprod-pnrun' => 'Le Parc national de La Réunion',
-			'preprod-pnv' => 'Le Parc national de la Vanoise',
+				'preprod-pncal' => 'Le Parc national des Calanques',
+				'preprod-pnc' => 'Le Parc national des Cévennes',
+				'preprod-pne' => 'Le Parc national des Ecrins',
+				'preprod-png' => 'Le Parc national de la Guadeloupe',
+				'preprod-pnm' => 'Le Parc national du Mercantour',
+				'preprod-pag' => 'Le Parc amazonien de Guyane',
+				'preprod-pnp' => 'Le Parc national des Pyrénées',
+				'preprod-pnf' => 'Parcs nationaux de France',
+				'preprod-pnpc' => 'Le Parc national de Port-Cros',
+				'preprod-pnrun' => 'Le Parc national de La Réunion',
+				'preprod-pnv' => 'Le Parc national de la Vanoise',
+				'preprod-fcb' => 'Le Parc national des forêts de Champagne et Bourgogne',
 			);
 
 			$current_park_name = $park_names[$host_parts[0]];
@@ -98,6 +100,7 @@ function kcore_block_view_alter(&$data, $block) {
 			'prod-pnpc' => 'Le Parc national de Port-Cros',
 			'prod-pnrun' => 'Le Parc national de La Réunion',
 			'prod-pnv' => 'Le Parc national de la Vanoise',
+			'prod-fcb' => 'Le Parc national des forêts de Champagne et Bourgogne',
 			);
 
 			$current_park_name = $park_names[$host_parts[0]];
@@ -119,6 +122,9 @@ function kcore_block_view_alter(&$data, $block) {
 
 			case 'pnf_park_menu_clone':
 			$data['subject'] = $current_park_name;
+			if (variable_get('park_code') == 'fcb') {
+				$data['subject'] = 'GIP du futur Parc national des forêts de Champagne et Bourgogne';
+			}
 			break;
 		}
   }
