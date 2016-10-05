@@ -434,8 +434,10 @@ nav .tb-megamenu {
 			ul li{
 				border: none;
 			}
+			li.level-2 > a,
+			li.level-2 > a:hover,
 			a.mega-group-title,
-			a.mega-group-title:hover{
+			a.mega-group-title:hover{ 
 				color: #8e9fbc;
 				text-transform: uppercase;
 				border-bottom: 1px solid #cbd0d9;
@@ -444,6 +446,8 @@ nav .tb-megamenu {
 				padding-left: 10px;
 				line-height: 30px;
 			}
+			li.level-2.active > a,
+			li.level-2 > a:focus,
 			li.level-3.active a,
 			li.level-3.active a.mega-group-title,
 			ul li.mega-group .open a.mega-group-title:focus,
@@ -451,6 +455,10 @@ nav .tb-megamenu {
 			ul li a:hover{
 				background: #c7cdd7;
 				border: none;
+				color: #3a353c;
+			}
+			li.level-2 > a:hover{
+				background: transparent;
 				color: #3a353c;
 			}
 			li.level-3.active a,
