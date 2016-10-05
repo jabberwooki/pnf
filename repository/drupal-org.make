@@ -212,6 +212,9 @@ projects[menu_fields][version] = "1.x-dev"
 projects[mimemail][subdir] = contrib
 projects[mimemail][version] = "1.0-beta4"
 
+projects[mmenu][subdir] = contrib
+projects[mmenu][version] = "2.1"
+
 projects[paragraphs][subdir] = contrib
 projects[paragraphs][version] = "1.0-rc4"
 

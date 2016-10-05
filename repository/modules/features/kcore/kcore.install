@@ -114,3 +114,10 @@ function kcore_update_7014() {
 function kcore_update_7015() {
   module_enable(array('administerusersbyrole','role_delegation'));
 }
+
+/**
+ * Activate mmenu module.
+ */
+function kcore_update_7016() {
+  module_enable(array('mmenu'));
+}
