@@ -108,7 +108,7 @@
         </nav>
       <?php endif; ?>
 
-    <div id="mmenu-selector">TEST</div>
+    <div id="mmenu-selector"></div>
   </div>
 
 </header>

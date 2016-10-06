@@ -612,13 +612,38 @@ now override the 3.3 new styles for modern browsers & apply opacity
     }
 }
 
+	  #mmenu-selector{
+        display: none;
+    }
+
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 @media(max-width: @screen-xs-max){
 	nav{
 		margin-top: 0px;
+		height: 60px;
 		/*position: initial !important;*/
 	}
+	#block-tb-megamenu-menu-menu-themes,
+	.region-top-menu{
+		display: none;
+	}
+	  #mmenu-selector{
+        display: block !important;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 2000;
+    }
+    #mmenu-selector:before{
+        background: @brand-primary;
+        content: '\f0c9';
+        font-family: "Fontawesome";
+        color: #fff;
+        font-size: 21px;
+        padding: 10px;
+        border-radius: 5px;
+    }
 }
 
 /* Small devices (tablets, 768px and up) */
