@@ -43,7 +43,6 @@ features[field_instance][] = scald_atom-video-field_media_category
 features[image][] = 200w
 features[menu_custom][] = menu-multimedia
 features[menu_custom][] = menu-multimedia-footer
-features[menu_links][] = menu-multimedia-footer_documents:documents
 features[menu_links][] = menu-multimedia-footer_espace-presse:espace-presse
 features[menu_links][] = menu-multimedia-footer_photos:galeries-photo
 features[menu_links][] = menu-multimedia-footer_vidos:videos

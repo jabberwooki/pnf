@@ -115,6 +115,7 @@ function pnf_multimedia_scald_default_context_types() {
     'player' => array(
       'file' => array(
         '*' => 'default',
+        'settings' => array(),
       ),
     ),
     'transcoder' => array(
