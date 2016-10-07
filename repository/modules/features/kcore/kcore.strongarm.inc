@@ -854,7 +854,6 @@ Nous nous efforçons d\'y répondre dans les plus brefs délais.</p>
     'options' => array(
       'classes' => 'mm-basic',
       'effects' => array(
-        'mm-fullscreen' => 'mm-fullscreen',
         'mm-slide' => 'mm-slide',
       ),
       'slidingSubmenus' => FALSE,
