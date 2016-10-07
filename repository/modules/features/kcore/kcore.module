@@ -133,6 +133,14 @@ function kcore_block_view_alter(&$data, $block) {
 		$replace = '/profiles/pnf/themes/custom/pnf/images/print.png';
 		$data['content']['#markup'] = str_replace($search, $replace,$data['content']['#markup']);
 	}
+
+	if($block->delta == 'menu-join-national-park') {
+	  $park_code = variable_get('park_code','pnx');
+	  switch ($park_code) {
+      case "pncal":
+        $data['subject'] = "Informations administratives";
+    }
+  }
 }
 
 /**
