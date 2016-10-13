@@ -191,12 +191,14 @@ function pnf_advanced_pages_ds_layout_settings_info() {
     'regions' => array(
       'left' => array(
         0 => 'field_image',
+      ),
+      'right' => array(
         1 => 'field_texte',
       ),
     ),
     'fields' => array(
       'field_image' => 'left',
-      'field_texte' => 'left',
+      'field_texte' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -355,12 +357,14 @@ function pnf_advanced_pages_ds_layout_settings_info() {
     'regions' => array(
       'left' => array(
         0 => 'field_texte',
+      ),
+      'right' => array(
         1 => 'field_image',
       ),
     ),
     'fields' => array(
       'field_texte' => 'left',
-      'field_image' => 'left',
+      'field_image' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
