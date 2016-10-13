@@ -197,6 +197,11 @@ function pnf_advanced_pages_paragraphs_info() {
       'bundle' => 'iframe',
       'locked' => '1',
     ),
+    'image_text_33_67' => array(
+      'name' => 'Image - Texte (33/67)',
+      'bundle' => 'image_text_33_67',
+      'locked' => '1',
+    ),
     'image_text_50_50' => array(
       'name' => 'Image - Texte (50/50)',
       'bundle' => 'image_text_50_50',
@@ -220,6 +225,11 @@ function pnf_advanced_pages_paragraphs_info() {
     'text_image_50_50' => array(
       'name' => 'Texte - Image (50/50)',
       'bundle' => 'text_image_50_50',
+      'locked' => '1',
+    ),
+    'text_image_67_33' => array(
+      'name' => 'Texte - Image (67/33)',
+      'bundle' => 'text_image_67_33',
       'locked' => '1',
     ),
     'video' => array(
