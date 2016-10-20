@@ -56,6 +56,11 @@ function pnf_multimedia_purge_category_filter($options, $atom_type) {
       if (!in_array($key, $used_tids)) {
         unset($options[$key]);
       }
+
+      // In case of gallery view, we must get rid of 'Cartothèque' term, if any.
+      if ($atom_type == 'gallery' && $value == 'Cartothèque') {
+        unset($options[$key]);
+      }
     }
   }
 
