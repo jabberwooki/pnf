@@ -18,6 +18,7 @@ dependencies[] = scald_video
 dependencies[] = scald_vimeo
 dependencies[] = strongarm
 dependencies[] = views_bootstrap
+features[context][] = multimedia-carto
 features[context][] = multimedia-list
 features[context][] = multimedia-photos
 features[context][] = multimedia-sounds

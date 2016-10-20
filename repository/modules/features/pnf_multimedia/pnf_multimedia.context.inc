@@ -13,6 +13,38 @@ function pnf_multimedia_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'multimedia-carto';
+  $context->description = '';
+  $context->tag = 'Multimedia';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'cartotheque*' => 'cartotheque*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'menu-menu-multimedia' => array(
+          'module' => 'menu',
+          'delta' => 'menu-multimedia',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Multimedia');
+  $export['multimedia-carto'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'multimedia-list';
   $context->description = '';
   $context->tag = 'Multimedia';
