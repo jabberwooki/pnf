@@ -796,17 +796,28 @@ Nous nous efforçons d\'y répondre dans les plus brefs délais.</p>
     'name' => 'mmenu_left',
     'blocks' => array(
       0 => array(
-        'module_delta' => 'tb_megamenu|menu-menu-themes',
+        'module_delta' => 'mmenu|search',
         'menu_parameters' => array(
           'min_depth' => '1',
         ),
         'title' => '<none>',
         'collapsed' => '0',
         'wrap' => '1',
-        'module' => 'tb_megamenu',
-        'delta' => 'menu-menu-themes',
+        'module' => 'mmenu',
+        'delta' => 'search',
       ),
       1 => array(
+        'module_delta' => 'menu|menu-menu-themes',
+        'menu_parameters' => array(
+          'min_depth' => '1',
+        ),
+        'title' => '<none>',
+        'collapsed' => '0',
+        'wrap' => '1',
+        'module' => 'menu',
+        'delta' => 'menu-menu-themes',
+      ),
+      2 => array(
         'module_delta' => 'menu|menu-menu-park',
         'menu_parameters' => array(
           'min_depth' => '1',
@@ -816,17 +827,6 @@ Nous nous efforçons d\'y répondre dans les plus brefs délais.</p>
         'wrap' => '1',
         'module' => 'menu',
         'delta' => 'menu-menu-park',
-      ),
-      2 => array(
-        'module_delta' => 'menu|menu-national-parks',
-        'menu_parameters' => array(
-          'min_depth' => '1',
-        ),
-        'title' => '<none>',
-        'collapsed' => '0',
-        'wrap' => '1',
-        'module' => 'menu',
-        'delta' => 'menu-national-parks',
       ),
       3 => array(
         'module_delta' => 'menu|menu-tools',
@@ -840,15 +840,15 @@ Nous nous efforçons d\'y répondre dans les plus brefs délais.</p>
         'delta' => 'menu-tools',
       ),
       4 => array(
-        'module_delta' => 'mmenu|search',
+        'module_delta' => 'menu|menu-national-parks',
         'menu_parameters' => array(
           'min_depth' => '1',
         ),
         'title' => '<none>',
         'collapsed' => '0',
         'wrap' => '1',
-        'module' => 'mmenu',
-        'delta' => 'search',
+        'module' => 'menu',
+        'delta' => 'menu-national-parks',
       ),
     ),
     'options' => array(
