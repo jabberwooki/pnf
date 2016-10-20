@@ -43,6 +43,17 @@ function pnf_multimedia_custom_breadcrumbs_paths_features_default_settings() {
     'machine_name' => 'multimedia_galleries',
   );
 
+  // Exported custom breadcrumb: multimedia_maps.
+  $custom_breadcrumbs['multimedia_maps'] = array(
+    'name' => 'Cartothèqe',
+    'titles' => 'Cartothèque',
+    'paths' => 'cartotheque',
+    'visibility_php' => '',
+    'specific_path' => 'cartotheque/*',
+    'language' => 'fr',
+    'machine_name' => 'multimedia_maps',
+  );
+
   // Exported custom breadcrumb: multimedia_sounds.
   $custom_breadcrumbs['multimedia_sounds'] = array(
     'name' => 'Médiathèque - Sons',
@@ -115,7 +126,6 @@ function pnf_multimedia_scald_default_context_types() {
     'player' => array(
       'file' => array(
         '*' => 'default',
-        'settings' => array(),
       ),
     ),
     'transcoder' => array(

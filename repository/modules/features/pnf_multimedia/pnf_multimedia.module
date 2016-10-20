@@ -93,3 +93,16 @@ function pnf_multimedia_block_view_alter(&$data, $block) {
     }
   }
 }
+
+/**
+ * Implements hook_pathauto_alias_alter().
+ */
+function pnf_multimedia_pathauto_alias_alter(&$alias, array &$context) {
+  // If gallery category = cartotheque (uuid = 5ed1938d-1c9d-4dff-b885-ea096e718753),
+  // we must alter pathauto.
+  $term_wrapper = entity_metadata_wrapper('taxonomy_term', $context['data']['scald_atom']->field_media_category['und'][0]['tid']);
+  $term_uuid = $term_wrapper->value()->uuid;
+  if ($term_uuid == '5ed1938d-1c9d-4dff-b885-ea096e718753') {
+    $alias = 'cartotheque' . substr($alias, strpos($alias, '/'));
+  }
+}

@@ -27,6 +27,7 @@ features[ctools][] = scald:context_config:1
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[custom_breadcrumbs_paths][] = multimedia_galleries
+features[custom_breadcrumbs_paths][] = multimedia_maps
 features[custom_breadcrumbs_paths][] = multimedia_sounds
 features[custom_breadcrumbs_paths][] = multimedia_videos
 features[fe_block_settings][] = menu-menu-multimedia
