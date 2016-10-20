@@ -1,6 +1,7 @@
 /*
 For PNF
  */
+
 var parkCode = Drupal.settings.kcore.park_code;
 
 if (typeof(CKEDITOR) !== 'undefined') {
@@ -221,51 +222,18 @@ if (typeof(CKEDITOR) !== 'undefined') {
         // These styles are already available in the "Format" drop-down list, so they are
         // not needed here by default. You may enable them to avoid placing the
         // "Format" drop-down list in the toolbar, maintaining the same features.
-        {name: 'Paragraphe', element: 'p', styles: {
-          'text-align': 'justify'
-        }},
-        {name : 'Chapeau' , element: 'div', attributes: {'class': 'intro'}, styles: {
-          'color': '#758298',
-          'text-align': 'justify',
-          'font-style': 'normal',
-          'font-weight': 'bold',
-          'font-size': '16px'
-        }},
-        {name: 'Bouton', element: 'div', attributes: {'class': 'boutonok'}, styles: {'color': '#fff'}},
-        //{name: 'Titre 3', element: 'h3'},
-        {name: 'Titre 3', element: 'h3', styles: {
-          'color': '#00965e',
-          'font-weight': 'normal',
-          'font-size': '24px',
-          'margin-top': '20px',
-          'margin-bottom': '15px'
-        }},
-        {name: 'Titre 4 vert', element: 'h4', styles: {
-          'color': '#00965e',
-          'font-weight': 'bold',
-          'font-size': '14px',
-          'margin-top': '10px',
-          'margin-bottom': '10px'
-        }},
-        {name: 'Titre 4', element: 'h4', styles: {
-          'color': '#000',
-          'font-weight': 'bold',
-          'font-size': '14px',
-          'margin-top': '10px',
-          'margin-bottom': '10px'
-
-        }},
-        {name: 'Titre 5', element: 'h5', styles: {
-          'color': '#000',
-          'font-weight': 'bold',
-          'font-size': '14px',
-          'margin-top': '5px',
-          'margin-bottom': '5px'
-
-        }},
-        {name: 'Paragraphe vert foncé', element: 'p', styles: {'color': '#00965e'}},
-        {name: 'Paragraphe vert clair', element: 'p', styles: {'color': '#78be20'}},
-        {name: 'Paragraphe bleu', element: 'p', styles: {'color': '#003da5'}},
+        {name: 'Paragraphe', element: 'p'},
+        {name : 'Chapeau' , element: 'div', attributes: {'class': 'intro'}},
+        {name: 'Bouton', element: 'div', attributes: {'class': 'boutonok'}},
+        {name: 'Titre 3', element: 'h3'},
+        {name: 'Titre 4', element: 'h4'},
+        {name: 'Titre 5', element: 'h5'},
+        {name: 'Titre 3 - vert', element: 'h3', attributes: {'class': 'cke-h3 cke-green1'}},
+        {name: 'Titre 4 - vert', element: 'h4', attributes: {'class': 'cke-h4 cke-green1'}},
+        {name: 'Titre 4 - noir', element: 'h4', attributes: {'class': 'cke-h4 cke-black'}},
+        {name: 'Paragraphe vert foncé', element: 'p', attributes: {'class': 'cke-p cke-green1'}},
+        {name: 'Paragraphe vert clair', element: 'p', attributes: {'class': 'cke-p cke-green2'}},
+        {name: 'Paragraphe bleu', element: 'p', attributes: {'class': 'cke-p cke-blue1'}},
 
         /* Object Styles */
         {

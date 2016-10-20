@@ -1,0 +1,43 @@
+.intro{
+    color: #758298;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.boutonok{
+    background-color: #00965E;
+    border-color: #00965E;
+}
+a {
+    color: #01965e;
+}
+.cke-h3 {
+    font-weight: normal;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.cke-h4 {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cke-p {
+    text-align: justify;
+}
+.cke-green1 {
+    color: #00965e;
+}
+.cke-green2 {
+    color: #78be20;
+}
+.cke-blue1 {
+    color: #003da5;
+}
+.cke-black {
+    color: #000000;
+}
+

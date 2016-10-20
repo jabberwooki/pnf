@@ -3,3 +3,22 @@
  * @file
  * Drupal needs this blank file.
  */
+
+/**
+ * Implements hook_ckeditor_settings_alter().
+ */
+function kedition_ckeditor_settings_alter(&$settings, $conf) {
+  // Loads park's custom ckeditor's css file.
+  // 1) Required vars
+  $park_code = variable_get('park_code','pnx');
+  $css_files_path = drupal_get_path('theme','pnf') . '/css/';
+  $query_string = '?' . variable_get('css_js_query_string', '0');
+  $cke_styles_file = 'ckeditor.styles.' . $park_code . '.css' . $query_string;
+
+  // If custom css file has been created (in theme's css folder),
+  // it's added to the css files during rich text editor loading.
+  $cke_pn_styles_file = DRUPAL_ROOT . '/' . $css_files_path . 'ckeditor.styles.' . $park_code . '.css';
+  if (file_exists($cke_pn_styles_file)) {
+    $settings['contentsCss'][] = $css_files_path . $cke_styles_file;
+  }
+}
