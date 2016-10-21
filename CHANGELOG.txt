@@ -1,3 +1,28 @@
+PNx 1.2.1 / 2016-10-21
+======================
+ * pnf_multimedia up: Missing context multimedia_carto added.
+ * pnf_multimedia up: Term 'Cartothèque' removed from Catégorie exposed filter in Galleries view.
+ * pnf_multimedia up: New view Cartotheque created, view galleries altered.
+ * kcore up: Mmenu display order settings altered.
+ * Ckeditor styles for PNP reorganised.
+ * Custom theme up: New css picto tool-regulations added for PNCAL.
+ * pnf_advanced_pages up: Wrong display settings fixed for the 2 new paragraphs bundles.
+ * pnf_landing_pages up: Menu Fields image field settings altered: alt and title attributes enabled for menu_menu_park and menu_menu_themes.
+ * pnf_news up: New paragraphs bundles text_image_67_33 and image_text_33_67 added to field_news_content.
+ * pnf_advanced_pages up: New paragraphs bundles text_image_67_33 and image_text_33_67 created and added to field_page_content.
+ * PNx profile up: Custom ckeditor styles altered for PNP.
+ * pnf_multimedia up: Documents link removed from foter's Multimedia menu.
+ * kcore up: Custom code added to test park_code value and alter 'Venir dans le park national' menu title consequently.
+ * kcore up: mmenu settings altered: fullscreen width option unchecked.
+ * css button mmenu selector
+ * kcore up: Module mmenu installed, settings exported.
+ * debug css item de menu debordement
+ * Custom theme up: Google+ fontawesome code added.
+ * tbmegamenu niv2 debug
+ * pnf_agenda, pnf_contracts and pnf_news up: Closes #285: Ordering criterion 'Sticky at top of lists' added.
+ * pnf_documents up: Closes #278: items sorted in desc order in 'publications et documents' and 'espace presse' views.
+ * pnf_agenda up: Closes #282: Events in front page agenda block sorted in asc order.
+
 PNx 1.2 - 2016-07-29
 --------------------
  * Custom theme up: PNCAL site colors added.
