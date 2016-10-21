@@ -223,17 +223,17 @@ if (typeof(CKEDITOR) !== 'undefined') {
         // not needed here by default. You may enable them to avoid placing the
         // "Format" drop-down list in the toolbar, maintaining the same features.
         {name: 'Paragraphe', element: 'p'},
-        {name : 'Chapeau' , element: 'div', attributes: {'class': 'intro'}, styles: {'color': '#00965e','font-style': 'italic' }},
-        {name: 'Bouton', element: 'div', attributes: {'class': 'boutonok'}, styles: {'color': '#fff'}},
+        {name : 'Chapeau' , element: 'div', attributes: {'class': 'intro'}},
+        {name: 'Bouton', element: 'div', attributes: {'class': 'boutonok'}},
         {name: 'Titre 3', element: 'h3'},
         {name: 'Titre 4', element: 'h4'},
         {name: 'Titre 5', element: 'h5'},
-        {name: 'Paragraphe vert foncé', element: 'p', styles: {'color': '#00965e'}},
-        {name: 'Paragraphe vert clair', element: 'p', styles: {'color': '#78be20'}},
-        {name: 'Paragraphe bleu', element: 'p', styles: {'color': '#003da5'}},
-        {name: 'Titre 3 - vert foncé', element: 'h3', styles: {'color': '#00965e'}},
-        {name: 'Titre 3 - vert', element: 'h3', styles: {'color': '#78be20'}},
-        {name: 'Titre 3 - bleu', element: 'h3', styles: {'color': '#003da5'}},
+        {name: 'Titre 3 - vert', element: 'h3', attributes: {'class': 'cke-h3 cke-green1'}},
+        {name: 'Titre 4 - vert', element: 'h4', attributes: {'class': 'cke-h4 cke-green1'}},
+        {name: 'Titre 4 - noir', element: 'h4', attributes: {'class': 'cke-h4 cke-black'}},
+        {name: 'Paragraphe vert foncé', element: 'p', attributes: {'class': 'cke-p cke-green1'}},
+        {name: 'Paragraphe vert clair', element: 'p', attributes: {'class': 'cke-p cke-green2'}},
+        {name: 'Paragraphe bleu', element: 'p', attributes: {'class': 'cke-p cke-blue1'}},
 
         /* Object Styles */
         {

@@ -525,6 +525,15 @@ function kcore_user_default_permissions() {
     'module' => 'menu_admin_per_menu',
   );
 
+  // Exported permission: 'administer mmenu'.
+  $permissions['administer mmenu'] = array(
+    'name' => 'administer mmenu',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+    ),
+    'module' => 'mmenu',
+  );
+
   // Exported permission: 'administer module filter'.
   $permissions['administer module filter'] = array(
     'name' => 'administer module filter',

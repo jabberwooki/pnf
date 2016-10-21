@@ -288,6 +288,7 @@ header .name{
 		background: #f4f4f4;
 		border-top: 1px solid #ccc;
 		padding: 7px 7px;
+		white-space: normal;
 	}
 	ul li ul.dropdown-menu li a.active,
 	ul li ul.dropdown-menu li a:hover{
@@ -344,13 +345,20 @@ header .name{
 			color: #e52d27;
 		}
 	}
-
+	.otw-google {
+	    a:after{
+	        content: '\f0d5';
+	    }
+	    a:hover:after{
+	        color: #e52d27;
+	    }
+    }
 }
 
 /*Menu thematique*/
 nav{
 	margin-top: 40px;
-	position: initial !important;
+	/*position: initial !important;*/
 }
 @media (max-width: @screen-xs-max) {
   #block-tb-megamenu-menu-menu-themes {
@@ -434,8 +442,10 @@ nav .tb-megamenu {
 			ul li{
 				border: none;
 			}
+			li.level-2 > a,
+			li.level-2 > a:hover,
 			a.mega-group-title,
-			a.mega-group-title:hover{
+			a.mega-group-title:hover{ 
 				color: #8e9fbc;
 				text-transform: uppercase;
 				border-bottom: 1px solid #cbd0d9;
@@ -444,6 +454,8 @@ nav .tb-megamenu {
 				padding-left: 10px;
 				line-height: 30px;
 			}
+			li.level-2.active > a,
+			li.level-2 > a:focus,
 			li.level-3.active a,
 			li.level-3.active a.mega-group-title,
 			ul li.mega-group .open a.mega-group-title:focus,
@@ -451,6 +463,10 @@ nav .tb-megamenu {
 			ul li a:hover{
 				background: #c7cdd7;
 				border: none;
+				color: #3a353c;
+			}
+			li.level-2 > a:hover{
+				background: transparent;
 				color: #3a353c;
 			}
 			li.level-3.active a,
@@ -596,20 +612,45 @@ now override the 3.3 new styles for modern browsers & apply opacity
     }
 }
 
+	  #mmenu-selector{
+        display: none;
+    }
+
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 @media(max-width: @screen-xs-max){
 	nav{
 		margin-top: 0px;
-		position: initial !important;
+		height: 60px;
+		/*position: initial !important;*/
 	}
+	#block-tb-megamenu-menu-menu-themes,
+	.region-top-menu{
+		display: none;
+	}
+	  #mmenu-selector{
+        display: block !important;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 2000;
+    }
+    #mmenu-selector:before{
+        background: @brand-primary;
+        content: '\f0c9';
+        font-family: "Fontawesome";
+        color: #fff;
+        font-size: 21px;
+        padding: 10px;
+        border-radius: 5px;
+    }
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {
 	nav{
 		margin-top: 40px;
-		position: initial !important;
+		/*position: initial !important;*/
 	}
 	#block-kcore-pnf-on-the-web-clone{
 		display: none;
@@ -668,6 +709,9 @@ now override the 3.3 new styles for modern browsers & apply opacity
 			}
 			a.tool-phototheque:after{
 				content:'\f030';
+			}
+			a.tool-regulations:after{
+				content:'\f071';
 			}
 	        a span {
 	            text-align: right;

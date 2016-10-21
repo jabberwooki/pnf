@@ -65,7 +65,7 @@
       //console.log($(this).html());
       var text = '';
       $(this).find('p').each(function() {
-        console.log($(this).text());
+        // console.log($(this).text());
         text += ' ' + $(this).text();
       });
       $(this).find('.field-item').html("<p>" + text + "</p>");

@@ -107,6 +107,8 @@
           <?php print render($page['navigation']); ?>
         </nav>
       <?php endif; ?>
+
+    <div id="mmenu-selector"></div>
   </div>
 
 </header>

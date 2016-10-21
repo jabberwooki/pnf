@@ -182,6 +182,40 @@ function pnf_advanced_pages_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|image_text_33_67|full';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'image_text_33_67';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'bootstrap_4_8';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'field_image',
+      ),
+      'right' => array(
+        1 => 'field_texte',
+      ),
+    ),
+    'fields' => array(
+      'field_image' => 'left',
+      'field_texte' => 'right',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'left' => 'div',
+      'right' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['paragraphs_item|image_text_33_67|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'paragraphs_item|image_text_50_50|full';
   $ds_layout->entity_type = 'paragraphs_item';
   $ds_layout->bundle = 'image_text_50_50';
@@ -311,6 +345,40 @@ function pnf_advanced_pages_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['paragraphs_item|text_image_50_50|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|text_image_67_33|full';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'text_image_67_33';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'bootstrap_8_4';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'field_texte',
+      ),
+      'right' => array(
+        1 => 'field_image',
+      ),
+    ),
+    'fields' => array(
+      'field_texte' => 'left',
+      'field_image' => 'right',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'left' => 'div',
+      'right' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['paragraphs_item|text_image_67_33|full'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
