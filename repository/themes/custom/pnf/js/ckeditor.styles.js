@@ -262,13 +262,13 @@ if (typeof(CKEDITOR) !== 'undefined') {
         {name: 'Titre 3', element: 'h3'},
         {name: 'Titre 4', element: 'h4'},
         {name: 'Titre 5', element: 'h5'},
+        {name: 'Titre 3 - bleu', element: 'h3', styles: {'color': '#298fc2'}},
+        {name: 'Titre 3 - rouge', element: 'h3', styles: {'color': '#9e2a2b'}},
+        {name: 'Titre 3 - orange', element: 'h3', styles: {'color': '#f1b434'}},
         {name: 'Paragraphe vert', element: 'p', styles: {'color': '#a1c339'}},
         {name: 'Paragraphe bleu', element: 'p', styles: {'color': '#298fc2'}},
         {name: 'Paragraphe rouge', element: 'p', styles: {'color': '#9e2a2b'}},
         {name: 'Paragraphe orange', element: 'p', styles: {'color': '#f1b434'}},
-        {name: 'Titre 3 - bleu', element: 'h3', styles: {'color': '#298fc2'}},
-        {name: 'Titre 3 - rouge', element: 'h3', styles: {'color': '#9e2a2b'}},
-        {name: 'Titre 3 - orange', element: 'h3', styles: {'color': '#f1b434'}},
 
         /* Object Styles */
         {
@@ -292,18 +292,18 @@ if (typeof(CKEDITOR) !== 'undefined') {
         // not needed here by default. You may enable them to avoid placing the
         // "Format" drop-down list in the toolbar, maintaining the same features.
         {name: 'Paragraphe', element: 'p'},
-        {name : 'Chapeau' , element: 'div', attributes: {'class': 'intro'}, styles: {'color': '#007dba','font-style': 'italic' }},
-        {name: 'Bouton', element: 'div', attributes: {'class': 'boutonok'}, styles: {'color': '#fff'}},
+        {name : 'Chapeau' , element: 'div', attributes: {'class': 'intro'}},
+        {name: 'Bouton', element: 'div', attributes: {'class': 'boutonok'}},
         {name: 'Titre 3', element: 'h3'},
         {name: 'Titre 4', element: 'h4'},
         {name: 'Titre 5', element: 'h5'},
-        {name: 'Paragraphe bleu', element: 'p', styles: {'color': '#007dba'}},
-        {name: 'Paragraphe violet', element: 'p', styles: {'color': '#840b55'}},
-        {name: 'Paragraphe orange', element: 'p', styles: {'color': '#e87722'}},
-        {name: 'Paragraphe vert', element: 'p', styles: {'color': '#97d700'}},
-        {name: 'Titre 3 - bleu', element: 'h3', styles: {'color': '#007dba'}},
-        {name: 'Titre 3 - violet', element: 'h3', styles: {'color': '#840b55'}},
-        {name: 'Titre 3 - orange', element: 'h3', styles: {'color': '#e87722'}},
+        {name: 'Titre 3 - bleu', element: 'h3', attributes : {'class': 'cke-h3 cke-blue1'}},
+        {name: 'Titre 3 - violet', element: 'h3', attributes : {'class': 'cke-h3 cke-purple1'}},
+        {name: 'Titre 3 - orange', element: 'h3', attributes : {'class': 'cke-h3 cke-orange1'}},
+        {name: 'Paragraphe bleu', element: 'p', attributes : {'class': 'cke-p cke-blue1'}},
+        {name: 'Paragraphe violet', element: 'p', attributes : {'class': 'cke-p cke-purple1'}},
+        {name: 'Paragraphe orange', element: 'p', attributes : {'class': 'cke-p cke-orange1'}},
+        {name: 'Paragraphe vert', element: 'p', attributes : {'class': 'cke-p cke-green1'}},
 
         /* Object Styles */
         {
