@@ -107,6 +107,7 @@ function pnf_raa_views_default_views() {
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['id'] = 'field_displayed_pub_date_value';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['table'] = 'field_data_field_displayed_pub_date';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['field'] = 'field_displayed_pub_date_value';
+  $handler->display->display_options['sorts']['field_displayed_pub_date_value']['order'] = 'DESC';
   /* Contextual filter: Content: Date de publication affichée (field_displayed_pub_date) */
   $handler->display->display_options['arguments']['field_displayed_pub_date_value']['id'] = 'field_displayed_pub_date_value';
   $handler->display->display_options['arguments']['field_displayed_pub_date_value']['table'] = 'field_data_field_displayed_pub_date';
