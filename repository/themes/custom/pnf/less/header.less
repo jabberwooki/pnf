@@ -489,6 +489,49 @@ nav .tb-megamenu {
 		}
 }
 
+/*Mmenu - Menu mobile*/
+.mmenu-nav.mm-basic {
+    background: #3a353c !important;
+    #block-mmenu-search{
+    	padding-top: 20px;
+    }
+    .btn-default{
+    	background-color: @brand-primary;
+    	color: #fff;
+    	border: @brand-primary;
+    }
+    .search-form .form-text {
+    	padding: 0 5px;
+	}
+	ul.mmenu-mm-list-level-1 {
+		padding: 0;
+	}
+	.mmenu-mm-list-level-2 > li > a,
+	.mmenu-mm-list-level-1 > li > a{
+		text-transform: uppercase;
+	}
+	.mm-list > li > a{
+		font-weight: bold;
+		color: #fff;
+	}
+	.mm-list > li > span{
+		padding: 0 10px 0 20px;
+	}
+	.mm-menu .mm-list ul{
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.mm-list li{
+		border:none !important;
+	}
+	.mm-list a.mm-subopen{
+		background: rgb(78, 76, 76);
+	}
+	.mm-list > li > a.mm-subopen:after{
+		border-color: @brand-primary !important;
+	}
+}
+
 
 /*Slideshow*/
 .white-logos{
@@ -633,7 +676,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
         position: absolute;
         right: 20px;
         top: 20px;
-        z-index: 2000;
+        /*z-index: 2000;*/
     }
     #mmenu-selector:before{
         background: @brand-primary;
