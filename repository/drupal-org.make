@@ -267,6 +267,9 @@ projects[views_rss][version] = "2.0-rc4"
 ;projects[views_ui_basic][subdir] = contrib
 ;projects[views_ui_basic][version] = ""
 
+projects[weight][subdir] = contrib
+projects[weight][version] = "3.1"
+
 ;=== Mapping modules ==========================================================
 projects[geophp][subdir] = contrib
 projects[geophp][version] = "1.7"
