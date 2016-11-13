@@ -61,6 +61,18 @@ function pnf_news_strongarm() {
       'linked_content' => array(
         'custom_settings' => TRUE,
       ),
+      'newsletter' => array(
+        'custom_settings' => TRUE,
+      ),
+      'email_plain' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_html' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_textalt' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -119,6 +131,10 @@ function pnf_news_strongarm() {
             'visible' => FALSE,
           ),
           'linked_content' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
+          'newsletter' => array(
             'weight' => '11',
             'visible' => FALSE,
           ),

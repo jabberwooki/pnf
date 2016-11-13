@@ -1,0 +1,212 @@
+<?php
+/**
+ * @file
+ * Code for the Lettre d'infos feature.
+ */
+
+include_once 'pnf_newsletter.features.inc';
+
+/**
+ * Implements hook_init().
+ */
+function pnf_newsletter_init() {
+    drupal_add_css(drupal_get_path('module', 'pnf_newsletter') . '/css/newsletter.css');
+    drupal_add_js(drupal_get_path('module', 'pnf_newsletter') . '/js/pnf_newsletter.js');
+}
+
+/**
+ * Implements hook_menu().
+ */
+function pnf_newsletter_menu() {
+  $items = array();
+  $items['admin/config/pnf_newsletter'] = array(
+    'title' => t('Newsletter'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('pnf_newsletter_settings_form'),
+    'access arguments' => array('administer pnf settings'),
+    'file' => 'pnf_newsletter.admin.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_ds_fields_info().
+ */
+function pnf_newsletter_ds_fields_info($entity_type) {
+  $fields = array();
+
+  $fields['newsletter_header_image'] = array(
+    'title' => 'Image de l\'en-tête',
+    'field_type' => DS_FIELD_TYPE_FUNCTION,
+    'ui_limit' => array('simplenews|full','simplenews|email_html'),
+    'function' => 'pnf_newsletter_header_image_field_render',
+  );
+
+//  $fields['newsletter_logo'] = array(
+//    'title' => 'Logo',
+//    'field_type' => DS_FIELD_TYPE_FUNCTION,
+//    'ui_limit' => array('simplenews|full'),
+//    'function' => 'pnf_newsletter_logo_image_field_render',
+//  );
+
+  $fields['newsletter_news_header'] = array(
+    'title' => 'En-tête actualités',
+    'field_type' => DS_FIELD_TYPE_FUNCTION,
+    'ui_limit' => array('simplenews|full','simplenews|email_html'),
+    'function' => 'pnf_newsletter_news_header_render',
+  );
+  $fields['newsletter_newsflashes_header'] = array(
+    'title' => 'En-tête brèves',
+    'field_type' => DS_FIELD_TYPE_FUNCTION,
+    'ui_limit' => array('simplenews|full','simplenews|email_html'),
+    'function' => 'pnf_newsletter_newsflashes_header_render',
+  );
+  $fields['newsletter_agenda_header'] = array(
+    'title' => 'En-tête agenda',
+    'field_type' => DS_FIELD_TYPE_FUNCTION,
+    'ui_limit' => array('simplenews|full','simplenews|email_html'),
+    'function' => 'pnf_newsletter_agenda_header_render',
+  );
+
+
+  return array('node' => $fields);
+}
+
+function pnf_newsletter_header_image_field_render() {
+  if ($image_fid = variable_get('newsletter_header_image_fid', FALSE)) {
+    $image = file_load($image_fid);
+
+    $banner_image = theme('image_style', array(
+        'style_name' => 'newsletter_header',
+        'path' => $image->uri,
+        'alt' => 'Newsletter header image',
+      )
+    );
+  }
+  else {
+    $image_path = drupal_get_path('module','pnf_newsletter') . '/img/newsletter-default-header-logo.jpg';
+    $banner_image = theme('image', array(
+        'path' => $image_path,
+        'width' => '600px',
+        'height' => '125px',
+        'alt' => 'Default newsletter header',
+      )
+    );
+  }
+  return $banner_image;
+}
+
+//function pnf_newsletter_logo_image_field_render() {
+//  if ($image_fid = variable_get('newsletter_logo_image_fid', FALSE)) {
+//    $image = file_load($image_fid);
+//
+//    $logo_image = theme('image_style', array(
+//        'style_name' => 'newsletter_logo',
+//        'path' => $image->uri,
+//        'alt' => 'Newsletter logo',
+//      )
+//    );
+//  }
+//  else {
+//    $image_path = drupal_get_path('module','pnf_newsletter') . '/img/newsletter-default-logo.jpg';
+//    $logo_image = theme('image', array(
+//        'path' => $image_path,
+//        'width' => '172px',
+//        'height' => '172px',
+//        'alt' => 'Default newsletter logo',
+//      )
+//    );
+//  }
+//  return $logo_image;
+//}
+
+function pnf_newsletter_news_header_render() {
+  $output = '<h3 class="header-title col-md-8">Actualités</h3>';
+  $output .= '<div class="header-link col-md-4"><a href="/actualites">Toutes les actualités</a></div>';
+  $output .= '<div class="newsletter-spacer clearfix"></div>';
+
+  return $output;
+}
+
+function pnf_newsletter_newsflashes_header_render() {
+  $output = '<h3 class="header-title col-md-8">Brèves</h3>';
+  $output .= '<div class="header-link col-md-4"><a href="/breves">Toutes les brèves</a></div>';
+  $output .= '<div class="newsletter-spacer clearfix"></div>';
+
+  return $output;
+}
+
+function pnf_newsletter_agenda_header_render() {
+  $output = '<h3 class="header-title col-md-8">Agenda</h3>';
+  $output .= '<div class="header-link col-md-4"><a href="/agenda">L\'agenda complet</a></div>';
+  $output .= '<div class="newsletter-spacer clearfix"></div>';
+
+  return $output;
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function pnf_newsletter_field_formatter_info() {
+  $formatters = array(
+    'pnf_newsletter_agenda_date' => array(
+      'label' => t('Date agenda newsletter'),
+      'field types' => array('date', 'datestamp', 'datetime'),
+      'description' => t('Displays event dates as needed for agenda in Newsletter.'),
+    ),
+  );
+  return $formatters;
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function pnf_newsletter_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+
+  switch ($display['type']) {
+    case 'pnf_newsletter_agenda_date':
+      foreach ($items as $delta => $item) {
+        // Single date
+        if ($item['value'] == $item['value2']) {
+          $adverb = t('on');
+          $iso_date = $item['value'];
+        }
+        else {
+          $now = date('Y-m-d');
+          $iso_date = $item['value'];
+          $date = substr($iso_date, 0, 10);
+
+          // Two dates in the future
+          if ($date > $now) {
+            $adverb = t('from');
+          }
+          // Two dates, start date past.
+          else {
+            $adverb = t('to');
+            $iso_date = $item['value2'];
+
+          }
+        }
+        $element[$delta] = array('#markup' => pnf_newsletter_agenda_date_markup($adverb, $iso_date));
+      }
+      break;
+  }
+
+  return $element;
+}
+
+/**
+ * @param string $adverb Adverb to place in front of agenda date
+ * @param string $iso_date Mysql ISO date, as retrieved from database
+ * @return string $markup HTML code to display
+ */
+function pnf_newsletter_agenda_date_markup($adverb, $iso_date) {
+  $date = format_date(strtotime($iso_date),'custom','d F Y');
+  $markup =  '<div class="newsletter-agenda-adverb">' . $adverb . '</div>'
+  	. '<div class="newsletter-agenda-date">' . $date . '</div>';
+
+  return $markup;
+}

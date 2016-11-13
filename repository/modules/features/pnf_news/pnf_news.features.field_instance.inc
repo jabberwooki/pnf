@@ -70,6 +70,27 @@ function pnf_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 3,
       ),
+      'newsletter' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'trim_length' => 200,
+        ),
+        'type' => 'text_trimmed',
+        'weight' => 2,
+      ),
       'print' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -263,6 +284,12 @@ function pnf_news_field_default_field_instances() {
         'weight' => 0,
       ),
       'linked_content' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
+      'newsletter' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -491,6 +518,12 @@ function pnf_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 15,
       ),
+      'newsletter' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'print' => array(
         'label' => 'above',
         'settings' => array(),
@@ -617,6 +650,28 @@ function pnf_news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 2,
+      ),
+      'newsletter' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'field_formatter_class' => '',
+          'image_link' => 'content',
+          'image_style' => 'newsletter_image',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 0,
       ),
       'print' => array(
         'label' => 'hidden',
@@ -804,6 +859,12 @@ function pnf_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 12,
       ),
+      'newsletter' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
       'print' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
@@ -906,6 +967,12 @@ function pnf_news_field_default_field_instances() {
         'weight' => 3,
       ),
       'linked_content' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
+      'newsletter' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1042,6 +1109,12 @@ function pnf_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 18,
       ),
+      'newsletter' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
       'print' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1129,6 +1202,12 @@ function pnf_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 13,
       ),
+      'newsletter' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
       'print' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1207,6 +1286,12 @@ function pnf_news_field_default_field_instances() {
         'weight' => 26,
       ),
       'linked_content' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
+      'newsletter' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1308,6 +1393,12 @@ function pnf_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 20,
       ),
+      'newsletter' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'print' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1403,6 +1494,12 @@ function pnf_news_field_default_field_instances() {
         'weight' => 4,
       ),
       'linked_content' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
+      'newsletter' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1512,6 +1609,12 @@ function pnf_news_field_default_field_instances() {
         'weight' => 20,
       ),
       'linked_content' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
+      'newsletter' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
