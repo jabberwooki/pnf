@@ -159,5 +159,19 @@ function pnf_newsletter_strongarm() {
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_newsletter_pattern'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplenews_format';
+  $strongarm->value = 'html';
+  $export['simplenews_format'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplenews_test_address_override';
+  $strongarm->value = 1;
+  $export['simplenews_test_address_override'] = $strongarm;
+
   return $export;
 }

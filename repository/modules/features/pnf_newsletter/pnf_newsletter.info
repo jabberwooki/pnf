@@ -74,4 +74,6 @@ features[variable][] = node_preview_simplenews
 features[variable][] = node_submitted_simplenews
 features[variable][] = pathauto_node_simplenews_pattern
 features[variable][] = pathauto_taxonomy_term_newsletter_pattern
+features[variable][] = simplenews_format
+features[variable][] = simplenews_test_address_override
 project path = profiles/pnf/modules/features
