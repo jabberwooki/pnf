@@ -28,5 +28,5 @@
  */
 ?>
 <!--<h2>--><?php //print $title; ?><!--</h2>-->
-<?php print render($build['newsletter_header_image']); ?>
+<?php print render($build); ?>
 
