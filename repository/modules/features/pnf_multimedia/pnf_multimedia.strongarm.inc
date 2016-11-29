@@ -300,6 +300,30 @@ function pnf_multimedia_strongarm() {
       'parseable' => TRUE,
       'formats' => array(),
     ),
+    '150w' => array(
+      'name' => '150w',
+      'title' => 'Largeur 150',
+      'description' => '',
+      'render_language' => 'XHTML',
+      'parseable' => TRUE,
+      'formats' => array(),
+    ),
+    '350w' => array(
+      'name' => '350w',
+      'title' => 'Largeur 350',
+      'description' => '',
+      'render_language' => 'XHTML',
+      'parseable' => TRUE,
+      'formats' => array(),
+    ),
+    '600w' => array(
+      'name' => '600w',
+      'title' => 'Largeur 600',
+      'description' => '',
+      'render_language' => 'XHTML',
+      'parseable' => TRUE,
+      'formats' => array(),
+    ),
   );
   $export['scald_custom_contexts'] = $strongarm;
 

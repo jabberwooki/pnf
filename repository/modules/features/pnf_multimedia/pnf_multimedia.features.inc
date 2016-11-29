@@ -85,6 +85,22 @@ function pnf_multimedia_custom_breadcrumbs_paths_features_default_settings() {
 function pnf_multimedia_image_default_styles() {
   $styles = array();
 
+  // Exported image style: 150w.
+  $styles['150w'] = array(
+    'label' => 'Largeur 150',
+    'effects' => array(
+      21 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 150,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: 200w.
   $styles['200w'] = array(
     'label' => 'Largeur 200',
@@ -93,6 +109,38 @@ function pnf_multimedia_image_default_styles() {
         'name' => 'image_scale',
         'data' => array(
           'width' => 200,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: 350w.
+  $styles['350w'] = array(
+    'label' => 'Largeur 350',
+    'effects' => array(
+      22 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 350,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: 600w.
+  $styles['600w'] = array(
+    'label' => 'Largeur 600',
+    'effects' => array(
+      23 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 600,
           'height' => '',
           'upscale' => 0,
         ),
@@ -126,6 +174,7 @@ function pnf_multimedia_scald_default_context_types() {
     'player' => array(
       'file' => array(
         '*' => 'default',
+        'settings' => array(),
       ),
     ),
     'transcoder' => array(
@@ -160,6 +209,7 @@ function pnf_multimedia_scald_default_context_types() {
     'player' => array(
       'image' => array(
         '*' => 'default',
+        'settings' => array(),
       ),
     ),
     'transcoder' => array(
