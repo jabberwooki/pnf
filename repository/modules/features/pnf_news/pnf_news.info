@@ -28,6 +28,7 @@ features[ds_field_settings][] = node|news|teaser_list_flashnews
 features[ds_layout_settings][] = node|news|default
 features[ds_layout_settings][] = node|news|full
 features[ds_layout_settings][] = node|news|linked_content
+features[ds_layout_settings][] = node|news|newsletter
 features[ds_layout_settings][] = node|news|print
 features[ds_layout_settings][] = node|news|teaser
 features[ds_layout_settings][] = node|news|teaser_home

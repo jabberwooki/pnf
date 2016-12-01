@@ -1,0 +1,104 @@
+.node-simplenews.view-mode-full {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .group-newsletter-header {
+  }
+
+  .group-title-date-banner {
+    padding: 0.75em 0.5em;
+    margin: 0.1em 0 1em 0;
+    background-color: #b0afb8;
+    position: relative;
+    .field-name-title {
+      h2 {
+        margin: 0;
+        color: white;
+      }
+    }
+    .field-name-field-newsletter-date {
+      text-align: right;
+      position: absolute;
+      bottom: 1em;
+      right: 1em;
+      color: white;
+    }
+  }
+
+  .field-name-field-newsletter-intro {
+    clear: both;
+    padding: 0 0 1em 0;
+    margin: 0 0 1em 0;
+    border-bottom: 5px solid #dddddd;
+  }
+
+	.newsletter-section-header {
+    padding: 0.5em 1em;
+    margin: 1.5em 0 1em 0;
+    background-color: #e4e4e4;
+    position: relative;
+    
+  	h3 {
+    	padding: 0;
+    	margin: 0;
+    	color: #b0afb8;
+  	}
+  	
+  	.header-link {
+			text-align: right; 
+			position: absolute;
+			right: 0.5em;
+			bottom: 0.5em; 	
+  	}
+	}
+	
+	.field-type-entityreference  {
+		> div.field-items > div.field-item:not(:last-child)  {
+			padding-bottom: 1em;
+			margin-bottom: 1em;
+			border-bottom: 1px solid #cccccc;	
+		}
+	
+		.row {
+			margin: 0;
+			
+			> div {
+				padding: 0;		
+			}
+			> div:nth-child(2) {
+				padding-left: 1em;
+			}
+			blockquote {
+				display: none;			
+			}
+			
+			h4 {
+				margin-top: 0;			
+			}
+			
+			.field-name-field-event-categorie {
+				font-style: italic;		
+				color:#7c7c7c;
+			}
+			
+			.field-name-field-event-dates {
+				font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+				
+				.newsletter-agenda-adverb {
+					color: #7c7c7c;
+					font-size: 80%;
+					text-align: right;
+				}
+				.newsletter-agenda-date {
+					text-align: right;			
+				}
+			}
+		}
+	}
+}
+
+// Admin form (/admin/config/pnf_newsletter)
+#edit-newsletter-header-image-fid-upload {
+  display: inline;
+}

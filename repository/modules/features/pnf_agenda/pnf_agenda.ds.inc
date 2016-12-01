@@ -12,6 +12,38 @@ function pnf_agenda_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|event|newsletter';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'event';
+  $ds_fieldsetting->view_mode = 'newsletter';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h4',
+        'class' => '',
+        'field_formatter_class' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['node|event|newsletter'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|event|teaser';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'event';
@@ -54,6 +86,38 @@ function pnf_agenda_ds_field_settings_info() {
     ),
   );
   $export['node|event|teaser_home'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|news|newsletter';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'news';
+  $ds_fieldsetting->view_mode = 'newsletter';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h4',
+        'class' => '',
+        'field_formatter_class' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['node|news|newsletter'] = $ds_fieldsetting;
 
   return $export;
 }
@@ -111,6 +175,7 @@ function pnf_agenda_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
   );
   $export['node|event|default'] = $ds_layout;
 
@@ -164,6 +229,49 @@ function pnf_agenda_ds_layout_settings_info() {
     'page_option_title' => '',
   );
   $export['node|event|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|event|newsletter';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'event';
+  $ds_layout->view_mode = 'newsletter';
+  $ds_layout->layout = 'bootstrap_3_6_3';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'central' => array(
+        0 => 'title',
+        1 => 'field_event_categorie',
+        3 => 'field_event_location',
+      ),
+      'right' => array(
+        2 => 'field_event_dates',
+      ),
+      'left' => array(
+        4 => 'field_key_image',
+      ),
+    ),
+    'fields' => array(
+      'title' => 'central',
+      'field_event_categorie' => 'central',
+      'field_event_dates' => 'right',
+      'field_event_location' => 'central',
+      'field_key_image' => 'left',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'left' => 'div',
+      'central' => 'div',
+      'right' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['node|event|newsletter'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;

@@ -121,3 +121,11 @@ function kcore_update_7015() {
 function kcore_update_7016() {
   module_enable(array('mmenu'));
 }
+
+
+/**
+ * Activate weight module.
+ */
+function kcore_update_7017() {
+  module_enable(array('weight'));
+}

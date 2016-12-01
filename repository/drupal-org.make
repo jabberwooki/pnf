@@ -267,6 +267,9 @@ projects[views_rss][version] = "2.0-rc4"
 ;projects[views_ui_basic][subdir] = contrib
 ;projects[views_ui_basic][version] = ""
 
+projects[weight][subdir] = contrib
+projects[weight][version] = "3.1"
+
 ;=== Mapping modules ==========================================================
 projects[geophp][subdir] = contrib
 projects[geophp][version] = "1.7"
@@ -316,6 +319,9 @@ projects[on_the_web][version] = "1.5"
 ;projects[service_links][version] = "2.3"
 
 ;=== Newsletter ===============================================================
+projects[simplenews][subdir] = contrib
+projects[simplenews][version] = "1.1"
+
 ;projects[mailchimp][subdir] = contrib
 ;projects[mailchimp][version] = ""
 
@@ -331,7 +337,7 @@ projects[scald_dailymotion][version] = "1.4"
 
 projects[scald_vimeo][subdir] = contrib
 projects[scald_vimeo][version] = "1.4"
-
+cla
 projects[scald_youtube][subdir] = contrib
 projects[scald_youtube][version] = "1.5"
 

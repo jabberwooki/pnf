@@ -58,6 +58,21 @@ function pnf_agenda_strongarm() {
       'teaser_list_flashnews' => array(
         'custom_settings' => FALSE,
       ),
+      'newsletter' => array(
+        'custom_settings' => TRUE,
+      ),
+      'email_plain' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_html' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_textalt' => array(
+        'custom_settings' => FALSE,
+      ),
+      'linked_content' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -97,6 +112,10 @@ function pnf_agenda_strongarm() {
           ),
           'print' => array(
             'weight' => '6',
+            'visible' => FALSE,
+          ),
+          'newsletter' => array(
+            'weight' => '0',
             'visible' => FALSE,
           ),
         ),
