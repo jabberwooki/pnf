@@ -1,3 +1,20 @@
+PNx 1.3 / 2016-11-30
+====================
+ * Custom theme up: Custom ckeditor styles added for PNRUN.
+ * pnf_newslette up: permissions added.
+ * Custom theme up: css code added to add margin for left/right aligned scald images in ckeditor.
+ * pnf_multimedia up: Closes #267: 150w, 350w and 600w scald contextes and corresponding image styles created.
+ * pnf_newsletter up: Simplenews template body altered to send all body instead of only header image.
+ * pnf_newsletter up: Strongarm params added.
+ * Feature pnf_newsletter created.
+ * pnf_promotions and kcore up: Contrib module Weight added to sort Promotions front page block.
+ * z-index button mmenu
+ * css mmenu
+ * pnf_raa up: List ordered by desc pub date instead of asc.
+ * pnf_multimedia up: Removes error message 'Notice : Undefined index: scald_atom dans pnf_multimedia_pathauto_alias_alter() (ligne 108...)'.
+ * Ckeditor styles for PNCAL reorganised.
+ * Custom theme up: CSS code added for Google+ icon in footer.
+
 PNx 1.2.1 / 2016-10-21
 ======================
  * pnf_multimedia up: Missing context multimedia_carto added.
