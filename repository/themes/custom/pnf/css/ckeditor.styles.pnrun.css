@@ -1,0 +1,30 @@
+.intro{
+    color: #046a38;
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.boutonok{
+    background-color: #046a38;
+    border-color: #046a38;
+}
+a {
+    color: #919388;
+}
+.cke-h3 {
+}
+.cke-p {
+}
+.cke-green1 {
+    color: #046a38;
+}
+.cke-green2 {
+    color: #658d1b;
+}
+.cke-taupe1 {
+    color: #7a7c73;
+}
+.cke-orange1 {
+    color: #e04e39;
+}

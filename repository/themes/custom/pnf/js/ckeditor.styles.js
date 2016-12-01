@@ -153,18 +153,18 @@ if (typeof(CKEDITOR) !== 'undefined') {
         // not needed here by default. You may enable them to avoid placing the
         // "Format" drop-down list in the toolbar, maintaining the same features.
         {name: 'Paragraphe', element: 'p'},
-        {name : 'Chapeau' , element: 'div', attributes: {'class': 'intro'}, styles: {'color': '#046a38','font-style': 'italic' }},
-        {name: 'Bouton', element: 'div', attributes: {'class': 'boutonok'}, styles: {'color': '#fff'}},
+        {name : 'Chapeau' , element: 'div', attributes: {'class': 'intro'}},
+        {name: 'Bouton', element: 'div', attributes: {'class': 'boutonok'}},
         {name: 'Titre 3', element: 'h3'},
         {name: 'Titre 4', element: 'h4'},
         {name: 'Titre 5', element: 'h5'},
-        {name: 'Paragraphe vert', element: 'p', styles: {'color': '#046a38'}},
-        {name: 'Paragraphe taupe', element: 'p', styles: {'color': '#7a7c73'}},
-        {name: 'Paragraphe orange', element: 'p', styles: {'color': '#e04e39'}},
-        {name: 'Paragraphe vert clair', element: 'p', styles: {'color': '#658d1b'}},
-        {name: 'Titre 3 - vert', element: 'h3', styles: {'color': '#046a38'}},
-        {name: 'Titre 3 - taupe', element: 'h3', styles: {'color': '#7a7c73'}},
-        {name: 'Titre 3 - orange', element: 'h3', styles: {'color': '#e04e39'}},
+        {name: 'Titre 3 - vert', element: 'h3', attributes: {'class': 'cke-h3 cke-green1'}},
+        {name: 'Titre 3 - taupe', element: 'h3', attributes: {'class': 'cke-h3 cke-taupe1'}},
+        {name: 'Titre 3 - orange', element: 'h3', attributes: {'class': 'cke-h3 cke-orange1'}},
+        {name: 'Paragraphe vert', element: 'p', attributes: {'class': 'cke-p cke-green1'}},
+        {name: 'Paragraphe taupe', element: 'p', attributes: {'class': 'cke-p cke-taupe1'}},
+        {name: 'Paragraphe orange', element: 'p', attributes: {'class': 'cke-p cke-orange1'}},
+        {name: 'Paragraphe vert clair', element: 'p', attributes: {'class': 'cke-p cke-green2'}},
 
         /* Object Styles */
         {
