@@ -1,3 +1,8 @@
+Hotfix 1.3.2 / 2016-12-09
+=========================
+ * Custom theme up: Fontawesome codes for child and user-circle icons added to header.less file.
+ * pnf_promotions up: New view display promos_4_front created.
+
 PNx 1.3.1 / 2016-12-09
 ======================
  * Install profile up: Typo fixed in .make file (small piece of word 'cla' inserted by chance in empty line).
