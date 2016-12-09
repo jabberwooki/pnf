@@ -1,3 +1,10 @@
+PNx 1.3.1 / 2016-12-09
+======================
+ * Install profile up: Typo fixed in .make file (small piece of word 'cla' inserted by chance in empty line).
+ * Custom PNP stylesheet up: Fontawesome code for binoculars picto added to .tool-ibex class.
+ * pnf_newsletter up: Mailchimp module and library added.
+ * Custom theme up: PNP stylesheet altered for .intro class
+
 PNx 1.3 / 2016-11-30
 ====================
  * Custom theme up: Custom ckeditor styles added for PNRUN.
