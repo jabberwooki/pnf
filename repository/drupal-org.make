@@ -322,8 +322,8 @@ projects[on_the_web][version] = "1.5"
 projects[simplenews][subdir] = contrib
 projects[simplenews][version] = "1.1"
 
-;projects[mailchimp][subdir] = contrib
-;projects[mailchimp][version] = ""
+projects[mailchimp][subdir] = contrib
+projects[mailchimp][version] = "4.7"
 
 ;=== Scald and media related modules ==========================================
 projects[scald][subdir] = contrib
@@ -337,7 +337,7 @@ projects[scald_dailymotion][version] = "1.4"
 
 projects[scald_vimeo][subdir] = contrib
 projects[scald_vimeo][version] = "1.4"
-cla
+
 projects[scald_youtube][subdir] = contrib
 projects[scald_youtube][version] = "1.5"
 
