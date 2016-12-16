@@ -75,11 +75,11 @@ function pnf_documents_node_view($node, $view_mode, $langcode) {
 /**
  * Implements hook_entity_view_alter().
  */
-function pnf_documents_entity_view_alter(&$build, $type) {
-  if ($type == 'field_collection_item' && $build['#bundle'] == 'field_document_links' && $build['#view_mode'] == 'full') {
-    // In documents teaser, if remote doc flip through link exists, local pdf viewing link is removed.
-    if(isset($build['field_document_flip'])) {
-      unset($build['local_flipthrough']);
-    }
-  }
-}
+//function pnf_documents_entity_view_alter(&$build, $type) {
+//  if ($type == 'field_collection_item' && $build['#bundle'] == 'field_document_links' && $build['#view_mode'] == 'full') {
+//    // In documents teaser, if remote doc flip through link exists, local pdf viewing link is removed.
+//    if(isset($build['field_document_flip'])) {
+//      unset($build['local_flipthrough']);
+//    }
+//  }
+//}

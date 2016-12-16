@@ -130,13 +130,11 @@ function pnf_documents_ds_layout_settings_info() {
     'regions' => array(
       'central' => array(
         0 => 'field_document_download',
-        1 => 'local_flipthrough',
-        2 => 'field_document_flip',
+        1 => 'field_document_flip',
       ),
     ),
     'fields' => array(
       'field_document_download' => 'central',
-      'local_flipthrough' => 'central',
       'field_document_flip' => 'central',
     ),
     'classes' => array(),
@@ -148,6 +146,7 @@ function pnf_documents_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
   );
   $export['field_collection_item|field_document_links|full'] = $ds_layout;
 
