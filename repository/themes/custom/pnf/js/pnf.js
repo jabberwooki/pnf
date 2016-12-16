@@ -115,7 +115,8 @@
     /*RAA accordion*/
     $( ".view-raa .view-content" ).accordion({
       collapsible: true,
-      heightStyle: "content"
+      heightStyle: "content",
+      active: false
     });
 
     /* Mobile version : Positionning and behavior of top menus */
