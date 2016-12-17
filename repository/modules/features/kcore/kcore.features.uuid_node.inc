@@ -12,7 +12,7 @@ function kcore_uuid_features_default_content() {
 
   $nodes[] = array(
   'uid' => 1,
-  'title' => 'Les parcs nationaux en France',
+  'title' => 'Les parcs nationaux de France',
   'log' => '',
   'status' => 1,
   'comment' => 0,
@@ -60,7 +60,7 @@ function kcore_uuid_features_default_content() {
   ),
   'name' => 'superadmin',
   'picture' => 0,
-  'data' => 'a:6:{s:16:"ckeditor_default";s:1:"t";s:20:"ckeditor_show_toggle";s:1:"t";s:14:"ckeditor_width";s:4:"100%";s:13:"ckeditor_lang";s:2:"en";s:18:"ckeditor_auto_lang";s:1:"t";s:17:"mimemail_textonly";i:0;}',
+  'data' => 'a:5:{s:16:"ckeditor_default";s:1:"t";s:20:"ckeditor_show_toggle";s:1:"t";s:14:"ckeditor_width";s:4:"100%";s:13:"ckeditor_lang";s:2:"en";s:18:"ckeditor_auto_lang";s:1:"t";}',
   'print_html_display' => 1,
   'print_html_display_comment' => 0,
   'print_html_display_urllist' => 0,
