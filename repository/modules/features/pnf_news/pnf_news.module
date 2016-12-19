@@ -50,14 +50,15 @@ function pnf_news_form_news_node_form_alter(&$form, &$form_state, $form_id) {
     $form['field_public']['#access'] = FALSE;
 
     // We must remove field_sectors (not used in FCB site and not compulsory).
-    unset ($form['field_sectors']);
+//    unset ($form['field_sectors']);
+    $form['field_sectors']['#access'] = FALSE;
 
     // We must remove option "Brèves" for news type in FCB site.
-    foreach ($form['field_news_type']['und']['#options'] as $key => $option) {
-      if ($option == 'Brèves') {
-        unset($form['field_news_type']['und']['#options'][$key]);
-      }
-    }
+//    foreach ($form['field_news_type']['und']['#options'] as $key => $option) {
+//      if ($option == 'Brèves') {
+//        unset($form['field_news_type']['und']['#options'][$key]);
+//      }
+//    }
   }
 }
 
