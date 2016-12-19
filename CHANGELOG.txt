@@ -1,3 +1,7 @@
+Hotfix 1.3.4 / 2016-12-19
+======================
+ * kcore up: menu-national-parks links mistake fixed.
+
 PNx 1.3.3 / 2016-12-19
 ======================
  * Custom module child_menu_items up: Thumbnails centering abandonned and Match Height jquery effect applied on thumbnails.
