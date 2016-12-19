@@ -6,7 +6,6 @@ dependencies[] = colorbox
 dependencies[] = download_file
 dependencies[] = field_collection
 dependencies[] = link
-dependencies[] = pdf_reader
 dependencies[] = pnf_news
 dependencies[] = strongarm
 dependencies[] = taxonomy_access_fix
