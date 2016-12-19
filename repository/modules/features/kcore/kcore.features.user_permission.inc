@@ -692,13 +692,6 @@ function kcore_user_default_permissions() {
     'module' => 'xmlsitemap',
   );
 
-  // Exported permission: 'assign administrateur role'.
-  $permissions['assign administrateur role'] = array(
-    'name' => 'assign administrateur role',
-    'roles' => array(),
-    'module' => 'role_delegation',
-  );
-
   // Exported permission: 'assign all roles'.
   $permissions['assign all roles'] = array(
     'name' => 'assign all roles',
@@ -760,38 +753,9 @@ function kcore_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: 'cancel users with role 193262079'.
-  $permissions['cancel users with role 193262079'] = array(
-    'name' => 'cancel users with role 193262079',
-    'roles' => array(
-      'administrateur' => 'administrateur',
-    ),
-    'module' => 'administerusersbyrole',
-  );
-
   // Exported permission: 'cancel users with role 2'.
   $permissions['cancel users with role 2'] = array(
     'name' => 'cancel users with role 2',
-    'roles' => array(
-      'administrateur' => 'administrateur',
-      'webmaster' => 'webmaster',
-    ),
-    'module' => 'administerusersbyrole',
-  );
-
-  // Exported permission: 'cancel users with role 217795369'.
-  $permissions['cancel users with role 217795369'] = array(
-    'name' => 'cancel users with role 217795369',
-    'roles' => array(
-      'administrateur' => 'administrateur',
-      'webmaster' => 'webmaster',
-    ),
-    'module' => 'administerusersbyrole',
-  );
-
-  // Exported permission: 'cancel users with role 231346920'.
-  $permissions['cancel users with role 231346920'] = array(
-    'name' => 'cancel users with role 231346920',
     'roles' => array(
       'administrateur' => 'administrateur',
       'webmaster' => 'webmaster',
@@ -954,38 +918,9 @@ function kcore_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'edit users with role 193262079'.
-  $permissions['edit users with role 193262079'] = array(
-    'name' => 'edit users with role 193262079',
-    'roles' => array(
-      'administrateur' => 'administrateur',
-    ),
-    'module' => 'administerusersbyrole',
-  );
-
   // Exported permission: 'edit users with role 2'.
   $permissions['edit users with role 2'] = array(
     'name' => 'edit users with role 2',
-    'roles' => array(
-      'administrateur' => 'administrateur',
-      'webmaster' => 'webmaster',
-    ),
-    'module' => 'administerusersbyrole',
-  );
-
-  // Exported permission: 'edit users with role 217795369'.
-  $permissions['edit users with role 217795369'] = array(
-    'name' => 'edit users with role 217795369',
-    'roles' => array(
-      'administrateur' => 'administrateur',
-      'webmaster' => 'webmaster',
-    ),
-    'module' => 'administerusersbyrole',
-  );
-
-  // Exported permission: 'edit users with role 231346920'.
-  $permissions['edit users with role 231346920'] = array(
-    'name' => 'edit users with role 231346920',
     'roles' => array(
       'administrateur' => 'administrateur',
       'webmaster' => 'webmaster',

@@ -63,7 +63,7 @@ projects[options_element][version] = "1.12"
 
 projects[pdf_reader][subdir] = contrib
 projects[pdf_reader][version] = "2.x-dev"
-projects[pdf_reader][patch][] = "https://www.drupal.org/files/issues/pdf_reader-fix_for_multivalue_fields_and_dual_link-1951310-7_0.patch"
+;projects[pdf_reader][patch][] = "https://www.drupal.org/files/issues/pdf_reader-fix_for_multivalue_fields_and_dual_link-1951310-7_0.patch"
 
 projects[role_export][subdir] = contrib
 projects[role_export][version] = "1.0"

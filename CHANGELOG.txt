@@ -1,3 +1,16 @@
+PNx 1.3.3 / 2016-12-19
+======================
+ * Custom module child_menu_items up: Thumbnails centering abandonned and Match Height jquery effect applied on thumbnails.
+ * kcore up: menu-national-parks reorganised add GIP FCB + AFB links added.
+ * PNF site name changed to 'Portail des parcs nationaux de France'.
+ * 'Les Parcs nationaux DE (instead of EN) France' page's title altered.
+ * Install profile up: old useless permissions (roleassign ?) removed.
+ * Install profile up: pdf_reader module's patch download removed.
+ * Install profile up: Raa page's css color styles fixed for PNCAL, PNM and PNP. Accordion set with all panels collapsed by default.
+ * pnf_documents up: Local pdf documents reading tool (pdf_reader) deactivated.
+ * Install profile up: Picto lock added to PNRUN tools menu, font size increased and separator added to footer menu.
+ * Custom theme up: Footer menu's font size set back to 100% and margin 10px added.
+
 Hotfix 1.3.2 / 2016-12-09
 =========================
  * Custom theme up: Fontawesome codes for child and user-circle icons added to header.less file.

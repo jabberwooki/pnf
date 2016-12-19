@@ -60,6 +60,9 @@
       $(this).css('width', $(this).width() + 44);
     });
 
+    // Match height on landing pages thumbnails.
+    $('.block-child-menu-items .col .cmi-wrapper').matchHeight('options');
+
     // Hugly hack to fix <p> positioning within news image overlay in news list and block.
     $(".node-news .group-resume .field-name-body").each(function() {
       //console.log($(this).html());
@@ -115,7 +118,8 @@
     /*RAA accordion*/
     $( ".view-raa .view-content" ).accordion({
       collapsible: true,
-      heightStyle: "content"
+      heightStyle: "content",
+      active: false
     });
 
     /* Mobile version : Positionning and behavior of top menus */
