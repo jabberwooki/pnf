@@ -62,6 +62,32 @@ function kcore_menu_default_menu_links() {
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-national-parks_les-parcs-nationaux-de-france:les-parcs-nationaux-en-france',
   );
+  // Exported menu link: menu-national-parks_les-parcs-nationaux-de-france:les-parcs-nationaux-en-france.
+  $menu_links['menu-national-parks_les-parcs-nationaux-de-france:les-parcs-nationaux-en-france'] = array(
+    'menu_name' => 'menu-national-parks',
+    'link_path' => 'les-parcs-nationaux-en-france',
+    'router_path' => 'les-parcs-nationaux-en-france',
+    'link_title' => 'Les parcs nationaux de France',
+    'options' => array(
+      'node_type' => 'page',
+      'identifier' => 'menu-national-parks_les-parcs-nationaux-de-france:les-parcs-nationaux-en-france',
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 1,
+    'expanded' => 1,
+    'weight' => 0,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+  );
   // Exported menu link: menu-national-parks_parc-amazonien-de-guyane:http://www.parc-amazonien-guyane.fr/.
   $menu_links['menu-national-parks_parc-amazonien-de-guyane:http://www.parc-amazonien-guyane.fr/'] = array(
     'menu_name' => 'menu-national-parks',
@@ -375,6 +401,7 @@ function kcore_menu_default_menu_links() {
   // Included for use with string extractors like potx.
   t('Agence française pour la biodiversité');
   t('GIP du futur Parc national des Forêts de Champagne et Bourgogne');
+  t('Les parcs nationaux de France');
   t('Parc amazonien de Guyane');
   t('Parc national de La Réunion');
   t('Parc national de Port-Cros');

@@ -150,6 +150,7 @@ features[menu_custom][] = menu-national-parks
 features[menu_custom][] = menu-tools
 features[menu_links][] = menu-national-parks_agence-franaise-pour-la-biodiversit:http://www.agence-francaise-biodiversite.fr/
 features[menu_links][] = menu-national-parks_gip-du-futur-parc-national-des-forts-de-champagne-et-bourgogne:http://www.forets-champagne-bourgogne.fr/
+features[menu_links][] = menu-national-parks_les-parcs-nationaux-de-france:les-parcs-nationaux-en-france
 features[menu_links][] = menu-national-parks_parc-amazonien-de-guyane:http://www.parc-amazonien-guyane.fr/
 features[menu_links][] = menu-national-parks_parc-national-de-la-guadeloupe:http://www.guadeloupe-parcnational.fr
 features[menu_links][] = menu-national-parks_parc-national-de-la-runion:http://www.reunion-parcnational.fr
