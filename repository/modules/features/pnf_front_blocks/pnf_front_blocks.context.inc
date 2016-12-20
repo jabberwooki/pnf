@@ -39,6 +39,12 @@ function pnf_front_blocks_context_default_contexts() {
           'region' => 'pre_content_left',
           'weight' => '-10',
         ),
+        'views-news-block_news_flashnews_home' => array(
+          'module' => 'views',
+          'delta' => 'news-block_news_flashnews_home',
+          'region' => 'pre_content_left',
+          'weight' => '-9',
+        ),
         'views-events-block_events_home' => array(
           'module' => 'views',
           'delta' => 'events-block_events_home',

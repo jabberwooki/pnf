@@ -26,7 +26,7 @@ function kcore_uuid_features_default_content() {
   'tnid' => 0,
   'translate' => 0,
   'uuid' => '63926957-1118-4a4e-a72a-ba949a5f9e0f',
-  'revision_uid' => 1,
+  'revision_uid' => 0,
   'body' => array(
     'und' => array(
       0 => array(
@@ -60,7 +60,7 @@ function kcore_uuid_features_default_content() {
   ),
   'name' => 'superadmin',
   'picture' => 0,
-  'data' => 'a:5:{s:16:"ckeditor_default";s:1:"t";s:20:"ckeditor_show_toggle";s:1:"t";s:14:"ckeditor_width";s:4:"100%";s:13:"ckeditor_lang";s:2:"en";s:18:"ckeditor_auto_lang";s:1:"t";}',
+  'data' => 'a:6:{s:16:"ckeditor_default";s:1:"t";s:20:"ckeditor_show_toggle";s:1:"t";s:14:"ckeditor_width";s:4:"100%";s:13:"ckeditor_lang";s:2:"en";s:18:"ckeditor_auto_lang";s:1:"t";s:17:"mimemail_textonly";i:0;}',
   'print_html_display' => 1,
   'print_html_display_comment' => 0,
   'print_html_display_urllist' => 0,

@@ -139,6 +139,8 @@ function kcore_block_view_alter(&$data, $block) {
 	  switch ($park_code) {
       case "pncal":
         $data['subject'] = "Informations administratives";
+      case "fcb":
+        $data['subject'] = "Venir dans le futur Parc national";
     }
   }
 }
