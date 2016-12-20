@@ -1,3 +1,9 @@
+PNx 1.3.5 / 2016-12-20
+======================
+ * kcore up: Custom title 'Venir dans le futur Parc national' coded for menu menu-join-national-park in FCB site.
+ * pnf_news and pnf_front_blocks up: Flashnews block reactivated on front page.
+ * kcore and pnf_documents up: dependency to no longer wanted contrib module pdf_reader removed.
+
 Hotfix 1.3.4 / 2016-12-19
 ======================
  * kcore up: menu-national-parks links mistake fixed.
