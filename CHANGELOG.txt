@@ -1,3 +1,7 @@
+Hotfix 1.3.9 / 2017-01-24
+=========================
+ * Custom theme, pnf_front_blocks feature and sites.php updated: New domain name 'pyrenees-parcnational.fr' added to all concerned settings.
+
 Hotfix 1.3.8 / 2017-01-24
 =========================
  * pnf_multimedia up: Credit photo field label now displayed conditionally (no content, no label displayed).

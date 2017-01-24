@@ -83,6 +83,7 @@ $sites = array(
   'www.mercantour.fr' => 'mercantour.eu',
   'www.parc-amazonien-guyane.fr' => 'parc-amazonien-guyane.fr',
   'www.parc-pyrenees.fr' => 'parc-pyrenees.com',
+  'www.pyrenees-parcnational.fr' => 'parc-pyrenees.com',
   'www.parcsnationaux.fr' => 'parcsnationaux.fr',
   'www.portcrosparcnational.fr' => 'portcrosparcnational.fr',
   'www.reunion-parcnational.fr' => 'reunion-parcnational.fr',

@@ -489,6 +489,7 @@ function pnf_front_blocks_context_default_contexts() {
         '*.parc-pyrenees.*' => '*.parc-pyrenees.*',
         'preprod-pnp.*' => 'preprod-pnp.*',
         'prod-pnp.*' => 'prod-pnp.*',
+        '*.pyrenees-parcnational.*' => '*.pyrenees-parcnational.*',
       ),
     ),
     'path' => array(
