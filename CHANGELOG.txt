@@ -1,3 +1,7 @@
+Hotfix 1.3.8 / 2017-01-24
+=========================
+ * pnf_multimedia up: Credit photo field label now displayed conditionally (no content, no label displayed).
+
 Hotfix 1.3.7 / 2017-01-09
 =========================
  * PNF custom theme up: less code added to hide the 'leave this field blank' in contact form (comes from Honeypot ?).
