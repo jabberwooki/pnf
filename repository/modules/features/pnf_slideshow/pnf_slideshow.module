@@ -5,3 +5,17 @@
  */
 
 include_once 'pnf_slideshow.features.inc';
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function pnf_slideshow_views_pre_render(&$view) {
+  if ($view->name == 'slideshow') {
+    foreach ($view->result as $result) {
+      if (!empty($result->field_field_credit)) {
+        $result->field_field_credit[0]['rendered']['#markup'] =
+          'Photo : ' . $result->field_field_credit[0]['rendered']['#markup'];
+      }
+    }
+  }
+}

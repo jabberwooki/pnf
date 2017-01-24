@@ -88,7 +88,7 @@ function pnf_slideshow_views_default_views() {
     </a>
   </div>
   <div id="slide-infos-body">[body]</div>
-  <div id="slide-infos-credit">Photo : [field_credit]</div>
+  <div id="slide-infos-credit">[field_credit]</div>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Global : Div logos blancs */
@@ -143,7 +143,7 @@ function pnf_slideshow_views_default_views() {
     </a>
   </div>
   <div id="slide-infos-body">[body]</div>
-  <div id="slide-infos-credit">Photo : [field_credit]</div>
+  <div id="slide-infos-credit">[field_credit]</div>
 </div>'),
     t('Diaporama accueil'),
   );
