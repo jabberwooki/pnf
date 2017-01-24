@@ -24,12 +24,6 @@ function pnf_slideshow_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'adminimal' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'adminimal',
-        'weight' => 0,
-      ),
       'pnf' => array(
         'region' => '',
         'status' => 0,
