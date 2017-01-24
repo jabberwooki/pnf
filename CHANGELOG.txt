@@ -1,3 +1,7 @@
+Hotfix 1.3.10 / 2017-01-24
+==========================
+ * kcore up: Missing domain name 'pyrenees-parcnational' added to function kcore_block_view_alter().
+
 Hotfix 1.3.9 / 2017-01-24
 =========================
  * Custom theme, pnf_front_blocks feature and sites.php updated: New domain name 'pyrenees-parcnational.fr' added to all concerned settings.
