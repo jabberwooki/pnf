@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Mailchimp integration feature.
+ */
+
+include_once 'pnf_mailchimp.features.inc';
