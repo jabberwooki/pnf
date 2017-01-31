@@ -1120,10 +1120,23 @@ blockquote.image-field-caption:before{
 
 .view-multimedia .group-resume .fa {
     position: absolute;
-    top: 160px;
-    margin-left: 38%;
     font-size: 48px;
     color: #aaa;
+
+    // Following instructions found in this stackoverflow post :
+    // http://stackoverflow.com/questions/1776915/how-to-center-absolute-element-in-div
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 48px;
+
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 48px;
+
 }
 
 
