@@ -194,7 +194,7 @@ function pnf_multimedia_scald_default_context_types() {
           'thumb_style' => '200w',
           'normal_style' => 'large',
           'big_style' => 'original',
-          'theme' => 'folio',
+          'theme' => 'classic',
           'options' => '',
         ),
       ),
