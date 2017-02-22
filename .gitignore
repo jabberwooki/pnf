@@ -14,3 +14,7 @@ shared/apache_authentication
 
 # Ignore www symblink.
 www
+
+# Ignore Galleria Folio theme files
+repository/libraries/galleria/themes/folio/galleria.folio.min.js
+repository/libraries/galleria/themes/folio/galleria.css
