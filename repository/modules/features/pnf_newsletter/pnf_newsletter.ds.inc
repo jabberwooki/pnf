@@ -52,12 +52,12 @@ function pnf_newsletter_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'simplenews';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
-    'title' => array(
-      'weight' => '0',
+    'spacer' => array(
+      'weight' => '2',
       'label' => 'hidden',
       'format' => 'default',
     ),
-    'newsletter_header_image' => array(
+    'title' => array(
       'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
@@ -194,27 +194,25 @@ function pnf_newsletter_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'central' => array(
-        0 => 'newsletter_header_image',
-        1 => 'group_newsletter_header',
-        2 => 'title',
-        3 => 'group_title_date_banner',
-        4 => 'field_newsletter_date',
-        5 => 'field_newsletter_intro',
-        6 => 'field_top_news',
-        7 => 'newsletter_news_header',
-        8 => 'field_newsletter_news',
-        9 => 'newsletter_newsflashes_header',
-        10 => 'field_newsletter_newsflashes',
-        11 => 'newsletter_agenda_header',
-        12 => 'field_newsletter_events',
+        0 => 'title',
+        1 => 'group_title_date_banner',
+        2 => 'field_newsletter_date',
+        3 => 'spacer',
+        4 => 'field_newsletter_intro',
+        5 => 'field_top_news',
+        6 => 'newsletter_news_header',
+        7 => 'field_newsletter_news',
+        8 => 'newsletter_newsflashes_header',
+        9 => 'field_newsletter_newsflashes',
+        10 => 'newsletter_agenda_header',
+        11 => 'field_newsletter_events',
       ),
     ),
     'fields' => array(
-      'newsletter_header_image' => 'central',
-      'group_newsletter_header' => 'central',
       'title' => 'central',
       'group_title_date_banner' => 'central',
       'field_newsletter_date' => 'central',
+      'spacer' => 'central',
       'field_newsletter_intro' => 'central',
       'field_top_news' => 'central',
       'newsletter_news_header' => 'central',
