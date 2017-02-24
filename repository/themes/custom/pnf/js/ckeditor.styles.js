@@ -319,6 +319,41 @@ if (typeof(CKEDITOR) !== 'undefined') {
       ]
     );
   }
+  else if (parkCode == 'pag') {
+    CKEDITOR.addStylesSet('drupal',
+      [
+        /* Block Styles */
+        // These styles are already available in the "Format" drop-down list, so they are
+        // not needed here by default. You may enable them to avoid placing the
+        // "Format" drop-down list in the toolbar, maintaining the same features.
+        {name: 'Paragraphe', element: 'p'},
+        {name : 'Chapeau' , element: 'div', attributes: {'class': 'intro'}},
+        {name: 'Bouton', element: 'div', attributes: {'class': 'boutonok'}},
+        {name: 'Titre 3', element: 'h3'},
+        {name: 'Titre 4', element: 'h4'},
+        {name: 'Titre 5', element: 'h5'},
+        {name: 'Titre 3 - rouge', element: 'h3', attributes : {'class': 'cke-h3 cke-red1'}},
+        {name: 'Titre 3 - jaune', element: 'h3', attributes : {'class': 'cke-h3 cke-yellow1'}},
+        {name: 'Titre 3 - bleu', element: 'h3', attributes : {'class': 'cke-h3 cke-blue1'}},
+        {name: 'Titre 4 - gris foncé', element: 'h3', attributes : {'class': 'cke-h4 cke-dark-grey1'}},
+        {name: 'Paragraphe rouge', element: 'p', attributes : {'class': 'cke-p cke-red1'}},
+        {name: 'Paragraphe jaune', element: 'p', attributes : {'class': 'cke-p cke-yellow1'}},
+        {name: 'Paragraphe bleu', element: 'p', attributes : {'class': 'cke-p cke-blue1'}},
+
+        /* Object Styles */
+        {
+          name: 'Image on Left',
+          element: 'img',
+          attributes: {'style': 'padding: 5px; margin-right: 5px', 'border': '2', 'align': 'left'}
+        },
+        {
+          name: 'Image on Right',
+          element: 'img',
+          attributes: {'style': 'padding: 5px; margin-left: 5px', 'border': '2', 'align': 'right'}
+        }
+      ]
+    );
+  }
   else {
     CKEDITOR.addStylesSet('drupal',
       [
