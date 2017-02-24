@@ -108,6 +108,18 @@ function pnf_front_blocks_context_default_contexts() {
           'region' => 'pre_content_right',
           'weight' => '-10',
         ),
+        'views-news-block_news_files_home' => array(
+          'module' => 'views',
+          'delta' => 'news-block_news_files_home',
+          'region' => 'content',
+          'weight' => '0',
+        ),
+        'views-promotions-promos_front' => array(
+          'module' => 'views',
+          'delta' => 'promotions-promos_front',
+          'region' => 'content',
+          'weight' => '1',
+        ),
       ),
     ),
   );
