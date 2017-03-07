@@ -89,6 +89,10 @@ projects[uuid_features][version] = "1.0-alpha4"
 projects[views][subdir] = contrib
 projects[views][version] = "3.13"
 
+projects[view_unpublished][subdir] = contrib
+projects[view_unpublished][version] = "1.2"
+
+
 ;=== Modules - optional =======================================================
 projects[addressfield][subdir] = contrib
 projects[addressfield][version] = "1.2"
