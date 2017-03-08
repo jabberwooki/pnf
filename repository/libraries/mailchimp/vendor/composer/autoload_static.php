@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit22c89fc07eb52a6ca68a4337a7f96853
+class ComposerStaticInitcb694c26022bf14de243e30e55f87775
 {
     public static $files = array (
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
@@ -469,6 +469,7 @@ class ComposerStaticInit22c89fc07eb52a6ca68a4337a7f96853
         'PHP_Token_STRING' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_STRING_CAST' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_STRING_VARNAME' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
+        'PHP_Token_SUPER' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_SWITCH' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_Stream' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token/Stream.php',
         'PHP_Token_Stream_CachingFactory' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token/Stream/CachingFactory.php',
@@ -483,6 +484,7 @@ class ComposerStaticInit22c89fc07eb52a6ca68a4337a7f96853
         'PHP_Token_UNSET' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_UNSET_CAST' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_USE' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
+        'PHP_Token_USE_FUNCTION' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_VAR' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_VARIABLE' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_WHERE' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
@@ -542,10 +544,10 @@ class ComposerStaticInit22c89fc07eb52a6ca68a4337a7f96853
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit22c89fc07eb52a6ca68a4337a7f96853::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit22c89fc07eb52a6ca68a4337a7f96853::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit22c89fc07eb52a6ca68a4337a7f96853::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit22c89fc07eb52a6ca68a4337a7f96853::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitcb694c26022bf14de243e30e55f87775::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitcb694c26022bf14de243e30e55f87775::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitcb694c26022bf14de243e30e55f87775::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitcb694c26022bf14de243e30e55f87775::$classMap;
 
         }, null, ClassLoader::class);
     }

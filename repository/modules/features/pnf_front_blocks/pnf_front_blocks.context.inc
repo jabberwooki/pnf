@@ -607,17 +607,11 @@ function pnf_front_blocks_context_default_contexts() {
           'region' => 'pre_content_right',
           'weight' => '-10',
         ),
-        'views-news-block_news_files_home' => array(
+        'views-promotions-promos_4_front' => array(
           'module' => 'views',
-          'delta' => 'news-block_news_files_home',
+          'delta' => 'promotions-promos_4_front',
           'region' => 'content',
           'weight' => '-10',
-        ),
-        'views-promotions-promos_front' => array(
-          'module' => 'views',
-          'delta' => 'promotions-promos_front',
-          'region' => 'content',
-          'weight' => '-9',
         ),
       ),
     ),

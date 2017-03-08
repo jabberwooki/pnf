@@ -327,7 +327,7 @@ projects[simplenews][subdir] = contrib
 projects[simplenews][version] = "1.1"
 
 projects[mailchimp][subdir] = contrib
-projects[mailchimp][version] = "4.7"
+projects[mailchimp][version] = "4.8"
 
 ;=== Scald and media related modules ==========================================
 projects[scald][subdir] = contrib
