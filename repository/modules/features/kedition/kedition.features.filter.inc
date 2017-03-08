@@ -16,7 +16,7 @@ function kedition_filter_default_formats() {
     'name' => 'Filtered HTML',
     'cache' => 1,
     'status' => 1,
-    'weight' => -9,
+    'weight' => -8,
     'filters' => array(
       'filter_url' => array(
         'weight' => 0,
@@ -69,6 +69,27 @@ function kedition_filter_default_formats() {
       ),
       'filter_htmlcorrector' => array(
         'weight' => 10,
+        'status' => 1,
+        'settings' => array(),
+      ),
+    ),
+  );
+
+  // Exported format: MailChimp campaign.
+  $formats['mailchimp_campaign'] = array(
+    'format' => 'mailchimp_campaign',
+    'name' => 'MailChimp campaign',
+    'cache' => 1,
+    'status' => 1,
+    'weight' => -9,
+    'filters' => array(
+      'mailchimp_campaign' => array(
+        'weight' => 0,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'filter_htmlcorrector' => array(
+        'weight' => 1,
         'status' => 1,
         'settings' => array(),
       ),
