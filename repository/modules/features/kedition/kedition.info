@@ -16,7 +16,6 @@ features[ckeditor_profile][] = Full
 features[features_api][] = api:2
 features[filter][] = filtered_html
 features[filter][] = full_html
-features[filter][] = mailchimp_campaign
 features[user_permission][] = administer ckeditor
 features[user_permission][] = create page content
 features[user_permission][] = customize ckeditor
