@@ -1,4 +1,8 @@
-Hotfix 1.3.12 / 2017-01-24
+Hotfix 1.3.13 / 2017-03-14
+==========================
+ * PNP custom styles up: fontawesome euro symbol added for 'Dons bouquetins'.
+
+Hotfix 1.3.12 / 2017-02-14
 ==========================
  * kcore up: Fixed typo ('+' character) that blocked the new domain name 'pyrenees-parcnational' recognition.
 
