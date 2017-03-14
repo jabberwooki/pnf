@@ -37,7 +37,7 @@ function kcore_block_view_alter(&$data, $block) {
 			'mercantour' => 'Le Parc national du Mercantour',
 			'parc-amazonien-guyane' => 'Le Parc amazonien de Guyane',
 			'parc-pyrenees' => 'Le Parc national des Pyrénées',
-+     'pyrenees-parcnational' => 'Le Parc national des Pyrénées',
+      'pyrenees-parcnational' => 'Le Parc national des Pyrénées',
 			'parcsnationaux' => 'Portail des parcs nationaux de France',
 			'portcrosparcnational' => 'Le Parc national de Port-Cros',
 			'reunion-parcnational' => 'Le Parc national de La Réunion',
