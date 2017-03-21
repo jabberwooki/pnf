@@ -177,7 +177,9 @@ function pnf_newsletter_field_group_info() {
   $field_group->data = array(
     'label' => 'En-tête',
     'weight' => '0',
-    'children' => array(),
+    'children' => array(
+      0 => 'newsletter_header_image',
+    ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'En-tête',
