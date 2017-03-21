@@ -20,14 +20,20 @@ function pnf_mailchimp_user_default_permissions() {
   // Exported permission: 'administer mailchimp'.
   $permissions['administer mailchimp'] = array(
     'name' => 'administer mailchimp',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'mailchimp',
   );
 
   // Exported permission: 'administer mailchimp campaigns'.
   $permissions['administer mailchimp campaigns'] = array(
     'name' => 'administer mailchimp campaigns',
-    'roles' => array(),
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'mailchimp_campaign',
   );
 
