@@ -20,7 +20,7 @@ function pnf_mailchimp_default_mailchimp_signup() {
   $items = array();
   $items['newsletter_block'] = entity_import('mailchimp_signup', '{
     "name" : "newsletter_block",
-    "mc_lists" : { "e7479518f6" : "e7479518f6" },
+    "mc_lists" : { "9399f4b3a4" : "9399f4b3a4" },
     "mode" : "1",
     "title" : "Lettre d\\u0027information",
     "settings" : {

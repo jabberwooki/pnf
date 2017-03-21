@@ -5,3 +5,26 @@
  */
 
 include_once 'pnf_mailchimp.features.inc';
+
+/**
+ * Implements hook_init().
+ */
+/**
+ * Implements hook_node_view().
+ */
+function pnf_mailchimp_node_view($node, $view_mode, $langcode) {
+  if ($node->type == 'simplenews' && $view_mode == 'full') {
+    drupal_add_css(drupal_get_path('module','pnf_mailchimp') . '/css/pnf_mailchimp.css');
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function pnf_mailchimp_form_mailchimp_campaign_campaign_form_alter(&$form, &$form_state, $form_id) {
+  $form['list_id']['#title'] = 'Liste';
+
+  $options = array('-- Sélectionner --');
+  $options['Mes gabarits'] =$form['template_id']['#options']['My Custom Templates'];
+  $form['template_id']['#options'] = $options;
+}
