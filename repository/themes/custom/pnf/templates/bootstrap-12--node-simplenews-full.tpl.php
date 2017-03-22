@@ -5,7 +5,7 @@
  * Template customisation for simplenews nodes.
  */
 ?>
-
+<?php dpm($central_wrapper); ?>
   <<?php print $layout_wrapper; print $layout_attributes; ?> class="<?php print $classes; ?>">
 <?php if (isset($title_suffix['contextual_links'])): ?>
   <?php print render($title_suffix['contextual_links']); ?>
@@ -13,7 +13,7 @@
 
   <?php if (user_access('administer mailchimp campaigns')): ?>
   <div class="mailchimp-campaign-links">
-    <p><a href="/admin/config/services/mailchimp/campaigns/add">Créer une campagne Mailchimp</a></p>
+    <p><a href="/admin/config/services/mailchimp/campaigns/add?snid=<?php print arg(1); ?>">Créer une campagne Mailchimp</a></p>
     <p><a href="/admin/config/services/mailchimp/campaigns">Voir les campagnes Mailchimp</a></p>
   </div>
   <?php endif; ?>
