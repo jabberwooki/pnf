@@ -2,3 +2,10 @@
     float: right;
     padding: 10px 0;
 }
+
+#content-sections {
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}

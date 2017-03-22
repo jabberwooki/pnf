@@ -7,14 +7,12 @@
 include_once 'pnf_mailchimp.features.inc';
 
 /**
- * Implements hook_init().
- */
-/**
  * Implements hook_node_view().
  */
 function pnf_mailchimp_node_view($node, $view_mode, $langcode) {
   if ($node->type == 'simplenews' && $view_mode == 'full') {
-    drupal_add_css(drupal_get_path('module','pnf_mailchimp') . '/css/pnf_mailchimp.css');
+    drupal_add_css(drupal_get_path('module', 'pnf_mailchimp') . '/css/pnf_mailchimp.css');
+    drupal_add_css(drupal_get_path('module', 'pnf_newsletter') . '/css/newsletter.css');
   }
 }
 
@@ -22,6 +20,8 @@ function pnf_mailchimp_node_view($node, $view_mode, $langcode) {
  * Implements hook_form_FORM_ID_alter().
  */
 function pnf_mailchimp_form_mailchimp_campaign_campaign_form_alter(&$form, &$form_state, $form_id) {
+  drupal_add_css(drupal_get_path('module', 'pnf_mailchimp') . '/css/pnf_mailchimp.css');
+
   // If we come from a simplenews page (full mode view)
   // we load the corresponding node to get this title and date
   // to preset Title, Object and Content (the insert entity token) campaign fields.
@@ -35,6 +35,16 @@ function pnf_mailchimp_form_mailchimp_campaign_campaign_form_alter(&$form, &$for
 
     $form['content']['html_wrapper']['html']['#default_value'] =
       '[mailchimp_campaign|entity_type=node|entity_id=' . $_GET['snid'] . '|view_mode=full]';
+  }
+  // Here, we handle the ajax callback which is fired when selecting a template.
+  // Another form field is added to the DOM. We must preset it as well.
+  elseif (isset($form['content']['contenu_wrapper']['contenu'])) {
+    $snid = explode('=', $_SERVER['HTTP_REFERER'])[1];
+
+    $form['content']['contenu_wrapper']['contenu']['#default_value'] =
+      '[mailchimp_campaign|entity_type=node|entity_id=' . $snid . '|view_mode=full]';
+
+    $form['content']['contenu_wrapper']['contenu']['#attributes'] = array('readonly' => 'readonly');
   }
 
   // In any case, we must properly name the List field, badly translated in French as "Lister".
