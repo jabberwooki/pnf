@@ -121,10 +121,7 @@ function pnf_newsletter_field_default_field_instances() {
         'input_format_custom' => 'm/Y',
         'label_position' => 'above',
         'no_fieldset' => 1,
-        'text_parts' => array(
-          0 => 'year',
-          1 => 'month',
-        ),
+        'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
       'type' => 'date_select',
