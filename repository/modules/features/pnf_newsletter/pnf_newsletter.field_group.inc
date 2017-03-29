@@ -211,8 +211,7 @@ function pnf_newsletter_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'field_newsletter_date',
-      1 => 'spacer',
-      2 => 'title',
+      1 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(

@@ -52,11 +52,6 @@ function pnf_newsletter_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'simplenews';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
-    'spacer' => array(
-      'weight' => '2',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
     'title' => array(
       'weight' => '0',
       'label' => 'hidden',
@@ -204,15 +199,14 @@ function pnf_newsletter_ds_layout_settings_info() {
         2 => 'title',
         3 => 'group_title_date_banner',
         4 => 'field_newsletter_date',
-        5 => 'spacer',
-        6 => 'field_newsletter_intro',
-        7 => 'field_top_news',
-        8 => 'newsletter_news_header',
-        9 => 'field_newsletter_news',
-        10 => 'newsletter_newsflashes_header',
-        11 => 'field_newsletter_newsflashes',
-        12 => 'newsletter_agenda_header',
-        13 => 'field_newsletter_events',
+        5 => 'field_newsletter_intro',
+        6 => 'field_top_news',
+        7 => 'newsletter_news_header',
+        8 => 'field_newsletter_news',
+        9 => 'newsletter_newsflashes_header',
+        10 => 'field_newsletter_newsflashes',
+        11 => 'newsletter_agenda_header',
+        12 => 'field_newsletter_events',
       ),
     ),
     'fields' => array(
@@ -221,7 +215,6 @@ function pnf_newsletter_ds_layout_settings_info() {
       'title' => 'central',
       'group_title_date_banner' => 'central',
       'field_newsletter_date' => 'central',
-      'spacer' => 'central',
       'field_newsletter_intro' => 'central',
       'field_top_news' => 'central',
       'newsletter_news_header' => 'central',

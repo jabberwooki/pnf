@@ -8,6 +8,7 @@
   margin: 0.1em 0 1em 0;
   background-color: #b0afb8;
   position: relative;
+  overflow: auto;
 }
 .node-simplenews.view-mode-full .group-title-date-banner .field-name-title h2 {
   margin: 0;
@@ -31,6 +32,7 @@
   margin: 1.5em 0 1em 0;
   background-color: #e4e4e4;
   position: relative;
+  overflow: auto;
 }
 .node-simplenews.view-mode-full .newsletter-section-header h3 {
   padding: 0;
