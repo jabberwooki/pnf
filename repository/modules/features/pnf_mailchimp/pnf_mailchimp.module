@@ -4,16 +4,23 @@
  * Code for the Mailchimp integration feature.
  */
 
+/**
+ * Implements hook_init().
+ */
+function pnf_mailchimp_init() {
+  drupal_add_css(drupal_get_path('module', 'pnf_mailchimp') . '/css/pnf_mailchimp.css');
+
+  if(module_exists('mailchimp_signup')) {
+    drupal_add_js(drupal_get_path('module', 'pnf_mailchimp') . '/js/pnf_mailchimp.js');
+  }
+}
+
 include_once 'pnf_mailchimp.features.inc';
 
 /**
  * Implements hook_node_view().
  */
 function pnf_mailchimp_node_view($node, $view_mode, $langcode) {
-  if ($node->type == 'simplenews' && $view_mode == 'full') {
-    drupal_add_css(drupal_get_path('module', 'pnf_mailchimp') . '/css/pnf_mailchimp.css');
-    drupal_add_css(drupal_get_path('module', 'pnf_newsletter') . '/css/newsletter.css');
-  }
 }
 
 /**

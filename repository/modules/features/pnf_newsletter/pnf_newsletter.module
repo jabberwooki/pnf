@@ -10,11 +10,6 @@ include_once 'pnf_newsletter.features.inc';
  * Implements hook_init().
  */
 function pnf_newsletter_init() {
-  if(module_exists('mailchimp_signup')) {
-    drupal_add_css(drupal_get_path('module', 'pnf_newsletter') . '/css/pnf_mailchimp.css');
-    drupal_add_js(drupal_get_path('module', 'pnf_newsletter') . '/js/pnf_mailchimp.js');
-  }
-
   drupal_add_css(drupal_get_path('module', 'pnf_newsletter') . '/css/newsletter.css');
   drupal_add_js(drupal_get_path('module', 'pnf_newsletter') . '/js/pnf_newsletter.js');
 }
