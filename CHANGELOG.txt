@@ -1,3 +1,9 @@
+Hotfix fix-videos-display-bug / 2017-03-31
+==========================================
+ * Scald Youtube player template placed in PNF templates folder, not for customisation but to fix broken video displays
+ by making drupal to use a known template path
+ (instead of the wrong /sites/all/modules/<...missing contrib/ part ...>scald_youtube/scald_youtube_player.tpl.php.
+
 Hotfix 1.3.13 / 2017-03-14
 ==========================
  * PNP custom styles up: fontawesome euro symbol added for 'Dons bouquetins'.
