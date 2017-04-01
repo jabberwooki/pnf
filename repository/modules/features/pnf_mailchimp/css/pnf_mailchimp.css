@@ -1,3 +1,4 @@
+/** Mailchimp signup block */
 #block-mailchimp-signup-newsletter-block {
     width: 30%;
     float: right;
@@ -42,14 +43,36 @@
     font-size: 90%;
 }
 
+/* Newsletter full mode page */
 .node-simplenews .mailchimp-campaign-links {
     float: right;
     padding: 10px 0;
 }
 
+/* Mailchimp campaigns form */
 #content-sections {
     visibility: hidden;
     height: 0;
     margin: 0;
     padding: 0;
+}
+
+/* Mailchimp campaign view page */
+.page-admin-config-services-mailchimp-campaigns .node-simplenews {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+}
+.page-admin-config-services-mailchimp-campaigns .node-simplenews img {
+    display: block;
+    clear: left;
+}
+.page-admin-config-services-mailchimp-campaigns .node-simplenews h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+.page-admin-config-services-mailchimp-campaigns .node-simplenews h4 {
+    font-size: 18px;
+    font-weight: 500;
 }

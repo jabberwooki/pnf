@@ -4,18 +4,66 @@
  * Code for the Mailchimp integration feature.
  */
 
+include_once 'pnf_mailchimp.features.inc';
+
 /**
  * Implements hook_init().
  */
 function pnf_mailchimp_init() {
   drupal_add_css(drupal_get_path('module', 'pnf_mailchimp') . '/css/pnf_mailchimp.css');
+  drupal_add_css(drupal_get_path('module', 'pnf_newsletter') . '/css/newsletter.css');
 
   if(module_exists('mailchimp_signup')) {
     drupal_add_js(drupal_get_path('module', 'pnf_mailchimp') . '/js/pnf_mailchimp.js');
   }
-}
 
-include_once 'pnf_mailchimp.features.inc';
+  $current_path = current_path();
+  if (strstr($current_path, 'admin/config/services/mailchimp/campaigns/')) {
+    $park_code = variable_get('park_code', 'pnx');
+    drupal_add_css(drupal_get_path('module', 'pnf_newsletter') . '/css/newsletter' . '_' . $park_code .'.css');
+    drupal_add_css(drupal_get_path('module', 'pnf_mailchimp') . '/css/mailchimp' . '_' . $park_code .'.css');
+
+    switch ($park_code) {
+      case 'pncal':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnca_style.css.less');
+        break;
+      case 'pnc':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnce_style.css.less');
+        break;
+      case 'pne':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnec_style.css.less');
+        break;
+      case 'png':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pngd_style.css.less');
+        break;
+      case 'pnm':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnme_style.css.less');
+        break;
+      case 'pag':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnag_style.css.less');
+        break;
+      case 'pnp':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnpy_style.css.less');
+        break;
+      case 'pnf':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnf_style.css.less');
+        break;
+      case 'pnpc':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnpc_style.css.less');
+        break;
+      case 'pnrun':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnre_style.css.less');
+        break;
+      case 'pnv':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnva_style.css.less');
+        break;
+      // FCB
+      case 'fcb':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/fcb_style.css.less');
+        break;
+    }
+  }
+}
 
 /**
  * Implements hook_node_view().
