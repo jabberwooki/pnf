@@ -231,7 +231,6 @@ function pnf_newsletter_agenda_date_markup($adverb, $iso_date) {
  */
 function pnf_newsletter_node_view($node, $view_mode, $langcode) {
   if ($node->type == 'simplenews') {
-    dpm($node);
     if (empty($node->field_newsletter_news)) {
       unset($node->content['newsletter_news_header']);
     }
