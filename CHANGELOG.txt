@@ -1,3 +1,8 @@
+PNx 1.4.1 / 2017-04-03
+======================
+ * pnf_newsletter up: Newsletter display improved: If a section doesn't have content, the section header is removed from display.
+ * pnf_mailchimp and pnf_newsletter up: CSS code simplification.
+
 PNx 1.3.14 / 2017-04-03
 =======================
  * pnf_newsletter and pnf_mailchimp up: Major reorganisation and customisation per park of newsletter css code (simplenews as well as campaign) within Drupal.

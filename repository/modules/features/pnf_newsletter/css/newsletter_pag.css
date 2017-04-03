@@ -1,39 +1,39 @@
 /* COULEURS LETTRE D'INFOS PAG */
 
 /* Bloc Titre - Date */
-body.park-pag .node-simplenews.view-mode-full .group-title-date-banner {
+.node-simplenews.view-mode-full .group-title-date-banner {
     background-color: #b0afb8;
 }
 /* Titre de la newsletter */
-body.park-pag .node-simplenews.view-mode-full .group-title-date-banner .field-name-title {
+.node-simplenews.view-mode-full .group-title-date-banner .field-name-title {
     color: white;
 }
 /* Date */
-body.park-pag .node-simplenews.view-mode-full .field-name-field-newsletter-date {
+.node-simplenews.view-mode-full .field-name-field-newsletter-date {
     color: white;
 }
 /* Ligne épaisse de séparation Intro / Sujet phare */
-body.park-pag .node-simplenews.view-mode-full .field-name-field-newsletter-intro {
+.node-simplenews.view-mode-full .field-name-field-newsletter-intro {
     border-bottom: 5px solid #dddddd;
 }
 /* Blocs de titre de rubrique */
-body.park-pag .node-simplenews.view-mode-full .newsletter-section-header {
+.node-simplenews.view-mode-full .newsletter-section-header {
     background-color: #e4e4e4;
 }
 /* Titre d'une rubrique */
-body.park-pag .node-simplenews.view-mode-full .newsletter-section-header h3 {
+.node-simplenews.view-mode-full .newsletter-section-header h3 {
     color: #777;
 }
 /* Ligne fine de séparation des items */
-body.park-pag .node-simplenews.view-mode-full .field-type-entityreference > div.field-items > div.field-item:not(:last-child) {
+.node-simplenews.view-mode-full .field-type-entityreference > div.field-items > div.field-item:not(:last-child) {
     border-bottom: 1px solid #cccccc;
 }
 /* Agenda - Catégorie d'évènement */
-body.park-pag .node-simplenews.view-mode-full .field-name-field-event-categorie {
+.node-simplenews.view-mode-full .field-name-field-event-categorie {
     color: #7c7c7c;
     font-style: italic;
 }
 /* Agenda - Plage de temps */
-body.park-pag .node-simplenews.view-mode-full .newsletter-agenda-adverb {
+.node-simplenews.view-mode-full .newsletter-agenda-adverb {
     color: #7c7c7c;
 }
