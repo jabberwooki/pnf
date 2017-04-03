@@ -1,3 +1,7 @@
+Hotfix 1.4.3 / 2017-04-03
+=========================
+ * pnf_news up: Export of forgotten alteration of view mode 'Newsletter' in news content type.
+
 Hotfix 1.4.2 / 2017-04-03
 =========================
  * pnf_newsletter up: dpm() removed.
