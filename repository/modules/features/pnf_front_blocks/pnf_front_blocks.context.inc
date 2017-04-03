@@ -83,6 +83,8 @@ function pnf_front_blocks_context_default_contexts() {
     'domain' => array(
       'values' => array(
         '*.parc-amazonien-guyane.*' => '*.parc-amazonien-guyane.*',
+        'preprod-pag.*' => 'preprod-pag.*',
+        'prod-pag.*' => 'prod-pag.*',
       ),
     ),
     'path' => array(
@@ -91,7 +93,36 @@ function pnf_front_blocks_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array();
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-news-block_news_news_home' => array(
+          'module' => 'views',
+          'delta' => 'news-block_news_news_home',
+          'region' => 'pre_content_left',
+          'weight' => '-10',
+        ),
+        'views-events-block_events_home' => array(
+          'module' => 'views',
+          'delta' => 'events-block_events_home',
+          'region' => 'pre_content_right',
+          'weight' => '-10',
+        ),
+        'views-news-block_news_files_home' => array(
+          'module' => 'views',
+          'delta' => 'news-block_news_files_home',
+          'region' => 'content',
+          'weight' => '0',
+        ),
+        'views-promotions-promos_front' => array(
+          'module' => 'views',
+          'delta' => 'promotions-promos_front',
+          'region' => 'content',
+          'weight' => '1',
+        ),
+      ),
+    ),
+  );
   $context->condition_mode = 1;
 
   // Translatables
@@ -197,12 +228,6 @@ function pnf_front_blocks_context_default_contexts() {
           'delta' => 'news-block_news_flashnews_home',
           'region' => 'pre_content_left',
           'weight' => '1',
-        ),
-        'views-events-block_events_home' => array(
-          'module' => 'views',
-          'delta' => 'events-block_events_home',
-          'region' => 'pre_content_right',
-          'weight' => '-10',
         ),
         'boxes-button_festival_nature' => array(
           'module' => 'boxes',
@@ -582,17 +607,11 @@ function pnf_front_blocks_context_default_contexts() {
           'region' => 'pre_content_right',
           'weight' => '-10',
         ),
-        'views-news-block_news_files_home' => array(
+        'views-promotions-promos_4_front' => array(
           'module' => 'views',
-          'delta' => 'news-block_news_files_home',
+          'delta' => 'promotions-promos_4_front',
           'region' => 'content',
           'weight' => '-10',
-        ),
-        'views-promotions-promos_front' => array(
-          'module' => 'views',
-          'delta' => 'promotions-promos_front',
-          'region' => 'content',
-          'weight' => '-9',
         ),
       ),
     ),

@@ -89,6 +89,10 @@ projects[uuid_features][version] = "1.0-alpha4"
 projects[views][subdir] = contrib
 projects[views][version] = "3.13"
 
+projects[view_unpublished][subdir] = contrib
+projects[view_unpublished][version] = "1.2"
+
+
 ;=== Modules - optional =======================================================
 projects[addressfield][subdir] = contrib
 projects[addressfield][version] = "1.2"
@@ -323,7 +327,7 @@ projects[simplenews][subdir] = contrib
 projects[simplenews][version] = "1.1"
 
 projects[mailchimp][subdir] = contrib
-projects[mailchimp][version] = "4.7"
+projects[mailchimp][version] = "4.8"
 
 ;=== Scald and media related modules ==========================================
 projects[scald][subdir] = contrib

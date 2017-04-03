@@ -57,24 +57,28 @@ class MailchimpCURLClient {
         curl_setopt($ch, CURLOPT_POST, TRUE);
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode((object) $parameters));
         break;
+
       case 'GET':
         $uri .= '?' . http_build_query($parameters);
         break;
+
       case 'PUT':
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode((object) $parameters));
         break;
+
       case 'PATCH':
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PATCH');
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode((object) $parameters));
         break;
+
       case 'DELETE':
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'DELETE');
         break;
+
       default:
         // Throw exception for unsupported request method.
         throw new \Exception('Unsupported HTTP request method: ' . $method);
-        break;
     }
 
     curl_setopt($ch, CURLOPT_URL, $uri);
@@ -83,19 +87,30 @@ class MailchimpCURLClient {
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     $response = curl_exec($ch);
 
-    // Handle errors.
-    $curl_error = ($response === FALSE) ? curl_error($ch) : NULL;
+    $http_code = 0;
+    $error = NULL;
+
+    // curl_errno return a code which tell us how the curl request happened.
+    // It's not related with the http result. So we need to check this before
+    // testing the actual http result.
+    if (curl_errno($ch)) {
+      // Handle errors.
+      $error = curl_error($ch);
+    }
+    else {
+      // The http request was ok, so we can now test the HTTP status code.
+      $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+      if ($http_code != 200) {
+        $response_data = json_decode($response);
+        $error = $response_data->detail;
+      }
+    }
 
     // Close cURL connection.
     curl_close($ch);
 
-    if (!empty($curl_error)) {
-      throw new \Exception($curl_error);
-    }
-
-    $response_data = json_decode($response);
-    if (isset($response_data->status) && ($response_data->status != 200)) {
-      throw new \Exception($response_data->detail);
+    if (!empty($error)) {
+      throw new \Exception($error, $http_code);
     }
 
     return $response;

@@ -6,36 +6,40 @@
 .node-simplenews.view-mode-full .group-title-date-banner {
   padding: 0.75em 0.5em;
   margin: 0.1em 0 1em 0;
-  background-color: #b0afb8;
   position: relative;
+  overflow: auto;
 }
+.node-simplenews.view-mode-full .group-title-date-banner .field-name-title {
+  padding: 0 15px;
+}
+
 .node-simplenews.view-mode-full .group-title-date-banner .field-name-title h2 {
   margin: 0;
-  color: white;
+  /*color: white;*/
+  font-size: 1.4em;
+  font-weight: 500;
 }
 .node-simplenews.view-mode-full .group-title-date-banner .field-name-field-newsletter-date {
   text-align: right;
   position: absolute;
   bottom: 1em;
   right: 1em;
-  color: white;
+  /*color: white;*/
 }
 .node-simplenews.view-mode-full .field-name-field-newsletter-intro {
   clear: both;
   padding: 0 0 1em 0;
   margin: 0 0 1em 0;
-  border-bottom: 5px solid #dddddd;
 }
 .node-simplenews.view-mode-full .newsletter-section-header {
   padding: 0.5em 1em;
   margin: 1.5em 0 1em 0;
-  background-color: #e4e4e4;
   position: relative;
+  overflow: auto;
 }
 .node-simplenews.view-mode-full .newsletter-section-header h3 {
   padding: 0;
   margin: 0;
-  color: #b0afb8;
 }
 .node-simplenews.view-mode-full .newsletter-section-header .header-link {
   text-align: right;
@@ -46,7 +50,6 @@
 .node-simplenews.view-mode-full .field-type-entityreference > div.field-items > div.field-item:not(:last-child) {
   padding-bottom: 1em;
   margin-bottom: 1em;
-  border-bottom: 1px solid #cccccc;
 }
 .node-simplenews.view-mode-full .field-type-entityreference .row {
   margin: 0;
@@ -55,6 +58,9 @@
   padding: 0;
 }
 .node-simplenews.view-mode-full .field-type-entityreference .row > div:nth-child(2) {
+  /*padding-left: 1em;*/
+}
+.node-simplenews.view-mode-full .field-type-entityreference .row > div:nth-child(2) > div {
   padding-left: 1em;
 }
 .node-simplenews.view-mode-full .field-type-entityreference .row blockquote {
@@ -64,14 +70,12 @@
   margin-top: 0;
 }
 .node-simplenews.view-mode-full .field-type-entityreference .row .field-name-field-event-categorie {
-  font-style: italic;
-  color: #7c7c7c;
+
 }
 .node-simplenews.view-mode-full .field-type-entityreference .row .field-name-field-event-dates {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .node-simplenews.view-mode-full .field-type-entityreference .row .field-name-field-event-dates .newsletter-agenda-adverb {
-  color: #7c7c7c;
   font-size: 80%;
   text-align: right;
 }
@@ -81,3 +85,4 @@
 #edit-newsletter-header-image-fid-upload {
   display: inline;
 }
+

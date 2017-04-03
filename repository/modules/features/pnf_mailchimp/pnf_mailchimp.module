@@ -1,0 +1,112 @@
+<?php
+/**
+ * @file
+ * Code for the Mailchimp integration feature.
+ */
+
+include_once 'pnf_mailchimp.features.inc';
+
+/**
+ * Implements hook_init().
+ */
+function pnf_mailchimp_init() {
+  drupal_add_css(drupal_get_path('module', 'pnf_mailchimp') . '/css/pnf_mailchimp.css');
+  drupal_add_css(drupal_get_path('module', 'pnf_newsletter') . '/css/newsletter.css');
+
+  if(module_exists('mailchimp_signup')) {
+    drupal_add_js(drupal_get_path('module', 'pnf_mailchimp') . '/js/pnf_mailchimp.js');
+  }
+
+  $current_path = current_path();
+  if (strstr($current_path, 'admin/config/services/mailchimp/campaigns/')) {
+    $park_code = variable_get('park_code', 'pnx');
+    drupal_add_css(drupal_get_path('module', 'pnf_newsletter') . '/css/newsletter' . '_' . $park_code .'.css');
+    drupal_add_css(drupal_get_path('module', 'pnf_mailchimp') . '/css/mailchimp' . '_' . $park_code .'.css');
+
+    switch ($park_code) {
+      case 'pncal':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnca_style.css.less');
+        break;
+      case 'pnc':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnce_style.css.less');
+        break;
+      case 'pne':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnec_style.css.less');
+        break;
+      case 'png':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pngd_style.css.less');
+        break;
+      case 'pnm':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnme_style.css.less');
+        break;
+      case 'pag':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnag_style.css.less');
+        break;
+      case 'pnp':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnpy_style.css.less');
+        break;
+      case 'pnf':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnf_style.css.less');
+        break;
+      case 'pnpc':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnpc_style.css.less');
+        break;
+      case 'pnrun':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnre_style.css.less');
+        break;
+      case 'pnv':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnva_style.css.less');
+        break;
+      // FCB
+      case 'fcb':
+        drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/fcb_style.css.less');
+        break;
+    }
+  }
+}
+
+/**
+ * Implements hook_node_view().
+ */
+function pnf_mailchimp_node_view($node, $view_mode, $langcode) {
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function pnf_mailchimp_form_mailchimp_campaign_campaign_form_alter(&$form, &$form_state, $form_id) {
+  drupal_add_css(drupal_get_path('module', 'pnf_mailchimp') . '/css/pnf_mailchimp.css');
+
+  // If we come from a simplenews page (full mode view)
+  // we load the corresponding node to get this title and date
+  // to preset Title, Object and Content (the insert entity token) campaign fields.
+  if (isset($_GET['snid'])) {
+    $sn_wrapper = entity_metadata_wrapper('node', $_GET['snid']);
+    $newsletter_title_date = $sn_wrapper->title->value()
+      . ' - ' . ucfirst(format_date($sn_wrapper->field_newsletter_date->value(), 'custom', 'F Y'));
+
+    $form['title']['#default_value'] = $newsletter_title_date;
+    $form['subject']['#default_value'] = $newsletter_title_date;
+
+    $form['content']['html_wrapper']['html']['#default_value'] =
+      '[mailchimp_campaign|entity_type=node|entity_id=' . $_GET['snid'] . '|view_mode=full]';
+  }
+  // Here, we handle the ajax callback which is fired when selecting a template.
+  // Another form field is added to the DOM. We must preset it as well.
+  elseif (isset($form['content']['contenu_wrapper']['contenu'])) {
+    $snid = explode('=', $_SERVER['HTTP_REFERER'])[1];
+
+    $form['content']['contenu_wrapper']['contenu']['#default_value'] =
+      '[mailchimp_campaign|entity_type=node|entity_id=' . $snid . '|view_mode=full]';
+
+    $form['content']['contenu_wrapper']['contenu']['#attributes'] = array('readonly' => 'readonly');
+  }
+
+  // In any case, we must properly name the List field, badly translated in French as "Lister".
+  $form['list_id']['#title'] = 'Liste';
+
+  // and simplify the Template select field.
+  $options = array('-- Sélectionner --');
+  $options['Mes gabarits'] =$form['template_id']['#options']['My Custom Templates'];
+  $form['template_id']['#options'] = $options;
+}

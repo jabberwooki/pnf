@@ -122,10 +122,16 @@ function kcore_update_7016() {
   module_enable(array('mmenu'));
 }
 
-
 /**
  * Activate weight module.
  */
 function kcore_update_7017() {
   module_enable(array('weight'));
+}
+
+/**
+ * Activate view_unpublished module.
+ */
+function kcore_update_7018() {
+  module_enable(array('view_unpublished'));
 }

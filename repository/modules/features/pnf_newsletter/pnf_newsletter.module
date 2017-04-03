@@ -6,17 +6,27 @@
 
 include_once 'pnf_newsletter.features.inc';
 
+global $park_code;
+$park_code = variable_get('park_code', 'pnx');
+
 /**
  * Implements hook_init().
  */
 function pnf_newsletter_init() {
-  if(module_exists('mailchimp_signup')) {
-    drupal_add_css(drupal_get_path('module', 'pnf_newsletter') . '/css/pnf_mailchimp.css');
-    drupal_add_js(drupal_get_path('module', 'pnf_newsletter') . '/js/pnf_mailchimp.js');
-  }
-
   drupal_add_css(drupal_get_path('module', 'pnf_newsletter') . '/css/newsletter.css');
   drupal_add_js(drupal_get_path('module', 'pnf_newsletter') . '/js/pnf_newsletter.js');
+
+  // Specific css code
+  global $park_code;
+  drupal_add_css(drupal_get_path('module', 'pnf_newsletter') . '/css/newsletter' . '_' . $park_code .'.css');
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function pnf_newsletter_preprocess_html(&$variables) {
+  global $park_code;
+  $variables['classes_array'][] = 'park-' . $park_code;
 }
 
 /**
@@ -130,7 +140,7 @@ function pnf_newsletter_header_image_field_render() {
 function pnf_newsletter_news_header_render() {
   $output = '<h3 class="header-title col-md-8">Actualités</h3>';
   $output .= '<div class="header-link col-md-4"><a href="/actualites">Toutes les actualités</a></div>';
-  $output .= '<div class="newsletter-spacer clearfix"></div>';
+//  $output .= '<div class="newsletter-spacer clearfix"></div>';
 
   return $output;
 }
@@ -138,7 +148,7 @@ function pnf_newsletter_news_header_render() {
 function pnf_newsletter_newsflashes_header_render() {
   $output = '<h3 class="header-title col-md-8">Brèves</h3>';
   $output .= '<div class="header-link col-md-4"><a href="/breves">Toutes les brèves</a></div>';
-  $output .= '<div class="newsletter-spacer clearfix"></div>';
+//  $output .= '<div class="newsletter-spacer clearfix"></div>';
 
   return $output;
 }
@@ -146,7 +156,7 @@ function pnf_newsletter_newsflashes_header_render() {
 function pnf_newsletter_agenda_header_render() {
   $output = '<h3 class="header-title col-md-8">Agenda</h3>';
   $output .= '<div class="header-link col-md-4"><a href="/agenda">L\'agenda complet</a></div>';
-  $output .= '<div class="newsletter-spacer clearfix"></div>';
+//  $output .= '<div class="newsletter-spacer clearfix"></div>';
 
   return $output;
 }

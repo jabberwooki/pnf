@@ -15,6 +15,7 @@ function pnf_newsletter_user_default_permissions() {
     'name' => 'administer newsletters',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'simplenews',
   );
@@ -33,7 +34,6 @@ function pnf_newsletter_user_default_permissions() {
     'name' => 'administer simplenews subscriptions',
     'roles' => array(
       'administrateur' => 'administrateur',
-      'webmaster' => 'webmaster',
     ),
     'module' => 'simplenews',
   );
@@ -90,8 +90,6 @@ function pnf_newsletter_user_default_permissions() {
     'name' => 'send newsletter',
     'roles' => array(
       'administrateur' => 'administrateur',
-      'rédacteur' => 'rédacteur',
-      'webmaster' => 'webmaster',
     ),
     'module' => 'simplenews',
   );
