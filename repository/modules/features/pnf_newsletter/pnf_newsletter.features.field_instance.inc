@@ -311,6 +311,7 @@ function pnf_newsletter_field_default_field_instances() {
         'allowed_formats' => array(
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
+          'mailchimp_campaign' => 0,
           'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 0,
@@ -323,6 +324,9 @@ function pnf_newsletter_field_default_field_instances() {
             'full_html' => array(
               'weight' => -10,
             ),
+            'mailchimp_campaign' => array(
+              'weight' => -9,
+            ),
             'plain_text' => array(
               'weight' => 10,
             ),
@@ -331,7 +335,7 @@ function pnf_newsletter_field_default_field_instances() {
       ),
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
-      'dnd_enabled' => 0,
+      'dnd_enabled' => 1,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
