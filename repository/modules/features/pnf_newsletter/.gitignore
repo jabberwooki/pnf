@@ -1,0 +1,2 @@
+# Ignore site specific pnf_newsletter css files
+css/newsletter_*.css
