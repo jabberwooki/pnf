@@ -38,12 +38,23 @@ function pnf_newsletter_menu() {
     'title' => t('Newsletter'),
     'page callback' => 'drupal_get_form',
     'page arguments' => array('pnf_newsletter_settings_form'),
-    'access arguments' => array('administer pnf settings'),
+    'access arguments' => array('administer PNx newsletters'),
     'file' => 'pnf_newsletter.admin.inc',
     'type' => MENU_NORMAL_ITEM,
   );
 
   return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function pnf_newsletter_permission() {
+  return array(
+    'Administer pnx newsletters' => array(
+      'title' => t('Administer PNx newsletters'),
+    ),
+  );
 }
 
 /**

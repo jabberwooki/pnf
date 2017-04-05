@@ -10,12 +10,21 @@
 function pnf_newsletter_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'Administer pnx newsletters'.
+  $permissions['Administer pnx newsletters'] = array(
+    'name' => 'Administer pnx newsletters',
+    'roles' => array(
+      'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'pnf_newsletter',
+  );
+
   // Exported permission: 'administer newsletters'.
   $permissions['administer newsletters'] = array(
     'name' => 'administer newsletters',
     'roles' => array(
       'administrateur' => 'administrateur',
-      'webmaster' => 'webmaster',
     ),
     'module' => 'simplenews',
   );
@@ -88,19 +97,14 @@ function pnf_newsletter_user_default_permissions() {
   // Exported permission: 'send newsletter'.
   $permissions['send newsletter'] = array(
     'name' => 'send newsletter',
-    'roles' => array(
-      'administrateur' => 'administrateur',
-    ),
+    'roles' => array(),
     'module' => 'simplenews',
   );
 
   // Exported permission: 'subscribe to newsletters'.
   $permissions['subscribe to newsletters'] = array(
     'name' => 'subscribe to newsletters',
-    'roles' => array(
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-    ),
+    'roles' => array(),
     'module' => 'simplenews',
   );
 
