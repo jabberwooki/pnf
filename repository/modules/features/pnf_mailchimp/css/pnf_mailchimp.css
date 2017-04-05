@@ -33,14 +33,15 @@
 }
 #block-mailchimp-signup-newsletter-block button {
     border-radius: 0;
-    border: 1px solid #6c82a7;
-    background-color: #6c82a7;
+    border: 1px solid #aaaaaa;
+    background-color: #aaaaaa;
     color: white;
 
 }
 .mailchimp-signup-info {
-    color: black;
+    color: white;
     font-size: 90%;
+    font-style: italic;
 }
 
 /* Newsletter full mode page */
