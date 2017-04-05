@@ -1,0 +1,2 @@
+# Ignore site specific pnf_mailchimp css files
+css/mailchimp_*.css

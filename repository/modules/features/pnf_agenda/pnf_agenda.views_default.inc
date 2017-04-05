@@ -577,6 +577,12 @@ function pnf_agenda_views_default_views() {
     'event' => 'event',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Dates -  start date (field_event_dates) */
+  $handler->display->display_options['filters']['field_event_dates_value']['id'] = 'field_event_dates_value';
+  $handler->display->display_options['filters']['field_event_dates_value']['table'] = 'field_data_field_event_dates';
+  $handler->display->display_options['filters']['field_event_dates_value']['field'] = 'field_event_dates_value';
+  $handler->display->display_options['filters']['field_event_dates_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_event_dates_value']['default_date'] = 'now';
   $translatables['events'] = array(
     t('Master'),
     t('Agenda'),
