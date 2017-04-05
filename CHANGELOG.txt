@@ -1,3 +1,12 @@
+PNx 1.4.4 - 2017-04-05
+======================
+ * pnf_agenda up: view's display event_titles altered: date filter added to get only coming events.
+ * pnf_mailchimp up: css style for front page signup form altered.
+ * pnf_newsletter and pn_mailchimp up: site specific css files removed from version control.
+ * pnf_newsletter up: Scald library drag'n'drop enabled on field_newsletter_intro.
+ * pnf_newsletter up: simplenews module and pnf_newsletter feature permissions altered.
+
+
 Hotfix 1.4.3 / 2017-04-03
 =========================
  * pnf_news up: Export of forgotten alteration of view mode 'Newsletter' in news content type.
