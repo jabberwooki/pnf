@@ -1,3 +1,7 @@
+PNx 1.4.5 - 2017-04-28
+======================
+ * pnf_agenda up: missing date filter (>= now) added to events/block_events_home display.
+
 PNx 1.4.4 - 2017-04-05
 ======================
  * pnf_agenda up: view's display event_titles altered: date filter added to get only coming events.
