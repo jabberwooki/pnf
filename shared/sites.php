@@ -86,6 +86,7 @@ $sites = array(
   'www.pyrenees-parcnational.fr' => 'parc-pyrenees.com',
   'www.parcsnationaux.fr' => 'parcsnationaux.fr',
   'www.portcrosparcnational.fr' => 'portcrosparcnational.fr',
+  'www.portcros-parcnational.fr' => 'portcrosparcnational.fr',
   'www.reunion-parcnational.fr' => 'reunion-parcnational.fr',
   'www.vanoise-parcnational.fr' => 'vanoise-parcnational.fr',
   'www.forets-champagne-bourgogne.fr' => 'forets-champagne-bourgogne.fr',
