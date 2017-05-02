@@ -486,6 +486,9 @@ function pnf_front_blocks_context_default_contexts() {
     'domain' => array(
       'values' => array(
         '*.portcrosparcnational.*' => '*.portcrosparcnational.*',
+        '*.portcros-parcnational.*' => '*.portcros-parcnational.*',
+        'preprod-pnpc.*' => 'preprod-pnpc.*',
+        'prod-pnpc.*' => 'prod-pnpc.*',
       ),
     ),
     'path' => array(
