@@ -1,3 +1,7 @@
+PNx 1.4.6 - 2017-05-05
+======================
+ * pnf_news up: Publication start/end dates added as filter criteria in block_news_news_home and page_news_news views displays.
+
 PNx 1.4.5 - 2017-04-28
 ======================
  * pnf_agenda up: missing date filter (>= now) added to events/block_events_home display.
