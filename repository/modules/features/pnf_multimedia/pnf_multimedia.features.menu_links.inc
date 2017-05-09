@@ -10,93 +10,6 @@
 function pnf_multimedia_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-multimedia-footer_espace-presse:espace-presse.
-  $menu_links['menu-multimedia-footer_espace-presse:espace-presse'] = array(
-    'menu_name' => 'menu-multimedia-footer',
-    'link_path' => 'espace-presse',
-    'router_path' => 'espace-presse',
-    'link_title' => 'Espace Presse',
-    'options' => array(
-      'identifier' => 'menu-multimedia-footer_espace-presse:espace-presse',
-      'attributes' => array(
-        'class' => array(
-          0 => 'press-links',
-        ),
-      ),
-      'item_attributes' => array(
-        'id' => '',
-        'class' => 'col-xs-6 col-sm-3 col-md-3',
-        'style' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 3,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
-  );
-  // Exported menu link: menu-multimedia-footer_photos:galeries-photo.
-  $menu_links['menu-multimedia-footer_photos:galeries-photo'] = array(
-    'menu_name' => 'menu-multimedia-footer',
-    'link_path' => 'galeries-photo',
-    'router_path' => 'galeries-photo',
-    'link_title' => 'Photos',
-    'options' => array(
-      'identifier' => 'menu-multimedia-footer_photos:galeries-photo',
-      'attributes' => array(
-        'class' => array(
-          0 => 'photos-link',
-        ),
-      ),
-      'item_attributes' => array(
-        'id' => '',
-        'class' => 'col-xs-6 col-sm-3 col-md-3',
-        'style' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
-  );
-  // Exported menu link: menu-multimedia-footer_vidos:videos.
-  $menu_links['menu-multimedia-footer_vidos:videos'] = array(
-    'menu_name' => 'menu-multimedia-footer',
-    'link_path' => 'videos',
-    'router_path' => 'videos',
-    'link_title' => 'Vidéos',
-    'options' => array(
-      'identifier' => 'menu-multimedia-footer_vidos:videos',
-      'attributes' => array(
-        'class' => array(
-          0 => 'videos-link',
-        ),
-      ),
-      'item_attributes' => array(
-        'id' => '',
-        'class' => 'col-xs-6 col-sm-3 col-md-3',
-        'style' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 1,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
-  );
   // Exported menu link: menu-multimedia_galeries-dimages:galeries-photo.
   $menu_links['menu-multimedia_galeries-dimages:galeries-photo'] = array(
     'menu_name' => 'menu-multimedia',
@@ -215,10 +128,8 @@ function pnf_multimedia_menu_default_menu_links() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Espace Presse');
   t('Galeries d\'images');
   t('Médiathèque');
-  t('Photos');
   t('Publications et documents');
   t('Sons');
   t('Vidéos');
