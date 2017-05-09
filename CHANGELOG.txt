@@ -1,3 +1,7 @@
+PNx 1.4.7 - 2017-05-09
+======================
+ * Custom theme up: CSS code for ibex-link (PNP) and corresponding icon image file added.
+
 PNx 1.4.6 - 2017-05-05
 ======================
  * pnf_news up: Publication start/end dates added as filter criteria in block_news_news_home and page_news_news views displays.
