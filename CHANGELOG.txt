@@ -1,5 +1,9 @@
 Hotfix fcb-agenda-public-field-error-fix - 2017-05-16
 =====================================================
+ * pnf_agenda up: Default value 'now' given to 'From' exposed date filter.
+ 
+Hotfix fcb-agenda-public-field-error-fix - 2017-05-16
+=====================================================
  * pnf_agenda up: Error message in event full view mode fixed for FCB.
 
 Hotfix fcb-job-types-fix - 2017-05-16
