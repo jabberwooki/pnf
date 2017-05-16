@@ -1,3 +1,7 @@
+Hotfix fcb-agenda-public-field-error-fix - 2017-05-16
+=====================================================
+ * pnf_agenda up: Error message in event full view mode fixed for FCB.
+
 Hotfix fcb-job-types-fix - 2017-05-16
 =====================================
  * pnf_jobs up: custom code for job types field for FCB removed.
