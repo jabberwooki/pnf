@@ -879,7 +879,11 @@ function pnf_jobs_field_default_field_instances() {
   // Exported field_instance: 'node-job-field_job_type'.
   $field_instances['node-job-field_job_type'] = array(
     'bundle' => 'job',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'tid' => 14,
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
