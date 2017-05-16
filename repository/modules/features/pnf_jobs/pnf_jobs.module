@@ -74,13 +74,13 @@ function pnf_jobs_views_pre_view(&$view, &$display_id, &$args) {
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function pnf_jobs_form_job_node_form_alter(&$form, &$form_state, $form_id) {
-	if (variable_get('park_code') == 'fcb') {
-		// We must disable the select field field_job_type, set on "Offres d'emploi" value
-		// without removing the other 2 options, otherwise we get a pathauto bug.
-		$form['field_job_type']['#disabled'] = 'disabled';
-	}
-}
+//function pnf_jobs_form_job_node_form_alter(&$form, &$form_state, $form_id) {
+//	if (variable_get('park_code') == 'fcb') {
+//		// We must disable the select field field_job_type, set on "Offres d'emploi" value
+//		// without removing the other 2 options, otherwise we get a pathauto bug.
+//		$form['field_job_type']['#disabled'] = 'disabled';
+//	}
+//}
 
 /**
  * Implements hook_block_view_alter().

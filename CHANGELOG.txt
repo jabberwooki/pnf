@@ -1,3 +1,7 @@
+Hotfix fcb-job-types-fix - 2017-05-16
+=====================================
+ * pnf_jobs up: custom code for job types field for FCB removed.
+ 
 PNx 1.4.7 - 2017-05-09
 ======================
  * Custom theme up: CSS code for ibex-link (PNP) and corresponding icon image file added.
