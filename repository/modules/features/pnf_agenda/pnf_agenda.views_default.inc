@@ -312,6 +312,18 @@ function pnf_agenda_views_default_views() {
   );
   $handler->display->display_options['filters']['field_public_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_public_tid']['vocabulary'] = 'public';
+  /* Filter criterion: Content: Dates début/fin publication -  start date (field_pub_dates) */
+  $handler->display->display_options['filters']['field_pub_dates_value']['id'] = 'field_pub_dates_value';
+  $handler->display->display_options['filters']['field_pub_dates_value']['table'] = 'field_data_field_pub_dates';
+  $handler->display->display_options['filters']['field_pub_dates_value']['field'] = 'field_pub_dates_value';
+  $handler->display->display_options['filters']['field_pub_dates_value']['operator'] = '<=';
+  $handler->display->display_options['filters']['field_pub_dates_value']['default_date'] = 'now';
+  /* Filter criterion: Content: Dates début/fin publication - end date (field_pub_dates:value2) */
+  $handler->display->display_options['filters']['field_pub_dates_value2']['id'] = 'field_pub_dates_value2';
+  $handler->display->display_options['filters']['field_pub_dates_value2']['table'] = 'field_data_field_pub_dates';
+  $handler->display->display_options['filters']['field_pub_dates_value2']['field'] = 'field_pub_dates_value2';
+  $handler->display->display_options['filters']['field_pub_dates_value2']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_pub_dates_value2']['default_date'] = 'now';
   $handler->display->display_options['path'] = 'agenda';
 
   /* Display: Bloc carte */
@@ -518,15 +530,29 @@ function pnf_agenda_views_default_views() {
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
+  $handler->display->display_options['filters']['promote']['group'] = 1;
   /* Filter criterion: Date: Date (node) */
   $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
   $handler->display->display_options['filters']['date_filter']['table'] = 'node';
   $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
   $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
+  $handler->display->display_options['filters']['date_filter']['group'] = 1;
   $handler->display->display_options['filters']['date_filter']['default_date'] = 'now';
   $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
     'field_data_field_event_dates.field_event_dates_value2' => 'field_data_field_event_dates.field_event_dates_value2',
   );
+  /* Filter criterion: Content: Dates début/fin publication -  start date (field_pub_dates) */
+  $handler->display->display_options['filters']['field_pub_dates_value']['id'] = 'field_pub_dates_value';
+  $handler->display->display_options['filters']['field_pub_dates_value']['table'] = 'field_data_field_pub_dates';
+  $handler->display->display_options['filters']['field_pub_dates_value']['field'] = 'field_pub_dates_value';
+  $handler->display->display_options['filters']['field_pub_dates_value']['operator'] = '<=';
+  $handler->display->display_options['filters']['field_pub_dates_value']['default_date'] = 'now';
+  /* Filter criterion: Content: Dates début/fin publication - end date (field_pub_dates:value2) */
+  $handler->display->display_options['filters']['field_pub_dates_value2']['id'] = 'field_pub_dates_value2';
+  $handler->display->display_options['filters']['field_pub_dates_value2']['table'] = 'field_data_field_pub_dates';
+  $handler->display->display_options['filters']['field_pub_dates_value2']['field'] = 'field_pub_dates_value2';
+  $handler->display->display_options['filters']['field_pub_dates_value2']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_pub_dates_value2']['default_date'] = 'now';
 
   /* Display: Titres d'événements */
   $handler = $view->new_display('entityreference', 'Titres d\'événements', 'event_titles');
