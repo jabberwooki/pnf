@@ -1,3 +1,7 @@
+Hotfix agenda-publication-dates-filter-fix - 2017-05-29
+=======================================================
+ * pnf_agenda up: publication start and end dates filter added to front page block and agenda page view.
+
 Hotfix fcb-agenda-public-field-error-fix - 2017-05-16
 =====================================================
  * pnf_agenda up: Default value 'now' given to 'From' exposed date filter.
