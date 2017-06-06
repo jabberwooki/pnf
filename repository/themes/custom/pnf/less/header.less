@@ -700,9 +700,32 @@ now override the 3.3 new styles for modern browsers & apply opacity
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {
 	nav{
-		margin-top: 40px;
+		margin-top: 0px;
+		height: 60px;
 		/*position: initial !important;*/
 	}
+	#block-tb-megamenu-menu-menu-themes,
+	.region-top-menu{
+		display: none;
+	}
+	  #mmenu-selector{
+        display: block !important;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 2000;
+    }
+    #mmenu-selector:before{
+        background: @brand-primary;
+        content: '\f0c9';
+        font-family: "Fontawesome";
+        color: #fff;
+        font-size: 21px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+
 	#block-kcore-pnf-on-the-web-clone{
 		display: none;
 	}
@@ -805,6 +828,17 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-md-min) {
+	nav{
+		margin-top: 40px;
+		/*position: initial !important;*/
+	}
+	#mmenu-selector{
+		display: none !important;
+	}
+	#block-tb-megamenu-menu-menu-themes,
+	.region-top-menu{
+		display: block;
+	}
 	#block-kcore-pnf-on-the-web-clone{
 		display: block;
 	}
