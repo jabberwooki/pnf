@@ -78,6 +78,18 @@ header .name{
   font-weight: normal;
   font-style: normal;
 }
+/*FONTELLO*/
+@font-face {
+  font-family: 'pnf';
+  src: url('../fonts/fontello-948ba3ca/font/pnf.eot?36719752');
+  src: url('../fonts/fontello-948ba3ca/font/pnf.eot?36719752#iefix') format('embedded-opentype'),
+       url('../fonts/fontello-948ba3ca/font/pnf.woff2?36719752') format('woff2'),
+       url('../fonts/fontello-948ba3ca/font/pnf.woff?36719752') format('woff'),
+       url('../fonts/fontello-948ba3ca/font/pnf.ttf?36719752') format('truetype'),
+       url('../fonts/fontello-948ba3ca/font/pnf.svg?36719752#pnf') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /*Header*/
 .header{
@@ -752,7 +764,9 @@ now override the 3.3 new styles for modern browsers & apply opacity
 	            font-size: @font-size-h3;
 	        }
 	        a.tool-news:after{
-	             content: '\f0e6';
+	        	font-family: 'pnf';
+	             /*content: '\f0e6';*/ /*Fontawesome*/
+	             content: '\e001';
 	        }
 	        a.tool-events:after{
 	            content: '\f073';
@@ -761,7 +775,9 @@ now override the 3.3 new styles for modern browsers & apply opacity
 	            content: '\f1ea';
 	        }
 	        a.tool-multimedia:after{
-	            content: '\f03e';
+	        	font-family: 'pnf';
+	            /*content: '\f03e';*/ /*Fontawesome*/
+	            content: '\e007'; 
 	        }
 	        a.tool-eshop:after{
 	            content: '\f07a';
