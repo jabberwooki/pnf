@@ -193,32 +193,33 @@ header .name{
   }
 }
 
-#block-menu-menu-tools .navbar-default .navbar-toggle{
-	background-color: rgba(0, 0, 0, 0.7);
-	color: white;
-	border-color: rgba(0, 0, 0, 0.7);
-}
-.pnf_toolbar .block-menu .navbar-collapse{
-	padding-right: 0;
-}
-.pnf_toolbar .block-menu .navbar-toggle{
-	float: right;
-}
-.pnf_toolbar .block-menu .navbar-collapse.collapse.in {
-    background-color: rgba(0, 0, 0, 0.7);
-    border:none;
-}
-.pnf_toolbar .block-menu .navbar-collapse.collapse.in a span{
-  color: white;
-}
-
-#block-menu-menu-tools .navbar-collapse.collapse.in {
-  background-color: rgba(0, 0, 0, 0.7);
-  border:none;
-}
-#block-menu-menu-tools .navbar-collapse.collapse.in a {
-  color: white;
-}
+// Toutes les lignes ci-dessous commentées par CE.
+//#block-menu-menu-tools .navbar-default .navbar-toggle{
+//	background-color: rgba(0, 0, 0, 0.7);
+//	color: white;
+//	border-color: rgba(0, 0, 0, 0.7);
+//}
+//.pnf_toolbar .block-menu .navbar-collapse{
+//	padding-right: 0;
+//}
+//.pnf_toolbar .block-menu .navbar-toggle{
+//	float: right;
+//}
+//.pnf_toolbar .block-menu .navbar-collapse.collapse.in {
+//    background-color: rgba(0, 0, 0, 0.7);
+//    border:none;
+//}
+//.pnf_toolbar .block-menu .navbar-collapse.collapse.in a span{
+//  color: white;
+//}
+//
+//#block-menu-menu-tools .navbar-collapse.collapse.in {
+//  background-color: rgba(0, 0, 0, 0.7);
+//  border:none;
+//}
+//#block-menu-menu-tools .navbar-collapse.collapse.in a {
+//  color: white;
+//}
 
 /*Search block*/
 .search-magnifier {
@@ -744,101 +745,110 @@ now override the 3.3 new styles for modern browsers & apply opacity
 	#block-menu-menu-tools {
 	    width: auto;
 	}
-		/*Menu tools*/
+
+	/*Menu tools*/
 	#block-menu-menu-tools{
-	   right: 0;
-	   position: fixed;
-	   top: 220px;
-	        li{
-	            margin-bottom: 2px;
-	        }
-	        a.tool{
-	            height: 44px;
-	            width: 44px;
-	            line-height: 22px;            
-	            display: inline-block;
-	            background-color: rgba(0, 0, 0, 0.7);
-	            color: #fff;
-	            padding: 12px;
-	            font-family: 'Fontawesome';
-	            font-size: @font-size-h3;
-	        }
-	        a.tool-news:after{
-	        	font-family: 'pnf';
-	             /*content: '\f0e6';*/ /*Fontawesome*/
-	             content: '\e001';
-	        }
-	        a.tool-events:after{
-	            content: '\f073';
-	        }
-	        a.tool-newspaper:after{
-	            content: '\f1ea';
-	        }
-	        a.tool-multimedia:after{
-	        	font-family: 'pnf';
-	            /*content: '\f03e';*/ /*Fontawesome*/
-	            content: '\e007'; 
-	        }
-	        a.tool-eshop:after{
-	            content: '\f07a';
-	        }
-	        a.tool-like:after{
-	            content: '\f08a';
-	        }
-	        a.tool-destination:after{
-	            content: '\f277';
-	        }
-	        a.tool-map:after{
-	            content:'\f278';
-	        }
-	        a.tool-doc:after{
-	            content:'\f02d';
-	        }
-			a.tool-atlas:after{
-				content:'\f0ac';
+		right: 0;
+		position: fixed;
+		top: 220px;
+
+		div.navbar-collapse {
+			background-color: rgba(0, 0, 0, 0.7); // ajouté par CE
+			padding-right: 0;  // ajouté par CE
+
+			li {
+				margin-bottom: 2px;
 			}
-			a.tool-phototheque:after{
-				content:'\f030';
+			a.tool {
+				height: 44px;
+				//width: 44px; // commenté par CE
+				line-height: 22px;
+				display: inline-block;
+				//background-color: rgba(0, 0, 0, 0.7); // commenté par CE
+				color: #fff;
+				padding: 12px;
+				font-family: 'Fontawesome';
+				font-size: @font-size-h3;
 			}
-			a.tool-regulations:after{
-				content:'\f071';
+			a.tool-news:before {
+				font-family: 'pnf';
+				/*content: '\f0e6';*/ /*Fontawesome*/
+				content: '\e001';
 			}
-			a.tool-child:after{
-				content:'\f1ae';
+			a.tool-events:before {
+				content: '\f073';
 			}
-			a.tool-lock:after{
-				content:'\f023';
+			a.tool-newspaper:before {
+				content: '\f1ea';
 			}
-			a.tool-afb:after{
-				content:'\f18c';
+			a.tool-multimedia:before {
+				font-family: 'pnf';
+				/*content: '\f03e';*/ /*Fontawesome*/
+				content: '\e007';
 			}
-	        a span {
-	            text-align: right;
-	            line-height: 35px;
-	            right: -800px;
-	            position: absolute;
-	            text-align:center;
-	            /*width:500px;*/
-	            font-size: 14px;
-	            background-color: rgba(0, 0, 0, 0.7);
-	            font-family: @font-family-sans-serif;
-	            -webkit-transition: all 0.3s ease-in-out;
-	            -moz-transition: all 0.3s ease-in-out;
-	            -o-transition: all 0.3s ease-in-out;
-	            -ms-transition: all 0.3s ease-in-out;
-	            transition: all 0.3s ease-in-out; 
-	        }
-	        a:hover span {
-	            right: 100%;
-	            margin-top: -12px;
-	            height: 44px;
-	            padding-top: 6px;
-	            -webkit-transition:all .6s ease-in-out;
-	            -moz-transition:all .6s ease-in-out; 
-	            -o-transition:all .6s ease-in-out; 
-	            -ms-transition:all .6s ease-in-out;
-	             transition:all .6s ease-in-out; 
-	        }
+			a.tool-eshop:before {
+				content: '\f07a';
+			}
+			a.tool-like:before {
+				content: '\f08a';
+			}
+			a.tool-destination:before {
+				content: '\f277';
+			}
+			a.tool-map:before {
+				content: '\f278';
+			}
+			a.tool-doc:before {
+				content: '\f02d';
+			}
+			a.tool-atlas:before {
+				content: '\f0ac';
+			}
+			a.tool-phototheque:before {
+				content: '\f030';
+			}
+			a.tool-regulations:before {
+				content: '\f071';
+			}
+			a.tool-child:before {
+				content: '\f1ae';
+			}
+			a.tool-lock:before {
+				content: '\f023';
+			}
+			a.tool-afb:before {
+				content: '\f18c';
+			}
+			a span {
+				//text-align: right; // commenté par CE
+				line-height: 35px;
+				//right: -800px; // commenté par CE
+				//position: absolute; // commenté par CE
+				//text-align:center; // commenté par CE
+				/*width:500px;*/ // commenté par CE
+				font-size: 14px;
+				//background-color: rgba(0, 0, 0, 0.7);  // commenté par CE
+				font-family: @font-family-sans-serif;
+				//-webkit-transition: all 0.3s ease-in-out; // commenté par CE
+				//-moz-transition: all 0.3s ease-in-out; // commenté par CE
+				//-o-transition: all 0.3s ease-in-out; // commenté par CE
+				//-ms-transition: all 0.3s ease-in-out; // commenté par CE
+				//transition: all 0.3s ease-in-out; // commenté par CE
+				padding-left: 10px; // ajouté par CE
+			}
+			// Tout ce bloc commenté par CE
+			//a:hover span {
+			//    right: 100%;
+			//    margin-top: -12px;
+			//    height: 44px;
+			//    padding-top: 6px;
+			//    -webkit-transition:all .6s ease-in-out;
+			//    -moz-transition:all .6s ease-in-out;
+			//    -o-transition:all .6s ease-in-out;
+			//    -ms-transition:all .6s ease-in-out;
+			//     transition:all .6s ease-in-out;
+			//}
+		}
 	}
 }
 

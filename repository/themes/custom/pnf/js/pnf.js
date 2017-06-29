@@ -59,6 +59,21 @@
     $('#block-menu-menu-tools').find('li span').each(function() {
       $(this).css('width', $(this).width() + 44);
     });
+    //----------------- Lignes rajoutées par CE ------------------------------------------------------------------------
+    var toolbar = $('#block-menu-menu-tools ul');
+    var toolbarWidth = toolbar.width();
+    var marginRightOffset = -(toolbarWidth - 44);
+
+    toolbar.css('margin-right', marginRightOffset);
+
+    toolbar.mouseenter(function () {
+      $(this).animate({marginRight: 0}, 300);
+    });
+
+    toolbar.mouseleave(function () {
+      $(this).animate({marginRight: marginRightOffset}, 300);
+    });
+    //----------------- Fin des lignes rajoutées par CE ----------------------------------------------------------------
 
     // Match height on landing pages thumbnails.
     $('.block-child-menu-items .col .cmi-wrapper').matchHeight('options');
@@ -179,7 +194,7 @@
       rank++;
     });
 
-    // Hugly hack to fix Menu du park bad display after Menu Field contrib module activation.
+    // Hugly hack to fix Menu du park bad display jqu Menu Field contrib module activation.
     $("#block-menu-menu-menu-park ul.menu > li").removeClass("collapsed");
     $("#block-menu-menu-menu-park ul.menu > li").addClass("expanded");
   }); // End of document ready
