@@ -15,6 +15,7 @@ function pnf_documents_user_default_permissions() {
     'name' => 'add terms in document_categories',
     'roles' => array(
       'administrateur' => 'administrateur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'taxonomy_access_fix',
   );
