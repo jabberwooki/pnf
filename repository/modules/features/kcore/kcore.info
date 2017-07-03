@@ -222,7 +222,6 @@ features[user_permission][] = administer module filter
 features[user_permission][] = administer modules
 features[user_permission][] = administer nodes
 features[user_permission][] = administer paragraphs bundles
-features[user_permission][] = administer pdf reader
 features[user_permission][] = administer permissions
 features[user_permission][] = administer print
 features[user_permission][] = administer search

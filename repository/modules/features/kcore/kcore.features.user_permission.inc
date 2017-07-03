@@ -571,15 +571,6 @@ function kcore_user_default_permissions() {
     'module' => 'paragraphs',
   );
 
-  // Exported permission: 'administer pdf reader'.
-  $permissions['administer pdf reader'] = array(
-    'name' => 'administer pdf reader',
-    'roles' => array(
-      'administrateur' => 'administrateur',
-    ),
-    'module' => 'pdf_reader',
-  );
-
   // Exported permission: 'administer permissions'.
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
