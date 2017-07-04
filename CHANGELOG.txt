@@ -1,3 +1,8 @@
+Hotfix agenda-button-readmore-bad-positioning
+=============================================
+ * pnf_agenda up: Pager (9 items per page) added to Agenda page.
+ * PNF custom theme up: Event location field's display bug fixed.
+
 Hotfix agenda-publication-dates-filter-fix - 2017-05-29
 =======================================================
  * pnf_agenda up: publication start and end dates filter added to front page block and agenda page view.
