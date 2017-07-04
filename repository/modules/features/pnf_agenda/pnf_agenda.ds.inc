@@ -326,8 +326,8 @@ function pnf_agenda_ds_layout_settings_info() {
         2 => 'group_event_resume',
         3 => 'field_event_dates',
         4 => 'title',
-        5 => 'btn_readmore',
-        6 => 'field_event_location',
+        5 => 'field_event_location',
+        6 => 'btn_readmore',
       ),
     ),
     'fields' => array(
@@ -336,8 +336,8 @@ function pnf_agenda_ds_layout_settings_info() {
       'group_event_resume' => 'central',
       'field_event_dates' => 'central',
       'title' => 'central',
-      'btn_readmore' => 'central',
       'field_event_location' => 'central',
+      'btn_readmore' => 'central',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -348,6 +348,7 @@ function pnf_agenda_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
   );
   $export['node|event|teaser'] = $ds_layout;
 

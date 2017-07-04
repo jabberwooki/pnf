@@ -49,6 +49,7 @@
 
     $('.page-agenda .view-mode-teaser').matchHeight('options');
     $('.page-agenda .view-mode-teaser h3').matchHeight('options');
+    $('.page-agenda .view-mode-teaser .field-name-field-event-location').matchHeight();
 
     $('.view-multimedia .multimedia-teaser').matchHeight('options');
     $('.view-multimedia .multimedia-teaser h3').matchHeight('options');
