@@ -505,13 +505,13 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['row_options']['separator'] = ' | ';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Documents utiles (field_downloadable_docs:fid) */
+  /* Relationship: Content: Documents téléchargeables (field_downloadable_docs:fid) */
   $handler->display->display_options['relationships']['field_downloadable_docs_fid']['id'] = 'field_downloadable_docs_fid';
   $handler->display->display_options['relationships']['field_downloadable_docs_fid']['table'] = 'field_data_field_downloadable_docs';
   $handler->display->display_options['relationships']['field_downloadable_docs_fid']['field'] = 'field_downloadable_docs_fid';
   $handler->display->display_options['relationships']['field_downloadable_docs_fid']['label'] = 'Documents utiles';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Documents utiles */
+  /* Field: Content: Documents téléchargeables */
   $handler->display->display_options['fields']['field_downloadable_docs']['id'] = 'field_downloadable_docs';
   $handler->display->display_options['fields']['field_downloadable_docs']['table'] = 'field_data_field_downloadable_docs';
   $handler->display->display_options['fields']['field_downloadable_docs']['field'] = 'field_downloadable_docs';
@@ -700,7 +700,7 @@ function pnf_news_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: Descriptif */
+  /* Field: Content: Descriptif détaillé */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
