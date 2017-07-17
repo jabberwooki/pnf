@@ -17,7 +17,7 @@ function pnf_contracts_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => 0,
       'language' => 'und',
-      'i18n_mode' => 0,
+      'i18n_mode' => 1,
     ),
     'procurement_types' => array(
       'name' => 'Types de procédure',
@@ -27,7 +27,7 @@ function pnf_contracts_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => 0,
       'language' => 'und',
-      'i18n_mode' => 0,
+      'i18n_mode' => 1,
     ),
   );
 }
