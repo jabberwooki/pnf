@@ -137,8 +137,8 @@ function kcore_update_7018() {
 }
 
 /**
- * Activate i18n_sync module.
+ * Activate i18n_sync, i18n_select, i18views modules.
  */
 function kcore_update_7019() {
-  module_enable(array('i18n_sync'));
+  module_enable(array('i18n_sync','i18n_select','i18nviews'));
 }

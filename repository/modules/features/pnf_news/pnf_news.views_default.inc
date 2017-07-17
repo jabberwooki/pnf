@@ -22,7 +22,7 @@ function pnf_news_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Actualités';
+  $handler->display->display_options['title'] = 'News';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'plus';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -267,12 +267,19 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['filters']['field_pub_dates_value2']['field'] = 'field_pub_dates_value2';
   $handler->display->display_options['filters']['field_pub_dates_value2']['operator'] = '>=';
   $handler->display->display_options['filters']['field_pub_dates_value2']['default_date'] = 'now';
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
   $handler->display->display_options['path'] = 'actualites';
 
   /* Display: Page Brèves */
   $handler = $view->new_display('page_with_page_title', 'Page Brèves', 'page_news_flashnews');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Brèves';
+  $handler->display->display_options['title'] = 'Newsflashes';
   $handler->display->display_options['defaults']['group_by'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
@@ -381,12 +388,19 @@ function pnf_news_views_default_views() {
   );
   $handler->display->display_options['filters']['field_public_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_public_tid']['vocabulary'] = 'public';
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
   $handler->display->display_options['path'] = 'breves';
 
   /* Display: Page Dossiers */
   $handler = $view->new_display('page_with_page_title', 'Page Dossiers', 'page_news_files');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Dossiers';
+  $handler->display->display_options['title'] = 'Files';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'views_bootstrap_grid_plugin_style';
   $handler->display->display_options['style_options']['columns'] = '3';
@@ -481,6 +495,13 @@ function pnf_news_views_default_views() {
   );
   $handler->display->display_options['filters']['field_public_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_public_tid']['vocabulary'] = 'public';
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
   $handler->display->display_options['path'] = 'dossiers';
 
   /* Display: Bloc Documents utiles */
@@ -567,7 +588,7 @@ function pnf_news_views_default_views() {
   /* Display: Bloc accueil actus */
   $handler = $view->new_display('block', 'Bloc accueil actus', 'block_news_news_home');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'A la une';
+  $handler->display->display_options['title'] = 'Headlines';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -650,11 +671,18 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['filters']['field_pub_dates_value2']['field'] = 'field_pub_dates_value2';
   $handler->display->display_options['filters']['field_pub_dates_value2']['operator'] = '>=';
   $handler->display->display_options['filters']['field_pub_dates_value2']['default_date'] = 'now';
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
 
   /* Display: Bloc accueil brèves */
   $handler = $view->new_display('block', 'Bloc accueil brèves', 'block_news_flashnews_home');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Brèves';
+  $handler->display->display_options['title'] = 'Newsflashes';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -735,11 +763,18 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
 
   /* Display: Bloc accueil dossiers */
   $handler = $view->new_display('block', 'Bloc accueil dossiers', 'block_news_files_home');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Dossiers';
+  $handler->display->display_options['title'] = 'Files';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -810,11 +845,18 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
 
   /* Display: Bloc accueil actus 2 cols */
   $handler = $view->new_display('block', 'Bloc accueil actus 2 cols', 'block_news_news_home2cols');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'A la une';
+  $handler->display->display_options['title'] = 'Headlines';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -885,6 +927,13 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
 
   /* Display: Titres d'actu (ER) */
   $handler = $view->new_display('entityreference', 'Titres d\'actu (ER)', 'news_titles');
@@ -960,6 +1009,13 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
   $handler->display->display_options['filters']['uuid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['filters']['uuid']['value'] = 'dbf7ebef-3b25-4f1c-a8db-5c031de33c79';
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
 
   /* Display: Titres de brèves (ER) */
   $handler = $view->new_display('entityreference', 'Titres de brèves (ER)', 'newsflash_titles');
@@ -1036,58 +1092,12 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
   $handler->display->display_options['filters']['uuid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['filters']['uuid']['value'] = 'a11bc3af-0f5a-4cdd-ad9a-7a3304eb8970';
-  $translatables['news'] = array(
-    t('Master'),
-    t('Actualités'),
-    t('plus'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Type d\'actu'),
-    t('Term ID'),
-    t('.'),
-    t(','),
-    t('Catégorie'),
-    t('Secteur'),
-    t('Public'),
-    t('Page Actualités'),
-    t('more'),
-    t('term'),
-    t('Page Brèves'),
-    t('Brèves'),
-    t('Éléments par page'),
-    t('- Tout -'),
-    t('Décalage'),
-    t('« premier'),
-    t('‹ précédent'),
-    t('suivant ›'),
-    t('dernier »'),
-    t('Page Dossiers'),
-    t('Dossiers'),
-    t('Bloc Documents utiles'),
-    t('Documents utiles'),
-    t('Tout'),
-    t('Bloc accueil actus'),
-    t('A la une'),
-    t('Lien Toutes les actualités'),
-    t('<a href="/actualites">toutes les actualités</a>'),
-    t('Bloc accueil brèves'),
-    t('Bloc accueil dossiers'),
-    t('Lien Tous les dossiers'),
-    t('<a href="/dossiers">tous les dossiers</a>'),
-    t('Bloc accueil actus 2 cols'),
-    t('Titres d\'actu (ER)'),
-    t('terme'),
-    t('Titres de brèves (ER)'),
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
   $export['news'] = $view;
 

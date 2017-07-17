@@ -183,6 +183,9 @@ projects[honeypot_entityform][version] = "1.0"
 projects[i18n][subdir] = contrib
 projects[i18n][version] = "1.13"
 
+projects[i18nviews][subdir] = contrib
+projects[i18nviews][version] = "3.0-alpha1"
+
 projects[less][subdir] = contrib
 projects[less][version] = "4.0"
 
