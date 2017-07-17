@@ -135,3 +135,10 @@ function kcore_update_7017() {
 function kcore_update_7018() {
   module_enable(array('view_unpublished'));
 }
+
+/**
+ * Activate i18n_sync module.
+ */
+function kcore_update_7019() {
+  module_enable(array('i18n_sync'));
+}
