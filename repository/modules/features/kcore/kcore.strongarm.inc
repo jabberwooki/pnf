@@ -737,7 +737,7 @@ Nous nous efforçons d\'y répondre dans les plus brefs délais.</p>
   $strongarm->value = array(
     'showall' => 0,
     'tohome' => 0,
-    'width' => '50',
+    'width' => '32',
     'display' => '2',
     'widget' => '0',
     'msdropdown' => array(

@@ -86,6 +86,7 @@ features[fe_block_settings][] = block-magnifier
 features[fe_block_settings][] = custom_search_blocks-1
 features[fe_block_settings][] = kcore-pnf_park_menu_clone
 features[fe_block_settings][] = lang_dropdown-language
+features[fe_block_settings][] = locale-language
 features[fe_block_settings][] = menu-menu-footer-menu
 features[fe_block_settings][] = menu-menu-join-national-park
 features[fe_block_settings][] = menu-menu-menu-park

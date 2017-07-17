@@ -265,8 +265,22 @@ header .name{
 	border-radius:0;
 	text-transform: uppercase;
 	height: auto;
+	float: right;
+	width: 32px;
 	display: none;
 }
+/* How to hide down arrow in select field */
+/* 1 - For Firefox and Chrome */
+#lang-dropdown-select-language {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+/* 2 - For IE10 */
+#lang-dropdown-select-language::-ms-expand {
+	display: none;
+}
+
+
 
 /*Menu select*/
 #block-menu-menu-national-parks,
