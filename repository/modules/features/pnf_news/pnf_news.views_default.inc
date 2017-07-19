@@ -144,6 +144,8 @@ function pnf_news_views_default_views() {
 
   /* Display: Page Actualités */
   $handler = $view->new_display('page_with_page_title', 'Page Actualités', 'page_news_news');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'News';
   $handler->display->display_options['defaults']['group_by'] = FALSE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'views_bootstrap_grid_plugin_style';
@@ -274,7 +276,7 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
-  $handler->display->display_options['path'] = 'actualites';
+  $handler->display->display_options['path'] = 'news';
 
   /* Display: Page Brèves */
   $handler = $view->new_display('page_with_page_title', 'Page Brèves', 'page_news_flashnews');
@@ -395,7 +397,7 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
-  $handler->display->display_options['path'] = 'breves';
+  $handler->display->display_options['path'] = 'newsflashes';
 
   /* Display: Page Dossiers */
   $handler = $view->new_display('page_with_page_title', 'Page Dossiers', 'page_news_files');
@@ -502,12 +504,12 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
-  $handler->display->display_options['path'] = 'dossiers';
+  $handler->display->display_options['path'] = 'files';
 
   /* Display: Bloc Documents utiles */
   $handler = $view->new_display('block', 'Bloc Documents utiles', 'block_news_docs');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Documents utiles';
+  $handler->display->display_options['title'] = 'Useful documents';
   $handler->display->display_options['defaults']['group_by'] = FALSE;
   $handler->display->display_options['defaults']['query'] = FALSE;
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -622,8 +624,8 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['label'] = 'Lien Toutes les actualités';
-  $handler->display->display_options['header']['area']['content'] = '<a href="/actualites">toutes les actualités</a>';
+  $handler->display->display_options['header']['area']['label'] = 'All news link';
+  $handler->display->display_options['header']['area']['content'] = '<a href="/news">all news</a>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Content: Taxonomy terms on node */
@@ -808,8 +810,8 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['label'] = 'Lien Tous les dossiers';
-  $handler->display->display_options['header']['area']['content'] = '<a href="/dossiers">tous les dossiers</a>';
+  $handler->display->display_options['header']['area']['label'] = 'All files link';
+  $handler->display->display_options['header']['area']['content'] = '<a href="/files">all files</a>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Content: Taxonomy terms on node */
@@ -891,7 +893,7 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Lien Toutes les actualités';
-  $handler->display->display_options['header']['area']['content'] = '<a href="/actualites">toutes les actualités</a>';
+  $handler->display->display_options['header']['area']['content'] = '<a href="/news">all news</a>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Content: Taxonomy terms on node */
