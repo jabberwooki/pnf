@@ -64,7 +64,7 @@ function kcore_menu_default_menu_custom() {
     'title' => 'Barre d\'outils latérale',
     'description' => '',
     'language' => 'und',
-    'i18n_mode' => 0,
+    'i18n_mode' => 5,
   );
   // Translatables
   // Included for use with string extractors like potx.

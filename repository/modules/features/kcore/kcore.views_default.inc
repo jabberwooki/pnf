@@ -92,17 +92,6 @@ function kcore_views_default_views() {
   $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
   $handler->display->display_options['filters']['uuid']['value'] = '63926957-1118-4a4e-a72a-ba949a5f9e0f';
   $handler->display->display_options['path'] = 'les-parcs-nationaux-en-france';
-  $translatables['exportables_pages'] = array(
-    t('Master'),
-    t('page-exportable'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Les parcs nationaux'),
-  );
   $export['exportables_pages'] = $view;
 
   return $export;
