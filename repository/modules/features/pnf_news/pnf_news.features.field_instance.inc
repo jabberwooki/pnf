@@ -563,7 +563,7 @@ function pnf_news_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_downloadable_docs',
-    'label' => 'Documents utiles',
+    'label' => 'Useful links',
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
@@ -596,6 +596,7 @@ function pnf_news_field_default_field_instances() {
           ),
           'source_reference' => array(
             'autocomplete' => 0,
+            'search_all_fields' => 0,
           ),
         ),
         'progress_indicator' => 'throbber',
@@ -918,7 +919,7 @@ function pnf_news_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_news_category',
-    'label' => 'Catégorie',
+    'label' => 'Category',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1154,7 +1155,7 @@ function pnf_news_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_news_tags',
-    'label' => 'Mots-clés',
+    'label' => 'Keywords',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1659,7 +1660,7 @@ function pnf_news_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_sectors',
-    'label' => 'Secteurs',
+    'label' => 'Sectors',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1675,19 +1676,19 @@ function pnf_news_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Catégorie');
+  t('Category');
   t('Contenu');
   t('Date de publication affichée');
   t('Dates début/fin publication');
   t('Descriptif');
-  t('Documents utiles');
   t('Galerie photo');
   t('Image phare');
+  t('Keywords');
   t('La date qui sera affichée sur le site.');
-  t('Mots-clés');
   t('Public');
-  t('Secteurs');
+  t('Sectors');
   t('Type');
+  t('Useful links');
 
   return $field_instances;
 }
