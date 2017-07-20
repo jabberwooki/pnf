@@ -1333,15 +1333,5 @@ Nous nous efforçons d\'y répondre dans les plus brefs délais.</p>
   );
   $export['uuid_features_entity_taxonomy_term'] = $strongarm;
 
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'variable_realm_list_language';
-  $strongarm->value = array(
-    0 => 'site_name',
-    1 => 'site_slogan',
-  );
-  $export['variable_realm_list_language'] = $strongarm;
-
   return $export;
 }
