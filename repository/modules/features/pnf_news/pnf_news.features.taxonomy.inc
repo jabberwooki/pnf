@@ -10,7 +10,7 @@
 function pnf_news_taxonomy_default_vocabularies() {
   return array(
     'news_categories' => array(
-      'name' => 'Catégories d\'actualité',
+      'name' => 'News categories',
       'machine_name' => 'news_categories',
       'description' => '',
       'hierarchy' => 0,
