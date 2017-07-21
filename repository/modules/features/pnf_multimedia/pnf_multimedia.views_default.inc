@@ -573,64 +573,6 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['filters']['uuid']['value'] = '5ed1938d-1c9d-4dff-b885-ea096e718753';
   $handler->display->display_options['filters']['uuid']['group'] = 1;
   $handler->display->display_options['path'] = 'cartotheque';
-  $translatables['multimedia'] = array(
-    t('Master'),
-    t('Vidéos'),
-    t('more'),
-    t('Appliquer'),
-    t('Réinitialiser'),
-    t('Trier par'),
-    t('Asc'),
-    t('Desc'),
-    t('Options avancées'),
-    t('Sélectionnez n\'importe quel filtre et cliquez sur Appliquer pour voir les résultats'),
-    t('Éléments par page'),
-    t('- Tout -'),
-    t('Décalage'),
-    t('« premier'),
-    t('‹ précédent'),
-    t('suivant ›'),
-    t('dernier »'),
-    t('Catégorie'),
-    t('Galeries'),
-    t('Galeries d\'images'),
-    t('Catégorie de media'),
-    t('<div class="multimedia-teaser">
-<div class="group-resume">
-[scald_thumbnail]
-<p>
-[field_atom_description]
-</br>
-<i class="fa fa-plus-circle"></i>
-</p>
-</div>
-<h3>[title]</h3>
-</div>'),
-    t('<div class="multimedia-teaser">
-<div class="group-resume">
-[scald_thumbnail]
-<p>
-[field_atom_description]
-</br>
-<i class="fa fa-play-circle"></i>
-</p>
-</div>
-<h3>[title]</h3>
-</div>'),
-    t('Sons'),
-    t('<div class="multimedia-teaser">
-<div class="group-resume">
-[scald_thumbnail]
-<p>
-[field_atom_description]
-</br>
-<i class="fa fa-headphones"></i>
-</p>
-</div>
-<h3>[title]</h3>
-</div>'),
-    t('Cartothèque'),
-  );
   $export['multimedia'] = $view;
 
   return $export;

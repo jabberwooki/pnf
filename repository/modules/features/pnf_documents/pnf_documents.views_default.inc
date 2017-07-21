@@ -269,32 +269,6 @@ function pnf_documents_views_default_views() {
   $handler->display->display_options['filters']['uuid']['value'] = '8375bea1-2b5c-411d-9179-1242c90a16aa';
   $handler->display->display_options['filters']['uuid']['group'] = 1;
   $handler->display->display_options['path'] = 'journal-du-parc';
-  $translatables['documents'] = array(
-    t('Master'),
-    t('Documents'),
-    t('more'),
-    t('Appliquer'),
-    t('Réinitialiser'),
-    t('Trier par'),
-    t('Asc'),
-    t('Desc'),
-    t('Options avancées'),
-    t('Sélectionnez n\'importe quel filtre et cliquez sur Appliquer pour voir les résultats'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('terme à partir de field_document_category'),
-    t('Catégories'),
-    t('Page Documents'),
-    t('Publications et documents'),
-    t('Espace Presse'),
-    t('Journal du parc'),
-    t('Journal du Parc'),
-  );
   $export['documents'] = $view;
 
   return $export;

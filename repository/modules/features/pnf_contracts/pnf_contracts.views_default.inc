@@ -386,29 +386,6 @@ function pnf_contracts_views_default_views() {
   );
   $handler->display->display_options['filters']['field_contract_status_value_1']['group'] = 1;
   $handler->display->display_options['path'] = 'marches-publics-attribues';
-  $translatables['contracts'] = array(
-    t('Master'),
-    t('Marchés publics'),
-    t('more'),
-    t('Appliquer'),
-    t('Réinitialiser'),
-    t('Trier par'),
-    t('Asc'),
-    t('Desc'),
-    t('Advanced options'),
-    t('Sélectionnez n\'importe quel filtre et cliquez sur Appliquer pour voir les résultats'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Catégories'),
-    t('Types'),
-    t('Marchés en cours'),
-    t('Marchés attribués'),
-  );
   $export['contracts'] = $view;
 
   return $export;

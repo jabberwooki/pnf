@@ -86,7 +86,7 @@ function pnf_raa_views_default_views() {
     'show_remaining_days' => 0,
     'field_formatter_class' => '',
   );
-  /* Field: Content: Documents utiles */
+  /* Field: Content: Documents téléchargeables */
   $handler->display->display_options['fields']['field_downloadable_docs']['id'] = 'field_downloadable_docs';
   $handler->display->display_options['fields']['field_downloadable_docs']['table'] = 'field_data_field_downloadable_docs';
   $handler->display->display_options['fields']['field_downloadable_docs']['field'] = 'field_downloadable_docs';
@@ -152,20 +152,6 @@ function pnf_raa_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['path'] = 'raa';
-  $translatables['raa'] = array(
-    t('Master'),
-    t('Recueil des actes administratifs'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('terme'),
-    t('Publié le'),
-    t('Tout'),
-    t('Page'),
-  );
   $export['raa'] = $view;
 
   return $export;

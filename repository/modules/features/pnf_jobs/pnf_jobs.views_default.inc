@@ -229,30 +229,6 @@ function pnf_jobs_views_default_views() {
   $handler->display->display_options['filters']['uuid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['filters']['uuid']['value'] = '6e6ec346-0414-4f86-868c-f8151f3644c3';
   $handler->display->display_options['path'] = 'services-civiques';
-  $translatables['jobs'] = array(
-    t('Master'),
-    t('Offres d\'emplois'),
-    t('more'),
-    t('Appliquer'),
-    t('Réinitialiser'),
-    t('Trier par'),
-    t('Asc'),
-    t('Desc'),
-    t('Options avancées'),
-    t('Sélectionnez n\'importe quel filtre et cliquez sur Appliquer pour voir les résultats'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('terme'),
-    t('Offres d\'emploi'),
-    t('Stages'),
-    t('Services Civiques'),
-    t('Services civiques'),
-  );
   $export['jobs'] = $view;
 
   return $export;
