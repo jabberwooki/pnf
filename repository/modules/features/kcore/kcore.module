@@ -300,13 +300,13 @@ function pnx_url_aliases_add() {
 
   foreach ($url_aliases as $source=>$aliases) {
     foreach ($aliases as $lang=>$alias) {
-//      dpm($source . ' : ' . $lang . ' : ' . $alias);
       $handled_aliases++;
       if (pnx_url_alias_exists($alias)) {
         continue;
       }
       else {
-        pnx_url_alias_add($source, $alias, $lang);
+        $path = array('source' => $source, 'alias' => $alias, 'language' => $lang);
+        path_save($path);
         $added_aliases++;
       }
     }
@@ -331,26 +331,4 @@ function pnx_url_alias_exists($alias) {
   $result = $query->execute()->fetchAll();
   if (!empty($result)) return true;
   return false;
-}
-
-/*
- * Adds a custom alias to the url_alias db table.
- *
- * @param $source
- *  A string representing the source url.
- *
- * @param $alias
- *  A string representing the alias to be created.
- *
- * @param $lang
- *  The language code the alias is being created for.
- */
-function pnx_url_alias_add($source, $alias, $lang) {
-  db_insert('url_alias')
-    ->fields(array(
-      'source' => $source,
-      'alias' => $alias,
-      'language' => $lang
-    ))
-    ->execute();
 }
