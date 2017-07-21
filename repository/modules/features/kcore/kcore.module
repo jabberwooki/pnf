@@ -257,3 +257,100 @@ function kcore_css_alter(&$css) {
 	$path = drupal_get_path('module', 'text_resize');
 	unset($css[$path . '/text_resize.css']);
 }
+
+
+/*
+ * FUNCTIONS HANDLING MANUAL IMPORT OF CUSTOM URL ALIASES
+ *
+ * pnx_url_aliases_add()
+ * pnx_url_alias_exists()
+ * pnx_url_alias_add()
+ */
+
+/*
+ * Main function handling custom aliases creation.
+ * Tests if alias already exists in url_alias table.
+ * If not, the alias is added.
+ */
+function pnx_url_aliases_add() {
+  // Array of custom aliases, grouped by PNF feature.
+  $url_aliases = array(
+    // Agenda
+    'agenda' => array('fr' => 'agenda'),
+
+    // Contracts
+
+    // Documents
+
+    // Jobs
+
+    // Multimedia
+
+    // News
+    'news' => array('fr' => 'actualites'),
+    'newsflashes' => array('fr' => 'breves'),
+    'files' => array('fr' => 'dossiers'),
+
+    // Raa
+
+  );
+
+  $handled_aliases = 0;
+  $added_aliases = 0;
+
+  foreach ($url_aliases as $source=>$aliases) {
+    foreach ($aliases as $lang=>$alias) {
+//      dpm($source . ' : ' . $lang . ' : ' . $alias);
+      $handled_aliases++;
+      if (pnx_url_alias_exists($alias)) {
+        continue;
+      }
+      else {
+        pnx_url_alias_add($source, $alias, $lang);
+        $added_aliases++;
+      }
+    }
+  }
+  dpm('nombre d\alias traités = ' . $handled_aliases);
+  dpm ('nombre d\alias créés = ' . $added_aliases);
+}
+
+/*
+ * Checks if a given alias exists un url_alias db table.
+ *
+ * @param $alias
+ *  A string representing the alias to be checked.
+ *
+ * @return
+ *  True if alias exists, otherwise false.
+ */
+function pnx_url_alias_exists($alias) {
+  $query = db_select('url_alias', 'ua');
+  $query->addField('ua', 'source');
+  $query->condition('ua.alias', $alias);
+  $result = $query->execute()->fetchAll();
+  if (!empty($result)) return true;
+  return false;
+}
+
+/*
+ * Adds a custom alias to the url_alias db table.
+ *
+ * @param $source
+ *  A string representing the source url.
+ *
+ * @param $alias
+ *  A string representing the alias to be created.
+ *
+ * @param $lang
+ *  The language code the alias is being created for.
+ */
+function pnx_url_alias_add($source, $alias, $lang) {
+  db_insert('url_alias')
+    ->fields(array(
+      'source' => $source,
+      'alias' => $alias,
+      'language' => $lang
+    ))
+    ->execute();
+}
