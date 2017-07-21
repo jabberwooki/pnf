@@ -336,7 +336,7 @@ function pnf_agenda_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_downloadable_docs',
-    'label' => 'Documents utiles',
+    'label' => 'Useful documents',
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
@@ -369,6 +369,7 @@ function pnf_agenda_field_default_field_instances() {
           ),
           'source_reference' => array(
             'autocomplete' => 0,
+            'search_all_fields' => 0,
           ),
         ),
         'progress_indicator' => 'throbber',
@@ -508,7 +509,7 @@ function pnf_agenda_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_event_categorie',
-    'label' => 'Catégorie',
+    'label' => 'Category',
     'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -824,13 +825,14 @@ function pnf_agenda_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_event_location',
-    'label' => 'Lieu',
+    'label' => 'Location',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
+          'mailchimp_campaign' => 0,
           'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 0,
@@ -843,13 +845,17 @@ function pnf_agenda_field_default_field_instances() {
             'full_html' => array(
               'weight' => -10,
             ),
+            'mailchimp_campaign' => array(
+              'weight' => 0,
+            ),
             'plain_text' => array(
               'weight' => 10,
             ),
           ),
         ),
       ),
-      'context' => '',
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
       'linkit' => array(
         'button_text' => 'Rechercher',
@@ -1435,17 +1441,17 @@ function pnf_agenda_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Catégorie');
+  t('Category');
   t('Coordonnées GPS');
   t('Dates');
   t('Dates début/fin publication');
   t('Descriptif');
-  t('Documents utiles');
   t('Galerie photo');
   t('Image phare');
-  t('Lieu');
+  t('Location');
   t('Public');
   t('Secteurs');
+  t('Useful documents');
 
   return $field_instances;
 }
