@@ -43,14 +43,14 @@ function pnf_news_menu_default_menu_links() {
     'router_path' => 'newsflashes',
     'link_title' => 'Brèves',
     'options' => array(
+      'alter' => TRUE,
+      'identifier' => 'menu-news_brves:newsflashes',
       'attributes' => array(),
       'item_attributes' => array(
         'id' => '',
         'class' => '',
         'style' => '',
       ),
-      'alter' => TRUE,
-      'identifier' => 'menu-news_brves:newsflashes',
     ),
     'module' => 'menu',
     'hidden' => 0,
