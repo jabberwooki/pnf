@@ -114,6 +114,7 @@ function pnf_contracts_field_default_field_instances() {
       'context' => '',
       'display_summary' => 0,
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -200,6 +201,7 @@ function pnf_contracts_field_default_field_instances() {
     'label' => 'Catégorie du marché',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -331,6 +333,7 @@ function pnf_contracts_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -415,6 +418,7 @@ function pnf_contracts_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -490,6 +494,7 @@ function pnf_contracts_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'contracts',
       'file_extensions' => 'pdf',
       'max_filesize' => '',
@@ -645,6 +650,7 @@ function pnf_contracts_field_default_field_instances() {
       ),
       'context' => '',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -785,6 +791,7 @@ function pnf_contracts_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -924,6 +931,7 @@ function pnf_contracts_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1026,6 +1034,7 @@ function pnf_contracts_field_default_field_instances() {
     'label' => 'Statut de la consultation',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1130,6 +1139,7 @@ function pnf_contracts_field_default_field_instances() {
     'label' => 'Type de procédure',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1201,6 +1211,7 @@ function pnf_contracts_field_default_field_instances() {
       'default_value2' => 'strtotime',
       'default_value_code' => '',
       'default_value_code2' => '+ 10 years',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(

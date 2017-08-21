@@ -36,7 +36,7 @@ function pnf_contact_default_entityform_type() {
   $items = array();
   $items['contact'] = entity_import('entityform_type', '{
     "type" : "contact",
-    "label" : "Contactez-nous",
+    "label" : "Contact us",
     "data" : {
       "draftable" : 0,
       "draft_redirect_path" : "",
@@ -58,19 +58,25 @@ function pnf_contact_default_entityform_type() {
       "submissions_view" : "default",
       "user_submissions_view" : "default",
       "form_status" : "ENTITYFORM_OPEN",
-      "roles" : { "1" : "1", "2" : "2", "4" : 0, "5" : 0, "3" : 0 },
+      "roles" : {
+        "1" : "1",
+        "2" : "2",
+        "217795369" : 0,
+        "231346920" : 0,
+        "193262079" : 0
+      },
       "resubmit_action" : "new",
       "redirect_path" : "",
       "instruction_pre" : {
-        "value" : "\\u003Cp\\u003ECe formulaire vous permet de contacter le service d\\u0027accueil du Parc national qui, en fonction du sujet, transmettra votre message aux personnes concern\\u00e9es.\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003EVous pouvez \\u00e9galement contacter l\\u0027\\u00e9quipe d\\u0027animation du site internet du Parc national pour r\\u00e9agir \\u00e0 un article, apporter des informations compl\\u00e9ementaires ou encore signaler des difficult\\u00e9es techniques ou de navigation.\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003ELes offres d\\u0027emploi et de stages ouvertes par le Par national sont consultables dans la rubrique \\u003Ca href=\\u0022offres-demploi\\u0022\\u003EOffres d\\u0027emploi\\u003C\\/a\\u003E.\\u003Cbr \\/\\u003E\\r\\n\\u0026nbsp;\\u003C\\/p\\u003E\\r\\n",
-        "format" : "full_html"
+        "value" : "This form allows you to get in touch with the visitors service of the National Park which will forward your request, based on the selected subject.\\r\\nYou can also contact the facilitation team of the Park\\u0027s website to comment an article, provide additional information as well as mention technical or navigational troubles.\\r\\n",
+        "format" : "plain_text"
       }
     },
     "weight" : "0",
     "paths" : { "submit" : {
         "source" : "eform\\/submit\\/contact",
         "alias" : "formulaire-contact",
-        "language" : "und"
+        "language" : "fr"
       }
     }
   }');

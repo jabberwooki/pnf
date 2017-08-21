@@ -144,10 +144,13 @@ projects[email][version] = "1.3"
 ;projects[email_registration][version] = ""
 
 projects[entityform][subdir] = contrib
-projects[entityform][version] = "2.0-rc1"
+projects[entityform][version] = "2.0-rc4"
 
 projects[entityreference][subdir] = contrib
 projects[entityreference][version] = "1.1"
+
+projects[entity_translation][subdir] = contrib
+projects[entity_translation][version] = "1.0-beta6"
 
 projects[field_collection][subdir] = contrib
 projects[field_collection][version] = "1.0-beta11"

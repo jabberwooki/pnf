@@ -42,6 +42,7 @@ function pnf_contact_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -123,6 +124,7 @@ function pnf_contact_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'image_field_caption' => 0,
@@ -243,6 +245,7 @@ function pnf_contact_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -344,6 +347,7 @@ function pnf_contact_field_default_field_instances() {
       'context' => 'debug',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -446,6 +450,7 @@ function pnf_contact_field_default_field_instances() {
       'context' => 'debug',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -524,6 +529,7 @@ function pnf_contact_field_default_field_instances() {
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -606,6 +612,7 @@ function pnf_contact_field_default_field_instances() {
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -684,6 +691,7 @@ function pnf_contact_field_default_field_instances() {
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -754,9 +762,10 @@ function pnf_contact_field_default_field_instances() {
     ),
     'entity_type' => 'entityform',
     'field_name' => 'field_email',
-    'label' => 'Email',
+    'label' => 'E-mail',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -820,13 +829,14 @@ function pnf_contact_field_default_field_instances() {
     ),
     'entity_type' => 'entityform',
     'field_name' => 'field_firstname',
-    'label' => 'Prénom',
+    'label' => 'Firstname',
     'required' => 1,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
+          'mailchimp_campaign' => 0,
           'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 0,
@@ -839,15 +849,19 @@ function pnf_contact_field_default_field_instances() {
             'full_html' => array(
               'weight' => -10,
             ),
+            'mailchimp_campaign' => array(
+              'weight' => 0,
+            ),
             'plain_text' => array(
               'weight' => 10,
             ),
           ),
         ),
       ),
-      'context' => 'debug',
+      'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -918,13 +932,14 @@ function pnf_contact_field_default_field_instances() {
     ),
     'entity_type' => 'entityform',
     'field_name' => 'field_lastname',
-    'label' => 'Nom',
+    'label' => 'Lastname',
     'required' => 1,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
+          'mailchimp_campaign' => 0,
           'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 0,
@@ -937,15 +952,19 @@ function pnf_contact_field_default_field_instances() {
             'full_html' => array(
               'weight' => -10,
             ),
+            'mailchimp_campaign' => array(
+              'weight' => 0,
+            ),
             'plain_text' => array(
               'weight' => 10,
             ),
           ),
         ),
       ),
-      'context' => 'debug',
+      'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -1044,6 +1063,7 @@ function pnf_contact_field_default_field_instances() {
       'context' => 'debug',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -1114,9 +1134,10 @@ function pnf_contact_field_default_field_instances() {
     ),
     'entity_type' => 'entityform',
     'field_name' => 'field_subject',
-    'label' => 'Objet de la demande',
+    'label' => 'Subject of your request',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1131,16 +1152,16 @@ function pnf_contact_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Carte');
-  t('Email');
+  t('E-mail');
+  t('Firstname');
   t('Image');
   t('Intitulé du texte');
+  t('Lastname');
   t('Lien page contact');
   t('Lien vers carte du territoire');
   t('Message');
-  t('Nom');
   t('Nom du Parc');
-  t('Objet de la demande');
-  t('Prénom');
+  t('Subject of your request');
   t('Texte');
 
   return $field_instances;
