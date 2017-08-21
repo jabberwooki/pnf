@@ -40,7 +40,7 @@ function kcore_menu_default_menu_custom() {
     'title' => 'Menu du parc',
     'description' => 'Le menu du parc national.',
     'language' => 'und',
-    'i18n_mode' => 0,
+    'i18n_mode' => 5,
   );
   // Exported menu: menu-menu-themes.
   $menus['menu-menu-themes'] = array(
