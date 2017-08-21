@@ -110,17 +110,6 @@ function pnf_promotions_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $translatables['promotions'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Bloc 3 promos'),
-    t('Bloc 4 promos'),
-  );
   $export['promotions'] = $view;
 
   return $export;

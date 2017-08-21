@@ -64,6 +64,7 @@ function pnf_documents_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'documents/downloads',
       'file_extensions' => 'pdf',
       'max_filesize' => '',
@@ -169,6 +170,7 @@ function pnf_documents_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -286,6 +288,7 @@ function pnf_documents_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -378,6 +381,7 @@ function pnf_documents_field_default_field_instances() {
     'label' => 'Catégorie',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -469,6 +473,7 @@ function pnf_documents_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'documents/covers',
       'file_extensions' => 'png gif jpg jpeg',
       'image_field_caption' => 0,
@@ -606,6 +611,7 @@ function pnf_documents_field_default_field_instances() {
     'label' => 'Documents',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -718,6 +724,7 @@ function pnf_documents_field_default_field_instances() {
       ),
       'context' => '',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -792,6 +799,7 @@ function pnf_documents_field_default_field_instances() {
       'default_value2' => 'strtotime',
       'default_value_code' => '',
       'default_value_code2' => '+ 10 years',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -909,6 +917,7 @@ function pnf_documents_field_default_field_instances() {
       'context' => 'debug',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,

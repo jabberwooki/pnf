@@ -16,9 +16,9 @@ function pnf_contracts_strongarm() {
   $strongarm->name = 'entity_translation_entity_types';
   $strongarm->value = array(
     'bean' => 'bean',
+    'entityform' => 'entityform',
     'node' => 'node',
     'scald_atom' => 0,
-    'entityform' => 0,
     'taxonomy_term' => 0,
     'user' => 0,
   );

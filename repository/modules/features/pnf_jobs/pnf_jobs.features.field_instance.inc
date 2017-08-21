@@ -115,6 +115,7 @@ function pnf_jobs_field_default_field_instances() {
       'context_default' => 'sdl_editor_representation',
       'display_summary' => 0,
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -256,6 +257,7 @@ function pnf_jobs_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -393,6 +395,7 @@ function pnf_jobs_field_default_field_instances() {
       'context' => 'debug',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -450,6 +453,7 @@ function pnf_jobs_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'jobs',
       'file_extensions' => 'pdf',
       'max_filesize' => '',
@@ -608,6 +612,7 @@ function pnf_jobs_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -747,6 +752,7 @@ function pnf_jobs_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -856,6 +862,7 @@ function pnf_jobs_field_default_field_instances() {
       'context' => 'debug',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -931,6 +938,7 @@ function pnf_jobs_field_default_field_instances() {
     'label' => 'Type',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
