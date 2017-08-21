@@ -229,6 +229,12 @@ function pnf_front_blocks_context_default_contexts() {
           'region' => 'pre_content_left',
           'weight' => '1',
         ),
+        'views-events-block_events_home' => array(
+          'module' => 'views',
+          'delta' => 'events-block_events_home',
+          'region' => 'pre_content_right',
+          'weight' => '-10',
+        ),
         'boxes-button_festival_nature' => array(
           'module' => 'boxes',
           'delta' => 'button_festival_nature',
