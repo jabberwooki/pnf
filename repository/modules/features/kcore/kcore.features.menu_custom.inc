@@ -29,10 +29,10 @@ function kcore_menu_default_menu_custom() {
   // Exported menu: menu-join-national-park.
   $menus['menu-join-national-park'] = array(
     'menu_name' => 'menu-join-national-park',
-    'title' => 'Venir dans le Parc national',
+    'title' => 'Visit the National Park',
     'description' => '',
     'language' => 'und',
-    'i18n_mode' => 0,
+    'i18n_mode' => 5,
   );
   // Exported menu: menu-menu-park.
   $menus['menu-menu-park'] = array(
@@ -76,7 +76,7 @@ function kcore_menu_default_menu_custom() {
   t('Menu du parc');
   t('Menu thématique');
   t('The <em>Main</em> menu is used on many sites to show the major sections of the site, often in a top navigation bar.');
-  t('Venir dans le Parc national');
+  t('Visit the National Park');
 
   return $menus;
 }
