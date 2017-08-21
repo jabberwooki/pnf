@@ -366,7 +366,7 @@ function kcore_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 0,
     'i18n_block_language' => array(),
-    'i18n_mode' => 0,
+    'i18n_mode' => 1,
     'module' => 'on_the_web',
     'node_types' => array(),
     'pages' => '',
@@ -385,7 +385,7 @@ function kcore_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Suivez-nous',
+    'title' => 'Follow us',
     'visibility' => 0,
   );
 
