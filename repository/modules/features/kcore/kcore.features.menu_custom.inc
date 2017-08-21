@@ -24,7 +24,7 @@ function kcore_menu_default_menu_custom() {
     'title' => 'Footer menu',
     'description' => '',
     'language' => 'und',
-    'i18n_mode' => 0,
+    'i18n_mode' => 5,
   );
   // Exported menu: menu-join-national-park.
   $menus['menu-join-national-park'] = array(
