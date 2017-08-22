@@ -107,6 +107,7 @@ function kpages_field_default_field_instances() {
       'context' => '',
       'display_summary' => TRUE,
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'mee_enabled' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
