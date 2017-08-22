@@ -98,6 +98,7 @@ features[fe_block_settings][] = menu-menu-tools
 features[fe_block_settings][] = on_the_web-0
 features[fe_block_settings][] = print_ui-print-links
 features[fe_block_settings][] = tb_megamenu-menu-menu-themes
+features[fe_block_settings][] = tb_megamenu-menu-menu-themes-en
 features[fe_block_settings][] = text_resize-0
 features[fe_date_custom_date_formats][] = D d F Y
 features[fe_date_custom_date_formats][] = D d F Y - H\hi
