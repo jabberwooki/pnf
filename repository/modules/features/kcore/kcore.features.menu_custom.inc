@@ -45,10 +45,18 @@ function kcore_menu_default_menu_custom() {
   // Exported menu: menu-menu-themes.
   $menus['menu-menu-themes'] = array(
     'menu_name' => 'menu-menu-themes',
-    'title' => 'Menu thématique',
+    'title' => 'Menu thématique FR',
     'description' => '',
-    'language' => 'und',
-    'i18n_mode' => 0,
+    'language' => 'fr',
+    'i18n_mode' => 2,
+  );
+  // Exported menu: menu-menu-themes-en.
+  $menus['menu-menu-themes-en'] = array(
+    'menu_name' => 'menu-menu-themes-en',
+    'title' => 'Menu thématique EN',
+    'description' => '',
+    'language' => 'en',
+    'i18n_mode' => 2,
   );
   // Exported menu: menu-national-parks.
   $menus['menu-national-parks'] = array(
@@ -74,7 +82,8 @@ function kcore_menu_default_menu_custom() {
   t('Les parcs nationaux de France');
   t('Main menu');
   t('Menu du parc');
-  t('Menu thématique');
+  t('Menu thématique EN');
+  t('Menu thématique FR');
   t('The <em>Main</em> menu is used on many sites to show the major sections of the site, often in a top navigation bar.');
   t('Visit the National Park');
 

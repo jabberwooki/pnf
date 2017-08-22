@@ -147,6 +147,7 @@ features[menu_custom][] = menu-footer-menu
 features[menu_custom][] = menu-join-national-park
 features[menu_custom][] = menu-menu-park
 features[menu_custom][] = menu-menu-themes
+features[menu_custom][] = menu-menu-themes-en
 features[menu_custom][] = menu-national-parks
 features[menu_custom][] = menu-tools
 features[menu_links][] = menu-national-parks_agence-franaise-pour-la-biodiversit:http://www.agence-francaise-biodiversite.fr/
