@@ -24,6 +24,7 @@ function pnf_multimedia_menu_default_menu_links() {
         'class' => '',
         'style' => '',
       ),
+      'alter' => TRUE,
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -35,15 +36,21 @@ function pnf_multimedia_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-multimedia_publications-et-documents:documents.
-  $menu_links['menu-multimedia_publications-et-documents:documents'] = array(
+  // Exported menu link: menu-multimedia_publications-and-documents:publications-and-documents.
+  $menu_links['menu-multimedia_publications-and-documents:publications-and-documents'] = array(
     'menu_name' => 'menu-multimedia',
-    'link_path' => 'documents',
-    'router_path' => 'documents',
-    'link_title' => 'Publications et documents',
+    'link_path' => 'publications-and-documents',
+    'router_path' => 'publications-and-documents',
+    'link_title' => 'Publications and documents',
     'options' => array(
       'attributes' => array(),
-      'identifier' => 'menu-multimedia_publications-et-documents:documents',
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-multimedia_publications-and-documents:publications-and-documents',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -64,6 +71,7 @@ function pnf_multimedia_menu_default_menu_links() {
     'options' => array(
       'attributes' => array(),
       'identifier' => 'menu-multimedia_sons:sons',
+      'alter' => TRUE,
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -84,6 +92,7 @@ function pnf_multimedia_menu_default_menu_links() {
     'options' => array(
       'attributes' => array(),
       'identifier' => 'menu-multimedia_vidos:videos',
+      'alter' => TRUE,
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -95,43 +104,11 @@ function pnf_multimedia_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-tools_mdiathque:documents.
-  $menu_links['menu-tools_mdiathque:documents'] = array(
-    'menu_name' => 'menu-tools',
-    'link_path' => 'documents',
-    'router_path' => 'documents',
-    'link_title' => 'Médiathèque',
-    'options' => array(
-      'identifier' => 'menu-tools_mdiathque:documents',
-      'attributes' => array(
-        'class' => array(
-          0 => 'tool',
-          1 => 'tool-multimedia',
-        ),
-      ),
-      'item_attributes' => array(
-        'id' => '',
-        'class' => '',
-        'style' => '',
-      ),
-      'alter' => TRUE,
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -46,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
-  );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Galeries d\'images');
-  t('Médiathèque');
-  t('Publications et documents');
+  t('Publications and documents');
   t('Sons');
   t('Vidéos');
 

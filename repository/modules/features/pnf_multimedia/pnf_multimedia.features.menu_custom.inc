@@ -16,7 +16,7 @@ function pnf_multimedia_menu_default_menu_custom() {
     'title' => 'Médiathèque',
     'description' => '',
     'language' => 'und',
-    'i18n_mode' => 0,
+    'i18n_mode' => 5,
   );
   // Exported menu: menu-multimedia-footer.
   $menus['menu-multimedia-footer'] = array(
@@ -24,7 +24,7 @@ function pnf_multimedia_menu_default_menu_custom() {
     'title' => 'Médiathèque Footer',
     'description' => '',
     'language' => 'und',
-    'i18n_mode' => 0,
+    'i18n_mode' => 5,
   );
   // Translatables
   // Included for use with string extractors like potx.
