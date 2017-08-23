@@ -19,11 +19,22 @@ function pnf_documents_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'documents' => 'documents',
+        'publications-and-documents' => 'publications-and-documents',
       ),
     ),
   );
-  $context->reactions = array();
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'menu-menu-multimedia' => array(
+          'module' => 'menu',
+          'delta' => 'menu-multimedia',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
   $context->condition_mode = 0;
 
   // Translatables

@@ -357,7 +357,7 @@ function pnf_documents_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'taxonomy',
+        'module' => 'i18n_taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
           'linked_field' => array(
@@ -372,7 +372,7 @@ function pnf_documents_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'taxonomy_term_reference_plain',
+        'type' => 'i18n_taxonomy_term_reference_plain',
         'weight' => 1,
       ),
     ),
