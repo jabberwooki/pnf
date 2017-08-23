@@ -11,7 +11,7 @@ function pnf_contracts_uuid_features_default_terms() {
   $terms = array();
 
   $terms[] = array(
-    'name' => 'AOO – Appel d\'offres ouvert',
+    'name' => 'Formal bidding procurement',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
@@ -19,9 +19,12 @@ function pnf_contracts_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'procurement_types',
+    'path' => array(
+      'pathauto' => 0,
+    ),
   );
   $terms[] = array(
-    'name' => 'MAPA – Procédure adaptée',
+    'name' => 'Adapted procedure',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
@@ -29,9 +32,12 @@ function pnf_contracts_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'procurement_types',
+    'path' => array(
+      'pathauto' => 0,
+    ),
   );
   $terms[] = array(
-    'name' => 'Fournitures',
+    'name' => 'Supplies',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
@@ -39,9 +45,12 @@ function pnf_contracts_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'contract_categories',
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
-    'name' => 'Marché à bon de commande',
+    'name' => 'Open end contract',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
@@ -49,9 +58,12 @@ function pnf_contracts_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'procurement_types',
+    'path' => array(
+      'pathauto' => 0,
+    ),
   );
   $terms[] = array(
-    'name' => 'Prestations intellectuelles',
+    'name' => 'Intellectual services',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
@@ -59,6 +71,9 @@ function pnf_contracts_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'contract_categories',
+    'path' => array(
+      'pathauto' => 0,
+    ),
   );
   $terms[] = array(
     'name' => 'Services',
@@ -71,7 +86,7 @@ function pnf_contracts_uuid_features_default_terms() {
     'vocabulary_machine_name' => 'contract_categories',
   );
   $terms[] = array(
-    'name' => 'Informatique',
+    'name' => 'Computing',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
@@ -79,9 +94,12 @@ function pnf_contracts_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'contract_categories',
+    'path' => array(
+      'pathauto' => 0,
+    ),
   );
   $terms[] = array(
-    'name' => 'Travaux',
+    'name' => 'Works',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
@@ -89,6 +107,9 @@ function pnf_contracts_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'contract_categories',
+    'path' => array(
+      'pathauto' => 0,
+    ),
   );
   return $terms;
 }

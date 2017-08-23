@@ -174,7 +174,7 @@ function pnf_contracts_views_default_views() {
   $handler->display->display_options['sorts']['sticky']['table'] = 'node';
   $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
   $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
-  /* Sort criterion: Content: Date de publication du marché (field_contract_pub_date) */
+  /* Sort criterion: Content: Contract publication date (field_contract_pub_date) */
   $handler->display->display_options['sorts']['field_contract_pub_date_value']['id'] = 'field_contract_pub_date_value';
   $handler->display->display_options['sorts']['field_contract_pub_date_value']['table'] = 'field_data_field_contract_pub_date';
   $handler->display->display_options['sorts']['field_contract_pub_date_value']['field'] = 'field_contract_pub_date_value';
@@ -194,7 +194,7 @@ function pnf_contracts_views_default_views() {
     'contract' => 'contract',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Catégorie du marché (field_contract_category) */
+  /* Filter criterion: Content: Contract category (field_contract_category) */
   $handler->display->display_options['filters']['field_contract_category_tid']['id'] = 'field_contract_category_tid';
   $handler->display->display_options['filters']['field_contract_category_tid']['table'] = 'field_data_field_contract_category';
   $handler->display->display_options['filters']['field_contract_category_tid']['field'] = 'field_contract_category_tid';
@@ -213,7 +213,7 @@ function pnf_contracts_views_default_views() {
   );
   $handler->display->display_options['filters']['field_contract_category_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_contract_category_tid']['vocabulary'] = 'contract_categories';
-  /* Filter criterion: Content: Type de procédure (field_procurement_type) */
+  /* Filter criterion: Content: Procedure type (field_procurement_type) */
   $handler->display->display_options['filters']['field_procurement_type_tid']['id'] = 'field_procurement_type_tid';
   $handler->display->display_options['filters']['field_procurement_type_tid']['table'] = 'field_data_field_procurement_type';
   $handler->display->display_options['filters']['field_procurement_type_tid']['field'] = 'field_procurement_type_tid';
@@ -232,7 +232,7 @@ function pnf_contracts_views_default_views() {
   );
   $handler->display->display_options['filters']['field_procurement_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_procurement_type_tid']['vocabulary'] = 'procurement_types';
-  /* Filter criterion: Content: Statut de la consultation (field_contract_status) */
+  /* Filter criterion: Content: Consultation status (field_contract_status) */
   $handler->display->display_options['filters']['field_contract_status_value_1']['id'] = 'field_contract_status_value_1';
   $handler->display->display_options['filters']['field_contract_status_value_1']['table'] = 'field_data_field_contract_status';
   $handler->display->display_options['filters']['field_contract_status_value_1']['field'] = 'field_contract_status_value';
@@ -240,88 +240,24 @@ function pnf_contracts_views_default_views() {
     1 => '1',
   );
   $handler->display->display_options['filters']['field_contract_status_value_1']['group'] = 1;
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
 
   /* Display: Marchés en cours */
   $handler = $view->new_display('page', 'Marchés en cours', 'current_contracts');
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'contract' => 'contract',
-  );
-  $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Catégorie du marché (field_contract_category) */
-  $handler->display->display_options['filters']['field_contract_category_tid']['id'] = 'field_contract_category_tid';
-  $handler->display->display_options['filters']['field_contract_category_tid']['table'] = 'field_data_field_contract_category';
-  $handler->display->display_options['filters']['field_contract_category_tid']['field'] = 'field_contract_category_tid';
-  $handler->display->display_options['filters']['field_contract_category_tid']['group'] = 1;
-  $handler->display->display_options['filters']['field_contract_category_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_contract_category_tid']['expose']['operator_id'] = 'field_contract_category_tid_op';
-  $handler->display->display_options['filters']['field_contract_category_tid']['expose']['label'] = 'Catégories';
-  $handler->display->display_options['filters']['field_contract_category_tid']['expose']['operator'] = 'field_contract_category_tid_op';
-  $handler->display->display_options['filters']['field_contract_category_tid']['expose']['identifier'] = 'field_contract_category_tid';
-  $handler->display->display_options['filters']['field_contract_category_tid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    217795369 => 0,
-    231346920 => 0,
-    193262079 => 0,
-  );
-  $handler->display->display_options['filters']['field_contract_category_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_contract_category_tid']['vocabulary'] = 'contract_categories';
-  /* Filter criterion: Content: Type de procédure (field_procurement_type) */
-  $handler->display->display_options['filters']['field_procurement_type_tid']['id'] = 'field_procurement_type_tid';
-  $handler->display->display_options['filters']['field_procurement_type_tid']['table'] = 'field_data_field_procurement_type';
-  $handler->display->display_options['filters']['field_procurement_type_tid']['field'] = 'field_procurement_type_tid';
-  $handler->display->display_options['filters']['field_procurement_type_tid']['group'] = 1;
-  $handler->display->display_options['filters']['field_procurement_type_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_procurement_type_tid']['expose']['operator_id'] = 'field_procurement_type_tid_op';
-  $handler->display->display_options['filters']['field_procurement_type_tid']['expose']['label'] = 'Types';
-  $handler->display->display_options['filters']['field_procurement_type_tid']['expose']['operator'] = 'field_procurement_type_tid_op';
-  $handler->display->display_options['filters']['field_procurement_type_tid']['expose']['identifier'] = 'field_procurement_type_tid';
-  $handler->display->display_options['filters']['field_procurement_type_tid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    217795369 => 0,
-    231346920 => 0,
-    193262079 => 0,
-  );
-  $handler->display->display_options['filters']['field_procurement_type_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_procurement_type_tid']['vocabulary'] = 'procurement_types';
-  /* Filter criterion: Content: Statut de la consultation (field_contract_status) */
-  $handler->display->display_options['filters']['field_contract_status_value_1']['id'] = 'field_contract_status_value_1';
-  $handler->display->display_options['filters']['field_contract_status_value_1']['table'] = 'field_data_field_contract_status';
-  $handler->display->display_options['filters']['field_contract_status_value_1']['field'] = 'field_contract_status_value';
-  $handler->display->display_options['filters']['field_contract_status_value_1']['value'] = array(
-    1 => '1',
-  );
-  $handler->display->display_options['filters']['field_contract_status_value_1']['group'] = 1;
-  /* Filter criterion: Content: Dates début/fin publication -  start date (field_pub_dates) */
-  $handler->display->display_options['filters']['field_pub_dates_value']['id'] = 'field_pub_dates_value';
-  $handler->display->display_options['filters']['field_pub_dates_value']['table'] = 'field_data_field_pub_dates';
-  $handler->display->display_options['filters']['field_pub_dates_value']['field'] = 'field_pub_dates_value';
-  $handler->display->display_options['filters']['field_pub_dates_value']['operator'] = '<=';
-  $handler->display->display_options['filters']['field_pub_dates_value']['default_date'] = 'now';
-  /* Filter criterion: Content: Dates début/fin publication - end date (field_pub_dates:value2) */
-  $handler->display->display_options['filters']['field_pub_dates_value2']['id'] = 'field_pub_dates_value2';
-  $handler->display->display_options['filters']['field_pub_dates_value2']['table'] = 'field_data_field_pub_dates';
-  $handler->display->display_options['filters']['field_pub_dates_value2']['field'] = 'field_pub_dates_value2';
-  $handler->display->display_options['filters']['field_pub_dates_value2']['operator'] = '>=';
-  $handler->display->display_options['filters']['field_pub_dates_value2']['default_date'] = 'now';
-  $handler->display->display_options['path'] = 'marches-publics-en-cours';
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Current public contracts';
+  $handler->display->display_options['path'] = 'current-public-contracts';
 
   /* Display: Marchés attribués */
   $handler = $view->new_display('page', 'Marchés attribués', 'awarded_contracts');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Awarded public contracts';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -339,7 +275,7 @@ function pnf_contracts_views_default_views() {
     'contract' => 'contract',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Catégorie du marché (field_contract_category) */
+  /* Filter criterion: Content: Contract category (field_contract_category) */
   $handler->display->display_options['filters']['field_contract_category_tid']['id'] = 'field_contract_category_tid';
   $handler->display->display_options['filters']['field_contract_category_tid']['table'] = 'field_data_field_contract_category';
   $handler->display->display_options['filters']['field_contract_category_tid']['field'] = 'field_contract_category_tid';
@@ -358,7 +294,7 @@ function pnf_contracts_views_default_views() {
   );
   $handler->display->display_options['filters']['field_contract_category_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_contract_category_tid']['vocabulary'] = 'contract_categories';
-  /* Filter criterion: Content: Type de procédure (field_procurement_type) */
+  /* Filter criterion: Content: Procedure type (field_procurement_type) */
   $handler->display->display_options['filters']['field_procurement_type_tid']['id'] = 'field_procurement_type_tid';
   $handler->display->display_options['filters']['field_procurement_type_tid']['table'] = 'field_data_field_procurement_type';
   $handler->display->display_options['filters']['field_procurement_type_tid']['field'] = 'field_procurement_type_tid';
@@ -377,7 +313,7 @@ function pnf_contracts_views_default_views() {
   );
   $handler->display->display_options['filters']['field_procurement_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_procurement_type_tid']['vocabulary'] = 'procurement_types';
-  /* Filter criterion: Content: Statut de la consultation (field_contract_status) */
+  /* Filter criterion: Content: Consultation status (field_contract_status) */
   $handler->display->display_options['filters']['field_contract_status_value_1']['id'] = 'field_contract_status_value_1';
   $handler->display->display_options['filters']['field_contract_status_value_1']['table'] = 'field_data_field_contract_status';
   $handler->display->display_options['filters']['field_contract_status_value_1']['field'] = 'field_contract_status_value';
@@ -385,7 +321,14 @@ function pnf_contracts_views_default_views() {
     2 => '2',
   );
   $handler->display->display_options['filters']['field_contract_status_value_1']['group'] = 1;
-  $handler->display->display_options['path'] = 'marches-publics-attribues';
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
+  $handler->display->display_options['path'] = 'awarded-public-contracts';
   $export['contracts'] = $view;
 
   return $export;

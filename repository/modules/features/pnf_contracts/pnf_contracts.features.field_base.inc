@@ -221,8 +221,8 @@ function pnf_contracts_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        1 => 'En cours',
-        2 => 'Attribué',
+        1 => 'Current',
+        2 => 'Awarded',
       ),
       'allowed_values_function' => '',
       'entity_translation_sync' => FALSE,
