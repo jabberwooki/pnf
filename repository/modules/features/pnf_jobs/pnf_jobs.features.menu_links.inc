@@ -10,38 +10,38 @@
 function pnf_jobs_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-menu-jobs_offres-demploi:offres-demploi.
-  $menu_links['menu-menu-jobs_offres-demploi:offres-demploi'] = array(
+  // Exported menu link: menu-menu-jobs_civic-services:civic-services.
+  $menu_links['menu-menu-jobs_civic-services:civic-services'] = array(
     'menu_name' => 'menu-menu-jobs',
-    'link_path' => 'offres-demploi',
-    'router_path' => 'offres-demploi',
-    'link_title' => 'Offres d\'emploi',
+    'link_path' => 'civic-services',
+    'router_path' => 'civic-services',
+    'link_title' => 'Civic services',
     'options' => array(
-      'alter' => TRUE,
       'attributes' => array(),
       'item_attributes' => array(
         'id' => '',
         'class' => '',
         'style' => '',
       ),
-      'identifier' => 'menu-menu-jobs_offres-demploi:offres-demploi',
+      'alter' => TRUE,
+      'identifier' => 'menu-menu-jobs_civic-services:civic-services',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -49,
     'customized' => 1,
-    'language' => 'fr',
+    'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-menu-jobs_services-civiques:services-civiques.
-  $menu_links['menu-menu-jobs_services-civiques:services-civiques'] = array(
+  // Exported menu link: menu-menu-jobs_jobs:jobs.
+  $menu_links['menu-menu-jobs_jobs:jobs'] = array(
     'menu_name' => 'menu-menu-jobs',
-    'link_path' => 'services-civiques',
-    'router_path' => 'services-civiques',
-    'link_title' => 'Services civiques',
+    'link_path' => 'jobs',
+    'router_path' => 'jobs',
+    'link_title' => 'Jobs',
     'options' => array(
       'attributes' => array(),
       'item_attributes' => array(
@@ -50,33 +50,33 @@ function pnf_jobs_menu_default_menu_links() {
         'style' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-menu-jobs_services-civiques:services-civiques',
+      'identifier' => 'menu-menu-jobs_jobs:jobs',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -50,
     'customized' => 1,
-    'language' => 'fr',
+    'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-menu-jobs_stages:stages.
-  $menu_links['menu-menu-jobs_stages:stages'] = array(
+  // Exported menu link: menu-menu-jobs_trainings:trainings.
+  $menu_links['menu-menu-jobs_trainings:trainings'] = array(
     'menu_name' => 'menu-menu-jobs',
-    'link_path' => 'stages',
-    'router_path' => 'stages',
-    'link_title' => 'Stages',
+    'link_path' => 'trainings',
+    'router_path' => 'trainings',
+    'link_title' => 'Trainings',
     'options' => array(
-      'alter' => TRUE,
       'attributes' => array(),
       'item_attributes' => array(
         'id' => '',
         'class' => '',
         'style' => '',
       ),
-      'identifier' => 'menu-menu-jobs_stages:stages',
+      'alter' => TRUE,
+      'identifier' => 'menu-menu-jobs_trainings:trainings',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -85,15 +85,15 @@ function pnf_jobs_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
     'customized' => 1,
-    'language' => 'fr',
+    'language' => 'und',
     'menu_links_customized' => 1,
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Offres d\'emploi');
-  t('Services civiques');
-  t('Stages');
+  t('Civic services');
+  t('Jobs');
+  t('Trainings');
 
   return $menu_links;
 }

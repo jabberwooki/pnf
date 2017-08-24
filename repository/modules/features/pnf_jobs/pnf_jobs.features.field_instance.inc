@@ -250,7 +250,7 @@ function pnf_jobs_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_job_deadline_date',
-    'label' => 'Date limite de candidature',
+    'label' => 'Closing date for application',
     'required' => 1,
     'settings' => array(
       'default_value' => 'now',
@@ -367,13 +367,14 @@ function pnf_jobs_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_job_location',
-    'label' => 'Poste basé à',
+    'label' => 'Located at',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
+          'mailchimp_campaign' => 0,
           'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 0,
@@ -386,13 +387,16 @@ function pnf_jobs_field_default_field_instances() {
             'full_html' => array(
               'weight' => -10,
             ),
+            'mailchimp_campaign' => array(
+              'weight' => 0,
+            ),
             'plain_text' => array(
               'weight' => 10,
             ),
           ),
         ),
       ),
-      'context' => 'debug',
+      'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
       'entity_translation_sync' => FALSE,
@@ -605,7 +609,7 @@ function pnf_jobs_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_job_projected_date',
-    'label' => 'À pourvoir à compter du',
+    'label' => 'Position available from',
     'required' => 0,
     'settings' => array(
       'default_value' => 'now',
@@ -745,7 +749,7 @@ function pnf_jobs_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_job_pub_date',
-    'label' => 'Publié le',
+    'label' => 'Published on',
     'required' => 1,
     'settings' => array(
       'default_value' => 'now',
@@ -952,14 +956,14 @@ function pnf_jobs_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Date limite de candidature');
+  t('Closing date for application');
   t('Descriptif détaillé');
   t('Description courte du poste');
   t('Fiche de poste');
-  t('Poste basé à');
-  t('Publié le');
+  t('Located at');
+  t('Position available from');
+  t('Published on');
   t('Type');
-  t('À pourvoir à compter du');
 
   return $field_instances;
 }
