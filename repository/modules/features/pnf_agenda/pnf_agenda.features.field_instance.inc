@@ -127,6 +127,7 @@ function pnf_agenda_field_default_field_instances() {
       'context_default' => 'sdl_editor_representation',
       'display_summary' => 1,
       'dnd_enabled' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -250,6 +251,7 @@ function pnf_agenda_field_default_field_instances() {
     'label' => 'Coordonnées GPS',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -340,6 +342,7 @@ function pnf_agenda_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'documents/events',
       'file_extensions' => 'txt doc docx xls xlsx pdf jpg',
       'max_filesize' => '',
@@ -512,6 +515,7 @@ function pnf_agenda_field_default_field_instances() {
     'label' => 'Category',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -677,6 +681,7 @@ function pnf_agenda_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -857,6 +862,7 @@ function pnf_agenda_field_default_field_instances() {
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -1007,6 +1013,7 @@ function pnf_agenda_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'image_field_caption' => 1,
@@ -1129,6 +1136,7 @@ function pnf_agenda_field_default_field_instances() {
       'default_value2' => 'strtotime',
       'default_value_code' => '',
       'default_value_code2' => '+ 10 years',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1239,6 +1247,7 @@ function pnf_agenda_field_default_field_instances() {
     'label' => 'Public',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1332,6 +1341,7 @@ function pnf_agenda_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'allow_override' => 0,
+      'entity_translation_sync' => FALSE,
       'referencable_types' => array(
         'audio' => 0,
         'file' => 0,
@@ -1428,6 +1438,7 @@ function pnf_agenda_field_default_field_instances() {
     'label' => 'Secteurs',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(

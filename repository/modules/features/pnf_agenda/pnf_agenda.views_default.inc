@@ -123,7 +123,7 @@ function pnf_agenda_views_default_views() {
   );
   $handler->display->display_options['filters']['field_event_categorie_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_event_categorie_tid']['vocabulary'] = 'event_categories';
-  /* Filter criterion: Content: Sectors (field_sectors) */
+  /* Filter criterion: Content: Secteurs (field_sectors) */
   $handler->display->display_options['filters']['field_sectors_tid']['id'] = 'field_sectors_tid';
   $handler->display->display_options['filters']['field_sectors_tid']['table'] = 'field_data_field_sectors';
   $handler->display->display_options['filters']['field_sectors_tid']['field'] = 'field_sectors_tid';
@@ -286,7 +286,7 @@ function pnf_agenda_views_default_views() {
   );
   $handler->display->display_options['filters']['field_event_categorie_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_event_categorie_tid']['vocabulary'] = 'event_categories';
-  /* Filter criterion: Content: Sectors (field_sectors) */
+  /* Filter criterion: Content: Secteurs (field_sectors) */
   $handler->display->display_options['filters']['field_sectors_tid']['id'] = 'field_sectors_tid';
   $handler->display->display_options['filters']['field_sectors_tid']['table'] = 'field_data_field_sectors';
   $handler->display->display_options['filters']['field_sectors_tid']['field'] = 'field_sectors_tid';
