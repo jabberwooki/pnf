@@ -773,20 +773,23 @@ now override the 3.3 new styles for modern browsers & apply opacity
 			li {
 				margin-bottom: 2px;
 			}
+			li:hover a.tool { // ajouté par CE
+				color: @brand-primary;
+			}
 			a.tool {
 				height: 44px;
 				//width: 44px; // commenté par CE
 				line-height: 22px;
-				display: inline-block;
+				//display: inline-block;
 				//background-color: rgba(0, 0, 0, 0.7); // commenté par CE
 				color: #fff;
 				padding: 12px;
 				font-family: 'Fontawesome';
 				font-size: @font-size-h3;
 			}
-			a.tool span:hover{
-				color: @brand-primary;
-			}
+			//a.tool span:hover{ // commenté par CE
+			//	color: @brand-primary;
+			//}
 			a.tool-news:before {
 				font-family: 'pnf';
 				/*content: '\f0e6';*/ /*Fontawesome*/
