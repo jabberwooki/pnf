@@ -10,14 +10,13 @@
 function pnf_multimedia_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-multimedia_galeries-dimages:galeries-photo.
-  $menu_links['menu-multimedia_galeries-dimages:galeries-photo'] = array(
+  // Exported menu link: menu-multimedia_image-galleries:image-galleries.
+  $menu_links['menu-multimedia_image-galleries:image-galleries'] = array(
     'menu_name' => 'menu-multimedia',
-    'link_path' => 'galeries-photo',
-    'router_path' => 'galeries-photo',
-    'link_title' => 'Galeries d\'images',
+    'link_path' => 'image-galleries',
+    'router_path' => 'image-galleries',
+    'link_title' => 'Image galleries',
     'options' => array(
-      'identifier' => 'menu-multimedia_galeries-dimages:galeries-photo',
       'attributes' => array(),
       'item_attributes' => array(
         'id' => '',
@@ -25,13 +24,14 @@ function pnf_multimedia_menu_default_menu_links() {
         'style' => '',
       ),
       'alter' => TRUE,
+      'identifier' => 'menu-multimedia_image-galleries:image-galleries',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 1,
+    'weight' => -49,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
@@ -57,49 +57,59 @@ function pnf_multimedia_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -50,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-multimedia_sons:sons.
-  $menu_links['menu-multimedia_sons:sons'] = array(
+  // Exported menu link: menu-multimedia_sounds:sounds.
+  $menu_links['menu-multimedia_sounds:sounds'] = array(
     'menu_name' => 'menu-multimedia',
-    'link_path' => 'sons',
-    'router_path' => 'sons',
-    'link_title' => 'Sons',
+    'link_path' => 'sounds',
+    'router_path' => 'sounds',
+    'link_title' => 'Sounds',
     'options' => array(
       'attributes' => array(),
-      'identifier' => 'menu-multimedia_sons:sons',
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
       'alter' => TRUE,
+      'identifier' => 'menu-multimedia_sounds:sounds',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 3,
+    'weight' => -47,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-multimedia_vidos:videos.
-  $menu_links['menu-multimedia_vidos:videos'] = array(
+  // Exported menu link: menu-multimedia_videos:videos.
+  $menu_links['menu-multimedia_videos:videos'] = array(
     'menu_name' => 'menu-multimedia',
     'link_path' => 'videos',
     'router_path' => 'videos',
-    'link_title' => 'Vidéos',
+    'link_title' => 'Videos',
     'options' => array(
-      'attributes' => array(),
-      'identifier' => 'menu-multimedia_vidos:videos',
+      'identifier' => 'menu-multimedia_videos:videos',
       'alter' => TRUE,
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 2,
+    'weight' => -48,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
@@ -107,10 +117,10 @@ function pnf_multimedia_menu_default_menu_links() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Galeries d\'images');
+  t('Image galleries');
   t('Publications and documents');
-  t('Sons');
-  t('Vidéos');
+  t('Sounds');
+  t('Videos');
 
   return $menu_links;
 }

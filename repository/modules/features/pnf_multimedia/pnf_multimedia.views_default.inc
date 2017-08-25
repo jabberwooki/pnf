@@ -179,7 +179,10 @@ function pnf_multimedia_views_default_views() {
   /* Display: Galeries */
   $handler = $view->new_display('page_with_page_title', 'Galeries', 'page_photos');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Galeries d\'images';
+  $handler->display->display_options['title'] = 'Image galleries';
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Atoms: Catégorie (field_media_category) */
   $handler->display->display_options['relationships']['field_media_category_tid']['id'] = 'field_media_category_tid';
@@ -230,16 +233,31 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['field_atom_description']['settings'] = array(
     'trim_length' => '120',
   );
-  /* Field: Atom: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'scald_atoms';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['path'] = 'atom/[sid]';
-  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Entity translation: Titre: translated */
+  $handler->display->display_options['fields']['title_field_et']['id'] = 'title_field_et';
+  $handler->display->display_options['fields']['title_field_et']['table'] = 'field_data_title_field';
+  $handler->display->display_options['fields']['title_field_et']['field'] = 'title_field_et';
+  $handler->display->display_options['fields']['title_field_et']['label'] = '';
+  $handler->display->display_options['fields']['title_field_et']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title_field_et']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title_field_et']['type'] = 'title_linked';
+  $handler->display->display_options['fields']['title_field_et']['settings'] = array(
+    'title_style' => '_none',
+    'title_link' => 'content',
+    'title_class' => '',
+    'field_formatter_class' => '',
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -254,7 +272,7 @@ function pnf_multimedia_views_default_views() {
 <i class="fa fa-plus-circle"></i>
 </p>
 </div>
-<h3>[title]</h3>
+<h3>[title_field_et]</h3>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
@@ -274,15 +292,15 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['filters']['field_media_category_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_media_category_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['operator_id'] = 'field_media_category_tid_op';
-  $handler->display->display_options['filters']['field_media_category_tid']['expose']['label'] = 'Catégorie';
+  $handler->display->display_options['filters']['field_media_category_tid']['expose']['label'] = 'Category';
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['operator'] = 'field_media_category_tid_op';
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['identifier'] = 'field_media_category_tid';
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
-    4 => 0,
-    5 => 0,
-    3 => 0,
+    217795369 => 0,
+    231346920 => 0,
+    193262079 => 0,
   );
   $handler->display->display_options['filters']['field_media_category_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_media_category_tid']['vocabulary'] = 'media_categories';
@@ -293,10 +311,12 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['filters']['uuid']['relationship'] = 'field_media_category_tid';
   $handler->display->display_options['filters']['uuid']['operator'] = '!=';
   $handler->display->display_options['filters']['uuid']['value'] = '5ed1938d-1c9d-4dff-b885-ea096e718753';
-  $handler->display->display_options['path'] = 'galeries-photo';
+  $handler->display->display_options['path'] = 'image-galleries';
 
   /* Display: Vidéos */
   $handler = $view->new_display('page_with_page_title', 'Vidéos', 'page_videos');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Videos';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Atom: Scald ID */
   $handler->display->display_options['fields']['sid']['id'] = 'sid';
@@ -341,16 +361,31 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['field_atom_description']['settings'] = array(
     'trim_length' => '120',
   );
-  /* Field: Atom: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'scald_atoms';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['path'] = 'atom/[sid]';
-  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Entity translation: Titre: translated */
+  $handler->display->display_options['fields']['title_field_et']['id'] = 'title_field_et';
+  $handler->display->display_options['fields']['title_field_et']['table'] = 'field_data_title_field';
+  $handler->display->display_options['fields']['title_field_et']['field'] = 'title_field_et';
+  $handler->display->display_options['fields']['title_field_et']['label'] = '';
+  $handler->display->display_options['fields']['title_field_et']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title_field_et']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title_field_et']['type'] = 'title_linked';
+  $handler->display->display_options['fields']['title_field_et']['settings'] = array(
+    'title_style' => '_none',
+    'title_link' => 'content',
+    'title_class' => '',
+    'field_formatter_class' => '',
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -365,15 +400,42 @@ function pnf_multimedia_views_default_views() {
 <i class="fa fa-play-circle"></i>
 </p>
 </div>
-<h3>[title]</h3>
+<h3>[title_field_et]</h3>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Atom: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'scald_atoms';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'video' => 'video',
+  );
+  /* Filter criterion: Atoms: Catégorie (field_media_category) */
+  $handler->display->display_options['filters']['field_media_category_tid']['id'] = 'field_media_category_tid';
+  $handler->display->display_options['filters']['field_media_category_tid']['table'] = 'field_data_field_media_category';
+  $handler->display->display_options['filters']['field_media_category_tid']['field'] = 'field_media_category_tid';
+  $handler->display->display_options['filters']['field_media_category_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_media_category_tid']['expose']['operator_id'] = 'field_media_category_tid_op';
+  $handler->display->display_options['filters']['field_media_category_tid']['expose']['label'] = 'Category';
+  $handler->display->display_options['filters']['field_media_category_tid']['expose']['operator'] = 'field_media_category_tid_op';
+  $handler->display->display_options['filters']['field_media_category_tid']['expose']['identifier'] = 'field_media_category_tid';
+  $handler->display->display_options['filters']['field_media_category_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    217795369 => 0,
+    231346920 => 0,
+    193262079 => 0,
+  );
+  $handler->display->display_options['filters']['field_media_category_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_media_category_tid']['vocabulary'] = 'media_categories';
   $handler->display->display_options['path'] = 'videos';
 
   /* Display: Sons */
   $handler = $view->new_display('page_with_page_title', 'Sons', 'page_sounds');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Sons';
+  $handler->display->display_options['title'] = 'Sounds';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Atom: Scald ID */
   $handler->display->display_options['fields']['sid']['id'] = 'sid';
@@ -418,16 +480,31 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['field_atom_description']['settings'] = array(
     'trim_length' => '120',
   );
-  /* Field: Atom: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'scald_atoms';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['path'] = 'atom/[sid]';
-  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Entity translation: Titre: translated */
+  $handler->display->display_options['fields']['title_field_et']['id'] = 'title_field_et';
+  $handler->display->display_options['fields']['title_field_et']['table'] = 'field_data_title_field';
+  $handler->display->display_options['fields']['title_field_et']['field'] = 'title_field_et';
+  $handler->display->display_options['fields']['title_field_et']['label'] = '';
+  $handler->display->display_options['fields']['title_field_et']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title_field_et']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title_field_et']['type'] = 'title_linked';
+  $handler->display->display_options['fields']['title_field_et']['settings'] = array(
+    'title_style' => '_none',
+    'title_link' => 'content',
+    'title_class' => '',
+    'field_formatter_class' => '',
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -442,7 +519,7 @@ function pnf_multimedia_views_default_views() {
 <i class="fa fa-headphones"></i>
 </p>
 </div>
-<h3>[title]</h3>
+<h3>[title_field_et]</h3>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
@@ -460,19 +537,19 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['filters']['field_media_category_tid']['field'] = 'field_media_category_tid';
   $handler->display->display_options['filters']['field_media_category_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['operator_id'] = 'field_media_category_tid_op';
-  $handler->display->display_options['filters']['field_media_category_tid']['expose']['label'] = 'Catégorie';
+  $handler->display->display_options['filters']['field_media_category_tid']['expose']['label'] = 'Category';
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['operator'] = 'field_media_category_tid_op';
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['identifier'] = 'field_media_category_tid';
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
-    4 => 0,
-    5 => 0,
-    3 => 0,
+    217795369 => 0,
+    231346920 => 0,
+    193262079 => 0,
   );
   $handler->display->display_options['filters']['field_media_category_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_media_category_tid']['vocabulary'] = 'media_categories';
-  $handler->display->display_options['path'] = 'sons';
+  $handler->display->display_options['path'] = 'sounds';
 
   /* Display: Cartothèque */
   $handler = $view->new_display('page_with_page_title', 'Cartothèque', 'page_maps');

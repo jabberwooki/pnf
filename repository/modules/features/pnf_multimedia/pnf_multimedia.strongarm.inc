@@ -13,6 +13,58 @@ function pnf_multimedia_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'entity_translation_settings_scald_atom__audio';
+  $strongarm->value = array(
+    'default_language' => 'xx-et-default',
+    'hide_language_selector' => 0,
+    'exclude_language_none' => 0,
+    'lock_language' => 0,
+    'shared_fields_original_only' => 0,
+  );
+  $export['entity_translation_settings_scald_atom__audio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'entity_translation_settings_scald_atom__gallery';
+  $strongarm->value = array(
+    'default_language' => 'xx-et-default',
+    'hide_language_selector' => 0,
+    'exclude_language_none' => 0,
+    'lock_language' => 0,
+    'shared_fields_original_only' => 0,
+  );
+  $export['entity_translation_settings_scald_atom__gallery'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'entity_translation_settings_scald_atom__image';
+  $strongarm->value = array(
+    'default_language' => 'xx-et-default',
+    'hide_language_selector' => 0,
+    'exclude_language_none' => 0,
+    'lock_language' => 0,
+    'shared_fields_original_only' => 0,
+  );
+  $export['entity_translation_settings_scald_atom__image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'entity_translation_settings_scald_atom__video';
+  $strongarm->value = array(
+    'default_language' => 'xx-et-default',
+    'hide_language_selector' => 0,
+    'exclude_language_none' => 0,
+    'lock_language' => 0,
+    'shared_fields_original_only' => 0,
+  );
+  $export['entity_translation_settings_scald_atom__video'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_scald_atom__audio';
   $strongarm->value = array(
     'view_modes' => array(
@@ -38,10 +90,13 @@ function pnf_multimedia_strongarm() {
           'weight' => '0',
         ),
         'redirect' => array(
-          'weight' => '5',
+          'weight' => '7',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '8',
+        ),
+        'language' => array(
+          'weight' => '1',
         ),
       ),
       'display' => array(
@@ -92,10 +147,13 @@ function pnf_multimedia_strongarm() {
           'weight' => '0',
         ),
         'redirect' => array(
-          'weight' => '6',
+          'weight' => '8',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '9',
+        ),
+        'language' => array(
+          'weight' => '1',
         ),
       ),
       'display' => array(
@@ -201,10 +259,13 @@ function pnf_multimedia_strongarm() {
           'weight' => '0',
         ),
         'redirect' => array(
-          'weight' => '5',
+          'weight' => '7',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '8',
+        ),
+        'language' => array(
+          'weight' => '1',
         ),
       ),
       'display' => array(
@@ -256,14 +317,14 @@ function pnf_multimedia_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_scald_atom_audio_pattern';
-  $strongarm->value = 'sons/[scald_atom:title]';
+  $strongarm->value = 'sounds/[scald_atom:title]';
   $export['pathauto_scald_atom_audio_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_scald_atom_gallery_pattern';
-  $strongarm->value = 'galeries-photo/[scald_atom:title]';
+  $strongarm->value = 'image-galleries/[scald_atom:title]';
   $export['pathauto_scald_atom_gallery_pattern'] = $strongarm;
 
   $strongarm = new stdClass();

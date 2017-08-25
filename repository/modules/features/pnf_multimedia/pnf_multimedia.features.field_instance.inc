@@ -111,7 +111,7 @@ function pnf_multimedia_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 32,
+      'weight' => 4,
     ),
   );
 
@@ -273,7 +273,7 @@ function pnf_multimedia_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 32,
+      'weight' => 4,
     ),
   );
 
@@ -350,7 +350,7 @@ function pnf_multimedia_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -512,7 +512,7 @@ function pnf_multimedia_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 31,
+      'weight' => 4,
     ),
   );
 

@@ -19,6 +19,11 @@ function pnf_multimedia_form_scald_atom_add_form_source_alter(&$form, &$form_sta
  * Implements hook_form_alter().
  */
 function pnf_multimedia_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'scald_atom_add_form_options') {
+    drupal_add_js(drupal_get_path('module','pnf_multimedia') . '/js/pnf_multimedia.js');
+    $form['atom0']['scald_actions']['#weight'] = 100;
+  }
+
   if ($form['#id'] == 'views-exposed-form-multimedia-page-videos') {
     $options = $form['field_media_category_tid']['#options'];
     $purged_options = pnf_multimedia_purge_category_filter($options, 'video');
@@ -106,10 +111,24 @@ function pnf_multimedia_pathauto_alias_alter(&$alias, array &$context) {
   // If gallery category = cartotheque (uuid = 5ed1938d-1c9d-4dff-b885-ea096e718753),
   // we must alter pathauto.
   if ($context['module'] == 'scald_atom') {
-    $term_wrapper = entity_metadata_wrapper('taxonomy_term', $context['data']['scald_atom']->field_media_category['und'][0]['tid']);
+    $media_category = $context['data']['scald_atom']->field_media_category;
+    $first_value = array_shift($media_category);
+    $category_tid = $first_value[0]['tid'];
+    $term_wrapper = entity_metadata_wrapper('taxonomy_term', $category_tid);
     $term_uuid = $term_wrapper->value()->uuid;
+
     if ($term_uuid == '5ed1938d-1c9d-4dff-b885-ea096e718753') {
       $alias = 'cartotheque' . substr($alias, strpos($alias, '/'));
     }
+
+//    dpm($context);
   }
+}
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function pnf_multimedia_entity_view_alter(&$build, $type) {
+//  dpm($build);
+//  dpm($type);
 }
