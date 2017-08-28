@@ -6,6 +6,7 @@ dependencies[] = fe_block
 dependencies[] = image
 dependencies[] = link
 dependencies[] = node
+dependencies[] = number
 dependencies[] = strongarm
 dependencies[] = views
 dependencies[] = views_bootstrap
