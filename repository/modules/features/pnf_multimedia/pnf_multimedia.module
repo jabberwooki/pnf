@@ -125,10 +125,3 @@ function pnf_multimedia_pathauto_alias_alter(&$alias, array &$context) {
   }
 }
 
-/**
- * Implements hook_entity_view_alter().
- */
-function pnf_multimedia_entity_view_alter(&$build, $type) {
-//  dpm($build);
-//  dpm($type);
-}
