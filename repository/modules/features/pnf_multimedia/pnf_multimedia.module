@@ -120,8 +120,6 @@ function pnf_multimedia_pathauto_alias_alter(&$alias, array &$context) {
     if ($term_uuid == '5ed1938d-1c9d-4dff-b885-ea096e718753') {
       $alias = 'cartotheque' . substr($alias, strpos($alias, '/'));
     }
-
-//    dpm($context);
   }
 }
 
