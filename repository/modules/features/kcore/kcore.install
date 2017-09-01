@@ -156,3 +156,10 @@ function kcore_update_7020() {
 function kcore_update_7021() {
   module_enable(array('title'));
 }
+
+/**
+ * Activate services module.
+ */
+function kcore_update_7022() {
+  module_enable(array('services'));
+}
