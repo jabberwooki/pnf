@@ -732,19 +732,26 @@ Nous nous efforçons d\'y répondre dans les plus brefs délais.</p>
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'l10n_update_download_store';
+  $strongarm->value = 'profiles/pnf/translations';
+  $export['l10n_update_download_store'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_default';
   $strongarm->value = (object) array(
-    'language' => 'en',
-    'name' => 'English',
-    'native' => 'English',
+    'language' => 'fr',
+    'name' => 'French',
+    'native' => 'Français',
     'direction' => '0',
     'enabled' => 1,
-    'plurals' => '0',
-    'formula' => '',
+    'plurals' => '2',
+    'formula' => '($n>1)',
     'domain' => '',
-    'prefix' => 'en',
+    'prefix' => 'fr',
     'weight' => '0',
-    'javascript' => '',
+    'javascript' => 'nUM8AgrKW0hAxR19JQtHOOZ1H3xPtJvtt8bDXRj-kVc',
   );
   $export['language_default'] = $strongarm;
 

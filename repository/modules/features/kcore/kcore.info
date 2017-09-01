@@ -387,6 +387,7 @@ features[variable][] = honeypot_form_user_register_form
 features[variable][] = honeypot_time_limit
 features[variable][] = i18n_node_extended_page
 features[variable][] = i18n_node_options_page
+features[variable][] = l10n_update_download_store
 features[variable][] = lang_dropdown_language
 features[variable][] = language_default
 features[variable][] = language_negotiation_language
