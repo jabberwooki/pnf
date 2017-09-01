@@ -285,12 +285,21 @@ function pnx_url_aliases_add() {
     'agenda' => array('fr' => 'agenda'),
 
     // Contracts
+    'current-public-contracts' => array('fr' => 'marches-publics-en-cours'),
+    'awarded-public-contracts' => array('fr' => 'marches-publics-attribues'),
 
     // Documents
+    'publications-and-documents' => array('fr' => 'publications-et-documents'),
 
     // Jobs
+    'jobs' => array('fr' => 'offres-emploi'),
+    'civic-services' => array('fr' => 'services-civiques'),
+    'trainings' => array('fr' => 'stages'),
 
     // Multimedia
+    'image-galleries' => array('fr' => 'galeries-images'),
+    'videos' => array('fr' => 'videos'),
+    'sounds' => array('fr' => 'sons'),
 
     // News
     'news' => array('fr' => 'actualites'),
