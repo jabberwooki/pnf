@@ -388,6 +388,7 @@ features[variable][] = honeypot_time_limit
 features[variable][] = i18n_node_extended_page
 features[variable][] = i18n_node_options_page
 features[variable][] = i18n_string_allowed_formats
+features[variable][] = i18n_string_source_language
 features[variable][] = l10n_update_download_store
 features[variable][] = lang_dropdown_language
 features[variable][] = language_default
