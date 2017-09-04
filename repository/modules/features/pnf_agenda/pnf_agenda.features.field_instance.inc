@@ -411,7 +411,7 @@ function pnf_agenda_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'taxonomy',
+        'module' => 'i18n_taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
           'linked_field' => array(
@@ -426,7 +426,7 @@ function pnf_agenda_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'taxonomy_term_reference_plain',
+        'type' => 'i18n_taxonomy_term_reference_plain',
         'weight' => 0,
       ),
       'newsletter' => array(
@@ -1185,7 +1185,7 @@ function pnf_agenda_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'inline',
-        'module' => 'taxonomy',
+        'module' => 'i18n_taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
           'linked_field' => array(
@@ -1200,7 +1200,7 @@ function pnf_agenda_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'taxonomy_term_reference_plain',
+        'type' => 'i18n_taxonomy_term_reference_plain',
         'weight' => 2,
       ),
       'newsletter' => array(
@@ -1390,7 +1390,7 @@ function pnf_agenda_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'taxonomy',
+        'module' => 'i18n_taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
           'linked_field' => array(
@@ -1405,7 +1405,7 @@ function pnf_agenda_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'taxonomy_term_reference_plain',
+        'type' => 'i18n_taxonomy_term_reference_plain',
         'weight' => 1,
       ),
       'newsletter' => array(
