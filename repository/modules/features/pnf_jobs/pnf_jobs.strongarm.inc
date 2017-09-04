@@ -156,14 +156,14 @@ function pnf_jobs_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_job_en_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'jobs/[node:title]';
   $export['pathauto_node_job_en_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_job_fr_pattern';
-  $strongarm->value = '[node:field_job_type]/[node:title]';
+  $strongarm->value = 'offres-demploi/[node:title]';
   $export['pathauto_node_job_fr_pattern'] = $strongarm;
 
   $strongarm = new stdClass();

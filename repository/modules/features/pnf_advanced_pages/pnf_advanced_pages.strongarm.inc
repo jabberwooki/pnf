@@ -427,7 +427,7 @@ function pnf_advanced_pages_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_advanced_page';
-  $strongarm->value = '1';
+  $strongarm->value = '2';
   $export['language_content_type_advanced_page'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -438,8 +438,9 @@ function pnf_advanced_pages_strongarm() {
     0 => 'menu-footer-menu',
     1 => 'menu-menu-park',
     2 => 'main-menu',
-    3 => 'menu-menu-themes',
-    4 => 'menu-join-national-park',
+    3 => 'menu-menu-themes-en',
+    4 => 'menu-menu-themes',
+    5 => 'menu-join-national-park',
   );
   $export['menu_options_advanced_page'] = $strongarm;
 

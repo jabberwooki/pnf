@@ -10,12 +10,21 @@ include_once 'pnf_documents.features.inc';
  * Implements hook_form_alter().
  */
 function pnf_documents_form_alter(&$form, &$form_state, $form_id) {
+  // Uuids to be used
+  $uuids = array(
+    'Communiqué de presse' => '8abe9b99-fc3e-4df1-a402-543ce16b3601',
+    'Dossier de presse' => '80b8cbe2-5a72-4d15-807b-3957158dd4cb',
+//    'Journal du parc' => '8375bea1-2b5c-411d-9179-1242c90a16aa',
+  );
+
   // If "Documents" exposed filter, we must remove 'Communiqué de presse' and 'Dossier de presse' options.
   if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-documents-page-documents') {
     $options = $form['field_document_category_tid']['#options'];
     foreach ($options  as $key => $option) {
-      $haystack = array('Communiqué de presse','Dossier de presse');
-      if (in_array($option, $haystack)) {
+      if ($key == 'All') continue;
+      $term = taxonomy_term_load($key);
+      $option_uuid = $term->uuid;
+      if (in_array($option_uuid, $uuids)) {
         unset($options[$key]);
       }
     }
@@ -25,14 +34,15 @@ function pnf_documents_form_alter(&$form, &$form_state, $form_id) {
   // Il "Espace Presse" exposed filter, we must keep only 'All', 'Communiqué de presse' and 'Dossier de presse' options.
   if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-documents-page-press') {
     $options = $form['field_document_category_tid']['#options'];
-    $press_options = array_slice($options,0,1,TRUE);
     foreach ($options  as $key => $option) {
-      $haystack = array('Communiqué de presse','Dossier de presse');
-      if (in_array($option, $haystack)) {
-        $press_options[$key] = $option;
+      if ($key == 'All') continue;
+      $term = taxonomy_term_load($key);
+      $option_uuid = $term->uuid;
+      if (!in_array($option_uuid, $uuids)) {
+        unset($options[$key]);
       }
     }
-    $form['field_document_category_tid']['#options'] = $press_options;
+    $form['field_document_category_tid']['#options'] = $options;
   }
 }
 

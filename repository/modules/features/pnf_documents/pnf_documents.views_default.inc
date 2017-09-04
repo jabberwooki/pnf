@@ -173,17 +173,79 @@ function pnf_documents_views_default_views() {
   $handler->display->display_options['filters']['uuid_1']['relationship'] = 'field_document_category_tid';
   $handler->display->display_options['filters']['uuid_1']['operator'] = '!=';
   $handler->display->display_options['filters']['uuid_1']['value'] = '80b8cbe2-5a72-4d15-807b-3957158dd4cb';
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
 
   /* Display: Page Documents */
   $handler = $view->new_display('page', 'Page Documents', 'page_documents');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Publications et documents';
-  $handler->display->display_options['path'] = 'documents';
+  $handler->display->display_options['title'] = 'Publications and documents';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'document' => 'document',
+  );
+  /* Filter criterion: Content: Catégorie (field_document_category) */
+  $handler->display->display_options['filters']['field_document_category_tid']['id'] = 'field_document_category_tid';
+  $handler->display->display_options['filters']['field_document_category_tid']['table'] = 'field_data_field_document_category';
+  $handler->display->display_options['filters']['field_document_category_tid']['field'] = 'field_document_category_tid';
+  $handler->display->display_options['filters']['field_document_category_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_document_category_tid']['expose']['operator_id'] = 'field_document_category_tid_op';
+  $handler->display->display_options['filters']['field_document_category_tid']['expose']['label'] = 'Category';
+  $handler->display->display_options['filters']['field_document_category_tid']['expose']['operator'] = 'field_document_category_tid_op';
+  $handler->display->display_options['filters']['field_document_category_tid']['expose']['identifier'] = 'field_document_category_tid';
+  $handler->display->display_options['filters']['field_document_category_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    217795369 => 0,
+    231346920 => 0,
+    193262079 => 0,
+  );
+  $handler->display->display_options['filters']['field_document_category_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_document_category_tid']['vocabulary'] = 'document_categories';
+  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
+  $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
+  $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
+  $handler->display->display_options['filters']['uuid']['relationship'] = 'field_document_category_tid';
+  $handler->display->display_options['filters']['uuid']['operator'] = '!=';
+  $handler->display->display_options['filters']['uuid']['value'] = '8abe9b99-fc3e-4df1-a402-543ce16b3601';
+  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
+  $handler->display->display_options['filters']['uuid_1']['id'] = 'uuid_1';
+  $handler->display->display_options['filters']['uuid_1']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['uuid_1']['field'] = 'uuid';
+  $handler->display->display_options['filters']['uuid_1']['relationship'] = 'field_document_category_tid';
+  $handler->display->display_options['filters']['uuid_1']['operator'] = '!=';
+  $handler->display->display_options['filters']['uuid_1']['value'] = '80b8cbe2-5a72-4d15-807b-3957158dd4cb';
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
+  $handler->display->display_options['path'] = 'publications-and-documents';
 
   /* Display: Espace Presse */
   $handler = $view->new_display('page_with_page_title', 'Espace Presse', 'page_press');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Espace Presse';
+  $handler->display->display_options['title'] = 'Press area';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['groups'] = array(
     1 => 'AND',
@@ -212,7 +274,7 @@ function pnf_documents_views_default_views() {
   $handler->display->display_options['filters']['field_document_category_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_document_category_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_document_category_tid']['expose']['operator_id'] = 'field_document_category_tid_op';
-  $handler->display->display_options['filters']['field_document_category_tid']['expose']['label'] = 'Catégories';
+  $handler->display->display_options['filters']['field_document_category_tid']['expose']['label'] = 'Category';
   $handler->display->display_options['filters']['field_document_category_tid']['expose']['operator'] = 'field_document_category_tid_op';
   $handler->display->display_options['filters']['field_document_category_tid']['expose']['identifier'] = 'field_document_category_tid';
   $handler->display->display_options['filters']['field_document_category_tid']['expose']['remember_roles'] = array(
@@ -238,7 +300,7 @@ function pnf_documents_views_default_views() {
   $handler->display->display_options['filters']['uuid_1']['relationship'] = 'field_document_category_tid';
   $handler->display->display_options['filters']['uuid_1']['value'] = '80b8cbe2-5a72-4d15-807b-3957158dd4cb';
   $handler->display->display_options['filters']['uuid_1']['group'] = 2;
-  $handler->display->display_options['path'] = 'espace-presse';
+  $handler->display->display_options['path'] = 'press-area';
 
   /* Display: Journal du parc */
   $handler = $view->new_display('page_with_page_title', 'Journal du parc', 'page_journal');
@@ -269,32 +331,6 @@ function pnf_documents_views_default_views() {
   $handler->display->display_options['filters']['uuid']['value'] = '8375bea1-2b5c-411d-9179-1242c90a16aa';
   $handler->display->display_options['filters']['uuid']['group'] = 1;
   $handler->display->display_options['path'] = 'journal-du-parc';
-  $translatables['documents'] = array(
-    t('Master'),
-    t('Documents'),
-    t('more'),
-    t('Appliquer'),
-    t('Réinitialiser'),
-    t('Trier par'),
-    t('Asc'),
-    t('Desc'),
-    t('Options avancées'),
-    t('Sélectionnez n\'importe quel filtre et cliquez sur Appliquer pour voir les résultats'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('terme à partir de field_document_category'),
-    t('Catégories'),
-    t('Page Documents'),
-    t('Publications et documents'),
-    t('Espace Presse'),
-    t('Journal du parc'),
-    t('Journal du Parc'),
-  );
   $export['documents'] = $view;
 
   return $export;

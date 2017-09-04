@@ -165,7 +165,9 @@ dependencies[] = views_bootstrap
 ;dependencies[] = komega
 
 ;--- PNF features -------------------------------------------------------------
-dependencies[] = pnf_news
+; PNE is the last site to be installed. So pnf_news dependency is removed.
+; (PNE will use its own news and events content types.
+;dependencies[] = pnf_news
 ;--- pnf_agenda has not be activated by default, some sites don't need it.
 dependencies[] = pnf_contracts
 dependencies[] = pnf_raa

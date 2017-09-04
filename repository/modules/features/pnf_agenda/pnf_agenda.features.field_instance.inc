@@ -127,6 +127,7 @@ function pnf_agenda_field_default_field_instances() {
       'context_default' => 'sdl_editor_representation',
       'display_summary' => 1,
       'dnd_enabled' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -250,6 +251,7 @@ function pnf_agenda_field_default_field_instances() {
     'label' => 'Coordonnées GPS',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -336,10 +338,11 @@ function pnf_agenda_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_downloadable_docs',
-    'label' => 'Documents utiles',
+    'label' => 'Useful documents',
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'documents/events',
       'file_extensions' => 'txt doc docx xls xlsx pdf jpg',
       'max_filesize' => '',
@@ -369,6 +372,7 @@ function pnf_agenda_field_default_field_instances() {
           ),
           'source_reference' => array(
             'autocomplete' => 0,
+            'search_all_fields' => 0,
           ),
         ),
         'progress_indicator' => 'throbber',
@@ -468,7 +472,20 @@ function pnf_agenda_field_default_field_instances() {
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
       ),
@@ -495,9 +512,10 @@ function pnf_agenda_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_event_categorie',
-    'label' => 'Catégorie',
+    'label' => 'Category',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -616,7 +634,20 @@ function pnf_agenda_field_default_field_instances() {
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'pnf_agenda',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
         'type' => 'pnf_agenda_date',
         'weight' => 3,
       ),
@@ -650,6 +681,7 @@ function pnf_agenda_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -758,7 +790,20 @@ function pnf_agenda_field_default_field_instances() {
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
         'type' => 'text_default',
         'weight' => 4,
       ),
@@ -785,13 +830,14 @@ function pnf_agenda_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_event_location',
-    'label' => 'Lieu',
+    'label' => 'Location',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
+          'mailchimp_campaign' => 0,
           'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 0,
@@ -804,14 +850,19 @@ function pnf_agenda_field_default_field_instances() {
             'full_html' => array(
               'weight' => -10,
             ),
+            'mailchimp_campaign' => array(
+              'weight' => 0,
+            ),
             'plain_text' => array(
               'weight' => 10,
             ),
           ),
         ),
       ),
-      'context' => '',
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -930,8 +981,20 @@ function pnf_agenda_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'field_formatter_class' => '',
           'image_link' => 'content',
           'image_style' => '500x350',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'image',
         'weight' => 0,
@@ -950,6 +1013,7 @@ function pnf_agenda_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'image_field_caption' => 1,
@@ -1072,6 +1136,7 @@ function pnf_agenda_field_default_field_instances() {
       'default_value2' => 'strtotime',
       'default_value_code' => '',
       'default_value_code2' => '+ 10 years',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1182,6 +1247,7 @@ function pnf_agenda_field_default_field_instances() {
     'label' => 'Public',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1275,6 +1341,7 @@ function pnf_agenda_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'allow_override' => 0,
+      'entity_translation_sync' => FALSE,
       'referencable_types' => array(
         'audio' => 0,
         'file' => 0,
@@ -1371,6 +1438,7 @@ function pnf_agenda_field_default_field_instances() {
     'label' => 'Secteurs',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1384,17 +1452,17 @@ function pnf_agenda_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Catégorie');
+  t('Category');
   t('Coordonnées GPS');
   t('Dates');
   t('Dates début/fin publication');
   t('Descriptif');
-  t('Documents utiles');
   t('Galerie photo');
   t('Image phare');
-  t('Lieu');
+  t('Location');
   t('Public');
   t('Secteurs');
+  t('Useful documents');
 
   return $field_instances;
 }

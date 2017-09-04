@@ -11,7 +11,7 @@ function pnf_documents_uuid_features_default_terms() {
   $terms = array();
 
   $terms[] = array(
-    'name' => 'Dossier de presse',
+    'name' => 'Press pack',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
@@ -19,9 +19,12 @@ function pnf_documents_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'document_categories',
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
-    'name' => 'Journal du parc',
+    'name' => 'Park journal',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
@@ -29,9 +32,12 @@ function pnf_documents_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'document_categories',
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   $terms[] = array(
-    'name' => 'Communiqué de presse',
+    'name' => 'Press release',
     'description' => '',
     'format' => 'full_html',
     'weight' => 0,
@@ -39,6 +45,9 @@ function pnf_documents_uuid_features_default_terms() {
     'language' => 'und',
     'i18n_tsid' => 0,
     'vocabulary_machine_name' => 'document_categories',
+    'path' => array(
+      'pathauto' => 1,
+    ),
   );
   return $terms;
 }

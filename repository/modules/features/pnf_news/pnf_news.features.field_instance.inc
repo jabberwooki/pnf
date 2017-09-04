@@ -218,6 +218,7 @@ function pnf_news_field_default_field_instances() {
       'context_default' => 'sdl_editor_representation',
       'display_summary' => 1,
       'dnd_enabled' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -441,6 +442,7 @@ function pnf_news_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -563,10 +565,11 @@ function pnf_news_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_downloadable_docs',
-    'label' => 'Documents utiles',
+    'label' => 'Useful links',
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'documents/news',
       'file_extensions' => 'txt doc docx xls xlsx pdf jpg',
       'max_filesize' => '',
@@ -596,6 +599,7 @@ function pnf_news_field_default_field_instances() {
           ),
           'source_reference' => array(
             'autocomplete' => 0,
+            'search_all_fields' => 0,
           ),
         ),
         'progress_indicator' => 'throbber',
@@ -765,6 +769,7 @@ function pnf_news_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'image_field_caption' => 1,
@@ -918,9 +923,10 @@ function pnf_news_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_news_category',
-    'label' => 'Catégorie',
+    'label' => 'Category',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1065,6 +1071,7 @@ function pnf_news_field_default_field_instances() {
         'video' => -13,
       ),
       'default_edit_mode' => 'open',
+      'entity_translation_sync' => FALSE,
       'title' => 'Paragraph',
       'title_multiple' => 'Paragraphs',
       'user_register_form' => FALSE,
@@ -1154,9 +1161,10 @@ function pnf_news_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_news_tags',
-    'label' => 'Mots-clés',
+    'label' => 'Keywords',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1250,6 +1258,7 @@ function pnf_news_field_default_field_instances() {
     'label' => 'Type',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1343,6 +1352,7 @@ function pnf_news_field_default_field_instances() {
       'default_value2' => 'strtotime',
       'default_value_code' => '',
       'default_value_code2' => '+ 10 years',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1441,6 +1451,7 @@ function pnf_news_field_default_field_instances() {
     'label' => 'Public',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1564,6 +1575,7 @@ function pnf_news_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'allow_override' => 0,
+      'entity_translation_sync' => FALSE,
       'referencable_types' => array(
         'audio' => 0,
         'file' => 0,
@@ -1659,9 +1671,10 @@ function pnf_news_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_sectors',
-    'label' => 'Secteurs',
+    'label' => 'Sectors',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1675,19 +1688,19 @@ function pnf_news_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Catégorie');
+  t('Category');
   t('Contenu');
   t('Date de publication affichée');
   t('Dates début/fin publication');
   t('Descriptif');
-  t('Documents utiles');
   t('Galerie photo');
   t('Image phare');
+  t('Keywords');
   t('La date qui sera affichée sur le site.');
-  t('Mots-clés');
   t('Public');
-  t('Secteurs');
+  t('Sectors');
   t('Type');
+  t('Useful links');
 
   return $field_instances;
 }

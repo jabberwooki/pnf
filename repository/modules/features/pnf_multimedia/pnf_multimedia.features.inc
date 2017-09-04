@@ -32,13 +32,24 @@ function pnf_multimedia_views_api($module = NULL, $api = NULL) {
 function pnf_multimedia_custom_breadcrumbs_paths_features_default_settings() {
   $custom_breadcrumbs = array();
 
+  // Exported custom breadcrumb: multimedia_galeries_d_images_en_.
+  $custom_breadcrumbs['multimedia_galeries_d_images_en_'] = array(
+    'name' => 'Multimedia - Galeries d\'images (EN)',
+    'titles' => 'Image galleries',
+    'paths' => 'image-galleries',
+    'visibility_php' => '',
+    'specific_path' => 'image-galleries/*',
+    'language' => 'en',
+    'machine_name' => 'multimedia_galeries_d_images_en_',
+  );
+
   // Exported custom breadcrumb: multimedia_galleries.
   $custom_breadcrumbs['multimedia_galleries'] = array(
-    'name' => 'Mediathèque - Galeries photo',
+    'name' => 'Multimedia - Galeries d\'images',
     'titles' => 'Galeries d\'images',
-    'paths' => 'galeries-photo',
+    'paths' => 'image-galleries',
     'visibility_php' => '',
-    'specific_path' => 'galeries-photo/*',
+    'specific_path' => 'image-galleries/*',
     'language' => 'fr',
     'machine_name' => 'multimedia_galleries',
   );
@@ -56,7 +67,7 @@ function pnf_multimedia_custom_breadcrumbs_paths_features_default_settings() {
 
   // Exported custom breadcrumb: multimedia_sounds.
   $custom_breadcrumbs['multimedia_sounds'] = array(
-    'name' => 'Médiathèque - Sons',
+    'name' => 'Multimedia - Sons (FR)',
     'titles' => 'Sons',
     'paths' => 'sons',
     'visibility_php' => '',
@@ -65,15 +76,37 @@ function pnf_multimedia_custom_breadcrumbs_paths_features_default_settings() {
     'machine_name' => 'multimedia_sounds',
   );
 
+  // Exported custom breadcrumb: multimedia_sounds_en.
+  $custom_breadcrumbs['multimedia_sounds_en'] = array(
+    'name' => 'Multimedia - Sons (EN)',
+    'titles' => 'Sounds',
+    'paths' => 'sounds',
+    'visibility_php' => '',
+    'specific_path' => 'sounds/*',
+    'language' => 'en',
+    'machine_name' => 'multimedia_sounds_en',
+  );
+
   // Exported custom breadcrumb: multimedia_videos.
   $custom_breadcrumbs['multimedia_videos'] = array(
-    'name' => 'Multimedia - Vidéos',
+    'name' => 'Multimedia - Vidéos (FR)',
     'titles' => 'Vidéos',
     'paths' => 'videos',
     'visibility_php' => '',
     'specific_path' => 'videos/*',
     'language' => 'fr',
     'machine_name' => 'multimedia_videos',
+  );
+
+  // Exported custom breadcrumb: multimedia_videos_en.
+  $custom_breadcrumbs['multimedia_videos_en'] = array(
+    'name' => 'Multimedia - Vidéos (EN)',
+    'titles' => 'Videos',
+    'paths' => 'videos',
+    'visibility_php' => '',
+    'specific_path' => 'videos/*',
+    'language' => 'en',
+    'machine_name' => 'multimedia_videos_en',
   );
 
   return $custom_breadcrumbs;
@@ -190,12 +223,12 @@ function pnf_multimedia_scald_default_context_types() {
         'settings' => array(
           'width' => '100%',
           'height' => '500px',
-          'fullscreen_link' => 0,
+          'fullscreen_link' => 1,
           'thumb_style' => '200w',
           'normal_style' => 'large',
           'big_style' => 'original',
           'theme' => 'classic',
-          'options' => '',
+          'options' => '{"transition": "fade"}',
         ),
       ),
     ),

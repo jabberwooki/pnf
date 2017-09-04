@@ -19,8 +19,11 @@ function pnf_news_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
+        'news' => 'news',
         'actualites' => 'actualites',
+        'newsflashes' => 'newsflashes',
         'breves' => 'breves',
+        'files' => 'files',
         'dossiers' => 'dossiers',
       ),
     ),

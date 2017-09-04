@@ -52,6 +52,7 @@ function pnf_promotions_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'image_field_caption' => 0,
@@ -153,6 +154,7 @@ function pnf_promotions_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -189,8 +191,25 @@ function pnf_promotions_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => NULL,
-        'settings' => array(),
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => '',
+        ),
         'type' => 'number_integer',
         'weight' => 4,
       ),
@@ -206,6 +225,7 @@ function pnf_promotions_field_default_field_instances() {
     'label' => 'Poids',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'range' => 20,
       'user_register_form' => FALSE,
     ),

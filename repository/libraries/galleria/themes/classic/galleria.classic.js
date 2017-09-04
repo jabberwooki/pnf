@@ -1,9 +1,10 @@
 /**
- * Galleria Classic Theme 2012-08-08
+ * Galleria Classic Theme 2017-02-13
  * http://galleria.io
  *
+ * Copyright (c) 2010 - 2017 worse is better UG
  * Licensed under the MIT license
- * https://raw.github.com/aino/galleria/master/LICENSE
+ * https://raw.github.com/worseisbetter/galleria/master/LICENSE
  *
  */
 
@@ -13,6 +14,7 @@
 
 Galleria.addTheme({
     name: 'classic',
+    version: 1.5,
     author: 'Galleria',
     css: 'galleria.classic.css',
     defaults: {

@@ -86,6 +86,13 @@ function pnf_promotions_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'promotion' => 'promotion',
   );
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
 
   /* Display: Bloc 3 promos */
   $handler = $view->new_display('block', 'Bloc 3 promos', 'promos_front');
@@ -110,17 +117,6 @@ function pnf_promotions_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $translatables['promotions'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Bloc 3 promos'),
-    t('Bloc 4 promos'),
-  );
   $export['promotions'] = $view;
 
   return $export;

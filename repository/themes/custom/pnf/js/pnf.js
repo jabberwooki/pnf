@@ -60,6 +60,51 @@
     $('#block-menu-menu-tools').find('li span').each(function() {
       $(this).css('width', $(this).width() + 44);
     });
+    //----------------- Lignes rajoutées par CE ------------------------------------------------------------------------
+    // 1 - On fait d'abord des calculs.
+    // 1.1 - Calcul de la largeur du plus grand item de menu.
+    var maxToolbarItemWidth = 0;
+    $('#block-menu-menu-tools ul li a span').each(function () {
+      var itemWidth = $(this).width();
+      if (itemWidth > maxToolbarItemWidth) {
+        maxToolbarItemWidth = itemWidth;
+      }
+    });
+    // 1.2 - Calcul du padding right.
+    var toolbarItemPaddingRight = parseInt($('#block-menu-menu-tools ul li a').css('padding-right'));
+    // 1.3 - Le décalage à appliquer est la somme des deux valeurs précédentes + 3px pour tout bien cacher.
+    var marginRightOffset = -(maxToolbarItemWidth + toolbarItemPaddingRight + 3);
+
+    // 2 - Ensuite, on ferme la barre d'outils.
+    var toolbar = $('#block-menu-menu-tools ul');
+    toolbar.css('margin-right', marginRightOffset);
+
+    // 3 - Puis on prépare les styles css à appliquer.
+    // 3.1 - Styles de la barre fermée.
+    var toolbarClosedStyles = {
+      marginRight: marginRightOffset
+    }
+    // 3.2 - Styles de la barre ouverte, avec transition css3.
+    var toolbarOpenStyles = {
+      marginRight: 0,
+      backgroundColor: "rgba(0, 0, 0, 0.5)",
+      WebkitTransition: "all 0.6s ease-in-out",
+      MozTransition: "all 0.6s ease-in-out",
+      MsTransition: "all 0.6s ease-in-out",
+      OTransition: "all 0.6s ease-in-out",
+      transition: "all 0.6s ease-in-out"
+    }
+
+    // 4 - Mécanismes d'ouverture/fermeture du menu.
+    // 4.1 - Lorsque la souris entre dans la barre d'outils
+    toolbar.mouseenter(function () {
+      $(this).css(toolbarOpenStyles);
+    });
+    // 4.2 - Lorsque la souris sort de la barre d'outils.
+    toolbar.mouseleave(function () {
+      $(this).css(toolbarClosedStyles);
+    })
+    //----------------- Fin des lignes rajoutées par CE ----------------------------------------------------------------
 
     // Match height on landing pages thumbnails.
     $('.block-child-menu-items .col .cmi-wrapper').matchHeight('options');
@@ -180,7 +225,7 @@
       rank++;
     });
 
-    // Hugly hack to fix Menu du park bad display after Menu Field contrib module activation.
+    // Hugly hack to fix Menu du park bad display jqu Menu Field contrib module activation.
     $("#block-menu-menu-menu-park ul.menu > li").removeClass("collapsed");
     $("#block-menu-menu-menu-park ul.menu > li").addClass("expanded");
   }); // End of document ready

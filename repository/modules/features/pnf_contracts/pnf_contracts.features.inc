@@ -34,13 +34,51 @@ function pnf_contracts_custom_breadcrumb_features_default_settings() {
 
   // Exported custom breadcrumb: public_contracts.
   $custom_breadcrumbs['public_contracts'] = array(
-    'name' => 'Marchés publics',
-    'titles' => 'Marchés publics',
-    'paths' => 'marches-publics',
-    'visibility_php' => '',
+    'name' => 'Marchés publics (EN)',
+    'titles' => 'Current public contracts',
+    'paths' => 'current-public-contracts',
+    'visibility_php' => 'if ($node->field_contract_status[\'und\'][0][\'value\'] == 1) return TRUE;
+return FALSE;',
+    'node_type' => 'contract',
+    'language' => 'en',
+    'machine_name' => 'public_contracts',
+  );
+
+  // Exported custom breadcrumb: public_contracts__awarded_fr.
+  $custom_breadcrumbs['public_contracts__awarded_fr'] = array(
+    'name' => 'Marchés publics attribués (FR)',
+    'titles' => 'Marchés publics attribués',
+    'paths' => 'marches-publics-attribues',
+    'visibility_php' => 'if ($node->field_contract_status[\'und\'][0][\'value\'] == 2) return TRUE;
+return FALSE;
+',
     'node_type' => 'contract',
     'language' => 'fr',
-    'machine_name' => 'public_contracts',
+    'machine_name' => 'public_contracts__awarded_fr',
+  );
+
+  // Exported custom breadcrumb: public_contracts_awarded_en.
+  $custom_breadcrumbs['public_contracts_awarded_en'] = array(
+    'name' => 'Marchés publics attribués (EN)',
+    'titles' => 'Awarded public contracts',
+    'paths' => 'awarded-public-contracts',
+    'visibility_php' => 'if ($node->field_contract_status[\'und\'][0][\'value\'] == 2) return TRUE;
+return FALSE;',
+    'node_type' => 'contract',
+    'language' => 'en',
+    'machine_name' => 'public_contracts_awarded_en',
+  );
+
+  // Exported custom breadcrumb: public_contracts_fr.
+  $custom_breadcrumbs['public_contracts_fr'] = array(
+    'name' => 'Marchés publics (FR)',
+    'titles' => 'Marchés publics en cours',
+    'paths' => 'marches-publics-en-cours',
+    'visibility_php' => 'if ($node->field_contract_status[\'und\'][0][\'value\'] == 1) return TRUE;
+return FALSE;',
+    'node_type' => 'contract',
+    'language' => 'fr',
+    'machine_name' => 'public_contracts_fr',
   );
 
   return $custom_breadcrumbs;

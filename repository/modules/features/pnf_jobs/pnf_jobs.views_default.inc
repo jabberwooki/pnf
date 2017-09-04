@@ -139,7 +139,7 @@ function pnf_jobs_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Content: Publié le (field_job_pub_date) */
+  /* Sort criterion: Content: Published on (field_job_pub_date) */
   $handler->display->display_options['sorts']['field_job_pub_date_value']['id'] = 'field_job_pub_date_value';
   $handler->display->display_options['sorts']['field_job_pub_date_value']['table'] = 'field_data_field_job_pub_date';
   $handler->display->display_options['sorts']['field_job_pub_date_value']['field'] = 'field_job_pub_date_value';
@@ -165,17 +165,24 @@ function pnf_jobs_views_default_views() {
   $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
   $handler->display->display_options['filters']['uuid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['filters']['uuid']['value'] = 'e2a28688-49e5-4d6a-9f18-e283c535ef4e';
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
 
   /* Display: Offres d'emploi */
   $handler = $view->new_display('page', 'Offres d\'emploi', 'page_jobs');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Offres d\'emploi';
-  $handler->display->display_options['path'] = 'offres-demploi';
+  $handler->display->display_options['title'] = 'Jobs';
+  $handler->display->display_options['path'] = 'jobs';
 
   /* Display: Stages */
   $handler = $view->new_display('page', 'Stages', 'page_trainings');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Stages';
+  $handler->display->display_options['title'] = 'Trainings';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -199,12 +206,19 @@ function pnf_jobs_views_default_views() {
   $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
   $handler->display->display_options['filters']['uuid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['filters']['uuid']['value'] = '10cefd12-d3b9-40ec-8f72-a307bc542291';
-  $handler->display->display_options['path'] = 'stages';
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
+  $handler->display->display_options['path'] = 'trainings';
 
   /* Display: Services Civiques */
   $handler = $view->new_display('page', 'Services Civiques', 'page_civil_services');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Services civiques';
+  $handler->display->display_options['title'] = 'Civic services';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -228,31 +242,14 @@ function pnf_jobs_views_default_views() {
   $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
   $handler->display->display_options['filters']['uuid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['filters']['uuid']['value'] = '6e6ec346-0414-4f86-868c-f8151f3644c3';
-  $handler->display->display_options['path'] = 'services-civiques';
-  $translatables['jobs'] = array(
-    t('Master'),
-    t('Offres d\'emplois'),
-    t('more'),
-    t('Appliquer'),
-    t('Réinitialiser'),
-    t('Trier par'),
-    t('Asc'),
-    t('Desc'),
-    t('Options avancées'),
-    t('Sélectionnez n\'importe quel filtre et cliquez sur Appliquer pour voir les résultats'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('terme'),
-    t('Offres d\'emploi'),
-    t('Stages'),
-    t('Services Civiques'),
-    t('Services civiques'),
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
+  $handler->display->display_options['path'] = 'civic-services';
   $export['jobs'] = $view;
 
   return $export;

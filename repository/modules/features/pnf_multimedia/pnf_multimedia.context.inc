@@ -86,7 +86,7 @@ function pnf_multimedia_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'galeries-photo*' => 'galeries-photo*',
+        'image-galleries' => 'image-galleries',
       ),
     ),
   );
@@ -98,12 +98,6 @@ function pnf_multimedia_context_default_contexts() {
           'delta' => 'menu-multimedia',
           'region' => 'sidebar_second',
           'weight' => '-10',
-        ),
-        'views--exp-multimedia-page_photos' => array(
-          'module' => 'views',
-          'delta' => '-exp-multimedia-page_photos',
-          'region' => 'sidebar_second',
-          'weight' => '-9',
         ),
       ),
     ),
@@ -124,7 +118,7 @@ function pnf_multimedia_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'sons*' => 'sons*',
+        'sounds*' => 'sounds*',
       ),
     ),
   );
@@ -136,12 +130,6 @@ function pnf_multimedia_context_default_contexts() {
           'delta' => 'menu-multimedia',
           'region' => 'sidebar_second',
           'weight' => '-10',
-        ),
-        'views--exp-multimedia-page_sounds' => array(
-          'module' => 'views',
-          'delta' => '-exp-multimedia-page_sounds',
-          'region' => 'sidebar_second',
-          'weight' => '-9',
         ),
       ),
     ),

@@ -14,7 +14,7 @@ function kpages_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_page';
-  $strongarm->value = '1';
+  $strongarm->value = '2';
   $export['language_content_type_page'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -26,8 +26,9 @@ function kpages_strongarm() {
     1 => 'menu-national-parks',
     2 => 'menu-menu-park',
     3 => 'main-menu',
-    4 => 'menu-menu-themes',
-    5 => 'menu-join-national-park',
+    4 => 'menu-menu-themes-en',
+    5 => 'menu-menu-themes',
+    6 => 'menu-join-national-park',
   );
   $export['menu_options_page'] = $strongarm;
 

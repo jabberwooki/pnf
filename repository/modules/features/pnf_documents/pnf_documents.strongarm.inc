@@ -141,7 +141,7 @@ function pnf_documents_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_document';
-  $strongarm->value = '1';
+  $strongarm->value = '2';
   $export['language_content_type_document'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -185,14 +185,14 @@ function pnf_documents_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_document_en_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'documents/[node:title]';
   $export['pathauto_node_document_en_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_document_fr_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'documents/[node:title]';
   $export['pathauto_node_document_fr_pattern'] = $strongarm;
 
   $strongarm = new stdClass();

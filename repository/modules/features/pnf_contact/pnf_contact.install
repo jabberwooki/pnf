@@ -14,3 +14,17 @@ function pnf_contact_update_7001() {
   $file = (object) array('filename' => basename($po_file), 'uri' => $po_file);
   _locale_import_po($file, 'fr', LOCALE_IMPORT_OVERWRITE, 'default');
 }
+
+/**
+ * Activate entity_translation module.
+ */
+function pnf_contact_update_7002() {
+  module_enable(array('entity_translation'));
+}
+
+/**
+ * Activate entityform_i18n module.
+ */
+function pnf_contact_update_7003() {
+  module_enable(array('entityform_i18n'));
+}

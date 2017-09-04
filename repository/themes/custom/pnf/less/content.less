@@ -82,7 +82,7 @@ a {
         color: #333;
         margin: 1.5em 10px;
         padding: 0.5em 10px;
-        quotes: "\201C""\201D""\2018""\2019";
+        quotes: "\201C" "\201D" "\2018" "\2019";
         border: none;
     }
     blockquote:before {
@@ -398,6 +398,9 @@ blockquote.image-field-caption:before{
 //*FRONT*//
 
 /*Blocks titles*/
+.region-pre-content-right{
+    margin-bottom: 30px;
+}
 .region-pre-content-left,
 .region-pre-content-right,
 #block-views-news-block-news-files-home{
@@ -1253,6 +1256,10 @@ h2.page-header{
         bottom: 0;
         right: 0;
     }
+    /*BLOCS PROMOS*/
+    .front .region-content .views-field.views-field-field-promo-image {
+        margin-top: 30px;
+    }
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -1266,6 +1273,21 @@ h2.page-header{
         position: absolute;
         bottom: -5%;
         right: 30%;
+    }
+    /*BLOCS PROMOS*/
+    .front .region-content .views-field.views-field-field-promo-image {
+        margin-top: 0;
+    }
+    /*Tous les DOSSIERS et AGENDA*/
+    #block-views-events-block-events-home .view-header,
+    #block-views-news-block-news-files-home .view-header{
+        position: absolute;
+        bottom: -30px;
+        right: 0;
+    }
+    #block-views-events-block-events-home .view-header {
+        bottom: 0;
+        right: 20px;
     }
 }
 
@@ -1298,6 +1320,12 @@ h2.page-header{
         bottom: -5%;
         right: 30%;
     }
+    /*Tous les DOSSIERS et AGENDA*/
+    #block-views-events-block-events-home .view-header,
+    #block-views-news-block-news-files-home .view-header{
+        position: relative;
+        bottom: initial;
+    }
 }
 
 /* Exportables pages */
@@ -1319,4 +1347,70 @@ h2.page-header{
     text-align:left;
     /* inline-block space fix */
     margin-right:-4px;
+}
+
+#scald-atom-add-form-add {
+    div#edit-file-upload {
+        input {
+            height: auto;
+        }
+        .form-control {
+            height: auto;
+            .file {
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+#scald-atom-add-form-options {
+    .wizard-trail {
+        text-align: right;
+        font-size: 80%;
+        font-style: italic;;
+    }
+    .atom-wrapper {
+        .field-name-scald-thumbnail {
+            input.form-file {
+                height: auto;
+            }
+            .image-widget-data {
+                .file {
+                    a {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#scald-atom-add-form-options--2 {
+    .atom-wrapper {
+        .field-name-scald-thumbnail {
+            .image-widget-data {
+                .file {
+                    a {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.galleria-fullscreen {
+    margin: 10px 0;
+    text-align: center;
+    a {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: @brand-primary;
+        color: white;
+    }
+    a:hover {
+        cursor: pointer;
+    }
 }

@@ -119,34 +119,16 @@ function pnf_slideshow_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'slide' => 'slide',
   );
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
 
   /* Display: Diaporama accueil */
   $handler = $view->new_display('block', 'Diaporama accueil', 'block_slideshow_home');
-  $translatables['slideshow'] = array(
-    t('Master'),
-    t('Diaporama'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Photo'),
-    t('<div id="slide-infos-wrapper">
-  <div id="slide-infos-title"><h2>[title]</2></div>
-  <div id="front-slideshow-controls">
-    <a class="carousel-control left" href="#views-bootstrap-carousel-1" data-slide="prev">
-      <span class="icon-prev"></span>
-    </a>
-    <a class="carousel-control right" href="#views-bootstrap-carousel-1" data-slide="next">
-      <span class="icon-next"></span>
-    </a>
-  </div>
-  <div id="slide-infos-body">[body]</div>
-  <div id="slide-infos-credit">[field_credit]</div>
-</div>'),
-    t('Diaporama accueil'),
-  );
   $export['slideshow'] = $view;
 
   return $export;

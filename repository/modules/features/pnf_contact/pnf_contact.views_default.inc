@@ -47,20 +47,6 @@ function pnf_contact_views_default_views() {
 
   /* Display: Bloc contact accueil */
   $handler = $view->new_display('block', 'Bloc contact accueil', 'contact_front');
-  $translatables['contact'] = array(
-    t('Master'),
-    t('Contactez-nous'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Internal, numeric block ID'),
-    t('.'),
-    t(','),
-    t('Bloc contact accueil'),
-  );
   $export['contact'] = $view;
 
   return $export;

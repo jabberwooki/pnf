@@ -10,12 +10,12 @@
 function pnf_contracts_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-menu-public-contracts_attribus:marches-publics-attribues.
-  $menu_links['menu-menu-public-contracts_attribus:marches-publics-attribues'] = array(
+  // Exported menu link: menu-menu-public-contracts_awarded-contracts:awarded-public-contracts.
+  $menu_links['menu-menu-public-contracts_awarded-contracts:awarded-public-contracts'] = array(
     'menu_name' => 'menu-menu-public-contracts',
-    'link_path' => 'marches-publics-attribues',
-    'router_path' => 'marches-publics-attribues',
-    'link_title' => 'Attribués',
+    'link_path' => 'awarded-public-contracts',
+    'router_path' => 'awarded-public-contracts',
+    'link_title' => 'Awarded contracts',
     'options' => array(
       'attributes' => array(),
       'item_attributes' => array(
@@ -24,24 +24,24 @@ function pnf_contracts_menu_default_menu_links() {
         'style' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-menu-public-contracts_attribus:marches-publics-attribues',
+      'identifier' => 'menu-menu-public-contracts_awarded-contracts:awarded-public-contracts',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 1,
+    'weight' => -45,
     'customized' => 1,
-    'language' => 'fr',
+    'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-menu-public-contracts_en-cours:marches-publics-en-cours.
-  $menu_links['menu-menu-public-contracts_en-cours:marches-publics-en-cours'] = array(
+  // Exported menu link: menu-menu-public-contracts_current-contracts:current-public-contracts.
+  $menu_links['menu-menu-public-contracts_current-contracts:current-public-contracts'] = array(
     'menu_name' => 'menu-menu-public-contracts',
-    'link_path' => 'marches-publics-en-cours',
-    'router_path' => 'marches-publics-en-cours',
-    'link_title' => 'En cours',
+    'link_path' => 'current-public-contracts',
+    'router_path' => 'current-public-contracts',
+    'link_title' => 'Current contracts',
     'options' => array(
       'attributes' => array(),
       'item_attributes' => array(
@@ -50,14 +50,14 @@ function pnf_contracts_menu_default_menu_links() {
         'style' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-menu-public-contracts_en-cours:marches-publics-en-cours',
+      'identifier' => 'menu-menu-public-contracts_current-contracts:current-public-contracts',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -46,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
@@ -65,8 +65,8 @@ function pnf_contracts_menu_default_menu_links() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Attribués');
-  t('En cours');
+  t('Awarded contracts');
+  t('Current contracts');
 
   return $menu_links;
 }

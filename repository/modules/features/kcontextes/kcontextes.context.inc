@@ -56,12 +56,6 @@ function kcontextes_context_default_contexts() {
           'region' => 'top_menu',
           'weight' => '-6',
         ),
-        'tb_megamenu-menu-menu-themes' => array(
-          'module' => 'tb_megamenu',
-          'delta' => 'menu-menu-themes',
-          'region' => 'navigation',
-          'weight' => '-10',
-        ),
         'custom_search_blocks-1' => array(
           'module' => 'custom_search_blocks',
           'delta' => '1',
@@ -191,6 +185,80 @@ function kcontextes_context_default_contexts() {
   t('All pages but front');
   t('Core');
   $export['not-front'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'themes_en';
+  $context->description = '';
+  $context->tag = 'Navigation thématique';
+  $context->conditions = array(
+    'language' => array(
+      'values' => array(
+        'en' => 'en',
+      ),
+    ),
+    'sitewide' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'tb_megamenu-menu-menu-themes-en' => array(
+          'module' => 'tb_megamenu',
+          'delta' => 'menu-menu-themes-en',
+          'region' => 'navigation',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Navigation thématique');
+  $export['themes_en'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'themes_fr';
+  $context->description = '';
+  $context->tag = 'Navigation thématique';
+  $context->conditions = array(
+    'language' => array(
+      'values' => array(
+        'fr' => 'fr',
+      ),
+    ),
+    'sitewide' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'tb_megamenu-menu-menu-themes' => array(
+          'module' => 'tb_megamenu',
+          'delta' => 'menu-menu-themes',
+          'region' => 'navigation',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Navigation thématique');
+  $export['themes_fr'] = $context;
 
   return $export;
 }

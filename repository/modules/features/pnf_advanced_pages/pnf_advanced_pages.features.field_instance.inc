@@ -122,6 +122,7 @@ function pnf_advanced_pages_field_default_field_instances() {
         'video' => -13,
       ),
       'default_edit_mode' => 'open',
+      'entity_translation_sync' => FALSE,
       'title' => 'Paragraph',
       'title_multiple' => 'Paragraphs',
       'user_register_form' => FALSE,
@@ -203,6 +204,7 @@ function pnf_advanced_pages_field_default_field_instances() {
     'label' => 'Articles liés',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -272,6 +274,7 @@ function pnf_advanced_pages_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'allow_override' => 0,
+      'entity_translation_sync' => FALSE,
       'referencable_types' => array(
         'audio' => 0,
         'file' => 0,
@@ -376,6 +379,7 @@ function pnf_advanced_pages_field_default_field_instances() {
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -481,6 +485,7 @@ function pnf_advanced_pages_field_default_field_instances() {
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -561,6 +566,7 @@ function pnf_advanced_pages_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'available_docs',
       'file_extensions' => 'pdf doc docx xls xlsx jpg jpeg gif png',
       'max_filesize' => '',
@@ -673,6 +679,7 @@ function pnf_advanced_pages_field_default_field_instances() {
       'context' => 'debug',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -777,6 +784,7 @@ function pnf_advanced_pages_field_default_field_instances() {
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -881,6 +889,7 @@ function pnf_advanced_pages_field_default_field_instances() {
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -987,6 +996,7 @@ function pnf_advanced_pages_field_default_field_instances() {
       'context' => 'debug',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -1017,8 +1027,20 @@ function pnf_advanced_pages_field_default_field_instances() {
         'label' => 'above',
         'module' => 'image',
         'settings' => array(
+          'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'image',
         'weight' => 0,
@@ -1035,6 +1057,18 @@ function pnf_advanced_pages_field_default_field_instances() {
           'colorbox_multivalue_index' => NULL,
           'colorbox_node_style' => '360w',
           'colorbox_node_style_first' => '',
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'colorbox',
         'weight' => 0,
@@ -1053,6 +1087,7 @@ function pnf_advanced_pages_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'image_field_caption' => 1,
@@ -1113,14 +1148,40 @@ function pnf_advanced_pages_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
         'type' => 'text_default',
         'weight' => 1,
       ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
         'type' => 'text_default',
         'weight' => 1,
       ),
@@ -1161,6 +1222,7 @@ function pnf_advanced_pages_field_default_field_instances() {
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -1251,6 +1313,7 @@ function pnf_advanced_pages_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'image_field_caption' => 1,
@@ -1385,6 +1448,7 @@ function pnf_advanced_pages_field_default_field_instances() {
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -1475,6 +1539,7 @@ function pnf_advanced_pages_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'image_field_caption' => 1,
@@ -1617,6 +1682,7 @@ function pnf_advanced_pages_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'image_field_caption' => 1,
@@ -1750,6 +1816,7 @@ function pnf_advanced_pages_field_default_field_instances() {
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -1840,6 +1907,7 @@ function pnf_advanced_pages_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'image_field_caption' => 1,
@@ -1973,6 +2041,7 @@ function pnf_advanced_pages_field_default_field_instances() {
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -2003,8 +2072,20 @@ function pnf_advanced_pages_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'field_formatter_class' => '',
           'image_link' => '',
           'image_style' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'image',
         'weight' => 1,
@@ -2021,6 +2102,18 @@ function pnf_advanced_pages_field_default_field_instances() {
           'colorbox_multivalue_index' => NULL,
           'colorbox_node_style' => '360w',
           'colorbox_node_style_first' => '',
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
         ),
         'type' => 'colorbox',
         'weight' => 1,
@@ -2039,6 +2132,7 @@ function pnf_advanced_pages_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'image_field_caption' => 1,
@@ -2099,14 +2193,40 @@ function pnf_advanced_pages_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
         'type' => 'text_default',
         'weight' => 0,
       ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_formatter_class' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
         'type' => 'text_default',
         'weight' => 0,
       ),
@@ -2147,6 +2267,7 @@ function pnf_advanced_pages_field_default_field_instances() {
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -2231,6 +2352,7 @@ function pnf_advanced_pages_field_default_field_instances() {
     'required' => 1,
     'settings' => array(
       'allow_override' => 0,
+      'entity_translation_sync' => FALSE,
       'referencable_types' => array(
         'audio' => 0,
         'file' => 0,
@@ -2337,6 +2459,7 @@ function pnf_advanced_pages_field_default_field_instances() {
       'context' => 'debug',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,

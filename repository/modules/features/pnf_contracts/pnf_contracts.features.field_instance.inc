@@ -114,6 +114,7 @@ function pnf_contracts_field_default_field_instances() {
       'context' => '',
       'display_summary' => 0,
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -176,7 +177,7 @@ function pnf_contracts_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'inline',
-        'module' => 'taxonomy',
+        'module' => 'i18n_taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
           'linked_field' => array(
@@ -191,15 +192,16 @@ function pnf_contracts_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'taxonomy_term_reference_plain',
+        'type' => 'i18n_taxonomy_term_reference_plain',
         'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_contract_category',
-    'label' => 'Catégorie du marché',
+    'label' => 'Contract category',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -324,13 +326,14 @@ function pnf_contracts_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_contract_deadline_date',
-    'label' => 'Date limite de remise des offres du marché',
+    'label' => 'Closing date for submission',
     'required' => 0,
     'settings' => array(
       'default_value' => 'now',
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -415,6 +418,7 @@ function pnf_contracts_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -490,6 +494,7 @@ function pnf_contracts_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'contracts',
       'file_extensions' => 'pdf',
       'max_filesize' => '',
@@ -618,13 +623,14 @@ function pnf_contracts_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_contract_object',
-    'label' => 'Objet de la consultation',
+    'label' => 'Subject of the consultation',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
+          'mailchimp_campaign' => 0,
           'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 0,
@@ -637,14 +643,19 @@ function pnf_contracts_field_default_field_instances() {
             'full_html' => array(
               'weight' => -10,
             ),
+            'mailchimp_campaign' => array(
+              'weight' => 0,
+            ),
             'plain_text' => array(
               'weight' => 10,
             ),
           ),
         ),
       ),
-      'context' => '',
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -778,13 +789,14 @@ function pnf_contracts_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_contract_projected_date',
-    'label' => 'Date prévisionnelle de début de la prestation',
+    'label' => 'Planned contract start date',
     'required' => 0,
     'settings' => array(
       'default_value' => 'now',
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -917,13 +929,14 @@ function pnf_contracts_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_contract_pub_date',
-    'label' => 'Date de publication du marché',
+    'label' => 'Contract publication date',
     'required' => 0,
     'settings' => array(
       'default_value' => 'now',
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -976,7 +989,7 @@ function pnf_contracts_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'list',
+        'module' => 'i18n_field',
         'settings' => array(
           'field_formatter_class' => '',
           'linked_field' => array(
@@ -991,7 +1004,7 @@ function pnf_contracts_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'list_default',
+        'type' => 'i18n_list_default',
         'weight' => 9,
       ),
       'print' => array(
@@ -1023,9 +1036,10 @@ function pnf_contracts_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_contract_status',
-    'label' => 'Statut de la consultation',
+    'label' => 'Consultation status',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1066,7 +1080,7 @@ function pnf_contracts_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
+        'module' => 'i18n_taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
           'linked_field' => array(
@@ -1081,7 +1095,7 @@ function pnf_contracts_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'taxonomy_term_reference_plain',
+        'type' => 'i18n_taxonomy_term_reference_plain',
         'weight' => 5,
       ),
       'print' => array(
@@ -1106,7 +1120,7 @@ function pnf_contracts_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'inline',
-        'module' => 'taxonomy',
+        'module' => 'i18n_taxonomy',
         'settings' => array(
           'field_formatter_class' => '',
           'linked_field' => array(
@@ -1121,15 +1135,16 @@ function pnf_contracts_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'taxonomy_term_reference_plain',
+        'type' => 'i18n_taxonomy_term_reference_plain',
         'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_procurement_type',
-    'label' => 'Type de procédure',
+    'label' => 'Procedure type',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1201,6 +1216,7 @@ function pnf_contracts_field_default_field_instances() {
       'default_value2' => 'strtotime',
       'default_value_code' => '',
       'default_value_code2' => '+ 10 years',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1222,17 +1238,17 @@ function pnf_contracts_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Catégorie du marché');
+  t('Closing date for submission');
   t('Consultation de l\'avis');
-  t('Date de publication du marché');
-  t('Date limite de remise des offres du marché');
-  t('Date prévisionnelle de début de la prestation');
+  t('Consultation status');
+  t('Contract category');
+  t('Contract publication date');
   t('Dates début/fin publication');
   t('Descriptif détaillé');
   t('Dossier de consultation');
-  t('Objet de la consultation');
-  t('Statut de la consultation');
-  t('Type de procédure');
+  t('Planned contract start date');
+  t('Procedure type');
+  t('Subject of the consultation');
 
   return $field_instances;
 }

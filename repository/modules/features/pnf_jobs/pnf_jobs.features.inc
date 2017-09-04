@@ -32,9 +32,30 @@ function pnf_jobs_views_api($module = NULL, $api = NULL) {
 function pnf_jobs_custom_breadcrumb_features_default_settings() {
   $custom_breadcrumbs = array();
 
+  // Exported custom breadcrumb: civic_services_en.
+  $custom_breadcrumbs['civic_services_en'] = array(
+    'name' => 'Services civiques (EN)',
+    'titles' => 'Civic services',
+    'paths' => 'civic-services',
+    'visibility_php' => '$jobterm_uuid = \'6e6ec346-0414-4f86-868c-f8151f3644c3\'; // Offre d\'emploi
+
+$job_type_tid = $node->field_job_type[\'und\'][0][\'tid\'];
+$term = taxonomy_term_load($job_type_tid);
+
+if ($term->uuid == $jobterm_uuid) {
+  return  TRUE;
+}
+else {
+  return FALSE;
+}',
+    'node_type' => 'job',
+    'language' => 'en',
+    'machine_name' => 'civic_services_en',
+  );
+
   // Exported custom breadcrumb: civil_services.
   $custom_breadcrumbs['civil_services'] = array(
-    'name' => 'Services civiques',
+    'name' => 'Services civiques (FR)',
     'titles' => 'Services civiques',
     'paths' => 'services-civiques',
     'visibility_php' => '$jobterm_uuid = \'6e6ec346-0414-4f86-868c-f8151f3644c3\'; // Offre d\'emploi
@@ -55,9 +76,9 @@ else {
 
   // Exported custom breadcrumb: jobs.
   $custom_breadcrumbs['jobs'] = array(
-    'name' => 'Offres d\'emploi',
+    'name' => 'Offres d\'emploi (FR)',
     'titles' => 'Offres d\'emploi',
-    'paths' => 'offres-demploi',
+    'paths' => 'offres-emploi',
     'visibility_php' => '$jobterm_uuid = \'e2a28688-49e5-4d6a-9f18-e283c535ef4e\'; // Offre d\'emploi
 
 $job_type_tid = $node->field_job_type[\'und\'][0][\'tid\'];
@@ -74,9 +95,51 @@ else {
     'machine_name' => 'jobs',
   );
 
+  // Exported custom breadcrumb: jobs_en.
+  $custom_breadcrumbs['jobs_en'] = array(
+    'name' => 'Offres d\'emploi (EN)',
+    'titles' => 'Jobs',
+    'paths' => 'jobs',
+    'visibility_php' => '$jobterm_uuid = \'e2a28688-49e5-4d6a-9f18-e283c535ef4e\'; // Offre d\'emploi
+
+$job_type_tid = $node->field_job_type[\'und\'][0][\'tid\'];
+$term = taxonomy_term_load($job_type_tid);
+
+if ($term->uuid == $jobterm_uuid) {
+  return  TRUE;
+}
+else {
+  return FALSE;
+}',
+    'node_type' => 'job',
+    'language' => 'en',
+    'machine_name' => 'jobs_en',
+  );
+
+  // Exported custom breadcrumb: stages_en_.
+  $custom_breadcrumbs['stages_en_'] = array(
+    'name' => 'Stages (EN)',
+    'titles' => 'Trainings',
+    'paths' => 'trainings',
+    'visibility_php' => '$jobterm_uuid = \'10cefd12-d3b9-40ec-8f72-a307bc542291\'; // Stages
+
+$job_type_tid = $node->field_job_type[\'und\'][0][\'tid\'];
+$term = taxonomy_term_load($job_type_tid);
+
+if ($term->uuid == $jobterm_uuid) {
+  return  TRUE;
+}
+else {
+  return FALSE;
+}',
+    'node_type' => 'job',
+    'language' => 'en',
+    'machine_name' => 'stages_en_',
+  );
+
   // Exported custom breadcrumb: trainings.
   $custom_breadcrumbs['trainings'] = array(
-    'name' => 'Stages',
+    'name' => 'Stages (FR)',
     'titles' => 'Stages',
     'paths' => 'stages',
     'visibility_php' => '$jobterm_uuid = \'10cefd12-d3b9-40ec-8f72-a307bc542291\'; // Stages

@@ -36,6 +36,7 @@ features[user_permission][] = edit any raa content
 features[user_permission][] = edit own raa content
 features[user_permission][] = edit terms in raa_categories
 features[variable][] = field_bundle_settings_node__raa
+features[variable][] = i18n_node_extended_raa
 features[variable][] = i18n_node_options_raa
 features[variable][] = language_content_type_raa
 features[variable][] = menu_options_raa

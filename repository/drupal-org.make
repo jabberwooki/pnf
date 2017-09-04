@@ -144,7 +144,7 @@ projects[email][version] = "1.3"
 ;projects[email_registration][version] = ""
 
 projects[entityform][subdir] = contrib
-projects[entityform][version] = "2.0-rc1"
+projects[entityform][version] = "2.0-rc4"
 
 projects[entityreference][subdir] = contrib
 projects[entityreference][version] = "1.1"
@@ -180,14 +180,8 @@ projects[honeypot][version] = "1.22"
 projects[honeypot_entityform][subdir] = contrib
 projects[honeypot_entityform][version] = "1.0"
 
-projects[i18n][subdir] = contrib
-projects[i18n][version] = "1.13"
-
 projects[less][subdir] = contrib
 projects[less][version] = "4.0"
-
-projects[lang_dropdown][subdir] = contrib
-projects[lang_dropdown][version] = "2.5"
 
 projects[linked_field][subdir] = contrib
 projects[linked_field][version] = "1.10"
@@ -242,6 +236,9 @@ projects[role_delegation][version] = "1.1"
 
 ;projects[rules][subdir] = contrib
 ;projects[rules][version] = ""
+
+projects[services][subdir] = contrib
+projects[services][version] = "2.3"
 
 projects[tb_megamenu][subdir] = contrib
 projects[tb_megamenu][version] = "1.0-rc2"
@@ -353,6 +350,23 @@ projects[scald_gallery][version] = "2.5"
 
 projects[filefield_sources_scald][subdir] = contrib
 projects[filefield_sources_scald][version] = "1.1"
+
+;=== i18n modules =============================================================
+projects[i18n][subdir] = contrib
+projects[i18n][version] = "1.13"
+
+projects[i18nviews][subdir] = contrib
+projects[i18nviews][version] = "3.0-alpha1"
+
+projects[entity_translation][subdir] = contrib
+projects[entity_translation][version] = "1.0-beta6"
+
+projects[lang_dropdown][subdir] = contrib
+projects[lang_dropdown][version] = "2.5"
+
+projects[title][subdir] = contrib
+projects[title][version] = "1.0-alpha9"
+
 
 ;=== Kstarter features modules ================================================
 includes[seo] = makefiles/seo.make
