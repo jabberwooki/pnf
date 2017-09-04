@@ -1,3 +1,95 @@
+PNx 1.5 - 2017-09-04
+====================
+ * pnf_news up: missing custom breadcrums for files (dossiers) added.
+ * kcore up: services module activation removed from .install file (needed only in PNC dev instance).
+ * kcore up: language_dropdown settings removed from feature.
+ * .gitignore file up: path to translation files added.
+ * kcore up: i18_strings source language set to EN.
+ * kcore up: Filtered and Full HTML added to allowed translatable formats.
+ * kcore up: missing module services added and activated.
+ * kcore up: function pnx_url_aliases_add() continued.
+ * kcore up: site translations store settings added, and site default language set again to FR.
+ * kcore, pnf_contact and pnf_contracts up: entity_translation settings moved from wrong to correct features.
+ * pnf_promotions up: field_weight updated.
+ * pnf_multimedia up: fullscreen link activated on image galleru atom full mode context.
+ * pnf_scientifc report up: permissions settings added.
+ * Galleria theme display customised.
+ * Galleria library version 1.5.7 added.
+ * Removal of version 1.4.2 of Galleria library.
+ * pnf_multimedia up: EN translation set up.
+ * pnf_agenda up: menu-news link Agenda localized instead of translated.
+ * pnf_news up: menu-tools and menu-news links altered: language specific links removed and replaced by localized links.
+ * PNF custom theme up: menu-tools behaviour improved: menu items are now clickable on whole width, not only item text.
+ * pnf_contracts up: missing menu_menu_public_contracts links added.
+ * pnf_jobs up: EN translation set up.
+ * pnf_documents up: EN translation set up.
+ * pnf_multimedia up: menu_multimedia 'Pubs and Docs' link translation reorganised with language neutral localized link.
+ * pnf_contracts up: menu-public-contracts links altered : FR and EN links removed and replaced by language neutral localized links.
+ * pnf_contracts up: EN translation set up.
+ * pnf_slideshow up: language filter added to the view block.
+ * pnf_promotions up: front page view block settings altered: current language filter added.
+ * kcore up: En TB_megamenu block settings added.
+ * kcontextes up: creation of news contextes for thematic navigation menus displays depending on current language.
+ * kcore up: existing theme menu language set to FR and new EN theme menu created.
+ * pnf_advanced_pages up: content type settings altered: advanced pages can now be added to EN theme menu.
+ * kpages up: content type menu settings altered: basic pages can now be added to EN theme menu.
+ * Features advanced_pages, contracts, documents, jobs, landing_pages, news, promotions and slideshow up: Due to the activation of entity_translation contrib module.
+ * kcore up: i18n settings on footer menu applied.
+ * kcore up: i18n settings on 'On the web' block (Suivez-nous) applied.
+ * kcore up: i18 settings on menu-join-national-park applied.
+ * pnf_contact up: i18n settings on contact bean blocks and contact entityform.
+ * pnf_raa up: pathauto EN and FR patterns switched.
+ * kcore up: i18n set up on menu pnf_park_menu_clone and its menu block.
+ * pnf_front_blocks up: Context pnce_front altered: lost Agenda block on front page (events-block_events_home) re-added.
+ * Feature pnf_scientific_reports created.
+ * kpages up: i18n settings updated.
+ * pnf_agenda up: i18n settings implemented.
+ * pnf_contracts, pnf_documents, pnf_jobs, pnf_multimedia, pnf_raa up: EN and FR pathauto pattern altered.
+ * kcore up: function pnx_url_aliases_add() improved.
+ * pnf_news up: newsflashes menu item updated.
+ * kcore up: functions handling manual creation of custom aliases in url_alias table added.
+ * pnf_news up: pathauto EN and FR patterns added.
+ * pnf_news up: menu links converted from neutral to EN links, then transaled as FR links.
+ * pnf_news up: taxo vocab news_categories renamed in EN.
+ * pnf_new up: missing EN menu links added.
+ * kcore up: strongarm settings related to variable_realm removed.
+ * pnf_news up: i18n settings: exposed filters labels rewritten in EN.
+ * pnf_news up: i18n settings: Some field label rewritten in EN.
+ * kcore up: i18n core site settings added.
+ * pnf_news up: i18n settings continued.
+ * pnf_news and kcore up: translation mechanism set up.
+ * Taxonomy terms localisation enabled for all vocabularies.
+ * kcore up: i18n_sync module enabled.
+ * Node translation enabled on all content types.
+ * kcore up: lang_dropdown module settings exported and css style modified to remove down arrow display.
+ * PNF custom theme up: syntax errors in content.less fixed.
+ * pnf_news up: Various news menu link removed from feature.
+ * Last site PNE added.
+ * PNF install profile up: Dependency to pnf_news removed (PNE, the last site to be installed doesn't need this content type).
+ * pnf_documents up: Permission add terms in document_categories granted to webmaster (done in PNV).
+ * kcore up: remaining pdf_reader permissions (module no longer used) removed.
+ * pnf_multimedia and pnf_news up: Block settings for admininal theme updated.
+ * hover sur l'item de menu du menu tools
+ * hauteur du cartouche noir transparent contenant le texte de diapositive sur l'accueil, height:auto à la place de height 177px
+ * modification pour décalage du logo
+ * ajout des class et des codes pour les pictos du menu tool lateral
+ * PNF custom theme updated: Toolbar menu behavior altered: Open/Close mechanism is based on the widest menu item and uses css3 transition.
+ * PNF custom theme updated: Toolbar menu behaviour recoded (css + jquery).
+ * ajout de la font fontello et modification du css du menu tools pour actu et multimedia
+ * modif des class bootstrap du bloc à la une homepage
+ * mmenu sur tablet portrait
+ * en mobile et tablette voir tous les evenements et tous les dossiers en bottom
+ * margin-top en mobile pour les images de promos
+ * margin-bottom pour le bloc agenda de l'accueil
+ * bloc texte du slideshow déplacé vers le bas
+ * pnf_multimedia up: Photos, Videos and Espace presse links removed from multimedia footer menu.
+ * PNPC color styles up (footer).
+ * Custom theme up: css code for Pinterest picto (header and footer) added.
+ * Custom theme up : PNPC colours codes added.
+ * pnf_front_blocks up: preprod and prod domains added to pnpc_front context.
+ * pnf_front_blocks up: pnpc_front context settings done.
+ * New site PNPC initiated.
+
 Hotfix agenda-button-readmore-bad-positioning
 =============================================
  * pnf_agenda up: Pager (9 items per page) added to Agenda page.
