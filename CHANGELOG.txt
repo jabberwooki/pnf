@@ -1,3 +1,7 @@
+Hotfix sectors-vocab-localisation
+=================================
+ * pnf_news up: sectors vocab made translatable.
+ 
 Hotfix services-contrib-module-removal
 ======================================
  * PNF profile up: services contrib module declaration removed from .make file.
