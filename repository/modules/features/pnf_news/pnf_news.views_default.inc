@@ -57,7 +57,7 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['tid']['field'] = 'tid';
   $handler->display->display_options['fields']['tid']['relationship'] = 'term_node_tid';
-  /* Sort criterion: Content: Date de publication affichée (field_displayed_pub_date) */
+  /* Sort criterion: Content: Publié le (field_displayed_pub_date) */
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['id'] = 'field_displayed_pub_date_value';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['table'] = 'field_data_field_displayed_pub_date';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['field'] = 'field_displayed_pub_date_value';
@@ -103,7 +103,7 @@ function pnf_news_views_default_views() {
   );
   $handler->display->display_options['filters']['field_news_category_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_news_category_tid']['vocabulary'] = 'news_categories';
-  /* Filter criterion: Content: Secteurs (field_sectors) */
+  /* Filter criterion: Content: Sites (field_sectors) */
   $handler->display->display_options['filters']['field_sectors_tid']['id'] = 'field_sectors_tid';
   $handler->display->display_options['filters']['field_sectors_tid']['table'] = 'field_data_field_sectors';
   $handler->display->display_options['filters']['field_sectors_tid']['field'] = 'field_sectors_tid';
@@ -171,7 +171,7 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['sorts']['sticky']['table'] = 'node';
   $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
   $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
-  /* Sort criterion: Content: Date de publication affichée (field_displayed_pub_date) */
+  /* Sort criterion: Content: Publié le (field_displayed_pub_date) */
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['id'] = 'field_displayed_pub_date_value';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['table'] = 'field_data_field_displayed_pub_date';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['field'] = 'field_displayed_pub_date_value';
@@ -219,7 +219,7 @@ function pnf_news_views_default_views() {
   );
   $handler->display->display_options['filters']['field_news_category_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_news_category_tid']['vocabulary'] = 'news_categories';
-  /* Filter criterion: Content: Secteurs (field_sectors) */
+  /* Filter criterion: Content: Sites (field_sectors) */
   $handler->display->display_options['filters']['field_sectors_tid']['id'] = 'field_sectors_tid';
   $handler->display->display_options['filters']['field_sectors_tid']['table'] = 'field_data_field_sectors';
   $handler->display->display_options['filters']['field_sectors_tid']['field'] = 'field_sectors_tid';
@@ -354,7 +354,7 @@ function pnf_news_views_default_views() {
   );
   $handler->display->display_options['filters']['field_news_category_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_news_category_tid']['vocabulary'] = 'news_categories';
-  /* Filter criterion: Content: Secteurs (field_sectors) */
+  /* Filter criterion: Content: Sites (field_sectors) */
   $handler->display->display_options['filters']['field_sectors_tid']['id'] = 'field_sectors_tid';
   $handler->display->display_options['filters']['field_sectors_tid']['table'] = 'field_data_field_sectors';
   $handler->display->display_options['filters']['field_sectors_tid']['field'] = 'field_sectors_tid';
@@ -461,7 +461,7 @@ function pnf_news_views_default_views() {
   );
   $handler->display->display_options['filters']['field_news_category_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_news_category_tid']['vocabulary'] = 'news_categories';
-  /* Filter criterion: Content: Secteurs (field_sectors) */
+  /* Filter criterion: Content: Sites (field_sectors) */
   $handler->display->display_options['filters']['field_sectors_tid']['id'] = 'field_sectors_tid';
   $handler->display->display_options['filters']['field_sectors_tid']['table'] = 'field_data_field_sectors';
   $handler->display->display_options['filters']['field_sectors_tid']['field'] = 'field_sectors_tid';
@@ -717,7 +717,7 @@ function pnf_news_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Date de publication affichée */
+  /* Field: Content: Publié le */
   $handler->display->display_options['fields']['field_displayed_pub_date']['id'] = 'field_displayed_pub_date';
   $handler->display->display_options['fields']['field_displayed_pub_date']['table'] = 'field_data_field_displayed_pub_date';
   $handler->display->display_options['fields']['field_displayed_pub_date']['field'] = 'field_displayed_pub_date';
