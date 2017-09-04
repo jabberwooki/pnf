@@ -1,3 +1,7 @@
+Hotfix services-contrib-module-removal
+======================================
+ * PNF profile up: services contrib module declaration removed from .make file.
+
 PNx 1.5 - 2017-09-04
 ====================
  * pnf_news up: missing custom breadcrums for files (dossiers) added.

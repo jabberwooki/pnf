@@ -237,8 +237,8 @@ projects[role_delegation][version] = "1.1"
 ;projects[rules][subdir] = contrib
 ;projects[rules][version] = ""
 
-projects[services][subdir] = contrib
-projects[services][version] = "2.3"
+;projects[services][subdir] = contrib
+;projects[services][version] = "2.3"
 
 projects[tb_megamenu][subdir] = contrib
 projects[tb_megamenu][version] = "1.0-rc2"
