@@ -1,3 +1,7 @@
+Hotfix scald-atoms-title-field-instances-export
+===============================================
+ * pnf_multimedia up: title_field instances for audio, galleries and videos added.
+
 Hotfix duplicated-park-menu-clone-items
 =======================================
  * kcore up: code for park menu clone altered to remove duplicate items.
