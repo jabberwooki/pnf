@@ -187,26 +187,26 @@ function kcore_block_view($delta = '') {
 	  $content = $park_menu_block['content'];
 
 	  if (!empty($content)) {
-		// Store key of the unique first level item.
-		$parent_key = key($content);
-		// Retrieve child items of first level item
-		$below = $content[$parent_key]['#below'];
-		$child_items = array();
-		foreach ($below as $key => $value) {
-		  if (is_int($key)) {
-			$child_items[$key] = $below[$key];
-		  }
-		}
-		// Insert child item at the first level
-		$content = $child_items + $content;
+      // Store key of the unique first level item.
+      $parent_key = key($content);
+      // Retrieve child items of first level item
+      $below = $content[$parent_key]['#below'];
+      $child_items = array();
+      foreach ($below as $key => $value) {
+        if (is_int($key)) {
+        $child_items[$key] = $below[$key];
+        }
+      }
+      // Insert child item at the first level
+      $content = $child_items + $content;
 
-    // Remove original first level item
-    // [EDIT] But, before that, we catch the original first level title,
-    // which is the title translated in current language,
-    // and we use it as block title.
-    $block['subject'] = $content[$parent_key]['#title'];
-    $block['content'] = $content;
-    unset($content[$parent_key]);
+      // Remove original first level item
+      // [EDIT] But, before that, we catch the original first level title,
+      // which is the title translated in current language,
+      // and we use it as block title.
+      $block['subject'] = $content[$parent_key]['#title'];
+      unset($content[$parent_key]);
+      $block['content'] = $content;
 	  }
 
 	  return $block;
