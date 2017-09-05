@@ -1,3 +1,7 @@
+Hotfix duplicated-park-menu-clone-items
+=======================================
+ * kcore up: code for park menu clone altered to remove duplicate items.
+
 Hotfix sectors-vocab-full-mode-view-settings
 ============================================
  * pnf_agenda up: missing i18n settings added for full mode view term reference fields.
