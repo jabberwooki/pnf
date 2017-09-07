@@ -21,13 +21,12 @@ function pnf_scientific_reports_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Infos rapport',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
-      0 => 'field_displayed_pub_date',
-      1 => 'field_sr_authors',
-      2 => 'field_sr_editor',
-      3 => 'field_sr_pages',
-      4 => 'field_sr_reference',
+      0 => 'field_sr_authors',
+      1 => 'field_sr_editor',
+      2 => 'field_sr_pages',
+      3 => 'field_sr_reference',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -57,10 +56,11 @@ function pnf_scientific_reports_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Sites et thème',
-    'weight' => '3',
+    'weight' => '2',
     'children' => array(
-      0 => 'field_sectors',
-      1 => 'field_sr_theme',
+      0 => 'field_displayed_pub_date',
+      1 => 'field_sectors',
+      2 => 'field_sr_theme',
     ),
     'format_type' => 'div',
     'format_settings' => array(

@@ -71,52 +71,43 @@ function pnf_scientific_reports_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'scientific_report';
   $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'bootstrap_6_6_stacked';
+  $ds_layout->layout = 'bootstrap_12';
   $ds_layout->settings = array(
     'regions' => array(
-      'left' => array(
+      'central' => array(
         0 => 'field_sr_cover',
-      ),
-      'right' => array(
-        1 => 'title',
-        2 => 'field_subtitle',
-        3 => 'group_sr_sites_theme',
-        4 => 'group_sr_report_infos',
-        5 => 'field_displayed_pub_date',
-        6 => 'field_sectors',
-        7 => 'field_sr_theme',
-        8 => 'field_sr_authors',
-        9 => 'field_sr_editor',
+        1 => 'field_displayed_pub_date',
+        2 => 'group_sr_sites_theme',
+        3 => 'field_sectors',
+        4 => 'field_subtitle',
+        5 => 'field_sr_theme',
+        6 => 'field_sr_abstract',
+        7 => 'field_sr_authors',
+        8 => 'field_sr_editor',
+        9 => 'group_sr_report_infos',
         10 => 'field_sr_pages',
-        11 => 'field_sr_reference',
-      ),
-      'bottom' => array(
-        12 => 'field_sr_abstract',
-        13 => 'field_downloadable_docs',
+        11 => 'field_downloadable_docs',
+        12 => 'field_sr_reference',
       ),
     ),
     'fields' => array(
-      'field_sr_cover' => 'left',
-      'title' => 'right',
-      'field_subtitle' => 'right',
-      'group_sr_sites_theme' => 'right',
-      'group_sr_report_infos' => 'right',
-      'field_displayed_pub_date' => 'right',
-      'field_sectors' => 'right',
-      'field_sr_theme' => 'right',
-      'field_sr_authors' => 'right',
-      'field_sr_editor' => 'right',
-      'field_sr_pages' => 'right',
-      'field_sr_reference' => 'right',
-      'field_sr_abstract' => 'bottom',
-      'field_downloadable_docs' => 'bottom',
+      'field_sr_cover' => 'central',
+      'field_displayed_pub_date' => 'central',
+      'group_sr_sites_theme' => 'central',
+      'field_sectors' => 'central',
+      'field_subtitle' => 'central',
+      'field_sr_theme' => 'central',
+      'field_sr_abstract' => 'central',
+      'field_sr_authors' => 'central',
+      'field_sr_editor' => 'central',
+      'group_sr_report_infos' => 'central',
+      'field_sr_pages' => 'central',
+      'field_downloadable_docs' => 'central',
+      'field_sr_reference' => 'central',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'top' => 'div',
-      'left' => 'div',
-      'right' => 'div',
-      'bottom' => 'div',
+      'central' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
@@ -124,7 +115,7 @@ function pnf_scientific_reports_ds_layout_settings_info() {
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
     'layout_disable_css' => FALSE,
-    'hide_page_title' => '1',
+    'hide_page_title' => '0',
     'page_option_title' => '',
   );
   $export['node|scientific_report|full'] = $ds_layout;

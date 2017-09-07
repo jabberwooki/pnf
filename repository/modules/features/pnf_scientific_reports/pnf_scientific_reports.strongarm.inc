@@ -96,7 +96,7 @@ function pnf_scientific_reports_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '20',
+            'weight' => '16',
             'visible' => FALSE,
           ),
           'teaser' => array(

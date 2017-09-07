@@ -42,7 +42,7 @@ function pnf_scientific_reports_field_default_field_instances() {
           'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
-        'weight' => 5,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -106,7 +106,7 @@ function pnf_scientific_reports_field_default_field_instances() {
         'module' => 'download_file',
         'settings' => array(),
         'type' => 'direct_download_accessible',
-        'weight' => 11,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -185,7 +185,7 @@ function pnf_scientific_reports_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -242,7 +242,7 @@ function pnf_scientific_reports_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_plain',
-        'weight' => 5,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -287,7 +287,7 @@ function pnf_scientific_reports_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -373,7 +373,7 @@ function pnf_scientific_reports_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -457,8 +457,8 @@ function pnf_scientific_reports_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
+          'image_link' => 'content',
+          'image_style' => '200w',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -551,7 +551,7 @@ function pnf_scientific_reports_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -644,7 +644,7 @@ function pnf_scientific_reports_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_integer',
-        'weight' => 8,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -693,7 +693,7 @@ function pnf_scientific_reports_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -776,7 +776,7 @@ function pnf_scientific_reports_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_plain',
-        'weight' => 6,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -825,7 +825,7 @@ function pnf_scientific_reports_field_default_field_instances() {
           'html_tag' => 'p',
         ),
         'type' => 'pnf_text',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',

@@ -28,9 +28,7 @@ function pnf_scientific_reports_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Appliquer';
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
-  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
@@ -47,7 +45,7 @@ function pnf_scientific_reports_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Content: Publié le (field_displayed_pub_date) */
+  /* Sort criterion: Content: Date de publication affichée (field_displayed_pub_date) */
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['id'] = 'field_displayed_pub_date_value';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['table'] = 'field_data_field_displayed_pub_date';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['field'] = 'field_displayed_pub_date_value';
@@ -84,7 +82,7 @@ function pnf_scientific_reports_views_default_views() {
   );
   $handler->display->display_options['filters']['field_sectors_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_sectors_tid']['vocabulary'] = 'sectors';
-  /* Filter criterion: Content: Thème (field_sr_theme) */
+  /* Filter criterion: Content: Theme (field_sr_theme) */
   $handler->display->display_options['filters']['field_sr_theme_tid']['id'] = 'field_sr_theme_tid';
   $handler->display->display_options['filters']['field_sr_theme_tid']['table'] = 'field_data_field_sr_theme';
   $handler->display->display_options['filters']['field_sr_theme_tid']['field'] = 'field_sr_theme_tid';
