@@ -1,3 +1,4 @@
+/*Teaser mode*/
 .view-scientific-reports .view-mode-teaser {
     background-color: #FFFFFF;
     padding: 15px;
@@ -26,39 +27,80 @@
     margin-top: 5px;
 }
 
-.node-scientific-report .sr-subtitle {
-    font-size: 18px;
-    margin-bottom: 10px;
+/* Full mode */
+.node-scientific-report .pnpc-content .content-wrapper {
+    background-color: white;
+    padding: 15px;
+}
+.node-scientific-report .pnpc-content .field-name-field-sr-cover {
+    float: left;
+    width: 25%;
 }
 .node-scientific-report .group-sr-sites-theme {
-    overflow: hidden;
-    margin-top: 20px;
+    /*overflow: hidden;*/
+    /*margin-top: 20px;*/
+    float: left;
+    width: 75%;
+    padding-left: 20px;
 }
-.node-scientific-report .field-name-field-sectors {
+.node-scientific-report .group-sr-sites-theme .field-label {
+    color: #ccc;
+    font-size: 120%;
+ }
+.node-scientific-report .group-sr-sites-theme .field-name-field-displayed-pub-date .field-label {
+    font-weight: normal;
+    color: inherit;
+    font-size: 100%;
+}
+.node-scientific-report .field-name-field-displayed-pub-date {
+    margin-bottom: 30px;
+}
+.node-scientific-report .pnpc-content .field-name-field-sectors {
     float: left;
     width: 50%;
     border-right: 1px solid #ccc;
 }
-.node-scientific-report .field-name-field-sr-theme {
+.node-scientific-report .pnpc-content .field-name-field-sr-theme {
     float: right;
     width: 50%;
     padding-left: 15px;
 }
-.node-scientific-report .field-name-field-displayed-pub-date {
+.node-scientific-report .sr-subtitle {
+    font-size: 18px;
+    padding-top: 20px;
+    margin-bottom: 10px;
     clear: both;
-    padding-top: 10px;
+}
+.node-scientific-report .field-name-field-sr-abstract {
 }
 .node-scientific-report .group-sr-report-infos {
     margin-top: 20px;
-    padding-top: 20px;
 }
 .node-scientific-report .group-sr-report-infos .field {
     padding: 5px 0;
 }
+.node-scientific-report .group-sr-report-infos .field-label {
+    color: #ccc;
+}
 .node-scientific-report .group-sr-report-infos .field .field-label {
-    width: 30%;
+    width: 25%;
 }
-.node-scientific-report .field-name-field-sr-abstract {
-    padding: 20px 0;
+.node-scientific-report .group-sr-report-infos .field-name-field-sr-authors .field-items {
+    width: 75%;
 }
+.node-scientific-report .field-name-field-downloadable-docs {
+    padding: 0;
+    margin: 20px 0;
+}
+.node-scientific-report .field-name-field-downloadable-docs .field-label {
+    font-weight: normal;
+}
+
+.node-scientific-report .field-name-field-downloadable-docs ul {
+    padding-left: 1.5em;
+}
+.node-scientific-report .field-name-field-downloadable-docs ul li {
+    list-style: none;
+}
+
 

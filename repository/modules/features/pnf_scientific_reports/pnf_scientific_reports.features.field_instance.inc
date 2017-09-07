@@ -61,7 +61,7 @@ function pnf_scientific_reports_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_displayed_pub_date',
-    'label' => 'Publié le',
+    'label' => 'Published on',
     'required' => 1,
     'settings' => array(
       'default_value' => 'blank',
@@ -117,7 +117,7 @@ function pnf_scientific_reports_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_downloadable_docs',
-    'label' => 'Documents téléchargeables',
+    'label' => 'Downloadable documents',
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
@@ -226,7 +226,7 @@ function pnf_scientific_reports_field_default_field_instances() {
   // Exported field_instance: 'node-scientific_report-field_sectors'.
   $field_instances['node-scientific_report-field_sectors'] = array(
     'bundle' => 'scientific_report',
-    'default_value' => NULL,
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -263,7 +263,7 @@ function pnf_scientific_reports_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(),
-      'type' => 'options_select',
+      'type' => 'options_buttons',
       'weight' => 4,
     ),
   );
@@ -384,7 +384,7 @@ function pnf_scientific_reports_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_sr_authors',
-    'label' => 'Auteurs',
+    'label' => 'Authors',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -562,7 +562,7 @@ function pnf_scientific_reports_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_sr_editor',
-    'label' => 'Editeur',
+    'label' => 'Editor',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -655,7 +655,7 @@ function pnf_scientific_reports_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_sr_pages',
-    'label' => 'Nombre de pages',
+    'label' => 'Pages number',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -704,7 +704,7 @@ function pnf_scientific_reports_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_sr_reference',
-    'label' => 'Référence',
+    'label' => 'Reference',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -788,7 +788,7 @@ function pnf_scientific_reports_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_sr_theme',
-    'label' => 'Thème',
+    'label' => 'Theme',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -895,18 +895,18 @@ function pnf_scientific_reports_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Auteurs');
+  t('Authors');
   t('Dates début/fin publication');
-  t('Documents téléchargeables');
-  t('Editeur');
+  t('Downloadable documents');
+  t('Editor');
   t('Image phare');
-  t('Nombre de pages');
-  t('Publié le');
-  t('Référence');
+  t('Pages number');
+  t('Published on');
+  t('Reference');
   t('Résumé');
   t('Sites');
   t('Sous-titre');
-  t('Thème');
+  t('Theme');
 
   return $field_instances;
 }

@@ -72,7 +72,7 @@ function pnf_scientific_reports_views_default_views() {
   $handler->display->display_options['filters']['field_sectors_tid']['field'] = 'field_sectors_tid';
   $handler->display->display_options['filters']['field_sectors_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_sectors_tid']['expose']['operator_id'] = 'field_sectors_tid_op';
-  $handler->display->display_options['filters']['field_sectors_tid']['expose']['label'] = 'Sector';
+  $handler->display->display_options['filters']['field_sectors_tid']['expose']['label'] = 'Sites';
   $handler->display->display_options['filters']['field_sectors_tid']['expose']['operator'] = 'field_sectors_tid_op';
   $handler->display->display_options['filters']['field_sectors_tid']['expose']['identifier'] = 'field_sectors_tid';
   $handler->display->display_options['filters']['field_sectors_tid']['expose']['remember_roles'] = array(
@@ -107,7 +107,7 @@ function pnf_scientific_reports_views_default_views() {
   $handler = $view->new_display('page', 'Liste rapports', 'sr_list');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Scientific reports of the Port-Cros national park';
-  $handler->display->display_options['path'] = 'rapports-scientifiques';
+  $handler->display->display_options['path'] = 'scientific-reports';
   $export['scientific_reports'] = $view;
 
   return $export;
