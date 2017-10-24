@@ -155,7 +155,7 @@ function pnf_consultations_send_comment_notification($entity) {
   $mail_to = variable_get('consult_moderators_emails', variable_get('site_mail'));
   $mail_from = variable_get('site_mail');
   $mail_subject = '[' . variable_get('site_name') . '] Nouveau commentaire de consultation';
-  $mail_body = '<p>Un nouveau commentaire intitulé <span class="comment-title">' . $entity->subject . '</span> vient d\'être posté sur la consultation suivante :</p>';
+  $mail_body = '<p>Un nouveau commentaire intitulé "<span class="comment-title">' . $entity->subject . '</span>" vient d\'être posté sur la consultation suivante :</p>';
 
   $node_url = 'http:/' . $_SERVER['HTTP_HOST'] . '/node/' . $entity->nid;
   $mail_body .= '<a href="' . $node_url . '">' . $node_title . '</a>';
