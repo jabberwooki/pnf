@@ -72,6 +72,29 @@ function pnf_consultations_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_comment__comment_node_public_consultation';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'full' => array(
+        'custom_settings' => TRUE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_comment__comment_node_public_consultation'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__public_consultation';
   $strongarm->value = array(
     'view_modes' => array(
@@ -270,6 +293,13 @@ function pnf_consultations_strongarm() {
   $strongarm->name = 'pathauto_node_public_consultation_und_pattern';
   $strongarm->value = '';
   $export['pathauto_node_public_consultation_und_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_html_display_comment_public_consultation';
+  $strongarm->value = 0;
+  $export['print_html_display_comment_public_consultation'] = $strongarm;
 
   return $export;
 }
