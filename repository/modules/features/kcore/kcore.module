@@ -307,6 +307,9 @@ function pnx_url_aliases_add() {
 
     // Raa
 
+    // Public consultations
+    'public-consultations' => array('fr' => 'consultations-publiques'),
+
   );
 
   $handled_aliases = 0;

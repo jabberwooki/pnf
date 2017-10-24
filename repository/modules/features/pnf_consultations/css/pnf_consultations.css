@@ -1,0 +1,95 @@
+div.alert-block {
+    clear: both;
+}
+
+/* Consultation node - Teaser mode (used in consultations list view display) */
+.view-public-consultations .view-mode-teaser {
+    background-color: white;
+    padding: 0 10px 10px 10px;
+    margin: 0 0 20px 0;
+}
+.node-public-consultation.view-mode-teaser .field-name-field-consultation-date {
+    padding: 0;
+    font-weight: bold;
+    /*margin-bottom: 1em;*/
+}
+.node-public-consultation.view-mode-teaser .field-name-comments-number {
+    padding: 7px 0 0 0;
+}
+
+.node-public-consultation.view-mode-teaser .field-name-body {
+    padding: 15px 0 0 0;
+    margin-bottom: 1em;
+}
+
+/* Consultation node - Full mode */
+.node-public-consultation .field-name-field-consultation-date {
+    padding: 15px 15px 0 15px;
+    background-color: white;
+    font-weight: bold;
+    /*float: left;*/
+}
+.node-public-consultation .field-name-comments-number {
+    padding: 15px 15px 0 15px;
+    background-color: white;
+    font-style: italic;
+}
+.node-public-consultation .field-name-comments-number .field-item {
+    /*text-align: right;*/
+}
+.node-public-consultation .field-name-body {
+    /*clear: both;*/
+    padding: 15px 15px 0 15px;
+    background-color: white;
+}
+.node-public-consultation .field-name-field-downloadable-docs .field-items {
+    padding: 15px;
+    background-color: #f4f4f4;
+}
+.node-public-consultation .field-name-field-downloadable-docs .field-items ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.node-public-consultation .field-name-field-downloadable-docs img {
+    display: none;
+}
+.node-public-consultation .field-name-field-downloadable-docs a {
+    color: #333;
+}
+.node-public-consultation .field-name-comments-rules-link {
+    margin-top: 0px;
+    padding: 15px 15px 0 15px;
+    font-style: italic;
+}
+.node-public-consultation .field-name-comments-rules-link a {
+    cursor: pointer;
+}
+
+/* Node comments */
+.node-public-consultation .comment-wrapper {
+    margin-top: 0px;
+}
+.node-public-consultation .comment {
+    padding: 0 15px 15px 15px;
+    background-color: white;
+    margin-bottom: 15px;
+}
+.comment .permalink {
+    display: block;
+    padding-top: 15px;
+    font-size: 120%;
+    font-weight: 600;
+}
+.comment .field-name-post-date {
+    font-style: italic;
+}
+.comment .field-name-comment-body {
+    padding-top: 15px;
+}
+.comment .links {
+    padding-top: 15px;
+}
+.comment-form .form-item-homepage {
+    display: none;
+}
