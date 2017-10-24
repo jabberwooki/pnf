@@ -161,6 +161,13 @@ function pnf_consultations_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'honeypot_form_comment_node_public_consultation_form';
+  $strongarm->value = 1;
+  $export['honeypot_form_comment_node_public_consultation_form'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_public_consultation';
   $strongarm->value = '2';
   $export['language_content_type_public_consultation'] = $strongarm;
