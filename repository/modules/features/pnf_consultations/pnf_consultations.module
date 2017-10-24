@@ -156,7 +156,7 @@ function pnf_consultations_send_comment_notification($entity) {
 
   // Build email message
   $mail_to = variable_get('consult_moderators_emails', variable_get('site_mail'));
-  $mail_from = 'contact@cevennes-parcnational.fr'; //$mail_to;
+  $mail_from = variable_get('site_mail');
   $mail_subject = '[' . variable_get('site_name') . '] Nouveau commentaire de consultation';
   $mail_body = '<p>Un nouveau commentaire intitulé <span class="comment-title">' . $entity->subject . '</span> vient d\'être posté sur la consultation suivante :</p>';
 
