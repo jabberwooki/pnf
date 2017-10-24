@@ -137,13 +137,10 @@ function pnf_consultations_form_comment_form_alter(&$form, &$form_state, $form_i
 }
 
 function pnf_consultations_entity_postinsert($entity, $entity_type) {
-//  watchdog('pnf_consultations', serialize($entity));
-  pnf_consultations_send_comment_notification($entity);
-
-//  $query = db_select('node', 'n')
-//    ->addField('n', array('title'))
-//    ->condition('n.nid', $entity->nid)
-//  watchdog('pnf_consultations', "Titre node: $entity->title, nid: $entity->nid, Sujet commentaire: $entity->subject, cid: $entity->cid");
+  watchdog('pnf_consultations', serialize($entity));
+  if ($entity->node_type == 'comment_node_public_consultation') {
+    pnf_consultations_send_comment_notification($entity);
+  }
 }
 
 function pnf_consultations_send_comment_notification($entity) {
