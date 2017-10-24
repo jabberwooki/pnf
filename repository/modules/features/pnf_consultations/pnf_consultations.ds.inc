@@ -143,6 +143,70 @@ function pnf_consultations_ds_field_settings_info() {
 }
 
 /**
+ * Implements hook_ds_custom_fields_info().
+ */
+function pnf_consultations_ds_custom_fields_info() {
+  $export = array();
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'comments_number';
+  $ds_field->label = 'Nombre de commentaires';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = 'public_consultation|*';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => 'comments-number',
+      'format' => 'plain_text',
+    ),
+    'use_token' => 0,
+  );
+  $export['comments_number'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'comments_rules_link';
+  $ds_field->label = 'Lien vers le texte de la charte';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = 'public_consultation|full';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => '<p>guidelines-link</p>
+',
+      'format' => 'full_html',
+    ),
+    'use_token' => 0,
+  );
+  $export['comments_rules_link'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'guidelines_text';
+  $ds_field->label = 'Texte de la charte';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = 'public_consultation|full';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => 'guidelines-text',
+      'format' => 'plain_text',
+    ),
+    'use_token' => 0,
+  );
+  $export['guidelines_text'] = $ds_field;
+
+  return $export;
+}
+
+/**
  * Implements hook_ds_layout_settings_info().
  */
 function pnf_consultations_ds_layout_settings_info() {
