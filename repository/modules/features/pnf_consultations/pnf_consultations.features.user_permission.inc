@@ -45,5 +45,12 @@ function pnf_consultations_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'view any unpublished public_consultation content'.
+  $permissions['view any unpublished public_consultation content'] = array(
+    'name' => 'view any unpublished public_consultation content',
+    'roles' => array(),
+    'module' => 'view_unpublished',
+  );
+
   return $permissions;
 }

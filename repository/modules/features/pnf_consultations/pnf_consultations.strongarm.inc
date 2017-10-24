@@ -62,6 +62,16 @@ function pnf_consultations_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ds_extras_view_modes_public_consultation';
+  $strongarm->value = array(
+    0 => 'default',
+    1 => 'teaser',
+  );
+  $export['ds_extras_view_modes_public_consultation'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__public_consultation';
   $strongarm->value = array(
     'view_modes' => array(
@@ -164,6 +174,23 @@ function pnf_consultations_strongarm() {
   $strongarm->name = 'honeypot_form_comment_node_public_consultation_form';
   $strongarm->value = 1;
   $export['honeypot_form_comment_node_public_consultation_form'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_extended_public_consultation';
+  $strongarm->value = '1';
+  $export['i18n_node_extended_public_consultation'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_public_consultation';
+  $strongarm->value = array(
+    0 => 'current',
+    1 => 'required',
+  );
+  $export['i18n_node_options_public_consultation'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

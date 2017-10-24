@@ -12,6 +12,45 @@ function pnf_consultations_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'comment|comment_node_public_consultation|full';
+  $ds_fieldsetting->entity_type = 'comment';
+  $ds_fieldsetting->bundle = 'comment_node_public_consultation';
+  $ds_fieldsetting->view_mode = 'full';
+  $ds_fieldsetting->settings = array(
+    'links' => array(
+      'weight' => '4',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'post_date' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'ds_post_date_date_time_s',
+    ),
+    'title' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'field_formatter_class' => 'comment-title',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['comment|comment_node_public_consultation|full'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|public_consultation|full';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'public_consultation';
@@ -108,6 +147,41 @@ function pnf_consultations_ds_field_settings_info() {
  */
 function pnf_consultations_ds_layout_settings_info() {
   $export = array();
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'comment|comment_node_public_consultation|full';
+  $ds_layout->entity_type = 'comment';
+  $ds_layout->bundle = 'comment_node_public_consultation';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'bootstrap_12';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'central' => array(
+        0 => 'title',
+        1 => 'post_date',
+        2 => 'comment_body',
+        3 => 'links',
+      ),
+    ),
+    'fields' => array(
+      'title' => 'central',
+      'post_date' => 'central',
+      'comment_body' => 'central',
+      'links' => 'central',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'central' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['comment|comment_node_public_consultation|full'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
