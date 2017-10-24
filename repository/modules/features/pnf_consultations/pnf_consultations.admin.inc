@@ -28,7 +28,7 @@ function pnf_consultations_settings_form() {
     '#type' => 'textfield',
     '#title' => 'Adresse(s) email des modérateurs',
     '#description' => 'Entrez la ou les adresse email des modérateurs, séparées par un <span class="field-help-emphasis">point virgule</span>.',
-    '#default_value' => variable_get('consult_moderators_emails', 'toto'),
+    '#default_value' => variable_get('consult_moderators_emails', variable_get('site_mail')),
   );
 
   $form['guidelines_settings'] = array(
