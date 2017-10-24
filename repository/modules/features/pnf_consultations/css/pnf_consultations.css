@@ -98,3 +98,8 @@ div.alert-block {
 .field-help-emphasis {
     color: red;
 }
+
+/* Email */
+.comment-title {
+    font-weight: bold;
+}
