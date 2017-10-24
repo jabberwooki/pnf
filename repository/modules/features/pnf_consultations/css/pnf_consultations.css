@@ -93,3 +93,8 @@ div.alert-block {
 .comment-form .form-item-homepage {
     display: none;
 }
+
+/* Admin pages */
+.field-help-emphasis {
+    color: red;
+}

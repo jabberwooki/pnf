@@ -7,6 +7,8 @@
  */
 
 function pnf_consultations_settings_form() {
+  drupal_add_js(drupal_get_path('module', 'pnf_consultations') . '/js/pnf_consultations.js');
+  drupal_add_css(drupal_get_path('module', 'pnf_consultations') . '/css/pnf_consultations.css');
 
   $form['moderators_settings'] = array(
     '#type' => 'fieldset',
@@ -25,7 +27,7 @@ function pnf_consultations_settings_form() {
   $form['moderators_settings']['consult_moderators_emails'] = array(
     '#type' => 'textfield',
     '#title' => 'Adresse(s) email des modérateurs',
-    '#description' => 'Entrez la ou les adresse email des modérateurs, séparées par une <b>virgule</b> ou un <b>point virgule</b>.',
+    '#description' => 'Entrez la ou les adresse email des modérateurs, séparées par un <span class="field-help-emphasis">point virgule</span>.',
     '#default_value' => variable_get('consult_moderators_emails', 'toto'),
   );
 
@@ -54,4 +56,26 @@ function pnf_consultations_settings_form() {
   );
 
   return system_settings_form($form);
+}
+
+function pnf_consultations_settings_form_validate($form, &$form_state) {
+  $moderators_emails = $form_state['values']['consult_moderators_emails'];
+  if (empty($moderators_emails)) {
+    form_set_error('newsflashes', 'Vous devez saisir au moins une adresse email.');
+  }
+  else {
+//    $wrong_emails = array();
+    $wrong_emails = '<ul>';
+    $moderators_emails = explode(';', $moderators_emails);
+    foreach ($moderators_emails as $email) {
+      if (!valid_email_address($email)) {
+        $wrong_emails .= '<li>' . $email .'</li>';
+      }
+    }
+    $wrong_emails .= '</ul>';
+
+    if ($wrong_emails != '<ul></ul>') {
+      form_set_error('newsflashes', t("Une ou plusieurs adresses sont invalides :<br/> $wrong_emails" ));
+    }
+  }
 }

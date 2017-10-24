@@ -27,11 +27,17 @@
       // Dialog opening
       var width = $(window).width() * 0.8;
       var height = $(window).height() * 0.8;
-
       $(".field-name-comments-rules-link a").click(function () {
         $(".field-name-guidelines-text").dialog("option", "width", width);
         $(".field-name-guidelines-text").dialog("option", "height", height);
         $(".field-name-guidelines-text").dialog("open");
+      });
+
+      // Consultations settings form - Emails typing control.
+      $('#edit-consult-moderators-emails').keypress(function(e) {
+        if (String.fromCharCode(e.which).match(/[^A-Za-z0-9\.\;\@\b]/)) {
+          e.preventDefault();
+        }
       });
     }
   };
