@@ -147,7 +147,9 @@ function pnf_consultations_form_comment_form_alter(&$form, &$form_state, $form_i
 function pnf_consultations_entity_postinsert($entity, $entity_type) {
 //  watchdog('pnf_consultations', serialize($entity));
   if ($entity->node_type == 'comment_node_public_consultation') {
-    pnf_consultations_send_comment_notification($entity);
+    if(variable_get('consult_moderators_alert', 1)) {
+      pnf_consultations_send_comment_notification($entity);
+    }
   }
 }
 
