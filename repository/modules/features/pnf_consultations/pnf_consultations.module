@@ -78,7 +78,7 @@ function pnf_consultations_views_pre_render(&$view) {
  * Implements hook_node_view().
  */
 function pnf_consultations_node_view($node, $view_mode, $langcode) {
-  if ($node->type == 'public_consultation')
+  if ($node->type == 'public_consultation') {
     // Libraries upload required by non webmaster, admin or superadmin users.
     // jQuery UI library upload
     drupal_add_js(drupal_get_path('module', 'jquery_update') . '/replace/ui/ui/jquery-ui.js');
