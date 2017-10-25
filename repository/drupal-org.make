@@ -70,6 +70,7 @@ projects[role_export][version] = "1.0"
 
 projects[strongarm][subdir] = contrib
 projects[strongarm][version] = "2.0"
+projects[strongarm][patch][] = "https://www.drupal.org/files/issues/variable-1850618-13.patch"
 
 projects[taxonomy_access_fix][subdir] = contrib
 projects[taxonomy_access_fix][version] = "2.3"
