@@ -1,3 +1,7 @@
+Hotfix direct-prod-fixes-integration-2017-10-26
+===============================================
+Fixes made directly on prod site reproduced locally for integration in develop and master branches.
+
 Hotfix security-updates - 2017-10-26
 ====================================
 drupal core: 7.53 to 7.56

@@ -209,7 +209,7 @@ function kcore_block_view($delta = '') {
       $block['content'] = $content;
       return $block;
       break;
-    }
+	  }
 
 	case 'pnf_on_the_web_clone':
 	  $block['subject'] = '';
