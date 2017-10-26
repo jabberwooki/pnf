@@ -24,6 +24,7 @@ function pnf_contracts_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Marchés publics';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'plus';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -36,7 +37,7 @@ function pnf_contracts_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['bef'] = array(
     'general' => array(
       'allow_secondary' => 0,
-      'secondary_label' => 'Advanced options',
+      'secondary_label' => 'Options avancées',
       'collapsible_label' => NULL,
       'combine_rewrite' => NULL,
       'reset_label' => NULL,
@@ -154,39 +155,43 @@ function pnf_contracts_views_default_views() {
     'any_label' => NULL,
     'filter_rewrite_values' => NULL,
   );
-  $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
-  $handler->display->display_options['exposed_form']['options']['text_input_required'] = 'Sélectionnez n\'importe quel filtre et cliquez sur Appliquer pour voir les résultats';
-  $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'full_html';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« premier';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
   $handler->display->display_options['style_plugin'] = 'views_bootstrap_grid_plugin_style';
   $handler->display->display_options['style_options']['columns'] = '1';
   $handler->display->display_options['row_plugin'] = 'node';
-  /* Field: Content: Title */
+  /* Champ: Contenu : Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Content: Sticky */
+  /* Critère de tri: Contenu : Épinglé (en haut des listes) */
   $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
   $handler->display->display_options['sorts']['sticky']['table'] = 'node';
   $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
   $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
-  /* Sort criterion: Content: Contract publication date (field_contract_pub_date) */
+  /* Critère de tri: Contenu : Contract publication date (field_contract_pub_date) */
   $handler->display->display_options['sorts']['field_contract_pub_date_value']['id'] = 'field_contract_pub_date_value';
   $handler->display->display_options['sorts']['field_contract_pub_date_value']['table'] = 'field_data_field_contract_pub_date';
   $handler->display->display_options['sorts']['field_contract_pub_date_value']['field'] = 'field_contract_pub_date_value';
   $handler->display->display_options['sorts']['field_contract_pub_date_value']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Critère de filtrage: Contenu : Publié */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Critère de filtrage: Contenu : Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -194,14 +199,14 @@ function pnf_contracts_views_default_views() {
     'contract' => 'contract',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Contract category (field_contract_category) */
+  /* Critère de filtrage: Contenu : Contract category (field_contract_category) */
   $handler->display->display_options['filters']['field_contract_category_tid']['id'] = 'field_contract_category_tid';
   $handler->display->display_options['filters']['field_contract_category_tid']['table'] = 'field_data_field_contract_category';
   $handler->display->display_options['filters']['field_contract_category_tid']['field'] = 'field_contract_category_tid';
   $handler->display->display_options['filters']['field_contract_category_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_contract_category_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_contract_category_tid']['expose']['operator_id'] = 'field_contract_category_tid_op';
-  $handler->display->display_options['filters']['field_contract_category_tid']['expose']['label'] = 'Category';
+  $handler->display->display_options['filters']['field_contract_category_tid']['expose']['label'] = 'Catégorie';
   $handler->display->display_options['filters']['field_contract_category_tid']['expose']['operator'] = 'field_contract_category_tid_op';
   $handler->display->display_options['filters']['field_contract_category_tid']['expose']['identifier'] = 'field_contract_category_tid';
   $handler->display->display_options['filters']['field_contract_category_tid']['expose']['remember_roles'] = array(
@@ -213,7 +218,7 @@ function pnf_contracts_views_default_views() {
   );
   $handler->display->display_options['filters']['field_contract_category_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_contract_category_tid']['vocabulary'] = 'contract_categories';
-  /* Filter criterion: Content: Procedure type (field_procurement_type) */
+  /* Critère de filtrage: Contenu : Procedure type (field_procurement_type) */
   $handler->display->display_options['filters']['field_procurement_type_tid']['id'] = 'field_procurement_type_tid';
   $handler->display->display_options['filters']['field_procurement_type_tid']['table'] = 'field_data_field_procurement_type';
   $handler->display->display_options['filters']['field_procurement_type_tid']['field'] = 'field_procurement_type_tid';
@@ -232,7 +237,7 @@ function pnf_contracts_views_default_views() {
   );
   $handler->display->display_options['filters']['field_procurement_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_procurement_type_tid']['vocabulary'] = 'procurement_types';
-  /* Filter criterion: Content: Consultation status (field_contract_status) */
+  /* Critère de filtrage: Contenu : Consultation status (field_contract_status) */
   $handler->display->display_options['filters']['field_contract_status_value_1']['id'] = 'field_contract_status_value_1';
   $handler->display->display_options['filters']['field_contract_status_value_1']['table'] = 'field_data_field_contract_status';
   $handler->display->display_options['filters']['field_contract_status_value_1']['field'] = 'field_contract_status_value';
@@ -240,7 +245,7 @@ function pnf_contracts_views_default_views() {
     1 => '1',
   );
   $handler->display->display_options['filters']['field_contract_status_value_1']['group'] = 1;
-  /* Filter criterion: Content: Language */
+  /* Critère de filtrage: Contenu : Langue */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -254,14 +259,14 @@ function pnf_contracts_views_default_views() {
   $handler->display->display_options['title'] = 'Current public contracts';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Critère de filtrage: Contenu : Publié */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Critère de filtrage: Contenu : Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -269,14 +274,14 @@ function pnf_contracts_views_default_views() {
     'contract' => 'contract',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Contract category (field_contract_category) */
+  /* Critère de filtrage: Contenu : Contract category (field_contract_category) */
   $handler->display->display_options['filters']['field_contract_category_tid']['id'] = 'field_contract_category_tid';
   $handler->display->display_options['filters']['field_contract_category_tid']['table'] = 'field_data_field_contract_category';
   $handler->display->display_options['filters']['field_contract_category_tid']['field'] = 'field_contract_category_tid';
   $handler->display->display_options['filters']['field_contract_category_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_contract_category_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_contract_category_tid']['expose']['operator_id'] = 'field_contract_category_tid_op';
-  $handler->display->display_options['filters']['field_contract_category_tid']['expose']['label'] = 'Category';
+  $handler->display->display_options['filters']['field_contract_category_tid']['expose']['label'] = 'Catégorie';
   $handler->display->display_options['filters']['field_contract_category_tid']['expose']['operator'] = 'field_contract_category_tid_op';
   $handler->display->display_options['filters']['field_contract_category_tid']['expose']['identifier'] = 'field_contract_category_tid';
   $handler->display->display_options['filters']['field_contract_category_tid']['expose']['remember_roles'] = array(
@@ -288,7 +293,7 @@ function pnf_contracts_views_default_views() {
   );
   $handler->display->display_options['filters']['field_contract_category_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_contract_category_tid']['vocabulary'] = 'contract_categories';
-  /* Filter criterion: Content: Procedure type (field_procurement_type) */
+  /* Critère de filtrage: Contenu : Procedure type (field_procurement_type) */
   $handler->display->display_options['filters']['field_procurement_type_tid']['id'] = 'field_procurement_type_tid';
   $handler->display->display_options['filters']['field_procurement_type_tid']['table'] = 'field_data_field_procurement_type';
   $handler->display->display_options['filters']['field_procurement_type_tid']['field'] = 'field_procurement_type_tid';
@@ -307,7 +312,7 @@ function pnf_contracts_views_default_views() {
   );
   $handler->display->display_options['filters']['field_procurement_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_procurement_type_tid']['vocabulary'] = 'procurement_types';
-  /* Filter criterion: Content: Consultation status (field_contract_status) */
+  /* Critère de filtrage: Contenu : Consultation status (field_contract_status) */
   $handler->display->display_options['filters']['field_contract_status_value_1']['id'] = 'field_contract_status_value_1';
   $handler->display->display_options['filters']['field_contract_status_value_1']['table'] = 'field_data_field_contract_status';
   $handler->display->display_options['filters']['field_contract_status_value_1']['field'] = 'field_contract_status_value';
@@ -315,7 +320,7 @@ function pnf_contracts_views_default_views() {
     1 => '1',
   );
   $handler->display->display_options['filters']['field_contract_status_value_1']['group'] = 1;
-  /* Filter criterion: Content: Language */
+  /* Critère de filtrage: Contenu : Langue */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -330,14 +335,14 @@ function pnf_contracts_views_default_views() {
   $handler->display->display_options['title'] = 'Awarded public contracts';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Critère de filtrage: Contenu : Publié */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Critère de filtrage: Contenu : Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -345,14 +350,14 @@ function pnf_contracts_views_default_views() {
     'contract' => 'contract',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Contract category (field_contract_category) */
+  /* Critère de filtrage: Contenu : Contract category (field_contract_category) */
   $handler->display->display_options['filters']['field_contract_category_tid']['id'] = 'field_contract_category_tid';
   $handler->display->display_options['filters']['field_contract_category_tid']['table'] = 'field_data_field_contract_category';
   $handler->display->display_options['filters']['field_contract_category_tid']['field'] = 'field_contract_category_tid';
   $handler->display->display_options['filters']['field_contract_category_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_contract_category_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_contract_category_tid']['expose']['operator_id'] = 'field_contract_category_tid_op';
-  $handler->display->display_options['filters']['field_contract_category_tid']['expose']['label'] = 'Category';
+  $handler->display->display_options['filters']['field_contract_category_tid']['expose']['label'] = 'Catégorie';
   $handler->display->display_options['filters']['field_contract_category_tid']['expose']['operator'] = 'field_contract_category_tid_op';
   $handler->display->display_options['filters']['field_contract_category_tid']['expose']['identifier'] = 'field_contract_category_tid';
   $handler->display->display_options['filters']['field_contract_category_tid']['expose']['remember_roles'] = array(
@@ -364,7 +369,7 @@ function pnf_contracts_views_default_views() {
   );
   $handler->display->display_options['filters']['field_contract_category_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_contract_category_tid']['vocabulary'] = 'contract_categories';
-  /* Filter criterion: Content: Procedure type (field_procurement_type) */
+  /* Critère de filtrage: Contenu : Procedure type (field_procurement_type) */
   $handler->display->display_options['filters']['field_procurement_type_tid']['id'] = 'field_procurement_type_tid';
   $handler->display->display_options['filters']['field_procurement_type_tid']['table'] = 'field_data_field_procurement_type';
   $handler->display->display_options['filters']['field_procurement_type_tid']['field'] = 'field_procurement_type_tid';
@@ -383,7 +388,7 @@ function pnf_contracts_views_default_views() {
   );
   $handler->display->display_options['filters']['field_procurement_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_procurement_type_tid']['vocabulary'] = 'procurement_types';
-  /* Filter criterion: Content: Consultation status (field_contract_status) */
+  /* Critère de filtrage: Contenu : Consultation status (field_contract_status) */
   $handler->display->display_options['filters']['field_contract_status_value_1']['id'] = 'field_contract_status_value_1';
   $handler->display->display_options['filters']['field_contract_status_value_1']['table'] = 'field_data_field_contract_status';
   $handler->display->display_options['filters']['field_contract_status_value_1']['field'] = 'field_contract_status_value';
@@ -391,7 +396,7 @@ function pnf_contracts_views_default_views() {
     2 => '2',
   );
   $handler->display->display_options['filters']['field_contract_status_value_1']['group'] = 1;
-  /* Filter criterion: Content: Language */
+  /* Critère de filtrage: Contenu : Langue */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';

@@ -58,6 +58,7 @@ function pnf_raa_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -116,6 +117,7 @@ function pnf_raa_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'raa',
       'file_extensions' => 'pdf',
       'max_filesize' => '',
@@ -203,6 +205,7 @@ function pnf_raa_field_default_field_instances() {
       'default_value2' => 'strtotime',
       'default_value_code' => '',
       'default_value_code2' => '+ 10 years',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -261,6 +264,7 @@ function pnf_raa_field_default_field_instances() {
     'label' => 'Catégorie',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
