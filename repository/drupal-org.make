@@ -11,7 +11,7 @@ projects[better_formats][version] = "1.0-beta2"
 
 
 projects[better_exposed_filters][subdir] = contrib
-projects[better_exposed_filters][version] = "3.2"
+projects[better_exposed_filters][version] = "3.5"
 
 projects[colorbox][subdir] = contrib
 projects[colorbox][version] = "2.10"
@@ -26,7 +26,7 @@ projects[entity][subdir] = contrib
 projects[entity][version] = "1.7"
 
 projects[features][subdir] = contrib
-projects[features][version] = "2.7"
+projects[features][version] = "2.10"
 
 projects[features_extra][subdir] = contrib
 projects[features_extra][version] = "1.0"
@@ -88,7 +88,7 @@ projects[uuid_features][subdir] = contrib
 projects[uuid_features][version] = "1.0-alpha4"
 
 projects[views][subdir] = contrib
-projects[views][version] = "3.13"
+projects[views][version] = "3.18"
 
 projects[view_unpublished][subdir] = contrib
 projects[view_unpublished][version] = "1.2"
@@ -133,7 +133,7 @@ projects[date][subdir] = contrib
 projects[date][version] = "2.9"
 
 projects[download_file][subdir] = contrib
-projects[download_file][version] = "1.1"
+projects[download_file][version] = "2.1"
 
 ;projects[draggableviews][subdir] = contrib
 ;projects[draggableviews][version] = ""
@@ -148,7 +148,7 @@ projects[entityform][subdir] = contrib
 projects[entityform][version] = "2.0-rc4"
 
 projects[entityreference][subdir] = contrib
-projects[entityreference][version] = "1.1"
+projects[entityreference][version] = "1.5"
 
 projects[field_collection][subdir] = contrib
 projects[field_collection][version] = "1.0-beta11"
@@ -215,7 +215,7 @@ projects[mmenu][subdir] = contrib
 projects[mmenu][version] = "2.1"
 
 projects[paragraphs][subdir] = contrib
-projects[paragraphs][version] = "1.0-rc4"
+projects[paragraphs][version] = "1.0-rc5"
 
 ;projects[password_policy][subdir] = contrib
 ;projects[password_policy][version] = ""

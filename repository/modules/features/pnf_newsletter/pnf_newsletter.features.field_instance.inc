@@ -110,6 +110,7 @@ function pnf_newsletter_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -140,6 +141,7 @@ function pnf_newsletter_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'field_formatter_class' => '',
           'link' => FALSE,
           'linked_field' => array(
@@ -174,6 +176,7 @@ function pnf_newsletter_field_default_field_instances() {
             'linked' => 0,
           ),
           'links' => 1,
+          'use_content_language' => TRUE,
           'view_mode' => 'newsletter',
         ),
         'type' => 'entityreference_entity_view',
@@ -196,6 +199,7 @@ function pnf_newsletter_field_default_field_instances() {
             'linked' => 0,
           ),
           'links' => 1,
+          'use_content_language' => TRUE,
           'view_mode' => 'newsletter',
         ),
         'type' => 'entityreference_entity_view',
@@ -213,6 +217,7 @@ function pnf_newsletter_field_default_field_instances() {
     'label' => 'Agenda',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -336,6 +341,7 @@ function pnf_newsletter_field_default_field_instances() {
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Rechercher',
         'enable' => 0,
@@ -367,6 +373,7 @@ function pnf_newsletter_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'field_formatter_class' => '',
           'link' => FALSE,
           'linked_field' => array(
@@ -401,6 +408,7 @@ function pnf_newsletter_field_default_field_instances() {
             'linked' => 0,
           ),
           'links' => 1,
+          'use_content_language' => TRUE,
           'view_mode' => 'newsletter',
         ),
         'type' => 'entityreference_entity_view',
@@ -423,6 +431,7 @@ function pnf_newsletter_field_default_field_instances() {
             'linked' => 0,
           ),
           'links' => 1,
+          'use_content_language' => TRUE,
           'view_mode' => 'newsletter',
         ),
         'type' => 'entityreference_entity_view',
@@ -440,6 +449,7 @@ function pnf_newsletter_field_default_field_instances() {
     'label' => 'Actualités',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -466,6 +476,7 @@ function pnf_newsletter_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'field_formatter_class' => '',
           'link' => FALSE,
           'linked_field' => array(
@@ -487,6 +498,7 @@ function pnf_newsletter_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'field_formatter_class' => '',
           'link' => 1,
           'linked_field' => array(
@@ -508,6 +520,7 @@ function pnf_newsletter_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'field_formatter_class' => '',
           'link' => 1,
           'linked_field' => array(
@@ -537,6 +550,7 @@ function pnf_newsletter_field_default_field_instances() {
     'label' => 'Brèves',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -615,6 +629,7 @@ function pnf_newsletter_field_default_field_instances() {
     'label' => 'Newsletter category',
     'required' => TRUE,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -636,6 +651,7 @@ function pnf_newsletter_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'field_formatter_class' => '',
           'link' => FALSE,
           'linked_field' => array(
@@ -670,6 +686,7 @@ function pnf_newsletter_field_default_field_instances() {
             'linked' => 0,
           ),
           'links' => 1,
+          'use_content_language' => TRUE,
           'view_mode' => 'newsletter',
         ),
         'type' => 'entityreference_entity_view',
@@ -692,6 +709,7 @@ function pnf_newsletter_field_default_field_instances() {
             'linked' => 0,
           ),
           'links' => 1,
+          'use_content_language' => TRUE,
           'view_mode' => 'newsletter',
         ),
         'type' => 'entityreference_entity_view',
@@ -709,6 +727,7 @@ function pnf_newsletter_field_default_field_instances() {
     'label' => 'Sujets forts',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(

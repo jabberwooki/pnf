@@ -147,6 +147,7 @@ function pnf_advanced_pages_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'field_formatter_class' => '',
           'link' => FALSE,
           'linked_field' => array(
@@ -181,6 +182,7 @@ function pnf_advanced_pages_field_default_field_instances() {
             'linked' => 0,
           ),
           'links' => 1,
+          'use_content_language' => TRUE,
           'view_mode' => 'linked_content',
         ),
         'type' => 'entityreference_entity_view',

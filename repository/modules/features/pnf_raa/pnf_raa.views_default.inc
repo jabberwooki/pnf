@@ -53,7 +53,7 @@ function pnf_raa_views_default_views() {
     'job_types' => 0,
     'procurement_types' => 0,
   );
-  /* Field: Content: Catégorie */
+  /* Field: Nœud: Catégorie */
   $handler->display->display_options['fields']['field_raa_category']['id'] = 'field_raa_category';
   $handler->display->display_options['fields']['field_raa_category']['table'] = 'field_data_field_raa_category';
   $handler->display->display_options['fields']['field_raa_category']['field'] = 'field_raa_category';
@@ -70,7 +70,7 @@ function pnf_raa_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h4';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Publié le */
+  /* Field: Nœud: Date de publication affichée */
   $handler->display->display_options['fields']['field_displayed_pub_date']['id'] = 'field_displayed_pub_date';
   $handler->display->display_options['fields']['field_displayed_pub_date']['table'] = 'field_data_field_displayed_pub_date';
   $handler->display->display_options['fields']['field_displayed_pub_date']['field'] = 'field_displayed_pub_date';
@@ -97,7 +97,7 @@ function pnf_raa_views_default_views() {
       ),
     ),
   );
-  /* Field: Content: Documents téléchargeables */
+  /* Field: Nœud: Documents téléchargeables */
   $handler->display->display_options['fields']['field_downloadable_docs']['id'] = 'field_downloadable_docs';
   $handler->display->display_options['fields']['field_downloadable_docs']['table'] = 'field_data_field_downloadable_docs';
   $handler->display->display_options['fields']['field_downloadable_docs']['field'] = 'field_downloadable_docs';
@@ -114,12 +114,12 @@ function pnf_raa_views_default_views() {
   $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['relationship'] = 'term_node_tid';
-  /* Sort criterion: Content: Publié le (field_displayed_pub_date) */
+  /* Sort criterion: Nœud: Date de publication affichée (field_displayed_pub_date) */
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['id'] = 'field_displayed_pub_date_value';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['table'] = 'field_data_field_displayed_pub_date';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['field'] = 'field_displayed_pub_date_value';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['order'] = 'DESC';
-  /* Contextual filter: Content: Publié le (field_displayed_pub_date) */
+  /* Contextual filter: Nœud: Date de publication affichée (field_displayed_pub_date) */
   $handler->display->display_options['arguments']['field_displayed_pub_date_value']['id'] = 'field_displayed_pub_date_value';
   $handler->display->display_options['arguments']['field_displayed_pub_date_value']['table'] = 'field_data_field_displayed_pub_date';
   $handler->display->display_options['arguments']['field_displayed_pub_date_value']['field'] = 'field_displayed_pub_date_value';
