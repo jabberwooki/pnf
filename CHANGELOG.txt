@@ -1,3 +1,7 @@
+Hotfix document-exp-filters-improvement 2017-10-30
+==================================================
+Field Title added to page_documents view's exposed filters.
+
 Hotfix pnpc-instagram-fontawesome-icon 2017-10-30
 =================================================
 Fontawesome icon code f16d added to css for pinterest link.
