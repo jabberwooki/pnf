@@ -1,3 +1,7 @@
+Hotfix pnpc-instagram-fontawesome-icon 2017-10-30
+=================================================
+Fontawesome icon code f16d added to css for pinterest link.
+
 Hotfix direct-prod-fixes-integration-2017-10-26
 ===============================================
 Fixes made directly on prod site reproduced locally for integration in develop and master branches.
