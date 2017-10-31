@@ -40,6 +40,14 @@ function pnf_scientific_reports_views_default_views() {
   $handler->display->display_options['row_options']['advanced'] = 0;
   $handler->display->display_options['row_options']['delta_fieldset']['delta_fields'] = array();
   $handler->display->display_options['row_options']['default_fieldset']['view_mode'] = 'teaser';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['label'] = 'Pas de résultat';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'There is no report corresponding to your filter criteria.';
+  $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -47,7 +55,7 @@ function pnf_scientific_reports_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Content: Publié le (field_displayed_pub_date) */
+  /* Sort criterion: Nœud: Publié le (field_displayed_pub_date) */
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['id'] = 'field_displayed_pub_date_value';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['table'] = 'field_data_field_displayed_pub_date';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['field'] = 'field_displayed_pub_date_value';
@@ -66,10 +74,12 @@ function pnf_scientific_reports_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'scientific_report' => 'scientific_report',
   );
-  /* Filter criterion: Content: Secteurs (field_sectors) */
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Nœud: Secteurs (field_sectors) */
   $handler->display->display_options['filters']['field_sectors_tid']['id'] = 'field_sectors_tid';
   $handler->display->display_options['filters']['field_sectors_tid']['table'] = 'field_data_field_sectors';
   $handler->display->display_options['filters']['field_sectors_tid']['field'] = 'field_sectors_tid';
+  $handler->display->display_options['filters']['field_sectors_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_sectors_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_sectors_tid']['expose']['operator_id'] = 'field_sectors_tid_op';
   $handler->display->display_options['filters']['field_sectors_tid']['expose']['label'] = 'Sector';
@@ -84,10 +94,11 @@ function pnf_scientific_reports_views_default_views() {
   );
   $handler->display->display_options['filters']['field_sectors_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_sectors_tid']['vocabulary'] = 'sectors';
-  /* Filter criterion: Content: Thème (field_sr_theme) */
+  /* Filter criterion: Nœud: Thème (field_sr_theme) */
   $handler->display->display_options['filters']['field_sr_theme_tid']['id'] = 'field_sr_theme_tid';
   $handler->display->display_options['filters']['field_sr_theme_tid']['table'] = 'field_data_field_sr_theme';
   $handler->display->display_options['filters']['field_sr_theme_tid']['field'] = 'field_sr_theme_tid';
+  $handler->display->display_options['filters']['field_sr_theme_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_sr_theme_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_sr_theme_tid']['expose']['operator_id'] = 'field_sr_theme_tid_op';
   $handler->display->display_options['filters']['field_sr_theme_tid']['expose']['label'] = 'Theme';
@@ -102,12 +113,48 @@ function pnf_scientific_reports_views_default_views() {
   );
   $handler->display->display_options['filters']['field_sr_theme_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_sr_theme_tid']['vocabulary'] = 'scientific_themes';
+  /* Filter criterion: Nœud: Publié le (field_displayed_pub_date) */
+  $handler->display->display_options['filters']['field_displayed_pub_date_value']['id'] = 'field_displayed_pub_date_value';
+  $handler->display->display_options['filters']['field_displayed_pub_date_value']['table'] = 'field_data_field_displayed_pub_date';
+  $handler->display->display_options['filters']['field_displayed_pub_date_value']['field'] = 'field_displayed_pub_date_value';
+  $handler->display->display_options['filters']['field_displayed_pub_date_value']['group'] = 1;
+  $handler->display->display_options['filters']['field_displayed_pub_date_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_displayed_pub_date_value']['expose']['operator_id'] = 'field_displayed_pub_date_value_op';
+  $handler->display->display_options['filters']['field_displayed_pub_date_value']['expose']['label'] = 'Année';
+  $handler->display->display_options['filters']['field_displayed_pub_date_value']['expose']['operator'] = 'field_displayed_pub_date_value_op';
+  $handler->display->display_options['filters']['field_displayed_pub_date_value']['expose']['identifier'] = 'field_displayed_pub_date_value';
+  $handler->display->display_options['filters']['field_displayed_pub_date_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    217795369 => 0,
+    231346920 => 0,
+    193262079 => 0,
+  );
+  $handler->display->display_options['filters']['field_displayed_pub_date_value']['granularity'] = 'year';
+  $handler->display->display_options['filters']['field_displayed_pub_date_value']['form_type'] = 'date_text';
+  /* Filter criterion: Content: Title */
+  $handler->display->display_options['filters']['title']['id'] = 'title';
+  $handler->display->display_options['filters']['title']['table'] = 'node';
+  $handler->display->display_options['filters']['title']['field'] = 'title';
+  $handler->display->display_options['filters']['title']['operator'] = 'contains';
+  $handler->display->display_options['filters']['title']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
+  $handler->display->display_options['filters']['title']['expose']['label'] = 'Titre';
+  $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
+  $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
+  $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    217795369 => 0,
+    231346920 => 0,
+    193262079 => 0,
+  );
 
   /* Display: Liste rapports */
   $handler = $view->new_display('page', 'Liste rapports', 'sr_list');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Scientific reports of the Port-Cros national park';
-  $handler->display->display_options['path'] = 'rapports-scientifiques';
+  $handler->display->display_options['path'] = 'scientific-reports';
   $export['scientific_reports'] = $view;
 
   return $export;

@@ -31,10 +31,10 @@ function pnf_scientific_reports_field_default_field_instances() {
         'weight' => 4,
       ),
       'full' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'date_xxxl',
+          'format_type' => 'year',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
@@ -48,7 +48,7 @@ function pnf_scientific_reports_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'date_xxs',
+          'format_type' => 'year',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
@@ -226,7 +226,7 @@ function pnf_scientific_reports_field_default_field_instances() {
   // Exported field_instance: 'node-scientific_report-field_sectors'.
   $field_instances['node-scientific_report-field_sectors'] = array(
     'bundle' => 'scientific_report',
-    'default_value' => NULL,
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
