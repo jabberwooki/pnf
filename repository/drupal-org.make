@@ -131,6 +131,7 @@ projects[custom_search][version] = "1.20"
 
 projects[date][subdir] = contrib
 projects[date][version] = "2.9"
+projects[custom_breadcrumbs][patch][] = "https://www.drupal.org/files/issues/date-fix_undefine_in_date_text_element_process-2339119-7.patch"
 
 projects[download_file][subdir] = contrib
 projects[download_file][version] = "2.1"
