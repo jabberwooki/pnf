@@ -47,7 +47,7 @@ function pnf_scientific_reports_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Content: Publié le (field_displayed_pub_date) */
+  /* Sort criterion: Nœud: Publié le (field_displayed_pub_date) */
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['id'] = 'field_displayed_pub_date_value';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['table'] = 'field_data_field_displayed_pub_date';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['field'] = 'field_displayed_pub_date_value';
@@ -66,7 +66,7 @@ function pnf_scientific_reports_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'scientific_report' => 'scientific_report',
   );
-  /* Filter criterion: Content: Secteurs (field_sectors) */
+  /* Filter criterion: Nœud: Secteurs (field_sectors) */
   $handler->display->display_options['filters']['field_sectors_tid']['id'] = 'field_sectors_tid';
   $handler->display->display_options['filters']['field_sectors_tid']['table'] = 'field_data_field_sectors';
   $handler->display->display_options['filters']['field_sectors_tid']['field'] = 'field_sectors_tid';
@@ -84,7 +84,7 @@ function pnf_scientific_reports_views_default_views() {
   );
   $handler->display->display_options['filters']['field_sectors_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_sectors_tid']['vocabulary'] = 'sectors';
-  /* Filter criterion: Content: Thème (field_sr_theme) */
+  /* Filter criterion: Nœud: Thème (field_sr_theme) */
   $handler->display->display_options['filters']['field_sr_theme_tid']['id'] = 'field_sr_theme_tid';
   $handler->display->display_options['filters']['field_sr_theme_tid']['table'] = 'field_data_field_sr_theme';
   $handler->display->display_options['filters']['field_sr_theme_tid']['field'] = 'field_sr_theme_tid';
@@ -107,7 +107,7 @@ function pnf_scientific_reports_views_default_views() {
   $handler = $view->new_display('page', 'Liste rapports', 'sr_list');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Scientific reports of the Port-Cros national park';
-  $handler->display->display_options['path'] = 'rapports-scientifiques';
+  $handler->display->display_options['path'] = 'scientific-reports';
   $export['scientific_reports'] = $view;
 
   return $export;

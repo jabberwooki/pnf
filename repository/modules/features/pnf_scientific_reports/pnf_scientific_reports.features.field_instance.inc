@@ -226,7 +226,7 @@ function pnf_scientific_reports_field_default_field_instances() {
   // Exported field_instance: 'node-scientific_report-field_sectors'.
   $field_instances['node-scientific_report-field_sectors'] = array(
     'bundle' => 'scientific_report',
-    'default_value' => NULL,
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
