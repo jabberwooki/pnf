@@ -1,3 +1,7 @@
+Hotfix missing-date-format-Y 2017-10-31
+=======================================
+ * pnf_scientific_reports up: missing date format 'Y' added.
+ 
 Hotfix sci-reports-exp-filters-improvement 2017-10-31
 =====================================================
  * pnf_scientific_reports up: Date and Title fields added as filter criteria in view scientific_reports/sr_list.
