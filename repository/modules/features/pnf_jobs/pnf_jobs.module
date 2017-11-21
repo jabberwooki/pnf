@@ -86,15 +86,15 @@ function pnf_jobs_views_pre_view(&$view, &$display_id, &$args) {
  * Implements hook_block_view_alter().
  */
 function pnf_jobs_block_view_alter(&$data, $block) {
-	if ($block->bid == 'menu-menu-menu-jobs') {
-		$park_codes = array('fcb');
-		if (in_array(variable_get('park_code'), $park_codes)) {
-			$mlids = element_children($data['content']);
-			foreach ($mlids as $mlid) {
-				if ($data['content'][$mlid]['#href'] != 'offres-demploi') {
-					unset($data['content'][$mlid]);
-				}
-			}
-		}
-	}
+  if ($block->bid == 'menu-menu-menu-jobs') {
+    $park_codes = array('fcb');
+    if (in_array(variable_get('park_code'), $park_codes)) {
+      $mlids = element_children($data['content']);
+      foreach ($mlids as $mlid) {
+        if ($data['content'][$mlid]['#href'] == 'civic-services') {
+          unset($data['content'][$mlid]);
+        }
+      }
+    }
+  }
 }
