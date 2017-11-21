@@ -67,7 +67,7 @@ if ($parts[0] == 'www') {
 		case 'parcsnationaux':
 			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnf_style.css.less');
 			break;
-		case 'portcrosparcnational':
+		case 'portcros-parcnational':
 			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnpc_style.css.less');
 			break;
 		case 'reunion-parcnational':
