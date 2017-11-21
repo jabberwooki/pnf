@@ -1,3 +1,7 @@
+Hotfix port-cros-domain-name-with-hyphen 2017-11-21
+===================================================
+ * Port-Cros domain name altered in template.php: now with an hyphen (portcros-parcnational instead of portcrosparcnational).
+
 Hotfix missing-date-format-Y 2017-10-31
 =======================================
  * pnf_scientific_reports up: missing date format 'Y' added.
