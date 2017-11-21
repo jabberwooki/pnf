@@ -1,3 +1,7 @@
+Hotfix jobs-menu-for-fcb-park 2017-11-21
+========================================
+ * pnf_jobs up: FCB park now displays jobs and trainings menu links (civic-services link remains hidden).
+
 Hotfix port-cros-domain-name-with-hyphen 2017-11-21
 ===================================================
  * Port-Cros domain name altered in template.php: now with an hyphen (portcros-parcnational instead of portcrosparcnational).
