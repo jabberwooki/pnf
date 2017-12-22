@@ -1,0 +1,241 @@
+<?php
+/**
+ * @file
+ * Code for the Extranet feature.
+ */
+
+include_once 'pnf_extranet.features.inc';
+
+/**
+ * Implements hook_init().
+ */
+function pnf_extranet_init() {
+  drupal_add_css(drupal_get_path('module', 'pnf_extranet') . '/pnf_extranet.css');
+}
+
+/**
+ * Implements hook_permission().
+ */
+function pnf_extranet_permission() {
+  return array(
+    'administer extranet' => array(
+      'title' => t('Administer Extranet'),
+      'description' => t('Allows users to perform administration tasks on Extranet (extranet role creation...).'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function pnf_extranet_menu() {
+  $items = array();
+  $items['admin/extranet'] = array(
+    'title' => t('Extranet'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('pnf_extranet_roles_form'),
+    'access arguments' => array('administer extranet'),
+  );
+  $items['admin/extranet/roles/edit/%user_role'] = array(
+    'title' => 'Edit role',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('pnf_extranet_role_edit'),
+    'access callback' => TRUE,
+  );
+  $items['admin/extranet/roles/delete/%user_role'] = array(
+    'title' => 'Delete role',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('pnf_extranet_role_delete_confirm', 4),
+    'access callback' => TRUE,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function pnf_extranet_form_pnf_extranet_roles_alter(&$form, &$form_state, $form_id) {
+  dpm($form);
+
+}
+
+function pnf_extranet_roles_form($form, &$form_state) {
+  $roles = pnf_extranet_get_extrane_roles();
+  unset($roles[DRUPAL_AUTHENTICATED_RID]);
+//  dpm($roles);
+
+  $roles_list = '<h2>Rôles définis pour l\'extranet</h2>';
+  if (sizeof($roles) == 0) {
+    $roles_list .= '<p>Aucun rôle n\a été créé pour l\'instant.</p>';
+  }
+  else {
+    $header = array(t('Name'), array('data' => t('Actions'), 'colspan' => 2));
+    $rows = array();
+
+//    $roles_list .= '<div class="extranet-roles-list"><ul>';
+    foreach ($roles as $rid => $role) {
+//      $roles_list .= '<li>' . $role . '</li>';
+      $rows[] = array(
+        $role,
+        '<a href="' . '/admin/extranet/roles/edit/' . $rid . '">modifier le rôle</a>',
+        '<a href="' . '/admin/extranet/roles/delete/' . $rid . '">supprimer le rôle</a>',
+      );
+    }
+//    $roles_list .= '</ul></div>';
+    $roles_list .= theme('table', array('header' => $header, 'rows' => $rows));
+  }
+
+  $roles_list .= '<h2>Création d\'un nouveau rôle</h2>';
+
+  $form['roles_list'] = array(
+    '#markup' => $roles_list,
+  );
+
+//  $order = 0;
+//  foreach ($roles as $rid => $name) {
+//    $form['roles'][$rid]['#role'] = (object) array(
+//      'rid' => $rid,
+//      'name' => $name,
+//      'weight' => $order,
+//    );
+//    $form['roles'][$rid]['#weight'] = $order;
+//    $form['roles'][$rid]['weight'] = array(
+//      '#type' => 'textfield',
+//      '#title' => t('Weight for @title', array('@title' => $name)),
+//      '#title_display' => 'invisible',
+//      '#size' => 4,
+//      '#default_value' => $order,
+//      '#attributes' => array('class' => array('role-weight')),
+//    );
+//    $order++;
+//  }
+
+  $form['role_name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Name'),
+//    '#title_display' => 'invisible',
+    '#size' => 32,
+    '#maxlength' => 64,
+    '#required' => TRUE,
+  );
+  $form['add'] = array(
+    '#type' => 'submit',
+    '#value' => t('Add'),
+  );
+
+  return $form;
+}
+
+function pnf_extranet_roles_form_submit($form, &$form_state) {
+  $role = new stdClass();
+  $role->name = $form_state['values']['role_name'];
+  $role->extranet_role = 1;
+  user_role_save($role);
+
+  $new_role_delegation_permission = array('assign ' . $role->name . ' role');
+  $extranet_management_allowed_roles = user_roles(true, 'administer extranet');
+  foreach ($extranet_management_allowed_roles as $rid=>$role) {
+    user_role_grant_permissions($rid, $new_role_delegation_permission);
+  }
+
+  drupal_set_message('Rôle enregistré.');
+}
+
+function pnf_extranet_get_extrane_roles() {
+  $query = db_select('role', 'r');
+  $query->fields('r', array('rid', 'name', 'extranet_role'));
+  $query->condition('r.extranet_role', 1);
+  $query->orderBy('weight');
+  $query->orderBy('name');
+
+  $result = $query->execute()->fetchAll();
+  //dpm($result);
+
+  $roles = array();
+  foreach ($result as $role) {
+    $roles[$role->rid] = $role->name;
+  }
+
+  return $roles;
+}
+
+function pnf_extranet_role_edit($form, $form_state) {
+  $rid = arg(4);
+  $role = user_role_load($rid);
+  dpm($role);
+  // Display the edit role form.
+  $form['name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Role name'),
+    '#default_value' => $role->name,
+    '#size' => 30,
+    '#required' => TRUE,
+    '#maxlength' => 64,
+//    '#description' => t('The name for this role. Example: "moderator", "editorial board", "site architect".'),
+  );
+  $form['rid'] = array(
+    '#type' => 'value',
+    '#value' => $role->rid,
+  );
+  $form['weight'] = array(
+    '#type' => 'value',
+    '#value' => $role->weight,
+  );
+  $form['actions'] = array('#type' => 'actions');
+  $form['actions']['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save role'),
+  );
+//  $form['actions']['delete'] = array(
+//    '#type' => 'submit',
+//    '#value' => t('Delete role'),
+//    '#submit' => array('user_admin_role_delete_submit'),
+//  );
+
+  return $form;
+}
+
+/**
+ * Form submit handler for the user_admin_role() form.
+ */
+function pnf_extranet_role_edit_submit($form, &$form_state) {
+  $role = (object) $form_state['values'];
+
+  user_role_save($role);
+  drupal_set_message(t('The role has been renamed.'));
+
+//  if ($form_state['values']['op'] == t('Save role')) {
+//    user_role_save($role);
+//    drupal_set_message(t('The role has been renamed.'));
+//  }
+//  elseif ($form_state['values']['op'] == t('Add role')) {
+//    user_role_save($role);
+//    drupal_set_message(t('The role has been added.'));
+//  }
+
+  $form_state['redirect'] = 'admin/extranet';
+  return;
+}
+
+/**
+ * Form to confirm role delete operation.
+ */
+function pnf_extranet_role_delete_confirm($form, &$form_state) {
+  $rid = arg(4);
+  $role = user_role_load($rid);
+  $form['rid'] = array(
+    '#type' => 'value',
+    '#value' => $role->rid,
+  );
+  return confirm_form($form, t('Are you sure you want to delete the role %name ?', array('%name' => $role->name)), 'admin/extranet', t('This action cannot be undone.'), t('Delete'));
+}
+
+/**
+ * Form submit handler for user_admin_role_delete_confirm().
+ */
+function pnf_extranet_role_delete_confirm_submit($form, &$form_state) {
+  user_role_delete((int) $form_state['values']['rid']);
+  drupal_set_message(t('The role has been deleted.'));
+  $form_state['redirect'] = 'admin/extranet';
+}
