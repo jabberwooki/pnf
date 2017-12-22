@@ -1,0 +1,95 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: ubuntu
+ * Date: 22/12/17
+ * Time: 13:42
+ */
+
+define('EXTRANET_MANAGER_ROLE_NAME', 'gestionnaire extranet');
+/**
+ * Implements hook_schema_alter().
+ */
+function pnf_extranet_schema_alter(&$schema) {
+  // Add machine_name field to the 'role' table.
+  $schema['role']['fields']['extranet_role'] = array(
+    'description' => 'Equals 1 if role is an extranet role, otherwise equals 0.',
+    'type' => 'int',
+    'unsigned' => TRUE,
+    'not null' => TRUE,
+    'default' => 0,
+  );
+}
+
+/**
+ * Implements hook_install().
+ */
+function pnf_extranet_install() {
+  // Add extranet_role field to the 'role' table.
+  db_add_field('role', 'extranet_role', array(
+    'description' => 'Equals 1 if role is an extranet role, otherwise equals 0.',
+    'type' => 'int',
+    'unsigned' => TRUE,
+    'not null' => TRUE,
+    'default' => 0,
+  ));
+
+  // Create extranet manager role.
+  $role = new stdClass();
+  $role->name = EXTRANET_MANAGER_ROLE_NAME;
+  user_role_save($role);
+
+  // Grant 'administer users' permission to extranet mnanager role.
+  $permissions = array('administer users');
+  $extranet_manager_role = user_role_load_by_name(EXTRANET_MANAGER_ROLE_NAME);
+  $extranet_manager_role_rid = $extranet_manager_role->rid;
+  user_role_grant_permissions($extranet_manager_role_rid, $permissions);
+
+  // Grant 'administer extranet' permission to admininstrateur, webmaster and extranet admin roles.
+  $permissions = array('administer extranet');
+  $extranet_management_allowed_roles = array();
+
+  $administrator_role = user_role_load_by_name('administrateur');
+  $extranet_management_allowed_roles[] = $administrator_role->rid;
+
+  $webmaster_role = user_role_load_by_name('webmaster');
+  $extranet_management_allowed_roles[] = $webmaster_role->rid;
+
+  $extranet_management_allowed_roles[] = $extranet_manager_role->rid;
+
+  foreach ($extranet_management_allowed_roles as $rid) {
+    user_role_grant_permissions($rid, $permissions);
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function pnf_extranet_uninstall() {
+  // Remove extranet_role field to the 'role' table.
+  db_drop_field('role', 'extranet_role');
+
+  // Revoke 'administer users' permission from extranet mnanager role.
+  $permissions = array('administer users');
+  $extranet_manager_role = user_role_load_by_name(EXTRANET_MANAGER_ROLE_NAME);
+  $extranet_manager_role_rid = $extranet_manager_role->rid;
+  user_role_revoke_permissions($extranet_manager_role_rid, $permissions);
+
+  // Revoke 'administer extranet' permission from extranet manager, webmaster and administrateur roles.
+  $permissions = array('administer extranet');
+  $administrator_role = user_role_load_by_name('administrateur');
+  $extranet_management_revoked_roles[] = $administrator_role->rid;
+
+  $webmaster_role = user_role_load_by_name('webmaster');
+  $extranet_management_revoked_roles[] = $webmaster_role->rid;
+
+  $extranet_manager_role = user_role_load_by_name(EXTRANET_MANAGER_ROLE_NAME);
+  $extranet_management_revoked_roles[] = $extranet_manager_role->rid;
+
+  foreach ($extranet_management_revoked_roles as $rid) {
+    user_role_revoke_permissions($rid, $permissions);
+  }
+
+  // Delete extranet manager role.
+  user_role_delete(EXTRANET_MANAGER_ROLE_NAME);
+}
