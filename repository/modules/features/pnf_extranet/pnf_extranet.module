@@ -228,7 +228,11 @@ function pnf_extranet_role_delete_confirm($form, &$form_state) {
     '#type' => 'value',
     '#value' => $role->rid,
   );
+<<<<<<< HEAD
   return confirm_form($form, t('Are you sure you want to delete the role %name ?', array('%name' => $role->name)), 'admin/extranet', t('This action cannot be undone.'), t('Delete'));
+=======
+  return confirm_form($form, t('Are you sure you want to delete the role %name ?', array('%name' => $role->name)), 'admin/people/permissions/roles', t('This action cannot be undone.'), t('Delete'));
+>>>>>>> 77914fd52c0dadd81f01d0cb8e05555c2a6bb112
 }
 
 /**
