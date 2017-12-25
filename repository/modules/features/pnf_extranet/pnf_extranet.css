@@ -1,5 +1,16 @@
+/* Vocabulary term add/edit form */
 form#pnf-extranet-roles-form table {
     margin-bottom: 50px;
     border-bottom: 1px solid #ccc;
 }
 
+/* Node full mode */
+.node-extranet-doc .field-name-body {
+    margin: 20px 0px;
+}
+.node-extranet-doc .field-name-field-downloadable-docs img {
+    display: none;
+}
+.node-extranet-doc .field-name-field-downloadable-docs a {
+    color: white;
+}
