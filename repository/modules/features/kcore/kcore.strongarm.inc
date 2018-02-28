@@ -764,13 +764,13 @@ Nous nous efforçons d\'y répondre dans les plus brefs délais.</p>
     'name' => 'French',
     'native' => 'Français',
     'direction' => '0',
-    'enabled' => '1',
+    'enabled' => 1,
     'plurals' => '2',
     'formula' => '($n>1)',
     'domain' => '',
     'prefix' => 'fr',
     'weight' => '0',
-    'javascript' => '',
+    'javascript' => 'J9Z_EN95Kd7UwId9NIh5XMzVS0mUxQJQklVFKS_s5eA',
   );
   $export['language_default'] = $strongarm;
 

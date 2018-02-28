@@ -13,8 +13,9 @@ function kcore_user_default_roles() {
   // Exported role: administrateur.
   $roles['administrateur'] = array(
     'name' => 'administrateur',
-    'weight' => 4,
+    'weight' => 5,
     'machine_name' => '',
+    'extranet_role' => 0,
   );
 
   // Exported role: rédacteur.
@@ -22,13 +23,15 @@ function kcore_user_default_roles() {
     'name' => 'rédacteur',
     'weight' => 2,
     'machine_name' => '',
+    'extranet_role' => 0,
   );
 
   // Exported role: webmaster.
   $roles['webmaster'] = array(
     'name' => 'webmaster',
-    'weight' => 3,
+    'weight' => 4,
     'machine_name' => '',
+    'extranet_role' => 0,
   );
 
   return $roles;

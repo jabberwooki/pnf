@@ -235,7 +235,6 @@ features[user_permission][] = administer taxonomy
 features[user_permission][] = administer tb_megamenu
 features[user_permission][] = administer themes
 features[user_permission][] = administer url aliases
-features[user_permission][] = administer users
 features[user_permission][] = administer uuid
 features[user_permission][] = administer views
 features[user_permission][] = administer xmlsitemap
