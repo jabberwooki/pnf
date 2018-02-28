@@ -13,7 +13,12 @@ define('EXTRANET_MANAGER_ROLE_NAME', 'gestionnaire extranet');
  */
 function pnf_extranet_init() {
   drupal_add_css(drupal_get_path('module', 'pnf_extranet') . '/pnf_extranet.css');
+  if (strpos($_SERVER['REQUEST_URI'], '/extranet') !== FALSE && strpos($_SERVER['REQUEST_URI'], '/admin') === FALSE) {
+    drupal_add_js(drupal_get_path('module', 'pnf_extranet') . '/pnf_extranet.js');
 
+//    dpm(arg());
+//    dpm(drupal_get_breadcrumb());
+  }
 }
 
 /**
@@ -93,7 +98,7 @@ function pnf_extranet_form_taxonomy_form_term_alter(&$form, &$form_state, $form_
       $form['term_per_role']['term_per_role_roles']['#default_value'][] = $extranet_manager_role->rid;
       $form['term_per_role']['term_per_role_roles']['#default_value'][] = $webmaster_role->rid;
       $form['term_per_role']['term_per_role_roles']['#default_value'][] = $administrator_role->rid;
-      
+
       // Close term page to selected roles default values settings
       $form['term_per_role']['term_per_role_hide_from_roles']['#default_value'][] = DRUPAL_ANONYMOUS_RID;
     }
@@ -249,4 +254,169 @@ function pnf_extranet_role_delete_confirm_submit($form, &$form_state) {
 
   drupal_set_message(t('The role has been deleted.'));
   $form_state['redirect'] = 'admin/extranet';
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function pnf_extranet_block_info() {
+  $blocks = array();
+  $blocks['extranet_folders'] = array(
+    'info' => t('Dossiers extranet'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function pnf_extranet_block_view($delta = '') {
+  $block = array();
+
+  switch($delta) {
+    case 'extranet_folders' :
+      $voc = taxonomy_vocabulary_machine_name_load('extranet_doc_types');
+      $tree = taxonomy_get_nested_tree($voc->vid);
+
+      $block['content'] = pnf_extranet_folders_markup($tree);
+  }
+
+  return $block;
+}
+
+/**
+ * Adapted from Hunabku's post :
+ * https://www.drupal.org/forum/support/post-installation/2009-11-04/creating-collapsible-hierarchical-or-nested-taxonomy-list#comment-4598508
+ */
+function taxonomy_get_nested_tree($terms = array(), $max_depth = NULL, $parent = 0, $parents_index = array(), $depth = 0) {
+  if (!is_array($terms)) {
+    $terms = taxonomy_get_tree($terms);
+  }
+
+  foreach($terms as $term) {
+    foreach($term->parents as $term_parent) {
+      if ($term_parent == $parent) {
+        $nested_tree[$term->tid] = $term;
+      }
+      else {
+        $parents_index[$term_parent][$term->tid] = $term;
+      }
+    }
+  }
+  foreach($nested_tree as &$term) {
+    if (isset($parents_index[$term->tid]) && (is_null($max_depth) || $depth < $max_depth)) {
+      // Execute recursion and pass parameters for children
+      $children = taxonomy_get_nested_tree($parents_index[$term->tid], $max_depth, $term->tid, $parents_index, $depth + 1);
+      // Optional alphabetic sort of child terms
+      //usort($children, "your_compare");
+      $term->children = $children;
+    }
+  }
+  return $nested_tree;
+}
+
+function pnf_extranet_folders_markup($tree, $depth=0) {
+  $markup = "<ul class=\"terms level-{$depth}\">\n";
+  foreach($tree as $tid => $term) {
+    $doc_number = 0;
+    if (isset($term->children)) {
+      $doc_number = taxonomy_get_children_nodes_number($tid, $term->children);
+    }
+    else {
+      $doc_number = taxonomy_get_children_nodes_number($tid);
+    }
+
+    if (sizeof(arg()) == 1 || sizeof(arg()) == 3 && arg(2) != $term->tid) {
+      $markup .= '<li> <i class="fa fa-folder-o" aria-hidden="true"></i>'
+        . l($term->name, 'taxonomy/term/'. $term->tid) . " <span tid=\"{$term->tid}\">(" . $doc_number . ")</span>" . "\n";
+    }
+    else {
+      $markup .= '<li> <i class="fa fa-folder-open-o" aria-hidden="true"></i>'
+        . $term->name . " <span tid=\"{$term->tid}\">(" . $doc_number . ")</span>" . "\n";
+    }
+
+    if (isset($term->children)) {
+      $depth++;
+      $markup .= pnf_extranet_folders_markup($term->children, $depth);
+    }
+    $markup .= "</li>\n";
+  }
+  $markup .= "</ul>\n";
+
+  return $markup;
+}
+
+function taxonomy_get_children_tids($tree, $tids = array()) {
+  foreach ($tree as $tid => $child) {
+    $tids[] = $tid;
+    if (isset($child->children)) {
+      $tids = array_merge($tids, taxonomy_get_children_tids($child->children));
+    }
+  }
+  return $tids;
+}
+
+function taxonomy_get_children_nodes_number($tid, $tree=array()) {
+  $tids = array($tid);
+  if (!empty($tree)) {
+    $tids = array_merge($tids, taxonomy_get_children_tids($tree));
+  }
+
+  $query = db_select('taxonomy_index', 'ti');
+  $query->addField('ti', 'nid');
+  $query->condition('ti.tid', $tids, 'IN');
+
+  return $query->countQuery()->execute()->fetchField();
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function pnf_extranet_preprocess_page(&$variables) {
+  if (isset($variables['page']['content']['pnf_extranet_extranet_folders'])
+    && isset($variables['page']['content']['system_main']['no_content'])) {
+    $variables['page']['content']['system_main']['no_content']['#markup'] =
+      'Il n\'y a actuellement aucun document dans ce dossier.';
+
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function pnf_extranet_views_pre_render(&$view) {
+  if ($view->name == 'extranet_docs' && $view->current_display == 'page') {
+    // Simplify the breadcrumb to Home > Extranet, non depending on which menu the link to extranet is added to.
+    $initial_breadcrumb = drupal_get_breadcrumb();
+    drupal_set_breadcrumb(array(array_shift($initial_breadcrumb)));
+  }
+  // elseif ($view->name == 'extranet_folders' && ($view->current_display == 'root_folder' || $view->current_display == 'child_folders')) {
+  // }
+}
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function pnf_extranet_entity_view_alter(&$build, $type) {
+  if ($build['#bundle'] == 'extranet_doc_types') {;
+    global $language;
+    $initial_breadcrumb = drupal_get_breadcrumb();
+    $additional_breadcrumb = '<a href="/' . $language->language . '/extranet">Extranet</a>';
+
+    $modified_breadcrumb = array();
+    if (sizeof($initial_breadcrumb) == 1) {
+      $modified_breadcrumb = $initial_breadcrumb;
+      $modified_breadcrumb[] = $additional_breadcrumb;
+    }
+    else {
+      foreach ($initial_breadcrumb as $key => $breadcrumb) {
+        if ($key == 1) {
+          $modified_breadcrumb[] = $additional_breadcrumb;
+        }
+        $modified_breadcrumb[] = $breadcrumb;
+      }
+    }
+    drupal_set_breadcrumb($modified_breadcrumb);
+  }
 }

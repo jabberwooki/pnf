@@ -12,8 +12,8 @@ function pnf_extranet_taxonomy_default_vocabularies() {
     'extranet_doc_types' => array(
       'name' => 'Types de document extranet',
       'machine_name' => 'extranet_doc_types',
-      'description' => 'Types de document extranet',
-      'hierarchy' => 0,
+      'description' => NULL,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
       'language' => 'und',

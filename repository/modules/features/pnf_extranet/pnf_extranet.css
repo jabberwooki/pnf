@@ -11,6 +11,57 @@ form#pnf-extranet-roles-form table {
 .node-extranet-doc .field-name-field-downloadable-docs img {
     display: none;
 }
-.node-extranet-doc .field-name-field-downloadable-docs a {
+.node-extranet-doc.view-full-mode .field-name-field-downloadable-docs a {
     color: white;
+}
+
+/* Extranet pages */
+.main-container .region-content {
+    /*border: 1px solid #ddd;*/
+}
+#block-pnf-extranet-extranet-folders {
+    /*background-color: #ccc;*/
+    padding: 10px;
+    /*float: left;*/
+}
+#block-pnf-extranet-extranet-folders ul {
+    list-style-type: none;
+    padding-left: none;
+}
+#block-pnf-extranet-extranet-folders ul.level-0 {
+     padding-left: 0;
+ }
+#block-pnf-extranet-extranet-folders i.fa,
+.view-display-id-root_folders i.fa,
+.view-display-id-child_folders i.fa {
+    padding-right: 10px;
+}
+#block-pnf-extranet-extranet-folders a {
+    display: inline;
+}
+#block-views-extranet-folders-root-folders,
+#block-views-extranet-folders-child-folders {
+    /*float: right;*/
+    padding: 10px 10px 20px 10px;
+    border-left: 2px solid #ccc;
+}
+#block-system-main {
+  border-left: 2px solid #ccc;
+}
+.node-extranet-doc.view-mode-teaser .field-name-field-downloadable-docs {
+  background-color: transparent;
+  padding: 0;
+  /*border-bottom: 1px dashed #ccc;*/
+}
+#block-system-main .node-extranet-doc.view-mode-teaser {
+  background-color: transparent;
+  padding: 0 0 15px 0;
+  border-bottom: 1px dashed #ccc;
+}
+.node-extranet-doc.view-mode-teaser .field-name-field-downloadable-docs .field-label {
+  font-size: 100%;
+}
+
+#block-menu-menu-tools a.tool-extranet:before {
+    content: '\f233';
 }
