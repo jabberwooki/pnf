@@ -245,6 +245,9 @@ projects[role_delegation][version] = "1.1"
 projects[tb_megamenu][subdir] = contrib
 projects[tb_megamenu][version] = "1.0-rc2"
 
+projects[term_per_role][subdir] = contrib
+projects[term_per_role][version] = "1.1"
+
 projects[text_resize][subdir] = contrib
 projects[text_resize][version] = "1.9"
 projects[text_resize][version] = "1.9"
