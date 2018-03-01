@@ -42,16 +42,6 @@
           }
         });
       }
-
-      // Extranet views handling
-      if ($('#block-pnf-extranet-extranet-folders')) {
-        $('#block-pnf-extranet-extranet-folders').addClass('col-md-4');
-        $('#block-views-extranet-folders-root-folders').addClass('col-md-8');
-        $('#block-views-extranet-folders-child-folders').addClass('col-md-8');
-        $('#block-system-main').addClass('col-md-7');
-
-        // $('.region-content section').matchHeight();
-      }
     }
   };
 }(jQuery));

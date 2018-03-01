@@ -16,21 +16,29 @@ form#pnf-extranet-roles-form table {
 }
 
 /* Extranet pages */
-.main-container .region-content {
-    /*border: 1px solid #ddd;*/
+
+/* Arborescence colonne gauche */
+aside.col-sm-3 {
+    padding: 0;
+    width: 33%;
+}
+.region-sidebar-first.well {
+    padding: 0;
+    border: none;
+    box-shadow: none;
 }
 #block-pnf-extranet-extranet-folders {
-    /*background-color: #ccc;*/
+    background-color: #fff;
     padding: 10px;
-    /*float: left;*/
+    /*border: 1px solid #ddd;*/
 }
 #block-pnf-extranet-extranet-folders ul {
     list-style-type: none;
     padding-left: none;
 }
 #block-pnf-extranet-extranet-folders ul.level-0 {
-     padding-left: 0;
- }
+    padding-left: 0;
+}
 #block-pnf-extranet-extranet-folders i.fa,
 .view-display-id-root_folders i.fa,
 .view-display-id-child_folders i.fa {
@@ -43,11 +51,22 @@ form#pnf-extranet-roles-form table {
 #block-views-extranet-folders-child-folders {
     /*float: right;*/
     padding: 10px 10px 20px 10px;
-    border-left: 2px solid #ccc;
+    /*border-left: 2px solid #ccc;*/
 }
-#block-system-main {
-  border-left: 2px solid #ccc;
+
+/* Sous-dossiers et fichiers d'un dossier */
+section.col-sm-9 {
+    width: 66%;
 }
+section.col-sm-9 h2 {
+    display: none;
+}
+.node-extranet-doc.view-mode-teaser {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
 .node-extranet-doc.view-mode-teaser .field-name-field-downloadable-docs {
   background-color: transparent;
   padding: 0;
@@ -59,7 +78,12 @@ form#pnf-extranet-roles-form table {
   border-bottom: 1px dashed #ccc;
 }
 .node-extranet-doc.view-mode-teaser .field-name-field-downloadable-docs .field-label {
-  font-size: 100%;
+    font-size: 100%;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+.node-extranet-doc.view-mode-teaser .field-name-field-downloadable-docs .field-items {
+    padding-left: 20px;
 }
 
 #block-menu-menu-tools a.tool-extranet:before {

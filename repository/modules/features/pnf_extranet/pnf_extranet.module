@@ -12,8 +12,8 @@ define('EXTRANET_MANAGER_ROLE_NAME', 'gestionnaire extranet');
  * Implements hook_init().
  */
 function pnf_extranet_init() {
-  drupal_add_css(drupal_get_path('module', 'pnf_extranet') . '/pnf_extranet.css');
   if (strpos($_SERVER['REQUEST_URI'], '/extranet') !== FALSE && strpos($_SERVER['REQUEST_URI'], '/admin') === FALSE) {
+    drupal_add_css(drupal_get_path('module', 'pnf_extranet') . '/pnf_extranet.css');
     drupal_add_js(drupal_get_path('module', 'pnf_extranet') . '/pnf_extranet.js');
 
 //    dpm(arg());
@@ -374,12 +374,24 @@ function taxonomy_get_children_nodes_number($tid, $tree=array()) {
  * Implements hook_preprocess_HOOK().
  */
 function pnf_extranet_preprocess_page(&$variables) {
-  if (isset($variables['page']['content']['pnf_extranet_extranet_folders'])
-    && isset($variables['page']['content']['system_main']['no_content'])) {
-    $variables['page']['content']['system_main']['no_content']['#markup'] =
-      'Il n\'y a actuellement aucun document dans ce dossier.';
-
+  if (isset($variables['page']['sidebar_first']['pnf_extranet_extranet_folders'])) {
+//    dpm($variables['page']);
+    if (isset($variables['page']['content']['system_main']['no_content'])) {
+      $variables['page']['content']['system_main']['no_content']['#markup'] =
+        '';
+    }
   }
+}
+
+/**
+ * Implements hook_menu_local_tasks_alter().
+ */
+function pnf_extranet_menu_local_tasks_alter(&$data, $router_item, $root_path) {
+  if (isset($router_item['page_arguments'][0]->vocabulary_machine_name)
+    && $router_item['page_arguments'][0]->vocabulary_machine_name == 'extranet_doc_types') {
+    $data['tabs'] = array();
+  }
+
 }
 
 /**
