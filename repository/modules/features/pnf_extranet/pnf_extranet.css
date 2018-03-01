@@ -21,6 +21,7 @@ form#pnf-extranet-roles-form table {
 aside.col-sm-3 {
     padding: 0;
     width: 33%;
+    border: 1px solid #dfdfdf;
 }
 .region-sidebar-first.well {
     padding: 0;
@@ -28,9 +29,7 @@ aside.col-sm-3 {
     box-shadow: none;
 }
 #block-pnf-extranet-extranet-folders {
-    background-color: #fff;
     padding: 10px;
-    /*border: 1px solid #ddd;*/
 }
 #block-pnf-extranet-extranet-folders ul {
     list-style-type: none;
@@ -49,9 +48,7 @@ aside.col-sm-3 {
 }
 #block-views-extranet-folders-root-folders,
 #block-views-extranet-folders-child-folders {
-    /*float: right;*/
     padding: 10px 10px 20px 10px;
-    /*border-left: 2px solid #ccc;*/
 }
 
 /* Sous-dossiers et fichiers d'un dossier */
@@ -70,7 +67,6 @@ section.col-sm-9 h2 {
 .node-extranet-doc.view-mode-teaser .field-name-field-downloadable-docs {
   background-color: transparent;
   padding: 0;
-  /*border-bottom: 1px dashed #ccc;*/
 }
 #block-system-main .node-extranet-doc.view-mode-teaser {
   background-color: transparent;
