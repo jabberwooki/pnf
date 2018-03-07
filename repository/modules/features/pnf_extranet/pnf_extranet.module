@@ -12,8 +12,8 @@ define('EXTRANET_MANAGER_ROLE_NAME', 'gestionnaire extranet');
  * Implements hook_init().
  */
 function pnf_extranet_init() {
+  drupal_add_css(drupal_get_path('module', 'pnf_extranet') . '/pnf_extranet.css');
   if (strpos($_SERVER['REQUEST_URI'], '/extranet') !== FALSE && strpos($_SERVER['REQUEST_URI'], '/admin') === FALSE) {
-    drupal_add_css(drupal_get_path('module', 'pnf_extranet') . '/pnf_extranet.css');
     drupal_add_js(drupal_get_path('module', 'pnf_extranet') . '/pnf_extranet.js');
 
 //    dpm(arg());
