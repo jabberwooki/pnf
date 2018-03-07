@@ -294,6 +294,8 @@ function taxonomy_get_nested_tree($terms = array(), $max_depth = NULL, $parent =
     $terms = taxonomy_get_tree($terms);
   }
 
+  $nested_tree = array();
+
   foreach($terms as $term) {
     foreach($term->parents as $term_parent) {
       if ($term_parent == $parent) {
