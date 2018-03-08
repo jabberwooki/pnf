@@ -5,6 +5,7 @@ version = 7.x-1.0
 dependencies[] = context
 dependencies[] = ctools
 dependencies[] = download_file
+dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = file
 dependencies[] = i18n_taxonomy
