@@ -161,8 +161,16 @@ function pnf_extranet_uninstall() {
   $permissions = array('administer users');
   user_role_revoke_permissions($extranet_manager_role->rid, $permissions);
 
-  // 2 - Delete extranet manager role.
+  // 2 - Delete extranet manager role and all extranet_roles created by authorized users.
   user_role_delete(EXTRANET_MANAGER_ROLE_NAME);
+
+  $query  = db_select('role', 'r');
+  $query->addField('r', 'name');
+  $query->condition('r.extranet_role', 1);
+  $result = $query->execute()->fetchAll();
+  foreach ($result as $role) {
+    user_role_delete($role->name);
+  }
 
   // 1 - Remove extranet_role field to the 'role' table.
   db_drop_field('role', 'extranet_role');
