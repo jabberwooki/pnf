@@ -11,7 +11,7 @@ form#pnf-extranet-roles-form table {
 .node-extranet-doc .field-name-field-downloadable-docs img {
     display: none;
 }
-.node-extranet-doc.view-full-mode .field-name-field-downloadable-docs a {
+.node-extranet-doc.view-mode-full .field-name-field-downloadable-docs a {
     color: white;
 }
 
