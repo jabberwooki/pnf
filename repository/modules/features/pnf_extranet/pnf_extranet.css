@@ -63,15 +63,12 @@ section.col-sm-9 h2 {
     padding: 15px;
     margin-bottom: 20px;
 }
-
+.node-extranet-doc.view-mode-teaser .field-name-body {
+    padding-left: 20px;
+}
 .node-extranet-doc.view-mode-teaser .field-name-field-downloadable-docs {
   background-color: transparent;
   padding: 0;
-}
-#block-system-main .node-extranet-doc.view-mode-teaser {
-  background-color: transparent;
-  padding: 0 0 15px 0;
-  border-bottom: 1px dashed #ccc;
 }
 .node-extranet-doc.view-mode-teaser .field-name-field-downloadable-docs .field-label {
     font-size: 100%;
