@@ -250,6 +250,7 @@ projects[term_per_role][version] = "1.1"
 
 projects[term_reference_tree][subdir] = contrib
 projects[term_reference_tree][version] = "1.10"
+projects[term_reference_tree][patch][] = "https://www.drupal.org/files/i18n_compatibility_rerolled-1514794-27.patch"
 
 projects[text_resize][subdir] = contrib
 projects[text_resize][version] = "1.9"
