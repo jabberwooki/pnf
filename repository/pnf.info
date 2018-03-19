@@ -180,6 +180,7 @@ dependencies[] = pnf_promotions
 dependencies[] = pnf_landing_pages
 dependencies[] = pnf_social_media
 dependencies[] = pnf_advanced_pages
+dependencies[] = pnf_consultations
 
 ;--- PNF custom modules -------------------------------------------------------
 dependencies[] = pnx_settings
