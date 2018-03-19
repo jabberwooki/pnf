@@ -279,7 +279,14 @@ function pnf_extranet_block_view($delta = '') {
       $voc = taxonomy_vocabulary_machine_name_load('extranet_doc_types');
       $tree = taxonomy_get_nested_tree($voc->vid);
 
-      $block['content'] = pnf_extranet_folders_markup($tree);
+      if (!user_is_logged_in()) {
+        $block['content'] = '';
+        drupal_set_title('');
+      }
+      else {
+        $block['content'] = pnf_extranet_folders_markup($tree);
+      }
+
   }
 
   return $block;
@@ -376,8 +383,10 @@ function taxonomy_get_children_nodes_number($tid, $tree=array()) {
  * Implements hook_preprocess_HOOK().
  */
 function pnf_extranet_preprocess_page(&$variables) {
-  if (isset($variables['page']['sidebar_first']['pnf_extranet_extranet_folders'])) {
-//    dpm($variables['page']);
+  if (isset($variables['page']['content']['user_login'])) {
+    $variables['page']['content']['system_main']['main']['#markup'] = '';
+  }
+  elseif (isset($variables['page']['sidebar_first']['pnf_extranet_extranet_folders'])) {
     if (isset($variables['page']['content']['system_main']['no_content'])) {
       $variables['page']['content']['system_main']['no_content']['#markup'] =
         '';

@@ -86,3 +86,12 @@ section.col-sm-9 h2 {
 #block-menu-menu-tools a.tool-extranet:before {
     content: '\f023';
 }
+
+/* Login form */
+.region-content .block-user {
+    width: 25%;
+    margin: 0 auto;
+}
+.region-content .block-user h2 {
+    font-size: 140%;
+}

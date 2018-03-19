@@ -199,7 +199,7 @@ function pnf_extranet_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'direct_download',
+        'type' => 'direct_download_accessible_icon',
         'weight' => 2,
       ),
     ),
