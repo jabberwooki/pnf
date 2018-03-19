@@ -26,6 +26,12 @@ function pnf_extranet_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'user-login' => array(
+          'module' => 'user',
+          'delta' => 'login',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
         'pnf_extranet-extranet_folders' => array(
           'module' => 'pnf_extranet',
           'delta' => 'extranet_folders',
