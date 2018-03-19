@@ -282,3 +282,10 @@ function pnf_update_7010() {
 function pnf_update_7011() {
   module_enable(array('field_formatter_class', 'honeypot', 'honeypot_entityform'));
 }
+
+/**
+ * Activate pnf_consultations feature.
+ */
+function pnf_update_7012() {
+  module_enable(array('pnf_consultations'));
+}
