@@ -182,6 +182,9 @@ projects[honeypot][version] = "1.22"
 projects[honeypot_entityform][subdir] = contrib
 projects[honeypot_entityform][version] = "1.0"
 
+projects[hook_post_action][subdir] = contrib
+projects[hook_post_action][version] = "1.0-beta2"
+
 projects[less][subdir] = contrib
 projects[less][version] = "4.0"
 
