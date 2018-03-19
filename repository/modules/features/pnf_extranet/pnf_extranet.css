@@ -78,7 +78,11 @@ section.col-sm-9 h2 {
 .node-extranet-doc.view-mode-teaser .field-name-field-downloadable-docs .field-items {
     padding-left: 20px;
 }
+.node-extranet-doc.view-mode-teaser .field-name-field-downloadable-docs .field-items ul {
+    list-style-type: none;
+    padding: 0;
+}
 
 #block-menu-menu-tools a.tool-extranet:before {
-    content: '\f233';
+    content: '\f023';
 }
