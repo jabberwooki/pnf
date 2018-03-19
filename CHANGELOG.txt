@@ -1,3 +1,7 @@
+PNx 1.6.1 2018-03-19
+====================
+ * pnf_raa up: Zip format added to uploadable files.
+ 
 PNx 1.6 - 2018-03-19
 ====================
  * Install profile up: missing contrib module hook_post_action declaration added to .make file.

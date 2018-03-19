@@ -24,19 +24,22 @@ function pnf_raa_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Recueil des actes administratifs';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'plus';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Appliquer';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Content: Taxonomy terms on node */
+  /* Relation: Contenu : Termes de taxonomie du nœud */
   $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
   $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
   $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['label'] = 'terme';
   $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
     'raa_categories' => 'raa_categories',
     'scald_authors' => 0,
@@ -53,7 +56,7 @@ function pnf_raa_views_default_views() {
     'job_types' => 0,
     'procurement_types' => 0,
   );
-  /* Field: Nœud: Catégorie */
+  /* Champ: Contenu : Catégorie */
   $handler->display->display_options['fields']['field_raa_category']['id'] = 'field_raa_category';
   $handler->display->display_options['fields']['field_raa_category']['table'] = 'field_data_field_raa_category';
   $handler->display->display_options['fields']['field_raa_category']['field'] = 'field_raa_category';
@@ -62,7 +65,7 @@ function pnf_raa_views_default_views() {
   $handler->display->display_options['fields']['field_raa_category']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_raa_category']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_raa_category']['type'] = 'i18n_taxonomy_term_reference_plain';
-  /* Field: Content: Title */
+  /* Champ: Contenu : Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -70,7 +73,7 @@ function pnf_raa_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h4';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Nœud: Date de publication affichée */
+  /* Champ: Contenu : Date de publication affichée */
   $handler->display->display_options['fields']['field_displayed_pub_date']['id'] = 'field_displayed_pub_date';
   $handler->display->display_options['fields']['field_displayed_pub_date']['table'] = 'field_data_field_displayed_pub_date';
   $handler->display->display_options['fields']['field_displayed_pub_date']['field'] = 'field_displayed_pub_date';
@@ -97,7 +100,7 @@ function pnf_raa_views_default_views() {
       ),
     ),
   );
-  /* Field: Nœud: Documents téléchargeables */
+  /* Champ: Contenu : Documents téléchargeables */
   $handler->display->display_options['fields']['field_downloadable_docs']['id'] = 'field_downloadable_docs';
   $handler->display->display_options['fields']['field_downloadable_docs']['table'] = 'field_data_field_downloadable_docs';
   $handler->display->display_options['fields']['field_downloadable_docs']['field'] = 'field_downloadable_docs';
@@ -109,17 +112,17 @@ function pnf_raa_views_default_views() {
     'field_formatter_class' => '',
   );
   $handler->display->display_options['fields']['field_downloadable_docs']['delta_offset'] = '0';
-  /* Sort criterion: Taxonomy term: Weight */
+  /* Critère de tri: Terme de taxonomie : Poids */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['relationship'] = 'term_node_tid';
-  /* Sort criterion: Nœud: Date de publication affichée (field_displayed_pub_date) */
+  /* Critère de tri: Contenu : Date de publication affichée (field_displayed_pub_date) */
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['id'] = 'field_displayed_pub_date_value';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['table'] = 'field_data_field_displayed_pub_date';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['field'] = 'field_displayed_pub_date_value';
   $handler->display->display_options['sorts']['field_displayed_pub_date_value']['order'] = 'DESC';
-  /* Contextual filter: Nœud: Date de publication affichée (field_displayed_pub_date) */
+  /* Filtre contextuel: Contenu : Date de publication affichée (field_displayed_pub_date) */
   $handler->display->display_options['arguments']['field_displayed_pub_date_value']['id'] = 'field_displayed_pub_date_value';
   $handler->display->display_options['arguments']['field_displayed_pub_date_value']['table'] = 'field_data_field_displayed_pub_date';
   $handler->display->display_options['arguments']['field_displayed_pub_date_value']['field'] = 'field_displayed_pub_date_value';
@@ -132,14 +135,14 @@ function pnf_raa_views_default_views() {
   $handler->display->display_options['arguments']['field_displayed_pub_date_value']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['field_displayed_pub_date_value']['year_range'] = '-50:+50';
   $handler->display->display_options['arguments']['field_displayed_pub_date_value']['granularity_reset'] = 0;
-  /* Filter criterion: Content: Published */
+  /* Critère de filtrage: Contenu : Publié */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Critère de filtrage: Contenu : Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';

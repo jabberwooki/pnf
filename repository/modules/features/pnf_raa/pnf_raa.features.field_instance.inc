@@ -119,7 +119,7 @@ function pnf_raa_field_default_field_instances() {
       'description_field' => 1,
       'entity_translation_sync' => FALSE,
       'file_directory' => 'raa',
-      'file_extensions' => 'pdf',
+      'file_extensions' => 'pdf zip',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
