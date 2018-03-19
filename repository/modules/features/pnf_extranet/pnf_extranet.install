@@ -1,0 +1,192 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: ubuntu
+ * Date: 22/12/17
+ * Time: 13:42
+ */
+
+
+/**
+ * Implements hook_schema_alter().
+ */
+function pnf_extranet_schema_alter(&$schema) {
+  // Add machine_name field to the 'role' table.
+  $schema['role']['fields']['extranet_role'] = array(
+    'description' => 'Equals 1 if role is an extranet role, otherwise equals 0.',
+    'type' => 'int',
+    'unsigned' => TRUE,
+    'not null' => TRUE,
+    'default' => 0,
+  );
+}
+
+/**
+ * Implements hook_install().
+ */
+function pnf_extranet_install() {
+  // 1 - Add extranet_role field to the 'role' table.
+  db_add_field('role', 'extranet_role', array(
+    'description' => 'Equals 1 if role is an extranet role, otherwise equals 0.',
+    'type' => 'int',
+    'unsigned' => TRUE,
+    'not null' => TRUE,
+    'default' => 0,
+  ));
+
+  // 2 - Create extranet manager role.
+  $role = new stdClass();
+  $role->name = EXTRANET_MANAGER_ROLE_NAME;
+  user_role_save($role);
+
+  // 3 - Grant 'administer users' permission to extranet mnanager role.
+  $permissions = array('administer users');
+  $extranet_manager_role = user_role_load_by_name(EXTRANET_MANAGER_ROLE_NAME);
+  $extranet_manager_role_rid = $extranet_manager_role->rid;
+  user_role_grant_permissions($extranet_manager_role_rid, $permissions);
+
+  // 4 - Create extranet_doc_types vocabulary
+  $vocabulary_machine_name = 'extranet_doc_types';
+  taxonomy_vocabulary_save((object) array(
+    'name' => 'Types de document extranet',
+    'machine_name' => $vocabulary_machine_name,
+  ));
+  $extranet_doc_types_vocabulary = taxonomy_vocabulary_machine_name_load($vocabulary_machine_name);
+
+  // an grant add, edit and delete terms permissions to extranet manager role for extranet_doc_types vocabulary.
+  $permissions = array(
+    'add terms in ' . $vocabulary_machine_name,
+    'edit terms in ' . $extranet_doc_types_vocabulary->vid,
+    'delete terms in ' . $extranet_doc_types_vocabulary->vid,
+  );
+  user_role_grant_permissions($extranet_manager_role_rid, $permissions);
+
+  // 5 -Grant 'administer extranet' permission to admininstrateur, webmaster and extranet manager roles.
+  $permissions = array('administer extranet');
+  $extranet_management_allowed_roles = array();
+
+  $administrator_role = user_role_load_by_name('administrateur');
+  $extranet_management_allowed_roles[] = $administrator_role->rid;
+
+  $webmaster_role = user_role_load_by_name('webmaster');
+  $extranet_management_allowed_roles[] = $webmaster_role->rid;
+
+  $extranet_management_allowed_roles[] = $extranet_manager_role->rid;
+
+  foreach ($extranet_management_allowed_roles as $rid) {
+    user_role_grant_permissions($rid, $permissions);
+  }
+
+  // 6 - Grant 'administer term_per_role' permission to administrateur and extranet_manager role.
+  $permissions = array('administer term_per_role');
+  user_role_grant_permissions($administrator_role->rid, $permissions);
+  user_role_grant_permissions($webmaster_role->rid, $permissions);
+  user_role_grant_permissions($extranet_manager_role->rid, $permissions);
+
+  // 7 - Grant all node permissions for extranet_doc content to administrateur and extranet_manager role.
+  $permissions = array(
+    'create extranet_doc content',
+    'edit any extranet_doc content',
+    'edit own extranet_doc content',
+    'delete any extranet_doc content',
+    'delete own extranet_doc content',
+    'view any unpublished extranet_doc content',
+  );
+  user_role_grant_permissions($administrator_role->rid, $permissions);
+  user_role_grant_permissions($webmaster_role->rid, $permissions);
+  user_role_grant_permissions($extranet_manager_role->rid, $permissions);
+
+  // 8 - Change pnf_extranet module's weight so that it is larger than term_per_role module's weight.
+  $pnf_term_per_role_weight = db_select('system', 's')
+    ->condition('s.type', 'module')
+    ->condition('s.name', 'term_per_role')
+    ->fields('s', array('weight'))
+    ->execute()->fetchField();
+
+  $new_extranet_weight = $pnf_term_per_role_weight + 1;
+
+  db_update('system')
+    ->fields(array('weight' => $new_extranet_weight))
+    ->condition('type', 'module')
+    ->condition('name', 'pnf_extranet')
+    ->execute();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function pnf_extranet_uninstall() {
+  // Tasks are run in reverse order of the install order
+  // but we first fetch the administrateur, webmaster and extranet manager role rid.
+  $extranet_manager_role = user_role_load_by_name(EXTRANET_MANAGER_ROLE_NAME);
+  $administrator_role = user_role_load_by_name('administrateur');
+  $webmaster_role = user_role_load_by_name('webmaster');
+
+  // 7 - Revoke all node permissions for extranet_doc content to administrateur and extranet_manager role.
+  $permissions = array(
+    'create extranet_doc content',
+    'edit any extranet_doc content',
+    'edit own extranet_doc content',
+    'delete any extranet_doc content',
+    'delete own extranet_doc content',
+    'view any unpublished extranet_doc content',
+  );
+  user_role_revoke_permissions($administrator_role->rid, $permissions);
+  user_role_revoke_permissions($webmaster_role->rid, $permissions);
+  user_role_revoke_permissions($extranet_manager_role->rid, $permissions);
+
+  // 6 - Revoke 'administer term_per_role' permission from administrateur and extranet_manager role.
+  $permissions = array('administer term_per_role');
+  user_role_revoke_permissions($administrator_role->rid, $permissions);
+  user_role_revoke_permissions($extranet_manager_role->rid, $permissions);
+
+  // 5 - Revoke 'administer extranet' permission from extranet manager, webmaster and administrateur roles.
+  $permissions = array('administer extranet');
+  user_role_revoke_permissions($administrator_role->rid, $permissions);
+  user_role_revoke_permissions($webmaster_role->rid, $permissions);
+  user_role_revoke_permissions($extranet_manager_role->rid, $permissions);
+
+  // 4 - Revoke add, edit and delete terms permissions to extranet manager role for extranet_doc_types vocabulary.
+  $extranet_doc_types_vocabulary = taxonomy_vocabulary_machine_name_load('extranet_doc_types');
+  $permissions = array(
+    'add terms in ' . $extranet_doc_types_vocabulary->machine_name,
+    'edit terms in ' . $extranet_doc_types_vocabulary->vid,
+    'delete terms in ' . $extranet_doc_types_vocabulary->vid,
+  );
+  user_role_revoke_permissions($extranet_manager_role->rid, $permissions);
+  // and delete extranet_doc_types vocabulary.
+  taxonomy_vocabulary_delete($extranet_doc_types_vocabulary->vid);
+
+  // 3 - Revoke 'administer users' permission from extranet mnanager role.
+  $permissions = array('administer users');
+  user_role_revoke_permissions($extranet_manager_role->rid, $permissions);
+
+  // 2 - Delete extranet manager role and all extranet_roles created by authorized users.
+  user_role_delete(EXTRANET_MANAGER_ROLE_NAME);
+
+  $query  = db_select('role', 'r');
+  $query->addField('r', 'name');
+  $query->condition('r.extranet_role', 1);
+  $result = $query->execute()->fetchAll();
+  foreach ($result as $role) {
+    user_role_delete($role->name);
+  }
+
+  // 1 - Remove extranet_role field to the 'role' table.
+  db_drop_field('role', 'extranet_role');
+
+  // 0 - Delete extranet_doc content type
+  // First, we delete all nodes from this type.
+  $query = db_select('node', 'n');
+  $query->fields('n', array('nid'));
+  $query->condition('n.type', 'extranet_doc');
+  $nids = $query->execute()->fetchCol();
+  if (!empty($nids)) {
+    node_delete_multiple($nids);
+  }
+  // The, we delete the content type itself.
+  node_type_delete('extranet_doc');
+  variable_del('node_preview_extranet_doc');
+  drupal_set_message('The content type "Document extranet" has been deleted.');
+  watchdog('node', 'Deleted content type "Document extranet".', [], WATCHDOG_NOTICE);
+}

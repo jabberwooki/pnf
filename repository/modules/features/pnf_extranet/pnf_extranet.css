@@ -1,0 +1,97 @@
+/* Vocabulary term add/edit form */
+form#pnf-extranet-roles-form table {
+    margin-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Node full mode */
+.node-extranet-doc .field-name-body {
+    margin: 20px 0px;
+}
+.node-extranet-doc .field-name-field-downloadable-docs img {
+    display: none;
+}
+.node-extranet-doc.view-mode-full .field-name-field-downloadable-docs a {
+    color: white;
+}
+
+/* Extranet pages */
+
+/* Arborescence colonne gauche */
+aside.col-sm-3 {
+    padding: 0;
+    width: 33%;
+    border: 1px solid #dfdfdf;
+}
+.region-sidebar-first.well {
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+#block-pnf-extranet-extranet-folders {
+    padding: 10px;
+}
+#block-pnf-extranet-extranet-folders ul {
+    list-style-type: none;
+    padding-left: none;
+}
+#block-pnf-extranet-extranet-folders ul.level-0 {
+    padding-left: 0;
+}
+#block-pnf-extranet-extranet-folders i.fa,
+.view-display-id-root_folders i.fa,
+.view-display-id-child_folders i.fa {
+    padding-right: 10px;
+}
+#block-pnf-extranet-extranet-folders a {
+    display: inline;
+}
+#block-views-extranet-folders-root-folders,
+#block-views-extranet-folders-child-folders {
+    padding: 10px 10px 20px 10px;
+}
+
+/* Sous-dossiers et fichiers d'un dossier */
+section.col-sm-9 {
+    width: 66%;
+}
+section.col-sm-9 h2 {
+    display: none;
+}
+.node-extranet-doc.view-mode-teaser {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.node-extranet-doc.view-mode-teaser .field-name-body {
+    padding-left: 20px;
+}
+.node-extranet-doc.view-mode-teaser .field-name-field-downloadable-docs {
+  background-color: transparent;
+  padding: 0;
+}
+.node-extranet-doc.view-mode-teaser .field-name-field-downloadable-docs .field-label {
+    font-size: 100%;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+.node-extranet-doc.view-mode-teaser .field-name-field-downloadable-docs .field-items {
+    padding-left: 20px;
+}
+.node-extranet-doc.view-mode-teaser .field-name-field-downloadable-docs .field-items ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#block-menu-menu-tools a.tool-extranet:before {
+    content: '\f023';
+}
+
+/* Login form */
+.region-content .block-user {
+    width: 25%;
+    margin: 0 auto;
+}
+.region-content .block-user h2 {
+    font-size: 140%;
+}

@@ -1,3 +1,53 @@
+PNx 1.6 - 2018-03-19
+====================
+ * Install profile up: missing contrib module hook_post_action declaration added to .make file.
+ * pnf_extranet up: missing altered context (login form when user is not connected) added.
+ * pnf_extranet up: Menu link to extranet (/extranet) is now visible to anyone. If clicked by anonymous user, the login form is displayed.
+ * pnf_extranet up: Fontawesome icon for extranet link changed from Server (\f233) to Closed Lock (\f023).
+ * pnf_extranet up: CSS improvement for extranet docs list.
+ * pnf_extranet up: missing display suite layout and settings for teaser mode added.
+ * pnf_extranet up: missing contextes added.
+ * pnf_extranet up: missing extranet_doc full mode set up and added.
+ * pnf_extranet up: Typo in css selector fixed.
+ * Install profile up: Patch declaration for contrib module term_reference_tree added to .make file.
+ * pnf_extranet up: module uninstall procedure improved: extranet roles created by authorized users are deleted.
+ * pnf_extranet up: Fixes bug 'undefined variable nested_tree at line 307'.
+ * pnf_extranet up: missing extranet_folders and extranet_docs added.
+ * pnf_extranet up: css file's upload action altered.
+ * pnf_extranet up: CSS improved.
+ * pnf_extranet up: CSS layout added.
+ * Custom profile up: Contrib module term_reference_tree added.
+ * Custom profile up: Contrib module term_per_role added.
+ * pnf_extranet up: Field field_downloadable_docs added.
+ * kcore updated: A few modifications caused by the existence of pnf_extranet module.
+ * pnf_extranet completed.
+ * Feature pnf_extranet continued.
+ * Feature pnf_extranet created.
+ * pnf_consultations up: missing test 'send to moderators ?' added in hook_entity_postinsert().
+ * pnf_consultations up: all missing permissions on comment module added.
+ * pnf_consultations up: typo fixed in code.
+ * pnf_consultations up: jQuery UI and Dialog libraries uploaded manually (required by non webmaster, admin or superadmin users).
+ * Contrib module strongarm patched (see #13 at https://www.drupal.org/node/1850618) to exclude from export the javascript property (hash) from language object.
+ * pnf_consultations up: watchdog message removed.
+ * pnf_consultations up: email style altered again.
+ * pnf_consultations up: email style improved.
+ * pnf_consultations up: default value for admin settings field consult_moderators_emails set to site_mail instead of 'toto'.
+ * pnf_consultations up: hook_entity_postinsert up: test on entity type added to send email only when a consultation is inserted.
+ * custom theme up: fontawesome icon bullhorn \f0a1 added for public consultations.
+ * pnf_consultations up: jquery typing control placed on moderators email field in consultations settings page.
+ * pnf_consultations up: emails from value set to site mail.
+ * pnf_consultations up: missing comment's DS full view mode added.
+ * pnf_consultations up: dpm() debug trace removed.
+ * pnf_consultations up: missing DS custom code fields added.
+ * pnf_consultations up: missing dependency to comment core module added.
+ * pnf_consultations up: missing field settings, permissions and strongarm variables added.
+ * pnf_consultations up: honeypot comment form protection added.
+ * Feature pnf_consultations created.
+ * pnf_raa up: Date field label rewritten in english, then translated.
+ * pnf_scientific_reports up: DS settings alterations missing in the previous commit are added here.
+ * kcore up: Fixes bug in function kcore_block_view (case 'pnf_park_menu_clone').
+ * pnf_scientific_reports up: Full mode view improved.
+
 Hotfix jobs-menu-for-fcb-park 2017-11-21
 ========================================
  * pnf_jobs up: FCB park now displays jobs and trainings menu links (civic-services link remains hidden).

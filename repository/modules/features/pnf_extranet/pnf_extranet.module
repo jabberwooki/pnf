@@ -1,0 +1,445 @@
+<?php
+/**
+ * @file
+ * Code for the Extranet feature.
+ */
+
+include_once 'pnf_extranet.features.inc';
+
+define('EXTRANET_MANAGER_ROLE_NAME', 'gestionnaire extranet');
+
+/**
+ * Implements hook_init().
+ */
+function pnf_extranet_init() {
+  drupal_add_css(drupal_get_path('module', 'pnf_extranet') . '/pnf_extranet.css');
+  if (strpos($_SERVER['REQUEST_URI'], '/extranet') !== FALSE && strpos($_SERVER['REQUEST_URI'], '/admin') === FALSE) {
+    drupal_add_js(drupal_get_path('module', 'pnf_extranet') . '/pnf_extranet.js');
+
+//    dpm(arg());
+//    dpm(drupal_get_breadcrumb());
+  }
+}
+
+/**
+ * Implements hook_permission().
+ */
+function pnf_extranet_permission() {
+  return array(
+    'administer extranet' => array(
+      'title' => t('Administer Extranet'),
+      'description' => t('Allows users to perform administration tasks on Extranet (extranet role creation...).'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function pnf_extranet_menu() {
+  $items = array();
+  $items['admin/extranet'] = array(
+    'title' => t('Extranet'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('pnf_extranet_roles_form'),
+    'access arguments' => array('administer extranet'),
+  );
+  $items['admin/extranet/roles/edit/%user_role'] = array(
+    'title' => 'Edit role',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('pnf_extranet_role_edit'),
+    'access callback' => TRUE,
+  );
+  $items['admin/extranet/roles/delete/%user_role'] = array(
+    'title' => 'Delete role',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('pnf_extranet_role_delete_confirm', 4),
+    'access callback' => TRUE,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function pnf_extranet_form_taxonomy_form_term_alter(&$form, &$form_state, $form_id) {
+  if ($form['#bundle'] == 'extranet_doc_types') {
+    global $user;
+    if (in_array(EXTRANET_MANAGER_ROLE_NAME, $user->roles)) {
+      $form['term_per_role']['#collapsed'] = $form['relations']['#collapsed'] = FALSE;
+      $form['term_per_role']['#weight'] = $form['relations']['#weight'] + 1;
+    }
+
+    if (!isset($form['tid']['#value'])) {
+
+      drupal_add_js(drupal_get_path('module', 'pnf_extranet') . '/pnf_extranet.js');
+
+      $voc = taxonomy_vocabulary_machine_name_load('extranet_doc_types');
+      $terms = taxonomy_get_tree($voc->vid);
+
+      // Fetch term per role settings
+      $term_per_role_settings = array();
+      foreach ($terms as $term) {
+        $term_per_role_settings[$term->tid] = term_per_role_get_term_settings($term->tid);
+      }
+      // Then fetch extranet manager
+      $extranet_manager_role = user_role_load_by_name(EXTRANET_MANAGER_ROLE_NAME);
+      // Then both data are stored in $params array.
+      $params = array(
+        'termPerRoleSettings' => $term_per_role_settings,
+        'extranetManagerRid' => $extranet_manager_role->rid,
+      );
+      drupal_add_js(array('extranet' => $params), 'setting');
+
+      // Show term page to selected roles default values settings
+      $webmaster_role = user_role_load_by_name('webmaster');
+      $administrator_role = user_role_load_by_name('administrateur');
+      $form['term_per_role']['term_per_role_roles']['#default_value'][] = $extranet_manager_role->rid;
+      $form['term_per_role']['term_per_role_roles']['#default_value'][] = $webmaster_role->rid;
+      $form['term_per_role']['term_per_role_roles']['#default_value'][] = $administrator_role->rid;
+
+      // Close term page to selected roles default values settings
+      $form['term_per_role']['term_per_role_hide_from_roles']['#default_value'][] = DRUPAL_ANONYMOUS_RID;
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function pnf_extranet_form_pnf_extranet_roles_alter(&$form, &$form_state, $form_id) {
+
+}
+
+function pnf_extranet_roles_form($form, &$form_state) {
+  $roles = pnf_extranet_get_extrane_roles();
+  unset($roles[DRUPAL_AUTHENTICATED_RID]);
+
+  $roles_list = '<h2>Rôles définis pour l\'extranet</h2>';
+  if (sizeof($roles) == 0) {
+    $roles_list .= '<p>Aucun rôle n\'a été créé pour l\'instant.</p>';
+  }
+  else {
+    $header = array(t('Name'), array('data' => t('Actions'), 'colspan' => 2));
+    $rows = array();
+
+    foreach ($roles as $rid => $role) {
+      $rows[] = array(
+        $role,
+        '<a href="' . '/admin/extranet/roles/edit/' . $rid . '">modifier le rôle</a>',
+        '<a href="' . '/admin/extranet/roles/delete/' . $rid . '">supprimer le rôle</a>',
+      );
+    }
+
+    $roles_list .= theme('table', array('header' => $header, 'rows' => $rows));
+  }
+
+  $roles_list .= '<h2>Création d\'un nouveau rôle</h2>';
+
+  $form['roles_list'] = array(
+    '#markup' => $roles_list,
+  );
+
+  $form['role_name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Name'),
+//    '#title_display' => 'invisible',
+    '#size' => 32,
+    '#maxlength' => 64,
+    '#required' => TRUE,
+  );
+  $form['add'] = array(
+    '#type' => 'submit',
+    '#value' => t('Add'),
+  );
+
+  return $form;
+}
+
+function pnf_extranet_roles_form_submit($form, &$form_state) {
+  $role = new stdClass();
+  $role->name = $form_state['values']['role_name'];
+  $role->extranet_role = 1;
+  user_role_save($role);
+
+  $new_role_delegation_permission = array('assign ' . $role->name . ' role');
+  $extranet_management_allowed_roles = user_roles(true, 'administer extranet');
+  foreach ($extranet_management_allowed_roles as $rid=>$role) {
+    user_role_grant_permissions($rid, $new_role_delegation_permission);
+  }
+
+  drupal_set_message('Rôle enregistré.');
+}
+
+function pnf_extranet_get_extrane_roles() {
+  $query = db_select('role', 'r');
+  $query->fields('r', array('rid', 'name', 'extranet_role'));
+  $query->condition('r.extranet_role', 1);
+  $query->orderBy('weight');
+  $query->orderBy('name');
+
+  $result = $query->execute()->fetchAll();
+  //dpm($result);
+
+  $roles = array();
+  foreach ($result as $role) {
+    $roles[$role->rid] = $role->name;
+  }
+
+  return $roles;
+}
+
+function pnf_extranet_role_edit($form, $form_state) {
+  $rid = arg(4);
+  $role = user_role_load($rid);
+
+  // Display the edit role form.
+  $form['name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Role name'),
+    '#default_value' => $role->name,
+    '#size' => 30,
+    '#required' => TRUE,
+    '#maxlength' => 64,
+  );
+  $form['rid'] = array(
+    '#type' => 'value',
+    '#value' => $role->rid,
+  );
+  $form['weight'] = array(
+    '#type' => 'value',
+    '#value' => $role->weight,
+  );
+  $form['actions'] = array('#type' => 'actions');
+  $form['actions']['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save role'),
+  );
+
+  return $form;
+}
+
+/**
+ * Form submit handler for the user_admin_role() form.
+ */
+function pnf_extranet_role_edit_submit($form, &$form_state) {
+  $role = (object) $form_state['values'];
+
+  user_role_save($role);
+  drupal_set_message(t('The role has been renamed.'));
+
+  $form_state['redirect'] = 'admin/extranet';
+  return;
+}
+
+/**
+ * Form to confirm role delete operation.
+ */
+function pnf_extranet_role_delete_confirm($form, &$form_state) {
+  $rid = arg(4);
+  $role = user_role_load($rid);
+  $form['rid'] = array(
+    '#type' => 'value',
+    '#value' => $role->rid,
+  );
+  return confirm_form($form, t('Are you sure you want to delete the role %name ?', array('%name' => $role->name)), 'admin/extranet', t('This action cannot be undone.'), t('Delete'));
+}
+
+/**
+ * Form submit handler for user_admin_role_delete_confirm().
+ */
+function pnf_extranet_role_delete_confirm_submit($form, &$form_state) {
+  user_role_delete((int) $form_state['values']['rid']);
+
+  drupal_set_message(t('The role has been deleted.'));
+  $form_state['redirect'] = 'admin/extranet';
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function pnf_extranet_block_info() {
+  $blocks = array();
+  $blocks['extranet_folders'] = array(
+    'info' => t('Dossiers extranet'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function pnf_extranet_block_view($delta = '') {
+  $block = array();
+
+  switch($delta) {
+    case 'extranet_folders' :
+      $voc = taxonomy_vocabulary_machine_name_load('extranet_doc_types');
+      $tree = taxonomy_get_nested_tree($voc->vid);
+
+      if (!user_is_logged_in()) {
+        $block['content'] = '';
+        drupal_set_title('');
+      }
+      else {
+        $block['content'] = pnf_extranet_folders_markup($tree);
+      }
+
+  }
+
+  return $block;
+}
+
+/**
+ * Adapted from Hunabku's post :
+ * https://www.drupal.org/forum/support/post-installation/2009-11-04/creating-collapsible-hierarchical-or-nested-taxonomy-list#comment-4598508
+ */
+function taxonomy_get_nested_tree($terms = array(), $max_depth = NULL, $parent = 0, $parents_index = array(), $depth = 0) {
+  if (!is_array($terms)) {
+    $terms = taxonomy_get_tree($terms);
+  }
+
+  $nested_tree = array();
+
+  foreach($terms as $term) {
+    foreach($term->parents as $term_parent) {
+      if ($term_parent == $parent) {
+        $nested_tree[$term->tid] = $term;
+      }
+      else {
+        $parents_index[$term_parent][$term->tid] = $term;
+      }
+    }
+  }
+  foreach($nested_tree as &$term) {
+    if (isset($parents_index[$term->tid]) && (is_null($max_depth) || $depth < $max_depth)) {
+      // Execute recursion and pass parameters for children
+      $children = taxonomy_get_nested_tree($parents_index[$term->tid], $max_depth, $term->tid, $parents_index, $depth + 1);
+      // Optional alphabetic sort of child terms
+      //usort($children, "your_compare");
+      $term->children = $children;
+    }
+  }
+  return $nested_tree;
+}
+
+function pnf_extranet_folders_markup($tree, $depth=0) {
+  $markup = "<ul class=\"terms level-{$depth}\">\n";
+  foreach($tree as $tid => $term) {
+    $doc_number = 0;
+    if (isset($term->children)) {
+      $doc_number = taxonomy_get_children_nodes_number($tid, $term->children);
+    }
+    else {
+      $doc_number = taxonomy_get_children_nodes_number($tid);
+    }
+
+    if (sizeof(arg()) == 1 || sizeof(arg()) == 3 && arg(2) != $term->tid) {
+      $markup .= '<li> <i class="fa fa-folder-o" aria-hidden="true"></i>'
+        . l($term->name, 'taxonomy/term/'. $term->tid) . " <span tid=\"{$term->tid}\">(" . $doc_number . ")</span>" . "\n";
+    }
+    else {
+      $markup .= '<li> <i class="fa fa-folder-open-o" aria-hidden="true"></i>'
+        . $term->name . " <span tid=\"{$term->tid}\">(" . $doc_number . ")</span>" . "\n";
+    }
+
+    if (isset($term->children)) {
+      $depth++;
+      $markup .= pnf_extranet_folders_markup($term->children, $depth);
+    }
+    $markup .= "</li>\n";
+  }
+  $markup .= "</ul>\n";
+
+  return $markup;
+}
+
+function taxonomy_get_children_tids($tree, $tids = array()) {
+  foreach ($tree as $tid => $child) {
+    $tids[] = $tid;
+    if (isset($child->children)) {
+      $tids = array_merge($tids, taxonomy_get_children_tids($child->children));
+    }
+  }
+  return $tids;
+}
+
+function taxonomy_get_children_nodes_number($tid, $tree=array()) {
+  $tids = array($tid);
+  if (!empty($tree)) {
+    $tids = array_merge($tids, taxonomy_get_children_tids($tree));
+  }
+
+  $query = db_select('taxonomy_index', 'ti');
+  $query->addField('ti', 'nid');
+  $query->condition('ti.tid', $tids, 'IN');
+
+  return $query->countQuery()->execute()->fetchField();
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function pnf_extranet_preprocess_page(&$variables) {
+  if (isset($variables['page']['content']['user_login'])) {
+    $variables['page']['content']['system_main']['main']['#markup'] = '';
+  }
+  elseif (isset($variables['page']['sidebar_first']['pnf_extranet_extranet_folders'])) {
+    if (isset($variables['page']['content']['system_main']['no_content'])) {
+      $variables['page']['content']['system_main']['no_content']['#markup'] =
+        '';
+    }
+  }
+}
+
+/**
+ * Implements hook_menu_local_tasks_alter().
+ */
+function pnf_extranet_menu_local_tasks_alter(&$data, $router_item, $root_path) {
+  if (isset($router_item['page_arguments'][0]->vocabulary_machine_name)
+    && $router_item['page_arguments'][0]->vocabulary_machine_name == 'extranet_doc_types') {
+    $data['tabs'] = array();
+  }
+
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function pnf_extranet_views_pre_render(&$view) {
+  if ($view->name == 'extranet_docs' && $view->current_display == 'page') {
+    // Simplify the breadcrumb to Home > Extranet, non depending on which menu the link to extranet is added to.
+    $initial_breadcrumb = drupal_get_breadcrumb();
+    drupal_set_breadcrumb(array(array_shift($initial_breadcrumb)));
+  }
+  // elseif ($view->name == 'extranet_folders' && ($view->current_display == 'root_folder' || $view->current_display == 'child_folders')) {
+  // }
+}
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function pnf_extranet_entity_view_alter(&$build, $type) {
+  if ($build['#bundle'] == 'extranet_doc_types') {;
+    global $language;
+    $initial_breadcrumb = drupal_get_breadcrumb();
+    $additional_breadcrumb = '<a href="/' . $language->language . '/extranet">Extranet</a>';
+
+    $modified_breadcrumb = array();
+    if (sizeof($initial_breadcrumb) == 1) {
+      $modified_breadcrumb = $initial_breadcrumb;
+      $modified_breadcrumb[] = $additional_breadcrumb;
+    }
+    else {
+      foreach ($initial_breadcrumb as $key => $breadcrumb) {
+        if ($key == 1) {
+          $modified_breadcrumb[] = $additional_breadcrumb;
+        }
+        $modified_breadcrumb[] = $breadcrumb;
+      }
+    }
+    drupal_set_breadcrumb($modified_breadcrumb);
+  }
+}

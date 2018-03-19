@@ -1,4 +1,4 @@
-/* TEASER */
+/*Teaser mode*/
 .view-scientific-reports .view-mode-teaser {
     background-color: #FFFFFF;
     padding: 15px;
@@ -31,7 +31,7 @@
     margin-top: 10px;
 }
 
-/* FULL */
+/* Full mode */
 .node-scientific-report.view-mode-full .sr-subtitle {
     font-size: 18px;
     margin-bottom: 10px;
@@ -68,4 +68,19 @@
 .node-scientific-report.view-mode-full .field-name-field-sr-abstract {
     padding: 20px 0;
 }
+.node-scientific-report .field-name-field-downloadable-docs {
+    padding: 20px;
+    margin: 20px 0;
+}
+.node-scientific-report .field-name-field-downloadable-docs .field-label {
+    font-weight: normal;
+}
+
+.node-scientific-report .field-name-field-downloadable-docs ul {
+    padding-left: 1.5em;
+}
+.node-scientific-report .field-name-field-downloadable-docs ul li {
+    list-style: none;
+}
+
 

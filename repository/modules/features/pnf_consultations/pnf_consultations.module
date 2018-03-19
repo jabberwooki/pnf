@@ -1,0 +1,205 @@
+<?php
+/**
+ * @file
+ * Code for the Consultations publiques feature.
+ */
+
+include_once 'pnf_consultations.features.inc';
+
+/**
+ * Implements hook_menu().
+ */
+function pnf_consultations_menu() {
+  $items = array();
+  $items['admin/config/pnf_consultations'] = array(
+    'title' => t('Consultations publiques'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('pnf_consultations_settings_form'),
+    'access arguments' => array('administer pnf settings'),
+    'file' => 'pnf_consultations.admin.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function pnf_consultations_field_formatter_info() {
+  $formatters = array(
+    'pnf_consultation_dates' => array(
+      'label' => t('Dates consultations publiques PNF'),
+      'field types' => array('date', 'datestamp', 'datetime'),
+      'description' => t('Displays consultation dates as needed.'),
+    ),
+  );
+  return $formatters;
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function pnf_consultations_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+
+  switch ($display['type']) {
+    case 'pnf_consultation_dates':
+      foreach ($items as $delta => $item) {
+        $date1 = format_date(strtotime($item['value']), 'short');
+        $date2 = format_date(strtotime($item['value2']), 'short');
+
+        $element[$delta] = array(
+          '#markup' => t('From !start-date to !end-date', array(
+            '!start-date' => $date1,
+            '!end-date' => $date2
+          )));
+      }
+      break;
+  }
+
+  return $element;
+}
+
+/**
+ * Implements hook_node_view().
+ */
+/**
+ * Implements hook_views_pre_render().
+ */
+function pnf_consultations_views_pre_render(&$view) {
+  if ($view->name == 'public_consultations' && $view->current_display == 'list') {
+    drupal_add_js(drupal_get_path('module','pnf_consultations') . '/js/pnf_consultations.js');
+    drupal_add_css(drupal_get_path('module','pnf_consultations') . '/css/pnf_consultations.css');
+  }
+}
+
+/**
+ * Implements hook_node_view().
+ */
+function pnf_consultations_node_view($node, $view_mode, $langcode) {
+  if ($node->type == 'public_consultation') {
+    // Libraries upload required by non webmaster, admin or superadmin users.
+    // jQuery UI library upload
+    drupal_add_js(drupal_get_path('module', 'jquery_update') . '/replace/ui/ui/jquery-ui.js');
+    drupal_add_css(drupal_get_path('module', 'jquery_update') . '/replace/ui/themes/base/jquery-ui.css');
+    // jQuery Dialog library upload
+    drupal_add_js(drupal_get_path('module', 'jquery_update') . '/replace/ui/ui/jquery.ui.dialog.js');
+    drupal_add_css(drupal_get_path('module', 'jquery_update') . '/replace/ui/themes/base/jquery.ui.dialog.css');
+
+    // Comment number display
+    $suffix = '';
+    if ($node->comment_count > 1) $suffix = 's';
+    $node->content['comments_number'][0]['#markup'] = $node->comment_count . ' commentaire' . $suffix;
+
+    if ($view_mode == 'full') {
+      drupal_add_js(drupal_get_path('module', 'pnf_consultations') . '/js/pnf_consultations.js');
+      drupal_add_css(drupal_get_path('module', 'pnf_consultations') . '/css/pnf_consultations.css');
+
+      // Guidelines link
+      $node->content['comments_rules_link'][0]['#markup'] = "<p>Conformément au cinquième alinéa du II. de l’article L. 120-1 du code de l’environnement, "
+      . "les observations du public pour cette consultation sont rendues accessibles au fur et à mesure de leur réception. "
+      . "Les échanges font l’objet d’une modération a priori, conformément à la "
+      . '<a>Charte des débats.</a></p>';
+
+      // Guidelines field
+      $guidelines_text = variable_get('consult_guidelines_text', 0);
+      if ($guidelines_text) {
+        $markup = $guidelines_text['value'];
+        $node->content['guidelines_text'][0]['#markup'] = $markup;
+      }
+      else {
+        $node->content['guidelines_text'][0]['#markup'] = 'Non encore paramétré';
+      }
+
+      // Comment display handling
+      if(isset($node->content['comments']) && !empty($node->content['comments']['comments'])) {
+        $comments = $node->content['comments']['comments'];
+        if(key_exists('pager', $comments)) {
+          unset($comments['pager']);
+        }
+        $comments = element_children($comments);
+        foreach ($comments as $comment_index) {
+          $date = $node->content['comments']['comments'][$comment_index]['post_date'][0]['#markup'];
+          $node->content['comments']['comments'][$comment_index]['post_date'][0]['#markup'] =
+            'Par ' . 'toto' . ', ' . t('on') . ' ' . $date;
+        }
+      }
+
+      // Form to add comment removed from display when consultation end date is in the past.
+      $consult_end_date = format_date(strtotime($node->field_consultation_date['und'][0]['value2']), 'custom', 'Ymd');
+      $current_date = format_date(time(), 'custom', 'Ymd');
+      if ($consult_end_date < $current_date) {
+        unset($node->content['comments']['comment_form']);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function pnf_consultations_form_comment_form_alter(&$form, &$form_state, $form_id) {
+//  unset($form['author']['homepage']);
+  $form['subject']['#required'] = TRUE;
+}
+
+function pnf_consultations_entity_postinsert($entity, $entity_type) {
+//  watchdog('pnf_consultations', serialize($entity));
+  if ($entity->node_type == 'comment_node_public_consultation') {
+    if(variable_get('consult_moderators_alert', 1)) {
+      pnf_consultations_send_comment_notification($entity);
+    }
+  }
+}
+
+function pnf_consultations_send_comment_notification($entity) {
+  $query = db_select('node', 'n');
+  $query->addField('n', 'title');
+  $query->condition('n.nid', $entity->nid);
+
+  $node_title = $query->execute()->fetchField();
+  //watchdog('pnf_consultations', "Titre node: $node_title, nid: $entity->nid, Sujet commentaire: $entity->subject, cid: $entity->cid");
+
+  // Build email message
+  $mail_to = variable_get('consult_moderators_emails', variable_get('site_mail'));
+  $mail_from = variable_get('site_mail');
+  $mail_subject = '[' . variable_get('site_name') . '] Nouveau commentaire de consultation';
+  $mail_body = '<p>Un nouveau commentaire intitulé "<span class="comment-title">' . $entity->subject . '</span>" vient d\'être posté sur la consultation suivante :</p>';
+
+  $node_url = 'http:/' . $_SERVER['HTTP_HOST'] . '/node/' . $entity->nid;
+  $mail_body .= '<a href="' . $node_url . '">' . $node_title . '</a>';
+
+  $params = array(
+    'headers' => array(
+      'MIME-Version' => '1.0',
+      'Content-Type' => 'text/html',
+      'charset' => 'UTF-8',
+    ),
+    'subject' => $mail_subject,
+    'body' => $mail_body
+  );
+
+  $msg_type = 'status';
+  if(drupal_mail('pnf_consultations','comment_notification', $mail_to, language_default(), $params, $mail_from)) {
+    $msg = t('Comment notification sent successfully to %email.', array('%email' => $mail_to));
+  }
+  else {
+    $msg = t('Comment notification could not be sent to %email.', array('%email' => $mail_to));
+    $msg_type = 'warning';
+  }
+  watchdog('pnf_consultations', $msg);
+}
+
+/**
+ * Implements hook_mail().
+ */
+function pnf_consultations_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'comment_notification':
+      $message['headers'] += $params['headers'];
+      $message['subject'] = $params['subject'];
+      $message['body'][] = $params['body'];
+      break;
+  }
+}

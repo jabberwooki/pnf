@@ -12,7 +12,9 @@ include_once 'pnf_scientific_reports.features.inc';
 function pnf_scientific_reports_node_view($node, $view_mode, $langcode) {
   if ($node->type == 'scientific_report') {
     drupal_add_css(drupal_get_path('module', 'pnf_scientific_reports') . '/css/pnf_scientific_reports.css');
-    drupal_add_js(drupal_get_path('module', 'pnf_scientific_reports') . '/js/pnf_scientific_reports.js');
+    if ($view_mode == 'full') {
+      drupal_add_js(drupal_get_path('module', 'pnf_scientific_reports') . '/js/pnf_scientific_reports.js');
+    }
   }
 }
 

@@ -29,9 +29,7 @@ function pnf_scientific_reports_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Appliquer';
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
-  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
@@ -90,7 +88,7 @@ function pnf_scientific_reports_views_default_views() {
   $handler->display->display_options['filters']['field_sectors_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_sectors_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_sectors_tid']['expose']['operator_id'] = 'field_sectors_tid_op';
-  $handler->display->display_options['filters']['field_sectors_tid']['expose']['label'] = 'Sector';
+  $handler->display->display_options['filters']['field_sectors_tid']['expose']['label'] = 'Sites';
   $handler->display->display_options['filters']['field_sectors_tid']['expose']['operator'] = 'field_sectors_tid_op';
   $handler->display->display_options['filters']['field_sectors_tid']['expose']['identifier'] = 'field_sectors_tid';
   $handler->display->display_options['filters']['field_sectors_tid']['expose']['remember_roles'] = array(

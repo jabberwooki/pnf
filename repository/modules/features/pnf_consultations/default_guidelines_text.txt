@@ -1,0 +1,39 @@
+<h3>Charte des débats</h3>
+
+<p>Les débats et forums de propositions du site [site-name] sont ouverts à tous.<br />
+Le contenu du site comme les commentaires peuvent être lus par tous. Cependant, pour contribuer aux débats, formuler vos propositions et vous prononcer, nous vous demandons de vous identifier, avec notre nom ou pseudo, et votre adresse électronique valide. Seul votre nom ou pseudo seront visibles si votre contribution est publiée, dans le cadre des forums ouverts.<br />
+Les échanges sur le site font l’objet d’une modération a priori. Cette modération s’applique à tous les propos susceptibles d’enfreindre la loi ; elle a aussi pour but de préserver la courtoisie dans les échanges : si les critiques et l’expression de désaccords éventuels ont toute leur place dans les débats, on évitera l’invective ou les prises à partie d´autres participants.<br />
+Les débats sont modérés par le [site-name].<br />
+Le rôle des modérateurs est de veiller à la qualité des débats en écartant les contributions qui, par leur caractère indigne, attentatoire aux personnes ou hors sujet, nuisent à la qualité des débats. Les modérateurs excluent également tout propos contraire aux lois en vigueur.</p>
+
+<p><br />
+La modération s’applique, de façon non exhaustive :</p>
+
+<ol>
+	<li>Aux attaques ou insinuations fondées sur les origines, le sexe ou l’orientation sexuelle des personnes, sur leurs croyances ou absence de croyance.</li>
+	<li>Aux insultes, affirmations graves non prouvées ou notoirement inexactes concernant les personnes ou les organisations.</li>
+	<li>Aux messages obscènes, pornographiques ou relevant du harcèlement.</li>
+	<li>Aux messages enfreignant manifestement le droit d’auteur, le droit applicable aux bases de données, le droit à l’image et le respect de la vie privée, ou qui enfreindrait toute autre disposition législative ou réglementaire en vigueur.</li>
+	<li>Aux invectives ad hominem (propos agressifs, méprisants, péremptoires) ou, de façon générale, tout propos attentatoires aux participants du site.</li>
+	<li>A l’utilisation des espaces de débat à des fins publicitaires ou commerciales.</li>
+	<li>A la mention de coordonnées personnelles ou de liens hypertextes indiquant des contenus hors sujet ou attentatoire aux lois en vigueur.</li>
+	<li>Aux contenus de sites web accessibles uniquement par abonnement payant.</li>
+	<li>Aux contributions superflues ou redondantes sans apport particulier pour les échanges.</li>
+	<li>Aux informations obsolètes ou ayant déjà été pleinement débattues.</li>
+	<li>Aux messages manifestement hors sujet.</li>
+</ol>
+
+<p>Les modérateurs doivent également préserver le caractère collectif des échanges : ils veillent notamment à ce que les critiques et expressions de désaccords soient argumentées et ne dérivent pas vers l’invective ou les prises à partie d´autres participants.<br />
+Les participants sont également invités à respecter les conventions suivantes.</p>
+
+<ol>
+	<li>Avant de poster un commentaire, vérifiez qu’il correspond bien au sujet de discussion.</li>
+	<li>Rédigez soigneusement le titre du commentaire : c’est lui qui attirera l’attention sur votre contribution.</li>
+	<li>Si vous répondez à un commentaire, indiquez le nom du contributeur auquel vous répondez ou citez le texte original pour être sûr d’être bien compris.</li>
+	<li>Faites connaissance avec vos interlocuteurs en consultant leur profil public.</li>
+	<li>Citez vos références.</li>
+	<li>Évitez de composer vos messages en majuscules.</li>
+	<li>Les forums, comme tous les espaces de discussion virtuels, sont des assemblées publiques. Vos propos sont accessibles à tous. Tenez-en compte.</li>
+	<li>Respectez le débat, respectez votre lecteur : ne faites pas de copier/coller d’argumentaires tout faits, c’est votre avis et votre avis seul qui doit s’exprimer.</li>
+	<li>Vérifiez la source des informations que vous postez.</li>
+</ol>

@@ -70,6 +70,7 @@ projects[role_export][version] = "1.0"
 
 projects[strongarm][subdir] = contrib
 projects[strongarm][version] = "2.0"
+projects[strongarm][patch][] = "https://www.drupal.org/files/issues/variable-1850618-13.patch"
 
 projects[taxonomy_access_fix][subdir] = contrib
 projects[taxonomy_access_fix][version] = "2.3"
@@ -181,6 +182,9 @@ projects[honeypot][version] = "1.22"
 projects[honeypot_entityform][subdir] = contrib
 projects[honeypot_entityform][version] = "1.0"
 
+projects[hook_post_action][subdir] = contrib
+projects[hook_post_action][version] = "1.0-beta2"
+
 projects[less][subdir] = contrib
 projects[less][version] = "4.0"
 
@@ -243,6 +247,13 @@ projects[role_delegation][version] = "1.1"
 
 projects[tb_megamenu][subdir] = contrib
 projects[tb_megamenu][version] = "1.0-rc2"
+
+projects[term_per_role][subdir] = contrib
+projects[term_per_role][version] = "1.1"
+
+projects[term_reference_tree][subdir] = contrib
+projects[term_reference_tree][version] = "1.10"
+projects[term_reference_tree][patch][] = "https://www.drupal.org/files/i18n_compatibility_rerolled-1514794-27.patch"
 
 projects[text_resize][subdir] = contrib
 projects[text_resize][version] = "1.9"

@@ -42,7 +42,7 @@ function pnf_scientific_reports_field_default_field_instances() {
           'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
-        'weight' => 5,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -61,7 +61,7 @@ function pnf_scientific_reports_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_displayed_pub_date',
-    'label' => 'Publié le',
+    'label' => 'Published on',
     'required' => 1,
     'settings' => array(
       'default_value' => 'blank',
@@ -106,7 +106,7 @@ function pnf_scientific_reports_field_default_field_instances() {
         'module' => 'download_file',
         'settings' => array(),
         'type' => 'direct_download_accessible',
-        'weight' => 11,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -117,7 +117,7 @@ function pnf_scientific_reports_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_downloadable_docs',
-    'label' => 'Documents téléchargeables',
+    'label' => 'Downloadable documents',
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
@@ -185,7 +185,7 @@ function pnf_scientific_reports_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -242,7 +242,7 @@ function pnf_scientific_reports_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_plain',
-        'weight' => 5,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -263,7 +263,7 @@ function pnf_scientific_reports_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(),
-      'type' => 'options_select',
+      'type' => 'options_buttons',
       'weight' => 4,
     ),
   );
@@ -287,7 +287,7 @@ function pnf_scientific_reports_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -373,7 +373,7 @@ function pnf_scientific_reports_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -384,7 +384,7 @@ function pnf_scientific_reports_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_sr_authors',
-    'label' => 'Auteurs',
+    'label' => 'Authors',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -457,8 +457,8 @@ function pnf_scientific_reports_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
+          'image_link' => 'content',
+          'image_style' => '200w',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -551,7 +551,7 @@ function pnf_scientific_reports_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -562,7 +562,7 @@ function pnf_scientific_reports_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_sr_editor',
-    'label' => 'Editeur',
+    'label' => 'Editor',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -644,7 +644,7 @@ function pnf_scientific_reports_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_integer',
-        'weight' => 8,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -655,7 +655,7 @@ function pnf_scientific_reports_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_sr_pages',
-    'label' => 'Nombre de pages',
+    'label' => 'Pages number',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -693,7 +693,7 @@ function pnf_scientific_reports_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -704,7 +704,7 @@ function pnf_scientific_reports_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_sr_reference',
-    'label' => 'Référence',
+    'label' => 'Reference',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -776,7 +776,7 @@ function pnf_scientific_reports_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_plain',
-        'weight' => 6,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -788,7 +788,7 @@ function pnf_scientific_reports_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_sr_theme',
-    'label' => 'Thème',
+    'label' => 'Theme',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -825,7 +825,7 @@ function pnf_scientific_reports_field_default_field_instances() {
           'html_tag' => 'p',
         ),
         'type' => 'pnf_text',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -895,18 +895,18 @@ function pnf_scientific_reports_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Auteurs');
+  t('Authors');
   t('Dates début/fin publication');
-  t('Documents téléchargeables');
-  t('Editeur');
+  t('Downloadable documents');
+  t('Editor');
   t('Image phare');
-  t('Nombre de pages');
-  t('Publié le');
-  t('Référence');
+  t('Pages number');
+  t('Published on');
+  t('Reference');
   t('Résumé');
   t('Sites');
   t('Sous-titre');
-  t('Thème');
+  t('Theme');
 
   return $field_instances;
 }

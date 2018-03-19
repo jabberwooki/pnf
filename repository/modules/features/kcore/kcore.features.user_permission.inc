@@ -649,15 +649,6 @@ function kcore_user_default_permissions() {
     'module' => 'path',
   );
 
-  // Exported permission: 'administer users'.
-  $permissions['administer users'] = array(
-    'name' => 'administer users',
-    'roles' => array(
-      'administrateur' => 'administrateur',
-    ),
-    'module' => 'user',
-  );
-
   // Exported permission: 'administer uuid'.
   $permissions['administer uuid'] = array(
     'name' => 'administer uuid',
