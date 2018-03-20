@@ -52,7 +52,7 @@ if ($parts[0] == 'www') {
 		case 'guadeloupe-parcnational':
 			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pngd_style.css.less');
 			break;
-		case 'mercantour':
+		case 'mercantour-parcnational':
 			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnme_style.css.less');
 			break;
 		case 'parc-amazonien-guyane':

@@ -1,3 +1,8 @@
+Hotfix mercantour-css-specific-styles-call-missing - 2018-03-20
+===============================================================
+ * PNF profile up: missing mercantour stylesheet call added in template.php file: cas 'mercantour' replaced by case 'mercantour-parcnational'.
+
+
 Hotfix real-mercantour-domaine-name-added - 2018-03-20
 ======================================================
  * Multisite config up: Actual Mercantour domain name added to sites.php.
