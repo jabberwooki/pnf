@@ -1,3 +1,13 @@
+Hotfix pnf-consultations-auto-dependency-fix - 2018-03-29
+=========================================================
+ Auto-dependency of pnf_consultations to itselft removed.
+
+Hotfix SECURITY UPDATE: Drupal Core - 2018-03-29
+===============================================
+    SECURITY UPDATE: Drupal core updated from 7.56 to 7.57 then 7.58.
+    install profile up: Patch applied on Date module commented in .make file to prevent rebuilding failure.
+    install profile up: template.php file altered to make local dev PNM and PNPC urls accepted again in pnf_preprocess_page() function.
+
 Hotfix mercantour-css-specific-styles-call-missing - 2018-03-20
 ===============================================================
  * PNF profile up: missing mercantour stylesheet call added in template.php file: cas 'mercantour' replaced by case 'mercantour-parcnational'.
