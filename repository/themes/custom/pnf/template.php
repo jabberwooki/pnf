@@ -52,6 +52,9 @@ if ($parts[0] == 'www') {
 		case 'guadeloupe-parcnational':
 			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pngd_style.css.less');
 			break;
+		case 'mercantour':
+			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnme_style.css.less');
+			break;
 		case 'mercantour-parcnational':
 			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnme_style.css.less');
 			break;
@@ -66,6 +69,9 @@ if ($parts[0] == 'www') {
       break;
 		case 'parcsnationaux':
 			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnf_style.css.less');
+			break;
+		case 'portcrosparcnational':
+			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnpc_style.css.less');
 			break;
 		case 'portcros-parcnational':
 			drupal_add_css(drupal_get_path('theme', 'pnf') . '/less/pnpc_style.css.less');
