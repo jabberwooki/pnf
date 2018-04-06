@@ -1,3 +1,7 @@
+Hotfix fix-consultations-permissions - 2018-04-06
+=================================================
+ * pnf_consultations up: 'Administer pnx settings' permission created.
+
 Hotfix pnf-consultations-auto-dependency-fix - 2018-03-29
 =========================================================
  Auto-dependency of pnf_consultations to itselft removed.

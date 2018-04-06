@@ -15,12 +15,23 @@ function pnf_consultations_menu() {
     'title' => t('Consultations publiques'),
     'page callback' => 'drupal_get_form',
     'page arguments' => array('pnf_consultations_settings_form'),
-    'access arguments' => array('administer pnf settings'),
+    'access arguments' => array('administer pnx settings'),
     'file' => 'pnf_consultations.admin.inc',
     'type' => MENU_NORMAL_ITEM,
   );
 
   return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function pnf_consultations_permission() {
+  return array(
+    'administer pnx settings' => array(
+      'title' => t('Administer PNx settings'),
+    ),
+  );
 }
 
 /**
