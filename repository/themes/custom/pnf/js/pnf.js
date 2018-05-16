@@ -63,6 +63,7 @@
     //----------------- Lignes rajoutées par CE ------------------------------------------------------------------------
     // 1 - On fait d'abord des calculs.
     // 1.1 - Calcul de la largeur du plus grand item de menu.
+    //alert('debut toolbar');
     var maxToolbarItemWidth = 0;
     $('#block-menu-menu-tools ul li a span').each(function () {
       var itemWidth = $(this).width();
@@ -70,6 +71,7 @@
         maxToolbarItemWidth = itemWidth;
       }
     });
+    console.log(maxToolbarItemWidth);
     // 1.2 - Calcul du padding right.
     var toolbarItemPaddingRight = parseInt($('#block-menu-menu-tools ul li a').css('padding-right'));
     // 1.3 - Le décalage à appliquer est la somme des deux valeurs précédentes + 3px pour tout bien cacher.
@@ -77,7 +79,7 @@
 
     // 2 - Ensuite, on ferme la barre d'outils.
     var toolbar = $('#block-menu-menu-tools ul');
-    toolbar.css('margin-right', marginRightOffset);
+    //toolbar.css('margin-right', marginRightOffset);
 
     // 3 - Puis on prépare les styles css à appliquer.
     // 3.1 - Styles de la barre fermée.
@@ -98,11 +100,11 @@
     // 4 - Mécanismes d'ouverture/fermeture du menu.
     // 4.1 - Lorsque la souris entre dans la barre d'outils
     toolbar.mouseenter(function () {
-      $(this).css(toolbarOpenStyles);
+      //$(this).css(toolbarOpenStyles);
     });
     // 4.2 - Lorsque la souris sort de la barre d'outils.
     toolbar.mouseleave(function () {
-      $(this).css(toolbarClosedStyles);
+      //$(this).css(toolbarClosedStyles);
     })
     //----------------- Fin des lignes rajoutées par CE ----------------------------------------------------------------
 
