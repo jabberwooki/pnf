@@ -790,6 +790,11 @@ now override the 3.3 new styles for modern browsers & apply opacity
 			//a.tool span:hover{ // commenté par CE
 			//	color: @brand-primary;
 			//}
+			a.tool::before {
+				display: block;
+				float: left;
+				width: 25px;
+			}
 			a.tool-news:before {
 				font-family: 'pnf';
 				/*content: '\f0e6';*/ /*Fontawesome*/
