@@ -80,6 +80,14 @@ function pnf_consultations_field_formatter_view($entity_type, $entity, $field, $
  */
 function pnf_consultations_views_pre_render(&$view) {
   if ($view->name == 'public_consultations' && $view->current_display == 'list') {
+    // Libraries upload required by non webmaster, admin or superadmin users.
+    // jQuery UI library upload
+    drupal_add_js(drupal_get_path('module', 'jquery_update') . '/replace/ui/ui/jquery-ui.js');
+    drupal_add_css(drupal_get_path('module', 'jquery_update') . '/replace/ui/themes/base/jquery-ui.css');
+    // jQuery Dialog library upload
+    drupal_add_js(drupal_get_path('module', 'jquery_update') . '/replace/ui/ui/jquery.ui.dialog.js');
+    drupal_add_css(drupal_get_path('module', 'jquery_update') . '/replace/ui/themes/base/jquery.ui.dialog.css');
+    
     drupal_add_js(drupal_get_path('module','pnf_consultations') . '/js/pnf_consultations.js');
     drupal_add_css(drupal_get_path('module','pnf_consultations') . '/css/pnf_consultations.css');
   }
