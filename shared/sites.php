@@ -21,6 +21,19 @@ $sites = array(
   'www.vanoise-parcnational.dev' => 'vanoise-parcnational.fr',
   'www.forets-champagne-bourgogne.dev' => 'forets-champagne-bourgogne.fr',
 
+  'www.calanques-parcnational.localhost' => 'calanques-parcnational.fr',
+  'www.cevennes-parcnational.localhost' => 'cevennes-parcnational.fr',
+  'www.ecrins-parcnational.localhost' => 'ecrins-parcnational.fr',
+  'www.guadeloupe-parcnational.localhost' => 'guadeloupe-parcnational.fr',
+  'www.mercantour.localhost' => 'mercantour.eu',
+  'www.parc-amazonien-guyane.localhost' => 'parc-amazonien-guyane.fr',
+  'www.parc-pyrenees.localhost' => 'parc-pyrenees.com',
+  'www.parcsnationaux.localhost' => 'parcsnationaux.fr',
+  'www.portcrosparcnational.localhost' => 'portcrosparcnational.fr',
+  'www.reunion-parcnational.localhost' => 'reunion-parcnational.fr',
+  'www.vanoise-parcnational.localhost' => 'vanoise-parcnational.fr',
+  'www.forets-champagne-bourgogne.localhost' => 'forets-champagne-bourgogne.fr',
+
  // Staging sites AR
   'pnca.pnfdev.xyz' => 'calanques-parcnational.fr',
   'pnce.pnfdev.xyz' => 'cevennes-parcnational.fr',
