@@ -1,5 +1,15 @@
 (function($) {
-  $(document).ready(function() {
+  // Call to $(document).ready() replaced by call to $(window).load().
+  // Why ?
+  // $(document).ready() executes when HTML-Document is loaded and DOM is ready.
+  // $(window).load() executes when complete page is fully loaded, including all frames, objects and images.
+  //
+  // So using the first function gave a toolbar div's width value of X,
+  // then a value of Y (Y always larger than X) on page reload,
+  // whereas the second on gives the same value Y on first load and after page reload.
+
+  // $(document).ready(function() {
+  $(window).load(function() {
     // Matchmedia
     if (window.matchMedia("(min-width: 768px)").matches) {
       /* La largeur minimum de l'affichage est 768 px inclus */
@@ -55,56 +65,49 @@
     $('.view-multimedia .multimedia-teaser h3').matchHeight('options');
 
     /* Toolbar Menu*/
-    $('#block-menu-menu-tools ul li a').wrapInner('<span></span>');
+    // L'instruction suivante est supprimée.
+    // La balise <span> est rajoutée aux items de menu non plus via jQuery après affichage
+    // mais avant affichage dans le hook pnf_menu_link__menu_tools() dans le fichier template.php.
+    // $('#block-menu-menu-tools ul li a').wrapInner('<span></span>');
 
-    $('#block-menu-menu-tools').find('li span').each(function() {
-      $(this).css('width', $(this).width() + 44);
-    });
     //----------------- Lignes rajoutées par CE ------------------------------------------------------------------------
     // 1 - On fait d'abord des calculs.
-    // 1.1 - Calcul de la largeur du plus grand item de menu.
-    //alert('debut toolbar');
-    var maxToolbarItemWidth = 0;
-    $('#block-menu-menu-tools ul li a span').each(function () {
-      var itemWidth = $(this).width();
-      if (itemWidth > maxToolbarItemWidth) {
-        maxToolbarItemWidth = itemWidth;
-      }
-    });
-    console.log(maxToolbarItemWidth);
-    // 1.2 - Calcul du padding right.
-    var toolbarItemPaddingRight = parseInt($('#block-menu-menu-tools ul li a').css('padding-right'));
-    // 1.3 - Le décalage à appliquer est la somme des deux valeurs précédentes + 3px pour tout bien cacher.
-    var marginRightOffset = -(maxToolbarItemWidth + toolbarItemPaddingRight + 3);
+    // 1.1 - Calcul de la largeur du menu Toolbar.
+    var toolbarWidth = $('#block-menu-menu-tools').width();
+    
+    // 1.2 - Le menu Toolbar étant positionnée complètement hors de l'écran à droite via css (voir fichier header.less),
+    // il faut calculer la valeur à donner à 'right' pour la faire réapparaitre de 50px
+    // et ainsi voir juste les pictos.
+    var rightValue = '-' + (toolbarWidth -50) + 'px';
 
-    // 2 - Ensuite, on ferme la barre d'outils.
-    var toolbar = $('#block-menu-menu-tools ul');
-    //toolbar.css('margin-right', marginRightOffset);
+    // 2 - Maintenant, on fait apparaitre les pictos
+    var toolbar = $('#block-menu-menu-tools');
+    toolbar.css({"right": rightValue });
 
-    // 3 - Puis on prépare les styles css à appliquer.
-    // 3.1 - Styles de la barre fermée.
-    var toolbarClosedStyles = {
-      marginRight: marginRightOffset
-    }
-    // 3.2 - Styles de la barre ouverte, avec transition css3.
+    // // 3 - Puis on prépare les styles css à appliquer.
+    // 3.1 - Styles à appliquer pour voir le menu Toolbar ouvert, avec transition css3.
     var toolbarOpenStyles = {
-      marginRight: 0,
-      backgroundColor: "rgba(0, 0, 0, 0.5)",
-      WebkitTransition: "all 0.6s ease-in-out",
-      MozTransition: "all 0.6s ease-in-out",
-      MsTransition: "all 0.6s ease-in-out",
-      OTransition: "all 0.6s ease-in-out",
-      transition: "all 0.6s ease-in-out"
+      right: "0",
+      WebkitTransition: "right 0.4s ease",
+      MozTransition: "right 0.4s ease",
+      MsTransition: "right 0.4s ease",
+      OTransition: "right 0.4s ease",
+      transition: "right 0.4s ease"
+    }
+    // // 3.2 - Styles à appliquer pour voir le menu Toolbar fermé.
+    var toolbarClosedStyles = {
+      right: rightValue
     }
 
-    // 4 - Mécanismes d'ouverture/fermeture du menu.
+    // 4 - Mécanismes d'ouverture/fermeture du menu Toolbar.
     // 4.1 - Lorsque la souris entre dans la barre d'outils
     toolbar.mouseenter(function () {
-      //$(this).css(toolbarOpenStyles);
+      $(this).css(toolbarOpenStyles);
     });
+
     // 4.2 - Lorsque la souris sort de la barre d'outils.
     toolbar.mouseleave(function () {
-      //$(this).css(toolbarClosedStyles);
+      $(this).css(toolbarClosedStyles);
     })
     //----------------- Fin des lignes rajoutées par CE ----------------------------------------------------------------
 

@@ -265,3 +265,19 @@ function pnf_print_ui_format_link($vars) {
 		}
 	}
 }
+
+function pnf_menu_link__menu_tools($vars) {
+	$element = $vars['element'];
+
+  $sub_menu = '';
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+
+	// To wrap link title with <span>, we must set 'html' to TRUE,
+	// default value in l() function being FALSE.
+	$element['#localized_options']['html'] = TRUE;
+
+  $output = l('<span>' . $element['#title'] . '</span>', $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
