@@ -140,8 +140,9 @@ function pnf_consultations_node_view($node, $view_mode, $langcode) {
         $comments = element_children($comments);
         foreach ($comments as $comment_index) {
           $date = $node->content['comments']['comments'][$comment_index]['post_date'][0]['#markup'];
+          $name = $node->content['comments']['comments'][$comment_index]['#comment']->name;
           $node->content['comments']['comments'][$comment_index]['post_date'][0]['#markup'] =
-            'Par ' . 'toto' . ', ' . t('on') . ' ' . $date;
+            'Par ' . $name . ', ' . t('on') . ' ' . $date;
         }
       }
 
