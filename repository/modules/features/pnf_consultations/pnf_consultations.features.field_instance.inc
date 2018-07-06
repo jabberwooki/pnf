@@ -245,7 +245,7 @@ function pnf_consultations_field_default_field_instances() {
   $field_instances['node-public_consultation-field_consultation_date'] = array(
     'bundle' => 'public_consultation',
     'deleted' => 0,
-    'description' => '',
+    'description' => '<b>Vous devez saisir la date de fin 21 jours après la date de début.</b>',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -445,6 +445,7 @@ function pnf_consultations_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('<b>Vous devez saisir la date de fin 21 jours après la date de début.</b>');
   t('Comment');
   t('Date de la consultation');
   t('Documents téléchargeables');
