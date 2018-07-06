@@ -10,7 +10,6 @@ dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[fe_block_settings][] = addtoany-addtoany_button
 features[features_api][] = api:2
-features[user_permission][] = administer addtoany
 features[variable][] = addtoany_additional_css
 features[variable][] = addtoany_additional_html
 features[variable][] = addtoany_additional_html_placement
