@@ -176,6 +176,12 @@ function pnf_jobs_views_default_views() {
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
+  /* Critère de filtrage: Contenu : Closing date for application (field_job_deadline_date) */
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['id'] = 'field_job_deadline_date_value';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['table'] = 'field_data_field_job_deadline_date';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['field'] = 'field_job_deadline_date_value';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['default_date'] = 'now';
 
   /* Display: Offres d'emploi */
   $handler = $view->new_display('page', 'Offres d\'emploi', 'page_jobs');
@@ -217,6 +223,12 @@ function pnf_jobs_views_default_views() {
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
+  /* Critère de filtrage: Contenu : Closing date for application (field_job_deadline_date) */
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['id'] = 'field_job_deadline_date_value';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['table'] = 'field_data_field_job_deadline_date';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['field'] = 'field_job_deadline_date_value';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['default_date'] = 'now';
   $handler->display->display_options['path'] = 'trainings';
 
   /* Display: Services Civiques */
@@ -253,6 +265,12 @@ function pnf_jobs_views_default_views() {
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
+  /* Critère de filtrage: Contenu : Closing date for application (field_job_deadline_date) */
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['id'] = 'field_job_deadline_date_value';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['table'] = 'field_data_field_job_deadline_date';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['field'] = 'field_job_deadline_date_value';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['default_date'] = 'now';
   $handler->display->display_options['path'] = 'civic-services';
   $export['jobs'] = $view;
 
