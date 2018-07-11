@@ -14,6 +14,7 @@ dependencies[] = kcore
 dependencies[] = kpages
 dependencies[] = menu
 dependencies[] = menu_admin_per_menu
+dependencies[] = node
 dependencies[] = taxonomy_access_fix
 dependencies[] = text
 dependencies[] = uuid
