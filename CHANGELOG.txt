@@ -1,3 +1,7 @@
+Hotfix dossiers_frontpage_block_title_renamed - 2018-07-31
+==========================================================
+ * Front page block "Dossiers" title changed from "Fichiers" to "Files" (default views language is english).
+
 Hotfix menu_national_parks_pnp_link_fixed - 2018-07-31
 ======================================================
   * kcore up: PNP menu link url changed from www.parc-pyrenees.com to www.pyrenees-parcnational.fr
