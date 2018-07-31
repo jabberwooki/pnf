@@ -429,6 +429,7 @@ function pnf_front_blocks_context_default_contexts() {
     'domain' => array(
       'values' => array(
         '*.mercantour.*' => '*.mercantour.*',
+        '*.mercantour-parcnational.*' => '*.mercantour-parcnational.*',
         'preprod-pnm.*' => 'preprod-pnm.*',
         'prod-pnm.*' => 'prod-pnm.*',
       ),
