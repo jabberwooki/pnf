@@ -762,7 +762,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 	/*Menu tools*/
 	#block-menu-menu-tools{
-		right: 0;
+		right: -1000px; // Rajouté par CE. Menu poussé hors de l'écran à droite. Il sera bien positionné en jquery au chargement de la page
 		position: fixed;
 		top: 220px;
 
@@ -790,6 +790,11 @@ now override the 3.3 new styles for modern browsers & apply opacity
 			//a.tool span:hover{ // commenté par CE
 			//	color: @brand-primary;
 			//}
+			a.tool::before {// Bloc rajouté par CE pour pouvoir obtenir la même largeur pour tous les ::before
+				display: block;
+				float: left;
+				width: 40px;
+			}
 			a.tool-news:before {
 				font-family: 'pnf';
 				/*content: '\f0e6';*/ /*Fontawesome*/

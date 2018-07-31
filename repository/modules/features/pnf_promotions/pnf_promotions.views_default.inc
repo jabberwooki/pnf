@@ -23,17 +23,21 @@ function pnf_promotions_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'plus';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Appliquer';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'views_bootstrap_grid_plugin_style';
   $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Url */
+  /* Champ: Contenu : Url */
   $handler->display->display_options['fields']['field_promo_url']['id'] = 'field_promo_url';
   $handler->display->display_options['fields']['field_promo_url']['table'] = 'field_data_field_promo_url';
   $handler->display->display_options['fields']['field_promo_url']['field'] = 'field_promo_url';
@@ -42,7 +46,7 @@ function pnf_promotions_views_default_views() {
   $handler->display->display_options['fields']['field_promo_url']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_promo_url']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_promo_url']['type'] = 'link_plain';
-  /* Field: Content: Image */
+  /* Champ: Contenu : Image */
   $handler->display->display_options['fields']['field_promo_image']['id'] = 'field_promo_image';
   $handler->display->display_options['fields']['field_promo_image']['table'] = 'field_data_field_promo_image';
   $handler->display->display_options['fields']['field_promo_image']['field'] = 'field_promo_image';
@@ -68,25 +72,25 @@ function pnf_promotions_views_default_views() {
       ),
     ),
   );
-  /* Sort criterion: Content: Poids (field_weight) */
+  /* Critère de tri: Contenu : Poids (field_weight) */
   $handler->display->display_options['sorts']['field_weight_value']['id'] = 'field_weight_value';
   $handler->display->display_options['sorts']['field_weight_value']['table'] = 'field_data_field_weight';
   $handler->display->display_options['sorts']['field_weight_value']['field'] = 'field_weight_value';
-  /* Filter criterion: Content: Published */
+  /* Critère de filtrage: Contenu : Publié */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Critère de filtrage: Contenu : Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'promotion' => 'promotion',
   );
-  /* Filter criterion: Content: Language */
+  /* Critère de filtrage: Contenu : Langue */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';

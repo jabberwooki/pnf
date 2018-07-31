@@ -24,6 +24,7 @@ function pnf_multimedia_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Vidéos';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'plus';
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -117,27 +118,27 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'views_bootstrap_grid_plugin_style';
   $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Atom: Representation */
+  /* Champ: Atome : Représentation */
   $handler->display->display_options['fields']['representation']['id'] = 'representation';
   $handler->display->display_options['fields']['representation']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['representation']['field'] = 'representation';
   $handler->display->display_options['fields']['representation']['label'] = '';
   $handler->display->display_options['fields']['representation']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['representation']['context'] = 'list';
-  /* Field: Atoms: Catégorie */
+  /* Champ: Atomes : Catégorie */
   $handler->display->display_options['fields']['field_media_category']['id'] = 'field_media_category';
   $handler->display->display_options['fields']['field_media_category']['table'] = 'field_data_field_media_category';
   $handler->display->display_options['fields']['field_media_category']['field'] = 'field_media_category';
   $handler->display->display_options['fields']['field_media_category']['label'] = '';
   $handler->display->display_options['fields']['field_media_category']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_media_category']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Atom: Title */
+  /* Champ: Atome : Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Atoms: Description */
+  /* Champ: Atomes : Description */
   $handler->display->display_options['fields']['field_atom_description']['id'] = 'field_atom_description';
   $handler->display->display_options['fields']['field_atom_description']['table'] = 'field_data_field_atom_description';
   $handler->display->display_options['fields']['field_atom_description']['field'] = 'field_atom_description';
@@ -147,14 +148,14 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['field_atom_description']['settings'] = array(
     'trim_length' => '120',
   );
-  /* Filter criterion: Atom: Type */
+  /* Critère de filtrage: Atome : Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'scald_atoms';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'video' => 'video',
   );
-  /* Filter criterion: Atoms: Catégorie (field_media_category) */
+  /* Critère de filtrage: Atomes : Catégorie (field_media_category) */
   $handler->display->display_options['filters']['field_media_category_tid']['id'] = 'field_media_category_tid';
   $handler->display->display_options['filters']['field_media_category_tid']['table'] = 'field_data_field_media_category';
   $handler->display->display_options['filters']['field_media_category_tid']['field'] = 'field_media_category_tid';
@@ -176,25 +177,25 @@ function pnf_multimedia_views_default_views() {
   /* Display: Galeries */
   $handler = $view->new_display('page_with_page_title', 'Galeries', 'page_photos');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Image galleries';
+  $handler->display->display_options['title'] = 'Galeries photo';
   $handler->display->display_options['defaults']['query'] = FALSE;
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Atoms: Catégorie (field_media_category) */
+  /* Relation: Atomes : Catégorie (field_media_category) */
   $handler->display->display_options['relationships']['field_media_category_tid']['id'] = 'field_media_category_tid';
   $handler->display->display_options['relationships']['field_media_category_tid']['table'] = 'field_data_field_media_category';
   $handler->display->display_options['relationships']['field_media_category_tid']['field'] = 'field_media_category_tid';
   $handler->display->display_options['relationships']['field_media_category_tid']['label'] = 'Catégorie de media';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Atom: Scald ID */
+  /* Champ: Atome : Identifiant Scald */
   $handler->display->display_options['fields']['sid']['id'] = 'sid';
   $handler->display->display_options['fields']['sid']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['sid']['field'] = 'sid';
   $handler->display->display_options['fields']['sid']['label'] = '';
   $handler->display->display_options['fields']['sid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['sid']['element_label_colon'] = FALSE;
-  /* Field: Atoms: Thumbnail */
+  /* Champ: Atomes : Thumbnail */
   $handler->display->display_options['fields']['scald_thumbnail']['id'] = 'scald_thumbnail';
   $handler->display->display_options['fields']['scald_thumbnail']['table'] = 'field_data_scald_thumbnail';
   $handler->display->display_options['fields']['scald_thumbnail']['field'] = 'scald_thumbnail';
@@ -218,7 +219,7 @@ function pnf_multimedia_views_default_views() {
       ),
     ),
   );
-  /* Field: Atoms: Description */
+  /* Champ: Atomes : Description */
   $handler->display->display_options['fields']['field_atom_description']['id'] = 'field_atom_description';
   $handler->display->display_options['fields']['field_atom_description']['table'] = 'field_data_field_atom_description';
   $handler->display->display_options['fields']['field_atom_description']['field'] = 'field_atom_description';
@@ -230,7 +231,7 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['field_atom_description']['settings'] = array(
     'trim_length' => '120',
   );
-  /* Field: Entity translation: Titre: translated */
+  /* Champ: Entity translation : Titre: translated */
   $handler->display->display_options['fields']['title_field_et']['id'] = 'title_field_et';
   $handler->display->display_options['fields']['title_field_et']['table'] = 'field_data_title_field';
   $handler->display->display_options['fields']['title_field_et']['field'] = 'title_field_et';
@@ -255,7 +256,7 @@ function pnf_multimedia_views_default_views() {
       ),
     ),
   );
-  /* Field: Global: Custom text */
+  /* Champ: Global : Texte personnalisé */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -274,7 +275,7 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Atom: Type */
+  /* Critère de filtrage: Atome : Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'scald_atoms';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -282,14 +283,14 @@ function pnf_multimedia_views_default_views() {
     'gallery' => 'gallery',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Atoms: Catégorie (field_media_category) */
+  /* Critère de filtrage: Atomes : Catégorie (field_media_category) */
   $handler->display->display_options['filters']['field_media_category_tid']['id'] = 'field_media_category_tid';
   $handler->display->display_options['filters']['field_media_category_tid']['table'] = 'field_data_field_media_category';
   $handler->display->display_options['filters']['field_media_category_tid']['field'] = 'field_media_category_tid';
   $handler->display->display_options['filters']['field_media_category_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_media_category_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['operator_id'] = 'field_media_category_tid_op';
-  $handler->display->display_options['filters']['field_media_category_tid']['expose']['label'] = 'Category';
+  $handler->display->display_options['filters']['field_media_category_tid']['expose']['label'] = 'Catégorie';
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['operator'] = 'field_media_category_tid_op';
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['identifier'] = 'field_media_category_tid';
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['remember_roles'] = array(
@@ -301,7 +302,7 @@ function pnf_multimedia_views_default_views() {
   );
   $handler->display->display_options['filters']['field_media_category_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_media_category_tid']['vocabulary'] = 'media_categories';
-  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
+  /* Critère de filtrage: Terme de taxonomie : Terme de taxonomie UUID */
   $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
   $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
@@ -313,16 +314,16 @@ function pnf_multimedia_views_default_views() {
   /* Display: Vidéos */
   $handler = $view->new_display('page_with_page_title', 'Vidéos', 'page_videos');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Videos';
+  $handler->display->display_options['title'] = 'Vidéos';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Atom: Scald ID */
+  /* Champ: Atome : Identifiant Scald */
   $handler->display->display_options['fields']['sid']['id'] = 'sid';
   $handler->display->display_options['fields']['sid']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['sid']['field'] = 'sid';
   $handler->display->display_options['fields']['sid']['label'] = '';
   $handler->display->display_options['fields']['sid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['sid']['element_label_colon'] = FALSE;
-  /* Field: Atoms: Thumbnail */
+  /* Champ: Atomes : Thumbnail */
   $handler->display->display_options['fields']['scald_thumbnail']['id'] = 'scald_thumbnail';
   $handler->display->display_options['fields']['scald_thumbnail']['table'] = 'field_data_scald_thumbnail';
   $handler->display->display_options['fields']['scald_thumbnail']['field'] = 'scald_thumbnail';
@@ -346,7 +347,7 @@ function pnf_multimedia_views_default_views() {
       ),
     ),
   );
-  /* Field: Atoms: Description */
+  /* Champ: Atomes : Description */
   $handler->display->display_options['fields']['field_atom_description']['id'] = 'field_atom_description';
   $handler->display->display_options['fields']['field_atom_description']['table'] = 'field_data_field_atom_description';
   $handler->display->display_options['fields']['field_atom_description']['field'] = 'field_atom_description';
@@ -358,7 +359,7 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['field_atom_description']['settings'] = array(
     'trim_length' => '120',
   );
-  /* Field: Entity translation: Titre: translated */
+  /* Champ: Entity translation : Titre: translated */
   $handler->display->display_options['fields']['title_field_et']['id'] = 'title_field_et';
   $handler->display->display_options['fields']['title_field_et']['table'] = 'field_data_title_field';
   $handler->display->display_options['fields']['title_field_et']['field'] = 'title_field_et';
@@ -383,7 +384,7 @@ function pnf_multimedia_views_default_views() {
       ),
     ),
   );
-  /* Field: Global: Custom text */
+  /* Champ: Global : Texte personnalisé */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -402,20 +403,20 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Atom: Type */
+  /* Critère de filtrage: Atome : Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'scald_atoms';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'video' => 'video',
   );
-  /* Filter criterion: Atoms: Catégorie (field_media_category) */
+  /* Critère de filtrage: Atomes : Catégorie (field_media_category) */
   $handler->display->display_options['filters']['field_media_category_tid']['id'] = 'field_media_category_tid';
   $handler->display->display_options['filters']['field_media_category_tid']['table'] = 'field_data_field_media_category';
   $handler->display->display_options['filters']['field_media_category_tid']['field'] = 'field_media_category_tid';
   $handler->display->display_options['filters']['field_media_category_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['operator_id'] = 'field_media_category_tid_op';
-  $handler->display->display_options['filters']['field_media_category_tid']['expose']['label'] = 'Category';
+  $handler->display->display_options['filters']['field_media_category_tid']['expose']['label'] = 'Catégorie';
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['operator'] = 'field_media_category_tid_op';
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['identifier'] = 'field_media_category_tid';
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['remember_roles'] = array(
@@ -432,16 +433,16 @@ function pnf_multimedia_views_default_views() {
   /* Display: Sons */
   $handler = $view->new_display('page_with_page_title', 'Sons', 'page_sounds');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Sounds';
+  $handler->display->display_options['title'] = 'Sons';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Atom: Scald ID */
+  /* Champ: Atome : Identifiant Scald */
   $handler->display->display_options['fields']['sid']['id'] = 'sid';
   $handler->display->display_options['fields']['sid']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['sid']['field'] = 'sid';
   $handler->display->display_options['fields']['sid']['label'] = '';
   $handler->display->display_options['fields']['sid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['sid']['element_label_colon'] = FALSE;
-  /* Field: Atoms: Thumbnail */
+  /* Champ: Atomes : Thumbnail */
   $handler->display->display_options['fields']['scald_thumbnail']['id'] = 'scald_thumbnail';
   $handler->display->display_options['fields']['scald_thumbnail']['table'] = 'field_data_scald_thumbnail';
   $handler->display->display_options['fields']['scald_thumbnail']['field'] = 'scald_thumbnail';
@@ -465,7 +466,7 @@ function pnf_multimedia_views_default_views() {
       ),
     ),
   );
-  /* Field: Atoms: Description */
+  /* Champ: Atomes : Description */
   $handler->display->display_options['fields']['field_atom_description']['id'] = 'field_atom_description';
   $handler->display->display_options['fields']['field_atom_description']['table'] = 'field_data_field_atom_description';
   $handler->display->display_options['fields']['field_atom_description']['field'] = 'field_atom_description';
@@ -477,7 +478,7 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['field_atom_description']['settings'] = array(
     'trim_length' => '120',
   );
-  /* Field: Entity translation: Titre: translated */
+  /* Champ: Entity translation : Titre: translated */
   $handler->display->display_options['fields']['title_field_et']['id'] = 'title_field_et';
   $handler->display->display_options['fields']['title_field_et']['table'] = 'field_data_title_field';
   $handler->display->display_options['fields']['title_field_et']['field'] = 'title_field_et';
@@ -502,7 +503,7 @@ function pnf_multimedia_views_default_views() {
       ),
     ),
   );
-  /* Field: Global: Custom text */
+  /* Champ: Global : Texte personnalisé */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -521,20 +522,20 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Atom: Type */
+  /* Critère de filtrage: Atome : Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'scald_atoms';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'audio' => 'audio',
   );
-  /* Filter criterion: Atoms: Catégorie (field_media_category) */
+  /* Critère de filtrage: Atomes : Catégorie (field_media_category) */
   $handler->display->display_options['filters']['field_media_category_tid']['id'] = 'field_media_category_tid';
   $handler->display->display_options['filters']['field_media_category_tid']['table'] = 'field_data_field_media_category';
   $handler->display->display_options['filters']['field_media_category_tid']['field'] = 'field_media_category_tid';
   $handler->display->display_options['filters']['field_media_category_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['operator_id'] = 'field_media_category_tid_op';
-  $handler->display->display_options['filters']['field_media_category_tid']['expose']['label'] = 'Category';
+  $handler->display->display_options['filters']['field_media_category_tid']['expose']['label'] = 'Catégorie';
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['operator'] = 'field_media_category_tid_op';
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['identifier'] = 'field_media_category_tid';
   $handler->display->display_options['filters']['field_media_category_tid']['expose']['remember_roles'] = array(
@@ -553,20 +554,20 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Cartothèque';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Atoms: Catégorie (field_media_category) */
+  /* Relation: Atomes : Catégorie (field_media_category) */
   $handler->display->display_options['relationships']['field_media_category_tid']['id'] = 'field_media_category_tid';
   $handler->display->display_options['relationships']['field_media_category_tid']['table'] = 'field_data_field_media_category';
   $handler->display->display_options['relationships']['field_media_category_tid']['field'] = 'field_media_category_tid';
   $handler->display->display_options['relationships']['field_media_category_tid']['label'] = 'Catégorie de media';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Atom: Scald ID */
+  /* Champ: Atome : Identifiant Scald */
   $handler->display->display_options['fields']['sid']['id'] = 'sid';
   $handler->display->display_options['fields']['sid']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['sid']['field'] = 'sid';
   $handler->display->display_options['fields']['sid']['label'] = '';
   $handler->display->display_options['fields']['sid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['sid']['element_label_colon'] = FALSE;
-  /* Field: Atoms: Thumbnail */
+  /* Champ: Atomes : Thumbnail */
   $handler->display->display_options['fields']['scald_thumbnail']['id'] = 'scald_thumbnail';
   $handler->display->display_options['fields']['scald_thumbnail']['table'] = 'field_data_scald_thumbnail';
   $handler->display->display_options['fields']['scald_thumbnail']['field'] = 'scald_thumbnail';
@@ -590,7 +591,7 @@ function pnf_multimedia_views_default_views() {
       ),
     ),
   );
-  /* Field: Atoms: Description */
+  /* Champ: Atomes : Description */
   $handler->display->display_options['fields']['field_atom_description']['id'] = 'field_atom_description';
   $handler->display->display_options['fields']['field_atom_description']['table'] = 'field_data_field_atom_description';
   $handler->display->display_options['fields']['field_atom_description']['field'] = 'field_atom_description';
@@ -602,7 +603,7 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['field_atom_description']['settings'] = array(
     'trim_length' => '120',
   );
-  /* Field: Atom: Title */
+  /* Champ: Atome : Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -612,7 +613,7 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['path'] = 'atom/[sid]';
   $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Global: Custom text */
+  /* Champ: Global : Texte personnalisé */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -631,7 +632,7 @@ function pnf_multimedia_views_default_views() {
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Atom: Type */
+  /* Critère de filtrage: Atome : Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'scald_atoms';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -639,7 +640,7 @@ function pnf_multimedia_views_default_views() {
     'gallery' => 'gallery',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
+  /* Critère de filtrage: Terme de taxonomie : Terme de taxonomie UUID */
   $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
   $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['filters']['uuid']['field'] = 'uuid';

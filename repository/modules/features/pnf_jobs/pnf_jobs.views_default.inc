@@ -25,6 +25,7 @@ function pnf_jobs_views_default_views() {
   $handler->display->display_options['title'] = 'Offres d\'emplois';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'plus';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -106,14 +107,20 @@ function pnf_jobs_views_default_views() {
   );
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« premier';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
   $handler->display->display_options['style_plugin'] = 'views_bootstrap_grid_plugin_style';
   $handler->display->display_options['style_options']['columns'] = '1';
   $handler->display->display_options['row_plugin'] = 'node';
-  /* Relationship: Content: Taxonomy terms on node */
+  /* Relation: Contenu : Termes de taxonomie du nœud */
   $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
   $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
   $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['label'] = 'terme';
   $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
     'job_types' => 'job_types',
     'scald_authors' => 0,
@@ -129,26 +136,26 @@ function pnf_jobs_views_default_views() {
     'news_types' => 0,
     'procurement_types' => 0,
   );
-  /* Field: Content: Title */
+  /* Champ: Contenu : Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Nœud: Published on (field_job_pub_date) */
+  /* Critère de tri: Contenu : Published on (field_job_pub_date) */
   $handler->display->display_options['sorts']['field_job_pub_date_value']['id'] = 'field_job_pub_date_value';
   $handler->display->display_options['sorts']['field_job_pub_date_value']['table'] = 'field_data_field_job_pub_date';
   $handler->display->display_options['sorts']['field_job_pub_date_value']['field'] = 'field_job_pub_date_value';
   $handler->display->display_options['sorts']['field_job_pub_date_value']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Critère de filtrage: Contenu : Publié */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Critère de filtrage: Contenu : Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -156,40 +163,46 @@ function pnf_jobs_views_default_views() {
     'job' => 'job',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Taxonomy term: Terme de taxonomie UUID */
+  /* Critère de filtrage: Terme de taxonomie : Terme de taxonomie UUID */
   $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
   $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
   $handler->display->display_options['filters']['uuid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['filters']['uuid']['value'] = 'e2a28688-49e5-4d6a-9f18-e283c535ef4e';
-  /* Filter criterion: Content: Language */
+  /* Critère de filtrage: Contenu : Langue */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
+  /* Critère de filtrage: Contenu : Closing date for application (field_job_deadline_date) */
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['id'] = 'field_job_deadline_date_value';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['table'] = 'field_data_field_job_deadline_date';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['field'] = 'field_job_deadline_date_value';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['default_date'] = 'now';
 
   /* Display: Offres d'emploi */
   $handler = $view->new_display('page', 'Offres d\'emploi', 'page_jobs');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Jobs';
+  $handler->display->display_options['title'] = 'Offres d\'emplois';
   $handler->display->display_options['path'] = 'jobs';
 
   /* Display: Stages */
   $handler = $view->new_display('page', 'Stages', 'page_trainings');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Trainings';
+  $handler->display->display_options['title'] = 'Stages';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Critère de filtrage: Contenu : Publié */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Critère de filtrage: Contenu : Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -197,35 +210,41 @@ function pnf_jobs_views_default_views() {
     'job' => 'job',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Taxonomy term: Terme de taxonomie UUID */
+  /* Critère de filtrage: Terme de taxonomie : Terme de taxonomie UUID */
   $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
   $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
   $handler->display->display_options['filters']['uuid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['filters']['uuid']['value'] = '10cefd12-d3b9-40ec-8f72-a307bc542291';
-  /* Filter criterion: Content: Language */
+  /* Critère de filtrage: Contenu : Langue */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
+  /* Critère de filtrage: Contenu : Closing date for application (field_job_deadline_date) */
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['id'] = 'field_job_deadline_date_value';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['table'] = 'field_data_field_job_deadline_date';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['field'] = 'field_job_deadline_date_value';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['default_date'] = 'now';
   $handler->display->display_options['path'] = 'trainings';
 
   /* Display: Services Civiques */
   $handler = $view->new_display('page', 'Services Civiques', 'page_civil_services');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Civic services';
+  $handler->display->display_options['title'] = 'Services civiques';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Critère de filtrage: Contenu : Publié */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Critère de filtrage: Contenu : Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -233,19 +252,25 @@ function pnf_jobs_views_default_views() {
     'job' => 'job',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Taxonomy term: Terme de taxonomie UUID */
+  /* Critère de filtrage: Terme de taxonomie : Terme de taxonomie UUID */
   $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
   $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
   $handler->display->display_options['filters']['uuid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['filters']['uuid']['value'] = '6e6ec346-0414-4f86-868c-f8151f3644c3';
-  /* Filter criterion: Content: Language */
+  /* Critère de filtrage: Contenu : Langue */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
+  /* Critère de filtrage: Contenu : Closing date for application (field_job_deadline_date) */
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['id'] = 'field_job_deadline_date_value';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['table'] = 'field_data_field_job_deadline_date';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['field'] = 'field_job_deadline_date_value';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_job_deadline_date_value']['default_date'] = 'now';
   $handler->display->display_options['path'] = 'civic-services';
   $export['jobs'] = $view;
 
