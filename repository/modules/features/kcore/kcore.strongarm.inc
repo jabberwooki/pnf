@@ -770,7 +770,7 @@ Nous nous efforçons d\'y répondre dans les plus brefs délais.</p>
     'domain' => '',
     'prefix' => 'fr',
     'weight' => '0',
-    'javascript' => 'J9Z_EN95Kd7UwId9NIh5XMzVS0mUxQJQklVFKS_s5eA',
+    'javascript' => '',
   );
   $export['language_default'] = $strongarm;
 

@@ -1,3 +1,7 @@
+Hotfix menu_national_parks_pnp_link_fixed - 2018-07-31
+======================================================
+  * kcore up: PNP menu link url changed from www.parc-pyrenees.com to www.pyrenees-parcnational.fr
+
 PNx 1.6.2 - 2018-07-31
 ======================
   * pnf_front_blocks up: '*.mercantour-parcnational.*' domain name pattern added to pnm_front context.
