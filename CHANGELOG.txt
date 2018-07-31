@@ -1,3 +1,32 @@
+PNx 1.6.2 - 2018-07-31
+======================
+  * pnf_front_blocks up: '*.mercantour-parcnational.*' domain name pattern added to pnm_front context.
+  * pnf_agenda up: permissions cleaned.
+  * pnf_jobs up: Closes #300: field_job_pub_date format changed form d/m/Y - H:i:s to d/m/Y
+  * pnf_jobs up: Closes #301: jobs, trainings and civic services views filtered on deadline date (greater than or equal).
+  * pnf_jobs up: jobs, trainings and civic services views filtered on deadline date (greater than or equal).
+  * pnf_social_media up: administer sm permission removed.
+  * pnf_slideshow up: all slideshow promotions removed.
+  * pnf_promotions up: all promotion permissions removed.
+  * pnf_newsletter up: all newsletter permissions removed.
+  * pnf_news up: all news and related vocabularies permissions removed.
+  * pnf_multimedia up: all scald and related vocabularies permissions removed.
+  * kedition up: all ckeditor and pages permissions removed.
+  * pnf_jobs up: all job permissions removed.
+  * pnf_documents up: all document permissions removed.
+  * pnf_contracts up: all contracts permissions.)
+  * pnf_consultations up: all consultations permissions (including comments) removed.
+  * pnf_agenda up: all agenda permissions removed.
+  * pnf_raa up: Field Title added as third sort criterion.
+  * pnf_raa up: all raa permissions removed.
+  * pnf_consultations up: Comment author 'toto' fix.
+  * PNF custom theme up: Toolbar menu recoded for cleaner display:g All items properly aligned vertically, toolbar properly closed on page load.
+  * PNF custom theme up: CSS style for pseudo-element ::before in toolbar menu altered to make all menu iteme vertically aligned.
+  * PNF custom theme up: Pseudo-element ::befre css style modified to make all menu items vertically aligend in toolbar menu.
+  * pnf_consultations up: jquery.ui.dialog loaded also in views_pre_render  hook to fix javascript bug that breaks menus display.
+  * .localhost domain names for dev instances added to sites.php
+  * Patch for core module Comment
+
 Hotfix fix-consultations-permissions - 2018-04-06
 =================================================
  * pnf_consultations up: 'Administer pnx settings' permission created.
@@ -21,8 +50,8 @@ Hotfix real-mercantour-domaine-name-added - 2018-03-20
 ======================================================
  * Multisite config up: Actual Mercantour domain name added to sites.php.
 
-PNx 1.6.1 2018-03-19
-====================
+PNx 1.6.1 - 2018-03-19
+======================
  * pnf_raa up: Zip format added to uploadable files.
  
 PNx 1.6 - 2018-03-19
