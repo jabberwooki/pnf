@@ -312,14 +312,14 @@ function kcore_menu_default_menu_links() {
     'menu_links_customized' => 1,
     'parent_identifier' => 'menu-national-parks_les-parcs-nationaux-de-france:les-parcs-nationaux-en-france',
   );
-  // Exported menu link: menu-national-parks_parc-national-des-pyrnes:http://www.parc-pyrenees.com.
-  $menu_links['menu-national-parks_parc-national-des-pyrnes:http://www.parc-pyrenees.com'] = array(
+  // Exported menu link: menu-national-parks_parc-national-des-pyrnes:http://www.pyrenees-parcnational.fr.
+  $menu_links['menu-national-parks_parc-national-des-pyrnes:http://www.pyrenees-parcnational.fr'] = array(
     'menu_name' => 'menu-national-parks',
-    'link_path' => 'http://www.parc-pyrenees.com',
+    'link_path' => 'http://www.pyrenees-parcnational.fr',
     'router_path' => '',
     'link_title' => 'Parc national des Pyrénées',
     'options' => array(
-      'identifier' => 'menu-national-parks_parc-national-des-pyrnes:http://www.parc-pyrenees.com',
+      'identifier' => 'menu-national-parks_parc-national-des-pyrnes:http://www.pyrenees-parcnational.fr',
       'attributes' => array(
         'target' => '_blank',
       ),
